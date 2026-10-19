@@ -738,6 +738,11 @@
       "sha256": "7987fb7f60f4d86ad0609a64d24edbce464a0f742e5dec142c2e0a96f76faadd"
     },
     {
+      "path": "reports/repository-preview.png",
+      "bytes": 117699,
+      "sha256": "5264bb8b74b7cf468197bdf3750ad73219947a93e70bd478b20ea620ddba4beb"
+    },
+    {
       "path": "reports/safety-analysis.md",
       "bytes": 24805,
       "sha256": "3ea6b7b4063175ca4268dc2976577360f925582addd9e5397f8ebdc551a363e4"
@@ -5806,6 +5811,11 @@
       "path": "results/validation/fresh-runner-replay/qlib/summary.csv",
       "bytes": 1046,
       "sha256": "03ffc86cb47e07d5f1ccbe7517bc9010bff32a4bc02d71dda06d2cf6dcbd21c3"
+    },
+    {
+      "path": "results/validation/publication/initial-publication-read-back.json",
+      "bytes": 810,
+      "sha256": "3a044e630a651dc5dea5a822e1e5999db690dfac007c2731a8820cd2dddffe3f"
     },
     {
       "path": "results/validation/release-review/final-packaging.json",

@@ -1,0 +1,13 @@
+{
+  "repository": "https://github.com/Vaquum/Backtest-Benchmark",
+  "published_commit": "dc8fc4f291e6ac58ac19c214e4e92f58df2c7947",
+  "published_tree": "9c7097f3693f9de56b527b77b8e5c7c3140079c2",
+  "verification": "GitHub Git tree equals local staged Git tree exactly; published commit fetched through git and GitHub connector. Browser confirms public repository and rendered README.",
+  "snapshot_files": 1198,
+  "screenshot": {
+    "path": "reports/repository-preview.png",
+    "sha256": "5264bb8b74b7cf468197bdf3750ad73219947a93e70bd478b20ea620ddba4beb",
+    "scope": "Public repository page immediately after the assessment publication; screenshot precedes its own archival commit."
+  },
+  "ci_scope": "Live CI status is available from the commit checks; this receipt does not claim a completed CI run."
+}
