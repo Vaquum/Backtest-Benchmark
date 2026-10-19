@@ -1,0 +1,21 @@
+{
+  "ok": true,
+  "assessment_rows": 546,
+  "expected_rows": 546,
+  "candidates": 13,
+  "criteria": 42,
+  "source_references": 1309,
+  "local_source_files_checked": 346,
+  "scope": "Assessment structure, pinned source-link syntax, and referenced local file containment/existence/line bounds.",
+  "campaigns": [
+    {
+      "path": "/workspace/scratch/008a76ec4981/Backtest-Benchmark/.work/runs/full-cpu-2026-10-19/report.json",
+      "command": "run",
+      "cases": 14,
+      "verified_timed_processes": 70,
+      "scope": "Recorded settings, completeness, parity admission metadata, aggregate arithmetic and ranking separation; no engine execution or array-parity recomputation."
+    }
+  ],
+  "limitations": "This read-only gate does not verify local git/build byte identity, interpret whether source lines support a claim, exclude comments within code, or replay numerical/statistical results.",
+  "errors": []
+}

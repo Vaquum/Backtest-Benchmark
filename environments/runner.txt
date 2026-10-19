@@ -1,0 +1,8 @@
+# Linux Python 3.12 harness environment; candidate environments are separate.
+numpy==2.2.6
+pandas==2.3.3
+pyarrow==23.0.1
+pytest==9.1.1
+setuptools==84.0.0
+wheel==0.48.0
+threadpoolctl==3.6.0

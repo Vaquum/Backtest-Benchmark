@@ -1,0 +1,38 @@
+{
+  "command": [
+    "/workspace/scratch/008a76ec4981/Backtest-Benchmark/.work/envs/qlib/bin/python",
+    "-m",
+    "bench.worker",
+    "--engine",
+    "qlib",
+    "--prepared",
+    "/workspace/scratch/008a76ec4981/Backtest-Benchmark/.work/runs/qlib-locked-full-preflight/prepared-buy_and_hold.npz",
+    "--prepared-sha256",
+    "0d7f3e9914beb1ec021bcaca04d90fcfa9792341278359a439080c7c86c1c2a0",
+    "--contract",
+    "/workspace/scratch/008a76ec4981/Backtest-Benchmark/.work/runs/qlib-locked-full-preflight/contract.json",
+    "--environment-manifest",
+    "/workspace/scratch/008a76ec4981/Backtest-Benchmark/.work/manifests/qlib.json",
+    "--output",
+    "/workspace/scratch/008a76ec4981/Backtest-Benchmark/.work/runs/qlib-locked-full-preflight/qlib/buy_and_hold/preflight/result",
+    "--benchmark-code-manifest",
+    "/workspace/scratch/008a76ec4981/Backtest-Benchmark/.work/runs/qlib-locked-full-preflight/benchmark-code.json",
+    "--mode",
+    "preflight",
+    "--warm-repeats",
+    "9"
+  ],
+  "returncode": 0,
+  "timed_out": false,
+  "process_wall_ms": 2509.062053,
+  "launch_to_ready_ms": 33.928692,
+  "launch_to_first_valid_ms": 2109.531314,
+  "parent_observed_events_ms": {
+    "ready": 33.928692,
+    "first_valid": 2109.531314,
+    "complete": 2112.580203
+  },
+  "stdout_path": "/workspace/scratch/008a76ec4981/Backtest-Benchmark/.work/runs/qlib-locked-full-preflight/qlib/buy_and_hold/preflight/stdout.log",
+  "startup_scope": "Parent observed process launch to worker ready event, before scientific/engine imports; IPC scheduling is included",
+  "first_valid_scope": "Process launch through source verification, imports, input load, independent oracle, first engine call, extraction and successful parity"
+}

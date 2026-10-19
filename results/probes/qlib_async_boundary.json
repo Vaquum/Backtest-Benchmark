@@ -1,0 +1,48 @@
+{
+  "candidate_id": "qlib",
+  "commit": "54355232463878d2eebb91fe0ee5fa7fa1f5976c",
+  "scope": "Native AsyncCaller only; MLflowRecorder call-site implications are inspected, not executed.",
+  "evidence_type": [
+    "Inspected",
+    "Reproduced"
+  ],
+  "protocol": "Queue one bounded ValueError callback followed by an observable tail callback; capture threading.excepthook; call native wait under a 20-second subprocess deadline.",
+  "source_path": "/workspace/scratch/008a76ec4981/benchmark-sources/qlib",
+  "python": "3.12.14 (main, Aug 25 2026, 14:00:49) [Clang 22.1.3 ]",
+  "observed": {
+    "callback_did_run": true,
+    "queued_items_after_wait": 2,
+    "tail_callback_did_run": false,
+    "thread_exceptions": [
+      {
+        "message": "bounded local callback failure",
+        "type": "ValueError"
+      }
+    ],
+    "wait_exception": null,
+    "wait_returned_normally": true,
+    "worker_alive_after_wait": false
+  },
+  "interpretation": "The worker exception is reported to the thread hook, while wait returns normally and the following callback and stop marker remain queued.",
+  "limitations": "No actual MLflow write, recorder end_run, process kill, live trading or network operation was executed.",
+  "source_refs": [
+    {
+      "path": "qlib/utils/paral.py",
+      "start_line": 84,
+      "end_line": 116,
+      "url": "https://github.com/microsoft/qlib/blob/54355232463878d2eebb91fe0ee5fa7fa1f5976c/qlib/utils/paral.py#L84-L116"
+    },
+    {
+      "path": "qlib/workflow/recorder.py",
+      "start_line": 390,
+      "end_line": 405,
+      "url": "https://github.com/microsoft/qlib/blob/54355232463878d2eebb91fe0ee5fa7fa1f5976c/qlib/workflow/recorder.py#L390-L405"
+    },
+    {
+      "path": "qlib/workflow/recorder.py",
+      "start_line": 490,
+      "end_line": 506,
+      "url": "https://github.com/microsoft/qlib/blob/54355232463878d2eebb91fe0ee5fa7fa1f5976c/qlib/workflow/recorder.py#L490-L506"
+    }
+  ]
+}

@@ -1,0 +1,31 @@
+{
+  "checks": [
+    {
+      "script": "scripts/causal_prefix_probe.py",
+      "check": "AST parse and --help only",
+      "returncode": 0
+    },
+    {
+      "script": "scripts/reproduce_safety_boundaries.py",
+      "check": "AST parse and --help only",
+      "returncode": 0
+    },
+    {
+      "script": "scripts/run_benchmarks.py",
+      "check": "AST parse and --help only",
+      "returncode": 0
+    },
+    {
+      "script": "scripts/run_selected_tests.py",
+      "check": "AST parse and --help only",
+      "returncode": 0
+    },
+    {
+      "script": "scripts/reproduce_safety_boundaries.py",
+      "check": "Wrapped probe body byte-equivalent after dedenting; only argument/validation scaffolding added"
+    }
+  ],
+  "scientific_probes_rerun": false,
+  "benchmarks_rerun": false,
+  "tests_rerun": false
+}

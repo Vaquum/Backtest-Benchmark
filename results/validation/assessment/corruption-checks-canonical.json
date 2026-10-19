@@ -1,0 +1,119 @@
+{
+  "checks": [
+    {
+      "check": "complete matrix with supplied source bounds",
+      "passed": true,
+      "rows": 546,
+      "references": 1309
+    },
+    {
+      "check": "explicit source-link syntax mode",
+      "passed": true
+    },
+    {
+      "check": "nonempty finding required",
+      "passed": true,
+      "rejected": "finding must be a nonempty string"
+    },
+    {
+      "check": "invalid enum rejected without a TypeError",
+      "passed": true,
+      "rejected": "invalid status: []"
+    },
+    {
+      "check": "floating source revision rejected",
+      "passed": true,
+      "rejected": "URL must exactly identify this candidate or an admitted auxiliary SHA/path/anchor: https://github.com/Vaquum/Limen/blob/main/limen/features/quantile_price_lines.py#L146-L189"
+    },
+    {
+      "check": "README behavioral reference rejected",
+      "passed": true,
+      "rejected": "documentation/README is not an admissible behavioral source: README.md"
+    },
+    {
+      "check": "real local source line bounds enforced",
+      "passed": true,
+      "rejected": "limen/limen/features/quantile_price_lines.py:146-1000189 exceeds 227 source lines"
+    },
+    {
+      "check": "supplied missing source root fails",
+      "passed": true,
+      "rejected": "supplied source checkout is missing: /workspace/scratch/008a76ec4981/benchmark-sources/deliberately-absent-validation-check-source-root/limen"
+    },
+    {
+      "check": "missing matrix row rejected",
+      "passed": true
+    },
+    {
+      "check": "duplicate matrix pair rejected",
+      "passed": true
+    },
+    {
+      "check": "actual complete campaign admitted",
+      "passed": true
+    },
+    {
+      "check": "missing declared warm call rejected",
+      "passed": true,
+      "rejected": "expected first call plus 9 warm calls, found 9 samples"
+    },
+    {
+      "check": "unadmitted timing sample rejected",
+      "passed": true,
+      "rejected": "first has no successful admission"
+    },
+    {
+      "check": "component full-engine ratio rejected",
+      "passed": true,
+      "rejected": "('qstrader', 'buy_and_hold'): unmeasured/component/incomplete case must not receive a full-engine ratio"
+    },
+    {
+      "check": "wrong median arithmetic rejected",
+      "passed": true,
+      "rejected": "warm_full_common_ms_median differs from recorded-sample arithmetic: 3.588815 != 2.588815"
+    },
+    {
+      "check": "repeated process evidence rejected",
+      "passed": true,
+      "rejected": "('limen', 'buy_and_hold'): repeated process evidence directory /workspace/scratch/008a76ec4981/Backtest-Benchmark/.work/runs/full-cpu-single-thread-2026-10-19/limen/buy_and_hold/process-001"
+    },
+    {
+      "check": "wrong parity coverage rejected",
+      "passed": true,
+      "rejected": "parity does not cover the declared evaluation observations"
+    },
+    {
+      "check": "missing declared Polars observation rejected",
+      "passed": true,
+      "rejected": "Polars thread observation must be an object"
+    },
+    {
+      "check": "observed Polars pool above declared limit rejected",
+      "passed": true,
+      "rejected": "observed Polars pool exceeds the declared thread limit"
+    },
+    {
+      "check": "missing post-call native-thread admission rejected",
+      "passed": true,
+      "rejected": "first lacks a successful post-call native-thread admission"
+    },
+    {
+      "check": "worker thread environment differs from declaration rejected",
+      "passed": true,
+      "rejected": "worker native-thread environment differs for POLARS_MAX_THREADS"
+    },
+    {
+      "check": "missing threadpool observations rejected",
+      "passed": true,
+      "rejected": "observed native threadpools must be an array"
+    },
+    {
+      "check": "required native-thread policy cannot silently fall back to legacy",
+      "passed": true,
+      "rejected": "a declared native-thread observation policy is required"
+    }
+  ],
+  "count": 23,
+  "passed": true,
+  "scope": "Only assessment and recorded-report metadata were read or copied. No engines were imported and no price/return observations or measurements were generated. These checks do not establish CPU or thread-pool isolation."
+}

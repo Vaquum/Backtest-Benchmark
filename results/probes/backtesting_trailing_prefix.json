@@ -1,0 +1,68 @@
+{
+  "candidate_id": "backtesting_py",
+  "commit": "ca2e2611621e472542ba90f7243a1fa06a7d7108",
+  "imported_module": "/workspace/scratch/008a76ec4981/benchmark-sources/backtesting_py/backtesting/__init__.py",
+  "fixture": {
+    "path": "/workspace/scratch/008a76ec4981/limen-review-source/tests/fixtures/spot_1h_20240101_20241231.parquet",
+    "sha256": "a634bbd4f3692fac7bc88512da588e7772f4bd1b749567606d5314e54d0adf72",
+    "rows": 8784
+  },
+  "selection": {
+    "prefix_rows": 192,
+    "full_rows": 384,
+    "source_row_range": [
+      0,
+      383
+    ],
+    "transformation": "Columns renamed and datetime used as index; original OHLCV values unchanged."
+  },
+  "configuration": {
+    "atr_period": 40,
+    "trailing_pct": 0.1,
+    "rtol": 1e-12,
+    "atol": 1e-12
+  },
+  "public_path": "Backtest.run -> subclass.init -> TrailingStrategy.set_atr_periods -> TrailingStrategy.set_trailing_pct",
+  "percent_trailing": {
+    "prefix_atr_multiplier": 12.534609847694947,
+    "full_atr_multiplier": 11.750024076167358,
+    "native_atr_changed_prefix_rows": 0,
+    "historical_stop_distance_changed_rows": 192,
+    "fully_observable_rows": 153,
+    "fully_observable_stop_distance_changed_rows": 153,
+    "first_fully_observable_changed_source_row": 39,
+    "first_fully_observable_changed_timestamp": "2024-01-02 15:00:00+00:00",
+    "rows_after_first_divergence_until_prefix_end": 152,
+    "prefix_stop_distance_at_first_divergence": 4235.02789175869,
+    "full_stop_distance_at_first_divergence": 3969.9424470364215,
+    "max_abs_stop_distance_difference_fully_observable": 450.9130155370349
+  },
+  "controls": {
+    "fixed_six_atr_stop_distance_changed_rows": 0,
+    "fixed_six_atr_prefix_multiplier": 6.0,
+    "fixed_six_atr_full_multiplier": 6.0,
+    "native_atr_arrays_identical_on_common_prefix": true
+  },
+  "warmup_observation": {
+    "first_complete_atr_source_row": 39,
+    "earlier_rows_backfilled_with_first_complete_atr": 39,
+    "borrowed_atr_value": 337.8667500000003,
+    "borrowed_atr_source_timestamp": "2024-01-02 15:00:00+00:00"
+  },
+  "limitations": [
+    "This is the public TrailingStrategy percentage helper used from init; no claim applies to every Backtest strategy.",
+    "No orders were placed. The measured quantity is the native stored ATR multiplier and implied stop distance that next uses, not a realized trade, return or performance impact.",
+    "Fully observable comparison excludes the first atr_period-1 warmup rows. Hence the percentage-helper divergence is not explained by an incomplete ATR window at the prefix boundary.",
+    "The core engine slices registered indicators and visible data per callback; that does not make an already full-sample-fit init coefficient causal.",
+    "The separate early ATR backfill observation is an inspected warmup lookahead mechanism, not a second population failure rate."
+  ],
+  "versions": {
+    "python": "3.12.14",
+    "numpy": "2.2.6",
+    "pandas": "2.3.3",
+    "backtesting": "0.1.dev1+gca2e26116"
+  },
+  "criteria": [
+    "A01"
+  ]
+}

@@ -1,0 +1,55 @@
+============================= test session starts ==============================
+platform linux -- Python 3.12.14, pytest-9.1.1, pluggy-1.6.0
+rootdir: /workspace/scratch/008a76ec4981/Backtest-Benchmark
+configfile: pyproject.toml
+plugins: hypothesis-6.156.6
+collected 29 items
+
+tests/test_admission_and_aggregation.py ........F.F                      [ 37%]
+tests/test_contract.py ..................                                [100%]
+
+=================================== FAILURES ===================================
+____________ test_polars_pool_must_obey_its_separate_thread_control ____________
+
+monkeypatch = <_pytest.monkeypatch.MonkeyPatch object at 0x7f8264a1be90>
+
+    def test_polars_pool_must_obey_its_separate_thread_control(monkeypatch):
+        for name in THREAD_ENV:
+            monkeypatch.setenv(name, '1')
+        monkeypatch.setitem(sys.modules, 'polars', SimpleNamespace(thread_pool_size=lambda: 9, __version__='admission-test'))
+>       with pytest.raises(ValueError, match='Polars native thread pool has 9 threads'):
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+E       AssertionError: Regex pattern did not match.
+E         Expected regex: 'Polars native thread pool has 9 threads'
+E         Actual message: 'A loaded native threadpool differs from the fixed one-thread protocol'
+
+tests/test_admission_and_aggregation.py:92: AssertionError
+____________ test_polars_absence_is_explicit_in_thread_observations ____________
+
+monkeypatch = <_pytest.monkeypatch.MonkeyPatch object at 0x7f8264a5f950>
+
+    def test_polars_absence_is_explicit_in_thread_observations(monkeypatch):
+        for name in THREAD_ENV:
+            monkeypatch.setenv(name, '1')
+        monkeypatch.delitem(sys.modules, 'polars', raising=False)
+>       assert observe_native_thread_pools()['native_thread_observations']['polars'] == {'loaded': False}
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+tests/test_admission_and_aggregation.py:108: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+    def observe_native_thread_pools() -> dict:
+        if any(os.environ.get(name) != '1' for name in THREAD_ENV):
+            raise ValueError('Every declared native thread limit must remain fixed to one')
+        from threadpoolctl import threadpool_info
+        pools = threadpool_info()
+        if any(row.get('num_threads', 1) != 1 for row in pools):
+>           raise ValueError('A loaded native threadpool differs from the fixed one-thread protocol')
+E           ValueError: A loaded native threadpool differs from the fixed one-thread protocol
+
+bench/provenance.py:31: ValueError
+- generated xml file: /workspace/scratch/008a76ec4981/Backtest-Benchmark/.work/runs/benchmark-unit-corrected-thread-gate.xml -
+=========================== short test summary info ============================
+FAILED tests/test_admission_and_aggregation.py::test_polars_pool_must_obey_its_separate_thread_control
+FAILED tests/test_admission_and_aggregation.py::test_polars_absence_is_explicit_in_thread_observations
+========================= 2 failed, 27 passed in 0.84s =========================

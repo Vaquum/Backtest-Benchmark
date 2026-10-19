@@ -1,0 +1,499 @@
+{
+  "schema_version": 1,
+  "started_utc": "2026-10-19T15:12:06.640278+00:00",
+  "commit": "29837e666604eee74a2ac94f328fb9803724342a",
+  "working_tree": "?? pytest-of-root/",
+  "code_sha256": "233160a9edddcf38cebc779df6f71f427f70213b7a46d468c3113e5f6a279e42",
+  "limen_version": "5.40.1",
+  "platform": "Linux-6.18.55-x86_64-with-glibc2.39",
+  "machine": "x86_64",
+  "processor": "x86_64",
+  "logical_cpus": 9,
+  "cpu_affinity": [
+    0,
+    1,
+    2,
+    3,
+    4,
+    5,
+    6,
+    7,
+    8
+  ],
+  "versions": {
+    "python": "3.12.14",
+    "vaquum-limen": "5.40.1",
+    "numpy": "2.2.6",
+    "pandas": "2.3.3",
+    "polars": "1.42.1",
+    "vectorbt": null,
+    "vectorbt-rust": null,
+    "numba": null,
+    "llvmlite": null,
+    "backtesting": null,
+    "backtrader": null
+  },
+  "engine_pythons": {
+    "limen": "/workspace/scratch/008a76ec4981/review-venv/bin/python",
+    "vectorbt": "/workspace/scratch/008a76ec4981/review-venv/bin/python",
+    "vectorbt_rust": "/workspace/scratch/008a76ec4981/review-venv/bin/python",
+    "backtesting_py": "/workspace/scratch/008a76ec4981/review-venv/bin/python",
+    "backtrader": "/workspace/scratch/008a76ec4981/review-venv/bin/python"
+  },
+  "repeats": 7,
+  "threads": {
+    "OMP_NUM_THREADS": "1",
+    "OPENBLAS_NUM_THREADS": "1",
+    "MKL_NUM_THREADS": "1",
+    "VECLIB_MAXIMUM_THREADS": "1",
+    "BLIS_NUM_THREADS": "1",
+    "POLARS_MAX_THREADS": "1",
+    "NUMBA_NUM_THREADS": "1",
+    "RAYON_NUM_THREADS": "1",
+    "OMP_THREAD_LIMIT": "1"
+  },
+  "workload": "single strategy",
+  "strategy_parameters": {
+    "buy_and_hold": {},
+    "sma_cross": {
+      "fast_period": 50,
+      "slow_period": 200
+    },
+    "ema_cross": {
+      "fast_period": 12,
+      "slow_period": 26
+    },
+    "macd": {
+      "fast_period": 12,
+      "slow_period": 26,
+      "signal_period": 9
+    },
+    "rsi_mean_reversion": {
+      "period": 14,
+      "entry_threshold": 30.0,
+      "exit_threshold": 70.0
+    },
+    "bollinger_mean_reversion": {
+      "period": 20,
+      "standard_deviations": 2.0,
+      "ddof": 0
+    },
+    "donchian_breakout": {
+      "entry_period": 20,
+      "exit_period": 10
+    },
+    "time_series_momentum": {
+      "period": 20
+    }
+  },
+  "excluded_inputs": [
+    {
+      "input": "tests/fixtures/indicator_equivalence_long.parquet",
+      "reason": "OHLCV-only indicator fixture has no recorded timestamps; chronological and event-clock validation is unavailable"
+    }
+  ],
+  "contract": {
+    "initial_cash": 1000000.0,
+    "fee_bps": 0,
+    "slip_bps": 0,
+    "liquidity": "unconstrained fills at the recorded close; volume participation is not modeled",
+    "execution_lag_bars": 1,
+    "position": "all-in long or flat",
+    "timing": "signal at close t holds close t to close t+1; final evaluated close liquidates",
+    "settlement": "one additional real source bar; excluded from evaluation and strategy preparation",
+    "equity_rtol": 1e-10,
+    "equity_atol": 1e-06,
+    "parity": "every equity sample, held bar, fill bar, side and price; independent cash replay and Limen",
+    "costed_comparison": "unsupported: legacy snapshot entry-fee accounting differs from affordable cash-spot sizing",
+    "timing_scopes": "engine API; API plus common equity/fills/summary extraction; Limen full snapshot separately",
+    "cold": "fresh process and unique empty Numba disk cache; imports/preparation reported separately",
+    "memory": "process high-water RSS, including imports and preparation; not allocation-only engine memory",
+    "comparison_limit": "public APIs perform unequal additional native work; no universal engine ranking",
+    "batch_scope": "each column has its own initial cash and accounting; Limen serial calls versus one vectorbt matrix call; no cash sharing",
+    "tail_statistic_limit": "p95 is a sample percentile; few repeats do not establish tail latency"
+  },
+  "scenarios": [
+    {
+      "strategy": "buy_and_hold",
+      "strategy_columns": [
+        "buy_and_hold"
+      ],
+      "portfolio_count": 1,
+      "evaluation_rows": 8783,
+      "source_rows_including_settlement": 8784,
+      "evaluation_start": "2024-01-01 00:00:00+00:00",
+      "evaluation_end": "2024-12-31 22:00:00+00:00",
+      "settlement_timestamp": "2024-12-31 23:00:00+00:00",
+      "prepared_arrays_sha256": "7ca3729e575ac6d218bba9add47df0f600a717900a8eb708cead7a0e63ac9a95",
+      "signals_sha256": "0dd292c54138c1a7080903cdb41ae84421b81c64a20ca1fc27e0f192756348e9",
+      "signal_preparation": {
+        "first_call_ms": 0.28443,
+        "warm": {
+          "median_ms": 0.05323,
+          "p95_ms": 0.2243906999999999,
+          "samples_ms": [
+            0.057807,
+            0.266472,
+            0.05323,
+            0.04022,
+            0.034683,
+            0.03313,
+            0.126201
+          ]
+        }
+      },
+      "prepared_path": "/workspace/scratch/008a76ec4981/review-work/performance/backtest-current/spot_1h_20240101_20241231-a634bbd4-8783-buy_and_hold/prepared.npz",
+      "input": "/workspace/scratch/008a76ec4981/limen-review-source/tests/fixtures/spot_1h_20240101_20241231.parquet",
+      "input_file_sha256": "a634bbd4f3692fac7bc88512da588e7772f4bd1b749567606d5314e54d0adf72",
+      "parquet_read_validate_ms": 7.661155,
+      "results": [
+        {
+          "engine": "limen",
+          "status": "verified",
+          "python_executable": "/workspace/scratch/008a76ec4981/review-venv/bin/python",
+          "versions": {
+            "python": "3.12.14",
+            "vaquum-limen": "5.40.1",
+            "numpy": "2.2.6",
+            "pandas": "2.3.3",
+            "polars": "1.42.1",
+            "vectorbt": null,
+            "vectorbt-rust": null,
+            "numba": null,
+            "llvmlite": null,
+            "backtesting": null,
+            "backtrader": null
+          },
+          "evaluation_rows": 8783,
+          "processed_rows": 8783,
+          "portfolio_count": 1,
+          "threads": {
+            "OMP_NUM_THREADS": "1",
+            "OPENBLAS_NUM_THREADS": "1",
+            "MKL_NUM_THREADS": "1",
+            "VECLIB_MAXIMUM_THREADS": "1",
+            "BLIS_NUM_THREADS": "1",
+            "POLARS_MAX_THREADS": "1",
+            "NUMBA_NUM_THREADS": "1",
+            "RAYON_NUM_THREADS": "1",
+            "OMP_THREAD_LIMIT": "1"
+          },
+          "numba_cache_dir": "/workspace/scratch/008a76ec4981/review-work/performance/backtest-current/spot_1h_20240101_20241231-a634bbd4-8783-buy_and_hold/limen-numba-cache",
+          "rss_before_adapter_mib": 99.859375,
+          "adapter_preparation_ms": 102.716028,
+          "scope": "return kernel; public snapshot measured separately",
+          "settings": {
+            "execution_lag_bars": 1
+          },
+          "cold": {
+            "engine_ms": 0.910244,
+            "normalization_ms": 0.361726,
+            "common_outputs_ms": 1.27197,
+            "cpu_ms": 1.27123
+          },
+          "metrics": {
+            "final_equity": 2201020.2181366165,
+            "total_return": 1.2010202181366165,
+            "max_drawdown": -0.3231069072207581,
+            "mean_bar_return": 0.00010561123563607608,
+            "held_fraction": 0.9998861436866674,
+            "entries": 1,
+            "exits": 1
+          },
+          "warm": {
+            "engine_ms": {
+              "median_ms": 0.375106,
+              "p95_ms": 0.5673499999999999,
+              "samples_ms": [
+                0.605363,
+                0.478653,
+                0.375106,
+                0.373654,
+                0.374515,
+                0.374335,
+                0.376368
+              ]
+            },
+            "normalization_ms": {
+              "median_ms": 0.220883,
+              "p95_ms": 0.33556839999999993,
+              "samples_ms": [
+                0.288065,
+                0.227944,
+                0.219581,
+                0.355927,
+                0.220883,
+                0.214815,
+                0.217178
+              ]
+            },
+            "common_outputs_ms": {
+              "median_ms": 0.595398,
+              "p95_ms": 0.8442738999999999,
+              "samples_ms": [
+                0.893428,
+                0.706597,
+                0.594687,
+                0.729581,
+                0.595398,
+                0.58915,
+                0.593546
+              ]
+            },
+            "cpu_ms": {
+              "median_ms": 0.595786,
+              "p95_ms": 0.8445253999999999,
+              "samples_ms": [
+                0.893348,
+                0.707151,
+                0.595235,
+                0.730606,
+                0.595786,
+                0.589557,
+                0.594224
+              ]
+            }
+          },
+          "peak_rss_mib": 99.859375,
+          "max_abs_equity_error": 7.82310962677002e-08,
+          "max_relative_equity_error": 3.196302838629506e-14,
+          "native_snapshot": {
+            "first_call_ms": 2.384609,
+            "warm": {
+              "median_ms": 2.150025,
+              "p95_ms": 2.2020975,
+              "samples_ms": [
+                2.190677,
+                2.106771,
+                2.148263,
+                2.150025,
+                2.162955,
+                2.121192,
+                2.206992
+              ]
+            },
+            "metrics": {
+              "edge_bps_p5": -82.13323253083492,
+              "edge_bps_p50": 0.893496286771267,
+              "edge_bps_p95": 82.78449877135016,
+              "pnl_bps_p5": -82.13323253083581,
+              "pnl_bps_p50": 0.893496286771267,
+              "pnl_bps_p95": 82.78449877135016,
+              "cost_bps_p5": -1.1102230246251565e-12,
+              "cost_bps_p50": 0.0,
+              "cost_bps_p95": 1.1102230246251565e-12,
+              "drawdown_bps_p5": -2159.4600784071763,
+              "drawdown_bps_p50": -1018.4329824325678,
+              "drawdown_bps_p95": -57.31818702002552,
+              "wins_per_bar": 0.5113287031765912,
+              "pnl_per_bar_bps": 1.056112356360733,
+              "avg_win_bps": 37.17229685024052,
+              "avg_loss_bps": -36.75173667331325,
+              "cvar_95_pnl_bps": -136.75946709417337,
+              "trades_per_bar": 0.00011385631333257428,
+              "inventory_per_bar": 0.9998861436866674,
+              "cost_per_bar_bps": -4.550612420187366e-15
+            },
+            "scope": "backtest_snapshot validation, execution and all native bar metrics"
+          },
+          "peak_rss_including_snapshot_mib": 99.859375,
+          "limen_imported": true,
+          "process_wall_ms": 313.339253,
+          "worker_returncode": 0
+        }
+      ]
+    },
+    {
+      "strategy": "sma_cross",
+      "strategy_columns": [
+        "sma_cross"
+      ],
+      "portfolio_count": 1,
+      "evaluation_rows": 8783,
+      "source_rows_including_settlement": 8784,
+      "evaluation_start": "2024-01-01 00:00:00+00:00",
+      "evaluation_end": "2024-12-31 22:00:00+00:00",
+      "settlement_timestamp": "2024-12-31 23:00:00+00:00",
+      "prepared_arrays_sha256": "8b3b75d64e17fc334e8649a1ba42c5298d34d0944ea69d424eb35c59fd19631f",
+      "signals_sha256": "2500c76eff79abfa530121bbec5621b5da6923392c13afd8e59c0f98a36b449d",
+      "signal_preparation": {
+        "first_call_ms": 0.5096,
+        "warm": {
+          "median_ms": 0.266903,
+          "p95_ms": 0.2996822,
+          "samples_ms": [
+            0.258981,
+            0.300794,
+            0.297088,
+            0.266903,
+            0.296538,
+            0.246552,
+            0.235846
+          ]
+        }
+      },
+      "prepared_path": "/workspace/scratch/008a76ec4981/review-work/performance/backtest-current/spot_1h_20240101_20241231-a634bbd4-8783-sma_cross/prepared.npz",
+      "input": "/workspace/scratch/008a76ec4981/limen-review-source/tests/fixtures/spot_1h_20240101_20241231.parquet",
+      "input_file_sha256": "a634bbd4f3692fac7bc88512da588e7772f4bd1b749567606d5314e54d0adf72",
+      "parquet_read_validate_ms": 7.661155,
+      "results": [
+        {
+          "engine": "limen",
+          "status": "verified",
+          "python_executable": "/workspace/scratch/008a76ec4981/review-venv/bin/python",
+          "versions": {
+            "python": "3.12.14",
+            "vaquum-limen": "5.40.1",
+            "numpy": "2.2.6",
+            "pandas": "2.3.3",
+            "polars": "1.42.1",
+            "vectorbt": null,
+            "vectorbt-rust": null,
+            "numba": null,
+            "llvmlite": null,
+            "backtesting": null,
+            "backtrader": null
+          },
+          "evaluation_rows": 8783,
+          "processed_rows": 8783,
+          "portfolio_count": 1,
+          "threads": {
+            "OMP_NUM_THREADS": "1",
+            "OPENBLAS_NUM_THREADS": "1",
+            "MKL_NUM_THREADS": "1",
+            "VECLIB_MAXIMUM_THREADS": "1",
+            "BLIS_NUM_THREADS": "1",
+            "POLARS_MAX_THREADS": "1",
+            "NUMBA_NUM_THREADS": "1",
+            "RAYON_NUM_THREADS": "1",
+            "OMP_THREAD_LIMIT": "1"
+          },
+          "numba_cache_dir": "/workspace/scratch/008a76ec4981/review-work/performance/backtest-current/spot_1h_20240101_20241231-a634bbd4-8783-sma_cross/limen-numba-cache",
+          "rss_before_adapter_mib": 100.234375,
+          "adapter_preparation_ms": 85.407332,
+          "scope": "return kernel; public snapshot measured separately",
+          "settings": {
+            "execution_lag_bars": 1
+          },
+          "cold": {
+            "engine_ms": 0.893429,
+            "normalization_ms": 0.270598,
+            "common_outputs_ms": 1.164027,
+            "cpu_ms": 1.162398
+          },
+          "metrics": {
+            "final_equity": 1830874.6846070187,
+            "total_return": 0.8308746846070187,
+            "max_drawdown": -0.18992204415299196,
+            "mean_bar_return": 7.703467140290217e-05,
+            "held_fraction": 0.5550495274962997,
+            "entries": 26,
+            "exits": 26
+          },
+          "warm": {
+            "engine_ms": {
+              "median_ms": 0.342447,
+              "p95_ms": 0.7407361999999996,
+              "samples_ms": [
+                0.908792,
+                0.309918,
+                0.348606,
+                0.342447,
+                0.346964,
+                0.264319,
+                0.262306
+              ]
+            },
+            "normalization_ms": {
+              "median_ms": 0.184728,
+              "p95_ms": 0.3642561999999999,
+              "samples_ms": [
+                0.287644,
+                0.178129,
+                0.39709,
+                0.184728,
+                0.173602,
+                0.186702,
+                0.15872
+              ]
+            },
+            "common_outputs_ms": {
+              "median_ms": 0.520566,
+              "p95_ms": 1.0612139999999997,
+              "samples_ms": [
+                1.196436,
+                0.488047,
+                0.745696,
+                0.527175,
+                0.520566,
+                0.451021,
+                0.421026
+              ]
+            },
+            "cpu_ms": {
+              "median_ms": 0.521646,
+              "p95_ms": 1.0612245999999996,
+              "samples_ms": [
+                1.195999,
+                0.488726,
+                0.746751,
+                0.527775,
+                0.521646,
+                0.451822,
+                0.421707
+              ]
+            }
+          },
+          "peak_rss_mib": 100.234375,
+          "max_abs_equity_error": 1.234002411365509e-08,
+          "max_relative_equity_error": 6.426506481472742e-15,
+          "native_snapshot": {
+            "first_call_ms": 2.16623,
+            "warm": {
+              "median_ms": 1.699665,
+              "p95_ms": 6.111651499999995,
+              "samples_ms": [
+                1.612584,
+                1.831064,
+                1.699665,
+                1.781118,
+                1.647927,
+                1.666155,
+                7.946189
+              ]
+            },
+            "metrics": {
+              "edge_bps_p5": -54.24503556270877,
+              "edge_bps_p50": 0.0,
+              "edge_bps_p95": 58.38728144471212,
+              "pnl_bps_p5": -54.245035562707656,
+              "pnl_bps_p50": 0.0,
+              "pnl_bps_p95": 58.38728144471212,
+              "cost_bps_p5": -1.1102230246251565e-12,
+              "cost_bps_p50": 0.0,
+              "cost_bps_p95": 1.1102230246251565e-12,
+              "drawdown_bps_p5": -1544.3236032275825,
+              "drawdown_bps_p50": -624.164909445638,
+              "drawdown_bps_p95": -26.359532557136657,
+              "wins_per_bar": 0.28247751337811683,
+              "pnl_per_bar_bps": 0.7703467140290209,
+              "avg_win_bps": 36.96232101739091,
+              "avg_loss_bps": -35.479349730505426,
+              "cvar_95_pnl_bps": -101.78888456934888,
+              "trades_per_bar": 0.002960264146646932,
+              "inventory_per_bar": 0.5550495274962997,
+              "cost_per_bar_bps": 1.3904649061683618e-15
+            },
+            "scope": "backtest_snapshot validation, execution and all native bar metrics"
+          },
+          "peak_rss_including_snapshot_mib": 100.234375,
+          "limen_imported": true,
+          "process_wall_ms": 322.702367,
+          "worker_returncode": 0
+        }
+      ]
+    }
+  ],
+  "finished_utc": "2026-10-19T15:12:07.390203+00:00",
+  "status": "completed"
+}

@@ -1,0 +1,322 @@
+........................................................................ [  4%]
+....................................................................FF.. [  8%]
+........................................................................ [ 12%]
+........................................................................ [ 16%]
+........................................................................ [ 20%]
+........................................................................ [ 24%]
+........................................................................ [ 28%]
+........................................................................ [ 32%]
+........................................................................ [ 36%]
+........................................................................ [ 40%]
+........................................................................ [ 44%]
+...............F........................................................ [ 48%]
+........................................................................ [ 52%]
+........................................................................ [ 56%]
+........................................................................ [ 60%]
+........................................................................ [ 65%]
+........................................................................ [ 69%]
+........................................................................ [ 73%]
+........................................................................ [ 77%]
+........................................................................ [ 81%]
+........................................................................ [ 85%]
+........................................................................ [ 89%]
+........................................................................ [ 93%]
+........................................................................ [ 97%]
+...........................................                              [100%]
+=================================== FAILURES ===================================
+_______________________ test_holdout_revision_admission ________________________
+
+tmp_path = PosixPath('/workspace/scratch/008a76ec4981/limen-review-source/pytest-of-root/pytest-0/test_holdout_revision_admissio0')
+monkeypatch = <_pytest.monkeypatch.MonkeyPatch object at 0x7f87b2391ca0>
+capsys = <_pytest.capture.CaptureFixture object at 0x7f87b18dd2e0>
+
+    def test_holdout_revision_admission(tmp_path, monkeypatch, capsys):
+        root = _project(tmp_path / 'project')
+        config = _configuration(root)
+        old = UniversalExperimentLoop(sfd=CompiledSFD(config, project_root=root), project_root=root)
+        assert not (root / 'manifests/holdout.sqlite3').exists()
+        custom = UniversalExperimentLoop(data=old.data, sfd=SimpleNamespace(__name__='custom', params=lambda: {'choice': [1]}, prep=lambda *_: {}, model=lambda *_: {}), project_root=root)
+        for invalid in (None, lambda: None):
+            with pytest.raises((TypeError, ValueError)):
+                UniversalExperimentLoop(data=old.data, sfd=SimpleNamespace(manifest=invalid, params=lambda: {}), project_root=root)
+        empty = history.bind(root)
+        with pytest.raises(ValueError, match='active reservation'):
+            history.start_research(empty, 'experiment')
+        assert not (root / 'manifests/holdout.sqlite3').exists()
+        for function in (history.finish_research, history.research_record):
+            args = (empty, str(uuid4()), {}) if function is history.finish_research else (empty, str(uuid4()))
+            with pytest.raises(sqlite3.OperationalError):
+                function(*args)
+        assert not (root / 'manifests/holdout.sqlite3').exists()
+        ordinary = tmp_path / 'ordinary'
+        ordinary.mkdir()
+        (ordinary / 'limen.toml').write_text('[project]\nname="ordinary"\n')
+>       assert history.bind(ordinary) is None
+E       AssertionError: assert ProjectBinding(root=PosixPath('/workspace/scratch/008a76ec4981/limen-review-source/pytest-of-root/pytest-0/test_holdout_revision_admissio0/ordinary'), project_id=None, revision=0, cutoff_ns=None, interval_seconds=None) is None
+E        +  where ProjectBinding(root=PosixPath('/workspace/scratch/008a76ec4981/limen-review-source/pytest-of-root/pytest-0/test_holdout_revision_admissio0/ordinary'), project_id=None, revision=0, cutoff_ns=None, interval_seconds=None) = <function bind at 0x7f87cc161bc0>(PosixPath('/workspace/scratch/008a76ec4981/limen-review-source/pytest-of-root/pytest-0/test_holdout_revision_admissio0/ordinary'))
+E        +    where <function bind at 0x7f87cc161bc0> = history.bind
+
+tests/test_holdout_research.py:212: AssertionError
+____________________ test_holdout_frozen_causal_assessment _____________________
+
+cls = <class 'importlib.metadata.Distribution'>, name = 'vaquum-limen'
+
+    @classmethod
+    def from_name(cls, name: str):
+        """Return the Distribution for the given package name.
+    
+        :param name: The name of the distribution package to search for.
+        :return: The Distribution instance (or subclass thereof) for the named
+            package, if found.
+        :raises PackageNotFoundError: When the named package's distribution
+            metadata cannot be found.
+        :raises ValueError: When an invalid value is supplied for name.
+        """
+        if not name:
+            raise ValueError("A distribution name is required.")
+        try:
+>           return next(cls.discover(name=name))
+                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+E           StopIteration
+
+/opt/codex/runtimes/codex-primary-runtime/dependencies/python/lib/python3.12/importlib/metadata/__init__.py:397: StopIteration
+
+During handling of the above exception, another exception occurred:
+
+assessment_case = (PosixPath('/workspace/scratch/008a76ec4981/limen-review-source/pytest-of-root/pytest-0/holdout0/project'), 'a0530561-...>], [<limen.inference.sensor.Sensor object at 0x7f874b810f50>]], <limen.cohort.cohort.Cohort object at 0x7f87b1f456a0>)
+
+    def test_holdout_frozen_causal_assessment(assessment_case):
+        root, _, trained, cohort = assessment_case
+        target = NextBarUpTarget(pl.DataFrame(), 'observed_up')
+        with patch.object(cohort, '_round_sources', _SourceCache()), patch.object(trained[0][0]._get_manifest(), '_unused_source_cache', _SourceCache(), create=True):
+            frozen = freeze_holdout_selection(cohort, context_start='2024-01-04', scenarios=[_SCENARIO], evaluation_target=target)
+        target.target_name = 'caller-mutated'
+        with pytest.raises(TypeError):
+            FrozenHoldoutSelection(object())
+        probe = pl.read_parquet(Path(trained[0][0]._yaml_reference['sfd']['manifest']['data_source']['params']['file_path_or_url'])).head(120)
+        def unavailable_python_callback(*args):
+            raise AssertionError('Python callbacks must be refused before invocation')
+        python_sensor = Sensor.from_python(fitted_state=trained[0][0]._model, params={}, infer=unavailable_python_callback,
+            map_output=unavailable_python_callback, state_id='caller-owned', fitting_cutoff=probe['datetime'][24], selection_cutoff=probe['datetime'][48])
+        with pytest.raises(ValueError, match='exact Sensor'):
+            _freeze(python_sensor)
+        for sensor in (*trained[0], trained[1][0]):
+            assert sensor.predict(probe).reason is None
+            _freeze(sensor)
+            clone = owned_copy(sensor)
+            second = owned_copy(clone)
+            assert sensor.predict(probe) == clone.predict(probe) == second.predict(probe)
+        calls = []
+        predictions = []
+        real_tape = assessment._tape
+        def traced_tape(selection, raw, start, failures):
+            with ExitStack() as stack:
+                for member in members(selection):
+                    def predict(frame, original=member.predict, identity=member.permutation_id):
+                        predictions.append((identity, frame.height, frame['datetime'][0], frame['datetime'][-1]))
+                        return original(frame)
+                    stack.enter_context(patch.object(member, 'predict', side_effect=predict))
+                return real_tape(selection, raw, start, failures)
+        paths = ('limen.sfd.reference_architecture.logreg_binary.LogRegBinary.train', 'limen.sfd.reference_architecture.lightgbm_binary.LightGBMBinary.train',
+            'sklearn.linear_model.LogisticRegression.fit', 'lightgbm.LGBMClassifier.fit', 'sklearn.calibration.CalibratedClassifierCV.fit',
+            'sklearn.decomposition.PCA.fit', 'sklearn.decomposition.PCA.fit_transform', 'limen.calibration.threshold._validate_threshold_grid',
+            'limen.sfd.reference_architecture.logreg_binary.fit_calibrator', 'limen.sfd.reference_architecture.lightgbm_binary.fit_calibrator')
+        with ExitStack() as stack:
+            stack.enter_context(_mutated_selection(trained[0][0]))
+            stack.enter_context(patch.object(assessment, '_tape', side_effect=traced_tape))
+            for path in paths:
+                stack.enter_context(patch(path, side_effect=lambda *args, **kwargs: calls.append('fit')))
+            for sensor in trained[0] + trained[1]:
+                for value in sensor._fitted_params.values():
+                    if type(value).__module__.startswith(('limen.scalers.', 'limen.targets.')):
+                        stack.enter_context(patch.object(type(value), '__init__', side_effect=lambda *args, **kwargs: calls.append('fitted-transform')))
+            report = _report(frozen, assessment_case)
+        assert calls == []
+        assert report['spec']['target']['params']['target_name'] == 'observed_up'
+>       assert report['spec']['versions']['vaquum-limen'] == version('vaquum-limen')
+                                                             ^^^^^^^^^^^^^^^^^^^^^^^
+
+tests/test_holdout_assessment.py:149: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+/opt/codex/runtimes/codex-primary-runtime/dependencies/python/lib/python3.12/importlib/metadata/__init__.py:889: in version
+    return distribution(distribution_name).version
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+/opt/codex/runtimes/codex-primary-runtime/dependencies/python/lib/python3.12/importlib/metadata/__init__.py:862: in distribution
+    return Distribution.from_name(distribution_name)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+cls = <class 'importlib.metadata.Distribution'>, name = 'vaquum-limen'
+
+    @classmethod
+    def from_name(cls, name: str):
+        """Return the Distribution for the given package name.
+    
+        :param name: The name of the distribution package to search for.
+        :return: The Distribution instance (or subclass thereof) for the named
+            package, if found.
+        :raises PackageNotFoundError: When the named package's distribution
+            metadata cannot be found.
+        :raises ValueError: When an invalid value is supplied for name.
+        """
+        if not name:
+            raise ValueError("A distribution name is required.")
+        try:
+            return next(cls.discover(name=name))
+        except StopIteration:
+>           raise PackageNotFoundError(name)
+E           importlib.metadata.PackageNotFoundError: No package metadata was found for vaquum-limen
+
+/opt/codex/runtimes/codex-primary-runtime/dependencies/python/lib/python3.12/importlib/metadata/__init__.py:399: PackageNotFoundError
+---------------------------- Captured stderr setup -----------------------------
+2026-10-19 17:05:51,457 - INFO - Initialized checkpoint directory: /workspace/scratch/008a76ec4981/limen-review-source/pytest-of-root/pytest-0/holdout0/project/logreg
+2026-10-19 17:05:51,644 - INFO - Experiment completed naturally after 4 rounds
+2026-10-19 17:05:51,907 - INFO - Convergence-warning percentage: 0.0; observed=4; unavailable=0
+2026-10-19 17:05:52,014 - INFO - Trained sensor for permutation ed08d5f430850f19ab11d909da665e25446762ad9cc6d38d131862e15315b0a8
+2026-10-19 17:05:52,064 - INFO - Trained sensor for permutation 4e778262c6ad56542c06cb378dfeaf5d91115edc79d4ec085ec5238581810ee4
+2026-10-19 17:05:52,111 - INFO - Trained sensor for permutation bb8ddb63f0917c81fb7b23ea666f020da3cc8c7db85d2758e37de656bcb69058
+2026-10-19 17:05:52,150 - INFO - Trained sensor for permutation 0a90fbc27c9b880477d99e56681b254a3c05af67fed4a499eba30b844d5cc016
+2026-10-19 17:05:52,211 - INFO - Initialized checkpoint directory: /workspace/scratch/008a76ec4981/limen-review-source/pytest-of-root/pytest-0/holdout0/project/lightgbm
+2026-10-19 17:05:52,706 - INFO - Experiment completed naturally after 1 rounds
+2026-10-19 17:05:52,775 - INFO - Convergence-warning percentage: 0.0; observed=1; unavailable=0
+2026-10-19 17:05:52,878 - INFO - Trained sensor for permutation eb8f5faaa5ee799fa59a3041cdb2d64d07cdc24d24772792a670c7d207bc36b8
+2026-10-19 17:05:52,951 - INFO - Initialized checkpoint directory: /workspace/scratch/008a76ec4981/limen-review-source/pytest-of-root/pytest-0/holdout0/project/warmup
+2026-10-19 17:05:53,002 - INFO - Experiment completed naturally after 1 rounds
+2026-10-19 17:05:53,068 - INFO - Convergence-warning percentage: 100.0; observed=1; unavailable=0
+2026-10-19 17:05:53,179 - INFO - Trained sensor for permutation 591cb423c57b2a9e98dcce09797790eed528545ac940eaf92e81b7b3c7960b8a
+2026-10-19 17:05:53,241 - INFO - Initialized checkpoint directory: /workspace/scratch/008a76ec4981/limen-review-source/pytest-of-root/pytest-0/holdout0/project/earlier_test
+2026-10-19 17:05:53,279 - INFO - Experiment completed naturally after 1 rounds
+2026-10-19 17:05:53,355 - INFO - Convergence-warning percentage: 0.0; observed=1; unavailable=0
+2026-10-19 17:05:53,460 - INFO - Trained sensor for permutation 591cb423c57b2a9e98dcce09797790eed528545ac940eaf92e81b7b3c7960b8a
+------------------------------ Captured log setup ------------------------------
+INFO     limen.experiment.checkpoint_manager:checkpoint_manager.py:90 Initialized checkpoint directory: /workspace/scratch/008a76ec4981/limen-review-source/pytest-of-root/pytest-0/holdout0/project/logreg
+INFO     limen.experiment.experiment_core:experiment_core.py:755 Experiment completed naturally after 4 rounds
+INFO     limen.experiment.experiment_core:experiment_core.py:164 Convergence-warning percentage: 0.0; observed=4; unavailable=0
+INFO     limen.inference.trainer:trainer.py:236 Trained sensor for permutation ed08d5f430850f19ab11d909da665e25446762ad9cc6d38d131862e15315b0a8
+INFO     limen.inference.trainer:trainer.py:236 Trained sensor for permutation 4e778262c6ad56542c06cb378dfeaf5d91115edc79d4ec085ec5238581810ee4
+INFO     limen.inference.trainer:trainer.py:236 Trained sensor for permutation bb8ddb63f0917c81fb7b23ea666f020da3cc8c7db85d2758e37de656bcb69058
+INFO     limen.inference.trainer:trainer.py:236 Trained sensor for permutation 0a90fbc27c9b880477d99e56681b254a3c05af67fed4a499eba30b844d5cc016
+INFO     limen.experiment.checkpoint_manager:checkpoint_manager.py:90 Initialized checkpoint directory: /workspace/scratch/008a76ec4981/limen-review-source/pytest-of-root/pytest-0/holdout0/project/lightgbm
+INFO     limen.experiment.experiment_core:experiment_core.py:755 Experiment completed naturally after 1 rounds
+INFO     limen.experiment.experiment_core:experiment_core.py:164 Convergence-warning percentage: 0.0; observed=1; unavailable=0
+INFO     limen.inference.trainer:trainer.py:236 Trained sensor for permutation eb8f5faaa5ee799fa59a3041cdb2d64d07cdc24d24772792a670c7d207bc36b8
+INFO     limen.experiment.checkpoint_manager:checkpoint_manager.py:90 Initialized checkpoint directory: /workspace/scratch/008a76ec4981/limen-review-source/pytest-of-root/pytest-0/holdout0/project/warmup
+INFO     limen.experiment.experiment_core:experiment_core.py:755 Experiment completed naturally after 1 rounds
+INFO     limen.experiment.experiment_core:experiment_core.py:164 Convergence-warning percentage: 100.0; observed=1; unavailable=0
+INFO     limen.inference.trainer:trainer.py:236 Trained sensor for permutation 591cb423c57b2a9e98dcce09797790eed528545ac940eaf92e81b7b3c7960b8a
+INFO     limen.experiment.checkpoint_manager:checkpoint_manager.py:90 Initialized checkpoint directory: /workspace/scratch/008a76ec4981/limen-review-source/pytest-of-root/pytest-0/holdout0/project/earlier_test
+INFO     limen.experiment.experiment_core:experiment_core.py:755 Experiment completed naturally after 1 rounds
+INFO     limen.experiment.experiment_core:experiment_core.py:164 Convergence-warning percentage: 0.0; observed=1; unavailable=0
+INFO     limen.inference.trainer:trainer.py:236 Trained sensor for permutation 591cb423c57b2a9e98dcce09797790eed528545ac940eaf92e81b7b3c7960b8a
+______ test_four_cli_experiments_match_precision_baseline_at_12_decimals _______
+
+tmp_path = PosixPath('/workspace/scratch/008a76ec4981/limen-review-source/pytest-of-root/pytest-0/test_four_cli_experiments_matc0')
+
+    def test_four_cli_experiments_match_precision_baseline_at_12_decimals(tmp_path: Path) -> None:
+        locked = sys.platform == 'linux' and sys.version_info[:2] in ((3, 10), (3, 12)) and np.__version__ == '2.2.6'
+>       captures = pinned_captures(tmp_path / 'pinned') if locked else {}
+                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+tests/test_factorize_equivalence.py:90: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+tests/fixtures/factorize/generate.py:187: in pinned_captures
+    subprocess.run([sys.executable, str(Path(__file__).resolve()), '--capture', '--out', str(directory)],
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+input = None, capture_output = False, timeout = None, check = True
+popenargs = (['/workspace/scratch/008a76ec4981/review-venv/bin/python', '/workspace/scratch/008a76ec4981/limen-review-source/tests...'/workspace/scratch/008a76ec4981/limen-review-source/pytest-of-root/pytest-0/test_four_cli_experiments_matc0/pinned'],)
+kwargs = {'env': {'COLORTERM': '', 'no_proxy': '127.0.0.1,localhost,gaas-browser', 'RSYNC_HOST': 'gaas-browser', 'CODEX_EXEC_SERVER_REMOTE_BASE_URL': 'https://codex-cloud-environments.chatgpt.com/api', ...}}
+
+    def run(*popenargs,
+            input=None, capture_output=False, timeout=None, check=False, **kwargs):
+        """Run command with arguments and return a CompletedProcess instance.2026-10-19 17:08:16,418 - INFO - Runtime profile written to /workspace/scratch/008a76ec4981/review-work/test-run/test_runtime_profile.json
+2026-10-19 17:08:16,418 - INFO - Test suite runtime: 2m 39.089s across 1771 tests (1768 passed, 3 failed, 0 skipped)
+2026-10-19 17:08:16,418 - INFO - Slowest tests:
+2026-10-19 17:08:16,418 - INFO -   tests/test_direction_sizing.py::test_trainer_sensor_preserve_signed_exposure [passed] 7.762s
+2026-10-19 17:08:16,419 - INFO -   tests/test_parallel_rounds.py::test_parallel_sigterm_restores_matching_prefix[group] [passed] 6.773s
+2026-10-19 17:08:16,419 - INFO -   tests/test_parallel_rounds.py::test_parallel_failure_prefix_and_recovery[fatal] [passed] 6.442s
+2026-10-19 17:08:16,419 - INFO -   tests/test_parallel_rounds.py::test_parallel_failure_prefix_and_recovery[dead] [passed] 5.782s
+2026-10-19 17:08:16,419 - INFO -   tests/test_parallel_rounds.py::test_parallel_sigterm_restores_matching_prefix[final] [passed] 5.135s
+2026-10-19 17:08:16,419 - INFO -   tests/test_parallel_rounds.py::test_parallel_failure_prefix_and_recovery[strict] [passed] 4.937s
+2026-10-19 17:08:16,419 - INFO -   tests/test_python_sensor.py::test_recorded_prefixes_and_repeated_calls_never_fit [passed] 4.621s
+2026-10-19 17:08:16,419 - INFO -   tests/test_parallel_rounds.py::test_parallel_sigterm_restores_matching_prefix[zero] [passed] 4.330s
+2026-10-19 17:08:16,419 - INFO -   tests/test_factorized_traversal.py::test_fresh_process_cli_example_and_resume [passed] 3.239s
+2026-10-19 17:08:16,419 - INFO -   tests/test_parallel_rounds.py::test_parallel_periodic_checkpoint_preserves_callback_filters [passed] 2.977s
+
+    
+        The returned instance will have attributes args, returncode, stdout and
+        stderr. By default, stdout and stderr are not captured, and those attributes
+        will be None. Pass stdout=PIPE and/or stderr=PIPE in order to capture them,
+        or pass capture_output=True to capture both.
+    
+        If check is True and the exit code was non-zero, it raises a
+        CalledProcessError. The CalledProcessError object will have the return code
+        in the returncode attribute, and output & stderr attributes if those streams
+        were captured.
+    
+        If timeout (seconds) is given and the process takes too long,
+         a TimeoutExpired exception will be raised.
+    
+        There is an optional argument "input", allowing you to
+        pass bytes or a string to the subprocess's stdin.  If you use this argument
+        you may not also use the Popen constructor's "stdin" argument, as
+        it will be used internally.
+    
+        By default, all communication is in bytes, and therefore any "input" should
+        be bytes, and the stdout and stderr will be bytes. If in text mode, any
+        "input" should be a string, and stdout and stderr will be strings decoded
+        according to locale encoding, or by "encoding" if set. Text mode is
+        triggered by setting any of text, encoding, errors or universal_newlines.
+    
+        The other arguments are the same as for the Popen constructor.
+        """
+        if input is not None:
+            if kwargs.get('stdin') is not None:
+                raise ValueError('stdin and input arguments may not both be used.')
+            kwargs['stdin'] = PIPE
+    
+        if capture_output:
+            if kwargs.get('stdout') is not None or kwargs.get('stderr') is not None:
+                raise ValueError('stdout and stderr arguments may not be used '
+                                 'with capture_output.')
+            kwargs['stdout'] = PIPE
+            kwargs['stderr'] = PIPE
+    
+        with Popen(*popenargs, **kwargs) as process:
+            try:
+                stdout, stderr = process.communicate(input, timeout=timeout)
+            except TimeoutExpired as exc:
+                process.kill()
+                if _mswindows:
+                    # Windows accumulates the output in a single blocking
+                    # read() call run on child threads, with the timeout
+                    # being done in a join() on those threads.  communicate()
+                    # _after_ kill() is required to collect that and add it
+                    # to the exception.
+                    exc.stdout, exc.stderr = process.communicate()
+                else:
+                    # POSIX _communicate already populated the output so
+                    # far into the TimeoutExpired exception.
+                    process.wait()
+                raise
+            except:  # Including KeyboardInterrupt, communicate handled that.
+                process.kill()
+                # We don't call process.wait() as .__exit__ does that for us.
+                raise
+            retcode = process.poll()
+            if check and retcode:
+>               raise CalledProcessError(retcode, process.args,
+                                         output=stdout, stderr=stderr)
+E               subprocess.CalledProcessError: Command '['/workspace/scratch/008a76ec4981/review-venv/bin/python', '/workspace/scratch/008a76ec4981/limen-review-source/tests/fixtures/factorize/generate.py', '--capture', '--out', '/workspace/scratch/008a76ec4981/limen-review-source/pytest-of-root/pytest-0/test_four_cli_experiments_matc0/pinned']' returned non-zero exit status 1.
+
+/opt/codex/runtimes/codex-primary-runtime/dependencies/python/lib/python3.12/subprocess.py:571: CalledProcessError
+----------------------------- Captured stderr call -----------------------------
+Traceback (most recent call last):
+  File "/workspace/scratch/008a76ec4981/limen-review-source/tests/fixtures/factorize/generate.py", line 3, in <module>
+    from limen.experiment import _round_storage as _storage
+ModuleNotFoundError: No module named 'limen'
+=========================== short test summary info ============================
+FAILED tests/test_holdout_research.py::test_holdout_revision_admission - Asse...
+FAILED tests/test_holdout_assessment.py::test_holdout_frozen_causal_assessment
+FAILED tests/test_factorize_equivalence.py::test_four_cli_experiments_match_precision_baseline_at_12_decimals
+3 failed, 1768 passed in 157.77s (0:02:37)

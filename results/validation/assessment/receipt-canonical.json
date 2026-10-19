@@ -1,0 +1,71 @@
+{
+  "recorded_utc": "2026-10-19T18:51:29.780201+00:00",
+  "campaign_disposition": "Corrective canonical campaign with explicitly declared loaded-pools-v1 native-thread observation policy. The original control configuration and its validation receipts remain separate.",
+  "scope": "Read-only assessment and recorded-report structure/admission/arithmetic validation, recorded native-thread controls/observations/post-call flags, and bounded corruption checks on copied or in-memory metadata. No engine imports, generated prices/returns, numerical parity replay, measurements, or physical CPU/thread-isolation verification.",
+  "runtime": {
+    "python": "3.12.14 (main, Aug 25 2026, 14:00:49) [Clang 22.1.3 ]",
+    "executable": "/opt/codex/runtimes/codex-primary-runtime/dependencies/python/bin/python"
+  },
+  "checked_counts": {
+    "assessment_rows": 546,
+    "source_references": 1309,
+    "local_source_files_checked": 346,
+    "cases": 14,
+    "verified_preflight_workers": 14,
+    "verified_timed_processes": 70,
+    "full_timed_calls": 700,
+    "internal_core_timed_calls": 100,
+    "worker_thread_observations_checked": 84,
+    "post_call_native_thread_flags_checked": 800,
+    "bounded_metadata_checks_passed": 23
+  },
+  "commands": [
+    {
+      "argv": [
+        "python",
+        "scripts/validate_assessment.py",
+        "--sources",
+        "/workspace/scratch/008a76ec4981/benchmark-sources",
+        "--campaign",
+        "/workspace/scratch/008a76ec4981/Backtest-Benchmark/.work/runs/full-cpu-single-thread-2026-10-19/report.json",
+        "--require-native-thread-policy",
+        "--json"
+      ],
+      "cwd": "/workspace/scratch/008a76ec4981/Backtest-Benchmark",
+      "exit_code": 0,
+      "stdout": "results/validation/assessment/matrix-and-canonical-campaign.json",
+      "stdout_sha256": "a87d5ee4191261f39dff2671f6231d3182478d088279a6805342e1eb0114e71c",
+      "stderr": ""
+    },
+    {
+      "argv": [
+        "python",
+        "results/validation/assessment/check_validator.py",
+        "--sources",
+        "/workspace/scratch/008a76ec4981/benchmark-sources",
+        "--campaign",
+        "/workspace/scratch/008a76ec4981/Backtest-Benchmark/.work/runs/full-cpu-single-thread-2026-10-19/report.json"
+      ],
+      "cwd": "/workspace/scratch/008a76ec4981/Backtest-Benchmark",
+      "exit_code": 0,
+      "stdout": "results/validation/assessment/corruption-checks-canonical.json",
+      "stdout_sha256": "5673817cae6826499530b0cf3f870cb3667c76409f14ea5d9d14910132def503",
+      "stderr": ""
+    }
+  ],
+  "input_sha256": {
+    "scripts/validate_assessment.py": "f810db1bfa7c16d332b134acfb698d731d477a1a35703a00e440230f33313c2b",
+    "results/validation/assessment/check_validator.py": "b967457d190745b69496e4c3bcd470867dcc7e1abef3f9d39fc1a76ef82898aa",
+    "catalog/candidates.json": "82852db1b463fed07f2bcffbb6e53e195138ff9296bb384ebdd75a67719231a5",
+    "catalog/auxiliary_sources.json": "3fed78aeb218161f6ddd6dd531386d88f11cb7ed40a20889bc951f3b47201d84",
+    "protocol/criteria.json": "999d7e6649527750e0e164d3f05db94bcea5297022afcfdebc8610fe77a624d5",
+    "assessment/academic.json": "d56bdf12bff742abcc300806b27ea1e4e6caac016588f6f3fea7e40997c65188",
+    "assessment/safety.json": "08d3d95df4d2b38bda3120983c8442a90e530dd56abf286a8fa6f00da6e87b66",
+    "assessment/performance.json": "2a657b066fd5e9789088ba151405f0a3d46c452d7d2574bdc5d38139c04187a2"
+  },
+  "campaign_report": {
+    "path": "/workspace/scratch/008a76ec4981/Backtest-Benchmark/.work/runs/full-cpu-single-thread-2026-10-19/report.json",
+    "sha256": "4ccf17702fa03d5abaacaa454a929ce49d71a88a84ca30bca3b20def364bc7cd"
+  },
+  "source_scope": "Referenced local files were checked for containment/existence/line bounds. Source git/byte/build identity and semantic support of each source claim were not independently re-established by this gate."
+}

@@ -1,0 +1,84 @@
+{
+  "schema_version": 1,
+  "engine": "backtrader",
+  "mode": "preflight",
+  "started_utc": "2026-10-19T17:36:29.618577+00:00",
+  "status": "unsupported_contract",
+  "timing_samples": [],
+  "core_diagnostic_samples": [],
+  "measurement_policy": "Untimed preflight precedes independent fresh timed worker; each timed result is checked outside its timed region",
+  "provenance": {
+    "catalog": {
+      "id": "backtrader",
+      "repository": "mementum/backtrader",
+      "name": "Backtrader",
+      "track": "execution",
+      "url": "https://github.com/mementum/backtrader",
+      "commit": "b853d7c90b6721476eb5a5ea3135224e33db1f14",
+      "commit_date": "2023-04-19T16:13:08+02:00",
+      "source_url": "https://github.com/mementum/backtrader/tree/b853d7c90b6721476eb5a5ea3135224e33db1f14",
+      "license_files": [
+        {
+          "path": "LICENSE",
+          "sha256": "e1c0ad728983d8a57335e52cf1064f1affd1d454173d8cebd3ed8b4a72b48704",
+          "url": "https://github.com/mementum/backtrader/blob/b853d7c90b6721476eb5a5ea3135224e33db1f14/LICENSE"
+        }
+      ],
+      "revision_policy": "Default branch HEAD captured 2026-10-19",
+      "eligibility": "source_auditable",
+      "license_label": "GPL-3.0",
+      "license_scope": "Observed repository license text; third-party components retain their own terms. This label does not authorize a particular redistribution or commercial deployment.",
+      "source_category": "public_source"
+    },
+    "source_commit_verified": "b853d7c90b6721476eb5a5ea3135224e33db1f14",
+    "source_path": "/workspace/scratch/008a76ec4981/benchmark-sources/backtrader",
+    "tracked_source_clean": true,
+    "distribution": "backtrader",
+    "distribution_version": "1.9.78.123",
+    "direct_url": {
+      "url": "file:///workspace/scratch/008a76ec4981/benchmark-sources/backtrader",
+      "dir_info": {}
+    },
+    "installed_code_files": 172,
+    "installed_code_sha256": "339e2b1a82fa62bb1a27493373a7667cd3f71bfb1ad7bb45432eed8a7aebbd1d",
+    "setup_manifest_sha256": "9a2a8544400702487d32c5fdd19bce883b4344ef05bb987252973c0c25a6d5d9",
+    "system_site_packages": false
+  },
+  "source_verification_ms": 36.486021,
+  "prepared_load_ms": 1.387342,
+  "prepared_arrays_sha256": "6ed121548c11927b7f74f01d686d54a88c1a64fa81bcaac2875213f53e992167",
+  "contract": {
+    "initial_cash": 1000000,
+    "fee_bps": 5.0,
+    "slippage_bps": 5.0,
+    "signal_delay_bars": 1,
+    "equity_rtol": 1e-10,
+    "equity_atol": 1e-06,
+    "price_rtol": 1e-12,
+    "price_atol": 1e-08,
+    "quantity_rtol": 1e-10,
+    "quantity_atol": 1e-10,
+    "schema_version": 1,
+    "name": "prior-close-decision_next-close-fill_long-flat_v1",
+    "sizing": "All affordable continuous units on entry; hold units until exit; no ongoing rebalancing",
+    "signal_availability": "Decision uses only the prefix through close[t]; earliest fill is close[t+1]",
+    "fill_price": "Entry close*(1+slippage); exit close*(1-slippage)",
+    "fee_basis": "fee_bps/10000 times actual fill price times absolute executed quantity",
+    "equity_observation": "Cash plus units marked at the unadjusted close, after the close fill",
+    "held_observation": "Incoming held state over the interval ending at the current close, before its fill",
+    "terminal_rule": "Predeclared liquidation at penultimate real close; final real row settles delayed bookkeeping",
+    "unmodelled": [
+      "market impact",
+      "partial fills",
+      "funding",
+      "borrowing",
+      "corporate actions",
+      "exchange calendars"
+    ]
+  },
+  "oracle_ms": 0.649219,
+  "error": "UnsupportedContract: The current Backtrader close-on-close adapter admits zero costs only; fill-time cost equity needs a separately validated observation route",
+  "traceback": "Traceback (most recent call last):\n  File \"/workspace/scratch/008a76ec4981/Backtest-Benchmark/bench/worker.py\", line 77, in main\n    adapter = create_adapter(args.engine, data, contract)\n              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/workspace/scratch/008a76ec4981/Backtest-Benchmark/bench/adapters/__init__.py\", line 18, in create_adapter\n    adapter = module.create_adapter(data, contract)\n              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/workspace/scratch/008a76ec4981/Backtest-Benchmark/bench/adapters/backtrader.py\", line 14, in create_adapter\n    raise UnsupportedContract('The current Backtrader close-on-close adapter admits zero costs only; fill-time cost equity needs a separately validated observation route')\nbench.api.UnsupportedContract: The current Backtrader close-on-close adapter admits zero costs only; fill-time cost equity needs a separately validated observation route\n",
+  "timings_admitted": false,
+  "peak_rss_bytes_final": 120344576
+}

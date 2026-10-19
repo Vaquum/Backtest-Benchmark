@@ -1,0 +1,841 @@
+{
+  "schema_version": 1,
+  "engine": "vectorbt",
+  "mode": "measure",
+  "started_utc": "2026-10-19T18:36:12.662967+00:00",
+  "status": "verified",
+  "timing_samples": [
+    {
+      "phase": "first",
+      "engine_ms": 11469.310486,
+      "extraction_common_ms": 5528.850634,
+      "full_common_ms": 16998.16112,
+      "engine_cpu_ms": 11466.701618,
+      "full_common_cpu_ms": 16995.026498,
+      "native_thread_limits_verified": true,
+      "parity": {
+        "equity_samples_checked": 8783,
+        "fills_checked": 52,
+        "max_abs_equity_error": 4.656612873077393e-10,
+        "max_relative_equity_error": 4.437251484018717e-16,
+        "optional_observed_fields_checked": [
+          "cash",
+          "units",
+          "fill_quantities",
+          "fill_fees"
+        ],
+        "optional_unobserved_fields": [],
+        "actual_result_arrays_sha256": "09ce5bf8455f45489e1398badb1afb173b179bb6be2ee6afcec1a0f7354c97ef"
+      },
+      "admitted": true
+    },
+    {
+      "phase": "warm-1",
+      "engine_ms": 8.987546,
+      "extraction_common_ms": 44.634511,
+      "full_common_ms": 53.622057,
+      "engine_cpu_ms": 8.99171,
+      "full_common_cpu_ms": 53.626799,
+      "native_thread_limits_verified": true,
+      "parity": {
+        "equity_samples_checked": 8783,
+        "fills_checked": 52,
+        "max_abs_equity_error": 4.656612873077393e-10,
+        "max_relative_equity_error": 4.437251484018717e-16,
+        "optional_observed_fields_checked": [
+          "cash",
+          "units",
+          "fill_quantities",
+          "fill_fees"
+        ],
+        "optional_unobserved_fields": [],
+        "actual_result_arrays_sha256": "09ce5bf8455f45489e1398badb1afb173b179bb6be2ee6afcec1a0f7354c97ef"
+      },
+      "admitted": true
+    },
+    {
+      "phase": "warm-2",
+      "engine_ms": 8.153306,
+      "extraction_common_ms": 42.821335,
+      "full_common_ms": 50.974641,
+      "engine_cpu_ms": 8.159233,
+      "full_common_cpu_ms": 50.973984,
+      "native_thread_limits_verified": true,
+      "parity": {
+        "equity_samples_checked": 8783,
+        "fills_checked": 52,
+        "max_abs_equity_error": 4.656612873077393e-10,
+        "max_relative_equity_error": 4.437251484018717e-16,
+        "optional_observed_fields_checked": [
+          "cash",
+          "units",
+          "fill_quantities",
+          "fill_fees"
+        ],
+        "optional_unobserved_fields": [],
+        "actual_result_arrays_sha256": "09ce5bf8455f45489e1398badb1afb173b179bb6be2ee6afcec1a0f7354c97ef"
+      },
+      "admitted": true
+    },
+    {
+      "phase": "warm-3",
+      "engine_ms": 8.70504,
+      "extraction_common_ms": 50.889802,
+      "full_common_ms": 59.594842,
+      "engine_cpu_ms": 8.709982,
+      "full_common_cpu_ms": 59.59921,
+      "native_thread_limits_verified": true,
+      "parity": {
+        "equity_samples_checked": 8783,
+        "fills_checked": 52,
+        "max_abs_equity_error": 4.656612873077393e-10,
+        "max_relative_equity_error": 4.437251484018717e-16,
+        "optional_observed_fields_checked": [
+          "cash",
+          "units",
+          "fill_quantities",
+          "fill_fees"
+        ],
+        "optional_unobserved_fields": [],
+        "actual_result_arrays_sha256": "09ce5bf8455f45489e1398badb1afb173b179bb6be2ee6afcec1a0f7354c97ef"
+      },
+      "admitted": true
+    },
+    {
+      "phase": "warm-4",
+      "engine_ms": 9.638028,
+      "extraction_common_ms": 53.171566,
+      "full_common_ms": 62.809594,
+      "engine_cpu_ms": 9.643098,
+      "full_common_cpu_ms": 62.805777,
+      "native_thread_limits_verified": true,
+      "parity": {
+        "equity_samples_checked": 8783,
+        "fills_checked": 52,
+        "max_abs_equity_error": 4.656612873077393e-10,
+        "max_relative_equity_error": 4.437251484018717e-16,
+        "optional_observed_fields_checked": [
+          "cash",
+          "units",
+          "fill_quantities",
+          "fill_fees"
+        ],
+        "optional_unobserved_fields": [],
+        "actual_result_arrays_sha256": "09ce5bf8455f45489e1398badb1afb173b179bb6be2ee6afcec1a0f7354c97ef"
+      },
+      "admitted": true
+    },
+    {
+      "phase": "warm-5",
+      "engine_ms": 10.167917,
+      "extraction_common_ms": 47.66851,
+      "full_common_ms": 57.836427,
+      "engine_cpu_ms": 10.173598,
+      "full_common_cpu_ms": 57.841847,
+      "native_thread_limits_verified": true,
+      "parity": {
+        "equity_samples_checked": 8783,
+        "fills_checked": 52,
+        "max_abs_equity_error": 4.656612873077393e-10,
+        "max_relative_equity_error": 4.437251484018717e-16,
+        "optional_observed_fields_checked": [
+          "cash",
+          "units",
+          "fill_quantities",
+          "fill_fees"
+        ],
+        "optional_unobserved_fields": [],
+        "actual_result_arrays_sha256": "09ce5bf8455f45489e1398badb1afb173b179bb6be2ee6afcec1a0f7354c97ef"
+      },
+      "admitted": true
+    },
+    {
+      "phase": "warm-6",
+      "engine_ms": 9.808264,
+      "extraction_common_ms": 44.147136,
+      "full_common_ms": 53.9554,
+      "engine_cpu_ms": 9.812659,
+      "full_common_cpu_ms": 53.959833,
+      "native_thread_limits_verified": true,
+      "parity": {
+        "equity_samples_checked": 8783,
+        "fills_checked": 52,
+        "max_abs_equity_error": 4.656612873077393e-10,
+        "max_relative_equity_error": 4.437251484018717e-16,
+        "optional_observed_fields_checked": [
+          "cash",
+          "units",
+          "fill_quantities",
+          "fill_fees"
+        ],
+        "optional_unobserved_fields": [],
+        "actual_result_arrays_sha256": "09ce5bf8455f45489e1398badb1afb173b179bb6be2ee6afcec1a0f7354c97ef"
+      },
+      "admitted": true
+    },
+    {
+      "phase": "warm-7",
+      "engine_ms": 8.511387,
+      "extraction_common_ms": 41.067767,
+      "full_common_ms": 49.579154,
+      "engine_cpu_ms": 8.516523,
+      "full_common_cpu_ms": 49.583617,
+      "native_thread_limits_verified": true,
+      "parity": {
+        "equity_samples_checked": 8783,
+        "fills_checked": 52,
+        "max_abs_equity_error": 4.656612873077393e-10,
+        "max_relative_equity_error": 4.437251484018717e-16,
+        "optional_observed_fields_checked": [
+          "cash",
+          "units",
+          "fill_quantities",
+          "fill_fees"
+        ],
+        "optional_unobserved_fields": [],
+        "actual_result_arrays_sha256": "09ce5bf8455f45489e1398badb1afb173b179bb6be2ee6afcec1a0f7354c97ef"
+      },
+      "admitted": true
+    },
+    {
+      "phase": "warm-8",
+      "engine_ms": 9.54034,
+      "extraction_common_ms": 43.36193,
+      "full_common_ms": 52.90227,
+      "engine_cpu_ms": 9.547497,
+      "full_common_cpu_ms": 52.899087,
+      "native_thread_limits_verified": true,
+      "parity": {
+        "equity_samples_checked": 8783,
+        "fills_checked": 52,
+        "max_abs_equity_error": 4.656612873077393e-10,
+        "max_relative_equity_error": 4.437251484018717e-16,
+        "optional_observed_fields_checked": [
+          "cash",
+          "units",
+          "fill_quantities",
+          "fill_fees"
+        ],
+        "optional_unobserved_fields": [],
+        "actual_result_arrays_sha256": "09ce5bf8455f45489e1398badb1afb173b179bb6be2ee6afcec1a0f7354c97ef"
+      },
+      "admitted": true
+    },
+    {
+      "phase": "warm-9",
+      "engine_ms": 9.266076,
+      "extraction_common_ms": 40.381341,
+      "full_common_ms": 49.647417,
+      "engine_cpu_ms": 9.270735,
+      "full_common_cpu_ms": 49.651858,
+      "native_thread_limits_verified": true,
+      "parity": {
+        "equity_samples_checked": 8783,
+        "fills_checked": 52,
+        "max_abs_equity_error": 4.656612873077393e-10,
+        "max_relative_equity_error": 4.437251484018717e-16,
+        "optional_observed_fields_checked": [
+          "cash",
+          "units",
+          "fill_quantities",
+          "fill_fees"
+        ],
+        "optional_unobserved_fields": [],
+        "actual_result_arrays_sha256": "09ce5bf8455f45489e1398badb1afb173b179bb6be2ee6afcec1a0f7354c97ef"
+      },
+      "admitted": true
+    }
+  ],
+  "core_diagnostic_samples": [],
+  "measurement_policy": "Untimed preflight precedes independent fresh timed worker; each timed result is checked outside its timed region",
+  "benchmark_code_manifest_sha256": "d97d3526aa473df05b3c53ec1569e6f849993c250c22737e729a1782624d918a",
+  "provenance": {
+    "catalog": {
+      "id": "vectorbt",
+      "repository": "polakowo/vectorbt",
+      "name": "vectorbt (public-source edition)",
+      "track": "vectorized",
+      "url": "https://github.com/polakowo/vectorbt",
+      "commit": "0875d984fbd66f8305d172980e55ee30a45153e3",
+      "commit_date": "2026-10-19T17:40:05+02:00",
+      "source_url": "https://github.com/polakowo/vectorbt/tree/0875d984fbd66f8305d172980e55ee30a45153e3",
+      "license_files": [
+        {
+          "path": "LICENSE.md",
+          "sha256": "a914859a115b70e80956a3cbd613139ad74c04e5d1bd38da8bcc16725822ec84",
+          "url": "https://github.com/polakowo/vectorbt/blob/0875d984fbd66f8305d172980e55ee30a45153e3/LICENSE.md"
+        }
+      ],
+      "revision_policy": "Default branch HEAD captured 2026-10-19",
+      "eligibility": "source_auditable",
+      "license_label": "Apache-2.0 with Commons Clause 1.0",
+      "license_scope": "Observed repository license text; third-party components retain their own terms. This label does not authorize a particular redistribution or commercial deployment.",
+      "source_category": "public_source_with_commons_clause"
+    },
+    "source_commit_verified": "0875d984fbd66f8305d172980e55ee30a45153e3",
+    "source_path": "/workspace/scratch/008a76ec4981/benchmark-sources/vectorbt",
+    "tracked_source_clean": true,
+    "distribution": "vectorbt",
+    "distribution_version": "1.2.0",
+    "direct_url": {
+      "url": "file:///workspace/scratch/008a76ec4981/benchmark-sources/vectorbt",
+      "dir_info": {}
+    },
+    "installed_code_files": 95,
+    "installed_code_sha256": "15f08632d60c7e2135eb57d26517197e89cc780a06bc994829e7ee462d8b15e5",
+    "setup_manifest_sha256": "593ad5ada5075c776daf907818ab1f3f2c3a7a26fa9755850caa559064132d87",
+    "system_site_packages": false,
+    "observed_candidate_imports": {
+      "vectorbt._version": "/workspace/scratch/008a76ec4981/Backtest-Benchmark/.work/envs/vectorbt/lib/python3.12/site-packages/vectorbt/_version.py",
+      "vectorbt._typing": "/workspace/scratch/008a76ec4981/Backtest-Benchmark/.work/envs/vectorbt/lib/python3.12/site-packages/vectorbt/_typing.py",
+      "vectorbt.utils.checks": "/workspace/scratch/008a76ec4981/Backtest-Benchmark/.work/envs/vectorbt/lib/python3.12/site-packages/vectorbt/utils/checks.py",
+      "vectorbt.utils.docs": "/workspace/scratch/008a76ec4981/Backtest-Benchmark/.work/envs/vectorbt/lib/python3.12/site-packages/vectorbt/utils/docs.py",
+      "vectorbt.utils.config": "/workspace/scratch/008a76ec4981/Backtest-Benchmark/.work/envs/vectorbt/lib/python3.12/site-packages/vectorbt/utils/config.py",
+      "vectorbt.utils.datetime_": "/workspace/scratch/008a76ec4981/Backtest-Benchmark/.work/envs/vectorbt/lib/python3.12/site-packages/vectorbt/utils/datetime_.py",
+      "vectorbt.utils.template": "/workspace/scratch/008a76ec4981/Backtest-Benchmark/.work/envs/vectorbt/lib/python3.12/site-packages/vectorbt/utils/template.py",
+      "vectorbt._settings": "/workspace/scratch/008a76ec4981/Backtest-Benchmark/.work/envs/vectorbt/lib/python3.12/site-packages/vectorbt/_settings.py",
+      "vectorbt.utils.decorators": "/workspace/scratch/008a76ec4981/Backtest-Benchmark/.work/envs/vectorbt/lib/python3.12/site-packages/vectorbt/utils/decorators.py",
+      "vectorbt.utils.figure": "/workspace/scratch/008a76ec4981/Backtest-Benchmark/.work/envs/vectorbt/lib/python3.12/site-packages/vectorbt/utils/figure.py",
+      "vectorbt.utils.image_": "/workspace/scratch/008a76ec4981/Backtest-Benchmark/.work/envs/vectorbt/lib/python3.12/site-packages/vectorbt/utils/image_.py",
+      "vectorbt.utils.random_": "/workspace/scratch/008a76ec4981/Backtest-Benchmark/.work/envs/vectorbt/lib/python3.12/site-packages/vectorbt/utils/random_.py",
+      "vectorbt.utils.schedule_": "/workspace/scratch/008a76ec4981/Backtest-Benchmark/.work/envs/vectorbt/lib/python3.12/site-packages/vectorbt/utils/schedule_.py",
+      "vectorbt.utils": "/workspace/scratch/008a76ec4981/Backtest-Benchmark/.work/envs/vectorbt/lib/python3.12/site-packages/vectorbt/utils/__init__.py",
+      "vectorbt.base.index_fns": "/workspace/scratch/008a76ec4981/Backtest-Benchmark/.work/envs/vectorbt/lib/python3.12/site-packages/vectorbt/base/index_fns.py",
+      "vectorbt.base.reshape_fns": "/workspace/scratch/008a76ec4981/Backtest-Benchmark/.work/envs/vectorbt/lib/python3.12/site-packages/vectorbt/base/reshape_fns.py",
+      "vectorbt.utils.array_": "/workspace/scratch/008a76ec4981/Backtest-Benchmark/.work/envs/vectorbt/lib/python3.12/site-packages/vectorbt/utils/array_.py",
+      "vectorbt.base.column_grouper": "/workspace/scratch/008a76ec4981/Backtest-Benchmark/.work/envs/vectorbt/lib/python3.12/site-packages/vectorbt/base/column_grouper.py",
+      "vectorbt.base.indexing": "/workspace/scratch/008a76ec4981/Backtest-Benchmark/.work/envs/vectorbt/lib/python3.12/site-packages/vectorbt/base/indexing.py",
+      "vectorbt.utils.attr_": "/workspace/scratch/008a76ec4981/Backtest-Benchmark/.work/envs/vectorbt/lib/python3.12/site-packages/vectorbt/utils/attr_.py",
+      "vectorbt.base.array_wrapper": "/workspace/scratch/008a76ec4981/Backtest-Benchmark/.work/envs/vectorbt/lib/python3.12/site-packages/vectorbt/base/array_wrapper.py",
+      "vectorbt.base": "/workspace/scratch/008a76ec4981/Backtest-Benchmark/.work/envs/vectorbt/lib/python3.12/site-packages/vectorbt/base/__init__.py",
+      "vectorbt._engine": "/workspace/scratch/008a76ec4981/Backtest-Benchmark/.work/envs/vectorbt/lib/python3.12/site-packages/vectorbt/_engine.py",
+      "vectorbt.generic.dispatch": "/workspace/scratch/008a76ec4981/Backtest-Benchmark/.work/envs/vectorbt/lib/python3.12/site-packages/vectorbt/generic/dispatch.py",
+      "vectorbt.generic.enums": "/workspace/scratch/008a76ec4981/Backtest-Benchmark/.work/envs/vectorbt/lib/python3.12/site-packages/vectorbt/generic/enums.py",
+      "vectorbt.utils.tags": "/workspace/scratch/008a76ec4981/Backtest-Benchmark/.work/envs/vectorbt/lib/python3.12/site-packages/vectorbt/utils/tags.py",
+      "vectorbt.generic.plots_builder": "/workspace/scratch/008a76ec4981/Backtest-Benchmark/.work/envs/vectorbt/lib/python3.12/site-packages/vectorbt/generic/plots_builder.py",
+      "vectorbt.generic.stats_builder": "/workspace/scratch/008a76ec4981/Backtest-Benchmark/.work/envs/vectorbt/lib/python3.12/site-packages/vectorbt/generic/stats_builder.py",
+      "vectorbt.records.dispatch": "/workspace/scratch/008a76ec4981/Backtest-Benchmark/.work/envs/vectorbt/lib/python3.12/site-packages/vectorbt/records/dispatch.py",
+      "vectorbt.records.nb": "/workspace/scratch/008a76ec4981/Backtest-Benchmark/.work/envs/vectorbt/lib/python3.12/site-packages/vectorbt/records/nb.py",
+      "vectorbt.records.col_mapper": "/workspace/scratch/008a76ec4981/Backtest-Benchmark/.work/envs/vectorbt/lib/python3.12/site-packages/vectorbt/records/col_mapper.py",
+      "vectorbt.generic.nb": "/workspace/scratch/008a76ec4981/Backtest-Benchmark/.work/envs/vectorbt/lib/python3.12/site-packages/vectorbt/generic/nb.py",
+      "vectorbt.utils.mapping": "/workspace/scratch/008a76ec4981/Backtest-Benchmark/.work/envs/vectorbt/lib/python3.12/site-packages/vectorbt/utils/mapping.py",
+      "vectorbt.records.mapped_array": "/workspace/scratch/008a76ec4981/Backtest-Benchmark/.work/envs/vectorbt/lib/python3.12/site-packages/vectorbt/records/mapped_array.py",
+      "vectorbt.records.base": "/workspace/scratch/008a76ec4981/Backtest-Benchmark/.work/envs/vectorbt/lib/python3.12/site-packages/vectorbt/records/base.py",
+      "vectorbt.records": "/workspace/scratch/008a76ec4981/Backtest-Benchmark/.work/envs/vectorbt/lib/python3.12/site-packages/vectorbt/records/__init__.py",
+      "vectorbt.records.decorators": "/workspace/scratch/008a76ec4981/Backtest-Benchmark/.work/envs/vectorbt/lib/python3.12/site-packages/vectorbt/records/decorators.py",
+      "vectorbt.utils.colors": "/workspace/scratch/008a76ec4981/Backtest-Benchmark/.work/envs/vectorbt/lib/python3.12/site-packages/vectorbt/utils/colors.py",
+      "vectorbt.generic.ranges": "/workspace/scratch/008a76ec4981/Backtest-Benchmark/.work/envs/vectorbt/lib/python3.12/site-packages/vectorbt/generic/ranges.py",
+      "vectorbt.generic.drawdowns": "/workspace/scratch/008a76ec4981/Backtest-Benchmark/.work/envs/vectorbt/lib/python3.12/site-packages/vectorbt/generic/drawdowns.py",
+      "vectorbt.generic.splitters": "/workspace/scratch/008a76ec4981/Backtest-Benchmark/.work/envs/vectorbt/lib/python3.12/site-packages/vectorbt/generic/splitters.py",
+      "vectorbt.generic": "/workspace/scratch/008a76ec4981/Backtest-Benchmark/.work/envs/vectorbt/lib/python3.12/site-packages/vectorbt/generic/__init__.py",
+      "vectorbt.generic.plotting": "/workspace/scratch/008a76ec4981/Backtest-Benchmark/.work/envs/vectorbt/lib/python3.12/site-packages/vectorbt/generic/plotting.py",
+      "vectorbt.data.base": "/workspace/scratch/008a76ec4981/Backtest-Benchmark/.work/envs/vectorbt/lib/python3.12/site-packages/vectorbt/data/base.py",
+      "vectorbt.data.custom": "/workspace/scratch/008a76ec4981/Backtest-Benchmark/.work/envs/vectorbt/lib/python3.12/site-packages/vectorbt/data/custom.py",
+      "vectorbt.data.updater": "/workspace/scratch/008a76ec4981/Backtest-Benchmark/.work/envs/vectorbt/lib/python3.12/site-packages/vectorbt/data/updater.py",
+      "vectorbt.data": "/workspace/scratch/008a76ec4981/Backtest-Benchmark/.work/envs/vectorbt/lib/python3.12/site-packages/vectorbt/data/__init__.py",
+      "vectorbt.indicators.dispatch": "/workspace/scratch/008a76ec4981/Backtest-Benchmark/.work/envs/vectorbt/lib/python3.12/site-packages/vectorbt/indicators/dispatch.py",
+      "vectorbt.base.combine_fns": "/workspace/scratch/008a76ec4981/Backtest-Benchmark/.work/envs/vectorbt/lib/python3.12/site-packages/vectorbt/base/combine_fns.py",
+      "vectorbt.base.accessors": "/workspace/scratch/008a76ec4981/Backtest-Benchmark/.work/envs/vectorbt/lib/python3.12/site-packages/vectorbt/base/accessors.py",
+      "vectorbt.generic.decorators": "/workspace/scratch/008a76ec4981/Backtest-Benchmark/.work/envs/vectorbt/lib/python3.12/site-packages/vectorbt/generic/decorators.py",
+      "vectorbt.generic.accessors": "/workspace/scratch/008a76ec4981/Backtest-Benchmark/.work/envs/vectorbt/lib/python3.12/site-packages/vectorbt/generic/accessors.py",
+      "vectorbt.utils.enum_": "/workspace/scratch/008a76ec4981/Backtest-Benchmark/.work/envs/vectorbt/lib/python3.12/site-packages/vectorbt/utils/enum_.py",
+      "vectorbt.utils.params": "/workspace/scratch/008a76ec4981/Backtest-Benchmark/.work/envs/vectorbt/lib/python3.12/site-packages/vectorbt/utils/params.py",
+      "vectorbt.indicators.factory": "/workspace/scratch/008a76ec4981/Backtest-Benchmark/.work/envs/vectorbt/lib/python3.12/site-packages/vectorbt/indicators/factory.py",
+      "vectorbt.indicators.basic": "/workspace/scratch/008a76ec4981/Backtest-Benchmark/.work/envs/vectorbt/lib/python3.12/site-packages/vectorbt/indicators/basic.py",
+      "vectorbt.indicators": "/workspace/scratch/008a76ec4981/Backtest-Benchmark/.work/envs/vectorbt/lib/python3.12/site-packages/vectorbt/indicators/__init__.py",
+      "vectorbt.signals.enums": "/workspace/scratch/008a76ec4981/Backtest-Benchmark/.work/envs/vectorbt/lib/python3.12/site-packages/vectorbt/signals/enums.py",
+      "vectorbt.signals.dispatch": "/workspace/scratch/008a76ec4981/Backtest-Benchmark/.work/envs/vectorbt/lib/python3.12/site-packages/vectorbt/signals/dispatch.py",
+      "vectorbt.signals.nb": "/workspace/scratch/008a76ec4981/Backtest-Benchmark/.work/envs/vectorbt/lib/python3.12/site-packages/vectorbt/signals/nb.py",
+      "vectorbt.signals.factory": "/workspace/scratch/008a76ec4981/Backtest-Benchmark/.work/envs/vectorbt/lib/python3.12/site-packages/vectorbt/signals/factory.py",
+      "vectorbt.indicators.configs": "/workspace/scratch/008a76ec4981/Backtest-Benchmark/.work/envs/vectorbt/lib/python3.12/site-packages/vectorbt/indicators/configs.py",
+      "vectorbt.signals.generators": "/workspace/scratch/008a76ec4981/Backtest-Benchmark/.work/envs/vectorbt/lib/python3.12/site-packages/vectorbt/signals/generators.py",
+      "vectorbt.signals": "/workspace/scratch/008a76ec4981/Backtest-Benchmark/.work/envs/vectorbt/lib/python3.12/site-packages/vectorbt/signals/__init__.py",
+      "vectorbt.portfolio.enums": "/workspace/scratch/008a76ec4981/Backtest-Benchmark/.work/envs/vectorbt/lib/python3.12/site-packages/vectorbt/portfolio/enums.py",
+      "vectorbt.portfolio.dispatch": "/workspace/scratch/008a76ec4981/Backtest-Benchmark/.work/envs/vectorbt/lib/python3.12/site-packages/vectorbt/portfolio/dispatch.py",
+      "vectorbt.returns": "/workspace/scratch/008a76ec4981/Backtest-Benchmark/.work/envs/vectorbt/lib/python3.12/site-packages/vectorbt/returns/__init__.py",
+      "vectorbt.returns.nb": "/workspace/scratch/008a76ec4981/Backtest-Benchmark/.work/envs/vectorbt/lib/python3.12/site-packages/vectorbt/returns/nb.py",
+      "vectorbt.utils.math_": "/workspace/scratch/008a76ec4981/Backtest-Benchmark/.work/envs/vectorbt/lib/python3.12/site-packages/vectorbt/utils/math_.py",
+      "vectorbt.portfolio.nb": "/workspace/scratch/008a76ec4981/Backtest-Benchmark/.work/envs/vectorbt/lib/python3.12/site-packages/vectorbt/portfolio/nb.py",
+      "vectorbt.portfolio.decorators": "/workspace/scratch/008a76ec4981/Backtest-Benchmark/.work/envs/vectorbt/lib/python3.12/site-packages/vectorbt/portfolio/decorators.py",
+      "vectorbt.portfolio.logs": "/workspace/scratch/008a76ec4981/Backtest-Benchmark/.work/envs/vectorbt/lib/python3.12/site-packages/vectorbt/portfolio/logs.py",
+      "vectorbt.portfolio.orders": "/workspace/scratch/008a76ec4981/Backtest-Benchmark/.work/envs/vectorbt/lib/python3.12/site-packages/vectorbt/portfolio/orders.py",
+      "vectorbt.portfolio.trades": "/workspace/scratch/008a76ec4981/Backtest-Benchmark/.work/envs/vectorbt/lib/python3.12/site-packages/vectorbt/portfolio/trades.py",
+      "vectorbt.returns.dispatch": "/workspace/scratch/008a76ec4981/Backtest-Benchmark/.work/envs/vectorbt/lib/python3.12/site-packages/vectorbt/returns/dispatch.py",
+      "vectorbt.returns.metrics": "/workspace/scratch/008a76ec4981/Backtest-Benchmark/.work/envs/vectorbt/lib/python3.12/site-packages/vectorbt/returns/metrics.py",
+      "vectorbt.root_accessors": "/workspace/scratch/008a76ec4981/Backtest-Benchmark/.work/envs/vectorbt/lib/python3.12/site-packages/vectorbt/root_accessors.py",
+      "vectorbt.returns.accessors": "/workspace/scratch/008a76ec4981/Backtest-Benchmark/.work/envs/vectorbt/lib/python3.12/site-packages/vectorbt/returns/accessors.py",
+      "vectorbt.portfolio.base": "/workspace/scratch/008a76ec4981/Backtest-Benchmark/.work/envs/vectorbt/lib/python3.12/site-packages/vectorbt/portfolio/base.py",
+      "vectorbt.portfolio": "/workspace/scratch/008a76ec4981/Backtest-Benchmark/.work/envs/vectorbt/lib/python3.12/site-packages/vectorbt/portfolio/__init__.py",
+      "vectorbt.labels.enums": "/workspace/scratch/008a76ec4981/Backtest-Benchmark/.work/envs/vectorbt/lib/python3.12/site-packages/vectorbt/labels/enums.py",
+      "vectorbt.labels.dispatch": "/workspace/scratch/008a76ec4981/Backtest-Benchmark/.work/envs/vectorbt/lib/python3.12/site-packages/vectorbt/labels/dispatch.py",
+      "vectorbt.labels.generators": "/workspace/scratch/008a76ec4981/Backtest-Benchmark/.work/envs/vectorbt/lib/python3.12/site-packages/vectorbt/labels/generators.py",
+      "vectorbt.labels": "/workspace/scratch/008a76ec4981/Backtest-Benchmark/.work/envs/vectorbt/lib/python3.12/site-packages/vectorbt/labels/__init__.py",
+      "vectorbt.messaging": "/workspace/scratch/008a76ec4981/Backtest-Benchmark/.work/envs/vectorbt/lib/python3.12/site-packages/vectorbt/messaging/__init__.py",
+      "vectorbt.utils.module_": "/workspace/scratch/008a76ec4981/Backtest-Benchmark/.work/envs/vectorbt/lib/python3.12/site-packages/vectorbt/utils/module_.py",
+      "vectorbt.indicators.nb": "/workspace/scratch/008a76ec4981/Backtest-Benchmark/.work/envs/vectorbt/lib/python3.12/site-packages/vectorbt/indicators/nb.py",
+      "vectorbt.labels.nb": "/workspace/scratch/008a76ec4981/Backtest-Benchmark/.work/envs/vectorbt/lib/python3.12/site-packages/vectorbt/labels/nb.py",
+      "vectorbt.ohlcv_accessors": "/workspace/scratch/008a76ec4981/Backtest-Benchmark/.work/envs/vectorbt/lib/python3.12/site-packages/vectorbt/ohlcv_accessors.py",
+      "vectorbt.px_accessors": "/workspace/scratch/008a76ec4981/Backtest-Benchmark/.work/envs/vectorbt/lib/python3.12/site-packages/vectorbt/px_accessors.py",
+      "vectorbt.signals.accessors": "/workspace/scratch/008a76ec4981/Backtest-Benchmark/.work/envs/vectorbt/lib/python3.12/site-packages/vectorbt/signals/accessors.py",
+      "vectorbt.utils.requests_": "/workspace/scratch/008a76ec4981/Backtest-Benchmark/.work/envs/vectorbt/lib/python3.12/site-packages/vectorbt/utils/requests_.py",
+      "vectorbt": "/workspace/scratch/008a76ec4981/Backtest-Benchmark/.work/envs/vectorbt/lib/python3.12/site-packages/vectorbt/__init__.py"
+    }
+  },
+  "source_verification_ms": 44.824702,
+  "prepared_load_ms": 1.94085,
+  "prepared_arrays_sha256": "52d3537fe281118927427d09a757f7019d3ef50145d315a45e9cef5dd6d1fafd",
+  "contract": {
+    "initial_cash": 1000000,
+    "fee_bps": 0,
+    "slippage_bps": 0,
+    "signal_delay_bars": 1,
+    "equity_rtol": 1e-10,
+    "equity_atol": 1e-06,
+    "price_rtol": 1e-12,
+    "price_atol": 1e-08,
+    "quantity_rtol": 1e-10,
+    "quantity_atol": 1e-10,
+    "schema_version": 1,
+    "name": "prior-close-decision_next-close-fill_long-flat_v1",
+    "sizing": "All affordable continuous units on entry; hold units until exit; no ongoing rebalancing",
+    "signal_availability": "Decision uses only the prefix through close[t]; earliest fill is close[t+1]",
+    "fill_price": "Entry close*(1+slippage); exit close*(1-slippage)",
+    "fee_basis": "fee_bps/10000 times actual fill price times absolute executed quantity",
+    "equity_observation": "Cash plus units marked at the unadjusted close, after the close fill",
+    "held_observation": "Incoming held state over the interval ending at the current close, before its fill",
+    "terminal_rule": "Predeclared liquidation at penultimate real close; final real row settles delayed bookkeeping",
+    "unmodelled": [
+      "market impact",
+      "partial fills",
+      "funding",
+      "borrowing",
+      "corporate actions",
+      "exchange calendars"
+    ]
+  },
+  "oracle_ms": 3.141072,
+  "adapter_prepare_ms": 5168.419082,
+  "engine_scope": "Portfolio.from_signals including framework broadcasting and Numba simulation; common extraction includes lazy account-array materialization",
+  "settings": {
+    "backend": "numba",
+    "accumulate": false,
+    "cash_sharing": false,
+    "size": "infinity, all affordable continuous units",
+    "processed_rows": 8784,
+    "native_stats_requested": false,
+    "license_track": "Public source; Apache 2.0 with Commons Clause at the frozen revision"
+  },
+  "output_observation": {
+    "equity_cash_units": "Native Portfolio value/cash/assets arrays",
+    "fills": "Native Portfolio order records including quantities and fees"
+  },
+  "rank_against_full_engine": true,
+  "runtime": {
+    "python": "3.12.14 (main, Aug 25 2026, 14:00:49) [Clang 22.1.3 ]",
+    "executable": "/workspace/scratch/008a76ec4981/Backtest-Benchmark/.work/envs/vectorbt/bin/python",
+    "prefix": "/workspace/scratch/008a76ec4981/Backtest-Benchmark/.work/envs/vectorbt",
+    "platform": "Linux-6.18.55-x86_64-with-glibc2.39",
+    "machine": "x86_64",
+    "cpu_model": null,
+    "logical_cpus_visible": 9,
+    "cpu_affinity": [
+      0,
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8
+    ],
+    "container_constraints": {},
+    "thread_environment": {
+      "OMP_NUM_THREADS": "1",
+      "OPENBLAS_NUM_THREADS": "1",
+      "MKL_NUM_THREADS": "1",
+      "VECLIB_MAXIMUM_THREADS": "1",
+      "NUMEXPR_NUM_THREADS": "1",
+      "NUMBA_NUM_THREADS": "1",
+      "RAYON_NUM_THREADS": "1",
+      "BLIS_NUM_THREADS": "1",
+      "POLARS_MAX_THREADS": "1"
+    },
+    "packages": [
+      {
+        "name": "anywidget",
+        "version": "0.11.0"
+      },
+      {
+        "name": "asttokens",
+        "version": "3.0.2"
+      },
+      {
+        "name": "attrs",
+        "version": "26.1.0"
+      },
+      {
+        "name": "certifi",
+        "version": "2026.10.18"
+      },
+      {
+        "name": "charset-normalizer",
+        "version": "3.5.2"
+      },
+      {
+        "name": "cloudpickle",
+        "version": "3.1.2"
+      },
+      {
+        "name": "comm",
+        "version": "0.2.3"
+      },
+      {
+        "name": "contourpy",
+        "version": "1.4.0"
+      },
+      {
+        "name": "cycler",
+        "version": "0.12.1"
+      },
+      {
+        "name": "Cython",
+        "version": "3.3.0"
+      },
+      {
+        "name": "dateparser",
+        "version": "1.4.3"
+      },
+      {
+        "name": "dill",
+        "version": "0.4.1"
+      },
+      {
+        "name": "executing",
+        "version": "2.3.0"
+      },
+      {
+        "name": "fastjsonschema",
+        "version": "2.22.2"
+      },
+      {
+        "name": "fonttools",
+        "version": "4.67.0"
+      },
+      {
+        "name": "hatch-cython",
+        "version": "0.6.0"
+      },
+      {
+        "name": "hatchling",
+        "version": "1.32.4"
+      },
+      {
+        "name": "idna",
+        "version": "3.20"
+      },
+      {
+        "name": "ImageIO",
+        "version": "2.38.1"
+      },
+      {
+        "name": "ipython",
+        "version": "9.17.1"
+      },
+      {
+        "name": "ipython_pygments_lexers",
+        "version": "1.1.1"
+      },
+      {
+        "name": "ipywidgets",
+        "version": "8.1.9"
+      },
+      {
+        "name": "jedi",
+        "version": "0.20.1"
+      },
+      {
+        "name": "joblib",
+        "version": "1.6.0"
+      },
+      {
+        "name": "jsonschema",
+        "version": "4.26.0"
+      },
+      {
+        "name": "jsonschema-specifications",
+        "version": "2025.9.1"
+      },
+      {
+        "name": "jupyter_core",
+        "version": "5.9.1"
+      },
+      {
+        "name": "jupyterlab_widgets",
+        "version": "3.0.17"
+      },
+      {
+        "name": "kiwisolver",
+        "version": "1.5.1"
+      },
+      {
+        "name": "llvmlite",
+        "version": "0.50.0"
+      },
+      {
+        "name": "matplotlib",
+        "version": "3.11.2"
+      },
+      {
+        "name": "matplotlib-inline",
+        "version": "0.2.2"
+      },
+      {
+        "name": "mypy_extensions",
+        "version": "1.1.0"
+      },
+      {
+        "name": "narwhals",
+        "version": "2.27.1"
+      },
+      {
+        "name": "nbformat",
+        "version": "5.11.1"
+      },
+      {
+        "name": "numba",
+        "version": "0.68.0"
+      },
+      {
+        "name": "numpy",
+        "version": "2.5.4"
+      },
+      {
+        "name": "packaging",
+        "version": "26.3"
+      },
+      {
+        "name": "pandas",
+        "version": "3.0.6"
+      },
+      {
+        "name": "parso",
+        "version": "0.8.7"
+      },
+      {
+        "name": "pathspec",
+        "version": "1.1.1"
+      },
+      {
+        "name": "pexpect",
+        "version": "4.9.0"
+      },
+      {
+        "name": "pillow",
+        "version": "13.0.0"
+      },
+      {
+        "name": "platformdirs",
+        "version": "4.13.5"
+      },
+      {
+        "name": "plotly",
+        "version": "7.1.0"
+      },
+      {
+        "name": "pluggy",
+        "version": "1.7.0"
+      },
+      {
+        "name": "prompt_toolkit",
+        "version": "3.0.53"
+      },
+      {
+        "name": "psutil",
+        "version": "7.2.2"
+      },
+      {
+        "name": "psygnal",
+        "version": "0.16.1"
+      },
+      {
+        "name": "ptyprocess",
+        "version": "0.7.0"
+      },
+      {
+        "name": "pure_eval",
+        "version": "0.2.4"
+      },
+      {
+        "name": "pyarrow",
+        "version": "23.0.1"
+      },
+      {
+        "name": "Pygments",
+        "version": "2.21.0"
+      },
+      {
+        "name": "pyparsing",
+        "version": "3.3.3"
+      },
+      {
+        "name": "python-dateutil",
+        "version": "2.9.0.post0"
+      },
+      {
+        "name": "pytz",
+        "version": "2026.5"
+      },
+      {
+        "name": "referencing",
+        "version": "0.37.0"
+      },
+      {
+        "name": "regex",
+        "version": "2026.9.29"
+      },
+      {
+        "name": "requests",
+        "version": "2.34.2"
+      },
+      {
+        "name": "rpds-py",
+        "version": "2026.9.1"
+      },
+      {
+        "name": "schedule",
+        "version": "1.2.2"
+      },
+      {
+        "name": "scikit-learn",
+        "version": "1.9.1"
+      },
+      {
+        "name": "scipy",
+        "version": "1.18.1"
+      },
+      {
+        "name": "setuptools",
+        "version": "84.0.0"
+      },
+      {
+        "name": "six",
+        "version": "1.17.0"
+      },
+      {
+        "name": "stack-data",
+        "version": "0.6.3"
+      },
+      {
+        "name": "threadpoolctl",
+        "version": "3.6.0"
+      },
+      {
+        "name": "tomlkit",
+        "version": "0.15.2"
+      },
+      {
+        "name": "tqdm",
+        "version": "4.70.1"
+      },
+      {
+        "name": "traitlets",
+        "version": "5.16.1"
+      },
+      {
+        "name": "trove-classifiers",
+        "version": "2026.9.21.13"
+      },
+      {
+        "name": "typing_extensions",
+        "version": "4.16.0"
+      },
+      {
+        "name": "tzlocal",
+        "version": "5.4.4"
+      },
+      {
+        "name": "urllib3",
+        "version": "2.8.0"
+      },
+      {
+        "name": "vectorbt",
+        "version": "1.2.0"
+      },
+      {
+        "name": "wcwidth",
+        "version": "0.9.2"
+      },
+      {
+        "name": "wheel",
+        "version": "0.48.0"
+      },
+      {
+        "name": "widgetsnbextension",
+        "version": "4.0.16"
+      }
+    ],
+    "threadpools": [
+      {
+        "user_api": "blas",
+        "internal_api": "openblas",
+        "num_threads": 1,
+        "prefix": "libscipy_openblas",
+        "filepath": "/workspace/scratch/008a76ec4981/Backtest-Benchmark/.work/envs/vectorbt/lib/python3.12/site-packages/numpy.libs/libscipy_openblas64_-f48b354e.so",
+        "version": "0.3.34.106.0",
+        "threading_layer": "pthreads",
+        "architecture": "SkylakeX"
+      },
+      {
+        "user_api": "blas",
+        "internal_api": "openblas",
+        "num_threads": 1,
+        "prefix": "libscipy_openblas",
+        "filepath": "/workspace/scratch/008a76ec4981/Backtest-Benchmark/.work/envs/vectorbt/lib/python3.12/site-packages/scipy.libs/libscipy_openblas-5f890258.so",
+        "version": "0.3.31.dev",
+        "threading_layer": "pthreads",
+        "architecture": "SkylakeX"
+      },
+      {
+        "user_api": "openmp",
+        "internal_api": "openmp",
+        "num_threads": 1,
+        "prefix": "libgomp",
+        "filepath": "/workspace/scratch/008a76ec4981/Backtest-Benchmark/.work/envs/vectorbt/lib/python3.12/site-packages/scikit_learn.libs/libgomp-e985bcbb.so.1.0.0",
+        "version": null
+      }
+    ],
+    "native_thread_observations": {
+      "polars": {
+        "loaded": false
+      }
+    }
+  },
+  "summary": {
+    "final_equity": 1820426.3470877493,
+    "total_return": 0.8204263470877493,
+    "max_drawdown": -0.16665892917338376,
+    "mean_bar_return": 7.642389784102423e-05,
+    "held_fraction": 0.5550495274962997,
+    "entries": 26,
+    "exits": 26
+  },
+  "parity": {
+    "equity_samples_checked": 8783,
+    "fills_checked": 52,
+    "max_abs_equity_error": 4.656612873077393e-10,
+    "max_relative_equity_error": 4.437251484018717e-16,
+    "optional_observed_fields_checked": [
+      "cash",
+      "units",
+      "fill_quantities",
+      "fill_fees"
+    ],
+    "optional_unobserved_fields": [],
+    "actual_result_arrays_sha256": "09ce5bf8455f45489e1398badb1afb173b179bb6be2ee6afcec1a0f7354c97ef"
+  },
+  "peak_rss_bytes_after_first": 520970240,
+  "peak_rss_bytes_after_full_calls": 520970240,
+  "peak_rss_bytes_final": 520970240,
+  "rss_scope": "Process lifetime high-water memory, including imports, validation, all repetitions, and optional separately labeled core diagnostics; Linux KiB converted to bytes, macOS bytes unchanged"
+}

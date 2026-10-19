@@ -1,0 +1,8 @@
+{
+  "status": "superseded-control exploratory",
+  "numerical_admission": "All 14 cases and 70 independent timed workers verified; all 700 full engine/component calls and 100 separate core diagnostic calls passed the declared numerical checks. Original records are unchanged.",
+  "thread_control_deviation": "The original protocol claimed native_threads=1 but did not set POLARS_MAX_THREADS or observe the Polars pool. A post-campaign fresh process using the same eight declared variables and same Limen environment reproduced a Polars pool size of 9. Polars actual pool size was not recorded during the original campaign. The follow-up observation supports a control gap, not a retrospective measurement of its active threads.",
+  "use": "Preserve as an exploratory observed run and failure/correction history. Do not present as the canonical controlled single-thread benchmark or use its ratios as the final controlled ranking.",
+  "replacement": "A separately preregistered corrective campaign adds the explicit Polars environment control and loaded-pool admission before and after every call.",
+  "bt_profile": "One post-campaign cProfile attribution run, outside comparative timing. Native get_transactions independently invokes two DataFrame.unstack operations; their cumulative cost dominates extraction in this environment. Profiler durations are not comparable timing samples."
+}

@@ -1,0 +1,8 @@
+From https://github.com/Vaquum/Limen
+ * branch            29837e666604eee74a2ac94f328fb9803724342a -> FETCH_HEAD
+HEAD is now at 29837e6 Merge pull request #1023 from Vaquum/codex/readme-research-paths
+{"id": "limen", "commit": "29837e666604eee74a2ac94f328fb9803724342a", "path": "/workspace/scratch/008a76ec4981/Backtest-Benchmark/.work/sources/limen"}
+From https://github.com/microsoft/qlib
+ * branch            54355232463878d2eebb91fe0ee5fa7fa1f5976c -> FETCH_HEAD
+HEAD is now at 5435523 fix(security): constrain config-driven code execution (#2340)
+{"id": "qlib", "commit": "54355232463878d2eebb91fe0ee5fa7fa1f5976c", "path": "/workspace/scratch/008a76ec4981/Backtest-Benchmark/.work/sources/qlib"}

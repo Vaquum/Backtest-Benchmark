@@ -1,0 +1,642 @@
+{
+  "schema_version": 1,
+  "engine": "backtrader",
+  "mode": "measure",
+  "started_utc": "2026-10-19T18:11:55.755609+00:00",
+  "status": "verified",
+  "timing_samples": [
+    {
+      "phase": "first",
+      "engine_ms": 814.517662,
+      "extraction_common_ms": 1.69711,
+      "full_common_ms": 816.214772,
+      "engine_cpu_ms": 814.483318,
+      "full_common_cpu_ms": 816.17927,
+      "parity": {
+        "equity_samples_checked": 8783,
+        "fills_checked": 52,
+        "max_abs_equity_error": 6.984919309616089e-10,
+        "max_relative_equity_error": 4.771001975471274e-16,
+        "optional_observed_fields_checked": [
+          "fill_quantities",
+          "fill_fees"
+        ],
+        "optional_unobserved_fields": [
+          "cash",
+          "units"
+        ],
+        "actual_result_arrays_sha256": "92df3a623d5dc6655daec1d5d4611988458880244789c40bc1e9c256c3924ae7"
+      },
+      "admitted": true
+    },
+    {
+      "phase": "warm-1",
+      "engine_ms": 749.649922,
+      "extraction_common_ms": 0.882912,
+      "full_common_ms": 750.532834,
+      "engine_cpu_ms": 749.617019,
+      "full_common_cpu_ms": 750.495756,
+      "parity": {
+        "equity_samples_checked": 8783,
+        "fills_checked": 52,
+        "max_abs_equity_error": 6.984919309616089e-10,
+        "max_relative_equity_error": 4.771001975471274e-16,
+        "optional_observed_fields_checked": [
+          "fill_quantities",
+          "fill_fees"
+        ],
+        "optional_unobserved_fields": [
+          "cash",
+          "units"
+        ],
+        "actual_result_arrays_sha256": "92df3a623d5dc6655daec1d5d4611988458880244789c40bc1e9c256c3924ae7"
+      },
+      "admitted": true
+    },
+    {
+      "phase": "warm-2",
+      "engine_ms": 837.831131,
+      "extraction_common_ms": 0.818164,
+      "full_common_ms": 838.649295,
+      "engine_cpu_ms": 837.80372,
+      "full_common_cpu_ms": 838.619413,
+      "parity": {
+        "equity_samples_checked": 8783,
+        "fills_checked": 52,
+        "max_abs_equity_error": 6.984919309616089e-10,
+        "max_relative_equity_error": 4.771001975471274e-16,
+        "optional_observed_fields_checked": [
+          "fill_quantities",
+          "fill_fees"
+        ],
+        "optional_unobserved_fields": [
+          "cash",
+          "units"
+        ],
+        "actual_result_arrays_sha256": "92df3a623d5dc6655daec1d5d4611988458880244789c40bc1e9c256c3924ae7"
+      },
+      "admitted": true
+    },
+    {
+      "phase": "warm-3",
+      "engine_ms": 922.761141,
+      "extraction_common_ms": 0.93479,
+      "full_common_ms": 923.695931,
+      "engine_cpu_ms": 922.678192,
+      "full_common_cpu_ms": 923.610999,
+      "parity": {
+        "equity_samples_checked": 8783,
+        "fills_checked": 52,
+        "max_abs_equity_error": 6.984919309616089e-10,
+        "max_relative_equity_error": 4.771001975471274e-16,
+        "optional_observed_fields_checked": [
+          "fill_quantities",
+          "fill_fees"
+        ],
+        "optional_unobserved_fields": [
+          "cash",
+          "units"
+        ],
+        "actual_result_arrays_sha256": "92df3a623d5dc6655daec1d5d4611988458880244789c40bc1e9c256c3924ae7"
+      },
+      "admitted": true
+    },
+    {
+      "phase": "warm-4",
+      "engine_ms": 768.877817,
+      "extraction_common_ms": 0.943854,
+      "full_common_ms": 769.821671,
+      "engine_cpu_ms": 768.78929,
+      "full_common_cpu_ms": 769.731971,
+      "parity": {
+        "equity_samples_checked": 8783,
+        "fills_checked": 52,
+        "max_abs_equity_error": 6.984919309616089e-10,
+        "max_relative_equity_error": 4.771001975471274e-16,
+        "optional_observed_fields_checked": [
+          "fill_quantities",
+          "fill_fees"
+        ],
+        "optional_unobserved_fields": [
+          "cash",
+          "units"
+        ],
+        "actual_result_arrays_sha256": "92df3a623d5dc6655daec1d5d4611988458880244789c40bc1e9c256c3924ae7"
+      },
+      "admitted": true
+    },
+    {
+      "phase": "warm-5",
+      "engine_ms": 802.942103,
+      "extraction_common_ms": 0.812285,
+      "full_common_ms": 803.754388,
+      "engine_cpu_ms": 802.773843,
+      "full_common_cpu_ms": 803.584368,
+      "parity": {
+        "equity_samples_checked": 8783,
+        "fills_checked": 52,
+        "max_abs_equity_error": 6.984919309616089e-10,
+        "max_relative_equity_error": 4.771001975471274e-16,
+        "optional_observed_fields_checked": [
+          "fill_quantities",
+          "fill_fees"
+        ],
+        "optional_unobserved_fields": [
+          "cash",
+          "units"
+        ],
+        "actual_result_arrays_sha256": "92df3a623d5dc6655daec1d5d4611988458880244789c40bc1e9c256c3924ae7"
+      },
+      "admitted": true
+    },
+    {
+      "phase": "warm-6",
+      "engine_ms": 811.467503,
+      "extraction_common_ms": 0.814418,
+      "full_common_ms": 812.281921,
+      "engine_cpu_ms": 811.363295,
+      "full_common_cpu_ms": 812.175202,
+      "parity": {
+        "equity_samples_checked": 8783,
+        "fills_checked": 52,
+        "max_abs_equity_error": 6.984919309616089e-10,
+        "max_relative_equity_error": 4.771001975471274e-16,
+        "optional_observed_fields_checked": [
+          "fill_quantities",
+          "fill_fees"
+        ],
+        "optional_unobserved_fields": [
+          "cash",
+          "units"
+        ],
+        "actual_result_arrays_sha256": "92df3a623d5dc6655daec1d5d4611988458880244789c40bc1e9c256c3924ae7"
+      },
+      "admitted": true
+    },
+    {
+      "phase": "warm-7",
+      "engine_ms": 710.490284,
+      "extraction_common_ms": 0.863483,
+      "full_common_ms": 711.353767,
+      "engine_cpu_ms": 710.303331,
+      "full_common_cpu_ms": 711.165062,
+      "parity": {
+        "equity_samples_checked": 8783,
+        "fills_checked": 52,
+        "max_abs_equity_error": 6.984919309616089e-10,
+        "max_relative_equity_error": 4.771001975471274e-16,
+        "optional_observed_fields_checked": [
+          "fill_quantities",
+          "fill_fees"
+        ],
+        "optional_unobserved_fields": [
+          "cash",
+          "units"
+        ],
+        "actual_result_arrays_sha256": "92df3a623d5dc6655daec1d5d4611988458880244789c40bc1e9c256c3924ae7"
+      },
+      "admitted": true
+    },
+    {
+      "phase": "warm-8",
+      "engine_ms": 659.640292,
+      "extraction_common_ms": 0.752755,
+      "full_common_ms": 660.393047,
+      "engine_cpu_ms": 659.570832,
+      "full_common_cpu_ms": 660.321308,
+      "parity": {
+        "equity_samples_checked": 8783,
+        "fills_checked": 52,
+        "max_abs_equity_error": 6.984919309616089e-10,
+        "max_relative_equity_error": 4.771001975471274e-16,
+        "optional_observed_fields_checked": [
+          "fill_quantities",
+          "fill_fees"
+        ],
+        "optional_unobserved_fields": [
+          "cash",
+          "units"
+        ],
+        "actual_result_arrays_sha256": "92df3a623d5dc6655daec1d5d4611988458880244789c40bc1e9c256c3924ae7"
+      },
+      "admitted": true
+    },
+    {
+      "phase": "warm-9",
+      "engine_ms": 752.259284,
+      "extraction_common_ms": 0.790673,
+      "full_common_ms": 753.049957,
+      "engine_cpu_ms": 751.700376,
+      "full_common_cpu_ms": 752.488508,
+      "parity": {
+        "equity_samples_checked": 8783,
+        "fills_checked": 52,
+        "max_abs_equity_error": 6.984919309616089e-10,
+        "max_relative_equity_error": 4.771001975471274e-16,
+        "optional_observed_fields_checked": [
+          "fill_quantities",
+          "fill_fees"
+        ],
+        "optional_unobserved_fields": [
+          "cash",
+          "units"
+        ],
+        "actual_result_arrays_sha256": "92df3a623d5dc6655daec1d5d4611988458880244789c40bc1e9c256c3924ae7"
+      },
+      "admitted": true
+    }
+  ],
+  "core_diagnostic_samples": [],
+  "measurement_policy": "Untimed preflight precedes independent fresh timed worker; each timed result is checked outside its timed region",
+  "benchmark_code_manifest_sha256": "fdde07bc601acf600ce85769676f18596c513a4549ed7ee3b452b965806e0747",
+  "provenance": {
+    "catalog": {
+      "id": "backtrader",
+      "repository": "mementum/backtrader",
+      "name": "Backtrader",
+      "track": "execution",
+      "url": "https://github.com/mementum/backtrader",
+      "commit": "b853d7c90b6721476eb5a5ea3135224e33db1f14",
+      "commit_date": "2023-04-19T16:13:08+02:00",
+      "source_url": "https://github.com/mementum/backtrader/tree/b853d7c90b6721476eb5a5ea3135224e33db1f14",
+      "license_files": [
+        {
+          "path": "LICENSE",
+          "sha256": "e1c0ad728983d8a57335e52cf1064f1affd1d454173d8cebd3ed8b4a72b48704",
+          "url": "https://github.com/mementum/backtrader/blob/b853d7c90b6721476eb5a5ea3135224e33db1f14/LICENSE"
+        }
+      ],
+      "revision_policy": "Default branch HEAD captured 2026-10-19",
+      "eligibility": "source_auditable",
+      "license_label": "GPL-3.0",
+      "license_scope": "Observed repository license text; third-party components retain their own terms. This label does not authorize a particular redistribution or commercial deployment.",
+      "source_category": "public_source"
+    },
+    "source_commit_verified": "b853d7c90b6721476eb5a5ea3135224e33db1f14",
+    "source_path": "/workspace/scratch/008a76ec4981/benchmark-sources/backtrader",
+    "tracked_source_clean": true,
+    "distribution": "backtrader",
+    "distribution_version": "1.9.78.123",
+    "direct_url": {
+      "url": "file:///workspace/scratch/008a76ec4981/benchmark-sources/backtrader",
+      "dir_info": {}
+    },
+    "installed_code_files": 172,
+    "installed_code_sha256": "339e2b1a82fa62bb1a27493373a7667cd3f71bfb1ad7bb45432eed8a7aebbd1d",
+    "setup_manifest_sha256": "9a2a8544400702487d32c5fdd19bce883b4344ef05bb987252973c0c25a6d5d9",
+    "system_site_packages": false,
+    "observed_candidate_imports": {
+      "backtrader.version": "/workspace/scratch/008a76ec4981/Backtest-Benchmark/.work/envs/backtrader/lib/python3.12/site-packages/backtrader/version.py",
+      "backtrader.errors": "/workspace/scratch/008a76ec4981/Backtest-Benchmark/.work/envs/backtrader/lib/python3.12/site-packages/backtrader/errors.py",
+      "backtrader.utils.py3": "/workspace/scratch/008a76ec4981/Backtest-Benchmark/.work/envs/backtrader/lib/python3.12/site-packages/backtrader/utils/py3.py",
+      "backtrader.utils.dateintern": "/workspace/scratch/008a76ec4981/Backtest-Benchmark/.work/envs/backtrader/lib/python3.12/site-packages/backtrader/utils/dateintern.py",
+      "backtrader.utils.date": "/workspace/scratch/008a76ec4981/Backtest-Benchmark/.work/envs/backtrader/lib/python3.12/site-packages/backtrader/utils/date.py",
+      "backtrader.utils.ordereddefaultdict": "/workspace/scratch/008a76ec4981/Backtest-Benchmark/.work/envs/backtrader/lib/python3.12/site-packages/backtrader/utils/ordereddefaultdict.py",
+      "backtrader.utils.autodict": "/workspace/scratch/008a76ec4981/Backtest-Benchmark/.work/envs/backtrader/lib/python3.12/site-packages/backtrader/utils/autodict.py",
+      "backtrader.utils": "/workspace/scratch/008a76ec4981/Backtest-Benchmark/.work/envs/backtrader/lib/python3.12/site-packages/backtrader/utils/__init__.py",
+      "backtrader.metabase": "/workspace/scratch/008a76ec4981/Backtest-Benchmark/.work/envs/backtrader/lib/python3.12/site-packages/backtrader/metabase.py",
+      "backtrader.lineroot": "/workspace/scratch/008a76ec4981/Backtest-Benchmark/.work/envs/backtrader/lib/python3.12/site-packages/backtrader/lineroot.py",
+      "backtrader.linebuffer": "/workspace/scratch/008a76ec4981/Backtest-Benchmark/.work/envs/backtrader/lib/python3.12/site-packages/backtrader/linebuffer.py",
+      "backtrader.functions": "/workspace/scratch/008a76ec4981/Backtest-Benchmark/.work/envs/backtrader/lib/python3.12/site-packages/backtrader/functions.py",
+      "backtrader.order": "/workspace/scratch/008a76ec4981/Backtest-Benchmark/.work/envs/backtrader/lib/python3.12/site-packages/backtrader/order.py",
+      "backtrader.comminfo": "/workspace/scratch/008a76ec4981/Backtest-Benchmark/.work/envs/backtrader/lib/python3.12/site-packages/backtrader/comminfo.py",
+      "backtrader.trade": "/workspace/scratch/008a76ec4981/Backtest-Benchmark/.work/envs/backtrader/lib/python3.12/site-packages/backtrader/trade.py",
+      "backtrader.position": "/workspace/scratch/008a76ec4981/Backtest-Benchmark/.work/envs/backtrader/lib/python3.12/site-packages/backtrader/position.py",
+      "backtrader.store": "/workspace/scratch/008a76ec4981/Backtest-Benchmark/.work/envs/backtrader/lib/python3.12/site-packages/backtrader/store.py",
+      "backtrader.fillers": "/workspace/scratch/008a76ec4981/Backtest-Benchmark/.work/envs/backtrader/lib/python3.12/site-packages/backtrader/fillers.py",
+      "backtrader.broker": "/workspace/scratch/008a76ec4981/Backtest-Benchmark/.work/envs/backtrader/lib/python3.12/site-packages/backtrader/broker.py",
+      "backtrader.lineseries": "/workspace/scratch/008a76ec4981/Backtest-Benchmark/.work/envs/backtrader/lib/python3.12/site-packages/backtrader/lineseries.py",
+      "backtrader.dataseries": "/workspace/scratch/008a76ec4981/Backtest-Benchmark/.work/envs/backtrader/lib/python3.12/site-packages/backtrader/dataseries.py",
+      "backtrader.resamplerfilter": "/workspace/scratch/008a76ec4981/Backtest-Benchmark/.work/envs/backtrader/lib/python3.12/site-packages/backtrader/resamplerfilter.py",
+      "backtrader.tradingcal": "/workspace/scratch/008a76ec4981/Backtest-Benchmark/.work/envs/backtrader/lib/python3.12/site-packages/backtrader/tradingcal.py",
+      "backtrader.feed": "/workspace/scratch/008a76ec4981/Backtest-Benchmark/.work/envs/backtrader/lib/python3.12/site-packages/backtrader/feed.py",
+      "backtrader.lineiterator": "/workspace/scratch/008a76ec4981/Backtest-Benchmark/.work/envs/backtrader/lib/python3.12/site-packages/backtrader/lineiterator.py",
+      "backtrader.indicator": "/workspace/scratch/008a76ec4981/Backtest-Benchmark/.work/envs/backtrader/lib/python3.12/site-packages/backtrader/indicator.py",
+      "backtrader.analyzer": "/workspace/scratch/008a76ec4981/Backtest-Benchmark/.work/envs/backtrader/lib/python3.12/site-packages/backtrader/analyzer.py",
+      "backtrader.observer": "/workspace/scratch/008a76ec4981/Backtest-Benchmark/.work/envs/backtrader/lib/python3.12/site-packages/backtrader/observer.py",
+      "backtrader.sizer": "/workspace/scratch/008a76ec4981/Backtest-Benchmark/.work/envs/backtrader/lib/python3.12/site-packages/backtrader/sizer.py",
+      "backtrader.sizers.fixedsize": "/workspace/scratch/008a76ec4981/Backtest-Benchmark/.work/envs/backtrader/lib/python3.12/site-packages/backtrader/sizers/fixedsize.py",
+      "backtrader.sizers.percents_sizer": "/workspace/scratch/008a76ec4981/Backtest-Benchmark/.work/envs/backtrader/lib/python3.12/site-packages/backtrader/sizers/percents_sizer.py",
+      "backtrader.sizers": "/workspace/scratch/008a76ec4981/Backtest-Benchmark/.work/envs/backtrader/lib/python3.12/site-packages/backtrader/sizers/__init__.py",
+      "backtrader.strategy": "/workspace/scratch/008a76ec4981/Backtest-Benchmark/.work/envs/backtrader/lib/python3.12/site-packages/backtrader/strategy.py",
+      "backtrader.writer": "/workspace/scratch/008a76ec4981/Backtest-Benchmark/.work/envs/backtrader/lib/python3.12/site-packages/backtrader/writer.py",
+      "backtrader.signal": "/workspace/scratch/008a76ec4981/Backtest-Benchmark/.work/envs/backtrader/lib/python3.12/site-packages/backtrader/signal.py",
+      "backtrader.brokers.bbroker": "/workspace/scratch/008a76ec4981/Backtest-Benchmark/.work/envs/backtrader/lib/python3.12/site-packages/backtrader/brokers/bbroker.py",
+      "backtrader.stores.vcstore": "/workspace/scratch/008a76ec4981/Backtest-Benchmark/.work/envs/backtrader/lib/python3.12/site-packages/backtrader/stores/vcstore.py",
+      "backtrader.stores.vchartfile": "/workspace/scratch/008a76ec4981/Backtest-Benchmark/.work/envs/backtrader/lib/python3.12/site-packages/backtrader/stores/vchartfile.py",
+      "backtrader.stores": "/workspace/scratch/008a76ec4981/Backtest-Benchmark/.work/envs/backtrader/lib/python3.12/site-packages/backtrader/stores/__init__.py",
+      "backtrader.brokers.vcbroker": "/workspace/scratch/008a76ec4981/Backtest-Benchmark/.work/envs/backtrader/lib/python3.12/site-packages/backtrader/brokers/vcbroker.py",
+      "backtrader.brokers": "/workspace/scratch/008a76ec4981/Backtest-Benchmark/.work/envs/backtrader/lib/python3.12/site-packages/backtrader/brokers/__init__.py",
+      "backtrader.observers.broker": "/workspace/scratch/008a76ec4981/Backtest-Benchmark/.work/envs/backtrader/lib/python3.12/site-packages/backtrader/observers/broker.py",
+      "backtrader.observers.buysell": "/workspace/scratch/008a76ec4981/Backtest-Benchmark/.work/envs/backtrader/lib/python3.12/site-packages/backtrader/observers/buysell.py",
+      "backtrader.observers.trades": "/workspace/scratch/008a76ec4981/Backtest-Benchmark/.work/envs/backtrader/lib/python3.12/site-packages/backtrader/observers/trades.py",
+      "backtrader.observers.drawdown": "/workspace/scratch/008a76ec4981/Backtest-Benchmark/.work/envs/backtrader/lib/python3.12/site-packages/backtrader/observers/drawdown.py",
+      "backtrader.observers.timereturn": "/workspace/scratch/008a76ec4981/Backtest-Benchmark/.work/envs/backtrader/lib/python3.12/site-packages/backtrader/observers/timereturn.py",
+      "backtrader.observers.benchmark": "/workspace/scratch/008a76ec4981/Backtest-Benchmark/.work/envs/backtrader/lib/python3.12/site-packages/backtrader/observers/benchmark.py",
+      "backtrader.observers.logreturns": "/workspace/scratch/008a76ec4981/Backtest-Benchmark/.work/envs/backtrader/lib/python3.12/site-packages/backtrader/observers/logreturns.py",
+      "backtrader.observers": "/workspace/scratch/008a76ec4981/Backtest-Benchmark/.work/envs/backtrader/lib/python3.12/site-packages/backtrader/observers/__init__.py",
+      "backtrader.timer": "/workspace/scratch/008a76ec4981/Backtest-Benchmark/.work/envs/backtrader/lib/python3.12/site-packages/backtrader/timer.py",
+      "backtrader.cerebro": "/workspace/scratch/008a76ec4981/Backtest-Benchmark/.work/envs/backtrader/lib/python3.12/site-packages/backtrader/cerebro.py",
+      "backtrader.flt": "/workspace/scratch/008a76ec4981/Backtest-Benchmark/.work/envs/backtrader/lib/python3.12/site-packages/backtrader/flt.py",
+      "backtrader.feeds.csvgeneric": "/workspace/scratch/008a76ec4981/Backtest-Benchmark/.work/envs/backtrader/lib/python3.12/site-packages/backtrader/feeds/csvgeneric.py",
+      "backtrader.feeds.btcsv": "/workspace/scratch/008a76ec4981/Backtest-Benchmark/.work/envs/backtrader/lib/python3.12/site-packages/backtrader/feeds/btcsv.py",
+      "backtrader.feeds.vchartcsv": "/workspace/scratch/008a76ec4981/Backtest-Benchmark/.work/envs/backtrader/lib/python3.12/site-packages/backtrader/feeds/vchartcsv.py",
+      "backtrader.feeds.vchart": "/workspace/scratch/008a76ec4981/Backtest-Benchmark/.work/envs/backtrader/lib/python3.12/site-packages/backtrader/feeds/vchart.py",
+      "backtrader.feeds.yahoo": "/workspace/scratch/008a76ec4981/Backtest-Benchmark/.work/envs/backtrader/lib/python3.12/site-packages/backtrader/feeds/yahoo.py",
+      "backtrader.feeds.quandl": "/workspace/scratch/008a76ec4981/Backtest-Benchmark/.work/envs/backtrader/lib/python3.12/site-packages/backtrader/feeds/quandl.py",
+      "backtrader.feeds.sierrachart": "/workspace/scratch/008a76ec4981/Backtest-Benchmark/.work/envs/backtrader/lib/python3.12/site-packages/backtrader/feeds/sierrachart.py",
+      "backtrader.feeds.mt4csv": "/workspace/scratch/008a76ec4981/Backtest-Benchmark/.work/envs/backtrader/lib/python3.12/site-packages/backtrader/feeds/mt4csv.py",
+      "backtrader.feeds.pandafeed": "/workspace/scratch/008a76ec4981/Backtest-Benchmark/.work/envs/backtrader/lib/python3.12/site-packages/backtrader/feeds/pandafeed.py",
+      "backtrader.feeds.influxfeed": "/workspace/scratch/008a76ec4981/Backtest-Benchmark/.work/envs/backtrader/lib/python3.12/site-packages/backtrader/feeds/influxfeed.py",
+      "backtrader.feeds.vcdata": "/workspace/scratch/008a76ec4981/Backtest-Benchmark/.work/envs/backtrader/lib/python3.12/site-packages/backtrader/feeds/vcdata.py",
+      "backtrader.feeds.vchartfile": "/workspace/scratch/008a76ec4981/Backtest-Benchmark/.work/envs/backtrader/lib/python3.12/site-packages/backtrader/feeds/vchartfile.py",
+      "backtrader.feeds.rollover": "/workspace/scratch/008a76ec4981/Backtest-Benchmark/.work/envs/backtrader/lib/python3.12/site-packages/backtrader/feeds/rollover.py",
+      "backtrader.feeds.chainer": "/workspace/scratch/008a76ec4981/Backtest-Benchmark/.work/envs/backtrader/lib/python3.12/site-packages/backtrader/feeds/chainer.py",
+      "backtrader.feeds": "/workspace/scratch/008a76ec4981/Backtest-Benchmark/.work/envs/backtrader/lib/python3.12/site-packages/backtrader/feeds/__init__.py",
+      "backtrader.indicators.basicops": "/workspace/scratch/008a76ec4981/Backtest-Benchmark/.work/envs/backtrader/lib/python3.12/site-packages/backtrader/indicators/basicops.py",
+      "backtrader.indicators.mabase": "/workspace/scratch/008a76ec4981/Backtest-Benchmark/.work/envs/backtrader/lib/python3.12/site-packages/backtrader/indicators/mabase.py",
+      "backtrader.indicators.sma": "/workspace/scratch/008a76ec4981/Backtest-Benchmark/.work/envs/backtrader/lib/python3.12/site-packages/backtrader/indicators/sma.py",
+      "backtrader.indicators.ema": "/workspace/scratch/008a76ec4981/Backtest-Benchmark/.work/envs/backtrader/lib/python3.12/site-packages/backtrader/indicators/ema.py",
+      "backtrader.indicators.smma": "/workspace/scratch/008a76ec4981/Backtest-Benchmark/.work/envs/backtrader/lib/python3.12/site-packages/backtrader/indicators/smma.py",
+      "backtrader.indicators.wma": "/workspace/scratch/008a76ec4981/Backtest-Benchmark/.work/envs/backtrader/lib/python3.12/site-packages/backtrader/indicators/wma.py",
+      "backtrader.indicators.dema": "/workspace/scratch/008a76ec4981/Backtest-Benchmark/.work/envs/backtrader/lib/python3.12/site-packages/backtrader/indicators/dema.py",
+      "backtrader.indicators.kama": "/workspace/scratch/008a76ec4981/Backtest-Benchmark/.work/envs/backtrader/lib/python3.12/site-packages/backtrader/indicators/kama.py",
+      "backtrader.indicators.zlema": "/workspace/scratch/008a76ec4981/Backtest-Benchmark/.work/envs/backtrader/lib/python3.12/site-packages/backtrader/indicators/zlema.py",
+      "backtrader.indicators.hma": "/workspace/scratch/008a76ec4981/Backtest-Benchmark/.work/envs/backtrader/lib/python3.12/site-packages/backtrader/indicators/hma.py",
+      "backtrader.indicators.zlind": "/workspace/scratch/008a76ec4981/Backtest-Benchmark/.work/envs/backtrader/lib/python3.12/site-packages/backtrader/indicators/zlind.py",
+      "backtrader.indicators.dma": "/workspace/scratch/008a76ec4981/Backtest-Benchmark/.work/envs/backtrader/lib/python3.12/site-packages/backtrader/indicators/dma.py",
+      "backtrader.indicators.deviation": "/workspace/scratch/008a76ec4981/Backtest-Benchmark/.work/envs/backtrader/lib/python3.12/site-packages/backtrader/indicators/deviation.py",
+      "backtrader.indicators.atr": "/workspace/scratch/008a76ec4981/Backtest-Benchmark/.work/envs/backtrader/lib/python3.12/site-packages/backtrader/indicators/atr.py",
+      "backtrader.indicators.aroon": "/workspace/scratch/008a76ec4981/Backtest-Benchmark/.work/envs/backtrader/lib/python3.12/site-packages/backtrader/indicators/aroon.py",
+      "backtrader.indicators.bollinger": "/workspace/scratch/008a76ec4981/Backtest-Benchmark/.work/envs/backtrader/lib/python3.12/site-packages/backtrader/indicators/bollinger.py",
+      "backtrader.indicators.cci": "/workspace/scratch/008a76ec4981/Backtest-Benchmark/.work/envs/backtrader/lib/python3.12/site-packages/backtrader/indicators/cci.py",
+      "backtrader.indicators.crossover": "/workspace/scratch/008a76ec4981/Backtest-Benchmark/.work/envs/backtrader/lib/python3.12/site-packages/backtrader/indicators/crossover.py",
+      "backtrader.indicators.dpo": "/workspace/scratch/008a76ec4981/Backtest-Benchmark/.work/envs/backtrader/lib/python3.12/site-packages/backtrader/indicators/dpo.py",
+      "backtrader.indicators.directionalmove": "/workspace/scratch/008a76ec4981/Backtest-Benchmark/.work/envs/backtrader/lib/python3.12/site-packages/backtrader/indicators/directionalmove.py",
+      "backtrader.indicators.envelope": "/workspace/scratch/008a76ec4981/Backtest-Benchmark/.work/envs/backtrader/lib/python3.12/site-packages/backtrader/indicators/envelope.py",
+      "backtrader.indicators.heikinashi": "/workspace/scratch/008a76ec4981/Backtest-Benchmark/.work/envs/backtrader/lib/python3.12/site-packages/backtrader/indicators/heikinashi.py",
+      "backtrader.indicators.lrsi": "/workspace/scratch/008a76ec4981/Backtest-Benchmark/.work/envs/backtrader/lib/python3.12/site-packages/backtrader/indicators/lrsi.py",
+      "backtrader.indicators.macd": "/workspace/scratch/008a76ec4981/Backtest-Benchmark/.work/envs/backtrader/lib/python3.12/site-packages/backtrader/indicators/macd.py",
+      "backtrader.indicators.momentum": "/workspace/scratch/008a76ec4981/Backtest-Benchmark/.work/envs/backtrader/lib/python3.12/site-packages/backtrader/indicators/momentum.py",
+      "backtrader.indicators.oscillator": "/workspace/scratch/008a76ec4981/Backtest-Benchmark/.work/envs/backtrader/lib/python3.12/site-packages/backtrader/indicators/oscillator.py",
+      "backtrader.indicators.percentchange": "/workspace/scratch/008a76ec4981/Backtest-Benchmark/.work/envs/backtrader/lib/python3.12/site-packages/backtrader/indicators/percentchange.py",
+      "backtrader.indicators.percentrank": "/workspace/scratch/008a76ec4981/Backtest-Benchmark/.work/envs/backtrader/lib/python3.12/site-packages/backtrader/indicators/percentrank.py",
+      "backtrader.indicators.pivotpoint": "/workspace/scratch/008a76ec4981/Backtest-Benchmark/.work/envs/backtrader/lib/python3.12/site-packages/backtrader/indicators/pivotpoint.py",
+      "backtrader.indicators.prettygoodoscillator": "/workspace/scratch/008a76ec4981/Backtest-Benchmark/.work/envs/backtrader/lib/python3.12/site-packages/backtrader/indicators/prettygoodoscillator.py",
+      "backtrader.indicators.priceoscillator": "/workspace/scratch/008a76ec4981/Backtest-Benchmark/.work/envs/backtrader/lib/python3.12/site-packages/backtrader/indicators/priceoscillator.py",
+      "backtrader.indicators.psar": "/workspace/scratch/008a76ec4981/Backtest-Benchmark/.work/envs/backtrader/lib/python3.12/site-packages/backtrader/indicators/psar.py",
+      "backtrader.indicators.rsi": "/workspace/scratch/008a76ec4981/Backtest-Benchmark/.work/envs/backtrader/lib/python3.12/site-packages/backtrader/indicators/rsi.py",
+      "backtrader.indicators.stochastic": "/workspace/scratch/008a76ec4981/Backtest-Benchmark/.work/envs/backtrader/lib/python3.12/site-packages/backtrader/indicators/stochastic.py",
+      "backtrader.indicators.trix": "/workspace/scratch/008a76ec4981/Backtest-Benchmark/.work/envs/backtrader/lib/python3.12/site-packages/backtrader/indicators/trix.py",
+      "backtrader.indicators.tsi": "/workspace/scratch/008a76ec4981/Backtest-Benchmark/.work/envs/backtrader/lib/python3.12/site-packages/backtrader/indicators/tsi.py",
+      "backtrader.indicators.ultimateoscillator": "/workspace/scratch/008a76ec4981/Backtest-Benchmark/.work/envs/backtrader/lib/python3.12/site-packages/backtrader/indicators/ultimateoscillator.py",
+      "backtrader.indicators.williams": "/workspace/scratch/008a76ec4981/Backtest-Benchmark/.work/envs/backtrader/lib/python3.12/site-packages/backtrader/indicators/williams.py",
+      "backtrader.indicators.rmi": "/workspace/scratch/008a76ec4981/Backtest-Benchmark/.work/envs/backtrader/lib/python3.12/site-packages/backtrader/indicators/rmi.py",
+      "backtrader.indicators.awesomeoscillator": "/workspace/scratch/008a76ec4981/Backtest-Benchmark/.work/envs/backtrader/lib/python3.12/site-packages/backtrader/indicators/awesomeoscillator.py",
+      "backtrader.indicators.accdecoscillator": "/workspace/scratch/008a76ec4981/Backtest-Benchmark/.work/envs/backtrader/lib/python3.12/site-packages/backtrader/indicators/accdecoscillator.py",
+      "backtrader.indicators.dv2": "/workspace/scratch/008a76ec4981/Backtest-Benchmark/.work/envs/backtrader/lib/python3.12/site-packages/backtrader/indicators/dv2.py",
+      "backtrader.indicators.kst": "/workspace/scratch/008a76ec4981/Backtest-Benchmark/.work/envs/backtrader/lib/python3.12/site-packages/backtrader/indicators/kst.py",
+      "backtrader.indicators.ichimoku": "/workspace/scratch/008a76ec4981/Backtest-Benchmark/.work/envs/backtrader/lib/python3.12/site-packages/backtrader/indicators/ichimoku.py",
+      "backtrader.indicators.hurst": "/workspace/scratch/008a76ec4981/Backtest-Benchmark/.work/envs/backtrader/lib/python3.12/site-packages/backtrader/indicators/hurst.py",
+      "backtrader.indicators.ols": "/workspace/scratch/008a76ec4981/Backtest-Benchmark/.work/envs/backtrader/lib/python3.12/site-packages/backtrader/indicators/ols.py",
+      "backtrader.indicators.hadelta": "/workspace/scratch/008a76ec4981/Backtest-Benchmark/.work/envs/backtrader/lib/python3.12/site-packages/backtrader/indicators/hadelta.py",
+      "backtrader.indicators": "/workspace/scratch/008a76ec4981/Backtest-Benchmark/.work/envs/backtrader/lib/python3.12/site-packages/backtrader/indicators/__init__.py",
+      "backtrader.studies": "/workspace/scratch/008a76ec4981/Backtest-Benchmark/.work/envs/backtrader/lib/python3.12/site-packages/backtrader/studies/__init__.py",
+      "backtrader.strategies.sma_crossover": "/workspace/scratch/008a76ec4981/Backtest-Benchmark/.work/envs/backtrader/lib/python3.12/site-packages/backtrader/strategies/sma_crossover.py",
+      "backtrader.strategies": "/workspace/scratch/008a76ec4981/Backtest-Benchmark/.work/envs/backtrader/lib/python3.12/site-packages/backtrader/strategies/__init__.py",
+      "backtrader.analyzers.annualreturn": "/workspace/scratch/008a76ec4981/Backtest-Benchmark/.work/envs/backtrader/lib/python3.12/site-packages/backtrader/analyzers/annualreturn.py",
+      "backtrader.analyzers.drawdown": "/workspace/scratch/008a76ec4981/Backtest-Benchmark/.work/envs/backtrader/lib/python3.12/site-packages/backtrader/analyzers/drawdown.py",
+      "backtrader.analyzers.timereturn": "/workspace/scratch/008a76ec4981/Backtest-Benchmark/.work/envs/backtrader/lib/python3.12/site-packages/backtrader/analyzers/timereturn.py",
+      "backtrader.mathsupport": "/workspace/scratch/008a76ec4981/Backtest-Benchmark/.work/envs/backtrader/lib/python3.12/site-packages/backtrader/mathsupport.py",
+      "backtrader.analyzers.sharpe": "/workspace/scratch/008a76ec4981/Backtest-Benchmark/.work/envs/backtrader/lib/python3.12/site-packages/backtrader/analyzers/sharpe.py",
+      "backtrader.analyzers.tradeanalyzer": "/workspace/scratch/008a76ec4981/Backtest-Benchmark/.work/envs/backtrader/lib/python3.12/site-packages/backtrader/analyzers/tradeanalyzer.py",
+      "backtrader.analyzers.sqn": "/workspace/scratch/008a76ec4981/Backtest-Benchmark/.work/envs/backtrader/lib/python3.12/site-packages/backtrader/analyzers/sqn.py",
+      "backtrader.analyzers.leverage": "/workspace/scratch/008a76ec4981/Backtest-Benchmark/.work/envs/backtrader/lib/python3.12/site-packages/backtrader/analyzers/leverage.py",
+      "backtrader.analyzers.positions": "/workspace/scratch/008a76ec4981/Backtest-Benchmark/.work/envs/backtrader/lib/python3.12/site-packages/backtrader/analyzers/positions.py",
+      "backtrader.analyzers.transactions": "/workspace/scratch/008a76ec4981/Backtest-Benchmark/.work/envs/backtrader/lib/python3.12/site-packages/backtrader/analyzers/transactions.py",
+      "backtrader.analyzers.pyfolio": "/workspace/scratch/008a76ec4981/Backtest-Benchmark/.work/envs/backtrader/lib/python3.12/site-packages/backtrader/analyzers/pyfolio.py",
+      "backtrader.analyzers.returns": "/workspace/scratch/008a76ec4981/Backtest-Benchmark/.work/envs/backtrader/lib/python3.12/site-packages/backtrader/analyzers/returns.py",
+      "backtrader.analyzers.vwr": "/workspace/scratch/008a76ec4981/Backtest-Benchmark/.work/envs/backtrader/lib/python3.12/site-packages/backtrader/analyzers/vwr.py",
+      "backtrader.analyzers.logreturnsrolling": "/workspace/scratch/008a76ec4981/Backtest-Benchmark/.work/envs/backtrader/lib/python3.12/site-packages/backtrader/analyzers/logreturnsrolling.py",
+      "backtrader.analyzers.calmar": "/workspace/scratch/008a76ec4981/Backtest-Benchmark/.work/envs/backtrader/lib/python3.12/site-packages/backtrader/analyzers/calmar.py",
+      "backtrader.analyzers.periodstats": "/workspace/scratch/008a76ec4981/Backtest-Benchmark/.work/envs/backtrader/lib/python3.12/site-packages/backtrader/analyzers/periodstats.py",
+      "backtrader.analyzers": "/workspace/scratch/008a76ec4981/Backtest-Benchmark/.work/envs/backtrader/lib/python3.12/site-packages/backtrader/analyzers/__init__.py",
+      "backtrader.commissions": "/workspace/scratch/008a76ec4981/Backtest-Benchmark/.work/envs/backtrader/lib/python3.12/site-packages/backtrader/commissions/__init__.py",
+      "backtrader.filters.datafilter": "/workspace/scratch/008a76ec4981/Backtest-Benchmark/.work/envs/backtrader/lib/python3.12/site-packages/backtrader/filters/datafilter.py",
+      "backtrader.filters.datafiller": "/workspace/scratch/008a76ec4981/Backtest-Benchmark/.work/envs/backtrader/lib/python3.12/site-packages/backtrader/filters/datafiller.py",
+      "backtrader.filters.session": "/workspace/scratch/008a76ec4981/Backtest-Benchmark/.work/envs/backtrader/lib/python3.12/site-packages/backtrader/filters/session.py",
+      "backtrader.filters.calendardays": "/workspace/scratch/008a76ec4981/Backtest-Benchmark/.work/envs/backtrader/lib/python3.12/site-packages/backtrader/filters/calendardays.py",
+      "backtrader.filters.daysteps": "/workspace/scratch/008a76ec4981/Backtest-Benchmark/.work/envs/backtrader/lib/python3.12/site-packages/backtrader/filters/daysteps.py",
+      "backtrader.filters.bsplitter": "/workspace/scratch/008a76ec4981/Backtest-Benchmark/.work/envs/backtrader/lib/python3.12/site-packages/backtrader/filters/bsplitter.py",
+      "backtrader.filters.heikinashi": "/workspace/scratch/008a76ec4981/Backtest-Benchmark/.work/envs/backtrader/lib/python3.12/site-packages/backtrader/filters/heikinashi.py",
+      "backtrader.filters.renko": "/workspace/scratch/008a76ec4981/Backtest-Benchmark/.work/envs/backtrader/lib/python3.12/site-packages/backtrader/filters/renko.py",
+      "backtrader.filters": "/workspace/scratch/008a76ec4981/Backtest-Benchmark/.work/envs/backtrader/lib/python3.12/site-packages/backtrader/filters/__init__.py",
+      "backtrader.signals": "/workspace/scratch/008a76ec4981/Backtest-Benchmark/.work/envs/backtrader/lib/python3.12/site-packages/backtrader/signals/__init__.py",
+      "backtrader.talib": "/workspace/scratch/008a76ec4981/Backtest-Benchmark/.work/envs/backtrader/lib/python3.12/site-packages/backtrader/talib.py",
+      "backtrader.indicators.contrib.vortex": "/workspace/scratch/008a76ec4981/Backtest-Benchmark/.work/envs/backtrader/lib/python3.12/site-packages/backtrader/indicators/contrib/vortex.py",
+      "backtrader.indicators.contrib": "/workspace/scratch/008a76ec4981/Backtest-Benchmark/.work/envs/backtrader/lib/python3.12/site-packages/backtrader/indicators/contrib/__init__.py",
+      "backtrader.studies.contrib.fractal": "/workspace/scratch/008a76ec4981/Backtest-Benchmark/.work/envs/backtrader/lib/python3.12/site-packages/backtrader/studies/contrib/fractal.py",
+      "backtrader.studies.contrib": "/workspace/scratch/008a76ec4981/Backtest-Benchmark/.work/envs/backtrader/lib/python3.12/site-packages/backtrader/studies/contrib/__init__.py",
+      "backtrader": "/workspace/scratch/008a76ec4981/Backtest-Benchmark/.work/envs/backtrader/lib/python3.12/site-packages/backtrader/__init__.py"
+    }
+  },
+  "source_verification_ms": 34.480091,
+  "prepared_load_ms": 2.198426,
+  "prepared_arrays_sha256": "52d3537fe281118927427d09a757f7019d3ef50145d315a45e9cef5dd6d1fafd",
+  "contract": {
+    "initial_cash": 1000000,
+    "fee_bps": 0,
+    "slippage_bps": 0,
+    "signal_delay_bars": 1,
+    "equity_rtol": 1e-10,
+    "equity_atol": 1e-06,
+    "price_rtol": 1e-12,
+    "price_atol": 1e-08,
+    "quantity_rtol": 1e-10,
+    "quantity_atol": 1e-10,
+    "schema_version": 1,
+    "name": "prior-close-decision_next-close-fill_long-flat_v1",
+    "sizing": "All affordable continuous units on entry; hold units until exit; no ongoing rebalancing",
+    "signal_availability": "Decision uses only the prefix through close[t]; earliest fill is close[t+1]",
+    "fill_price": "Entry close*(1+slippage); exit close*(1-slippage)",
+    "fee_basis": "fee_bps/10000 times actual fill price times absolute executed quantity",
+    "equity_observation": "Cash plus units marked at the unadjusted close, after the close fill",
+    "held_observation": "Incoming held state over the interval ending at the current close, before its fill",
+    "terminal_rule": "Predeclared liquidation at penultimate real close; final real row settles delayed bookkeeping",
+    "unmodelled": [
+      "market impact",
+      "partial fills",
+      "funding",
+      "borrowing",
+      "corporate actions",
+      "exchange calendars"
+    ]
+  },
+  "oracle_ms": 3.468703,
+  "adapter_prepare_ms": 1203.564452,
+  "engine_scope": "Cerebro construction, PandasData ingestion, preload and runonce event simulation; standard chart observers disabled",
+  "settings": {
+    "close_on_close": true,
+    "preload": true,
+    "runonce": true,
+    "stdstats": false,
+    "processed_rows": 8784,
+    "native_stats_requested": false
+  },
+  "output_observation": {
+    "equity": "Actual broker value at each strategy callback; equivalent after a same-close zero-cost fill",
+    "held": "Incoming state reconstructed from actual completed order sides",
+    "fills": "Native completed order timestamps, prices, quantities and commissions",
+    "cash_units": "Not separately observed by this adapter"
+  },
+  "rank_against_full_engine": true,
+  "runtime": {
+    "python": "3.12.14 (main, Aug 25 2026, 14:00:49) [Clang 22.1.3 ]",
+    "executable": "/workspace/scratch/008a76ec4981/Backtest-Benchmark/.work/envs/backtrader/bin/python",
+    "prefix": "/workspace/scratch/008a76ec4981/Backtest-Benchmark/.work/envs/backtrader",
+    "platform": "Linux-6.18.55-x86_64-with-glibc2.39",
+    "machine": "x86_64",
+    "cpu_model": null,
+    "logical_cpus_visible": 9,
+    "cpu_affinity": [
+      0,
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8
+    ],
+    "container_constraints": {},
+    "thread_environment": {
+      "OMP_NUM_THREADS": "1",
+      "OPENBLAS_NUM_THREADS": "1",
+      "MKL_NUM_THREADS": "1",
+      "VECLIB_MAXIMUM_THREADS": "1",
+      "NUMEXPR_NUM_THREADS": "1",
+      "NUMBA_NUM_THREADS": "1",
+      "RAYON_NUM_THREADS": "1",
+      "BLIS_NUM_THREADS": "1"
+    },
+    "packages": [
+      {
+        "name": "backtrader",
+        "version": "1.9.78.123"
+      },
+      {
+        "name": "Cython",
+        "version": "3.3.0"
+      },
+      {
+        "name": "hatch-cython",
+        "version": "0.6.0"
+      },
+      {
+        "name": "hatchling",
+        "version": "1.32.4"
+      },
+      {
+        "name": "numpy",
+        "version": "2.2.6"
+      },
+      {
+        "name": "packaging",
+        "version": "26.3"
+      },
+      {
+        "name": "pandas",
+        "version": "2.3.3"
+      },
+      {
+        "name": "pathspec",
+        "version": "1.1.1"
+      },
+      {
+        "name": "pluggy",
+        "version": "1.7.0"
+      },
+      {
+        "name": "pyarrow",
+        "version": "23.0.1"
+      },
+      {
+        "name": "python-dateutil",
+        "version": "2.9.0.post0"
+      },
+      {
+        "name": "pytz",
+        "version": "2026.5"
+      },
+      {
+        "name": "setuptools",
+        "version": "84.0.0"
+      },
+      {
+        "name": "six",
+        "version": "1.17.0"
+      },
+      {
+        "name": "threadpoolctl",
+        "version": "3.6.0"
+      },
+      {
+        "name": "tomlkit",
+        "version": "0.15.2"
+      },
+      {
+        "name": "trove-classifiers",
+        "version": "2026.9.21.13"
+      },
+      {
+        "name": "tzdata",
+        "version": "2026.5"
+      },
+      {
+        "name": "wheel",
+        "version": "0.48.0"
+      }
+    ],
+    "threadpools": [
+      {
+        "user_api": "blas",
+        "internal_api": "openblas",
+        "num_threads": 1,
+        "prefix": "libscipy_openblas",
+        "filepath": "/workspace/scratch/008a76ec4981/Backtest-Benchmark/.work/envs/backtrader/lib/python3.12/site-packages/numpy.libs/libscipy_openblas64_-56d6093b.so",
+        "version": "0.3.29",
+        "threading_layer": "pthreads",
+        "architecture": "SkylakeX"
+      }
+    ]
+  },
+  "summary": {
+    "final_equity": 1820426.3470877502,
+    "total_return": 0.8204263470877502,
+    "max_drawdown": -0.16665892917338343,
+    "mean_bar_return": 7.642389784102403e-05,
+    "held_fraction": 0.5550495274962997,
+    "entries": 26,
+    "exits": 26
+  },
+  "parity": {
+    "equity_samples_checked": 8783,
+    "fills_checked": 52,
+    "max_abs_equity_error": 6.984919309616089e-10,
+    "max_relative_equity_error": 4.771001975471274e-16,
+    "optional_observed_fields_checked": [
+      "fill_quantities",
+      "fill_fees"
+    ],
+    "optional_unobserved_fields": [
+      "cash",
+      "units"
+    ],
+    "actual_result_arrays_sha256": "92df3a623d5dc6655daec1d5d4611988458880244789c40bc1e9c256c3924ae7"
+  },
+  "peak_rss_bytes_after_first": 131940352,
+  "peak_rss_bytes_after_full_calls": 131940352,
+  "peak_rss_bytes_final": 131940352,
+  "rss_scope": "Process lifetime high-water memory, including imports, validation, all repetitions, and optional separately labeled core diagnostics; Linux KiB converted to bytes, macOS bytes unchanged"
+}

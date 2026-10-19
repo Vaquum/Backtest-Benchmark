@@ -1,0 +1,22 @@
+{
+  "candidate_id": "lean",
+  "commit": "d4cac37514427c84d40064cecbf3f0e6be4b0137",
+  "command": [
+    "/workspace/scratch/008a76ec4981/Backtest-Benchmark/.work/toolchains/dotnet/dotnet",
+    "build",
+    "Launcher/QuantConnect.Lean.Launcher.csproj",
+    "--configuration",
+    "Release",
+    "--maxcpucount:2",
+    "--nologo"
+  ],
+  "source": "/workspace/scratch/008a76ec4981/benchmark-sources/lean",
+  "seconds": 90.11238465899805,
+  "returncode": 0,
+  "timed_out": false,
+  "status": "passed",
+  "scope": "Native launcher build",
+  "timeout_seconds": 720,
+  "parallel_compile_jobs_per_process": 2,
+  "tracked_source_clean_after": true
+}

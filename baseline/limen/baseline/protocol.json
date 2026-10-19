@@ -1,0 +1,114 @@
+[
+  {
+    "topic": "Evidence policy",
+    "rule": "Executable implementation, executable configuration, test assertions and observed local results only. Documentation, comments and docstrings are not treated as evidence."
+  },
+  {
+    "topic": "Unit of comparison",
+    "rule": "Compare a pinned solution + exact configuration + workload + resource envelope. Do not rank product names in isolation."
+  },
+  {
+    "topic": "Layer 1: primitives/search",
+    "rule": "Compare indicator/feature kernels, candidate enumeration and fixed model fits separately. Output semantics, time alignment, NaN masks and parameter domains must match; numeric values must agree within preregistered tolerances."
+  },
+  {
+    "topic": "Layer 2: fixed-signal execution",
+    "rule": "Freeze prices, timestamps, signals, timing, costs, terminal settlement, position sizing, funding, stops and required outputs before timing."
+  },
+  {
+    "topic": "Layer 3: research workflow",
+    "rule": "Match preprocessing, target horizon, splits, search budget, selection objective, model settings, held-out protocol and persistence/evidence requirements."
+  },
+  {
+    "topic": "Layer 4: inference/holdout",
+    "rule": "Compare supported model state, causal context, output validation, exposure history and failure/unavailable behavior. Native support and adapter work are separate fields."
+  },
+  {
+    "topic": "Capability first",
+    "rule": "Record native, adapted, unsupported or outside declared scope. Unsupported required behavior is a coverage gap; it is not silently N/A. Never discard unsupported cases from the comparison denominator."
+  },
+  {
+    "topic": "Freeze inputs",
+    "rule": "Record both commit IDs; dependency lock digest; Python/native libraries; immutable data bytes/hash; ordered timestamps; source semantics; seeds; thread/resource limits; code/config modifications."
+  },
+  {
+    "topic": "Gate correctness before speed",
+    "rule": "Require aligned output masks, causal availability and execution parity within preregistered tolerances. A correctness failure remains visible; it cannot receive a favorable speed verdict."
+  },
+  {
+    "topic": "Causality experiment",
+    "rule": "For batch outputs representing historical predictors, run prefix-extension invariance and point-in-time replay at several real-data cutoffs after warmup. Record changed past rows, first divergence and magnitude. For latest-row-only inference, audit each prediction on its available prefix. Audit target availability and train-state support separately."
+  },
+  {
+    "topic": "Performance protocol",
+    "rule": "Separate process startup, first valid result, warm kernel, common-output work, full pipeline and persisted end-to-end work. Measure wall/CPU time, process-tree peak RSS and disk bytes."
+  },
+  {
+    "topic": "Repeat design",
+    "rule": "Use independent fresh process pairs in balanced A/B and B/A order, then repeated warm calls within each. A starting design is 10 process pairs and 30 warm calls per process; these are review design choices, not guarantees of precision. Predeclare precision/power and expand only if needed."
+  },
+  {
+    "topic": "Uncertainty",
+    "rule": "Use process-pair-level uncertainty for speed ratios. Retain all samples, outliers, failures and order. Seven warm calls from one process are not seven independent machine replicates or reliable p95 evidence."
+  },
+  {
+    "topic": "Scaling",
+    "rule": "Use prefixes of the same recorded input across n, feature count, lookback, candidates, event cadence and worker count. Report actual admitted work and errors, not just requested work."
+  },
+  {
+    "topic": "Academic outcomes",
+    "rule": "Inspect formulas and assumptions separately from numerical tests. Report trial history coverage, dependence treatment, effective sample/partition counts, OOS calibration and paired held-out utility where actually measured."
+  },
+  {
+    "topic": "Safety threat models",
+    "rule": "Separate trusted local researcher, third-party configuration/data, concurrent/crashing workers and capital-at-risk execution. A local safeguard is not automatically a hostile-input sandbox or broker control."
+  },
+  {
+    "topic": "Status: Enforced",
+    "rule": "Checked on the specified admitted path or required by its execution contract. Not a universal guarantee across other APIs, configurations or external callbacks."
+  },
+  {
+    "topic": "Status: Optional",
+    "rule": "Implementation exists but requires opt-in and may have narrow compatibility. Its existence is separate from demonstrated benefit."
+  },
+  {
+    "topic": "Status: Partial",
+    "rule": "Some paths/properties are protected or implemented; identified gaps and compatibility limits remain."
+  },
+  {
+    "topic": "Status: Fails",
+    "rule": "A concrete counterexample or direct code path violates the stated scoped property. Record whether reproduced or statically established."
+  },
+  {
+    "topic": "Status: Unknown",
+    "rule": "The scoped conclusion has not been established. A partial numeric observation may exist while a broader comparative conclusion remains unknown."
+  },
+  {
+    "topic": "Status: N/A",
+    "rule": "Property lies outside the explicitly agreed comparison scope. Give a reason. It must not conceal unsupported required capability."
+  },
+  {
+    "topic": "Evidence categories",
+    "rule": "Inspected = code traced; Tested = repository assertion executed locally; Reproduced = independent bounded counterexample; Measured = local benchmark/quantity; Unknown = no establishing evidence. Categories do not form a numerical quality score."
+  },
+  {
+    "topic": "Numeric comparison",
+    "rule": "Only compute after comparable=Yes and both values exist. Lower-is-better ratio = Limen/candidate; higher-is-better ratio = candidate/Limen. Greater than one favors candidate. Zero denominators suppress ratios; errors and counts use candidate-minus-Limen deltas."
+  },
+  {
+    "topic": "Verdicts",
+    "rule": "Use candidate better, equivalent within declared tolerance, Limen better, incomparable, or unknown. Preserve evidence and scope; never infer equivalence merely from nonsignificant difference."
+  },
+  {
+    "topic": "No aggregate score",
+    "rule": "Do not average speed, epistemic validity and safety failures. Present capability coverage and Pareto tradeoffs on common admitted workloads; disqualifying failures remain explicit."
+  },
+  {
+    "topic": "Rerun and provenance",
+    "rule": "Retain commands, environment, raw samples, failure logs, input and output hashes, candidate adapter diff and source permalinks. Rerun both sides in the same campaign after either revision changes."
+  },
+  {
+    "topic": "This review: limits",
+    "rule": "One pinned revision, 82 targeted test modules and narrow real-fixture measurements. No full-suite/CI attestation, external competitor, production/broker exercise or empirical profitability conclusion."
+  }
+]

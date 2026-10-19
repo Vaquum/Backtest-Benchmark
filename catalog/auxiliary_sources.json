@@ -1,0 +1,9 @@
+[
+  {
+    "id": "jesse_rust",
+    "repository": "jesse-ai/jesse-rust",
+    "commit": "bab04ada5f652fc369de06141ff6ea84896130a6",
+    "url": "https://github.com/jesse-ai/jesse-rust",
+    "purpose": "Native dependency audit; match distribution 1.3.1 before associating measured numerical behavior"
+  }
+]

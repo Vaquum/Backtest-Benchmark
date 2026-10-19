@@ -1,0 +1,78 @@
+{
+  "status": "verified",
+  "profile_functions": 913,
+  "top_functions": [
+    {
+      "file": "/workspace/scratch/008a76ec4981/Backtest-Benchmark/bench/adapters/bt.py",
+      "line": 43,
+      "function": "extract",
+      "primitive_calls": 1,
+      "total_calls": 1,
+      "self_seconds": 0.00041318400000000003,
+      "cumulative_seconds": 13.390903424000001
+    },
+    {
+      "file": "/workspace/scratch/008a76ec4981/Backtest-Benchmark/.work/envs/bt/lib/python3.12/site-packages/pandas/core/frame.py",
+      "line": 9890,
+      "function": "unstack",
+      "primitive_calls": 2,
+      "total_calls": 2,
+      "self_seconds": 1.925e-05,
+      "cumulative_seconds": 13.375144348000001
+    },
+    {
+      "file": "/workspace/scratch/008a76ec4981/Backtest-Benchmark/.work/envs/bt/lib/python3.12/site-packages/pandas/core/reshape/reshape.py",
+      "line": 489,
+      "function": "unstack",
+      "primitive_calls": 2,
+      "total_calls": 2,
+      "self_seconds": 3.1305e-05,
+      "cumulative_seconds": 13.366268459
+    },
+    {
+      "file": "/workspace/scratch/008a76ec4981/Backtest-Benchmark/.work/envs/bt/lib/python3.12/site-packages/pandas/core/frame.py",
+      "line": 9550,
+      "function": "stack",
+      "primitive_calls": 2,
+      "total_calls": 2,
+      "self_seconds": 0.041419792000000004,
+      "cumulative_seconds": 13.365753993
+    },
+    {
+      "file": "/workspace/scratch/008a76ec4981/Backtest-Benchmark/.work/envs/bt/lib/python3.12/site-packages/pandas/core/reshape/reshape.py",
+      "line": 885,
+      "function": "stack_v3",
+      "primitive_calls": 2,
+      "total_calls": 2,
+      "self_seconds": 0.142290052,
+      "cumulative_seconds": 13.324259987000001
+    },
+    {
+      "file": "/workspace/scratch/008a76ec4981/Backtest-Benchmark/.work/envs/bt/lib/python3.12/site-packages/pandas/core/indexing.py",
+      "line": 1177,
+      "function": "__getitem__",
+      "primitive_calls": 17581,
+      "total_calls": 17581,
+      "self_seconds": 0.070024901,
+      "cumulative_seconds": 12.044758163000001
+    },
+    {
+      "file": "/workspace/scratch/008a76ec4981/Backtest-Benchmark/.work/envs/bt/lib/python3.12/site-packages/pandas/core/indexing.py",
+      "line": 1366,
+      "function": "_getitem_tuple",
+      "primitive_calls": 17570,
+      "total_calls": 17570,
+      "self_seconds": 0.078670339,
+      "cumulative_seconds": 11.799410852000001
+    },
+    {
+      "file": "/workspace/scratch/008a76ec4981/Backtest-Benchmark/.work/envs/bt/lib/python3.12/site-packages/pandas/core/indexing.py",
+      "line": 1005,
+      "function": "_getitem_tuple_same_dim",
+      "primitive_calls": 17571,
+      "total_calls": 17571,
+      "self_seconds": 0.079795882,
+      "cumulative_seconds": 11.304798227000001
+    }
+  ]
+}

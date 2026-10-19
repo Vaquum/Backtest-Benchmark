@@ -1,0 +1,40 @@
+[
+  {
+    "id": "2026-10-19-common-zero-single-thread",
+    "report": "results/campaigns/2026-10-19-common-zero-single-thread/report.json",
+    "report_sha256": "4ccf17702fa03d5abaacaa454a929ce49d71a88a84ca30bca3b20def364bc7cd",
+    "scope": "Recorded hourly zero-cost full-engine and separately labelled native-component replay",
+    "contract": {
+      "initial_cash": 1000000,
+      "fee_bps": 0,
+      "slippage_bps": 0,
+      "signal_delay_bars": 1,
+      "equity_rtol": 1e-10,
+      "equity_atol": 1e-06,
+      "price_rtol": 1e-12,
+      "price_atol": 1e-08,
+      "quantity_rtol": 1e-10,
+      "quantity_atol": 1e-10,
+      "schema_version": 1,
+      "name": "prior-close-decision_next-close-fill_long-flat_v1",
+      "sizing": "All affordable continuous units on entry; hold units until exit; no ongoing rebalancing",
+      "signal_availability": "Decision uses only the prefix through close[t]; earliest fill is close[t+1]",
+      "fill_price": "Entry close*(1+slippage); exit close*(1-slippage)",
+      "fee_basis": "fee_bps/10000 times actual fill price times absolute executed quantity",
+      "equity_observation": "Cash plus units marked at the unadjusted close, after the close fill",
+      "held_observation": "Incoming held state over the interval ending at the current close, before its fill",
+      "terminal_rule": "Predeclared liquidation at penultimate real close; final real row settles delayed bookkeeping",
+      "unmodelled": [
+        "market impact",
+        "partial fills",
+        "funding",
+        "borrowing",
+        "corporate actions",
+        "exchange calendars"
+      ]
+    },
+    "input_sha256": "a634bbd4f3692fac7bc88512da588e7772f4bd1b749567606d5314e54d0adf72",
+    "started_utc": "2026-10-19T18:32:11.683574+00:00",
+    "finished_utc": "2026-10-19T18:50:08.087747+00:00"
+  }
+]

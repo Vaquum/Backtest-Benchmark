@@ -1,0 +1,85 @@
+Preflight limen/buy_and_hold
+Preflight backtrader/buy_and_hold
+Preflight vectorbt/buy_and_hold
+Preflight backtesting_py/buy_and_hold
+Preflight bt/buy_and_hold
+Preflight qstrader/buy_and_hold
+Preflight qlib/buy_and_hold
+Preflight limen/sma_cross
+Preflight backtrader/sma_cross
+Preflight vectorbt/sma_cross
+Preflight backtesting_py/sma_cross
+Preflight bt/sma_cross
+Preflight qstrader/sma_cross
+Preflight qlib/sma_cross
+Measure limen/buy_and_hold process 1/5
+Measure backtrader/buy_and_hold process 1/5
+Measure vectorbt/buy_and_hold process 1/5
+Measure backtesting_py/buy_and_hold process 1/5
+Measure bt/buy_and_hold process 1/5
+Measure qstrader/buy_and_hold process 1/5
+Measure qlib/buy_and_hold process 1/5
+Measure qlib/sma_cross process 1/5
+Measure qstrader/sma_cross process 1/5
+Measure bt/sma_cross process 1/5
+Measure backtesting_py/sma_cross process 1/5
+Measure vectorbt/sma_cross process 1/5
+Measure backtrader/sma_cross process 1/5
+Measure limen/sma_cross process 1/5
+Measure limen/sma_cross process 2/5
+Measure qlib/sma_cross process 2/5
+Measure qstrader/sma_cross process 2/5
+Measure bt/sma_cross process 2/5
+Measure backtesting_py/sma_cross process 2/5
+Measure vectorbt/sma_cross process 2/5
+Measure backtrader/sma_cross process 2/5
+Measure backtrader/buy_and_hold process 2/5
+Measure vectorbt/buy_and_hold process 2/5
+Measure backtesting_py/buy_and_hold process 2/5
+Measure bt/buy_and_hold process 2/5
+Measure qstrader/buy_and_hold process 2/5
+Measure qlib/buy_and_hold process 2/5
+Measure limen/buy_and_hold process 2/5
+Measure vectorbt/buy_and_hold process 3/5
+Measure backtesting_py/buy_and_hold process 3/5
+Measure bt/buy_and_hold process 3/5
+Measure qstrader/buy_and_hold process 3/5
+Measure qlib/buy_and_hold process 3/5
+Measure limen/buy_and_hold process 3/5
+Measure backtrader/buy_and_hold process 3/5
+Measure backtrader/sma_cross process 3/5
+Measure limen/sma_cross process 3/5
+Measure qlib/sma_cross process 3/5
+Measure qstrader/sma_cross process 3/5
+Measure bt/sma_cross process 3/5
+Measure backtesting_py/sma_cross process 3/5
+Measure vectorbt/sma_cross process 3/5
+Measure vectorbt/sma_cross process 4/5
+Measure backtrader/sma_cross process 4/5
+Measure limen/sma_cross process 4/5
+Measure qlib/sma_cross process 4/5
+Measure qstrader/sma_cross process 4/5
+Measure bt/sma_cross process 4/5
+Measure backtesting_py/sma_cross process 4/5
+Measure backtesting_py/buy_and_hold process 4/5
+Measure bt/buy_and_hold process 4/5
+Measure qstrader/buy_and_hold process 4/5
+Measure qlib/buy_and_hold process 4/5
+Measure limen/buy_and_hold process 4/5
+Measure backtrader/buy_and_hold process 4/5
+Measure vectorbt/buy_and_hold process 4/5
+Measure bt/buy_and_hold process 5/5
+Measure qstrader/buy_and_hold process 5/5
+Measure qlib/buy_and_hold process 5/5
+Measure limen/buy_and_hold process 5/5
+Measure backtrader/buy_and_hold process 5/5
+Measure vectorbt/buy_and_hold process 5/5
+Measure backtesting_py/buy_and_hold process 5/5
+Measure backtesting_py/sma_cross process 5/5
+Measure vectorbt/sma_cross process 5/5
+Measure backtrader/sma_cross process 5/5
+Measure limen/sma_cross process 5/5
+Measure qlib/sma_cross process 5/5
+Measure qstrader/sma_cross process 5/5
+Measure bt/sma_cross process 5/5
+/workspace/scratch/008a76ec4981/Backtest-Benchmark/.work/runs/full-cpu-2026-10-19/report.json

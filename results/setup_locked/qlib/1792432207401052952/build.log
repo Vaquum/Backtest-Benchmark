@@ -1,0 +1,8 @@
+COMMAND ["uv", "pip", "sync", "--python", "/workspace/scratch/008a76ec4981/Backtest-Benchmark/.work/envs/qlib/bin/python", "--require-hashes", "-r", "/workspace/scratch/008a76ec4981/Backtest-Benchmark/locks/qlib.txt"]
+error: unexpected argument '-r' found
+
+  tip: to pass '-r' as a value, use '-- -r'
+
+Usage: uv pip sync [OPTIONS] <SRC_FILE>...
+
+For more information, try '--help'.

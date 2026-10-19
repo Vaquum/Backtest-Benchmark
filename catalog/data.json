@@ -1,0 +1,11 @@
+{
+  "id": "limen_recorded_spot_1h_2024",
+  "source_repository": "Vaquum/Limen",
+  "commit": "29837e666604eee74a2ac94f328fb9803724342a",
+  "path": "tests/fixtures/spot_1h_20240101_20241231.parquet",
+  "url": "https://raw.githubusercontent.com/Vaquum/Limen/29837e666604eee74a2ac94f328fb9803724342a/tests/fixtures/spot_1h_20240101_20241231.parquet",
+  "sha256": "a634bbd4f3692fac7bc88512da588e7772f4bd1b749567606d5314e54d0adf72",
+  "rows": 8784,
+  "policy": "Download the unchanged upstream test fixture by immutable URL and verify SHA-256. No market data is fabricated or relabeled. Prefixes retain original timestamps and prices.",
+  "provenance_limit": "The pinned file is the reproducible data authority. Exchange attribution is not independently authenticated. No separate upstream market-data redistribution license was established; the bytes are not vendored in this repository."
+}

@@ -1,0 +1,10 @@
+/workspace/scratch/008a76ec4981/benchmark-sources/limen
+setuptools>=83
+wheel
+hatchling
+hatch-cython
+Cython>=0.29.25
+numpy==2.2.6
+pandas==2.3.3
+pyarrow==23.0.1
+threadpoolctl==3.6.0

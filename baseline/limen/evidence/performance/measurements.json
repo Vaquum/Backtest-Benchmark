@@ -1,0 +1,473 @@
+{
+  "schema_version": 1,
+  "repository": "Vaquum/Limen",
+  "commit": "29837e666604eee74a2ac94f328fb9803724342a",
+  "evidence": "Measured",
+  "execution_date_utc": "2026-10-19",
+  "environment": {
+    "working_tree": "?? pytest-of-root/",
+    "code_sha256": "233160a9edddcf38cebc779df6f71f427f70213b7a46d468c3113e5f6a279e42",
+    "versions": {
+      "python": "3.12.14",
+      "vaquum-limen": "5.40.1",
+      "numpy": "2.2.6",
+      "pandas": "2.3.3",
+      "polars": "1.42.1",
+      "vectorbt": null,
+      "vectorbt-rust": null,
+      "numba": null,
+      "llvmlite": null,
+      "backtesting": null,
+      "backtrader": null
+    },
+    "platform": "Linux-6.18.55-x86_64-with-glibc2.39",
+    "machine": "x86_64",
+    "processor": "x86_64",
+    "logical_cpus": 9,
+    "cpu_affinity": [
+      0,
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8
+    ],
+    "threads": {
+      "OMP_NUM_THREADS": "1",
+      "OPENBLAS_NUM_THREADS": "1",
+      "MKL_NUM_THREADS": "1",
+      "VECLIB_MAXIMUM_THREADS": "1",
+      "BLIS_NUM_THREADS": "1",
+      "POLARS_MAX_THREADS": "1",
+      "NUMBA_NUM_THREADS": "1",
+      "RAYON_NUM_THREADS": "1",
+      "OMP_THREAD_LIMIT": "1"
+    }
+  },
+  "fixture": {
+    "path": "tests/fixtures/spot_1h_20240101_20241231.parquet",
+    "sha256": "a634bbd4f3692fac7bc88512da588e7772f4bd1b749567606d5314e54d0adf72",
+    "source_rows": 8784
+  },
+  "commands": [
+    "env OMP_NUM_THREADS=1 OPENBLAS_NUM_THREADS=1 MKL_NUM_THREADS=1 VECLIB_MAXIMUM_THREADS=1 BLIS_NUM_THREADS=1 POLARS_MAX_THREADS=1 NUMEXPR_NUM_THREADS=1 PYTHONHASHSEED=0 review-venv/bin/python -m tests.benchmark_factorized_preparation --output review-work/performance/factorized-current",
+    "env OMP_NUM_THREADS=1 OPENBLAS_NUM_THREADS=1 MKL_NUM_THREADS=1 VECLIB_MAXIMUM_THREADS=1 BLIS_NUM_THREADS=1 POLARS_MAX_THREADS=1 NUMEXPR_NUM_THREADS=1 PYTHONHASHSEED=0 review-venv/bin/python -m tests.benchmark_backtest_strategies --inputs tests/fixtures/spot_1h_20240101_20241231.parquet --output review-work/performance/backtest-current --strategies buy_and_hold sma_cross --engines limen --repeats 7"
+  ],
+  "factorized_preparation": {
+    "comparison": "Both arms factorize=True; baseline disables only fitted-preparation reuse",
+    "independent_pairs": 1,
+    "order": [
+      "fresh_fitted_preparation",
+      "reuse_fitted_preparation"
+    ],
+    "scientific_outputs_equal_at_12dp": true,
+    "end_to_end_speedup": 0.9957321193002542,
+    "faster_on_this_workload": false,
+    "campaigns": {
+      "fresh_fitted_preparation": {
+        "rounds": 48,
+        "stages": {
+          "target_fit": {
+            "calls": 24,
+            "seconds": 0.009142406001046766
+          },
+          "scaler_fit": {
+            "calls": 24,
+            "seconds": 0.1893396899868094
+          },
+          "preparation": {
+            "calls": 24,
+            "seconds": 2.474522751002951
+          },
+          "model_fit": {
+            "calls": 24,
+            "seconds": 5.173309548998077
+          },
+          "model_prediction": {
+            "calls": 24,
+            "seconds": 0.10276188099305728
+          }
+        },
+        "campaign_elapsed_seconds": 8.15387190399997,
+        "end_to_end_seconds": 10.552470679998805,
+        "rounds_per_second": 4.548697784205114,
+        "peak_process_rss_bytes": 376172544,
+        "scientific_digest_12dp": "60b95033a681ffc9eece56506b6760307700ba9ca93c6dc5b1e421bd22b58be6",
+        "versions": {
+          "numpy": "2.2.6",
+          "polars": "1.42.1",
+          "sklearn": "1.7.2",
+          "lightgbm": "4.6.0"
+        },
+        "native_pools": [
+          {
+            "user_api": "blas",
+            "internal_api": "openblas",
+            "num_threads": 1,
+            "prefix": "libscipy_openblas",
+            "filepath": "/workspace/scratch/008a76ec4981/review-venv/lib/python3.12/site-packages/numpy.libs/libscipy_openblas64_-56d6093b.so",
+            "version": "0.3.29",
+            "threading_layer": "pthreads",
+            "architecture": "SkylakeX"
+          },
+          {
+            "user_api": "blas",
+            "internal_api": "openblas",
+            "num_threads": 1,
+            "prefix": "libscipy_openblas",
+            "filepath": "/workspace/scratch/008a76ec4981/review-venv/lib/python3.12/site-packages/scipy.libs/libscipy_openblas-68440149.so",
+            "version": "0.3.28",
+            "threading_layer": "pthreads",
+            "architecture": "SkylakeX"
+          },
+          {
+            "user_api": "openmp",
+            "internal_api": "openmp",
+            "num_threads": 1,
+            "prefix": "libgomp",
+            "filepath": "/workspace/scratch/008a76ec4981/review-venv/lib/python3.12/site-packages/scikit_learn.libs/libgomp-a34b3233.so.1.0.0",
+            "version": null
+          },
+          {
+            "user_api": "openmp",
+            "internal_api": "openmp",
+            "num_threads": 1,
+            "prefix": "libgomp",
+            "filepath": "/lib/x86_64-linux-gnu/libgomp.so.1.0.0",
+            "version": null
+          }
+        ],
+        "peak_process_rss_mib": 358.74609375
+      },
+      "reuse_fitted_preparation": {
+        "rounds": 48,
+        "stages": {
+          "target_fit": {
+            "calls": 1,
+            "seconds": 0.00048329999845009297
+          },
+          "scaler_fit": {
+            "calls": 1,
+            "seconds": 0.007459041000402067
+          },
+          "preparation": {
+            "calls": 24,
+            "seconds": 2.4441926489962498
+          },
+          "model_fit": {
+            "calls": 24,
+            "seconds": 5.110031762011204
+          },
+          "model_prediction": {
+            "calls": 24,
+            "seconds": 0.11162849599350011
+          }
+        },
+        "campaign_elapsed_seconds": 8.068697738999617,
+        "end_to_end_seconds": 10.59770040100193,
+        "rounds_per_second": 4.529284484722929,
+        "peak_process_rss_bytes": 380608512,
+        "scientific_digest_12dp": "60b95033a681ffc9eece56506b6760307700ba9ca93c6dc5b1e421bd22b58be6",
+        "versions": {
+          "numpy": "2.2.6",
+          "polars": "1.42.1",
+          "sklearn": "1.7.2",
+          "lightgbm": "4.6.0"
+        },
+        "native_pools": [
+          {
+            "user_api": "blas",
+            "internal_api": "openblas",
+            "num_threads": 1,
+            "prefix": "libscipy_openblas",
+            "filepath": "/workspace/scratch/008a76ec4981/review-venv/lib/python3.12/site-packages/numpy.libs/libscipy_openblas64_-56d6093b.so",
+            "version": "0.3.29",
+            "threading_layer": "pthreads",
+            "architecture": "SkylakeX"
+          },
+          {
+            "user_api": "blas",
+            "internal_api": "openblas",
+            "num_threads": 1,
+            "prefix": "libscipy_openblas",
+            "filepath": "/workspace/scratch/008a76ec4981/review-venv/lib/python3.12/site-packages/scipy.libs/libscipy_openblas-68440149.so",
+            "version": "0.3.28",
+            "threading_layer": "pthreads",
+            "architecture": "SkylakeX"
+          },
+          {
+            "user_api": "openmp",
+            "internal_api": "openmp",
+            "num_threads": 1,
+            "prefix": "libgomp",
+            "filepath": "/workspace/scratch/008a76ec4981/review-venv/lib/python3.12/site-packages/scikit_learn.libs/libgomp-a34b3233.so.1.0.0",
+            "version": null
+          },
+          {
+            "user_api": "openmp",
+            "internal_api": "openmp",
+            "num_threads": 1,
+            "prefix": "libgomp",
+            "filepath": "/lib/x86_64-linux-gnu/libgomp.so.1.0.0",
+            "version": null
+          }
+        ],
+        "peak_process_rss_mib": 362.9765625
+      }
+    }
+  },
+  "snapshot_scenarios": [
+    {
+      "strategy": "buy_and_hold",
+      "evaluation_rows": 8783,
+      "evaluation_start": "2024-01-01 00:00:00+00:00",
+      "evaluation_end": "2024-12-31 22:00:00+00:00",
+      "settlement_timestamp": "2024-12-31 23:00:00+00:00",
+      "prepared_arrays_sha256": "7ca3729e575ac6d218bba9add47df0f600a717900a8eb708cead7a0e63ac9a95",
+      "signals_sha256": "0dd292c54138c1a7080903cdb41ae84421b81c64a20ca1fc27e0f192756348e9",
+      "parquet_read_validate_ms": 7.661155,
+      "signal_preparation": {
+        "first_call_ms": 0.28443,
+        "warm": {
+          "median_ms": 0.05323,
+          "p95_ms": 0.2243906999999999,
+          "samples_ms": [
+            0.057807,
+            0.266472,
+            0.05323,
+            0.04022,
+            0.034683,
+            0.03313,
+            0.126201
+          ]
+        }
+      },
+      "measurement": {
+        "status": "verified",
+        "adapter_preparation_ms": 102.716028,
+        "cold": {
+          "engine_ms": 0.910244,
+          "normalization_ms": 0.361726,
+          "common_outputs_ms": 1.27197,
+          "cpu_ms": 1.27123
+        },
+        "warm": {
+          "engine_ms": {
+            "median_ms": 0.375106,
+            "p95_ms": 0.5673499999999999,
+            "samples_ms": [
+              0.605363,
+              0.478653,
+              0.375106,
+              0.373654,
+              0.374515,
+              0.374335,
+              0.376368
+            ]
+          },
+          "normalization_ms": {
+            "median_ms": 0.220883,
+            "p95_ms": 0.33556839999999993,
+            "samples_ms": [
+              0.288065,
+              0.227944,
+              0.219581,
+              0.355927,
+              0.220883,
+              0.214815,
+              0.217178
+            ]
+          },
+          "common_outputs_ms": {
+            "median_ms": 0.595398,
+            "p95_ms": 0.8442738999999999,
+            "samples_ms": [
+              0.893428,
+              0.706597,
+              0.594687,
+              0.729581,
+              0.595398,
+              0.58915,
+              0.593546
+            ]
+          },
+          "cpu_ms": {
+            "median_ms": 0.595786,
+            "p95_ms": 0.8445253999999999,
+            "samples_ms": [
+              0.893348,
+              0.707151,
+              0.595235,
+              0.730606,
+              0.595786,
+              0.589557,
+              0.594224
+            ]
+          }
+        },
+        "peak_rss_mib": 99.859375,
+        "max_abs_equity_error": 7.82310962677002e-08,
+        "max_relative_equity_error": 3.196302838629506e-14,
+        "process_wall_ms": 313.339253,
+        "worker_returncode": 0,
+        "peak_rss_including_snapshot_mib": 99.859375,
+        "native_snapshot": {
+          "first_call_ms": 2.384609,
+          "warm": {
+            "median_ms": 2.150025,
+            "p95_ms": 2.2020975,
+            "samples_ms": [
+              2.190677,
+              2.106771,
+              2.148263,
+              2.150025,
+              2.162955,
+              2.121192,
+              2.206992
+            ]
+          },
+          "scope": "backtest_snapshot validation, execution and all native bar metrics"
+        },
+        "core_bars_per_second_at_median": 23414714.77395723,
+        "snapshot_bars_per_second_at_median": 4085068.7782700206,
+        "entries": 1,
+        "exits": 1
+      }
+    },
+    {
+      "strategy": "sma_cross",
+      "evaluation_rows": 8783,
+      "evaluation_start": "2024-01-01 00:00:00+00:00",
+      "evaluation_end": "2024-12-31 22:00:00+00:00",
+      "settlement_timestamp": "2024-12-31 23:00:00+00:00",
+      "prepared_arrays_sha256": "8b3b75d64e17fc334e8649a1ba42c5298d34d0944ea69d424eb35c59fd19631f",
+      "signals_sha256": "2500c76eff79abfa530121bbec5621b5da6923392c13afd8e59c0f98a36b449d",
+      "parquet_read_validate_ms": 7.661155,
+      "signal_preparation": {
+        "first_call_ms": 0.5096,
+        "warm": {
+          "median_ms": 0.266903,
+          "p95_ms": 0.2996822,
+          "samples_ms": [
+            0.258981,
+            0.300794,
+            0.297088,
+            0.266903,
+            0.296538,
+            0.246552,
+            0.235846
+          ]
+        }
+      },
+      "measurement": {
+        "status": "verified",
+        "adapter_preparation_ms": 85.407332,
+        "cold": {
+          "engine_ms": 0.893429,
+          "normalization_ms": 0.270598,
+          "common_outputs_ms": 1.164027,
+          "cpu_ms": 1.162398
+        },
+        "warm": {
+          "engine_ms": {
+            "median_ms": 0.342447,
+            "p95_ms": 0.7407361999999996,
+            "samples_ms": [
+              0.908792,
+              0.309918,
+              0.348606,
+              0.342447,
+              0.346964,
+              0.264319,
+              0.262306
+            ]
+          },
+          "normalization_ms": {
+            "median_ms": 0.184728,
+            "p95_ms": 0.3642561999999999,
+            "samples_ms": [
+              0.287644,
+              0.178129,
+              0.39709,
+              0.184728,
+              0.173602,
+              0.186702,
+              0.15872
+            ]
+          },
+          "common_outputs_ms": {
+            "median_ms": 0.520566,
+            "p95_ms": 1.0612139999999997,
+            "samples_ms": [
+              1.196436,
+              0.488047,
+              0.745696,
+              0.527175,
+              0.520566,
+              0.451021,
+              0.421026
+            ]
+          },
+          "cpu_ms": {
+            "median_ms": 0.521646,
+            "p95_ms": 1.0612245999999996,
+            "samples_ms": [
+              1.195999,
+              0.488726,
+              0.746751,
+              0.527775,
+              0.521646,
+              0.451822,
+              0.421707
+            ]
+          }
+        },
+        "peak_rss_mib": 100.234375,
+        "max_abs_equity_error": 1.234002411365509e-08,
+        "max_relative_equity_error": 6.426506481472742e-15,
+        "process_wall_ms": 322.702367,
+        "worker_returncode": 0,
+        "peak_rss_including_snapshot_mib": 100.234375,
+        "native_snapshot": {
+          "first_call_ms": 2.16623,
+          "warm": {
+            "median_ms": 1.699665,
+            "p95_ms": 6.111651499999995,
+            "samples_ms": [
+              1.612584,
+              1.831064,
+              1.699665,
+              1.781118,
+              1.647927,
+              1.666155,
+              7.946189
+            ]
+          },
+          "scope": "backtest_snapshot validation, execution and all native bar metrics"
+        },
+        "core_bars_per_second_at_median": 25647764.471582465,
+        "snapshot_bars_per_second_at_median": 5167488.887516069,
+        "entries": 26,
+        "exits": 26
+      }
+    }
+  ],
+  "limitations": [
+    "One fixed-order factorization pair, no statistical uncertainty estimate; no demonstrated end-to-end speed gain.",
+    "One fresh worker process and seven within-process warm repetitions per snapshot scenario. Percentiles are descriptive, not reliable tail SLAs.",
+    "Snapshot common contract: all-in long/flat, zero fee/slip, close execution, one bar lag, final real settlement row. No external competitor ran.",
+    "RSS is single-process high-water including imports/preparation, not incremental engine allocation. Linux ru_maxrss KiB normalized by harness.",
+    "Working tree contains only untracked pytest-of-root directory at benchmark metadata capture; tracked reviewed source was not edited.",
+    "Logical CPU/affinity count does not establish physical core count or CPU quota."
+  ],
+  "raw_artifacts": [
+    "factorized-current.log",
+    "factorized-current/benchmark.json",
+    "backtest-current.log",
+    "backtest-current/report.json",
+    "backtest-current/report.csv"
+  ]
+}

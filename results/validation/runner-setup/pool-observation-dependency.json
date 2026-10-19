@@ -1,0 +1,63 @@
+{
+  "reason": "Make the native pool observation gate mandatory; preserve earlier runner setup receipt separately",
+  "commands": [
+    {
+      "command": [
+        "uv",
+        "pip",
+        "compile",
+        "environments/runner.txt",
+        "--generate-hashes",
+        "--python-version",
+        "3.12",
+        "--output-file",
+        "locks/runner.txt",
+        "--no-header",
+        "--quiet"
+      ],
+      "returncode": 0,
+      "log": "pool-observation-dependency-1.log"
+    },
+    {
+      "command": [
+        "uv",
+        "pip",
+        "install",
+        "--python",
+        ".venv/bin/python",
+        "--require-hashes",
+        "-r",
+        "locks/runner.txt"
+      ],
+      "returncode": 0,
+      "log": "pool-observation-dependency-2.log"
+    },
+    {
+      "command": [
+        "uv",
+        "pip",
+        "install",
+        "--python",
+        ".venv/bin/python",
+        "--no-deps",
+        "--no-build-isolation",
+        "-e",
+        "."
+      ],
+      "returncode": 0,
+      "log": "pool-observation-dependency-3.log"
+    },
+    {
+      "command": [
+        "uv",
+        "pip",
+        "check",
+        "--python",
+        ".venv/bin/python"
+      ],
+      "returncode": 0,
+      "log": "pool-observation-dependency-4.log"
+    }
+  ],
+  "runner_lock_sha256": "1d0dd89f7407c79994fc805ed64501bbd063805b0fa4515744efb9110ecbc19d"
+}

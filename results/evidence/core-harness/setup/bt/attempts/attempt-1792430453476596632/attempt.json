@@ -1,0 +1,87 @@
+{
+  "engine": "bt",
+  "status": "installation_failed",
+  "source_path": "/workspace/scratch/008a76ec4981/benchmark-sources/bt",
+  "environment_path": "/workspace/scratch/008a76ec4981/Backtest-Benchmark/.work/envs/bt",
+  "catalog": {
+    "id": "bt",
+    "repository": "pmorissette/bt",
+    "name": "bt",
+    "track": "portfolio",
+    "url": "https://github.com/pmorissette/bt",
+    "commit": "4b76bad2dbf3a49e99feb49db3eee1dde2ef8e12",
+    "commit_date": "2026-10-17T14:54:28-04:00",
+    "source_url": "https://github.com/pmorissette/bt/tree/4b76bad2dbf3a49e99feb49db3eee1dde2ef8e12",
+    "license_files": [
+      {
+        "path": "LICENSE",
+        "sha256": "8711471566d722d55eca3f09196f342b2ee2960616e68127ec2a17b39ff99949",
+        "url": "https://github.com/pmorissette/bt/blob/4b76bad2dbf3a49e99feb49db3eee1dde2ef8e12/LICENSE"
+      }
+    ],
+    "revision_policy": "Default branch HEAD captured 2026-10-19",
+    "eligibility": "source_auditable"
+  },
+  "created_utc": "2026-10-19T17:20:53.476787+00:00",
+  "commands": [
+    {
+      "command": [
+        "uv",
+        "venv",
+        "--python",
+        "/opt/codex/runtimes/codex-primary-runtime/dependencies/python/bin/python3.12",
+        "/workspace/scratch/008a76ec4981/Backtest-Benchmark/.work/envs/bt"
+      ],
+      "returncode": 0,
+      "wall_seconds": 0.014446683002461214
+    },
+    {
+      "command": [
+        "uv",
+        "pip",
+        "compile",
+        "/workspace/scratch/008a76ec4981/Backtest-Benchmark/.work/bootstrap/bt/attempt-1792430453476596632/requirements.in",
+        "--python",
+        "/workspace/scratch/008a76ec4981/Backtest-Benchmark/.work/envs/bt/bin/python",
+        "--generate-hashes",
+        "--no-emit-package",
+        "bt",
+        "--output-file",
+        "/workspace/scratch/008a76ec4981/Backtest-Benchmark/.work/bootstrap/bt/attempt-1792430453476596632/dependencies.lock"
+      ],
+      "returncode": 0,
+      "wall_seconds": 0.2031033729945193
+    },
+    {
+      "command": [
+        "uv",
+        "pip",
+        "install",
+        "--python",
+        "/workspace/scratch/008a76ec4981/Backtest-Benchmark/.work/envs/bt/bin/python",
+        "--require-hashes",
+        "-r",
+        "/workspace/scratch/008a76ec4981/Backtest-Benchmark/.work/bootstrap/bt/attempt-1792430453476596632/dependencies.lock"
+      ],
+      "returncode": 0,
+      "wall_seconds": 0.1478021319999243
+    },
+    {
+      "command": [
+        "uv",
+        "pip",
+        "install",
+        "--python",
+        "/workspace/scratch/008a76ec4981/Backtest-Benchmark/.work/envs/bt/bin/python",
+        "--no-deps",
+        "--no-build-isolation",
+        "/workspace/scratch/008a76ec4981/benchmark-sources/bt"
+      ],
+      "returncode": 1,
+      "wall_seconds": 2.435532493997016
+    }
+  ],
+  "lock_origin": "new dependency resolution; exact generated hash lock retained",
+  "error": "RuntimeError: Command exited 1; full output is preserved in /workspace/scratch/008a76ec4981/Backtest-Benchmark/.work/bootstrap/bt/attempt-1792430453476596632/install.log",
+  "traceback": "Traceback (most recent call last):\n  File \"/workspace/scratch/008a76ec4981/Backtest-Benchmark/scripts/bootstrap_core.py\", line 88, in install\n    run([args.uv, 'pip', 'install', '--python', str(python), '--no-deps', '--no-build-isolation', str(source)])\n  File \"/workspace/scratch/008a76ec4981/Backtest-Benchmark/scripts/bootstrap_core.py\", line 59, in run\n    raise RuntimeError(f'Command exited {child.returncode}; full output is preserved in {log_path}')\nRuntimeError: Command exited 1; full output is preserved in /workspace/scratch/008a76ec4981/Backtest-Benchmark/.work/bootstrap/bt/attempt-1792430453476596632/install.log\n"
+}

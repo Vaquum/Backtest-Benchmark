@@ -1,0 +1,61 @@
+{
+  "purpose": "Fresh hash-locked benchmark runner installation after completed comparative timing",
+  "runner_lock_sha256": "652f6c7721917cc1015c26f62739fb6e4e337304581eff21b89c3ba3c1537723",
+  "commands": [
+    {
+      "command": [
+        "uv",
+        "venv",
+        "--python",
+        "python3.12",
+        ".venv"
+      ],
+      "returncode": 0,
+      "seconds": 0.012728348003292922,
+      "log": "1.log"
+    },
+    {
+      "command": [
+        "uv",
+        "pip",
+        "install",
+        "--python",
+        ".venv/bin/python",
+        "--require-hashes",
+        "-r",
+        "locks/runner.txt"
+      ],
+      "returncode": 0,
+      "seconds": 0.30329825000080746,
+      "log": "2.log"
+    },
+    {
+      "command": [
+        "uv",
+        "pip",
+        "install",
+        "--python",
+        ".venv/bin/python",
+        "--no-deps",
+        "--no-build-isolation",
+        "-e",
+        "."
+      ],
+      "returncode": 0,
+      "seconds": 0.5220961149971117,
+      "log": "3.log"
+    },
+    {
+      "command": [
+        "uv",
+        "pip",
+        "check",
+        "--python",
+        ".venv/bin/python"
+      ],
+      "returncode": 0,
+      "seconds": 0.012679043000389356,
+      "log": "4.log"
+    }
+  ]
+}

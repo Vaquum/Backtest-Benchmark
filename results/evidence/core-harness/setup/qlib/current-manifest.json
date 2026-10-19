@@ -1,0 +1,62 @@
+{
+  "candidate_id": "qlib",
+  "source_path": "/workspace/scratch/008a76ec4981/benchmark-sources/qlib",
+  "source_commit": "54355232463878d2eebb91fe0ee5fa7fa1f5976c",
+  "started_unix": 1792432251.7395995,
+  "commands": [
+    {
+      "argv": [
+        "uv",
+        "pip",
+        "sync",
+        "--python",
+        "/workspace/scratch/008a76ec4981/Backtest-Benchmark/.work/envs/qlib/bin/python",
+        "--require-hashes",
+        "/workspace/scratch/008a76ec4981/Backtest-Benchmark/locks/qlib.txt"
+      ],
+      "returncode": 0,
+      "seconds": 0.11638667700026417
+    },
+    {
+      "argv": [
+        "uv",
+        "pip",
+        "install",
+        "--python",
+        "/workspace/scratch/008a76ec4981/Backtest-Benchmark/.work/envs/qlib/bin/python",
+        "--no-deps",
+        "--no-build-isolation",
+        "--reinstall",
+        "benchmark-sources/qlib"
+      ],
+      "returncode": 0,
+      "seconds": 11.958080521995726
+    },
+    {
+      "argv": [
+        "/workspace/scratch/008a76ec4981/Backtest-Benchmark/.work/envs/qlib/bin/python",
+        "-c",
+        "import qlib; print(qlib.__file__)"
+      ],
+      "returncode": 0,
+      "seconds": 0.8203150749977794
+    },
+    {
+      "argv": [
+        "uv",
+        "pip",
+        "check",
+        "--python",
+        "/workspace/scratch/008a76ec4981/Backtest-Benchmark/.work/envs/qlib/bin/python"
+      ],
+      "returncode": 0,
+      "seconds": 0.0319435359997442
+    }
+  ],
+  "status": "ready",
+  "build_isolation": false,
+  "dependency_lock_sha256": "4458614532eaa03d1eb1fb91941418cb6d9335c9a3861bdf3f3fb1de5b02ceff",
+  "tracked_source_clean_after": true,
+  "elapsed_seconds": 12.946278095245361,
+  "manifest_path_note": "Absolute routing of the observed original source path; commands retain actual argv."
+}

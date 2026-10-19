@@ -1,0 +1,99 @@
+{
+  "purpose": "Independent fresh source fetch, hash-locked setup and replay portability check after comparative timing; these durations are not ranked performance",
+  "commands": [
+    {
+      "command": [
+        "/workspace/scratch/008a76ec4981/Backtest-Benchmark/.venv/bin/python",
+        "scripts/fetch_sources.py",
+        "--only",
+        "limen",
+        "qlib"
+      ],
+      "returncode": 0,
+      "seconds": 1.5263106229976984,
+      "log": "1.log"
+    },
+    {
+      "command": [
+        "/workspace/scratch/008a76ec4981/Backtest-Benchmark/.venv/bin/python",
+        "scripts/download_data.py"
+      ],
+      "returncode": 0,
+      "seconds": 0.4843988380016526,
+      "log": "2.log"
+    },
+    {
+      "command": [
+        "/workspace/scratch/008a76ec4981/Backtest-Benchmark/.venv/bin/python",
+        "scripts/bootstrap_core.py",
+        "--engines",
+        "limen",
+        "--env-root",
+        "/workspace/scratch/008a76ec4981/Backtest-Benchmark/.work/repro-envs",
+        "--cc",
+        "cc",
+        "--cxx",
+        "c++",
+        "--jobs",
+        "1"
+      ],
+      "returncode": 0,
+      "seconds": 1.4407578140016994,
+      "log": "3.log"
+    },
+    {
+      "command": [
+        "/workspace/scratch/008a76ec4981/Backtest-Benchmark/.venv/bin/python",
+        "scripts/bootstrap_extra.py",
+        "--only",
+        "qlib",
+        "--work",
+        "/workspace/scratch/008a76ec4981/Backtest-Benchmark/.work/repro-extra",
+        "--jobs",
+        "1"
+      ],
+      "returncode": 0,
+      "seconds": 23.197061649996613,
+      "log": "4.log"
+    },
+    {
+      "command": [
+        "/workspace/scratch/008a76ec4981/Backtest-Benchmark/.venv/bin/python",
+        "-m",
+        "pytest",
+        "-q",
+        "--basetemp=.work/repro-pytest"
+      ],
+      "returncode": 0,
+      "seconds": 2.8453450159940985,
+      "log": "5.log"
+    },
+    {
+      "command": [
+        "/workspace/scratch/008a76ec4981/Backtest-Benchmark/.venv/bin/python",
+        "-m",
+        "bench",
+        "verify",
+        "--input",
+        ".work/data/recorded_spot_1h_2024.parquet",
+        "--expected-sha256",
+        "a634bbd4f3692fac7bc88512da588e7772f4bd1b749567606d5314e54d0adf72",
+        "--output",
+        ".work/runs/fresh-limen-verification",
+        "--engines",
+        "limen",
+        "--strategies",
+        "buy_and_hold",
+        "sma_cross",
+        "flat",
+        "--rows",
+        "999",
+        "--env-root",
+        "/workspace/scratch/008a76ec4981/Backtest-Benchmark/.work/repro-envs"
+      ],
+      "returncode": 0,
+      "seconds": 3.434257755005092,
+      "log": "6.log"
+    }
+  ]
+}

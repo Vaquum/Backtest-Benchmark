@@ -1,0 +1,18 @@
+{
+  "bench/__init__.py": "5c0c4675c67347c7eb144f8514b34fc5e13c19676e0516b5e95f75c86bff21d7",
+  "bench/__main__.py": "8ffd81e7324729dee2d96a3d514e1f7562aaee96aa5fe7ab0d1ceaf76b5d20f1",
+  "bench/adapters/__init__.py": "8e55c1a67e94282df80f29eee2003caeb1e68e8080f262203a199e66562b7435",
+  "bench/adapters/backtesting_py.py": "98a35a425681ca1c8a4ae1d8b68deb6728d96565341b4bea91c7601cd409796b",
+  "bench/adapters/backtrader.py": "d2db7fbe23d2aaf03eb298f1b5e3598fab87fffc6b9a864377f384b3820c9ae4",
+  "bench/adapters/bt.py": "e616252a3683a2e15e37f4a28933bab118b10399d4fc695080db32d8b96de556",
+  "bench/adapters/limen.py": "fe0c698b8c20626e39f4e0ba45bfa93b388b88a16fe638000591b3b31ccefad0",
+  "bench/adapters/qlib.py": "ef84ae221b2f55caf0e780986b2540ae1077b2ffe2f5a4eed2b06da05058ec60",
+  "bench/adapters/qstrader.py": "63e97ab46b91d1ebeae0c2c0ceb6dec98a2d68580da776abe14fbee6204d7dba",
+  "bench/adapters/vectorbt.py": "5250c6ed778ce3002de0aaa885acf63f46708532f146d255a9b972ec66854c8f",
+  "bench/api.py": "6c31a489a1e80ca3dc7974d0cd92d3958092cc2e5e5cd006572c367409c00491",
+  "bench/cli.py": "60d575b13b7417ae1a56132dca90c2ecdc4ebb421854e6cdba03c627630e3f3f",
+  "bench/contract.py": "b0b19b537c36c16097774ec14cf556c48fb44086a5f063aa3c53a5cda0c4d8d4",
+  "bench/data.py": "549cdfee46c31cfccb2f36eb56ba3b49626d9f260772e22a3ef5f7312379faf3",
+  "bench/provenance.py": "4dbf408abe779f18670788e3442bed07357b6190a490ef0bb91aaefa7079bac8",
+  "bench/worker.py": "b40a6a8b357ad9cef511b87fe6c079a8acbea00964ef9154c3674d365dd98119"
+}

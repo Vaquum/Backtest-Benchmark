@@ -1,0 +1,387 @@
+COMMAND ["uv", "venv", "--seed", "--python", "/opt/codex/runtimes/codex-primary-runtime/dependencies/python/bin/python3", "/workspace/scratch/008a76ec4981/Backtest-Benchmark/.work/envs/zipline"]
+Using CPython 3.12.14 interpreter at: /opt/codex/runtimes/codex-primary-runtime/dependencies/python/bin/python3
+Creating virtual environment with seed packages at: Backtest-Benchmark/.work/envs/zipline
+ + pip==26.2.1
+COMMAND ["uv", "pip", "install", "--python", "/workspace/scratch/008a76ec4981/Backtest-Benchmark/.work/envs/zipline/bin/python", "setuptools", "wheel", "pyarrow", "pytest", "Cython<3.2", "setuptools-scm"]
+Using Python 3.12.14 environment at: Backtest-Benchmark/.work/envs/zipline
+Resolved 11 packages in 147ms
+Downloading cython (3.2MiB)
+ Downloaded cython
+Prepared 11 packages in 1.05s
+Installed 11 packages in 16ms
+ + cython==3.1.8
+ + iniconfig==2.3.1
+ + packaging==26.3
+ + pluggy==1.7.0
+ + pyarrow==26.0.0
+ + pygments==2.21.0
+ + pytest==9.1.1
+ + setuptools==84.0.0
+ + setuptools-scm==10.3.4
+ + vcs-versioning==2.6.0
+ + wheel==0.48.0
+COMMAND ["uv", "pip", "install", "--python", "/workspace/scratch/008a76ec4981/Backtest-Benchmark/.work/envs/zipline/bin/python", "/workspace/scratch/008a76ec4981/benchmark-sources/zipline"]
+Using Python 3.12.14 environment at: Backtest-Benchmark/.work/envs/zipline
+Resolved 64 packages in 34.92s
+   Building zipline-reloaded @ file:///workspace/scratch/008a76ec4981/benchmark-sources/zipline
+   Building peewee==3.17.3
+Downloading networkx (2.0MiB)
+Downloading pandas (11.8MiB)
+Downloading statsmodels (11.5MiB)
+Downloading h5py (5.2MiB)
+Downloading tables (6.9MiB)
+Downloading bcolz-zipline (5.3MiB)
+Downloading blosc2 (6.4MiB)
+      Built peewee==3.17.3
+ Downloaded tables
+ Downloaded pandas
+ Downloaded statsmodels
+ Downloaded blosc2
+ Downloaded networkx
+ Downloaded bcolz-zipline
+ Downloaded h5py
+error: Failed to build `zipline-reloaded @ file:///workspace/scratch/008a76ec4981/benchmark-sources/zipline`
+  cause: The build backend returned an error
+  cause: Call to `setuptools.build_meta.build_wheel` failed (exit status: 1)
+
+         [stdout]
+         [ 1/16] Cythonizing src/zipline/assets/_assets.pyx
+         [ 2/16] Cythonizing src/zipline/assets/continuous_futures.pyx
+         [ 3/16] Cythonizing src/zipline/data/_adjustments.pyx
+         [ 4/16] Cythonizing src/zipline/data/_equities.pyx
+         [ 5/16] Cythonizing src/zipline/data/_minute_bar_internal.pyx
+         [ 6/16] Cythonizing src/zipline/data/_resample.pyx
+         [ 7/16] Cythonizing src/zipline/finance/_finance_ext.pyx
+         [ 8/16] Cythonizing src/zipline/gens/sim_engine.pyx
+         [ 9/16] Cythonizing src/zipline/lib/_factorize.pyx
+         [10/16] Cythonizing src/zipline/lib/_float64window.pyx
+         [11/16] Cythonizing src/zipline/lib/_int64window.pyx
+         [12/16] Cythonizing src/zipline/lib/_labelwindow.pyx
+         [13/16] Cythonizing src/zipline/lib/_uint8window.pyx
+         [14/16] Cythonizing src/zipline/lib/adjustment.pyx
+         [15/16] Cythonizing src/zipline/lib/rank.pyx
+         [16/16] Cythonizing src/zipline/_protocol.pyx
+         running bdist_wheel
+         running build
+         running build_py
+         creating build/lib.linux-x86_64-cpython-312/zipline
+         copying src/zipline/dispatch.py -> build/lib.linux-x86_64-cpython-312/zipline
+         copying src/zipline/__main__.py -> build/lib.linux-x86_64-cpython-312/zipline
+         copying src/zipline/extensions.py -> build/lib.linux-x86_64-cpython-312/zipline
+         copying src/zipline/algorithm.py -> build/lib.linux-x86_64-cpython-312/zipline
+         copying src/zipline/_version.py -> build/lib.linux-x86_64-cpython-312/zipline
+         copying src/zipline/api.py -> build/lib.linux-x86_64-cpython-312/zipline
+         copying src/zipline/country.py -> build/lib.linux-x86_64-cpython-312/zipline
+         copying src/zipline/errors.py -> build/lib.linux-x86_64-cpython-312/zipline
+         copying src/zipline/protocol.py -> build/lib.linux-x86_64-cpython-312/zipline
+         copying src/zipline/test_algorithms.py -> build/lib.linux-x86_64-cpython-312/zipline
+         copying src/zipline/zipline_warnings.py -> build/lib.linux-x86_64-cpython-312/zipline
+         copying src/zipline/currency.py -> build/lib.linux-x86_64-cpython-312/zipline
+         copying src/zipline/__init__.py -> build/lib.linux-x86_64-cpython-312/zipline
+         creating build/lib.linux-x86_64-cpython-312/zipline/assets
+         copying src/zipline/assets/roll_finder.py -> build/lib.linux-x86_64-cpython-312/zipline/assets
+         copying src/zipline/assets/futures.py -> build/lib.linux-x86_64-cpython-312/zipline/assets
+         copying src/zipline/assets/asset_writer.py -> build/lib.linux-x86_64-cpython-312/zipline/assets
+         copying src/zipline/assets/asset_db_migrations.py -> build/lib.linux-x86_64-cpython-312/zipline/assets
+         copying src/zipline/assets/asset_db_schema.py -> build/lib.linux-x86_64-cpython-312/zipline/assets
+         copying src/zipline/assets/assets.py -> build/lib.linux-x86_64-cpython-312/zipline/assets
+         copying src/zipline/assets/exchange_info.py -> build/lib.linux-x86_64-cpython-312/zipline/assets
+         copying src/zipline/assets/__init__.py -> build/lib.linux-x86_64-cpython-312/zipline/assets
+         copying src/zipline/assets/synthetic.py -> build/lib.linux-x86_64-cpython-312/zipline/assets
+         creating build/lib.linux-x86_64-cpython-312/zipline/pipeline
+         copying src/zipline/pipeline/engine.py -> build/lib.linux-x86_64-cpython-312/zipline/pipeline
+         copying src/zipline/pipeline/pipeline.py -> build/lib.linux-x86_64-cpython-312/zipline/pipeline
+         copying src/zipline/pipeline/expression.py -> build/lib.linux-x86_64-cpython-312/zipline/pipeline
+         copying src/zipline/pipeline/mixins.py -> build/lib.linux-x86_64-cpython-312/zipline/pipeline
+         copying src/zipline/pipeline/downsample_helpers.py -> build/lib.linux-x86_64-cpython-312/zipline/pipeline
+         copying src/zipline/pipeline/dtypes.py -> build/lib.linux-x86_64-cpython-312/zipline/pipeline
+         copying src/zipline/pipeline/api_utils.py -> build/lib.linux-x86_64-cpython-312/zipline/pipeline
+         copying src/zipline/pipeline/term.py -> build/lib.linux-x86_64-cpython-312/zipline/pipeline
+         copying src/zipline/pipeline/graph.py -> build/lib.linux-x86_64-cpython-312/zipline/pipeline
+         copying src/zipline/pipeline/common.py -> build/lib.linux-x86_64-cpython-312/zipline/pipeline
+         copying src/zipline/pipeline/visualize.py -> build/lib.linux-x86_64-cpython-312/zipline/pipeline
+         copying src/zipline/pipeline/__init__.py -> build/lib.linux-x86_64-cpython-312/zipline/pipeline
+         copying src/zipline/pipeline/sentinels.py -> build/lib.linux-x86_64-cpython-312/zipline/pipeline
+         copying src/zipline/pipeline/domain.py -> build/lib.linux-x86_64-cpython-312/zipline/pipeline
+         creating build/lib.linux-x86_64-cpython-312/zipline/data
+         copying src/zipline/data/loader.py -> build/lib.linux-x86_64-cpython-312/zipline/data
+         copying src/zipline/data/resample.py -> build/lib.linux-x86_64-cpython-312/zipline/data
+         copying src/zipline/data/in_memory_daily_bars.py -> build/lib.linux-x86_64-cpython-312/zipline/data
+         copying src/zipline/data/bcolz_daily_bars.py -> build/lib.linux-x86_64-cpython-312/zipline/data
+         copying src/zipline/data/benchmarks.py -> build/lib.linux-x86_64-cpython-312/zipline/data
+         copying src/zipline/data/continuous_future_reader.py -> build/lib.linux-x86_64-cpython-312/zipline/data
+         copying src/zipline/data/adjustments.py -> build/lib.linux-x86_64-cpython-312/zipline/data
+         copying src/zipline/data/session_bars.py -> build/lib.linux-x86_64-cpython-312/zipline/data
+         copying src/zipline/data/bar_reader.py -> build/lib.linux-x86_64-cpython-312/zipline/data
+         copying src/zipline/data/history_loader.py -> build/lib.linux-x86_64-cpython-312/zipline/data
+         copying src/zipline/data/hdf5_daily_bars.py -> build/lib.linux-x86_64-cpython-312/zipline/data
+         copying src/zipline/data/dispatch_bar_reader.py -> build/lib.linux-x86_64-cpython-312/zipline/data
+         copying src/zipline/data/bcolz_minute_bars.py -> build/lib.linux-x86_64-cpython-312/zipline/data
+         copying src/zipline/data/__init__.py -> build/lib.linux-x86_64-cpython-312/zipline/data
+         copying src/zipline/data/data_portal.py -> build/lib.linux-x86_64-cpython-312/zipline/data
+         creating build/lib.linux-x86_64-cpython-312/zipline/finance
+         copying src/zipline/finance/execution.py -> build/lib.linux-x86_64-cpython-312/zipline/finance
+         copying src/zipline/finance/constants.py -> build/lib.linux-x86_64-cpython-312/zipline/finance
+         copying src/zipline/finance/order.py -> build/lib.linux-x86_64-cpython-312/zipline/finance
+         copying src/zipline/finance/asset_restrictions.py -> build/lib.linux-x86_64-cpython-312/zipline/finance
+         copying src/zipline/finance/shared.py -> build/lib.linux-x86_64-cpython-312/zipline/finance
+         copying src/zipline/finance/trading.py -> build/lib.linux-x86_64-cpython-312/zipline/finance
+         copying src/zipline/finance/slippage.py -> build/lib.linux-x86_64-cpython-312/zipline/finance
+         copying src/zipline/finance/ledger.py -> build/lib.linux-x86_64-cpython-312/zipline/finance
+         copying src/zipline/finance/position.py -> build/lib.linux-x86_64-cpython-312/zipline/finance
+         copying src/zipline/finance/controls.py -> build/lib.linux-x86_64-cpython-312/zipline/finance
+         copying src/zipline/finance/transaction.py -> build/lib.linux-x86_64-cpython-312/zipline/finance
+         copying src/zipline/finance/__init__.py -> build/lib.linux-x86_64-cpython-312/zipline/finance
+         copying src/zipline/finance/cancel_policy.py -> build/lib.linux-x86_64-cpython-312/zipline/finance
+         copying src/zipline/finance/commission.py -> build/lib.linux-x86_64-cpython-312/zipline/finance
+         creating build/lib.linux-x86_64-cpython-312/zipline/gens
+         copying src/zipline/gens/composites.py -> build/lib.linux-x86_64-cpython-312/zipline/gens
+         copying src/zipline/gens/utils.py -> build/lib.linux-x86_64-cpython-312/zipline/gens
+         copying src/zipline/gens/tradesimulation.py -> build/lib.linux-x86_64-cpython-312/zipline/gens
+         copying src/zipline/gens/__init__.py -> build/lib.linux-x86_64-cpython-312/zipline/gens
+         creating build/lib.linux-x86_64-cpython-312/zipline/testing
+         copying src/zipline/testing/core.py -> build/lib.linux-x86_64-cpython-312/zipline/testing
+         copying src/zipline/testing/pipeline_terms.py -> build/lib.linux-x86_64-cpython-312/zipline/testing
+         copying src/zipline/testing/windows_cleanup.py -> build/lib.linux-x86_64-cpython-312/zipline/testing
+         copying src/zipline/testing/slippage.py -> build/lib.linux-x86_64-cpython-312/zipline/testing
+         copying src/zipline/testing/debug.py -> build/lib.linux-x86_64-cpython-312/zipline/testing
+         copying src/zipline/testing/fixtures.py -> build/lib.linux-x86_64-cpython-312/zipline/testing
+         copying src/zipline/testing/predicates.py -> build/lib.linux-x86_64-cpython-312/zipline/testing
+         copying src/zipline/testing/github_actions.py -> build/lib.linux-x86_64-cpython-312/zipline/testing
+         copying src/zipline/testing/__init__.py -> build/lib.linux-x86_64-cpython-312/zipline/testing
+         creating build/lib.linux-x86_64-cpython-312/zipline/lib
+         copying src/zipline/lib/normalize.py -> build/lib.linux-x86_64-cpython-312/zipline/lib
+         copying src/zipline/lib/labelarray.py -> build/lib.linux-x86_64-cpython-312/zipline/lib
+         copying src/zipline/lib/quantiles.py -> build/lib.linux-x86_64-cpython-312/zipline/lib
+         copying src/zipline/lib/adjusted_array.py -> build/lib.linux-x86_64-cpython-312/zipline/lib
+         copying src/zipline/lib/__init__.py -> build/lib.linux-x86_64-cpython-312/zipline/lib
+         creating build/lib.linux-x86_64-cpython-312/zipline/sources
+         copying src/zipline/sources/test_source.py -> build/lib.linux-x86_64-cpython-312/zipline/sources
+         copying src/zipline/sources/benchmark_source.py -> build/lib.linux-x86_64-cpython-312/zipline/sources
+         copying src/zipline/sources/requests_csv.py -> build/lib.linux-x86_64-cpython-312/zipline/sources
+         copying src/zipline/sources/__init__.py -> build/lib.linux-x86_64-cpython-312/zipline/sources
+         creating build/lib.linux-x86_64-cpython-312/zipline/utils
+         copying src/zipline/utils/events.py -> build/lib.linux-x86_64-cpython-312/zipline/utils
+         copying src/zipline/utils/exploding_object.py -> build/lib.linux-x86_64-cpython-312/zipline/utils
+         copying src/zipline/utils/preprocess.py -> build/lib.linux-x86_64-cpython-312/zipline/utils
+         copying src/zipline/utils/context_tricks.py -> build/lib.linux-x86_64-cpython-312/zipline/utils
+         copying src/zipline/utils/numpy_utils.py -> build/lib.linux-x86_64-cpython-312/zipline/utils
+         copying src/zipline/utils/input_validation.py -> build/lib.linux-x86_64-cpython-312/zipline/utils
+         copying src/zipline/utils/sharedoc.py -> build/lib.linux-x86_64-cpython-312/zipline/utils
+         copying src/zipline/utils/cli.py -> build/lib.linux-x86_64-cpython-312/zipline/utils
+         copying src/zipline/utils/range.py -> build/lib.linux-x86_64-cpython-312/zipline/utils
+         copying src/zipline/utils/data.py -> build/lib.linux-x86_64-cpython-312/zipline/utils
+         copying src/zipline/utils/formatting.py -> build/lib.linux-x86_64-cpython-312/zipline/utils
+         copying src/zipline/utils/calendar_utils.py -> build/lib.linux-x86_64-cpython-312/zipline/utils
+         copying src/zipline/utils/paths.py -> build/lib.linux-x86_64-cpython-312/zipline/utils
+         copying src/zipline/utils/string_formatting.py -> build/lib.linux-x86_64-cpython-312/zipline/utils
+         copying src/zipline/utils/security_list.py -> build/lib.linux-x86_64-cpython-312/zipline/utils
+         copying src/zipline/utils/algo_instance.py -> build/lib.linux-x86_64-cpython-312/zipline/utils
+         copying src/zipline/utils/sqlite_utils.py -> build/lib.linux-x86_64-cpython-312/zipline/utils
+         copying src/zipline/utils/math_utils.py -> build/lib.linux-x86_64-cpython-312/zipline/utils
+         copying src/zipline/utils/compat.py -> build/lib.linux-x86_64-cpython-312/zipline/utils
+         copying src/zipline/utils/memoize.py -> build/lib.linux-x86_64-cpython-312/zipline/utils
+         copying src/zipline/utils/functional.py -> build/lib.linux-x86_64-cpython-312/zipline/utils
+         copying src/zipline/utils/deprecate.py -> build/lib.linux-x86_64-cpython-312/zipline/utils
+         copying src/zipline/utils/dummy.py -> build/lib.linux-x86_64-cpython-312/zipline/utils
+         copying src/zipline/utils/idbox.py -> build/lib.linux-x86_64-cpython-312/zipline/utils
+         copying src/zipline/utils/sentinel.py -> build/lib.linux-x86_64-cpython-312/zipline/utils
+         copying src/zipline/utils/run_algo.py -> build/lib.linux-x86_64-cpython-312/zipline/utils
+         copying src/zipline/utils/cache.py -> build/lib.linux-x86_64-cpython-312/zipline/utils
+         copying src/zipline/utils/pandas_utils.py -> build/lib.linux-x86_64-cpython-312/zipline/utils
+         copying src/zipline/utils/date_utils.py -> build/lib.linux-x86_64-cpython-312/zipline/utils
+         copying src/zipline/utils/classproperty.py -> build/lib.linux-x86_64-cpython-312/zipline/utils
+         copying src/zipline/utils/__init__.py -> build/lib.linux-x86_64-cpython-312/zipline/utils
+         copying src/zipline/utils/final.py -> build/lib.linux-x86_64-cpython-312/zipline/utils
+         copying src/zipline/utils/api_support.py -> build/lib.linux-x86_64-cpython-312/zipline/utils
+         copying src/zipline/utils/factory.py -> build/lib.linux-x86_64-cpython-312/zipline/utils
+         creating build/lib.linux-x86_64-cpython-312/zipline/examples
+         copying src/zipline/examples/olmar.py -> build/lib.linux-x86_64-cpython-312/zipline/examples
+         copying src/zipline/examples/dual_moving_average.py -> build/lib.linux-x86_64-cpython-312/zipline/examples
+         copying src/zipline/examples/buyapple_ide.py -> build/lib.linux-x86_64-cpython-312/zipline/examples
+         copying src/zipline/examples/momentum_pipeline.py -> build/lib.linux-x86_64-cpython-312/zipline/examples
+         copying src/zipline/examples/dual_ema_talib.py -> build/lib.linux-x86_64-cpython-312/zipline/examples
+         copying src/zipline/examples/__init__.py -> build/lib.linux-x86_64-cpython-312/zipline/examples
+         copying src/zipline/examples/buyapple.py -> build/lib.linux-x86_64-cpython-312/zipline/examples
+         copying src/zipline/examples/buy_and_hold.py -> build/lib.linux-x86_64-cpython-312/zipline/examples
+         creating build/lib.linux-x86_64-cpython-312/zipline/pipeline/data
+         copying src/zipline/pipeline/data/equity_pricing.py -> build/lib.linux-x86_64-cpython-312/zipline/pipeline/data
+         copying src/zipline/pipeline/data/testing.py -> build/lib.linux-x86_64-cpython-312/zipline/pipeline/data
+         copying src/zipline/pipeline/data/dataset.py -> build/lib.linux-x86_64-cpython-312/zipline/pipeline/data
+         copying src/zipline/pipeline/data/__init__.py -> build/lib.linux-x86_64-cpython-312/zipline/pipeline/data
+         creating build/lib.linux-x86_64-cpython-312/zipline/pipeline/loaders
+         copying src/zipline/pipeline/loaders/events.py -> build/lib.linux-x86_64-cpython-312/zipline/pipeline/loaders
+         copying src/zipline/pipeline/loaders/utils.py -> build/lib.linux-x86_64-cpython-312/zipline/pipeline/loaders
+         copying src/zipline/pipeline/loaders/earnings_estimates.py -> build/lib.linux-x86_64-cpython-312/zipline/pipeline/loaders
+         copying src/zipline/pipeline/loaders/testing.py -> build/lib.linux-x86_64-cpython-312/zipline/pipeline/loaders
+         copying src/zipline/pipeline/loaders/equity_pricing_loader.py -> build/lib.linux-x86_64-cpython-312/zipline/pipeline/loaders
+         copying src/zipline/pipeline/loaders/frame.py -> build/lib.linux-x86_64-cpython-312/zipline/pipeline/loaders
+         copying src/zipline/pipeline/loaders/base.py -> build/lib.linux-x86_64-cpython-312/zipline/pipeline/loaders
+         copying src/zipline/pipeline/loaders/__init__.py -> build/lib.linux-x86_64-cpython-312/zipline/pipeline/loaders
+         copying src/zipline/pipeline/loaders/synthetic.py -> build/lib.linux-x86_64-cpython-312/zipline/pipeline/loaders
+         creating build/lib.linux-x86_64-cpython-312/zipline/pipeline/hooks
+         copying src/zipline/pipeline/hooks/iface.py -> build/lib.linux-x86_64-cpython-312/zipline/pipeline/hooks
+         copying src/zipline/pipeline/hooks/progress.py -> build/lib.linux-x86_64-cpython-312/zipline/pipeline/hooks
+         copying src/zipline/pipeline/hooks/testing.py -> build/lib.linux-x86_64-cpython-312/zipline/pipeline/hooks
+         copying src/zipline/pipeline/hooks/delegate.py -> build/lib.linux-x86_64-cpython-312/zipline/pipeline/hooks
+         copying src/zipline/pipeline/hooks/no.py -> build/lib.linux-x86_64-cpython-312/zipline/pipeline/hooks
+         copying src/zipline/pipeline/hooks/__init__.py -> build/lib.linux-x86_64-cpython-312/zipline/pipeline/hooks
+         creating build/lib.linux-x86_64-cpython-312/zipline/pipeline/filters
+         copying src/zipline/pipeline/filters/filter.py -> build/lib.linux-x86_64-cpython-312/zipline/pipeline/filters
+         copying src/zipline/pipeline/filters/smoothing.py -> build/lib.linux-x86_64-cpython-312/zipline/pipeline/filters
+         copying src/zipline/pipeline/filters/__init__.py -> build/lib.linux-x86_64-cpython-312/zipline/pipeline/filters
+         creating build/lib.linux-x86_64-cpython-312/zipline/pipeline/classifiers
+         copying src/zipline/pipeline/classifiers/classifier.py -> build/lib.linux-x86_64-cpython-312/zipline/pipeline/classifiers
+         copying src/zipline/pipeline/classifiers/__init__.py -> build/lib.linux-x86_64-cpython-312/zipline/pipeline/classifiers
+         creating build/lib.linux-x86_64-cpython-312/zipline/pipeline/factors
+         copying src/zipline/pipeline/factors/events.py -> build/lib.linux-x86_64-cpython-312/zipline/pipeline/factors
+         copying src/zipline/pipeline/factors/basic.py -> build/lib.linux-x86_64-cpython-312/zipline/pipeline/factors
+         copying src/zipline/pipeline/factors/factor.py -> build/lib.linux-x86_64-cpython-312/zipline/pipeline/factors
+         copying src/zipline/pipeline/factors/technical.py -> build/lib.linux-x86_64-cpython-312/zipline/pipeline/factors
+         copying src/zipline/pipeline/factors/__init__.py -> build/lib.linux-x86_64-cpython-312/zipline/pipeline/factors
+         copying src/zipline/pipeline/factors/statistical.py -> build/lib.linux-x86_64-cpython-312/zipline/pipeline/factors
+         creating build/lib.linux-x86_64-cpython-312/zipline/data/fx
+         copying src/zipline/data/fx/utils.py -> build/lib.linux-x86_64-cpython-312/zipline/data/fx
+         copying src/zipline/data/fx/exploding.py -> build/lib.linux-x86_64-cpython-312/zipline/data/fx
+         copying src/zipline/data/fx/hdf5.py -> build/lib.linux-x86_64-cpython-312/zipline/data/fx
+         copying src/zipline/data/fx/in_memory.py -> build/lib.linux-x86_64-cpython-312/zipline/data/fx
+         copying src/zipline/data/fx/base.py -> build/lib.linux-x86_64-cpython-312/zipline/data/fx
+         copying src/zipline/data/fx/__init__.py -> build/lib.linux-x86_64-cpython-312/zipline/data/fx
+         creating build/lib.linux-x86_64-cpython-312/zipline/data/bundles
+         copying src/zipline/data/bundles/core.py -> build/lib.linux-x86_64-cpython-312/zipline/data/bundles
+         copying src/zipline/data/bundles/csvdir.py -> build/lib.linux-x86_64-cpython-312/zipline/data/bundles
+         copying src/zipline/data/bundles/quandl.py -> build/lib.linux-x86_64-cpython-312/zipline/data/bundles
+         copying src/zipline/data/bundles/__init__.py -> build/lib.linux-x86_64-cpython-312/zipline/data/bundles
+         creating build/lib.linux-x86_64-cpython-312/zipline/finance/metrics
+         copying src/zipline/finance/metrics/core.py -> build/lib.linux-x86_64-cpython-312/zipline/finance/metrics
+         copying src/zipline/finance/metrics/metric.py -> build/lib.linux-x86_64-cpython-312/zipline/finance/metrics
+         copying src/zipline/finance/metrics/tracker.py -> build/lib.linux-x86_64-cpython-312/zipline/finance/metrics
+         copying src/zipline/finance/metrics/__init__.py -> build/lib.linux-x86_64-cpython-312/zipline/finance/metrics
+         creating build/lib.linux-x86_64-cpython-312/zipline/finance/blotter
+         copying src/zipline/finance/blotter/blotter.py -> build/lib.linux-x86_64-cpython-312/zipline/finance/blotter
+         copying src/zipline/finance/blotter/simulation_blotter.py -> build/lib.linux-x86_64-cpython-312/zipline/finance/blotter
+         copying src/zipline/finance/blotter/__init__.py -> build/lib.linux-x86_64-cpython-312/zipline/finance/blotter
+         running egg_info
+         writing src/zipline_reloaded.egg-info/PKG-INFO
+         writing dependency_links to src/zipline_reloaded.egg-info/dependency_links.txt
+         writing entry points to src/zipline_reloaded.egg-info/entry_points.txt
+         writing requirements to src/zipline_reloaded.egg-info/requires.txt
+         writing top-level names to src/zipline_reloaded.egg-info/top_level.txt
+         reading manifest template 'MANIFEST.in'
+         adding license file 'LICENSE'
+         writing manifest file 'src/zipline_reloaded.egg-info/SOURCES.txt'
+         copying src/zipline/_protocol.c -> build/lib.linux-x86_64-cpython-312/zipline
+         copying src/zipline/_protocol.html -> build/lib.linux-x86_64-cpython-312/zipline
+         copying src/zipline/_protocol.pxd -> build/lib.linux-x86_64-cpython-312/zipline
+         copying src/zipline/_protocol.pyx -> build/lib.linux-x86_64-cpython-312/zipline
+         copying src/zipline/api.pyi -> build/lib.linux-x86_64-cpython-312/zipline
+         copying src/zipline/assets/_assets.c -> build/lib.linux-x86_64-cpython-312/zipline/assets
+         copying src/zipline/assets/_assets.html -> build/lib.linux-x86_64-cpython-312/zipline/assets
+         copying src/zipline/assets/_assets.pxd -> build/lib.linux-x86_64-cpython-312/zipline/assets
+         copying src/zipline/assets/_assets.pyx -> build/lib.linux-x86_64-cpython-312/zipline/assets
+         copying src/zipline/assets/continuous_futures.c -> build/lib.linux-x86_64-cpython-312/zipline/assets
+         copying src/zipline/assets/continuous_futures.html -> build/lib.linux-x86_64-cpython-312/zipline/assets
+         copying src/zipline/assets/continuous_futures.pyx -> build/lib.linux-x86_64-cpython-312/zipline/assets
+         copying src/zipline/data/_adjustments.c -> build/lib.linux-x86_64-cpython-312/zipline/data
+         copying src/zipline/data/_adjustments.html -> build/lib.linux-x86_64-cpython-312/zipline/data
+         copying src/zipline/data/_adjustments.pyx -> build/lib.linux-x86_64-cpython-312/zipline/data
+         copying src/zipline/data/_equities.c -> build/lib.linux-x86_64-cpython-312/zipline/data
+         copying src/zipline/data/_equities.html -> build/lib.linux-x86_64-cpython-312/zipline/data
+         copying src/zipline/data/_equities.pyx -> build/lib.linux-x86_64-cpython-312/zipline/data
+         copying src/zipline/data/_minute_bar_internal.c -> build/lib.linux-x86_64-cpython-312/zipline/data
+         copying src/zipline/data/_minute_bar_internal.html -> build/lib.linux-x86_64-cpython-312/zipline/data
+         copying src/zipline/data/_minute_bar_internal.pyx -> build/lib.linux-x86_64-cpython-312/zipline/data
+         copying src/zipline/data/_resample.c -> build/lib.linux-x86_64-cpython-312/zipline/data
+         copying src/zipline/data/_resample.html -> build/lib.linux-x86_64-cpython-312/zipline/data
+         copying src/zipline/data/_resample.pyx -> build/lib.linux-x86_64-cpython-312/zipline/data
+         copying src/zipline/finance/_finance_ext.c -> build/lib.linux-x86_64-cpython-312/zipline/finance
+         copying src/zipline/finance/_finance_ext.html -> build/lib.linux-x86_64-cpython-312/zipline/finance
+         copying src/zipline/finance/_finance_ext.pyx -> build/lib.linux-x86_64-cpython-312/zipline/finance
+         copying src/zipline/gens/sim_engine.c -> build/lib.linux-x86_64-cpython-312/zipline/gens
+         copying src/zipline/gens/sim_engine.html -> build/lib.linux-x86_64-cpython-312/zipline/gens
+         copying src/zipline/gens/sim_engine.pyx -> build/lib.linux-x86_64-cpython-312/zipline/gens
+         copying src/zipline/lib/_factorize.c -> build/lib.linux-x86_64-cpython-312/zipline/lib
+         copying src/zipline/lib/_factorize.html -> build/lib.linux-x86_64-cpython-312/zipline/lib
+         copying src/zipline/lib/_factorize.pyx -> build/lib.linux-x86_64-cpython-312/zipline/lib
+         copying src/zipline/lib/_float64window.c -> build/lib.linux-x86_64-cpython-312/zipline/lib
+         copying src/zipline/lib/_float64window.html -> build/lib.linux-x86_64-cpython-312/zipline/lib
+         copying src/zipline/lib/_float64window.pyx -> build/lib.linux-x86_64-cpython-312/zipline/lib
+         copying src/zipline/lib/_int64window.c -> build/lib.linux-x86_64-cpython-312/zipline/lib
+         copying src/zipline/lib/_int64window.html -> build/lib.linux-x86_64-cpython-312/zipline/lib
+         copying src/zipline/lib/_int64window.pyx -> build/lib.linux-x86_64-cpython-312/zipline/lib
+         copying src/zipline/lib/_labelwindow.c -> build/lib.linux-x86_64-cpython-312/zipline/lib
+         copying src/zipline/lib/_labelwindow.html -> build/lib.linux-x86_64-cpython-312/zipline/lib
+         copying src/zipline/lib/_labelwindow.pyx -> build/lib.linux-x86_64-cpython-312/zipline/lib
+         copying src/zipline/lib/_uint8window.c -> build/lib.linux-x86_64-cpython-312/zipline/lib
+         copying src/zipline/lib/_uint8window.html -> build/lib.linux-x86_64-cpython-312/zipline/lib
+         copying src/zipline/lib/_uint8window.pyx -> build/lib.linux-x86_64-cpython-312/zipline/lib
+         copying src/zipline/lib/_windowtemplate.html -> build/lib.linux-x86_64-cpython-312/zipline/lib
+         copying src/zipline/lib/_windowtemplate.pxi -> build/lib.linux-x86_64-cpython-312/zipline/lib
+         copying src/zipline/lib/adjustment.c -> build/lib.linux-x86_64-cpython-312/zipline/lib
+         copying src/zipline/lib/adjustment.html -> build/lib.linux-x86_64-cpython-312/zipline/lib
+         copying src/zipline/lib/adjustment.pxd -> build/lib.linux-x86_64-cpython-312/zipline/lib
+         copying src/zipline/lib/adjustment.pyx -> build/lib.linux-x86_64-cpython-312/zipline/lib
+         copying src/zipline/lib/rank.c -> build/lib.linux-x86_64-cpython-312/zipline/lib
+         copying src/zipline/lib/rank.html -> build/lib.linux-x86_64-cpython-312/zipline/lib
+         copying src/zipline/lib/rank.pyx -> build/lib.linux-x86_64-cpython-312/zipline/lib
+         copying src/zipline/examples/buyapple.ipynb -> build/lib.linux-x86_64-cpython-312/zipline/examples
+         creating build/lib.linux-x86_64-cpython-312/zipline/resources/market_data
+         copying src/zipline/resources/market_data/SPY_benchmark.csv -> build/lib.linux-x86_64-cpython-312/zipline/resources/market_data
+         copying src/zipline/resources/market_data/treasury_curves.csv -> build/lib.linux-x86_64-cpython-312/zipline/resources/market_data
+         creating build/lib.linux-x86_64-cpython-312/zipline/resources/security_lists/leveraged_etf_list/20020103/20131121
+         copying src/zipline/resources/security_lists/leveraged_etf_list/20020103/20131121/add -> build/lib.linux-x86_64-cpython-312/zipline/resources/security_lists/leveraged_etf_list/20020103/20131121
+         copying src/zipline/resources/security_lists/leveraged_etf_list/20020103/20131121/delete -> build/lib.linux-x86_64-cpython-312/zipline/resources/security_lists/leveraged_etf_list/20020103/20131121
+         creating build/lib.linux-x86_64-cpython-312/zipline/resources/security_lists/leveraged_etf_list/20020103/20130916
+         copying src/zipline/resources/security_lists/leveraged_etf_list/20020103/20130916/add -> build/lib.linux-x86_64-cpython-312/zipline/resources/security_lists/leveraged_etf_list/20020103/20130916
+         copying src/zipline/resources/security_lists/leveraged_etf_list/20020103/20130916/delete -> build/lib.linux-x86_64-cpython-312/zipline/resources/security_lists/leveraged_etf_list/20020103/20130916
+         creating build/lib.linux-x86_64-cpython-312/zipline/resources/security_lists/leveraged_etf_list/20020103/20121012
+         copying src/zipline/resources/security_lists/leveraged_etf_list/20020103/20121012/add -> build/lib.linux-x86_64-cpython-312/zipline/resources/security_lists/leveraged_etf_list/20020103/20121012
+         copying src/zipline/resources/security_lists/leveraged_etf_list/20020103/20121012/delete -> build/lib.linux-x86_64-cpython-312/zipline/resources/security_lists/leveraged_etf_list/20020103/20121012
+         creating build/lib.linux-x86_64-cpython-312/zipline/resources/security_lists/leveraged_etf_list/20020103/20131227
+         copying src/zipline/resources/security_lists/leveraged_etf_list/20020103/20131227/add -> build/lib.linux-x86_64-cpython-312/zipline/resources/security_lists/leveraged_etf_list/20020103/20131227
+         copying src/zipline/resources/security_lists/leveraged_etf_list/20020103/20131227/delete -> build/lib.linux-x86_64-cpython-312/zipline/resources/security_lists/leveraged_etf_list/20020103/20131227
+         creating build/lib.linux-x86_64-cpython-312/zipline/resources/security_lists/leveraged_etf_list/20020103/20131002
+         copying src/zipline/resources/security_lists/leveraged_etf_list/20020103/20131002/add -> build/lib.linux-x86_64-cpython-312/zipline/resources/security_lists/leveraged_etf_list/20020103/20131002
+         copying src/zipline/resources/security_lists/leveraged_etf_list/20020103/20131002/delete -> build/lib.linux-x86_64-cpython-312/zipline/resources/security_lists/leveraged_etf_list/20020103/20131002
+         creating build/lib.linux-x86_64-cpython-312/zipline/resources/security_lists/leveraged_etf_list/20020103/20140923
+         copying src/zipline/resources/security_lists/leveraged_etf_list/20020103/20140923/add -> build/lib.linux-x86_64-cpython-312/zipline/resources/security_lists/leveraged_etf_list/20020103/20140923
+         copying src/zipline/resources/security_lists/leveraged_etf_list/20020103/20140923/delete -> build/lib.linux-x86_64-cpython-312/zipline/resources/security_lists/leveraged_etf_list/20020103/20140923
+         creating build/lib.linux-x86_64-cpython-312/zipline/resources/security_lists/leveraged_etf_list/20020103/20141226
+         copying src/zipline/resources/security_lists/leveraged_etf_list/20020103/20141226/add -> build/lib.linux-x86_64-cpython-312/zipline/resources/security_lists/leveraged_etf_list/20020103/20141226
+         copying src/zipline/resources/security_lists/leveraged_etf_list/20020103/20141226/delete -> build/lib.linux-x86_64-cpython-312/zipline/resources/security_lists/leveraged_etf_list/20020103/20141226
+         creating build/lib.linux-x86_64-cpython-312/zipline/resources/security_lists/leveraged_etf_list/20020103/20160826
+         copying src/zipline/resources/security_lists/leveraged_etf_list/20020103/20160826/add -> build/lib.linux-x86_64-cpython-312/zipline/resources/security_lists/leveraged_etf_list/20020103/20160826
+         copying src/zipline/resources/security_lists/leveraged_etf_list/20020103/20160826/delete -> build/lib.linux-x86_64-cpython-312/zipline/resources/security_lists/leveraged_etf_list/20020103/20160826
+         creating build/lib.linux-x86_64-cpython-312/zipline/resources/security_lists/leveraged_etf_list/20020103/20131009
+         copying src/zipline/resources/security_lists/leveraged_etf_list/20020103/20131009/add -> build/lib.linux-x86_64-cpython-312/zipline/resources/security_lists/leveraged_etf_list/20020103/20131009
+         copying src/zipline/resources/security_lists/leveraged_etf_list/20020103/20131009/delete -> build/lib.linux-x86_64-cpython-312/zipline/resources/security_lists/leveraged_etf_list/20020103/20131009
+         creating build/lib.linux-x86_64-cpython-312/zipline/resources/security_lists/leveraged_etf_list/20020103/20140410
+         copying src/zipline/resources/security_lists/leveraged_etf_list/20020103/20140410/add -> build/lib.linux-x86_64-cpython-312/zipline/resources/security_lists/leveraged_etf_list/20020103/20140410
+         copying src/zipline/resources/security_lists/leveraged_etf_list/20020103/20140410/delete -> build/lib.linux-x86_64-cpython-312/zipline/resources/security_lists/leveraged_etf_list/20020103/20140410
+         creating build/lib.linux-x86_64-cpython-312/zipline/resources/security_lists/leveraged_etf_list/20020103/20130605
+         copying src/zipline/resources/security_lists/leveraged_etf_list/20020103/20130605/add -> build/lib.linux-x86_64-cpython-312/zipline/resources/security_lists/leveraged_etf_list/20020103/20130605
+         copying src/zipline/resources/security_lists/leveraged_etf_list/20020103/20130605/delete -> build/lib.linux-x86_64-cpython-312/zipline/resources/security_lists/leveraged_etf_list/20020103/20130605
+         creating build/lib.linux-x86_64-cpython-312/zipline/resources/security_lists/leveraged_etf_list/20020103/20150123
+         copying src/zipline/resources/security_lists/leveraged_etf_list/20020103/20150123/add -> build/lib.linux-x86_64-cpython-312/zipline/resources/security_lists/leveraged_etf_list/20020103/20150123
+         copying src/zipline/resources/security_lists/leveraged_etf_list/20020103/20150123/delete -> build/lib.linux-x86_64-cpython-312/zipline/resources/security_lists/leveraged_etf_list/20020103/20150123
+         creating build/lib.linux-x86_64-cpython-312/zipline/resources/security_lists/leveraged_etf_list/20020103/20120913
+         copying src/zipline/resources/security_lists/leveraged_etf_list/20020103/20120913/add -> build/lib.linux-x86_64-cpython-312/zipline/resources/security_lists/leveraged_etf_list/20020103/20120913
+         copying src/zipline/resources/security_lists/leveraged_etf_list/20020103/20120913/delete -> build/lib.linux-x86_64-cpython-312/zipline/resources/security_lists/leveraged_etf_list/20020103/20120913
+         creating build/lib.linux-x86_64-cpython-312/zipline/resources/security_lists/leveraged_etf_list/20020103/20141119
+         copying src/zipline/resources/security_lists/leveraged_etf_list/20020103/20141119/add -> build/lib.linux-x86_64-cpython-312/zipline/resources/security_lists/leveraged_etf_list/20020103/20141119
+         copying src/zipline/resources/security_lists/leveraged_etf_list/20020103/20141119/delete -> build/lib.linux-x86_64-cpython-312/zipline/resources/security_lists/leveraged_etf_list/20020103/20141119
+         creating build/lib.linux-x86_64-cpython-312/zipline/resources/security_lists/leveraged_etf_list/20020103/20120919
+         copying src/zipline/resources/security_lists/leveraged_etf_list/20020103/20120919/add -> build/lib.linux-x86_64-cpython-312/zipline/resources/security_lists/leveraged_etf_list/20020103/20120919
+         copying src/zipline/resources/security_lists/leveraged_etf_list/20020103/20120919/delete -> build/lib.linux-x86_64-cpython-312/zipline/resources/security_lists/leveraged_etf_list/20020103/20120919
+         running build_ext
+         building 'zipline.assets._assets' extension
+         clang -pthread -fno-strict-overflow -Wsign-compare -Wunreachable-code -DNDEBUG -g -O3 -Wall -O3 -fstack-protector -fstack-clash-protection -U_FORTIFY_SOURCE -D_FORTIFY_SOURCE=2 -fno-omit-frame-pointer -mno-omit-leaf-frame-pointer -fPIC -fPIC -DNPY_NO_DEPRECATED_API=NPY_1_7_API_VERSION -I/workspace/scratch/008a76ec4981/Backtest-Benchmark/.work/uv-cache/builds-v0/.tmpKq8pmB/lib/python3.12/site-packages/numpy/_core/include -I/workspace/scratch/008a76ec4981/Backtest-Benchmark/.work/uv-cache/builds-v0/.tmpKq8pmB/include -I/opt/codex/runtimes/codex-primary-runtime/dependencies/python/include/python3.12 -c src/zipline/assets/_assets.c -o build/temp.linux-x86_64-cpython-312/src/zipline/assets/_assets.o
+
+         [stderr]
+         /workspace/scratch/008a76ec4981/Backtest-Benchmark/.work/uv-cache/builds-v0/.tmpKq8pmB/lib/python3.12/site-packages/setuptools_scm/_integration/version_inference.py:236: UserWarning: version of None already set
+           warnings.warn(f"version of {self.dist_name} already set")
+         warning: no previously-included files matching '__pycache__' found anywhere in distribution
+         warning: no previously-included files matching '*.py[cod]' found anywhere in distribution
+         error: [Errno 2] No such file or directory: 'clang'
+
+hint: Build failures usually indicate a problem with the package or the build environment

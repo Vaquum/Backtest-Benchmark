@@ -1,0 +1,39 @@
+{
+  "rust_version": "1.99.0",
+  "dotnet_version": "10.0.402",
+  "platform": "x86_64-unknown-linux-gnu",
+  "artifacts": [
+    {
+      "id": "rustc",
+      "toolchain": "rust",
+      "url": "https://static.rust-lang.org/dist/2026-10-01/rustc-1.99.0-x86_64-unknown-linux-gnu.tar.xz",
+      "sha256": "77171ba2a0345fdf2abc4fedda55d6de078dae7a68527c28be8c77dcc9604bd5",
+      "archive": "tar.xz",
+      "install_script": true
+    },
+    {
+      "id": "rust-std",
+      "toolchain": "rust",
+      "url": "https://static.rust-lang.org/dist/2026-10-01/rust-std-1.99.0-x86_64-unknown-linux-gnu.tar.xz",
+      "sha256": "3e58dff2d0b72196b5ea4e90536e174d400de88564a52694686b81e091169933",
+      "archive": "tar.xz",
+      "install_script": true
+    },
+    {
+      "id": "cargo",
+      "toolchain": "rust",
+      "url": "https://static.rust-lang.org/dist/2026-10-01/cargo-1.99.0-x86_64-unknown-linux-gnu.tar.xz",
+      "sha256": "d7674918d28093097614cd9728b6ca60db9ea3038f640f0bd1e9a4188c7568ce",
+      "archive": "tar.xz",
+      "install_script": true
+    },
+    {
+      "id": "dotnet-sdk",
+      "toolchain": "dotnet",
+      "url": "https://builds.dotnet.microsoft.com/dotnet/Sdk/10.0.402/dotnet-sdk-10.0.402-linux-x64.tar.gz",
+      "sha512": "1904a98dda2db34ba78ba3c4fb1b224455329af91c341d83547843c1839e112b04ae699ee92fa2449a8f62249196a938723078c0c60b9f65c88539d5687729c2",
+      "archive": "tar.gz",
+      "install_script": false
+    }
+  ]
+}

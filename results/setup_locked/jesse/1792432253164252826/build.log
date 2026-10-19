@@ -1,0 +1,26 @@
+COMMAND ["uv", "pip", "sync", "--python", "/workspace/scratch/008a76ec4981/Backtest-Benchmark/.work/envs/jesse/bin/python", "--require-hashes", "/workspace/scratch/008a76ec4981/Backtest-Benchmark/locks/jesse.txt"]
+Using Python 3.12.14 environment at: Backtest-Benchmark/.work/envs/jesse
+Resolved 109 packages in 22ms
+warning: Failed to uninstall package at `Backtest-Benchmark/.work/envs/jesse/lib/python3.12/site-packages/pytest-9.1.1.dist-info` due to missing `RECORD` file. Installation may result in an incomplete environment.
+Uninstalled 3 packages in 29ms
+Installed 1 package in 4ms
+ - jesse==3.4.0 (from file:///workspace/scratch/008a76ec4981/benchmark-sources/jesse)
+ - pytest==9.1.1
+ ~ pytest==6.2.5
+COMMAND ["uv", "pip", "install", "--python", "/workspace/scratch/008a76ec4981/Backtest-Benchmark/.work/envs/jesse/bin/python", "--no-deps", "--no-build-isolation", "--reinstall", "benchmark-sources/jesse"]
+Using Python 3.12.14 environment at: Backtest-Benchmark/.work/envs/jesse
+Resolved 1 package in 516ms
+   Building jesse @ file:///workspace/scratch/008a76ec4981/benchmark-sources/jesse
+      Built jesse @ file:///workspace/scratch/008a76ec4981/benchmark-sources/jesse
+Prepared 1 package in 5.31s
+Installed 1 package in 36ms
+ + jesse==3.4.0 (from file:///workspace/scratch/008a76ec4981/benchmark-sources/jesse)
+COMMAND ["/workspace/scratch/008a76ec4981/Backtest-Benchmark/.work/envs/jesse/bin/python", "-c", "import jesse; print(jesse.__file__)"]
+/workspace/scratch/008a76ec4981/Backtest-Benchmark/.work/envs/jesse/lib/python3.12/site-packages/jesse/__init__.py
+COMMAND ["uv", "pip", "check", "--python", "/workspace/scratch/008a76ec4981/Backtest-Benchmark/.work/envs/jesse/bin/python"]
+Using Python 3.12.14 environment at: Backtest-Benchmark/.work/envs/jesse
+Checked 111 packages in 1ms
+Found 1 incompatibility
+The package `pytest` has multiple installed distributions: 
+  - /workspace/scratch/008a76ec4981/Backtest-Benchmark/.work/envs/jesse/lib/python3.12/site-packages/pytest-6.2.5.dist-info
+  - /workspace/scratch/008a76ec4981/Backtest-Benchmark/.work/envs/jesse/lib/python3.12/site-packages/pytest-9.1.1.dist-info

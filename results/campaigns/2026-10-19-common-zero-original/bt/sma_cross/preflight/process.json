@@ -1,0 +1,39 @@
+{
+  "command": [
+    "/workspace/scratch/008a76ec4981/Backtest-Benchmark/.work/envs/bt/bin/python",
+    "-m",
+    "bench.worker",
+    "--engine",
+    "bt",
+    "--prepared",
+    "/workspace/scratch/008a76ec4981/Backtest-Benchmark/.work/runs/full-cpu-2026-10-19/prepared-sma_cross.npz",
+    "--prepared-sha256",
+    "a4e10483b2e46a229340eaad6cbe38af40824a63b7ce39d11dee57b0045f5c5a",
+    "--contract",
+    "/workspace/scratch/008a76ec4981/Backtest-Benchmark/.work/runs/full-cpu-2026-10-19/contract.json",
+    "--environment-manifest",
+    "/workspace/scratch/008a76ec4981/Backtest-Benchmark/.work/manifests/bt.json",
+    "--output",
+    "/workspace/scratch/008a76ec4981/Backtest-Benchmark/.work/runs/full-cpu-2026-10-19/bt/sma_cross/preflight/result",
+    "--benchmark-code-manifest",
+    "/workspace/scratch/008a76ec4981/Backtest-Benchmark/.work/runs/full-cpu-2026-10-19/benchmark-code.json",
+    "--mode",
+    "preflight",
+    "--warm-repeats",
+    "9",
+    "--diagnostic-core"
+  ],
+  "returncode": 0,
+  "timed_out": false,
+  "process_wall_ms": 10021.046532,
+  "launch_to_ready_ms": 38.368386,
+  "launch_to_first_valid_ms": 9612.283315,
+  "parent_observed_events_ms": {
+    "ready": 38.368386,
+    "first_valid": 9612.283315,
+    "complete": 9613.95745
+  },
+  "stdout_path": "/workspace/scratch/008a76ec4981/Backtest-Benchmark/.work/runs/full-cpu-2026-10-19/bt/sma_cross/preflight/stdout.log",
+  "startup_scope": "Parent observed process launch to worker ready event, before scientific/engine imports; IPC scheduling is included",
+  "first_valid_scope": "Process launch through source verification, imports, input load, independent oracle, first engine call, extraction and successful parity"
+}

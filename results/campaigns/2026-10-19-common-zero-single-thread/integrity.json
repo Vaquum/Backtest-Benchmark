@@ -1,0 +1,15 @@
+{
+  "status": "canonical controlled campaign; validated",
+  "report_sha256": "4ccf17702fa03d5abaacaa454a929ce49d71a88a84ca30bca3b20def364bc7cd",
+  "elapsed_seconds": 1076.404173,
+  "cases": 14,
+  "timed_processes": 70,
+  "timed_full_or_component_samples": 700,
+  "timed_core_samples": 100,
+  "preregistration_code_hashes_match": true,
+  "archived_code_hashes_match": true,
+  "current_code_hashes_match": true,
+  "per_case_checked_result_arrays_identical_across_repetitions": true,
+  "native_thread_observation_policy": "loaded-pools-v1",
+  "qualification": "These controls observe configured native pools and checked output arrays; they do not establish total OS thread count, physical CPU isolation, all workload semantics, or binary reproducibility across hosts."
+}

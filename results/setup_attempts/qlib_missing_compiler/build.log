@@ -1,0 +1,2133 @@
+COMMAND ["uv", "venv", "--seed", "--python", "/opt/codex/runtimes/codex-primary-runtime/dependencies/python/bin/python3", "/workspace/scratch/008a76ec4981/Backtest-Benchmark/.work/envs/qlib"]
+Using CPython 3.12.14 interpreter at: /opt/codex/runtimes/codex-primary-runtime/dependencies/python/bin/python3
+Creating virtual environment with seed packages at: Backtest-Benchmark/.work/envs/qlib
+ + pip==26.2.1
+COMMAND ["uv", "pip", "install", "--python", "/workspace/scratch/008a76ec4981/Backtest-Benchmark/.work/envs/qlib/bin/python", "setuptools", "wheel", "pyarrow", "pytest", "Cython<3.2", "setuptools-scm"]
+Using Python 3.12.14 environment at: Backtest-Benchmark/.work/envs/qlib
+Resolved 11 packages in 3ms
+Installed 11 packages in 15ms
+ + cython==3.1.8
+ + iniconfig==2.3.1
+ + packaging==26.3
+ + pluggy==1.7.0
+ + pyarrow==26.0.0
+ + pygments==2.21.0
+ + pytest==9.1.1
+ + setuptools==84.0.0
+ + setuptools-scm==10.3.4
+ + vcs-versioning==2.6.0
+ + wheel==0.48.0
+COMMAND ["uv", "pip", "install", "--python", "/workspace/scratch/008a76ec4981/Backtest-Benchmark/.work/envs/qlib/bin/python", "/workspace/scratch/008a76ec4981/benchmark-sources/qlib"]
+Using Python 3.12.14 environment at: Backtest-Benchmark/.work/envs/qlib
+Resolved 192 packages in 2.97s
+   Building pyqlib @ file:///workspace/scratch/008a76ec4981/benchmark-sources/qlib
+   Building gym==0.26.2
+Downloading mlflow-tracing (1.5MiB)
+Downloading jedi (4.7MiB)
+Downloading babel (9.7MiB)
+ Downloaded mlflow-tracing
+Downloading highspy (4.8MiB)
+Downloading debugpy (3.8MiB)
+Downloading kiwisolver (1.4MiB)
+Downloading pillow (6.8MiB)
+Downloading notebook (5.3MiB)
+Downloading mlflow-skinny (3.1MiB)
+Downloading pandas (11.8MiB)
+Downloading widgetsnbextension (2.1MiB)
+Downloading mlflow (10.1MiB)
+Downloading scs (41.2MiB)
+Downloading pyarrow (45.4MiB)
+Downloading pymongo (1.0MiB)
+Downloading cvxpy (4.2MiB)
+Downloading lightgbm (3.3MiB)
+Downloading cryptography (4.3MiB)
+Downloading fonttools (5.2MiB)
+Downloading scikit-learn (8.7MiB)
+Downloading clarabel (1.1MiB)
+Downloading databricks-sdk (1.1MiB)
+Downloading sparsediffpy (11.6MiB)
+Downloading qdldl (1.4MiB)
+Downloading matplotlib (9.4MiB)
+Downloading jupyterlab (16.4MiB)
+      Built gym==0.26.2
+error: Failed to build `pyqlib @ file:///workspace/scratch/008a76ec4981/benchmark-sources/qlib`
+  cause: The build backend returned an error
+  cause: Call to `setuptools.build_meta.build_wheel` failed (exit status: 1)
+
+         [stdout]
+         running bdist_wheel
+         running build
+         running build_py
+         creating build/lib.linux-x86_64-cpython-312/qlib
+         copying qlib/_version.py -> build/lib.linux-x86_64-cpython-312/qlib
+         copying qlib/constant.py -> build/lib.linux-x86_64-cpython-312/qlib
+         copying qlib/config.py -> build/lib.linux-x86_64-cpython-312/qlib
+         copying qlib/log.py -> build/lib.linux-x86_64-cpython-312/qlib
+         copying qlib/__init__.py -> build/lib.linux-x86_64-cpython-312/qlib
+         copying qlib/typehint.py -> build/lib.linux-x86_64-cpython-312/qlib
+         running egg_info
+         writing pyqlib.egg-info/PKG-INFO
+         writing dependency_links to pyqlib.egg-info/dependency_links.txt
+         writing entry points to pyqlib.egg-info/entry_points.txt
+         writing requirements to pyqlib.egg-info/requires.txt
+         writing top-level names to pyqlib.egg-info/top_level.txt
+         reading manifest template 'MANIFEST.in'
+         writing manifest file 'pyqlib.egg-info/SOURCES.txt'
+         creating build/lib.linux-x86_64-cpython-312/qlib/backtest
+         copying qlib/backtest/__init__.py -> build/lib.linux-x86_64-cpython-312/qlib/backtest
+         copying qlib/backtest/account.py -> build/lib.linux-x86_64-cpython-312/qlib/backtest
+         copying qlib/backtest/backtest.py -> build/lib.linux-x86_64-cpython-312/qlib/backtest
+         copying qlib/backtest/decision.py -> build/lib.linux-x86_64-cpython-312/qlib/backtest
+         copying qlib/backtest/exchange.py -> build/lib.linux-x86_64-cpython-312/qlib/backtest
+         copying qlib/backtest/executor.py -> build/lib.linux-x86_64-cpython-312/qlib/backtest
+         copying qlib/backtest/high_performance_ds.py -> build/lib.linux-x86_64-cpython-312/qlib/backtest
+         copying qlib/backtest/position.py -> build/lib.linux-x86_64-cpython-312/qlib/backtest
+         copying qlib/backtest/profit_attribution.py -> build/lib.linux-x86_64-cpython-312/qlib/backtest
+         copying qlib/backtest/report.py -> build/lib.linux-x86_64-cpython-312/qlib/backtest
+         copying qlib/backtest/signal.py -> build/lib.linux-x86_64-cpython-312/qlib/backtest
+         copying qlib/backtest/utils.py -> build/lib.linux-x86_64-cpython-312/qlib/backtest
+         creating build/lib.linux-x86_64-cpython-312/qlib/cli
+         copying qlib/cli/__init__.py -> build/lib.linux-x86_64-cpython-312/qlib/cli
+         copying qlib/cli/data.py -> build/lib.linux-x86_64-cpython-312/qlib/cli
+         copying qlib/cli/run.py -> build/lib.linux-x86_64-cpython-312/qlib/cli
+         creating build/lib.linux-x86_64-cpython-312/qlib/contrib
+         copying qlib/contrib/__init__.py -> build/lib.linux-x86_64-cpython-312/qlib/contrib
+         copying qlib/contrib/evaluate.py -> build/lib.linux-x86_64-cpython-312/qlib/contrib
+         copying qlib/contrib/evaluate_portfolio.py -> build/lib.linux-x86_64-cpython-312/qlib/contrib
+         copying qlib/contrib/torch.py -> build/lib.linux-x86_64-cpython-312/qlib/contrib
+         creating build/lib.linux-x86_64-cpython-312/qlib/contrib/data
+         copying qlib/contrib/data/__init__.py -> build/lib.linux-x86_64-cpython-312/qlib/contrib/data
+         copying qlib/contrib/data/data.py -> build/lib.linux-x86_64-cpython-312/qlib/contrib/data
+         copying qlib/contrib/data/dataset.py -> build/lib.linux-x86_64-cpython-312/qlib/contrib/data
+         copying qlib/contrib/data/handler.py -> build/lib.linux-x86_64-cpython-312/qlib/contrib/data
+         copying qlib/contrib/data/highfreq_handler.py -> build/lib.linux-x86_64-cpython-312/qlib/contrib/data
+         copying qlib/contrib/data/highfreq_processor.py -> build/lib.linux-x86_64-cpython-312/qlib/contrib/data
+         copying qlib/contrib/data/highfreq_provider.py -> build/lib.linux-x86_64-cpython-312/qlib/contrib/data
+         copying qlib/contrib/data/loader.py -> build/lib.linux-x86_64-cpython-312/qlib/contrib/data
+         copying qlib/contrib/data/processor.py -> build/lib.linux-x86_64-cpython-312/qlib/contrib/data
+         creating build/lib.linux-x86_64-cpython-312/qlib/contrib/data/utils
+         copying qlib/contrib/data/utils/__init__.py -> build/lib.linux-x86_64-cpython-312/qlib/contrib/data/utils
+         copying qlib/contrib/data/utils/sepdf.py -> build/lib.linux-x86_64-cpython-312/qlib/contrib/data/utils
+         creating build/lib.linux-x86_64-cpython-312/qlib/contrib/eva
+         copying qlib/contrib/eva/__init__.py -> build/lib.linux-x86_64-cpython-312/qlib/contrib/eva
+         copying qlib/contrib/eva/alpha.py -> build/lib.linux-x86_64-cpython-312/qlib/contrib/eva
+         creating build/lib.linux-x86_64-cpython-312/qlib/contrib/meta
+         copying qlib/contrib/meta/__init__.py -> build/lib.linux-x86_64-cpython-312/qlib/contrib/meta
+         creating build/lib.linux-x86_64-cpython-312/qlib/contrib/meta/data_selection
+         copying qlib/contrib/meta/data_selection/__init__.py -> build/lib.linux-x86_64-cpython-312/qlib/contrib/meta/data_selection
+         copying qlib/contrib/meta/data_selection/dataset.py -> build/lib.linux-x86_64-cpython-312/qlib/contrib/meta/data_selection
+         copying qlib/contrib/meta/data_selection/model.py -> build/lib.linux-x86_64-cpython-312/qlib/contrib/meta/data_selection
+         copying qlib/contrib/meta/data_selection/net.py -> build/lib.linux-x86_64-cpython-312/qlib/contrib/meta/data_selection
+         copying qlib/contrib/meta/data_selection/utils.py -> build/lib.linux-x86_64-cpython-312/qlib/contrib/meta/data_selection
+         creating build/lib.linux-x86_64-cpython-312/qlib/contrib/model
+         copying qlib/contrib/model/__init__.py -> build/lib.linux-x86_64-cpython-312/qlib/contrib/model
+         copying qlib/contrib/model/catboost_model.py -> build/lib.linux-x86_64-cpython-312/qlib/contrib/model
+         copying qlib/contrib/model/double_ensemble.py -> build/lib.linux-x86_64-cpython-312/qlib/contrib/model
+         copying qlib/contrib/model/gbdt.py -> build/lib.linux-x86_64-cpython-312/qlib/contrib/model
+         copying qlib/contrib/model/highfreq_gdbt_model.py -> build/lib.linux-x86_64-cpython-312/qlib/contrib/model
+         copying qlib/contrib/model/linear.py -> build/lib.linux-x86_64-cpython-312/qlib/contrib/model
+         copying qlib/contrib/model/pytorch_adarnn.py -> build/lib.linux-x86_64-cpython-312/qlib/contrib/model
+         copying qlib/contrib/model/pytorch_add.py -> build/lib.linux-x86_64-cpython-312/qlib/contrib/model
+         copying qlib/contrib/model/pytorch_alstm.py -> build/lib.linux-x86_64-cpython-312/qlib/contrib/model
+         copying qlib/contrib/model/pytorch_alstm_ts.py -> build/lib.linux-x86_64-cpython-312/qlib/contrib/model
+         copying qlib/contrib/model/pytorch_gats.py -> build/lib.linux-x86_64-cpython-312/qlib/contrib/model
+         copying qlib/contrib/model/pytorch_gats_ts.py -> build/lib.linux-x86_64-cpython-312/qlib/contrib/model
+         copying qlib/contrib/model/pytorch_general_nn.py -> build/lib.linux-x86_64-cpython-312/qlib/contrib/model
+         copying qlib/contrib/model/pytorch_gru.py -> build/lib.linux-x86_64-cpython-312/qlib/contrib/model
+         copying qlib/contrib/model/pytorch_gru_ts.py -> build/lib.linux-x86_64-cpython-312/qlib/contrib/model
+         copying qlib/contrib/model/pytorch_hist.py -> build/lib.linux-x86_64-cpython-312/qlib/contrib/model
+         copying qlib/contrib/model/pytorch_igmtf.py -> build/lib.linux-x86_64-cpython-312/qlib/contrib/model
+         copying qlib/contrib/model/pytorch_krnn.py -> build/lib.linux-x86_64-cpython-312/qlib/contrib/model
+         copying qlib/contrib/model/pytorch_localformer.py -> build/lib.linux-x86_64-cpython-312/qlib/contrib/model
+         copying qlib/contrib/model/pytorch_localformer_ts.py -> build/lib.linux-x86_64-cpython-312/qlib/contrib/model
+         copying qlib/contrib/model/pytorch_lstm.py -> build/lib.linux-x86_64-cpython-312/qlib/contrib/model
+         copying qlib/contrib/model/pytorch_lstm_ts.py -> build/lib.linux-x86_64-cpython-312/qlib/contrib/model
+         copying qlib/contrib/model/pytorch_nn.py -> build/lib.linux-x86_64-cpython-312/qlib/contrib/model
+         copying qlib/contrib/model/pytorch_sandwich.py -> build/lib.linux-x86_64-cpython-312/qlib/contrib/model
+         copying qlib/contrib/model/pytorch_sfm.py -> build/lib.linux-x86_64-cpython-312/qlib/contrib/model
+         copying qlib/contrib/model/pytorch_tabnet.py -> build/lib.linux-x86_64-cpython-312/qlib/contrib/model
+         copying qlib/contrib/model/pytorch_tcn.py -> build/lib.linux-x86_64-cpython-312/qlib/contrib/model
+         copying qlib/contrib/model/pytorch_tcn_ts.py -> build/lib.linux-x86_64-cpython-312/qlib/contrib/model
+         copying qlib/contrib/model/pytorch_tcts.py -> build/lib.linux-x86_64-cpython-312/qlib/contrib/model
+         copying qlib/contrib/model/pytorch_tra.py -> build/lib.linux-x86_64-cpython-312/qlib/contrib/model
+         copying qlib/contrib/model/pytorch_transformer.py -> build/lib.linux-x86_64-cpython-312/qlib/contrib/model
+         copying qlib/contrib/model/pytorch_transformer_ts.py -> build/lib.linux-x86_64-cpython-312/qlib/contrib/model
+         copying qlib/contrib/model/pytorch_utils.py -> build/lib.linux-x86_64-cpython-312/qlib/contrib/model
+         copying qlib/contrib/model/tcn.py -> build/lib.linux-x86_64-cpython-312/qlib/contrib/model
+         copying qlib/contrib/model/xgboost.py -> build/lib.linux-x86_64-cpython-312/qlib/contrib/model
+         creating build/lib.linux-x86_64-cpython-312/qlib/contrib/online
+         copying qlib/contrib/online/__init__.py -> build/lib.linux-x86_64-cpython-312/qlib/contrib/online
+         copying qlib/contrib/online/manager.py -> build/lib.linux-x86_64-cpython-312/qlib/contrib/online
+         copying qlib/contrib/online/online_model.py -> build/lib.linux-x86_64-cpython-312/qlib/contrib/online
+         copying qlib/contrib/online/operator.py -> build/lib.linux-x86_64-cpython-312/qlib/contrib/online
+         copying qlib/contrib/online/user.py -> build/lib.linux-x86_64-cpython-312/qlib/contrib/online
+         copying qlib/contrib/online/utils.py -> build/lib.linux-x86_64-cpython-312/qlib/contrib/online
+         creating build/lib.linux-x86_64-cpython-312/qlib/contrib/ops
+         copying qlib/contrib/ops/__init__.py -> build/lib.linux-x86_64-cpython-312/qlib/contrib/ops
+         copying qlib/contrib/ops/high_freq.py -> build/lib.linux-x86_64-cpython-312/qlib/contrib/ops
+         creating build/lib.linux-x86_64-cpython-312/qlib/contrib/report
+         copying qlib/contrib/report/__init__.py -> build/lib.linux-x86_64-cpython-312/qlib/contrib/report
+         copying qlib/contrib/report/graph.py -> build/lib.linux-x86_64-cpython-312/qlib/contrib/report
+         copying qlib/contrib/report/utils.py -> build/lib.linux-x86_64-cpython-312/qlib/contrib/report
+         creating build/lib.linux-x86_64-cpython-312/qlib/contrib/report/analysis_model
+         copying qlib/contrib/report/analysis_model/__init__.py -> build/lib.linux-x86_64-cpython-312/qlib/contrib/report/analysis_model
+         copying qlib/contrib/report/analysis_model/analysis_model_performance.py -> build/lib.linux-x86_64-cpython-312/qlib/contrib/report/analysis_model
+         creating build/lib.linux-x86_64-cpython-312/qlib/contrib/report/analysis_position
+         copying qlib/contrib/report/analysis_position/__init__.py -> build/lib.linux-x86_64-cpython-312/qlib/contrib/report/analysis_position
+         copying qlib/contrib/report/analysis_position/cumulative_return.py -> build/lib.linux-x86_64-cpython-312/qlib/contrib/report/analysis_position
+         copying qlib/contrib/report/analysis_position/parse_position.py -> build/lib.linux-x86_64-cpython-312/qlib/contrib/report/analysis_position
+         copying qlib/contrib/report/analysis_position/rank_label.py -> build/lib.linux-x86_64-cpython-312/qlib/contrib/report/analysis_position
+         copying qlib/contrib/report/analysis_position/report.py -> build/lib.linux-x86_64-cpython-312/qlib/contrib/report/analysis_position
+         copying qlib/contrib/report/analysis_position/risk_analysis.py -> build/lib.linux-x86_64-cpython-312/qlib/contrib/report/analysis_position
+         copying qlib/contrib/report/analysis_position/score_ic.py -> build/lib.linux-x86_64-cpython-312/qlib/contrib/report/analysis_position
+         creating build/lib.linux-x86_64-cpython-312/qlib/contrib/report/data
+         copying qlib/contrib/report/data/__init__.py -> build/lib.linux-x86_64-cpython-312/qlib/contrib/report/data
+         copying qlib/contrib/report/data/ana.py -> build/lib.linux-x86_64-cpython-312/qlib/contrib/report/data
+         copying qlib/contrib/report/data/base.py -> build/lib.linux-x86_64-cpython-312/qlib/contrib/report/data
+         creating build/lib.linux-x86_64-cpython-312/qlib/contrib/rolling
+         copying qlib/contrib/rolling/__init__.py -> build/lib.linux-x86_64-cpython-312/qlib/contrib/rolling
+         copying qlib/contrib/rolling/__main__.py -> build/lib.linux-x86_64-cpython-312/qlib/contrib/rolling
+         copying qlib/contrib/rolling/base.py -> build/lib.linux-x86_64-cpython-312/qlib/contrib/rolling
+         copying qlib/contrib/rolling/ddgda.py -> build/lib.linux-x86_64-cpython-312/qlib/contrib/rolling
+         creating build/lib.linux-x86_64-cpython-312/qlib/contrib/strategy
+         copying qlib/contrib/strategy/__init__.py -> build/lib.linux-x86_64-cpython-312/qlib/contrib/strategy
+         copying qlib/contrib/strategy/cost_control.py -> build/lib.linux-x86_64-cpython-312/qlib/contrib/strategy
+         copying qlib/contrib/strategy/order_generator.py -> build/lib.linux-x86_64-cpython-312/qlib/contrib/strategy
+         copying qlib/contrib/strategy/rule_strategy.py -> build/lib.linux-x86_64-cpython-312/qlib/contrib/strategy
+         copying qlib/contrib/strategy/signal_strategy.py -> build/lib.linux-x86_64-cpython-312/qlib/contrib/strategy
+         creating build/lib.linux-x86_64-cpython-312/qlib/contrib/strategy/optimizer
+         copying qlib/contrib/strategy/optimizer/__init__.py -> build/lib.linux-x86_64-cpython-312/qlib/contrib/strategy/optimizer
+         copying qlib/contrib/strategy/optimizer/base.py -> build/lib.linux-x86_64-cpython-312/qlib/contrib/strategy/optimizer
+         copying qlib/contrib/strategy/optimizer/enhanced_indexing.py -> build/lib.linux-x86_64-cpython-312/qlib/contrib/strategy/optimizer
+         copying qlib/contrib/strategy/optimizer/optimizer.py -> build/lib.linux-x86_64-cpython-312/qlib/contrib/strategy/optimizer
+         creating build/lib.linux-x86_64-cpython-312/qlib/contrib/tuner
+         copying qlib/contrib/tuner/__init__.py -> build/lib.linux-x86_64-cpython-312/qlib/contrib/tuner
+         copying qlib/contrib/tuner/config.py -> build/lib.linux-x86_64-cpython-312/qlib/contrib/tuner
+         copying qlib/contrib/tuner/launcher.py -> build/lib.linux-x86_64-cpython-312/qlib/contrib/tuner
+         copying qlib/contrib/tuner/pipeline.py -> build/lib.linux-x86_64-cpython-312/qlib/contrib/tuner
+         copying qlib/contrib/tuner/space.py -> build/lib.linux-x86_64-cpython-312/qlib/contrib/tuner
+         copying qlib/contrib/tuner/tuner.py -> build/lib.linux-x86_64-cpython-312/qlib/contrib/tuner
+         creating build/lib.linux-x86_64-cpython-312/qlib/contrib/workflow
+         copying qlib/contrib/workflow/__init__.py -> build/lib.linux-x86_64-cpython-312/qlib/contrib/workflow
+         copying qlib/contrib/workflow/record_temp.py -> build/lib.linux-x86_64-cpython-312/qlib/contrib/workflow
+         creating build/lib.linux-x86_64-cpython-312/qlib/data
+         copying qlib/data/__init__.py -> build/lib.linux-x86_64-cpython-312/qlib/data
+         copying qlib/data/base.py -> build/lib.linux-x86_64-cpython-312/qlib/data
+         copying qlib/data/cache.py -> build/lib.linux-x86_64-cpython-312/qlib/data
+         copying qlib/data/client.py -> build/lib.linux-x86_64-cpython-312/qlib/data
+         copying qlib/data/data.py -> build/lib.linux-x86_64-cpython-312/qlib/data
+         copying qlib/data/expression_parser.py -> build/lib.linux-x86_64-cpython-312/qlib/data
+         copying qlib/data/filter.py -> build/lib.linux-x86_64-cpython-312/qlib/data
+         copying qlib/data/inst_processor.py -> build/lib.linux-x86_64-cpython-312/qlib/data
+         copying qlib/data/ops.py -> build/lib.linux-x86_64-cpython-312/qlib/data
+         copying qlib/data/pit.py -> build/lib.linux-x86_64-cpython-312/qlib/data
+         creating build/lib.linux-x86_64-cpython-312/qlib/data/_libs
+         copying qlib/data/_libs/__init__.py -> build/lib.linux-x86_64-cpython-312/qlib/data/_libs
+         copying qlib/data/_libs/expanding.pyx -> build/lib.linux-x86_64-cpython-312/qlib/data/_libs
+         copying qlib/data/_libs/rolling.pyx -> build/lib.linux-x86_64-cpython-312/qlib/data/_libs
+         creating build/lib.linux-x86_64-cpython-312/qlib/data/dataset
+         copying qlib/data/dataset/__init__.py -> build/lib.linux-x86_64-cpython-312/qlib/data/dataset
+         copying qlib/data/dataset/handler.py -> build/lib.linux-x86_64-cpython-312/qlib/data/dataset
+         copying qlib/data/dataset/loader.py -> build/lib.linux-x86_64-cpython-312/qlib/data/dataset
+         copying qlib/data/dataset/processor.py -> build/lib.linux-x86_64-cpython-312/qlib/data/dataset
+         copying qlib/data/dataset/storage.py -> build/lib.linux-x86_64-cpython-312/qlib/data/dataset
+         copying qlib/data/dataset/utils.py -> build/lib.linux-x86_64-cpython-312/qlib/data/dataset
+         copying qlib/data/dataset/weight.py -> build/lib.linux-x86_64-cpython-312/qlib/data/dataset
+         creating build/lib.linux-x86_64-cpython-312/qlib/data/storage
+         copying qlib/data/storage/__init__.py -> build/lib.linux-x86_64-cpython-312/qlib/data/storage
+         copying qlib/data/storage/file_storage.py -> build/lib.linux-x86_64-cpython-312/qlib/data/storage
+         copying qlib/data/storage/storage.py -> build/lib.linux-x86_64-cpython-312/qlib/data/storage
+         creating build/lib.linux-x86_64-cpython-312/qlib/model
+         copying qlib/model/__init__.py -> build/lib.linux-x86_64-cpython-312/qlib/model
+         copying qlib/model/base.py -> build/lib.linux-x86_64-cpython-312/qlib/model
+         copying qlib/model/trainer.py -> build/lib.linux-x86_64-cpython-312/qlib/model
+         copying qlib/model/utils.py -> build/lib.linux-x86_64-cpython-312/qlib/model
+         creating build/lib.linux-x86_64-cpython-312/qlib/model/ens
+         copying qlib/model/ens/__init__.py -> build/lib.linux-x86_64-cpython-312/qlib/model/ens
+         copying qlib/model/ens/ensemble.py -> build/lib.linux-x86_64-cpython-312/qlib/model/ens
+         copying qlib/model/ens/group.py -> build/lib.linux-x86_64-cpython-312/qlib/model/ens
+         creating build/lib.linux-x86_64-cpython-312/qlib/model/interpret
+         copying qlib/model/interpret/__init__.py -> build/lib.linux-x86_64-cpython-312/qlib/model/interpret
+         copying qlib/model/interpret/base.py -> build/lib.linux-x86_64-cpython-312/qlib/model/interpret
+         creating build/lib.linux-x86_64-cpython-312/qlib/model/meta
+         copying qlib/model/meta/__init__.py -> build/lib.linux-x86_64-cpython-312/qlib/model/meta
+         copying qlib/model/meta/dataset.py -> build/lib.linux-x86_64-cpython-312/qlib/model/meta
+         copying qlib/model/meta/model.py -> build/lib.linux-x86_64-cpython-312/qlib/model/meta
+         copying qlib/model/meta/task.py -> build/lib.linux-x86_64-cpython-312/qlib/model/meta
+         creating build/lib.linux-x86_64-cpython-312/qlib/model/riskmodel
+         copying qlib/model/riskmodel/__init__.py -> build/lib.linux-x86_64-cpython-312/qlib/model/riskmodel
+         copying qlib/model/riskmodel/base.py -> build/lib.linux-x86_64-cpython-312/qlib/model/riskmodel
+         copying qlib/model/riskmodel/poet.py -> build/lib.linux-x86_64-cpython-312/qlib/model/riskmodel
+         copying qlib/model/riskmodel/shrink.py -> build/lib.linux-x86_64-cpython-312/qlib/model/riskmodel
+         copying qlib/model/riskmodel/structured.py -> build/lib.linux-x86_64-cpython-312/qlib/model/riskmodel
+         creating build/lib.linux-x86_64-cpython-312/qlib/rl
+         copying qlib/rl/__init__.py -> build/lib.linux-x86_64-cpython-312/qlib/rl
+         copying qlib/rl/aux_info.py -> build/lib.linux-x86_64-cpython-312/qlib/rl
+         copying qlib/rl/interpreter.py -> build/lib.linux-x86_64-cpython-312/qlib/rl
+         copying qlib/rl/reward.py -> build/lib.linux-x86_64-cpython-312/qlib/rl
+         copying qlib/rl/seed.py -> build/lib.linux-x86_64-cpython-312/qlib/rl
+         copying qlib/rl/simulator.py -> build/lib.linux-x86_64-cpython-312/qlib/rl
+         creating build/lib.linux-x86_64-cpython-312/qlib/rl/contrib
+         copying qlib/rl/contrib/__init__.py -> build/lib.linux-x86_64-cpython-312/qlib/rl/contrib
+         copying qlib/rl/contrib/backtest.py -> build/lib.linux-x86_64-cpython-312/qlib/rl/contrib
+         copying qlib/rl/contrib/naive_config_parser.py -> build/lib.linux-x86_64-cpython-312/qlib/rl/contrib
+         copying qlib/rl/contrib/train_onpolicy.py -> build/lib.linux-x86_64-cpython-312/qlib/rl/contrib
+         copying qlib/rl/contrib/utils.py -> build/lib.linux-x86_64-cpython-312/qlib/rl/contrib
+         creating build/lib.linux-x86_64-cpython-312/qlib/rl/data
+         copying qlib/rl/data/__init__.py -> build/lib.linux-x86_64-cpython-312/qlib/rl/data
+         copying qlib/rl/data/base.py -> build/lib.linux-x86_64-cpython-312/qlib/rl/data
+         copying qlib/rl/data/integration.py -> build/lib.linux-x86_64-cpython-312/qlib/rl/data
+         copying qlib/rl/data/native.py -> build/lib.linux-x86_64-cpython-312/qlib/rl/data
+         copying qlib/rl/data/pickle_styled.py -> build/lib.linux-x86_64-cpython-312/qlib/rl/data
+         creating build/lib.linux-x86_64-cpython-312/qlib/rl/order_execution
+         copying qlib/rl/order_execution/__init__.py -> build/lib.linux-x86_64-cpython-312/qlib/rl/order_execution
+         copying qlib/rl/order_execution/interpreter.py -> build/lib.linux-x86_64-cpython-312/qlib/rl/order_execution
+         copying qlib/rl/order_execution/network.py -> build/lib.linux-x86_64-cpython-312/qlib/rl/order_execution
+         copying qlib/rl/order_execution/policy.py -> build/lib.linux-x86_64-cpython-312/qlib/rl/order_execution
+         copying qlib/rl/order_execution/reward.py -> build/lib.linux-x86_64-cpython-312/qlib/rl/order_execution
+         copying qlib/rl/order_execution/simulator_qlib.py -> build/lib.linux-x86_64-cpython-312/qlib/rl/order_execution
+         copying qlib/rl/order_execution/simulator_simple.py -> build/lib.linux-x86_64-cpython-312/qlib/rl/order_execution
+         copying qlib/rl/order_execution/state.py -> build/lib.linux-x86_64-cpython-312/qlib/rl/order_execution
+         copying qlib/rl/order_execution/strategy.py -> build/lib.linux-x86_64-cpython-312/qlib/rl/order_execution
+         copying qlib/rl/order_execution/utils.py -> build/lib.linux-x86_64-cpython-312/qlib/rl/order_execution
+         creating build/lib.linux-x86_64-cpython-312/qlib/rl/strategy
+         copying qlib/rl/strategy/__init__.py -> build/lib.linux-x86_64-cpython-312/qlib/rl/strategy
+         copying qlib/rl/strategy/single_order.py -> build/lib.linux-x86_64-cpython-312/qlib/rl/strategy
+         creating build/lib.linux-x86_64-cpython-312/qlib/rl/trainer
+         copying qlib/rl/trainer/__init__.py -> build/lib.linux-x86_64-cpython-312/qlib/rl/trainer
+         copying qlib/rl/trainer/api.py -> build/lib.linux-x86_64-cpython-312/qlib/rl/trainer
+         copying qlib/rl/trainer/callbacks.py -> build/lib.linux-x86_64-cpython-312/qlib/rl/trainer
+         copying qlib/rl/trainer/trainer.py -> build/lib.linux-x86_64-cpython-312/qlib/rl/trainer
+         copying qlib/rl/trainer/vessel.py -> build/lib.linux-x86_64-cpython-312/qlib/rl/trainer
+         creating build/lib.linux-x86_64-cpython-312/qlib/rl/utils
+         copying qlib/rl/utils/__init__.py -> build/lib.linux-x86_64-cpython-312/qlib/rl/utils
+         copying qlib/rl/utils/data_queue.py -> build/lib.linux-x86_64-cpython-312/qlib/rl/utils
+         copying qlib/rl/utils/env_wrapper.py -> build/lib.linux-x86_64-cpython-312/qlib/rl/utils
+         copying qlib/rl/utils/finite_env.py -> build/lib.linux-x86_64-cpython-312/qlib/rl/utils
+         copying qlib/rl/utils/log.py -> build/lib.linux-x86_64-cpython-312/qlib/rl/utils
+         creating build/lib.linux-x86_64-cpython-312/qlib/strategy
+         copying qlib/strategy/__init__.py -> build/lib.linux-x86_64-cpython-312/qlib/strategy
+         copying qlib/strategy/base.py -> build/lib.linux-x86_64-cpython-312/qlib/strategy
+         creating build/lib.linux-x86_64-cpython-312/qlib/tests
+         copying qlib/tests/__init__.py -> build/lib.linux-x86_64-cpython-312/qlib/tests
+         copying qlib/tests/config.py -> build/lib.linux-x86_64-cpython-312/qlib/tests
+         copying qlib/tests/data.py -> build/lib.linux-x86_64-cpython-312/qlib/tests
+         copying qlib/tests/test_config_validation.py -> build/lib.linux-x86_64-cpython-312/qlib/tests
+         creating build/lib.linux-x86_64-cpython-312/qlib/utils
+         copying qlib/utils/__init__.py -> build/lib.linux-x86_64-cpython-312/qlib/utils
+         copying qlib/utils/data.py -> build/lib.linux-x86_64-cpython-312/qlib/utils
+         copying qlib/utils/exceptions.py -> build/lib.linux-x86_64-cpython-312/qlib/utils
+         copying qlib/utils/file.py -> build/lib.linux-x86_64-cpython-312/qlib/utils
+         copying qlib/utils/index_data.py -> build/lib.linux-x86_64-cpython-312/qlib/utils
+         copying qlib/utils/mod.py -> build/lib.linux-x86_64-cpython-312/qlib/utils
+         copying qlib/utils/objm.py -> build/lib.linux-x86_64-cpython-312/qlib/utils
+         copying qlib/utils/paral.py -> build/lib.linux-x86_64-cpython-312/qlib/utils
+         copying qlib/utils/pickle_utils.py -> build/lib.linux-x86_64-cpython-312/qlib/utils
+         copying qlib/utils/resam.py -> build/lib.linux-x86_64-cpython-312/qlib/utils
+         copying qlib/utils/serial.py -> build/lib.linux-x86_64-cpython-312/qlib/utils
+         copying qlib/utils/time.py -> build/lib.linux-x86_64-cpython-312/qlib/utils
+         creating build/lib.linux-x86_64-cpython-312/qlib/workflow
+         copying qlib/workflow/__init__.py -> build/lib.linux-x86_64-cpython-312/qlib/workflow
+         copying qlib/workflow/exp.py -> build/lib.linux-x86_64-cpython-312/qlib/workflow
+         copying qlib/workflow/expm.py -> build/lib.linux-x86_64-cpython-312/qlib/workflow
+         copying qlib/workflow/record_temp.py -> build/lib.linux-x86_64-cpython-312/qlib/workflow
+         copying qlib/workflow/recorder.py -> build/lib.linux-x86_64-cpython-312/qlib/workflow
+         copying qlib/workflow/utils.py -> build/lib.linux-x86_64-cpython-312/qlib/workflow
+         creating build/lib.linux-x86_64-cpython-312/qlib/workflow/online
+         copying qlib/workflow/online/__init__.py -> build/lib.linux-x86_64-cpython-312/qlib/workflow/online
+         copying qlib/workflow/online/manager.py -> build/lib.linux-x86_64-cpython-312/qlib/workflow/online
+         copying qlib/workflow/online/strategy.py -> build/lib.linux-x86_64-cpython-312/qlib/workflow/online
+         copying qlib/workflow/online/update.py -> build/lib.linux-x86_64-cpython-312/qlib/workflow/online
+         copying qlib/workflow/online/utils.py -> build/lib.linux-x86_64-cpython-312/qlib/workflow/online
+         creating build/lib.linux-x86_64-cpython-312/qlib/workflow/task
+         copying qlib/workflow/task/__init__.py -> build/lib.linux-x86_64-cpython-312/qlib/workflow/task
+         copying qlib/workflow/task/collect.py -> build/lib.linux-x86_64-cpython-312/qlib/workflow/task
+         copying qlib/workflow/task/gen.py -> build/lib.linux-x86_64-cpython-312/qlib/workflow/task
+         copying qlib/workflow/task/manage.py -> build/lib.linux-x86_64-cpython-312/qlib/workflow/task
+         copying qlib/workflow/task/utils.py -> build/lib.linux-x86_64-cpython-312/qlib/workflow/task
+         running build_ext
+         Compiling qlib/data/_libs/rolling.pyx because it changed.
+         [1/1] Cythonizing qlib/data/_libs/rolling.pyx
+         building 'qlib.data._libs.rolling' extension
+         clang++ -pthread -fno-strict-overflow -Wsign-compare -Wunreachable-code -DNDEBUG -g -O3 -Wall -O3 -fstack-protector -fstack-clash-protection -U_FORTIFY_SOURCE -D_FORTIFY_SOURCE=2 -fno-omit-frame-pointer -mno-omit-leaf-frame-pointer -fPIC -fPIC -I/workspace/scratch/008a76ec4981/Backtest-Benchmark/.work/uv-cache/builds-v0/.tmp6wtBbP/lib/python3.12/site-packages/numpy/_core/include -I/workspace/scratch/008a76ec4981/Backtest-Benchmark/.work/uv-cache/builds-v0/.tmp6wtBbP/include -I/opt/codex/runtimes/codex-primary-runtime/dependencies/python/include/python3.12 -c qlib/data/_libs/rolling.cpp -o build/temp.linux-x86_64-cpython-312/qlib/data/_libs/rolling.o
+
+         [stderr]
+         /workspace/scratch/008a76ec4981/Backtest-Benchmark/.work/uv-cache/builds-v0/.tmp6wtBbP/lib/python3.12/site-packages/setuptools/config/_apply_pyprojecttoml.py:82: SetuptoolsDeprecationWarning: `project.license` as a TOML table is deprecated
+         !!
+
+                 ********************************************************************************
+                 Please use a simple string containing a SPDX expression for `project.license`. You can also use `project.license-files`. (Both options available on setuptools>=77.0.0).
+
+                 By 2027-Feb-18, you need to update your project and remove deprecated calls
+                 or your builds will no longer be supported.
+
+                 See https://packaging.python.org/en/latest/guides/writing-pyproject-toml/#license for details.
+                 ********************************************************************************
+
+         !!
+           corresp(dist, value, root_dir)
+         /workspace/scratch/008a76ec4981/Backtest-Benchmark/.work/uv-cache/builds-v0/.tmp6wtBbP/lib/python3.12/site-packages/setuptools/config/_apply_pyprojecttoml.py:55: SetuptoolsDeprecationWarning: 'tool.setuptools.license-files' is deprecated in favor of 'project.license-files' (available on setuptools>=77.0.0).
+         !!
+
+                 ********************************************************************************
+
+                 By 2027-Feb-18, you need to update your project and remove deprecated calls
+                 or your builds will no longer be supported.
+
+                 See https://packaging.python.org/en/latest/guides/writing-pyproject-toml/#license-files for details.
+                 ********************************************************************************
+
+         !!
+           _apply_tool_table(dist, config, filename)
+         /workspace/scratch/008a76ec4981/Backtest-Benchmark/.work/uv-cache/builds-v0/.tmp6wtBbP/lib/python3.12/site-packages/setuptools/config/_apply_pyprojecttoml.py:61: SetuptoolsDeprecationWarning: License classifiers are deprecated.
+         !!
+
+                 ********************************************************************************
+                 Please consider removing the following classifiers in favor of a SPDX license expression:
+
+                 License :: OSI Approved :: MIT License
+
+                 See https://packaging.python.org/en/latest/guides/writing-pyproject-toml/#license for details.
+                 ********************************************************************************
+
+         !!
+           dist._finalize_license_expression()
+         /workspace/scratch/008a76ec4981/Backtest-Benchmark/.work/uv-cache/builds-v0/.tmp6wtBbP/lib/python3.12/site-packages/setuptools/dist.py:765: SetuptoolsDeprecationWarning: License classifiers are deprecated.
+         !!
+
+                 ********************************************************************************
+                 Please consider removing the following classifiers in favor of a SPDX license expression:
+
+                 License :: OSI Approved :: MIT License
+
+                 See https://packaging.python.org/en/latest/guides/writing-pyproject-toml/#license for details.
+                 ********************************************************************************
+
+         !!
+           self._finalize_license_expression()
+         warning: no files found matching 'qlib/*/*/*/*/*'
+         /workspace/scratch/008a76ec4981/Backtest-Benchmark/.work/uv-cache/builds-v0/.tmp6wtBbP/lib/python3.12/site-packages/setuptools/command/build_py.py:215: _Warning: Package 'qlib.backtest' is absent from the `packages` configuration.
+         !!
+
+                 ********************************************************************************
+                 ############################
+                 # Package would be ignored #
+                 ############################
+                 Python recognizes 'qlib.backtest' as an importable package[^1],
+                 but it is absent from setuptools' `packages` configuration.
+
+                 This leads to an ambiguous overall configuration. If you want to distribute this
+                 package, please make sure that 'qlib.backtest' is explicitly added
+                 to the `packages` configuration field.
+
+                 Alternatively, you can also rely on setuptools' discovery methods
+                 (for example by using `find_namespace_packages(...)`/`find_namespace:`
+                 instead of `find_packages(...)`/`find:`).
+
+                 You can read more about "package discovery" on setuptools documentation page:
+
+                 - https://setuptools.pypa.io/en/latest/userguide/package_discovery.html
+
+                 If you don't want 'qlib.backtest' to be distributed and are
+                 already explicitly excluding 'qlib.backtest' via
+                 `find_namespace_packages(...)/find_namespace` or `find_packages(...)/find`,
+                 you can try to use `exclude_package_data`, or `include-package-data=False` in
+                 combination with a more fine grained `package-data` configuration.
+
+                 You can read more about "package data files" on setuptools documentation page:
+
+                 - https://setuptools.pypa.io/en/latest/userguide/datafiles.html
+
+
+                 [^1]: For Python, any directory (with suitable naming) can be imported,
+                       even if it does not contain any `.py` files.
+                       On the other hand, currently there is no concept of package data
+                       directory, all directories are treated like packages.
+                 ********************************************************************************
+
+         !!
+           check.warn(importable)
+         /workspace/scratch/008a76ec4981/Backtest-Benchmark/.work/uv-cache/builds-v0/.tmp6wtBbP/lib/python3.12/site-packages/setuptools/command/build_py.py:215: _Warning: Package 'qlib.cli' is absent from the `packages` configuration.
+         !!
+
+                 ********************************************************************************
+                 ############################
+                 # Package would be ignored #
+                 ############################
+                 Python recognizes 'qlib.cli' as an importable package[^1],
+                 but it is absent from setuptools' `packages` configuration.
+
+                 This leads to an ambiguous overall configuration. If you want to distribute this
+                 package, please make sure that 'qlib.cli' is explicitly added
+                 to the `packages` configuration field.
+
+                 Alternatively, you can also rely on setuptools' discovery methods
+                 (for example by using `find_namespace_packages(...)`/`find_namespace:`
+                 instead of `find_packages(...)`/`find:`).
+
+                 You can read more about "package discovery" on setuptools documentation page:
+
+                 - https://setuptools.pypa.io/en/latest/userguide/package_discovery.html
+
+                 If you don't want 'qlib.cli' to be distributed and are
+                 already explicitly excluding 'qlib.cli' via
+                 `find_namespace_packages(...)/find_namespace` or `find_packages(...)/find`,
+                 you can try to use `exclude_package_data`, or `include-package-data=False` in
+                 combination with a more fine grained `package-data` configuration.
+
+                 You can read more about "package data files" on setuptools documentation page:
+
+                 - https://setuptools.pypa.io/en/latest/userguide/datafiles.html
+
+
+                 [^1]: For Python, any directory (with suitable naming) can be imported,
+                       even if it does not contain any `.py` files.
+                       On the other hand, currently there is no concept of package data
+                       directory, all directories are treated like packages.
+                 ********************************************************************************
+
+         !!
+           check.warn(importable)
+         /workspace/scratch/008a76ec4981/Backtest-Benchmark/.work/uv-cache/builds-v0/.tmp6wtBbP/lib/python3.12/site-packages/setuptools/command/build_py.py:215: _Warning: Package 'qlib.contrib' is absent from the `packages` configuration.
+         !!
+
+                 ********************************************************************************
+                 ############################
+                 # Package would be ignored #
+                 ############################
+                 Python recognizes 'qlib.contrib' as an importable package[^1],
+                 but it is absent from setuptools' `packages` configuration.
+
+                 This leads to an ambiguous overall configuration. If you want to distribute this
+                 package, please make sure that 'qlib.contrib' is explicitly added
+                 to the `packages` configuration field.
+
+                 Alternatively, you can also rely on setuptools' discovery methods
+                 (for example by using `find_namespace_packages(...)`/`find_namespace:`
+                 instead of `find_packages(...)`/`find:`).
+
+                 You can read more about "package discovery" on setuptools documentation page:
+
+                 - https://setuptools.pypa.io/en/latest/userguide/package_discovery.html
+
+                 If you don't want 'qlib.contrib' to be distributed and are
+                 already explicitly excluding 'qlib.contrib' via
+                 `find_namespace_packages(...)/find_namespace` or `find_packages(...)/find`,
+                 you can try to use `exclude_package_data`, or `include-package-data=False` in
+                 combination with a more fine grained `package-data` configuration.
+
+                 You can read more about "package data files" on setuptools documentation page:
+
+                 - https://setuptools.pypa.io/en/latest/userguide/datafiles.html
+
+
+                 [^1]: For Python, any directory (with suitable naming) can be imported,
+                       even if it does not contain any `.py` files.
+                       On the other hand, currently there is no concept of package data
+                       directory, all directories are treated like packages.
+                 ********************************************************************************
+
+         !!
+           check.warn(importable)
+         /workspace/scratch/008a76ec4981/Backtest-Benchmark/.work/uv-cache/builds-v0/.tmp6wtBbP/lib/python3.12/site-packages/setuptools/command/build_py.py:215: _Warning: Package 'qlib.contrib.data' is absent from the `packages` configuration.
+         !!
+
+                 ********************************************************************************
+                 ############################
+                 # Package would be ignored #
+                 ############################
+                 Python recognizes 'qlib.contrib.data' as an importable package[^1],
+                 but it is absent from setuptools' `packages` configuration.
+
+                 This leads to an ambiguous overall configuration. If you want to distribute this
+                 package, please make sure that 'qlib.contrib.data' is explicitly added
+                 to the `packages` configuration field.
+
+                 Alternatively, you can also rely on setuptools' discovery methods
+                 (for example by using `find_namespace_packages(...)`/`find_namespace:`
+                 instead of `find_packages(...)`/`find:`).
+
+                 You can read more about "package discovery" on setuptools documentation page:
+
+                 - https://setuptools.pypa.io/en/latest/userguide/package_discovery.html
+
+                 If you don't want 'qlib.contrib.data' to be distributed and are
+                 already explicitly excluding 'qlib.contrib.data' via
+                 `find_namespace_packages(...)/find_namespace` or `find_packages(...)/find`,
+                 you can try to use `exclude_package_data`, or `include-package-data=False` in
+                 combination with a more fine grained `package-data` configuration.
+
+                 You can read more about "package data files" on setuptools documentation page:
+
+                 - https://setuptools.pypa.io/en/latest/userguide/datafiles.html
+
+
+                 [^1]: For Python, any directory (with suitable naming) can be imported,
+                       even if it does not contain any `.py` files.
+                       On the other hand, currently there is no concept of package data
+                       directory, all directories are treated like packages.
+                 ********************************************************************************
+
+         !!
+           check.warn(importable)
+         /workspace/scratch/008a76ec4981/Backtest-Benchmark/.work/uv-cache/builds-v0/.tmp6wtBbP/lib/python3.12/site-packages/setuptools/command/build_py.py:215: _Warning: Package 'qlib.contrib.data.utils' is absent from the `packages` configuration.
+         !!
+
+                 ********************************************************************************
+                 ############################
+                 # Package would be ignored #
+                 ############################
+                 Python recognizes 'qlib.contrib.data.utils' as an importable package[^1],
+                 but it is absent from setuptools' `packages` configuration.
+
+                 This leads to an ambiguous overall configuration. If you want to distribute this
+                 package, please make sure that 'qlib.contrib.data.utils' is explicitly added
+                 to the `packages` configuration field.
+
+                 Alternatively, you can also rely on setuptools' discovery methods
+                 (for example by using `find_namespace_packages(...)`/`find_namespace:`
+                 instead of `find_packages(...)`/`find:`).
+
+                 You can read more about "package discovery" on setuptools documentation page:
+
+                 - https://setuptools.pypa.io/en/latest/userguide/package_discovery.html
+
+                 If you don't want 'qlib.contrib.data.utils' to be distributed and are
+                 already explicitly excluding 'qlib.contrib.data.utils' via
+                 `find_namespace_packages(...)/find_namespace` or `find_packages(...)/find`,
+                 you can try to use `exclude_package_data`, or `include-package-data=False` in
+                 combination with a more fine grained `package-data` configuration.
+
+                 You can read more about "package data files" on setuptools documentation page:
+
+                 - https://setuptools.pypa.io/en/latest/userguide/datafiles.html
+
+
+                 [^1]: For Python, any directory (with suitable naming) can be imported,
+                       even if it does not contain any `.py` files.
+                       On the other hand, currently there is no concept of package data
+                       directory, all directories are treated like packages.
+                 ********************************************************************************
+
+         !!
+           check.warn(importable)
+         /workspace/scratch/008a76ec4981/Backtest-Benchmark/.work/uv-cache/builds-v0/.tmp6wtBbP/lib/python3.12/site-packages/setuptools/command/build_py.py:215: _Warning: Package 'qlib.contrib.eva' is absent from the `packages` configuration.
+         !!
+
+                 ********************************************************************************
+                 ############################
+                 # Package would be ignored #
+                 ############################
+                 Python recognizes 'qlib.contrib.eva' as an importable package[^1],
+                 but it is absent from setuptools' `packages` configuration.
+
+                 This leads to an ambiguous overall configuration. If you want to distribute this
+                 package, please make sure that 'qlib.contrib.eva' is explicitly added
+                 to the `packages` configuration field.
+
+                 Alternatively, you can also rely on setuptools' discovery methods
+                 (for example by using `find_namespace_packages(...)`/`find_namespace:`
+                 instead of `find_packages(...)`/`find:`).
+
+                 You can read more about "package discovery" on setuptools documentation page:
+
+                 - https://setuptools.pypa.io/en/latest/userguide/package_discovery.html
+
+                 If you don't want 'qlib.contrib.eva' to be distributed and are
+                 already explicitly excluding 'qlib.contrib.eva' via
+                 `find_namespace_packages(...)/find_namespace` or `find_packages(...)/find`,
+                 you can try to use `exclude_package_data`, or `include-package-data=False` in
+                 combination with a more fine grained `package-data` configuration.
+
+                 You can read more about "package data files" on setuptools documentation page:
+
+                 - https://setuptools.pypa.io/en/latest/userguide/datafiles.html
+
+
+                 [^1]: For Python, any directory (with suitable naming) can be imported,
+                       even if it does not contain any `.py` files.
+                       On the other hand, currently there is no concept of package data
+                       directory, all directories are treated like packages.
+                 ********************************************************************************
+
+         !!
+           check.warn(importable)
+         /workspace/scratch/008a76ec4981/Backtest-Benchmark/.work/uv-cache/builds-v0/.tmp6wtBbP/lib/python3.12/site-packages/setuptools/command/build_py.py:215: _Warning: Package 'qlib.contrib.meta' is absent from the `packages` configuration.
+         !!
+
+                 ********************************************************************************
+                 ############################
+                 # Package would be ignored #
+                 ############################
+                 Python recognizes 'qlib.contrib.meta' as an importable package[^1],
+                 but it is absent from setuptools' `packages` configuration.
+
+                 This leads to an ambiguous overall configuration. If you want to distribute this
+                 package, please make sure that 'qlib.contrib.meta' is explicitly added
+                 to the `packages` configuration field.
+
+                 Alternatively, you can also rely on setuptools' discovery methods
+                 (for example by using `find_namespace_packages(...)`/`find_namespace:`
+                 instead of `find_packages(...)`/`find:`).
+
+                 You can read more about "package discovery" on setuptools documentation page:
+
+                 - https://setuptools.pypa.io/en/latest/userguide/package_discovery.html
+
+                 If you don't want 'qlib.contrib.meta' to be distributed and are
+                 already explicitly excluding 'qlib.contrib.meta' via
+                 `find_namespace_packages(...)/find_namespace` or `find_packages(...)/find`,
+                 you can try to use `exclude_package_data`, or `include-package-data=False` in
+                 combination with a more fine grained `package-data` configuration.
+
+                 You can read more about "package data files" on setuptools documentation page:
+
+                 - https://setuptools.pypa.io/en/latest/userguide/datafiles.html
+
+
+                 [^1]: For Python, any directory (with suitable naming) can be imported,
+                       even if it does not contain any `.py` files.
+                       On the other hand, currently there is no concept of package data
+                       directory, all directories are treated like packages.
+                 ********************************************************************************
+
+         !!
+           check.warn(importable)
+         /workspace/scratch/008a76ec4981/Backtest-Benchmark/.work/uv-cache/builds-v0/.tmp6wtBbP/lib/python3.12/site-packages/setuptools/command/build_py.py:215: _Warning: Package 'qlib.contrib.meta.data_selection' is absent from the `packages` configuration.
+         !!
+
+                 ********************************************************************************
+                 ############################
+                 # Package would be ignored #
+                 ############################
+                 Python recognizes 'qlib.contrib.meta.data_selection' as an importable package[^1],
+                 but it is absent from setuptools' `packages` configuration.
+
+                 This leads to an ambiguous overall configuration. If you want to distribute this
+                 package, please make sure that 'qlib.contrib.meta.data_selection' is explicitly added
+                 to the `packages` configuration field.
+
+                 Alternatively, you can also rely on setuptools' discovery methods
+                 (for example by using `find_namespace_packages(...)`/`find_namespace:`
+                 instead of `find_packages(...)`/`find:`).
+
+                 You can read more about "package discovery" on setuptools documentation page:
+
+                 - https://setuptools.pypa.io/en/latest/userguide/package_discovery.html
+
+                 If you don't want 'qlib.contrib.meta.data_selection' to be distributed and are
+                 already explicitly excluding 'qlib.contrib.meta.data_selection' via
+                 `find_namespace_packages(...)/find_namespace` or `find_packages(...)/find`,
+                 you can try to use `exclude_package_data`, or `include-package-data=False` in
+                 combination with a more fine grained `package-data` configuration.
+
+                 You can read more about "package data files" on setuptools documentation page:
+
+                 - https://setuptools.pypa.io/en/latest/userguide/datafiles.html
+
+
+                 [^1]: For Python, any directory (with suitable naming) can be imported,
+                       even if it does not contain any `.py` files.
+                       On the other hand, currently there is no concept of package data
+                       directory, all directories are treated like packages.
+                 ********************************************************************************
+
+         !!
+           check.warn(importable)
+         /workspace/scratch/008a76ec4981/Backtest-Benchmark/.work/uv-cache/builds-v0/.tmp6wtBbP/lib/python3.12/site-packages/setuptools/command/build_py.py:215: _Warning: Package 'qlib.contrib.model' is absent from the `packages` configuration.
+         !!
+
+                 ********************************************************************************
+                 ############################
+                 # Package would be ignored #
+                 ############################
+                 Python recognizes 'qlib.contrib.model' as an importable package[^1],
+                 but it is absent from setuptools' `packages` configuration.
+
+                 This leads to an ambiguous overall configuration. If you want to distribute this
+                 package, please make sure that 'qlib.contrib.model' is explicitly added
+                 to the `packages` configuration field.
+
+                 Alternatively, you can also rely on setuptools' discovery methods
+                 (for example by using `find_namespace_packages(...)`/`find_namespace:`
+                 instead of `find_packages(...)`/`find:`).
+
+                 You can read more about "package discovery" on setuptools documentation page:
+
+                 - https://setuptools.pypa.io/en/latest/userguide/package_discovery.html
+
+                 If you don't want 'qlib.contrib.model' to be distributed and are
+                 already explicitly excluding 'qlib.contrib.model' via
+                 `find_namespace_packages(...)/find_namespace` or `find_packages(...)/find`,
+                 you can try to use `exclude_package_data`, or `include-package-data=False` in
+                 combination with a more fine grained `package-data` configuration.
+
+                 You can read more about "package data files" on setuptools documentation page:
+
+                 - https://setuptools.pypa.io/en/latest/userguide/datafiles.html
+
+
+                 [^1]: For Python, any directory (with suitable naming) can be imported,
+                       even if it does not contain any `.py` files.
+                       On the other hand, currently there is no concept of package data
+                       directory, all directories are treated like packages.
+                 ********************************************************************************
+
+         !!
+           check.warn(importable)
+         /workspace/scratch/008a76ec4981/Backtest-Benchmark/.work/uv-cache/builds-v0/.tmp6wtBbP/lib/python3.12/site-packages/setuptools/command/build_py.py:215: _Warning: Package 'qlib.contrib.online' is absent from the `packages` configuration.
+         !!
+
+                 ********************************************************************************
+                 ############################
+                 # Package would be ignored #
+                 ############################
+                 Python recognizes 'qlib.contrib.online' as an importable package[^1],
+                 but it is absent from setuptools' `packages` configuration.
+
+                 This leads to an ambiguous overall configuration. If you want to distribute this
+                 package, please make sure that 'qlib.contrib.online' is explicitly added
+                 to the `packages` configuration field.
+
+                 Alternatively, you can also rely on setuptools' discovery methods
+                 (for example by using `find_namespace_packages(...)`/`find_namespace:`
+                 instead of `find_packages(...)`/`find:`).
+
+                 You can read more about "package discovery" on setuptools documentation page:
+
+                 - https://setuptools.pypa.io/en/latest/userguide/package_discovery.html
+
+                 If you don't want 'qlib.contrib.online' to be distributed and are
+                 already explicitly excluding 'qlib.contrib.online' via
+                 `find_namespace_packages(...)/find_namespace` or `find_packages(...)/find`,
+                 you can try to use `exclude_package_data`, or `include-package-data=False` in
+                 combination with a more fine grained `package-data` configuration.
+
+                 You can read more about "package data files" on setuptools documentation page:
+
+                 - https://setuptools.pypa.io/en/latest/userguide/datafiles.html
+
+
+                 [^1]: For Python, any directory (with suitable naming) can be imported,
+                       even if it does not contain any `.py` files.
+                       On the other hand, currently there is no concept of package data
+                       directory, all directories are treated like packages.
+                 ********************************************************************************
+
+         !!
+           check.warn(importable)
+         /workspace/scratch/008a76ec4981/Backtest-Benchmark/.work/uv-cache/builds-v0/.tmp6wtBbP/lib/python3.12/site-packages/setuptools/command/build_py.py:215: _Warning: Package 'qlib.contrib.ops' is absent from the `packages` configuration.
+         !!
+
+                 ********************************************************************************
+                 ############################
+                 # Package would be ignored #
+                 ############################
+                 Python recognizes 'qlib.contrib.ops' as an importable package[^1],
+                 but it is absent from setuptools' `packages` configuration.
+
+                 This leads to an ambiguous overall configuration. If you want to distribute this
+                 package, please make sure that 'qlib.contrib.ops' is explicitly added
+                 to the `packages` configuration field.
+
+                 Alternatively, you can also rely on setuptools' discovery methods
+                 (for example by using `find_namespace_packages(...)`/`find_namespace:`
+                 instead of `find_packages(...)`/`find:`).
+
+                 You can read more about "package discovery" on setuptools documentation page:
+
+                 - https://setuptools.pypa.io/en/latest/userguide/package_discovery.html
+
+                 If you don't want 'qlib.contrib.ops' to be distributed and are
+                 already explicitly excluding 'qlib.contrib.ops' via
+                 `find_namespace_packages(...)/find_namespace` or `find_packages(...)/find`,
+                 you can try to use `exclude_package_data`, or `include-package-data=False` in
+                 combination with a more fine grained `package-data` configuration.
+
+                 You can read more about "package data files" on setuptools documentation page:
+
+                 - https://setuptools.pypa.io/en/latest/userguide/datafiles.html
+
+
+                 [^1]: For Python, any directory (with suitable naming) can be imported,
+                       even if it does not contain any `.py` files.
+                       On the other hand, currently there is no concept of package data
+                       directory, all directories are treated like packages.
+                 ********************************************************************************
+
+         !!
+           check.warn(importable)
+         /workspace/scratch/008a76ec4981/Backtest-Benchmark/.work/uv-cache/builds-v0/.tmp6wtBbP/lib/python3.12/site-packages/setuptools/command/build_py.py:215: _Warning: Package 'qlib.contrib.report' is absent from the `packages` configuration.
+         !!
+
+                 ********************************************************************************
+                 ############################
+                 # Package would be ignored #
+                 ############################
+                 Python recognizes 'qlib.contrib.report' as an importable package[^1],
+                 but it is absent from setuptools' `packages` configuration.
+
+                 This leads to an ambiguous overall configuration. If you want to distribute this
+                 package, please make sure that 'qlib.contrib.report' is explicitly added
+                 to the `packages` configuration field.
+
+                 Alternatively, you can also rely on setuptools' discovery methods
+                 (for example by using `find_namespace_packages(...)`/`find_namespace:`
+                 instead of `find_packages(...)`/`find:`).
+
+                 You can read more about "package discovery" on setuptools documentation page:
+
+                 - https://setuptools.pypa.io/en/latest/userguide/package_discovery.html
+
+                 If you don't want 'qlib.contrib.report' to be distributed and are
+                 already explicitly excluding 'qlib.contrib.report' via
+                 `find_namespace_packages(...)/find_namespace` or `find_packages(...)/find`,
+                 you can try to use `exclude_package_data`, or `include-package-data=False` in
+                 combination with a more fine grained `package-data` configuration.
+
+                 You can read more about "package data files" on setuptools documentation page:
+
+                 - https://setuptools.pypa.io/en/latest/userguide/datafiles.html
+
+
+                 [^1]: For Python, any directory (with suitable naming) can be imported,
+                       even if it does not contain any `.py` files.
+                       On the other hand, currently there is no concept of package data
+                       directory, all directories are treated like packages.
+                 ********************************************************************************
+
+         !!
+           check.warn(importable)
+         /workspace/scratch/008a76ec4981/Backtest-Benchmark/.work/uv-cache/builds-v0/.tmp6wtBbP/lib/python3.12/site-packages/setuptools/command/build_py.py:215: _Warning: Package 'qlib.contrib.report.analysis_model' is absent from the `packages` configuration.
+         !!
+
+                 ********************************************************************************
+                 ############################
+                 # Package would be ignored #
+                 ############################
+                 Python recognizes 'qlib.contrib.report.analysis_model' as an importable package[^1],
+                 but it is absent from setuptools' `packages` configuration.
+
+                 This leads to an ambiguous overall configuration. If you want to distribute this
+                 package, please make sure that 'qlib.contrib.report.analysis_model' is explicitly added
+                 to the `packages` configuration field.
+
+                 Alternatively, you can also rely on setuptools' discovery methods
+                 (for example by using `find_namespace_packages(...)`/`find_namespace:`
+                 instead of `find_packages(...)`/`find:`).
+
+                 You can read more about "package discovery" on setuptools documentation page:
+
+                 - https://setuptools.pypa.io/en/latest/userguide/package_discovery.html
+
+                 If you don't want 'qlib.contrib.report.analysis_model' to be distributed and are
+                 already explicitly excluding 'qlib.contrib.report.analysis_model' via
+                 `find_namespace_packages(...)/find_namespace` or `find_packages(...)/find`,
+                 you can try to use `exclude_package_data`, or `include-package-data=False` in
+                 combination with a more fine grained `package-data` configuration.
+
+                 You can read more about "package data files" on setuptools documentation page:
+
+                 - https://setuptools.pypa.io/en/latest/userguide/datafiles.html
+
+
+                 [^1]: For Python, any directory (with suitable naming) can be imported,
+                       even if it does not contain any `.py` files.
+                       On the other hand, currently there is no concept of package data
+                       directory, all directories are treated like packages.
+                 ********************************************************************************
+
+         !!
+           check.warn(importable)
+         /workspace/scratch/008a76ec4981/Backtest-Benchmark/.work/uv-cache/builds-v0/.tmp6wtBbP/lib/python3.12/site-packages/setuptools/command/build_py.py:215: _Warning: Package 'qlib.contrib.report.analysis_position' is absent from the `packages` configuration.
+         !!
+
+                 ********************************************************************************
+                 ############################
+                 # Package would be ignored #
+                 ############################
+                 Python recognizes 'qlib.contrib.report.analysis_position' as an importable package[^1],
+                 but it is absent from setuptools' `packages` configuration.
+
+                 This leads to an ambiguous overall configuration. If you want to distribute this
+                 package, please make sure that 'qlib.contrib.report.analysis_position' is explicitly added
+                 to the `packages` configuration field.
+
+                 Alternatively, you can also rely on setuptools' discovery methods
+                 (for example by using `find_namespace_packages(...)`/`find_namespace:`
+                 instead of `find_packages(...)`/`find:`).
+
+                 You can read more about "package discovery" on setuptools documentation page:
+
+                 - https://setuptools.pypa.io/en/latest/userguide/package_discovery.html
+
+                 If you don't want 'qlib.contrib.report.analysis_position' to be distributed and are
+                 already explicitly excluding 'qlib.contrib.report.analysis_position' via
+                 `find_namespace_packages(...)/find_namespace` or `find_packages(...)/find`,
+                 you can try to use `exclude_package_data`, or `include-package-data=False` in
+                 combination with a more fine grained `package-data` configuration.
+
+                 You can read more about "package data files" on setuptools documentation page:
+
+                 - https://setuptools.pypa.io/en/latest/userguide/datafiles.html
+
+
+                 [^1]: For Python, any directory (with suitable naming) can be imported,
+                       even if it does not contain any `.py` files.
+                       On the other hand, currently there is no concept of package data
+                       directory, all directories are treated like packages.
+                 ********************************************************************************
+
+         !!
+           check.warn(importable)
+         /workspace/scratch/008a76ec4981/Backtest-Benchmark/.work/uv-cache/builds-v0/.tmp6wtBbP/lib/python3.12/site-packages/setuptools/command/build_py.py:215: _Warning: Package 'qlib.contrib.report.data' is absent from the `packages` configuration.
+         !!
+
+                 ********************************************************************************
+                 ############################
+                 # Package would be ignored #
+                 ############################
+                 Python recognizes 'qlib.contrib.report.data' as an importable package[^1],
+                 but it is absent from setuptools' `packages` configuration.
+
+                 This leads to an ambiguous overall configuration. If you want to distribute this
+                 package, please make sure that 'qlib.contrib.report.data' is explicitly added
+                 to the `packages` configuration field.
+
+                 Alternatively, you can also rely on setuptools' discovery methods
+                 (for example by using `find_namespace_packages(...)`/`find_namespace:`
+                 instead of `find_packages(...)`/`find:`).
+
+                 You can read more about "package discovery" on setuptools documentation page:
+
+                 - https://setuptools.pypa.io/en/latest/userguide/package_discovery.html
+
+                 If you don't want 'qlib.contrib.report.data' to be distributed and are
+                 already explicitly excluding 'qlib.contrib.report.data' via
+                 `find_namespace_packages(...)/find_namespace` or `find_packages(...)/find`,
+                 you can try to use `exclude_package_data`, or `include-package-data=False` in
+                 combination with a more fine grained `package-data` configuration.
+
+                 You can read more about "package data files" on setuptools documentation page:
+
+                 - https://setuptools.pypa.io/en/latest/userguide/datafiles.html
+
+
+                 [^1]: For Python, any directory (with suitable naming) can be imported,
+                       even if it does not contain any `.py` files.
+                       On the other hand, currently there is no concept of package data
+                       directory, all directories are treated like packages.
+                 ********************************************************************************
+
+         !!
+           check.warn(importable)
+         /workspace/scratch/008a76ec4981/Backtest-Benchmark/.work/uv-cache/builds-v0/.tmp6wtBbP/lib/python3.12/site-packages/setuptools/command/build_py.py:215: _Warning: Package 'qlib.contrib.rolling' is absent from the `packages` configuration.
+         !!
+
+                 ********************************************************************************
+                 ############################
+                 # Package would be ignored #
+                 ############################
+                 Python recognizes 'qlib.contrib.rolling' as an importable package[^1],
+                 but it is absent from setuptools' `packages` configuration.
+
+                 This leads to an ambiguous overall configuration. If you want to distribute this
+                 package, please make sure that 'qlib.contrib.rolling' is explicitly added
+                 to the `packages` configuration field.
+
+                 Alternatively, you can also rely on setuptools' discovery methods
+                 (for example by using `find_namespace_packages(...)`/`find_namespace:`
+                 instead of `find_packages(...)`/`find:`).
+
+                 You can read more about "package discovery" on setuptools documentation page:
+
+                 - https://setuptools.pypa.io/en/latest/userguide/package_discovery.html
+
+                 If you don't want 'qlib.contrib.rolling' to be distributed and are
+                 already explicitly excluding 'qlib.contrib.rolling' via
+                 `find_namespace_packages(...)/find_namespace` or `find_packages(...)/find`,
+                 you can try to use `exclude_package_data`, or `include-package-data=False` in
+                 combination with a more fine grained `package-data` configuration.
+
+                 You can read more about "package data files" on setuptools documentation page:
+
+                 - https://setuptools.pypa.io/en/latest/userguide/datafiles.html
+
+
+                 [^1]: For Python, any directory (with suitable naming) can be imported,
+                       even if it does not contain any `.py` files.
+                       On the other hand, currently there is no concept of package data
+                       directory, all directories are treated like packages.
+                 ********************************************************************************
+
+         !!
+           check.warn(importable)
+         /workspace/scratch/008a76ec4981/Backtest-Benchmark/.work/uv-cache/builds-v0/.tmp6wtBbP/lib/python3.12/site-packages/setuptools/command/build_py.py:215: _Warning: Package 'qlib.contrib.strategy' is absent from the `packages` configuration.
+         !!
+
+                 ********************************************************************************
+                 ############################
+                 # Package would be ignored #
+                 ############################
+                 Python recognizes 'qlib.contrib.strategy' as an importable package[^1],
+                 but it is absent from setuptools' `packages` configuration.
+
+                 This leads to an ambiguous overall configuration. If you want to distribute this
+                 package, please make sure that 'qlib.contrib.strategy' is explicitly added
+                 to the `packages` configuration field.
+
+                 Alternatively, you can also rely on setuptools' discovery methods
+                 (for example by using `find_namespace_packages(...)`/`find_namespace:`
+                 instead of `find_packages(...)`/`find:`).
+
+                 You can read more about "package discovery" on setuptools documentation page:
+
+                 - https://setuptools.pypa.io/en/latest/userguide/package_discovery.html
+
+                 If you don't want 'qlib.contrib.strategy' to be distributed and are
+                 already explicitly excluding 'qlib.contrib.strategy' via
+                 `find_namespace_packages(...)/find_namespace` or `find_packages(...)/find`,
+                 you can try to use `exclude_package_data`, or `include-package-data=False` in
+                 combination with a more fine grained `package-data` configuration.
+
+                 You can read more about "package data files" on setuptools documentation page:
+
+                 - https://setuptools.pypa.io/en/latest/userguide/datafiles.html
+
+
+                 [^1]: For Python, any directory (with suitable naming) can be imported,
+                       even if it does not contain any `.py` files.
+                       On the other hand, currently there is no concept of package data
+                       directory, all directories are treated like packages.
+                 ********************************************************************************
+
+         !!
+           check.warn(importable)
+         /workspace/scratch/008a76ec4981/Backtest-Benchmark/.work/uv-cache/builds-v0/.tmp6wtBbP/lib/python3.12/site-packages/setuptools/command/build_py.py:215: _Warning: Package 'qlib.contrib.strategy.optimizer' is absent from the `packages` configuration.
+         !!
+
+                 ********************************************************************************
+                 ############################
+                 # Package would be ignored #
+                 ############################
+                 Python recognizes 'qlib.contrib.strategy.optimizer' as an importable package[^1],
+                 but it is absent from setuptools' `packages` configuration.
+
+                 This leads to an ambiguous overall configuration. If you want to distribute this
+                 package, please make sure that 'qlib.contrib.strategy.optimizer' is explicitly added
+                 to the `packages` configuration field.
+
+                 Alternatively, you can also rely on setuptools' discovery methods
+                 (for example by using `find_namespace_packages(...)`/`find_namespace:`
+                 instead of `find_packages(...)`/`find:`).
+
+                 You can read more about "package discovery" on setuptools documentation page:
+
+                 - https://setuptools.pypa.io/en/latest/userguide/package_discovery.html
+
+                 If you don't want 'qlib.contrib.strategy.optimizer' to be distributed and are
+                 already explicitly excluding 'qlib.contrib.strategy.optimizer' via
+                 `find_namespace_packages(...)/find_namespace` or `find_packages(...)/find`,
+                 you can try to use `exclude_package_data`, or `include-package-data=False` in
+                 combination with a more fine grained `package-data` configuration.
+
+                 You can read more about "package data files" on setuptools documentation page:
+
+                 - https://setuptools.pypa.io/en/latest/userguide/datafiles.html
+
+
+                 [^1]: For Python, any directory (with suitable naming) can be imported,
+                       even if it does not contain any `.py` files.
+                       On the other hand, currently there is no concept of package data
+                       directory, all directories are treated like packages.
+                 ********************************************************************************
+
+         !!
+           check.warn(importable)
+         /workspace/scratch/008a76ec4981/Backtest-Benchmark/.work/uv-cache/builds-v0/.tmp6wtBbP/lib/python3.12/site-packages/setuptools/command/build_py.py:215: _Warning: Package 'qlib.contrib.tuner' is absent from the `packages` configuration.
+         !!
+
+                 ********************************************************************************
+                 ############################
+                 # Package would be ignored #
+                 ############################
+                 Python recognizes 'qlib.contrib.tuner' as an importable package[^1],
+                 but it is absent from setuptools' `packages` configuration.
+
+                 This leads to an ambiguous overall configuration. If you want to distribute this
+                 package, please make sure that 'qlib.contrib.tuner' is explicitly added
+                 to the `packages` configuration field.
+
+                 Alternatively, you can also rely on setuptools' discovery methods
+                 (for example by using `find_namespace_packages(...)`/`find_namespace:`
+                 instead of `find_packages(...)`/`find:`).
+
+                 You can read more about "package discovery" on setuptools documentation page:
+
+                 - https://setuptools.pypa.io/en/latest/userguide/package_discovery.html
+
+                 If you don't want 'qlib.contrib.tuner' to be distributed and are
+                 already explicitly excluding 'qlib.contrib.tuner' via
+                 `find_namespace_packages(...)/find_namespace` or `find_packages(...)/find`,
+                 you can try to use `exclude_package_data`, or `include-package-data=False` in
+                 combination with a more fine grained `package-data` configuration.
+
+                 You can read more about "package data files" on setuptools documentation page:
+
+                 - https://setuptools.pypa.io/en/latest/userguide/datafiles.html
+
+
+                 [^1]: For Python, any directory (with suitable naming) can be imported,
+                       even if it does not contain any `.py` files.
+                       On the other hand, currently there is no concept of package data
+                       directory, all directories are treated like packages.
+                 ********************************************************************************
+
+         !!
+           check.warn(importable)
+         /workspace/scratch/008a76ec4981/Backtest-Benchmark/.work/uv-cache/builds-v0/.tmp6wtBbP/lib/python3.12/site-packages/setuptools/command/build_py.py:215: _Warning: Package 'qlib.contrib.workflow' is absent from the `packages` configuration.
+         !!
+
+                 ********************************************************************************
+                 ############################
+                 # Package would be ignored #
+                 ############################
+                 Python recognizes 'qlib.contrib.workflow' as an importable package[^1],
+                 but it is absent from setuptools' `packages` configuration.
+
+                 This leads to an ambiguous overall configuration. If you want to distribute this
+                 package, please make sure that 'qlib.contrib.workflow' is explicitly added
+                 to the `packages` configuration field.
+
+                 Alternatively, you can also rely on setuptools' discovery methods
+                 (for example by using `find_namespace_packages(...)`/`find_namespace:`
+                 instead of `find_packages(...)`/`find:`).
+
+                 You can read more about "package discovery" on setuptools documentation page:
+
+                 - https://setuptools.pypa.io/en/latest/userguide/package_discovery.html
+
+                 If you don't want 'qlib.contrib.workflow' to be distributed and are
+                 already explicitly excluding 'qlib.contrib.workflow' via
+                 `find_namespace_packages(...)/find_namespace` or `find_packages(...)/find`,
+                 you can try to use `exclude_package_data`, or `include-package-data=False` in
+                 combination with a more fine grained `package-data` configuration.
+
+                 You can read more about "package data files" on setuptools documentation page:
+
+                 - https://setuptools.pypa.io/en/latest/userguide/datafiles.html
+
+
+                 [^1]: For Python, any directory (with suitable naming) can be imported,
+                       even if it does not contain any `.py` files.
+                       On the other hand, currently there is no concept of package data
+                       directory, all directories are treated like packages.
+                 ********************************************************************************
+
+         !!
+           check.warn(importable)
+         /workspace/scratch/008a76ec4981/Backtest-Benchmark/.work/uv-cache/builds-v0/.tmp6wtBbP/lib/python3.12/site-packages/setuptools/command/build_py.py:215: _Warning: Package 'qlib.data' is absent from the `packages` configuration.
+         !!
+
+                 ********************************************************************************
+                 ############################
+                 # Package would be ignored #
+                 ############################
+                 Python recognizes 'qlib.data' as an importable package[^1],
+                 but it is absent from setuptools' `packages` configuration.
+
+                 This leads to an ambiguous overall configuration. If you want to distribute this
+                 package, please make sure that 'qlib.data' is explicitly added
+                 to the `packages` configuration field.
+
+                 Alternatively, you can also rely on setuptools' discovery methods
+                 (for example by using `find_namespace_packages(...)`/`find_namespace:`
+                 instead of `find_packages(...)`/`find:`).
+
+                 You can read more about "package discovery" on setuptools documentation page:
+
+                 - https://setuptools.pypa.io/en/latest/userguide/package_discovery.html
+
+                 If you don't want 'qlib.data' to be distributed and are
+                 already explicitly excluding 'qlib.data' via
+                 `find_namespace_packages(...)/find_namespace` or `find_packages(...)/find`,
+                 you can try to use `exclude_package_data`, or `include-package-data=False` in
+                 combination with a more fine grained `package-data` configuration.
+
+                 You can read more about "package data files" on setuptools documentation page:
+
+                 - https://setuptools.pypa.io/en/latest/userguide/datafiles.html
+
+
+                 [^1]: For Python, any directory (with suitable naming) can be imported,
+                       even if it does not contain any `.py` files.
+                       On the other hand, currently there is no concept of package data
+                       directory, all directories are treated like packages.
+                 ********************************************************************************
+
+         !!
+           check.warn(importable)
+         /workspace/scratch/008a76ec4981/Backtest-Benchmark/.work/uv-cache/builds-v0/.tmp6wtBbP/lib/python3.12/site-packages/setuptools/command/build_py.py:215: _Warning: Package 'qlib.data._libs' is absent from the `packages` configuration.
+         !!
+
+                 ********************************************************************************
+                 ############################
+                 # Package would be ignored #
+                 ############################
+                 Python recognizes 'qlib.data._libs' as an importable package[^1],
+                 but it is absent from setuptools' `packages` configuration.
+
+                 This leads to an ambiguous overall configuration. If you want to distribute this
+                 package, please make sure that 'qlib.data._libs' is explicitly added
+                 to the `packages` configuration field.
+
+                 Alternatively, you can also rely on setuptools' discovery methods
+                 (for example by using `find_namespace_packages(...)`/`find_namespace:`
+                 instead of `find_packages(...)`/`find:`).
+
+                 You can read more about "package discovery" on setuptools documentation page:
+
+                 - https://setuptools.pypa.io/en/latest/userguide/package_discovery.html
+
+                 If you don't want 'qlib.data._libs' to be distributed and are
+                 already explicitly excluding 'qlib.data._libs' via
+                 `find_namespace_packages(...)/find_namespace` or `find_packages(...)/find`,
+                 you can try to use `exclude_package_data`, or `include-package-data=False` in
+                 combination with a more fine grained `package-data` configuration.
+
+                 You can read more about "package data files" on setuptools documentation page:
+
+                 - https://setuptools.pypa.io/en/latest/userguide/datafiles.html
+
+
+                 [^1]: For Python, any directory (with suitable naming) can be imported,
+                       even if it does not contain any `.py` files.
+                       On the other hand, currently there is no concept of package data
+                       directory, all directories are treated like packages.
+                 ********************************************************************************
+
+         !!
+           check.warn(importable)
+         /workspace/scratch/008a76ec4981/Backtest-Benchmark/.work/uv-cache/builds-v0/.tmp6wtBbP/lib/python3.12/site-packages/setuptools/command/build_py.py:215: _Warning: Package 'qlib.data.dataset' is absent from the `packages` configuration.
+         !!
+
+                 ********************************************************************************
+                 ############################
+                 # Package would be ignored #
+                 ############################
+                 Python recognizes 'qlib.data.dataset' as an importable package[^1],
+                 but it is absent from setuptools' `packages` configuration.
+
+                 This leads to an ambiguous overall configuration. If you want to distribute this
+                 package, please make sure that 'qlib.data.dataset' is explicitly added
+                 to the `packages` configuration field.
+
+                 Alternatively, you can also rely on setuptools' discovery methods
+                 (for example by using `find_namespace_packages(...)`/`find_namespace:`
+                 instead of `find_packages(...)`/`find:`).
+
+                 You can read more about "package discovery" on setuptools documentation page:
+
+                 - https://setuptools.pypa.io/en/latest/userguide/package_discovery.html
+
+                 If you don't want 'qlib.data.dataset' to be distributed and are
+                 already explicitly excluding 'qlib.data.dataset' via
+                 `find_namespace_packages(...)/find_namespace` or `find_packages(...)/find`,
+                 you can try to use `exclude_package_data`, or `include-package-data=False` in
+                 combination with a more fine grained `package-data` configuration.
+
+                 You can read more about "package data files" on setuptools documentation page:
+
+                 - https://setuptools.pypa.io/en/latest/userguide/datafiles.html
+
+
+                 [^1]: For Python, any directory (with suitable naming) can be imported,
+                       even if it does not contain any `.py` files.
+                       On the other hand, currently there is no concept of package data
+                       directory, all directories are treated like packages.
+                 ********************************************************************************
+
+         !!
+           check.warn(importable)
+         /workspace/scratch/008a76ec4981/Backtest-Benchmark/.work/uv-cache/builds-v0/.tmp6wtBbP/lib/python3.12/site-packages/setuptools/command/build_py.py:215: _Warning: Package 'qlib.data.storage' is absent from the `packages` configuration.
+         !!
+
+                 ********************************************************************************
+                 ############################
+                 # Package would be ignored #
+                 ############################
+                 Python recognizes 'qlib.data.storage' as an importable package[^1],
+                 but it is absent from setuptools' `packages` configuration.
+
+                 This leads to an ambiguous overall configuration. If you want to distribute this
+                 package, please make sure that 'qlib.data.storage' is explicitly added
+                 to the `packages` configuration field.
+
+                 Alternatively, you can also rely on setuptools' discovery methods
+                 (for example by using `find_namespace_packages(...)`/`find_namespace:`
+                 instead of `find_packages(...)`/`find:`).
+
+                 You can read more about "package discovery" on setuptools documentation page:
+
+                 - https://setuptools.pypa.io/en/latest/userguide/package_discovery.html
+
+                 If you don't want 'qlib.data.storage' to be distributed and are
+                 already explicitly excluding 'qlib.data.storage' via
+                 `find_namespace_packages(...)/find_namespace` or `find_packages(...)/find`,
+                 you can try to use `exclude_package_data`, or `include-package-data=False` in
+                 combination with a more fine grained `package-data` configuration.
+
+                 You can read more about "package data files" on setuptools documentation page:
+
+                 - https://setuptools.pypa.io/en/latest/userguide/datafiles.html
+
+
+                 [^1]: For Python, any directory (with suitable naming) can be imported,
+                       even if it does not contain any `.py` files.
+                       On the other hand, currently there is no concept of package data
+                       directory, all directories are treated like packages.
+                 ********************************************************************************
+
+         !!
+           check.warn(importable)
+         /workspace/scratch/008a76ec4981/Backtest-Benchmark/.work/uv-cache/builds-v0/.tmp6wtBbP/lib/python3.12/site-packages/setuptools/command/build_py.py:215: _Warning: Package 'qlib.model' is absent from the `packages` configuration.
+         !!
+
+                 ********************************************************************************
+                 ############################
+                 # Package would be ignored #
+                 ############################
+                 Python recognizes 'qlib.model' as an importable package[^1],
+                 but it is absent from setuptools' `packages` configuration.
+
+                 This leads to an ambiguous overall configuration. If you want to distribute this
+                 package, please make sure that 'qlib.model' is explicitly added
+                 to the `packages` configuration field.
+
+                 Alternatively, you can also rely on setuptools' discovery methods
+                 (for example by using `find_namespace_packages(...)`/`find_namespace:`
+                 instead of `find_packages(...)`/`find:`).
+
+                 You can read more about "package discovery" on setuptools documentation page:
+
+                 - https://setuptools.pypa.io/en/latest/userguide/package_discovery.html
+
+                 If you don't want 'qlib.model' to be distributed and are
+                 already explicitly excluding 'qlib.model' via
+                 `find_namespace_packages(...)/find_namespace` or `find_packages(...)/find`,
+                 you can try to use `exclude_package_data`, or `include-package-data=False` in
+                 combination with a more fine grained `package-data` configuration.
+
+                 You can read more about "package data files" on setuptools documentation page:
+
+                 - https://setuptools.pypa.io/en/latest/userguide/datafiles.html
+
+
+                 [^1]: For Python, any directory (with suitable naming) can be imported,
+                       even if it does not contain any `.py` files.
+                       On the other hand, currently there is no concept of package data
+                       directory, all directories are treated like packages.
+                 ********************************************************************************
+
+         !!
+           check.warn(importable)
+         /workspace/scratch/008a76ec4981/Backtest-Benchmark/.work/uv-cache/builds-v0/.tmp6wtBbP/lib/python3.12/site-packages/setuptools/command/build_py.py:215: _Warning: Package 'qlib.model.ens' is absent from the `packages` configuration.
+         !!
+
+                 ********************************************************************************
+                 ############################
+                 # Package would be ignored #
+                 ############################
+                 Python recognizes 'qlib.model.ens' as an importable package[^1],
+                 but it is absent from setuptools' `packages` configuration.
+
+                 This leads to an ambiguous overall configuration. If you want to distribute this
+                 package, please make sure that 'qlib.model.ens' is explicitly added
+                 to the `packages` configuration field.
+
+                 Alternatively, you can also rely on setuptools' discovery methods
+                 (for example by using `find_namespace_packages(...)`/`find_namespace:`
+                 instead of `find_packages(...)`/`find:`).
+
+                 You can read more about "package discovery" on setuptools documentation page:
+
+                 - https://setuptools.pypa.io/en/latest/userguide/package_discovery.html
+
+                 If you don't want 'qlib.model.ens' to be distributed and are
+                 already explicitly excluding 'qlib.model.ens' via
+                 `find_namespace_packages(...)/find_namespace` or `find_packages(...)/find`,
+                 you can try to use `exclude_package_data`, or `include-package-data=False` in
+                 combination with a more fine grained `package-data` configuration.
+
+                 You can read more about "package data files" on setuptools documentation page:
+
+                 - https://setuptools.pypa.io/en/latest/userguide/datafiles.html
+
+
+                 [^1]: For Python, any directory (with suitable naming) can be imported,
+                       even if it does not contain any `.py` files.
+                       On the other hand, currently there is no concept of package data
+                       directory, all directories are treated like packages.
+                 ********************************************************************************
+
+         !!
+           check.warn(importable)
+         /workspace/scratch/008a76ec4981/Backtest-Benchmark/.work/uv-cache/builds-v0/.tmp6wtBbP/lib/python3.12/site-packages/setuptools/command/build_py.py:215: _Warning: Package 'qlib.model.interpret' is absent from the `packages` configuration.
+         !!
+
+                 ********************************************************************************
+                 ############################
+                 # Package would be ignored #
+                 ############################
+                 Python recognizes 'qlib.model.interpret' as an importable package[^1],
+                 but it is absent from setuptools' `packages` configuration.
+
+                 This leads to an ambiguous overall configuration. If you want to distribute this
+                 package, please make sure that 'qlib.model.interpret' is explicitly added
+                 to the `packages` configuration field.
+
+                 Alternatively, you can also rely on setuptools' discovery methods
+                 (for example by using `find_namespace_packages(...)`/`find_namespace:`
+                 instead of `find_packages(...)`/`find:`).
+
+                 You can read more about "package discovery" on setuptools documentation page:
+
+                 - https://setuptools.pypa.io/en/latest/userguide/package_discovery.html
+
+                 If you don't want 'qlib.model.interpret' to be distributed and are
+                 already explicitly excluding 'qlib.model.interpret' via
+                 `find_namespace_packages(...)/find_namespace` or `find_packages(...)/find`,
+                 you can try to use `exclude_package_data`, or `include-package-data=False` in
+                 combination with a more fine grained `package-data` configuration.
+
+                 You can read more about "package data files" on setuptools documentation page:
+
+                 - https://setuptools.pypa.io/en/latest/userguide/datafiles.html
+
+
+                 [^1]: For Python, any directory (with suitable naming) can be imported,
+                       even if it does not contain any `.py` files.
+                       On the other hand, currently there is no concept of package data
+                       directory, all directories are treated like packages.
+                 ********************************************************************************
+
+         !!
+           check.warn(importable)
+         /workspace/scratch/008a76ec4981/Backtest-Benchmark/.work/uv-cache/builds-v0/.tmp6wtBbP/lib/python3.12/site-packages/setuptools/command/build_py.py:215: _Warning: Package 'qlib.model.meta' is absent from the `packages` configuration.
+         !!
+
+                 ********************************************************************************
+                 ############################
+                 # Package would be ignored #
+                 ############################
+                 Python recognizes 'qlib.model.meta' as an importable package[^1],
+                 but it is absent from setuptools' `packages` configuration.
+
+                 This leads to an ambiguous overall configuration. If you want to distribute this
+                 package, please make sure that 'qlib.model.meta' is explicitly added
+                 to the `packages` configuration field.
+
+                 Alternatively, you can also rely on setuptools' discovery methods
+                 (for example by using `find_namespace_packages(...)`/`find_namespace:`
+                 instead of `find_packages(...)`/`find:`).
+
+                 You can read more about "package discovery" on setuptools documentation page:
+
+                 - https://setuptools.pypa.io/en/latest/userguide/package_discovery.html
+
+                 If you don't want 'qlib.model.meta' to be distributed and are
+                 already explicitly excluding 'qlib.model.meta' via
+                 `find_namespace_packages(...)/find_namespace` or `find_packages(...)/find`,
+                 you can try to use `exclude_package_data`, or `include-package-data=False` in
+                 combination with a more fine grained `package-data` configuration.
+
+                 You can read more about "package data files" on setuptools documentation page:
+
+                 - https://setuptools.pypa.io/en/latest/userguide/datafiles.html
+
+
+                 [^1]: For Python, any directory (with suitable naming) can be imported,
+                       even if it does not contain any `.py` files.
+                       On the other hand, currently there is no concept of package data
+                       directory, all directories are treated like packages.
+                 ********************************************************************************
+
+         !!
+           check.warn(importable)
+         /workspace/scratch/008a76ec4981/Backtest-Benchmark/.work/uv-cache/builds-v0/.tmp6wtBbP/lib/python3.12/site-packages/setuptools/command/build_py.py:215: _Warning: Package 'qlib.model.riskmodel' is absent from the `packages` configuration.
+         !!
+
+                 ********************************************************************************
+                 ############################
+                 # Package would be ignored #
+                 ############################
+                 Python recognizes 'qlib.model.riskmodel' as an importable package[^1],
+                 but it is absent from setuptools' `packages` configuration.
+
+                 This leads to an ambiguous overall configuration. If you want to distribute this
+                 package, please make sure that 'qlib.model.riskmodel' is explicitly added
+                 to the `packages` configuration field.
+
+                 Alternatively, you can also rely on setuptools' discovery methods
+                 (for example by using `find_namespace_packages(...)`/`find_namespace:`
+                 instead of `find_packages(...)`/`find:`).
+
+                 You can read more about "package discovery" on setuptools documentation page:
+
+                 - https://setuptools.pypa.io/en/latest/userguide/package_discovery.html
+
+                 If you don't want 'qlib.model.riskmodel' to be distributed and are
+                 already explicitly excluding 'qlib.model.riskmodel' via
+                 `find_namespace_packages(...)/find_namespace` or `find_packages(...)/find`,
+                 you can try to use `exclude_package_data`, or `include-package-data=False` in
+                 combination with a more fine grained `package-data` configuration.
+
+                 You can read more about "package data files" on setuptools documentation page:
+
+                 - https://setuptools.pypa.io/en/latest/userguide/datafiles.html
+
+
+                 [^1]: For Python, any directory (with suitable naming) can be imported,
+                       even if it does not contain any `.py` files.
+                       On the other hand, currently there is no concept of package data
+                       directory, all directories are treated like packages.
+                 ********************************************************************************
+
+         !!
+           check.warn(importable)
+         /workspace/scratch/008a76ec4981/Backtest-Benchmark/.work/uv-cache/builds-v0/.tmp6wtBbP/lib/python3.12/site-packages/setuptools/command/build_py.py:215: _Warning: Package 'qlib.rl' is absent from the `packages` configuration.
+         !!
+
+                 ********************************************************************************
+                 ############################
+                 # Package would be ignored #
+                 ############################
+                 Python recognizes 'qlib.rl' as an importable package[^1],
+                 but it is absent from setuptools' `packages` configuration.
+
+                 This leads to an ambiguous overall configuration. If you want to distribute this
+                 package, please make sure that 'qlib.rl' is explicitly added
+                 to the `packages` configuration field.
+
+                 Alternatively, you can also rely on setuptools' discovery methods
+                 (for example by using `find_namespace_packages(...)`/`find_namespace:`
+                 instead of `find_packages(...)`/`find:`).
+
+                 You can read more about "package discovery" on setuptools documentation page:
+
+                 - https://setuptools.pypa.io/en/latest/userguide/package_discovery.html
+
+                 If you don't want 'qlib.rl' to be distributed and are
+                 already explicitly excluding 'qlib.rl' via
+                 `find_namespace_packages(...)/find_namespace` or `find_packages(...)/find`,
+                 you can try to use `exclude_package_data`, or `include-package-data=False` in
+                 combination with a more fine grained `package-data` configuration.
+
+                 You can read more about "package data files" on setuptools documentation page:
+
+                 - https://setuptools.pypa.io/en/latest/userguide/datafiles.html
+
+
+                 [^1]: For Python, any directory (with suitable naming) can be imported,
+                       even if it does not contain any `.py` files.
+                       On the other hand, currently there is no concept of package data
+                       directory, all directories are treated like packages.
+                 ********************************************************************************
+
+         !!
+           check.warn(importable)
+         /workspace/scratch/008a76ec4981/Backtest-Benchmark/.work/uv-cache/builds-v0/.tmp6wtBbP/lib/python3.12/site-packages/setuptools/command/build_py.py:215: _Warning: Package 'qlib.rl.contrib' is absent from the `packages` configuration.
+         !!
+
+                 ********************************************************************************
+                 ############################
+                 # Package would be ignored #
+                 ############################
+                 Python recognizes 'qlib.rl.contrib' as an importable package[^1],
+                 but it is absent from setuptools' `packages` configuration.
+
+                 This leads to an ambiguous overall configuration. If you want to distribute this
+                 package, please make sure that 'qlib.rl.contrib' is explicitly added
+                 to the `packages` configuration field.
+
+                 Alternatively, you can also rely on setuptools' discovery methods
+                 (for example by using `find_namespace_packages(...)`/`find_namespace:`
+                 instead of `find_packages(...)`/`find:`).
+
+                 You can read more about "package discovery" on setuptools documentation page:
+
+                 - https://setuptools.pypa.io/en/latest/userguide/package_discovery.html
+
+                 If you don't want 'qlib.rl.contrib' to be distributed and are
+                 already explicitly excluding 'qlib.rl.contrib' via
+                 `find_namespace_packages(...)/find_namespace` or `find_packages(...)/find`,
+                 you can try to use `exclude_package_data`, or `include-package-data=False` in
+                 combination with a more fine grained `package-data` configuration.
+
+                 You can read more about "package data files" on setuptools documentation page:
+
+                 - https://setuptools.pypa.io/en/latest/userguide/datafiles.html
+
+
+                 [^1]: For Python, any directory (with suitable naming) can be imported,
+                       even if it does not contain any `.py` files.
+                       On the other hand, currently there is no concept of package data
+                       directory, all directories are treated like packages.
+                 ********************************************************************************
+
+         !!
+           check.warn(importable)
+         /workspace/scratch/008a76ec4981/Backtest-Benchmark/.work/uv-cache/builds-v0/.tmp6wtBbP/lib/python3.12/site-packages/setuptools/command/build_py.py:215: _Warning: Package 'qlib.rl.data' is absent from the `packages` configuration.
+         !!
+
+                 ********************************************************************************
+                 ############################
+                 # Package would be ignored #
+                 ############################
+                 Python recognizes 'qlib.rl.data' as an importable package[^1],
+                 but it is absent from setuptools' `packages` configuration.
+
+                 This leads to an ambiguous overall configuration. If you want to distribute this
+                 package, please make sure that 'qlib.rl.data' is explicitly added
+                 to the `packages` configuration field.
+
+                 Alternatively, you can also rely on setuptools' discovery methods
+                 (for example by using `find_namespace_packages(...)`/`find_namespace:`
+                 instead of `find_packages(...)`/`find:`).
+
+                 You can read more about "package discovery" on setuptools documentation page:
+
+                 - https://setuptools.pypa.io/en/latest/userguide/package_discovery.html
+
+                 If you don't want 'qlib.rl.data' to be distributed and are
+                 already explicitly excluding 'qlib.rl.data' via
+                 `find_namespace_packages(...)/find_namespace` or `find_packages(...)/find`,
+                 you can try to use `exclude_package_data`, or `include-package-data=False` in
+                 combination with a more fine grained `package-data` configuration.
+
+                 You can read more about "package data files" on setuptools documentation page:
+
+                 - https://setuptools.pypa.io/en/latest/userguide/datafiles.html
+
+
+                 [^1]: For Python, any directory (with suitable naming) can be imported,
+                       even if it does not contain any `.py` files.
+                       On the other hand, currently there is no concept of package data
+                       directory, all directories are treated like packages.
+                 ********************************************************************************
+
+         !!
+           check.warn(importable)
+         /workspace/scratch/008a76ec4981/Backtest-Benchmark/.work/uv-cache/builds-v0/.tmp6wtBbP/lib/python3.12/site-packages/setuptools/command/build_py.py:215: _Warning: Package 'qlib.rl.order_execution' is absent from the `packages` configuration.
+         !!
+
+                 ********************************************************************************
+                 ############################
+                 # Package would be ignored #
+                 ############################
+                 Python recognizes 'qlib.rl.order_execution' as an importable package[^1],
+                 but it is absent from setuptools' `packages` configuration.
+
+                 This leads to an ambiguous overall configuration. If you want to distribute this
+                 package, please make sure that 'qlib.rl.order_execution' is explicitly added
+                 to the `packages` configuration field.
+
+                 Alternatively, you can also rely on setuptools' discovery methods
+                 (for example by using `find_namespace_packages(...)`/`find_namespace:`
+                 instead of `find_packages(...)`/`find:`).
+
+                 You can read more about "package discovery" on setuptools documentation page:
+
+                 - https://setuptools.pypa.io/en/latest/userguide/package_discovery.html
+
+                 If you don't want 'qlib.rl.order_execution' to be distributed and are
+                 already explicitly excluding 'qlib.rl.order_execution' via
+                 `find_namespace_packages(...)/find_namespace` or `find_packages(...)/find`,
+                 you can try to use `exclude_package_data`, or `include-package-data=False` in
+                 combination with a more fine grained `package-data` configuration.
+
+                 You can read more about "package data files" on setuptools documentation page:
+
+                 - https://setuptools.pypa.io/en/latest/userguide/datafiles.html
+
+
+                 [^1]: For Python, any directory (with suitable naming) can be imported,
+                       even if it does not contain any `.py` files.
+                       On the other hand, currently there is no concept of package data
+                       directory, all directories are treated like packages.
+                 ********************************************************************************
+
+         !!
+           check.warn(importable)
+         /workspace/scratch/008a76ec4981/Backtest-Benchmark/.work/uv-cache/builds-v0/.tmp6wtBbP/lib/python3.12/site-packages/setuptools/command/build_py.py:215: _Warning: Package 'qlib.rl.strategy' is absent from the `packages` configuration.
+         !!
+
+                 ********************************************************************************
+                 ############################
+                 # Package would be ignored #
+                 ############################
+                 Python recognizes 'qlib.rl.strategy' as an importable package[^1],
+                 but it is absent from setuptools' `packages` configuration.
+
+                 This leads to an ambiguous overall configuration. If you want to distribute this
+                 package, please make sure that 'qlib.rl.strategy' is explicitly added
+                 to the `packages` configuration field.
+
+                 Alternatively, you can also rely on setuptools' discovery methods
+                 (for example by using `find_namespace_packages(...)`/`find_namespace:`
+                 instead of `find_packages(...)`/`find:`).
+
+                 You can read more about "package discovery" on setuptools documentation page:
+
+                 - https://setuptools.pypa.io/en/latest/userguide/package_discovery.html
+
+                 If you don't want 'qlib.rl.strategy' to be distributed and are
+                 already explicitly excluding 'qlib.rl.strategy' via
+                 `find_namespace_packages(...)/find_namespace` or `find_packages(...)/find`,
+                 you can try to use `exclude_package_data`, or `include-package-data=False` in
+                 combination with a more fine grained `package-data` configuration.
+
+                 You can read more about "package data files" on setuptools documentation page:
+
+                 - https://setuptools.pypa.io/en/latest/userguide/datafiles.html
+
+
+                 [^1]: For Python, any directory (with suitable naming) can be imported,
+                       even if it does not contain any `.py` files.
+                       On the other hand, currently there is no concept of package data
+                       directory, all directories are treated like packages.
+                 ********************************************************************************
+
+         !!
+           check.warn(importable)
+         /workspace/scratch/008a76ec4981/Backtest-Benchmark/.work/uv-cache/builds-v0/.tmp6wtBbP/lib/python3.12/site-packages/setuptools/command/build_py.py:215: _Warning: Package 'qlib.rl.trainer' is absent from the `packages` configuration.
+         !!
+
+                 ********************************************************************************
+                 ############################
+                 # Package would be ignored #
+                 ############################
+                 Python recognizes 'qlib.rl.trainer' as an importable package[^1],
+                 but it is absent from setuptools' `packages` configuration.
+
+                 This leads to an ambiguous overall configuration. If you want to distribute this
+                 package, please make sure that 'qlib.rl.trainer' is explicitly added
+                 to the `packages` configuration field.
+
+                 Alternatively, you can also rely on setuptools' discovery methods
+                 (for example by using `find_namespace_packages(...)`/`find_namespace:`
+                 instead of `find_packages(...)`/`find:`).
+
+                 You can read more about "package discovery" on setuptools documentation page:
+
+                 - https://setuptools.pypa.io/en/latest/userguide/package_discovery.html
+
+                 If you don't want 'qlib.rl.trainer' to be distributed and are
+                 already explicitly excluding 'qlib.rl.trainer' via
+                 `find_namespace_packages(...)/find_namespace` or `find_packages(...)/find`,
+                 you can try to use `exclude_package_data`, or `include-package-data=False` in
+                 combination with a more fine grained `package-data` configuration.
+
+                 You can read more about "package data files" on setuptools documentation page:
+
+                 - https://setuptools.pypa.io/en/latest/userguide/datafiles.html
+
+
+                 [^1]: For Python, any directory (with suitable naming) can be imported,
+                       even if it does not contain any `.py` files.
+                       On the other hand, currently there is no concept of package data
+                       directory, all directories are treated like packages.
+                 ********************************************************************************
+
+         !!
+           check.warn(importable)
+         /workspace/scratch/008a76ec4981/Backtest-Benchmark/.work/uv-cache/builds-v0/.tmp6wtBbP/lib/python3.12/site-packages/setuptools/command/build_py.py:215: _Warning: Package 'qlib.rl.utils' is absent from the `packages` configuration.
+         !!
+
+                 ********************************************************************************
+                 ############################
+                 # Package would be ignored #
+                 ############################
+                 Python recognizes 'qlib.rl.utils' as an importable package[^1],
+                 but it is absent from setuptools' `packages` configuration.
+
+                 This leads to an ambiguous overall configuration. If you want to distribute this
+                 package, please make sure that 'qlib.rl.utils' is explicitly added
+                 to the `packages` configuration field.
+
+                 Alternatively, you can also rely on setuptools' discovery methods
+                 (for example by using `find_namespace_packages(...)`/`find_namespace:`
+                 instead of `find_packages(...)`/`find:`).
+
+                 You can read more about "package discovery" on setuptools documentation page:
+
+                 - https://setuptools.pypa.io/en/latest/userguide/package_discovery.html
+
+                 If you don't want 'qlib.rl.utils' to be distributed and are
+                 already explicitly excluding 'qlib.rl.utils' via
+                 `find_namespace_packages(...)/find_namespace` or `find_packages(...)/find`,
+                 you can try to use `exclude_package_data`, or `include-package-data=False` in
+                 combination with a more fine grained `package-data` configuration.
+
+                 You can read more about "package data files" on setuptools documentation page:
+
+                 - https://setuptools.pypa.io/en/latest/userguide/datafiles.html
+
+
+                 [^1]: For Python, any directory (with suitable naming) can be imported,
+                       even if it does not contain any `.py` files.
+                       On the other hand, currently there is no concept of package data
+                       directory, all directories are treated like packages.
+                 ********************************************************************************
+
+         !!
+           check.warn(importable)
+         /workspace/scratch/008a76ec4981/Backtest-Benchmark/.work/uv-cache/builds-v0/.tmp6wtBbP/lib/python3.12/site-packages/setuptools/command/build_py.py:215: _Warning: Package 'qlib.strategy' is absent from the `packages` configuration.
+         !!
+
+                 ********************************************************************************
+                 ############################
+                 # Package would be ignored #
+                 ############################
+                 Python recognizes 'qlib.strategy' as an importable package[^1],
+                 but it is absent from setuptools' `packages` configuration.
+
+                 This leads to an ambiguous overall configuration. If you want to distribute this
+                 package, please make sure that 'qlib.strategy' is explicitly added
+                 to the `packages` configuration field.
+
+                 Alternatively, you can also rely on setuptools' discovery methods
+                 (for example by using `find_namespace_packages(...)`/`find_namespace:`
+                 instead of `find_packages(...)`/`find:`).
+
+                 You can read more about "package discovery" on setuptools documentation page:
+
+                 - https://setuptools.pypa.io/en/latest/userguide/package_discovery.html
+
+                 If you don't want 'qlib.strategy' to be distributed and are
+                 already explicitly excluding 'qlib.strategy' via
+                 `find_namespace_packages(...)/find_namespace` or `find_packages(...)/find`,
+                 you can try to use `exclude_package_data`, or `include-package-data=False` in
+                 combination with a more fine grained `package-data` configuration.
+
+                 You can read more about "package data files" on setuptools documentation page:
+
+                 - https://setuptools.pypa.io/en/latest/userguide/datafiles.html
+
+
+                 [^1]: For Python, any directory (with suitable naming) can be imported,
+                       even if it does not contain any `.py` files.
+                       On the other hand, currently there is no concept of package data
+                       directory, all directories are treated like packages.
+                 ********************************************************************************
+
+         !!
+           check.warn(importable)
+         /workspace/scratch/008a76ec4981/Backtest-Benchmark/.work/uv-cache/builds-v0/.tmp6wtBbP/lib/python3.12/site-packages/setuptools/command/build_py.py:215: _Warning: Package 'qlib.tests' is absent from the `packages` configuration.
+         !!
+
+                 ********************************************************************************
+                 ############################
+                 # Package would be ignored #
+                 ############################
+                 Python recognizes 'qlib.tests' as an importable package[^1],
+                 but it is absent from setuptools' `packages` configuration.
+
+                 This leads to an ambiguous overall configuration. If you want to distribute this
+                 package, please make sure that 'qlib.tests' is explicitly added
+                 to the `packages` configuration field.
+
+                 Alternatively, you can also rely on setuptools' discovery methods
+                 (for example by using `find_namespace_packages(...)`/`find_namespace:`
+                 instead of `find_packages(...)`/`find:`).
+
+                 You can read more about "package discovery" on setuptools documentation page:
+
+                 - https://setuptools.pypa.io/en/latest/userguide/package_discovery.html
+
+                 If you don't want 'qlib.tests' to be distributed and are
+                 already explicitly excluding 'qlib.tests' via
+                 `find_namespace_packages(...)/find_namespace` or `find_packages(...)/find`,
+                 you can try to use `exclude_package_data`, or `include-package-data=False` in
+                 combination with a more fine grained `package-data` configuration.
+
+                 You can read more about "package data files" on setuptools documentation page:
+
+                 - https://setuptools.pypa.io/en/latest/userguide/datafiles.html
+
+
+                 [^1]: For Python, any directory (with suitable naming) can be imported,
+                       even if it does not contain any `.py` files.
+                       On the other hand, currently there is no concept of package data
+                       directory, all directories are treated like packages.
+                 ********************************************************************************
+
+         !!
+           check.warn(importable)
+         /workspace/scratch/008a76ec4981/Backtest-Benchmark/.work/uv-cache/builds-v0/.tmp6wtBbP/lib/python3.12/site-packages/setuptools/command/build_py.py:215: _Warning: Package 'qlib.utils' is absent from the `packages` configuration.
+         !!
+
+                 ********************************************************************************
+                 ############################
+                 # Package would be ignored #
+                 ############################
+                 Python recognizes 'qlib.utils' as an importable package[^1],
+                 but it is absent from setuptools' `packages` configuration.
+
+                 This leads to an ambiguous overall configuration. If you want to distribute this
+                 package, please make sure that 'qlib.utils' is explicitly added
+                 to the `packages` configuration field.
+
+                 Alternatively, you can also rely on setuptools' discovery methods
+                 (for example by using `find_namespace_packages(...)`/`find_namespace:`
+                 instead of `find_packages(...)`/`find:`).
+
+                 You can read more about "package discovery" on setuptools documentation page:
+
+                 - https://setuptools.pypa.io/en/latest/userguide/package_discovery.html
+
+                 If you don't want 'qlib.utils' to be distributed and are
+                 already explicitly excluding 'qlib.utils' via
+                 `find_namespace_packages(...)/find_namespace` or `find_packages(...)/find`,
+                 you can try to use `exclude_package_data`, or `include-package-data=False` in
+                 combination with a more fine grained `package-data` configuration.
+
+                 You can read more about "package data files" on setuptools documentation page:
+
+                 - https://setuptools.pypa.io/en/latest/userguide/datafiles.html
+
+
+                 [^1]: For Python, any directory (with suitable naming) can be imported,
+                       even if it does not contain any `.py` files.
+                       On the other hand, currently there is no concept of package data
+                       directory, all directories are treated like packages.
+                 ********************************************************************************
+
+         !!
+           check.warn(importable)
+         /workspace/scratch/008a76ec4981/Backtest-Benchmark/.work/uv-cache/builds-v0/.tmp6wtBbP/lib/python3.12/site-packages/setuptools/command/build_py.py:215: _Warning: Package 'qlib.workflow' is absent from the `packages` configuration.
+         !!
+
+                 ********************************************************************************
+                 ############################
+                 # Package would be ignored #
+                 ############################
+                 Python recognizes 'qlib.workflow' as an importable package[^1],
+                 but it is absent from setuptools' `packages` configuration.
+
+                 This leads to an ambiguous overall configuration. If you want to distribute this
+                 package, please make sure that 'qlib.workflow' is explicitly added
+                 to the `packages` configuration field.
+
+                 Alternatively, you can also rely on setuptools' discovery methods
+                 (for example by using `find_namespace_packages(...)`/`find_namespace:`
+                 instead of `find_packages(...)`/`find:`).
+
+                 You can read more about "package discovery" on setuptools documentation page:
+
+                 - https://setuptools.pypa.io/en/latest/userguide/package_discovery.html
+
+                 If you don't want 'qlib.workflow' to be distributed and are
+                 already explicitly excluding 'qlib.workflow' via
+                 `find_namespace_packages(...)/find_namespace` or `find_packages(...)/find`,
+                 you can try to use `exclude_package_data`, or `include-package-data=False` in
+                 combination with a more fine grained `package-data` configuration.
+
+                 You can read more about "package data files" on setuptools documentation page:
+
+                 - https://setuptools.pypa.io/en/latest/userguide/datafiles.html
+
+
+                 [^1]: For Python, any directory (with suitable naming) can be imported,
+                       even if it does not contain any `.py` files.
+                       On the other hand, currently there is no concept of package data
+                       directory, all directories are treated like packages.
+                 ********************************************************************************
+
+         !!
+           check.warn(importable)
+         /workspace/scratch/008a76ec4981/Backtest-Benchmark/.work/uv-cache/builds-v0/.tmp6wtBbP/lib/python3.12/site-packages/setuptools/command/build_py.py:215: _Warning: Package 'qlib.workflow.online' is absent from the `packages` configuration.
+         !!
+
+                 ********************************************************************************
+                 ############################
+                 # Package would be ignored #
+                 ############################
+                 Python recognizes 'qlib.workflow.online' as an importable package[^1],
+                 but it is absent from setuptools' `packages` configuration.
+
+                 This leads to an ambiguous overall configuration. If you want to distribute this
+                 package, please make sure that 'qlib.workflow.online' is explicitly added
+                 to the `packages` configuration field.
+
+                 Alternatively, you can also rely on setuptools' discovery methods
+                 (for example by using `find_namespace_packages(...)`/`find_namespace:`
+                 instead of `find_packages(...)`/`find:`).
+
+                 You can read more about "package discovery" on setuptools documentation page:
+
+                 - https://setuptools.pypa.io/en/latest/userguide/package_discovery.html
+
+                 If you don't want 'qlib.workflow.online' to be distributed and are
+                 already explicitly excluding 'qlib.workflow.online' via
+                 `find_namespace_packages(...)/find_namespace` or `find_packages(...)/find`,
+                 you can try to use `exclude_package_data`, or `include-package-data=False` in
+                 combination with a more fine grained `package-data` configuration.
+
+                 You can read more about "package data files" on setuptools documentation page:
+
+                 - https://setuptools.pypa.io/en/latest/userguide/datafiles.html
+
+
+                 [^1]: For Python, any directory (with suitable naming) can be imported,
+                       even if it does not contain any `.py` files.
+                       On the other hand, currently there is no concept of package data
+                       directory, all directories are treated like packages.
+                 ********************************************************************************
+
+         !!
+           check.warn(importable)
+         /workspace/scratch/008a76ec4981/Backtest-Benchmark/.work/uv-cache/builds-v0/.tmp6wtBbP/lib/python3.12/site-packages/setuptools/command/build_py.py:215: _Warning: Package 'qlib.workflow.task' is absent from the `packages` configuration.
+         !!
+
+                 ********************************************************************************
+                 ############################
+                 # Package would be ignored #
+                 ############################
+                 Python recognizes 'qlib.workflow.task' as an importable package[^1],
+                 but it is absent from setuptools' `packages` configuration.
+
+                 This leads to an ambiguous overall configuration. If you want to distribute this
+                 package, please make sure that 'qlib.workflow.task' is explicitly added
+                 to the `packages` configuration field.
+
+                 Alternatively, you can also rely on setuptools' discovery methods
+                 (for example by using `find_namespace_packages(...)`/`find_namespace:`
+                 instead of `find_packages(...)`/`find:`).
+
+                 You can read more about "package discovery" on setuptools documentation page:
+
+                 - https://setuptools.pypa.io/en/latest/userguide/package_discovery.html
+
+                 If you don't want 'qlib.workflow.task' to be distributed and are
+                 already explicitly excluding 'qlib.workflow.task' via
+                 `find_namespace_packages(...)/find_namespace` or `find_packages(...)/find`,
+                 you can try to use `exclude_package_data`, or `include-package-data=False` in
+                 combination with a more fine grained `package-data` configuration.
+
+                 You can read more about "package data files" on setuptools documentation page:
+
+                 - https://setuptools.pypa.io/en/latest/userguide/datafiles.html
+
+
+                 [^1]: For Python, any directory (with suitable naming) can be imported,
+                       even if it does not contain any `.py` files.
+                       On the other hand, currently there is no concept of package data
+                       directory, all directories are treated like packages.
+                 ********************************************************************************
+
+         !!
+           check.warn(importable)
+         error: [Errno 2] No such file or directory: 'clang++'
+
+hint: Build failures usually indicate a problem with the package or the build environment

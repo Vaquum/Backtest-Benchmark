@@ -1,0 +1,13 @@
+{
+  "ok": true,
+  "assessment_rows": 546,
+  "expected_rows": 546,
+  "candidates": 13,
+  "criteria": 42,
+  "source_references": 1309,
+  "local_source_files_checked": 0,
+  "scope": "Assessment structure and pinned source-link syntax only; local source files and line bounds were not checked.",
+  "campaigns": [],
+  "limitations": "This read-only gate does not verify local git/build byte identity, interpret whether source lines support a claim, exclude comments within code, replay numerical/statistical results, or enforce CPU/thread-pool isolation.",
+  "errors": []
+}

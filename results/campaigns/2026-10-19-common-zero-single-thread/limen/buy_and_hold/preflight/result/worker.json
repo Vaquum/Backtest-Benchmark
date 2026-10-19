@@ -1,0 +1,337 @@
+{
+  "schema_version": 1,
+  "engine": "limen",
+  "mode": "preflight",
+  "started_utc": "2026-10-19T18:32:12.053447+00:00",
+  "status": "verified",
+  "timing_samples": [],
+  "core_diagnostic_samples": [],
+  "measurement_policy": "Untimed preflight precedes independent fresh timed worker; each timed result is checked outside its timed region",
+  "benchmark_code_manifest_sha256": "d97d3526aa473df05b3c53ec1569e6f849993c250c22737e729a1782624d918a",
+  "provenance": {
+    "catalog": {
+      "id": "limen",
+      "repository": "Vaquum/Limen",
+      "name": "Limen",
+      "track": "baseline",
+      "url": "https://github.com/Vaquum/Limen",
+      "commit": "29837e666604eee74a2ac94f328fb9803724342a",
+      "commit_date": "2026-10-19T17:59:12+03:00",
+      "source_url": "https://github.com/Vaquum/Limen/tree/29837e666604eee74a2ac94f328fb9803724342a",
+      "license_files": [
+        {
+          "path": "LICENSE",
+          "sha256": "91520bc6b0382654ae49e3fb93b5484b3296cc6306fa0563c1d8e85f19aec9a5",
+          "url": "https://github.com/Vaquum/Limen/blob/29837e666604eee74a2ac94f328fb9803724342a/LICENSE"
+        }
+      ],
+      "revision_policy": "Previously reviewed baseline retained; no claim this is the newest Limen revision",
+      "eligibility": "source_auditable",
+      "license_label": "MIT",
+      "license_scope": "Observed repository license text; third-party components retain their own terms. This label does not authorize a particular redistribution or commercial deployment.",
+      "source_category": "public_source"
+    },
+    "source_commit_verified": "29837e666604eee74a2ac94f328fb9803724342a",
+    "source_path": "/workspace/scratch/008a76ec4981/limen-review-source",
+    "tracked_source_clean": true,
+    "distribution": "vaquum-limen",
+    "distribution_version": "5.40.1",
+    "direct_url": {
+      "url": "file:///workspace/scratch/008a76ec4981/benchmark-sources/limen",
+      "dir_info": {}
+    },
+    "installed_code_files": 473,
+    "installed_code_sha256": "24c435f78410d7883c7b752796c6e0545c9f71dc007d1932d5595bd259135cb1",
+    "setup_manifest_sha256": "c5b1f13d69ea529fc37a43b2262d8ef219fa5e22f8b239edbc89ff2e998f950d",
+    "system_site_packages": false,
+    "observed_candidate_imports": {
+      "limen": "/workspace/scratch/008a76ec4981/Backtest-Benchmark/.work/envs/limen/lib/python3.12/site-packages/limen/__init__.py",
+      "limen.backtest.long_flat_strategy": "/workspace/scratch/008a76ec4981/Backtest-Benchmark/.work/envs/limen/lib/python3.12/site-packages/limen/backtest/long_flat_strategy.py",
+      "limen.backtest._snapshot_ledger": "/workspace/scratch/008a76ec4981/Backtest-Benchmark/.work/envs/limen/lib/python3.12/site-packages/limen/backtest/_snapshot_ledger.py",
+      "limen.backtest._long_flat_tp_sl": "/workspace/scratch/008a76ec4981/Backtest-Benchmark/.work/envs/limen/lib/python3.12/site-packages/limen/backtest/_long_flat_tp_sl.py",
+      "limen.backtest._snapshot_execution": "/workspace/scratch/008a76ec4981/Backtest-Benchmark/.work/envs/limen/lib/python3.12/site-packages/limen/backtest/_snapshot_execution.py",
+      "limen.backtest.backtest_snapshot": "/workspace/scratch/008a76ec4981/Backtest-Benchmark/.work/envs/limen/lib/python3.12/site-packages/limen/backtest/backtest_snapshot.py",
+      "limen.backtest.trade_contract": "/workspace/scratch/008a76ec4981/Backtest-Benchmark/.work/envs/limen/lib/python3.12/site-packages/limen/backtest/trade_contract.py",
+      "limen.backtest.execution_events": "/workspace/scratch/008a76ec4981/Backtest-Benchmark/.work/envs/limen/lib/python3.12/site-packages/limen/backtest/execution_events.py",
+      "limen.backtest._event_plan": "/workspace/scratch/008a76ec4981/Backtest-Benchmark/.work/envs/limen/lib/python3.12/site-packages/limen/backtest/_event_plan.py",
+      "limen.backtest._event_clock": "/workspace/scratch/008a76ec4981/Backtest-Benchmark/.work/envs/limen/lib/python3.12/site-packages/limen/backtest/_event_clock.py",
+      "limen.backtest.funding_adapter": "/workspace/scratch/008a76ec4981/Backtest-Benchmark/.work/envs/limen/lib/python3.12/site-packages/limen/backtest/funding_adapter.py",
+      "limen.backtest.trade_execution": "/workspace/scratch/008a76ec4981/Backtest-Benchmark/.work/envs/limen/lib/python3.12/site-packages/limen/backtest/trade_execution.py",
+      "limen.backtest": "/workspace/scratch/008a76ec4981/Backtest-Benchmark/.work/envs/limen/lib/python3.12/site-packages/limen/backtest/__init__.py"
+    }
+  },
+  "source_verification_ms": 31.755189,
+  "prepared_load_ms": 2.156923,
+  "prepared_arrays_sha256": "5205d28c2d6652fed69f0324522853b53f9a52d481778227240153d86ebd4864",
+  "contract": {
+    "initial_cash": 1000000,
+    "fee_bps": 0,
+    "slippage_bps": 0,
+    "signal_delay_bars": 1,
+    "equity_rtol": 1e-10,
+    "equity_atol": 1e-06,
+    "price_rtol": 1e-12,
+    "price_atol": 1e-08,
+    "quantity_rtol": 1e-10,
+    "quantity_atol": 1e-10,
+    "schema_version": 1,
+    "name": "prior-close-decision_next-close-fill_long-flat_v1",
+    "sizing": "All affordable continuous units on entry; hold units until exit; no ongoing rebalancing",
+    "signal_availability": "Decision uses only the prefix through close[t]; earliest fill is close[t+1]",
+    "fill_price": "Entry close*(1+slippage); exit close*(1-slippage)",
+    "fee_basis": "fee_bps/10000 times actual fill price times absolute executed quantity",
+    "equity_observation": "Cash plus units marked at the unadjusted close, after the close fill",
+    "held_observation": "Incoming held state over the interval ending at the current close, before its fill",
+    "terminal_rule": "Predeclared liquidation at penultimate real close; final real row settles delayed bookkeeping",
+    "unmodelled": [
+      "market impact",
+      "partial fills",
+      "funding",
+      "borrowing",
+      "corporate actions",
+      "exchange calendars"
+    ]
+  },
+  "oracle_ms": 3.342592,
+  "adapter_prepare_ms": 106.395481,
+  "engine_scope": "snapshot_with_execution: snapshot validation, return execution and all native bar metrics; internal implementation called to retain trace",
+  "settings": {
+    "execution_lag_bars": 1,
+    "input_target_already_delayed": true,
+    "lag_mapping": "target[t] fills at close[t]; native pos[t+1] earns close[t] to close[t+1]",
+    "public_entrypoint_equivalent": "backtest_snapshot discards execution from the same implementation",
+    "processed_rows": 8783
+  },
+  "output_observation": {
+    "equity": "Compounded native net returns",
+    "held": "Native ExecutionResult.pos",
+    "fills": "Derived from native held-segment boundaries and source close prices; no native order ledger",
+    "cash_units_quantities_fees": "Not emitted by this return-based engine"
+  },
+  "rank_against_full_engine": true,
+  "runtime": {
+    "python": "3.12.14 (main, Aug 25 2026, 14:00:49) [Clang 22.1.3 ]",
+    "executable": "/workspace/scratch/008a76ec4981/Backtest-Benchmark/.work/envs/limen/bin/python",
+    "prefix": "/workspace/scratch/008a76ec4981/Backtest-Benchmark/.work/envs/limen",
+    "platform": "Linux-6.18.55-x86_64-with-glibc2.39",
+    "machine": "x86_64",
+    "cpu_model": null,
+    "logical_cpus_visible": 9,
+    "cpu_affinity": [
+      0,
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8
+    ],
+    "container_constraints": {},
+    "thread_environment": {
+      "OMP_NUM_THREADS": "1",
+      "OPENBLAS_NUM_THREADS": "1",
+      "MKL_NUM_THREADS": "1",
+      "VECLIB_MAXIMUM_THREADS": "1",
+      "NUMEXPR_NUM_THREADS": "1",
+      "NUMBA_NUM_THREADS": "1",
+      "RAYON_NUM_THREADS": "1",
+      "BLIS_NUM_THREADS": "1",
+      "POLARS_MAX_THREADS": "1"
+    },
+    "packages": [
+      {
+        "name": "certifi",
+        "version": "2026.10.18"
+      },
+      {
+        "name": "charset-normalizer",
+        "version": "3.5.2"
+      },
+      {
+        "name": "click",
+        "version": "8.5.0"
+      },
+      {
+        "name": "cloudpickle",
+        "version": "3.1.2"
+      },
+      {
+        "name": "Cython",
+        "version": "3.3.0"
+      },
+      {
+        "name": "hatch-cython",
+        "version": "0.6.0"
+      },
+      {
+        "name": "hatchling",
+        "version": "1.32.4"
+      },
+      {
+        "name": "idna",
+        "version": "3.20"
+      },
+      {
+        "name": "joblib",
+        "version": "1.6.0"
+      },
+      {
+        "name": "narwhals",
+        "version": "2.27.1"
+      },
+      {
+        "name": "numpy",
+        "version": "2.2.6"
+      },
+      {
+        "name": "packaging",
+        "version": "26.3"
+      },
+      {
+        "name": "pandas",
+        "version": "2.3.3"
+      },
+      {
+        "name": "pathspec",
+        "version": "1.1.1"
+      },
+      {
+        "name": "pluggy",
+        "version": "1.7.0"
+      },
+      {
+        "name": "polars",
+        "version": "1.44.2"
+      },
+      {
+        "name": "polars-runtime-32",
+        "version": "1.44.2"
+      },
+      {
+        "name": "pyarrow",
+        "version": "23.0.1"
+      },
+      {
+        "name": "python-dateutil",
+        "version": "2.9.0.post0"
+      },
+      {
+        "name": "pytz",
+        "version": "2026.5"
+      },
+      {
+        "name": "requests",
+        "version": "2.34.2"
+      },
+      {
+        "name": "ruamel.yaml",
+        "version": "0.18.17"
+      },
+      {
+        "name": "ruamel.yaml.clib",
+        "version": "0.2.15"
+      },
+      {
+        "name": "scikit-learn",
+        "version": "1.9.1"
+      },
+      {
+        "name": "scipy",
+        "version": "1.18.1"
+      },
+      {
+        "name": "setuptools",
+        "version": "84.0.0"
+      },
+      {
+        "name": "six",
+        "version": "1.17.0"
+      },
+      {
+        "name": "threadpoolctl",
+        "version": "3.6.0"
+      },
+      {
+        "name": "tomlkit",
+        "version": "0.15.2"
+      },
+      {
+        "name": "tqdm",
+        "version": "4.70.1"
+      },
+      {
+        "name": "trove-classifiers",
+        "version": "2026.9.21.13"
+      },
+      {
+        "name": "typing_extensions",
+        "version": "4.16.0"
+      },
+      {
+        "name": "tzdata",
+        "version": "2026.5"
+      },
+      {
+        "name": "urllib3",
+        "version": "2.8.0"
+      },
+      {
+        "name": "vaquum-limen",
+        "version": "5.40.1"
+      },
+      {
+        "name": "wheel",
+        "version": "0.48.0"
+      }
+    ],
+    "threadpools": [
+      {
+        "user_api": "blas",
+        "internal_api": "openblas",
+        "num_threads": 1,
+        "prefix": "libscipy_openblas",
+        "filepath": "/workspace/scratch/008a76ec4981/Backtest-Benchmark/.work/envs/limen/lib/python3.12/site-packages/numpy.libs/libscipy_openblas64_-56d6093b.so",
+        "version": "0.3.29",
+        "threading_layer": "pthreads",
+        "architecture": "SkylakeX"
+      }
+    ],
+    "native_thread_observations": {
+      "polars": {
+        "loaded": true,
+        "pool_size": 1,
+        "version": "1.44.2"
+      }
+    }
+  },
+  "summary": {
+    "final_equity": 2193875.3767579296,
+    "total_return": 1.1938753767579295,
+    "max_drawdown": -0.32310690722077795,
+    "mean_bar_return": 0.00010524043731847847,
+    "held_fraction": 0.9997722873733349,
+    "entries": 1,
+    "exits": 1
+  },
+  "parity": {
+    "equity_samples_checked": 8783,
+    "fills_checked": 2,
+    "max_abs_equity_error": 8.102506399154663e-08,
+    "max_relative_equity_error": 3.608337086097281e-14,
+    "optional_observed_fields_checked": [],
+    "optional_unobserved_fields": [
+      "cash",
+      "units",
+      "fill_quantities",
+      "fill_fees"
+    ],
+    "actual_result_arrays_sha256": "6d1813fa00aa009ee03818809d76fddfffce4edc22592391f663ef912668c4ff"
+  },
+  "peak_rss_bytes_after_first": 122187776,
+  "peak_rss_bytes_after_full_calls": 122187776,
+  "core_diagnostic_scope": "Internal long_flat_strategy return kernel only; diagnostic, not a cross-framework full-engine ranking",
+  "peak_rss_bytes_final": 122187776,
+  "rss_scope": "Process lifetime high-water memory, including imports, validation, all repetitions, and optional separately labeled core diagnostics; Linux KiB converted to bytes, macOS bytes unchanged"
+}

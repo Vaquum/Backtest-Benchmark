@@ -1,0 +1,15 @@
+{
+  "command": [
+    "uv",
+    "pip",
+    "compile",
+    "--generate-hashes",
+    "--python",
+    "/workspace/scratch/008a76ec4981/Backtest-Benchmark/.work/envs/freqtrade/bin/python",
+    "--output-file",
+    "/workspace/scratch/008a76ec4981/Backtest-Benchmark/locks/freqtrade.txt",
+    "/workspace/scratch/008a76ec4981/Backtest-Benchmark/environments/freqtrade.txt"
+  ],
+  "returncode": 0,
+  "status": "passed"
+}

@@ -1,0 +1,84 @@
+{
+  "schema_version": 1,
+  "engine": "backtesting_py",
+  "mode": "preflight",
+  "started_utc": "2026-10-19T17:36:56.805450+00:00",
+  "status": "unsupported_contract",
+  "timing_samples": [],
+  "core_diagnostic_samples": [],
+  "measurement_policy": "Untimed preflight precedes independent fresh timed worker; each timed result is checked outside its timed region",
+  "provenance": {
+    "catalog": {
+      "id": "backtesting_py",
+      "repository": "kernc/backtesting.py",
+      "name": "backtesting.py",
+      "track": "execution",
+      "url": "https://github.com/kernc/backtesting.py",
+      "commit": "ca2e2611621e472542ba90f7243a1fa06a7d7108",
+      "commit_date": "2026-08-05T14:39:16+02:00",
+      "source_url": "https://github.com/kernc/backtesting.py/tree/ca2e2611621e472542ba90f7243a1fa06a7d7108",
+      "license_files": [
+        {
+          "path": "LICENSE.md",
+          "sha256": "ad858d53cae05eed9531ecd4c467440803acffe34c69de7b88e03affc5b6a1bd",
+          "url": "https://github.com/kernc/backtesting.py/blob/ca2e2611621e472542ba90f7243a1fa06a7d7108/LICENSE.md"
+        }
+      ],
+      "revision_policy": "Default branch HEAD captured 2026-10-19",
+      "eligibility": "source_auditable",
+      "license_label": "AGPL-3.0",
+      "license_scope": "Observed repository license text; third-party components retain their own terms. This label does not authorize a particular redistribution or commercial deployment.",
+      "source_category": "public_source"
+    },
+    "source_commit_verified": "ca2e2611621e472542ba90f7243a1fa06a7d7108",
+    "source_path": "/workspace/scratch/008a76ec4981/benchmark-sources/backtesting_py",
+    "tracked_source_clean": true,
+    "distribution": "backtesting",
+    "distribution_version": "0.1.dev1+gca2e26116",
+    "direct_url": {
+      "url": "file:///workspace/scratch/008a76ec4981/benchmark-sources/backtesting_py",
+      "dir_info": {}
+    },
+    "installed_code_files": 10,
+    "installed_code_sha256": "da4358729df4802a5f031cbb5e7bdb8c5bc77993ecde882ab61c4df5d6cb923a",
+    "setup_manifest_sha256": "83a0a2ddb91341c024b9579e6f9fb5db26e47c0e63807f10dcae958e0a840bd6",
+    "system_site_packages": false
+  },
+  "source_verification_ms": 9.87135,
+  "prepared_load_ms": 1.57767,
+  "prepared_arrays_sha256": "6ed121548c11927b7f74f01d686d54a88c1a64fa81bcaac2875213f53e992167",
+  "contract": {
+    "initial_cash": 1000000,
+    "fee_bps": 5.0,
+    "slippage_bps": 5.0,
+    "signal_delay_bars": 1,
+    "equity_rtol": 1e-10,
+    "equity_atol": 1e-06,
+    "price_rtol": 1e-12,
+    "price_atol": 1e-08,
+    "quantity_rtol": 1e-10,
+    "quantity_atol": 1e-10,
+    "schema_version": 1,
+    "name": "prior-close-decision_next-close-fill_long-flat_v1",
+    "sizing": "All affordable continuous units on entry; hold units until exit; no ongoing rebalancing",
+    "signal_availability": "Decision uses only the prefix through close[t]; earliest fill is close[t+1]",
+    "fill_price": "Entry close*(1+slippage); exit close*(1-slippage)",
+    "fee_basis": "fee_bps/10000 times actual fill price times absolute executed quantity",
+    "equity_observation": "Cash plus units marked at the unadjusted close, after the close fill",
+    "held_observation": "Incoming held state over the interval ending at the current close, before its fill",
+    "terminal_rule": "Predeclared liquidation at penultimate real close; final real row settles delayed bookkeeping",
+    "unmodelled": [
+      "market impact",
+      "partial fills",
+      "funding",
+      "borrowing",
+      "corporate actions",
+      "exchange calendars"
+    ]
+  },
+  "oracle_ms": 0.494316,
+  "error": "UnsupportedContract: The current FractionalBacktest adapter admits only zero costs; cost-time observations and spread semantics require a separate validated adapter",
+  "traceback": "Traceback (most recent call last):\n  File \"/workspace/scratch/008a76ec4981/Backtest-Benchmark/bench/worker.py\", line 77, in main\n    adapter = create_adapter(args.engine, data, contract)\n              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/workspace/scratch/008a76ec4981/Backtest-Benchmark/bench/adapters/__init__.py\", line 18, in create_adapter\n    adapter = module.create_adapter(data, contract)\n              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/workspace/scratch/008a76ec4981/Backtest-Benchmark/bench/adapters/backtesting_py.py\", line 15, in create_adapter\n    raise UnsupportedContract('The current FractionalBacktest adapter admits only zero costs; cost-time observations and spread semantics require a separate validated adapter')\nbench.api.UnsupportedContract: The current FractionalBacktest adapter admits only zero costs; cost-time observations and spread semantics require a separate validated adapter\n",
+  "timings_admitted": false,
+  "peak_rss_bytes_final": 145686528
+}

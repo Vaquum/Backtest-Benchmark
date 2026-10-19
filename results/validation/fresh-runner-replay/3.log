@@ -1,0 +1,10 @@
+Using Python 3.12.14 environment at: .work/repro-envs/limen
+[
+  {
+    "engine": "limen",
+    "status": "installed",
+    "attempt": "/workspace/scratch/008a76ec4981/Backtest-Benchmark/.work/bootstrap/limen/attempt-1792434251682064838",
+    "error": null,
+    "python": "/workspace/scratch/008a76ec4981/Backtest-Benchmark/.work/repro-envs/limen/bin/python"
+  }
+]

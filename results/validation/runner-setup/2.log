@@ -1,0 +1,19 @@
+Resolved 14 packages in 4ms
+Downloading pygments (1.2MiB)
+ Downloaded pygments
+Prepared 8 packages in 169ms
+Installed 14 packages in 62ms
+ + iniconfig==2.3.1
+ + numpy==2.2.6
+ + packaging==26.3
+ + pandas==2.3.3
+ + pluggy==1.7.0
+ + pyarrow==23.0.1
+ + pygments==2.21.0
+ + pytest==9.1.1
+ + python-dateutil==2.9.0.post0
+ + pytz==2026.5
+ + setuptools==84.0.0
+ + six==1.17.0
+ + tzdata==2026.5
+ + wheel==0.48.0

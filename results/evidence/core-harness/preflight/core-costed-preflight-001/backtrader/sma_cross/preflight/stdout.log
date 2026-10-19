@@ -1,0 +1,15 @@
+@@BENCH_EVENT@@{"event": "ready", "worker_perf_counter_ns": 38229783784588}
+/workspace/scratch/008a76ec4981/Backtest-Benchmark/.work/envs/backtrader/lib/python3.12/site-packages/backtrader/cerebro.py:675: SyntaxWarning: invalid escape sequence '\*'
+  - callback(msg, \*args, \*\*kwargs)
+/workspace/scratch/008a76ec4981/Backtest-Benchmark/.work/envs/backtrader/lib/python3.12/site-packages/backtrader/cerebro.py:717: SyntaxWarning: invalid escape sequence '\*'
+  - callback(data, status, \*args, \*\*kwargs)
+Traceback (most recent call last):
+  File "/workspace/scratch/008a76ec4981/Backtest-Benchmark/bench/worker.py", line 77, in main
+    adapter = create_adapter(args.engine, data, contract)
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/workspace/scratch/008a76ec4981/Backtest-Benchmark/bench/adapters/__init__.py", line 18, in create_adapter
+    adapter = module.create_adapter(data, contract)
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/workspace/scratch/008a76ec4981/Backtest-Benchmark/bench/adapters/backtrader.py", line 14, in create_adapter
+    raise UnsupportedContract('The current Backtrader close-on-close adapter admits zero costs only; fill-time cost equity needs a separately validated observation route')
+bench.api.UnsupportedContract: The current Backtrader close-on-close adapter admits zero costs only; fill-time cost equity needs a separately validated observation route

@@ -1,0 +1,2457 @@
+{
+  "schema_version": 1,
+  "command": "verify",
+  "started_utc": "2026-10-19T17:36:27.273135+00:00",
+  "contract": {
+    "initial_cash": 1000000,
+    "fee_bps": 0,
+    "slippage_bps": 0,
+    "signal_delay_bars": 1,
+    "equity_rtol": 1e-10,
+    "equity_atol": 1e-06,
+    "price_rtol": 1e-12,
+    "price_atol": 1e-08,
+    "quantity_rtol": 1e-10,
+    "quantity_atol": 1e-10,
+    "schema_version": 1,
+    "name": "prior-close-decision_next-close-fill_long-flat_v1",
+    "sizing": "All affordable continuous units on entry; hold units until exit; no ongoing rebalancing",
+    "signal_availability": "Decision uses only the prefix through close[t]; earliest fill is close[t+1]",
+    "fill_price": "Entry close*(1+slippage); exit close*(1-slippage)",
+    "fee_basis": "fee_bps/10000 times actual fill price times absolute executed quantity",
+    "equity_observation": "Cash plus units marked at the unadjusted close, after the close fill",
+    "held_observation": "Incoming held state over the interval ending at the current close, before its fill",
+    "terminal_rule": "Predeclared liquidation at penultimate real close; final real row settles delayed bookkeeping",
+    "unmodelled": [
+      "market impact",
+      "partial fills",
+      "funding",
+      "borrowing",
+      "corporate actions",
+      "exchange calendars"
+    ]
+  },
+  "arguments": {
+    "command": "verify",
+    "input": "/workspace/scratch/008a76ec4981/benchmark-sources/limen/tests/fixtures/spot_1h_20240101_20241231.parquet",
+    "expected_sha256": "a634bbd4f3692fac7bc88512da588e7772f4bd1b749567606d5314e54d0adf72",
+    "output": "/workspace/scratch/008a76ec4981/Backtest-Benchmark/.work/runs/core-preflight-retest-003",
+    "engines": [
+      "backtesting_py",
+      "bt"
+    ],
+    "strategies": [
+      "buy_and_hold",
+      "sma_cross",
+      "flat"
+    ],
+    "rows": 999,
+    "env_root": "/workspace/scratch/008a76ec4981/Backtest-Benchmark/.work/envs",
+    "timestamp_column": "datetime",
+    "timestamp_semantics": "bar_open",
+    "interval_seconds": 3600,
+    "initial_cash": 1000000,
+    "fee_bps": 0,
+    "slippage_bps": 0,
+    "processes": 3,
+    "warm_repeats": 7,
+    "timeout_seconds": 300,
+    "diagnostic_core": false
+  },
+  "cases": [
+    {
+      "engine": "backtesting_py",
+      "strategy": "buy_and_hold",
+      "measurements": [],
+      "requested_processes": 0,
+      "preflight": {
+        "worker": {
+          "schema_version": 1,
+          "engine": "backtesting_py",
+          "mode": "preflight",
+          "started_utc": "2026-10-19T17:36:27.552037+00:00",
+          "status": "verified",
+          "timing_samples": [],
+          "core_diagnostic_samples": [],
+          "measurement_policy": "Untimed preflight precedes independent fresh timed worker; each timed result is checked outside its timed region",
+          "provenance": {
+            "catalog": {
+              "id": "backtesting_py",
+              "repository": "kernc/backtesting.py",
+              "name": "backtesting.py",
+              "track": "execution",
+              "url": "https://github.com/kernc/backtesting.py",
+              "commit": "ca2e2611621e472542ba90f7243a1fa06a7d7108",
+              "commit_date": "2026-08-05T14:39:16+02:00",
+              "source_url": "https://github.com/kernc/backtesting.py/tree/ca2e2611621e472542ba90f7243a1fa06a7d7108",
+              "license_files": [
+                {
+                  "path": "LICENSE.md",
+                  "sha256": "ad858d53cae05eed9531ecd4c467440803acffe34c69de7b88e03affc5b6a1bd",
+                  "url": "https://github.com/kernc/backtesting.py/blob/ca2e2611621e472542ba90f7243a1fa06a7d7108/LICENSE.md"
+                }
+              ],
+              "revision_policy": "Default branch HEAD captured 2026-10-19",
+              "eligibility": "source_auditable",
+              "license_label": "AGPL-3.0",
+              "license_scope": "Observed repository license text; third-party components retain their own terms. This label does not authorize a particular redistribution or commercial deployment.",
+              "source_category": "public_source"
+            },
+            "source_commit_verified": "ca2e2611621e472542ba90f7243a1fa06a7d7108",
+            "source_path": "/workspace/scratch/008a76ec4981/benchmark-sources/backtesting_py",
+            "tracked_source_clean": true,
+            "distribution": "backtesting",
+            "distribution_version": "0.1.dev1+gca2e26116",
+            "direct_url": {
+              "url": "file:///workspace/scratch/008a76ec4981/benchmark-sources/backtesting_py",
+              "dir_info": {}
+            },
+            "installed_code_files": 10,
+            "installed_code_sha256": "da4358729df4802a5f031cbb5e7bdb8c5bc77993ecde882ab61c4df5d6cb923a",
+            "setup_manifest_sha256": "83a0a2ddb91341c024b9579e6f9fb5db26e47c0e63807f10dcae958e0a840bd6",
+            "system_site_packages": false
+          },
+          "source_verification_ms": 9.161946,
+          "prepared_load_ms": 1.624771,
+          "prepared_arrays_sha256": "6ed121548c11927b7f74f01d686d54a88c1a64fa81bcaac2875213f53e992167",
+          "contract": {
+            "initial_cash": 1000000,
+            "fee_bps": 0,
+            "slippage_bps": 0,
+            "signal_delay_bars": 1,
+            "equity_rtol": 1e-10,
+            "equity_atol": 1e-06,
+            "price_rtol": 1e-12,
+            "price_atol": 1e-08,
+            "quantity_rtol": 1e-10,
+            "quantity_atol": 1e-10,
+            "schema_version": 1,
+            "name": "prior-close-decision_next-close-fill_long-flat_v1",
+            "sizing": "All affordable continuous units on entry; hold units until exit; no ongoing rebalancing",
+            "signal_availability": "Decision uses only the prefix through close[t]; earliest fill is close[t+1]",
+            "fill_price": "Entry close*(1+slippage); exit close*(1-slippage)",
+            "fee_basis": "fee_bps/10000 times actual fill price times absolute executed quantity",
+            "equity_observation": "Cash plus units marked at the unadjusted close, after the close fill",
+            "held_observation": "Incoming held state over the interval ending at the current close, before its fill",
+            "terminal_rule": "Predeclared liquidation at penultimate real close; final real row settles delayed bookkeeping",
+            "unmodelled": [
+              "market impact",
+              "partial fills",
+              "funding",
+              "borrowing",
+              "corporate actions",
+              "exchange calendars"
+            ]
+          },
+          "oracle_ms": 0.392512,
+          "adapter_prepare_ms": 538.376424,
+          "engine_scope": "Public FractionalBacktest.run including broker event loop, fractional conversion, equity and native performance statistics",
+          "settings": {
+            "trade_on_close": true,
+            "fractional_unit": 1e-12,
+            "buy_fraction": 0.9999999999999999,
+            "finalize_trades": false,
+            "processed_rows": 1000,
+            "native_stats_requested": true
+          },
+          "output_observation": {
+            "equity": "Native equity curve; its first backfilled slot replaced with the actual initial strategy equity observation",
+            "held_and_fills": "Native completed trade entry/exit bars, prices and fractional quantities",
+            "cash_units_fees": "Not separately observed by this adapter"
+          },
+          "rank_against_full_engine": true,
+          "runtime": {
+            "python": "3.12.14 (main, Aug 25 2026, 14:00:49) [Clang 22.1.3 ]",
+            "executable": "/workspace/scratch/008a76ec4981/Backtest-Benchmark/.work/envs/backtesting_py/bin/python",
+            "prefix": "/workspace/scratch/008a76ec4981/Backtest-Benchmark/.work/envs/backtesting_py",
+            "platform": "Linux-6.18.55-x86_64-with-glibc2.39",
+            "machine": "x86_64",
+            "cpu_model": null,
+            "logical_cpus_visible": 9,
+            "cpu_affinity": [
+              0,
+              1,
+              2,
+              3,
+              4,
+              5,
+              6,
+              7,
+              8
+            ],
+            "container_constraints": {},
+            "thread_environment": {
+              "OMP_NUM_THREADS": "1",
+              "OPENBLAS_NUM_THREADS": "1",
+              "MKL_NUM_THREADS": "1",
+              "VECLIB_MAXIMUM_THREADS": "1",
+              "NUMEXPR_NUM_THREADS": "1",
+              "NUMBA_NUM_THREADS": "1",
+              "RAYON_NUM_THREADS": "1",
+              "BLIS_NUM_THREADS": "1"
+            },
+            "packages": [
+              {
+                "name": "backtesting",
+                "version": "0.1.dev1+gca2e26116"
+              },
+              {
+                "name": "backtesting",
+                "version": "0.0.0"
+              },
+              {
+                "name": "bokeh",
+                "version": "3.10.1"
+              },
+              {
+                "name": "Cython",
+                "version": "3.3.0"
+              },
+              {
+                "name": "hatch-cython",
+                "version": "0.6.0"
+              },
+              {
+                "name": "hatchling",
+                "version": "1.32.4"
+              },
+              {
+                "name": "Jinja2",
+                "version": "3.1.6"
+              },
+              {
+                "name": "MarkupSafe",
+                "version": "3.0.4"
+              },
+              {
+                "name": "narwhals",
+                "version": "2.27.1"
+              },
+              {
+                "name": "numpy",
+                "version": "2.2.6"
+              },
+              {
+                "name": "packaging",
+                "version": "26.3"
+              },
+              {
+                "name": "pandas",
+                "version": "2.3.3"
+              },
+              {
+                "name": "pathspec",
+                "version": "1.1.1"
+              },
+              {
+                "name": "pillow",
+                "version": "13.0.0"
+              },
+              {
+                "name": "pluggy",
+                "version": "1.7.0"
+              },
+              {
+                "name": "pyarrow",
+                "version": "23.0.1"
+              },
+              {
+                "name": "python-dateutil",
+                "version": "2.9.0.post0"
+              },
+              {
+                "name": "pytz",
+                "version": "2026.5"
+              },
+              {
+                "name": "PyYAML",
+                "version": "6.0.3"
+              },
+              {
+                "name": "setuptools",
+                "version": "84.0.0"
+              },
+              {
+                "name": "setuptools-git",
+                "version": "1.2"
+              },
+              {
+                "name": "setuptools-scm",
+                "version": "10.3.4"
+              },
+              {
+                "name": "six",
+                "version": "1.17.0"
+              },
+              {
+                "name": "threadpoolctl",
+                "version": "3.6.0"
+              },
+              {
+                "name": "tomlkit",
+                "version": "0.15.2"
+              },
+              {
+                "name": "tornado",
+                "version": "6.5.10"
+              },
+              {
+                "name": "trove-classifiers",
+                "version": "2026.9.21.13"
+              },
+              {
+                "name": "tzdata",
+                "version": "2026.5"
+              },
+              {
+                "name": "vcs-versioning",
+                "version": "2.6.0"
+              },
+              {
+                "name": "wheel",
+                "version": "0.48.0"
+              },
+              {
+                "name": "xyzservices",
+                "version": "2026.9.1"
+              }
+            ],
+            "threadpools": [
+              {
+                "user_api": "blas",
+                "internal_api": "openblas",
+                "num_threads": 1,
+                "prefix": "libscipy_openblas",
+                "filepath": "/workspace/scratch/008a76ec4981/Backtest-Benchmark/.work/envs/backtesting_py/lib/python3.12/site-packages/numpy.libs/libscipy_openblas64_-56d6093b.so",
+                "version": "0.3.29",
+                "threading_layer": "pthreads",
+                "architecture": "SkylakeX"
+              }
+            ]
+          },
+          "summary": {
+            "final_equity": 1131906.369709544,
+            "total_return": 0.13190636970954395,
+            "max_drawdown": -0.2018372196539382,
+            "mean_bar_return": 0.00013832328321314834,
+            "held_fraction": 0.997997997997998,
+            "entries": 1,
+            "exits": 1
+          },
+          "parity": {
+            "equity_samples_checked": 999,
+            "fills_checked": 2,
+            "max_abs_equity_error": 4.423782229423523e-09,
+            "max_relative_equity_error": 3.893956843508999e-15,
+            "optional_observed_fields_checked": [
+              "fill_quantities"
+            ],
+            "optional_unobserved_fields": [
+              "cash",
+              "units",
+              "fill_fees"
+            ]
+          },
+          "peak_rss_bytes_after_first": 155721728,
+          "peak_rss_bytes_after_full_calls": 155721728,
+          "peak_rss_bytes_final": 155721728,
+          "rss_scope": "Process lifetime high-water memory, including imports, validation, all repetitions, and optional separately labeled core diagnostics; Linux KiB converted to bytes, macOS bytes unchanged"
+        },
+        "process": {
+          "command": [
+            "/workspace/scratch/008a76ec4981/Backtest-Benchmark/.work/envs/backtesting_py/bin/python",
+            "-m",
+            "bench.worker",
+            "--engine",
+            "backtesting_py",
+            "--prepared",
+            "/workspace/scratch/008a76ec4981/Backtest-Benchmark/.work/runs/core-preflight-retest-003/prepared-buy_and_hold.npz",
+            "--prepared-sha256",
+            "928f6143505ce916d7afb6d43a147b6b575e25a41000daa3ae1f55ef21671cf0",
+            "--contract",
+            "/workspace/scratch/008a76ec4981/Backtest-Benchmark/.work/runs/core-preflight-retest-003/contract.json",
+            "--environment-manifest",
+            "/workspace/scratch/008a76ec4981/Backtest-Benchmark/.work/manifests/backtesting_py.json",
+            "--output",
+            "/workspace/scratch/008a76ec4981/Backtest-Benchmark/.work/runs/core-preflight-retest-003/backtesting_py/buy_and_hold/preflight/result",
+            "--mode",
+            "preflight",
+            "--warm-repeats",
+            "7"
+          ],
+          "returncode": 0,
+          "timed_out": false,
+          "process_wall_ms": 1015.706072,
+          "launch_to_ready_ms": 29.768225,
+          "launch_to_first_valid_ms": 763.784907,
+          "parent_observed_events_ms": {
+            "ready": 29.768225,
+            "first_valid": 763.784907,
+            "complete": 764.853228
+          },
+          "stdout_path": "/workspace/scratch/008a76ec4981/Backtest-Benchmark/.work/runs/core-preflight-retest-003/backtesting_py/buy_and_hold/preflight/stdout.log",
+          "startup_scope": "Parent observed process launch to worker ready event, before scientific/engine imports; IPC scheduling is included",
+          "first_valid_scope": "Process launch through source verification, imports, input load, independent oracle, first engine call, extraction and successful parity"
+        },
+        "directory": "/workspace/scratch/008a76ec4981/Backtest-Benchmark/.work/runs/core-preflight-retest-003/backtesting_py/buy_and_hold/preflight"
+      },
+      "preflight_status": "verified",
+      "rank_against_full_engine": true
+    },
+    {
+      "engine": "bt",
+      "strategy": "buy_and_hold",
+      "measurements": [],
+      "requested_processes": 0,
+      "preflight": {
+        "worker": {
+          "schema_version": 1,
+          "engine": "bt",
+          "mode": "preflight",
+          "started_utc": "2026-10-19T17:36:28.573564+00:00",
+          "status": "verified",
+          "timing_samples": [],
+          "core_diagnostic_samples": [],
+          "measurement_policy": "Untimed preflight precedes independent fresh timed worker; each timed result is checked outside its timed region",
+          "provenance": {
+            "catalog": {
+              "id": "bt",
+              "repository": "pmorissette/bt",
+              "name": "bt",
+              "track": "portfolio",
+              "url": "https://github.com/pmorissette/bt",
+              "commit": "4b76bad2dbf3a49e99feb49db3eee1dde2ef8e12",
+              "commit_date": "2026-10-17T14:54:28-04:00",
+              "source_url": "https://github.com/pmorissette/bt/tree/4b76bad2dbf3a49e99feb49db3eee1dde2ef8e12",
+              "license_files": [
+                {
+                  "path": "LICENSE",
+                  "sha256": "8711471566d722d55eca3f09196f342b2ee2960616e68127ec2a17b39ff99949",
+                  "url": "https://github.com/pmorissette/bt/blob/4b76bad2dbf3a49e99feb49db3eee1dde2ef8e12/LICENSE"
+                }
+              ],
+              "revision_policy": "Default branch HEAD captured 2026-10-19",
+              "eligibility": "source_auditable",
+              "license_label": "MIT",
+              "license_scope": "Observed repository license text; third-party components retain their own terms. This label does not authorize a particular redistribution or commercial deployment.",
+              "source_category": "public_source"
+            },
+            "source_commit_verified": "4b76bad2dbf3a49e99feb49db3eee1dde2ef8e12",
+            "source_path": "/workspace/scratch/008a76ec4981/benchmark-sources/bt",
+            "tracked_source_clean": true,
+            "distribution": "bt",
+            "distribution_version": "1.4.1",
+            "direct_url": {
+              "url": "file:///workspace/scratch/008a76ec4981/benchmark-sources/bt",
+              "dir_info": {}
+            },
+            "installed_code_files": 5,
+            "installed_code_sha256": "04d19dc402a9a4b3a4a142debd61991425f6d4511f707a310b4587bbd9ab966c",
+            "setup_manifest_sha256": "34bd820d0de10a8cd8ef3c8af6fb37dc5b23649bb77a607e7df2aa1707459cee",
+            "system_site_packages": false
+          },
+          "source_verification_ms": 49.58187,
+          "prepared_load_ms": 1.857122,
+          "prepared_arrays_sha256": "6ed121548c11927b7f74f01d686d54a88c1a64fa81bcaac2875213f53e992167",
+          "contract": {
+            "initial_cash": 1000000,
+            "fee_bps": 0,
+            "slippage_bps": 0,
+            "signal_delay_bars": 1,
+            "equity_rtol": 1e-10,
+            "equity_atol": 1e-06,
+            "price_rtol": 1e-12,
+            "price_atol": 1e-08,
+            "quantity_rtol": 1e-10,
+            "quantity_atol": 1e-10,
+            "schema_version": 1,
+            "name": "prior-close-decision_next-close-fill_long-flat_v1",
+            "sizing": "All affordable continuous units on entry; hold units until exit; no ongoing rebalancing",
+            "signal_availability": "Decision uses only the prefix through close[t]; earliest fill is close[t+1]",
+            "fill_price": "Entry close*(1+slippage); exit close*(1-slippage)",
+            "fee_basis": "fee_bps/10000 times actual fill price times absolute executed quantity",
+            "equity_observation": "Cash plus units marked at the unadjusted close, after the close fill",
+            "held_observation": "Incoming held state over the interval ending at the current close, before its fill",
+            "terminal_rule": "Predeclared liquidation at penultimate real close; final real row settles delayed bookkeeping",
+            "unmodelled": [
+              "market impact",
+              "partial fills",
+              "funding",
+              "borrowing",
+              "corporate actions",
+              "exchange calendars"
+            ]
+          },
+          "oracle_ms": 0.703872,
+          "adapter_prepare_ms": 6132.326679,
+          "engine_scope": "Public Backtest construction and run including strategy deepcopy, event loop, allocation/accounting and native ffn performance statistics",
+          "settings": {
+            "integer_positions": false,
+            "rebalance": "Only on desired long/flat transitions",
+            "universe": "One explicitly registered native Security, including flat scenarios",
+            "progress_bar": false,
+            "processed_rows": 1000,
+            "native_stats_requested": true,
+            "bt_core_import_path": "/workspace/scratch/008a76ec4981/Backtest-Benchmark/.work/envs/bt/lib/python3.12/site-packages/bt/core.cpython-312-x86_64-linux-gnu.so",
+            "native_reference_row": "Engine adds a nontrading NaN bootstrap row; no fabricated market price"
+          },
+          "output_observation": {
+            "equity_cash_units": "Native strategy values, cash and position histories",
+            "fills": "Native get_transactions; per-bar native fee history on fill bars"
+          },
+          "rank_against_full_engine": true,
+          "runtime": {
+            "python": "3.12.14 (main, Aug 25 2026, 14:00:49) [Clang 22.1.3 ]",
+            "executable": "/workspace/scratch/008a76ec4981/Backtest-Benchmark/.work/envs/bt/bin/python",
+            "prefix": "/workspace/scratch/008a76ec4981/Backtest-Benchmark/.work/envs/bt",
+            "platform": "Linux-6.18.55-x86_64-with-glibc2.39",
+            "machine": "x86_64",
+            "cpu_model": null,
+            "logical_cpus_visible": 9,
+            "cpu_affinity": [
+              0,
+              1,
+              2,
+              3,
+              4,
+              5,
+              6,
+              7,
+              8
+            ],
+            "container_constraints": {},
+            "thread_environment": {
+              "OMP_NUM_THREADS": "1",
+              "OPENBLAS_NUM_THREADS": "1",
+              "MKL_NUM_THREADS": "1",
+              "VECLIB_MAXIMUM_THREADS": "1",
+              "NUMEXPR_NUM_THREADS": "1",
+              "NUMBA_NUM_THREADS": "1",
+              "RAYON_NUM_THREADS": "1",
+              "BLIS_NUM_THREADS": "1"
+            },
+            "packages": [
+              {
+                "name": "bt",
+                "version": "1.4.1"
+              },
+              {
+                "name": "cloudpickle",
+                "version": "3.1.2"
+              },
+              {
+                "name": "contourpy",
+                "version": "1.4.0"
+              },
+              {
+                "name": "cycler",
+                "version": "0.12.1"
+              },
+              {
+                "name": "Cython",
+                "version": "3.3.0"
+              },
+              {
+                "name": "decorator",
+                "version": "5.3.1"
+              },
+              {
+                "name": "ffn",
+                "version": "1.4.1"
+              },
+              {
+                "name": "fonttools",
+                "version": "4.67.0"
+              },
+              {
+                "name": "hatch-cython",
+                "version": "0.6.0"
+              },
+              {
+                "name": "hatchling",
+                "version": "1.32.4"
+              },
+              {
+                "name": "joblib",
+                "version": "1.6.0"
+              },
+              {
+                "name": "kiwisolver",
+                "version": "1.5.1"
+              },
+              {
+                "name": "matplotlib",
+                "version": "3.11.2"
+              },
+              {
+                "name": "narwhals",
+                "version": "2.27.1"
+              },
+              {
+                "name": "numpy",
+                "version": "2.2.6"
+              },
+              {
+                "name": "packaging",
+                "version": "26.3"
+              },
+              {
+                "name": "pandas",
+                "version": "2.3.3"
+              },
+              {
+                "name": "pathspec",
+                "version": "1.1.1"
+              },
+              {
+                "name": "pillow",
+                "version": "13.0.0"
+              },
+              {
+                "name": "pluggy",
+                "version": "1.7.0"
+              },
+              {
+                "name": "pyarrow",
+                "version": "23.0.1"
+              },
+              {
+                "name": "pyparsing",
+                "version": "3.3.3"
+              },
+              {
+                "name": "PyPrind",
+                "version": "2.11.3"
+              },
+              {
+                "name": "python-dateutil",
+                "version": "2.9.0.post0"
+              },
+              {
+                "name": "pytz",
+                "version": "2026.5"
+              },
+              {
+                "name": "scikit-learn",
+                "version": "1.9.1"
+              },
+              {
+                "name": "scipy",
+                "version": "1.18.1"
+              },
+              {
+                "name": "setuptools",
+                "version": "84.0.0"
+              },
+              {
+                "name": "six",
+                "version": "1.17.0"
+              },
+              {
+                "name": "tabulate",
+                "version": "0.10.0"
+              },
+              {
+                "name": "threadpoolctl",
+                "version": "3.6.0"
+              },
+              {
+                "name": "tomlkit",
+                "version": "0.15.2"
+              },
+              {
+                "name": "tqdm",
+                "version": "4.70.1"
+              },
+              {
+                "name": "trove-classifiers",
+                "version": "2026.9.21.13"
+              },
+              {
+                "name": "tzdata",
+                "version": "2026.5"
+              },
+              {
+                "name": "wheel",
+                "version": "0.48.0"
+              }
+            ],
+            "threadpools": [
+              {
+                "user_api": "blas",
+                "internal_api": "openblas",
+                "num_threads": 1,
+                "prefix": "libscipy_openblas",
+                "filepath": "/workspace/scratch/008a76ec4981/Backtest-Benchmark/.work/envs/bt/lib/python3.12/site-packages/numpy.libs/libscipy_openblas64_-56d6093b.so",
+                "version": "0.3.29",
+                "threading_layer": "pthreads",
+                "architecture": "SkylakeX"
+              },
+              {
+                "user_api": "blas",
+                "internal_api": "openblas",
+                "num_threads": 1,
+                "prefix": "libscipy_openblas",
+                "filepath": "/workspace/scratch/008a76ec4981/Backtest-Benchmark/.work/envs/bt/lib/python3.12/site-packages/scipy.libs/libscipy_openblas-5f890258.so",
+                "version": "0.3.31.dev",
+                "threading_layer": "pthreads",
+                "architecture": "SkylakeX"
+              },
+              {
+                "user_api": "openmp",
+                "internal_api": "openmp",
+                "num_threads": 1,
+                "prefix": "libgomp",
+                "filepath": "/workspace/scratch/008a76ec4981/Backtest-Benchmark/.work/envs/bt/lib/python3.12/site-packages/scikit_learn.libs/libgomp-e985bcbb.so.1.0.0",
+                "version": null
+              }
+            ]
+          },
+          "summary": {
+            "final_equity": 1131906.3697095478,
+            "total_return": 0.13190636970954794,
+            "max_drawdown": -0.2018372196539432,
+            "mean_bar_return": 0.00013832328321315322,
+            "held_fraction": 0.997997997997998,
+            "entries": 1,
+            "exits": 1
+          },
+          "parity": {
+            "equity_samples_checked": 999,
+            "fills_checked": 2,
+            "max_abs_equity_error": 0.0,
+            "max_relative_equity_error": 0.0,
+            "optional_observed_fields_checked": [
+              "cash",
+              "units",
+              "fill_quantities",
+              "fill_fees"
+            ],
+            "optional_unobserved_fields": []
+          },
+          "peak_rss_bytes_after_first": 256143360,
+          "peak_rss_bytes_after_full_calls": 256143360,
+          "peak_rss_bytes_final": 256143360,
+          "rss_scope": "Process lifetime high-water memory, including imports, validation, all repetitions, and optional separately labeled core diagnostics; Linux KiB converted to bytes, macOS bytes unchanged"
+        },
+        "process": {
+          "command": [
+            "/workspace/scratch/008a76ec4981/Backtest-Benchmark/.work/envs/bt/bin/python",
+            "-m",
+            "bench.worker",
+            "--engine",
+            "bt",
+            "--prepared",
+            "/workspace/scratch/008a76ec4981/Backtest-Benchmark/.work/runs/core-preflight-retest-003/prepared-buy_and_hold.npz",
+            "--prepared-sha256",
+            "928f6143505ce916d7afb6d43a147b6b575e25a41000daa3ae1f55ef21671cf0",
+            "--contract",
+            "/workspace/scratch/008a76ec4981/Backtest-Benchmark/.work/runs/core-preflight-retest-003/contract.json",
+            "--environment-manifest",
+            "/workspace/scratch/008a76ec4981/Backtest-Benchmark/.work/manifests/bt.json",
+            "--output",
+            "/workspace/scratch/008a76ec4981/Backtest-Benchmark/.work/runs/core-preflight-retest-003/bt/buy_and_hold/preflight/result",
+            "--mode",
+            "preflight",
+            "--warm-repeats",
+            "7"
+          ],
+          "returncode": 0,
+          "timed_out": false,
+          "process_wall_ms": 7791.710271,
+          "launch_to_ready_ms": 33.551299,
+          "launch_to_first_valid_ms": 7334.551986,
+          "parent_observed_events_ms": {
+            "ready": 33.551299,
+            "first_valid": 7334.551986,
+            "complete": 7336.251515
+          },
+          "stdout_path": "/workspace/scratch/008a76ec4981/Backtest-Benchmark/.work/runs/core-preflight-retest-003/bt/buy_and_hold/preflight/stdout.log",
+          "startup_scope": "Parent observed process launch to worker ready event, before scientific/engine imports; IPC scheduling is included",
+          "first_valid_scope": "Process launch through source verification, imports, input load, independent oracle, first engine call, extraction and successful parity"
+        },
+        "directory": "/workspace/scratch/008a76ec4981/Backtest-Benchmark/.work/runs/core-preflight-retest-003/bt/buy_and_hold/preflight"
+      },
+      "preflight_status": "verified",
+      "rank_against_full_engine": true
+    },
+    {
+      "engine": "backtesting_py",
+      "strategy": "sma_cross",
+      "measurements": [],
+      "requested_processes": 0,
+      "preflight": {
+        "worker": {
+          "schema_version": 1,
+          "engine": "backtesting_py",
+          "mode": "preflight",
+          "started_utc": "2026-10-19T17:36:36.388241+00:00",
+          "status": "verified",
+          "timing_samples": [],
+          "core_diagnostic_samples": [],
+          "measurement_policy": "Untimed preflight precedes independent fresh timed worker; each timed result is checked outside its timed region",
+          "provenance": {
+            "catalog": {
+              "id": "backtesting_py",
+              "repository": "kernc/backtesting.py",
+              "name": "backtesting.py",
+              "track": "execution",
+              "url": "https://github.com/kernc/backtesting.py",
+              "commit": "ca2e2611621e472542ba90f7243a1fa06a7d7108",
+              "commit_date": "2026-08-05T14:39:16+02:00",
+              "source_url": "https://github.com/kernc/backtesting.py/tree/ca2e2611621e472542ba90f7243a1fa06a7d7108",
+              "license_files": [
+                {
+                  "path": "LICENSE.md",
+                  "sha256": "ad858d53cae05eed9531ecd4c467440803acffe34c69de7b88e03affc5b6a1bd",
+                  "url": "https://github.com/kernc/backtesting.py/blob/ca2e2611621e472542ba90f7243a1fa06a7d7108/LICENSE.md"
+                }
+              ],
+              "revision_policy": "Default branch HEAD captured 2026-10-19",
+              "eligibility": "source_auditable",
+              "license_label": "AGPL-3.0",
+              "license_scope": "Observed repository license text; third-party components retain their own terms. This label does not authorize a particular redistribution or commercial deployment.",
+              "source_category": "public_source"
+            },
+            "source_commit_verified": "ca2e2611621e472542ba90f7243a1fa06a7d7108",
+            "source_path": "/workspace/scratch/008a76ec4981/benchmark-sources/backtesting_py",
+            "tracked_source_clean": true,
+            "distribution": "backtesting",
+            "distribution_version": "0.1.dev1+gca2e26116",
+            "direct_url": {
+              "url": "file:///workspace/scratch/008a76ec4981/benchmark-sources/backtesting_py",
+              "dir_info": {}
+            },
+            "installed_code_files": 10,
+            "installed_code_sha256": "da4358729df4802a5f031cbb5e7bdb8c5bc77993ecde882ab61c4df5d6cb923a",
+            "setup_manifest_sha256": "83a0a2ddb91341c024b9579e6f9fb5db26e47c0e63807f10dcae958e0a840bd6",
+            "system_site_packages": false
+          },
+          "source_verification_ms": 14.621385,
+          "prepared_load_ms": 1.417047,
+          "prepared_arrays_sha256": "73607efc67181174ab6f26db14ae391e5c20087d4afbc6709f1629e5eff287ac",
+          "contract": {
+            "initial_cash": 1000000,
+            "fee_bps": 0,
+            "slippage_bps": 0,
+            "signal_delay_bars": 1,
+            "equity_rtol": 1e-10,
+            "equity_atol": 1e-06,
+            "price_rtol": 1e-12,
+            "price_atol": 1e-08,
+            "quantity_rtol": 1e-10,
+            "quantity_atol": 1e-10,
+            "schema_version": 1,
+            "name": "prior-close-decision_next-close-fill_long-flat_v1",
+            "sizing": "All affordable continuous units on entry; hold units until exit; no ongoing rebalancing",
+            "signal_availability": "Decision uses only the prefix through close[t]; earliest fill is close[t+1]",
+            "fill_price": "Entry close*(1+slippage); exit close*(1-slippage)",
+            "fee_basis": "fee_bps/10000 times actual fill price times absolute executed quantity",
+            "equity_observation": "Cash plus units marked at the unadjusted close, after the close fill",
+            "held_observation": "Incoming held state over the interval ending at the current close, before its fill",
+            "terminal_rule": "Predeclared liquidation at penultimate real close; final real row settles delayed bookkeeping",
+            "unmodelled": [
+              "market impact",
+              "partial fills",
+              "funding",
+              "borrowing",
+              "corporate actions",
+              "exchange calendars"
+            ]
+          },
+          "oracle_ms": 0.460314,
+          "adapter_prepare_ms": 518.757196,
+          "engine_scope": "Public FractionalBacktest.run including broker event loop, fractional conversion, equity and native performance statistics",
+          "settings": {
+            "trade_on_close": true,
+            "fractional_unit": 1e-12,
+            "buy_fraction": 0.9999999999999999,
+            "finalize_trades": false,
+            "processed_rows": 1000,
+            "native_stats_requested": true
+          },
+          "output_observation": {
+            "equity": "Native equity curve; its first backfilled slot replaced with the actual initial strategy equity observation",
+            "held_and_fills": "Native completed trade entry/exit bars, prices and fractional quantities",
+            "cash_units_fees": "Not separately observed by this adapter"
+          },
+          "rank_against_full_engine": true,
+          "runtime": {
+            "python": "3.12.14 (main, Aug 25 2026, 14:00:49) [Clang 22.1.3 ]",
+            "executable": "/workspace/scratch/008a76ec4981/Backtest-Benchmark/.work/envs/backtesting_py/bin/python",
+            "prefix": "/workspace/scratch/008a76ec4981/Backtest-Benchmark/.work/envs/backtesting_py",
+            "platform": "Linux-6.18.55-x86_64-with-glibc2.39",
+            "machine": "x86_64",
+            "cpu_model": null,
+            "logical_cpus_visible": 9,
+            "cpu_affinity": [
+              0,
+              1,
+              2,
+              3,
+              4,
+              5,
+              6,
+              7,
+              8
+            ],
+            "container_constraints": {},
+            "thread_environment": {
+              "OMP_NUM_THREADS": "1",
+              "OPENBLAS_NUM_THREADS": "1",
+              "MKL_NUM_THREADS": "1",
+              "VECLIB_MAXIMUM_THREADS": "1",
+              "NUMEXPR_NUM_THREADS": "1",
+              "NUMBA_NUM_THREADS": "1",
+              "RAYON_NUM_THREADS": "1",
+              "BLIS_NUM_THREADS": "1"
+            },
+            "packages": [
+              {
+                "name": "backtesting",
+                "version": "0.1.dev1+gca2e26116"
+              },
+              {
+                "name": "backtesting",
+                "version": "0.0.0"
+              },
+              {
+                "name": "bokeh",
+                "version": "3.10.1"
+              },
+              {
+                "name": "Cython",
+                "version": "3.3.0"
+              },
+              {
+                "name": "hatch-cython",
+                "version": "0.6.0"
+              },
+              {
+                "name": "hatchling",
+                "version": "1.32.4"
+              },
+              {
+                "name": "Jinja2",
+                "version": "3.1.6"
+              },
+              {
+                "name": "MarkupSafe",
+                "version": "3.0.4"
+              },
+              {
+                "name": "narwhals",
+                "version": "2.27.1"
+              },
+              {
+                "name": "numpy",
+                "version": "2.2.6"
+              },
+              {
+                "name": "packaging",
+                "version": "26.3"
+              },
+              {
+                "name": "pandas",
+                "version": "2.3.3"
+              },
+              {
+                "name": "pathspec",
+                "version": "1.1.1"
+              },
+              {
+                "name": "pillow",
+                "version": "13.0.0"
+              },
+              {
+                "name": "pluggy",
+                "version": "1.7.0"
+              },
+              {
+                "name": "pyarrow",
+                "version": "23.0.1"
+              },
+              {
+                "name": "python-dateutil",
+                "version": "2.9.0.post0"
+              },
+              {
+                "name": "pytz",
+                "version": "2026.5"
+              },
+              {
+                "name": "PyYAML",
+                "version": "6.0.3"
+              },
+              {
+                "name": "setuptools",
+                "version": "84.0.0"
+              },
+              {
+                "name": "setuptools-git",
+                "version": "1.2"
+              },
+              {
+                "name": "setuptools-scm",
+                "version": "10.3.4"
+              },
+              {
+                "name": "six",
+                "version": "1.17.0"
+              },
+              {
+                "name": "threadpoolctl",
+                "version": "3.6.0"
+              },
+              {
+                "name": "tomlkit",
+                "version": "0.15.2"
+              },
+              {
+                "name": "tornado",
+                "version": "6.5.10"
+              },
+              {
+                "name": "trove-classifiers",
+                "version": "2026.9.21.13"
+              },
+              {
+                "name": "tzdata",
+                "version": "2026.5"
+              },
+              {
+                "name": "vcs-versioning",
+                "version": "2.6.0"
+              },
+              {
+                "name": "wheel",
+                "version": "0.48.0"
+              },
+              {
+                "name": "xyzservices",
+                "version": "2026.9.1"
+              }
+            ],
+            "threadpools": [
+              {
+                "user_api": "blas",
+                "internal_api": "openblas",
+                "num_threads": 1,
+                "prefix": "libscipy_openblas",
+                "filepath": "/workspace/scratch/008a76ec4981/Backtest-Benchmark/.work/envs/backtesting_py/lib/python3.12/site-packages/numpy.libs/libscipy_openblas64_-56d6093b.so",
+                "version": "0.3.29",
+                "threading_layer": "pthreads",
+                "architecture": "SkylakeX"
+              }
+            ]
+          },
+          "summary": {
+            "final_equity": 1037319.135930104,
+            "total_return": 0.03731913593010394,
+            "max_drawdown": -0.12479035939389094,
+            "mean_bar_return": 4.348263704688336e-05,
+            "held_fraction": 0.4244244244244244,
+            "entries": 3,
+            "exits": 3
+          },
+          "parity": {
+            "equity_samples_checked": 999,
+            "fills_checked": 6,
+            "max_abs_equity_error": 3.958120942115784e-09,
+            "max_relative_equity_error": 4.333788612290036e-15,
+            "optional_observed_fields_checked": [
+              "fill_quantities"
+            ],
+            "optional_unobserved_fields": [
+              "cash",
+              "units",
+              "fill_fees"
+            ]
+          },
+          "peak_rss_bytes_after_first": 155275264,
+          "peak_rss_bytes_after_full_calls": 155275264,
+          "peak_rss_bytes_final": 155275264,
+          "rss_scope": "Process lifetime high-water memory, including imports, validation, all repetitions, and optional separately labeled core diagnostics; Linux KiB converted to bytes, macOS bytes unchanged"
+        },
+        "process": {
+          "command": [
+            "/workspace/scratch/008a76ec4981/Backtest-Benchmark/.work/envs/backtesting_py/bin/python",
+            "-m",
+            "bench.worker",
+            "--engine",
+            "backtesting_py",
+            "--prepared",
+            "/workspace/scratch/008a76ec4981/Backtest-Benchmark/.work/runs/core-preflight-retest-003/prepared-sma_cross.npz",
+            "--prepared-sha256",
+            "a4ae634f0328a37b7080e5131271a4cddce4d9c47bdbb428744338dbb6e754fb",
+            "--contract",
+            "/workspace/scratch/008a76ec4981/Backtest-Benchmark/.work/runs/core-preflight-retest-003/contract.json",
+            "--environment-manifest",
+            "/workspace/scratch/008a76ec4981/Backtest-Benchmark/.work/manifests/backtesting_py.json",
+            "--output",
+            "/workspace/scratch/008a76ec4981/Backtest-Benchmark/.work/runs/core-preflight-retest-003/backtesting_py/sma_cross/preflight/result",
+            "--mode",
+            "preflight",
+            "--warm-repeats",
+            "7"
+          ],
+          "returncode": 0,
+          "timed_out": false,
+          "process_wall_ms": 1051.981906,
+          "launch_to_ready_ms": 54.189001,
+          "launch_to_first_valid_ms": 817.216567,
+          "parent_observed_events_ms": {
+            "ready": 54.189001,
+            "first_valid": 817.216567,
+            "complete": 818.498531
+          },
+          "stdout_path": "/workspace/scratch/008a76ec4981/Backtest-Benchmark/.work/runs/core-preflight-retest-003/backtesting_py/sma_cross/preflight/stdout.log",
+          "startup_scope": "Parent observed process launch to worker ready event, before scientific/engine imports; IPC scheduling is included",
+          "first_valid_scope": "Process launch through source verification, imports, input load, independent oracle, first engine call, extraction and successful parity"
+        },
+        "directory": "/workspace/scratch/008a76ec4981/Backtest-Benchmark/.work/runs/core-preflight-retest-003/backtesting_py/sma_cross/preflight"
+      },
+      "preflight_status": "verified",
+      "rank_against_full_engine": true
+    },
+    {
+      "engine": "bt",
+      "strategy": "sma_cross",
+      "measurements": [],
+      "requested_processes": 0,
+      "preflight": {
+        "worker": {
+          "schema_version": 1,
+          "engine": "bt",
+          "mode": "preflight",
+          "started_utc": "2026-10-19T17:36:37.420704+00:00",
+          "status": "verified",
+          "timing_samples": [],
+          "core_diagnostic_samples": [],
+          "measurement_policy": "Untimed preflight precedes independent fresh timed worker; each timed result is checked outside its timed region",
+          "provenance": {
+            "catalog": {
+              "id": "bt",
+              "repository": "pmorissette/bt",
+              "name": "bt",
+              "track": "portfolio",
+              "url": "https://github.com/pmorissette/bt",
+              "commit": "4b76bad2dbf3a49e99feb49db3eee1dde2ef8e12",
+              "commit_date": "2026-10-17T14:54:28-04:00",
+              "source_url": "https://github.com/pmorissette/bt/tree/4b76bad2dbf3a49e99feb49db3eee1dde2ef8e12",
+              "license_files": [
+                {
+                  "path": "LICENSE",
+                  "sha256": "8711471566d722d55eca3f09196f342b2ee2960616e68127ec2a17b39ff99949",
+                  "url": "https://github.com/pmorissette/bt/blob/4b76bad2dbf3a49e99feb49db3eee1dde2ef8e12/LICENSE"
+                }
+              ],
+              "revision_policy": "Default branch HEAD captured 2026-10-19",
+              "eligibility": "source_auditable",
+              "license_label": "MIT",
+              "license_scope": "Observed repository license text; third-party components retain their own terms. This label does not authorize a particular redistribution or commercial deployment.",
+              "source_category": "public_source"
+            },
+            "source_commit_verified": "4b76bad2dbf3a49e99feb49db3eee1dde2ef8e12",
+            "source_path": "/workspace/scratch/008a76ec4981/benchmark-sources/bt",
+            "tracked_source_clean": true,
+            "distribution": "bt",
+            "distribution_version": "1.4.1",
+            "direct_url": {
+              "url": "file:///workspace/scratch/008a76ec4981/benchmark-sources/bt",
+              "dir_info": {}
+            },
+            "installed_code_files": 5,
+            "installed_code_sha256": "04d19dc402a9a4b3a4a142debd61991425f6d4511f707a310b4587bbd9ab966c",
+            "setup_manifest_sha256": "34bd820d0de10a8cd8ef3c8af6fb37dc5b23649bb77a607e7df2aa1707459cee",
+            "system_site_packages": false
+          },
+          "source_verification_ms": 47.53278,
+          "prepared_load_ms": 1.848879,
+          "prepared_arrays_sha256": "73607efc67181174ab6f26db14ae391e5c20087d4afbc6709f1629e5eff287ac",
+          "contract": {
+            "initial_cash": 1000000,
+            "fee_bps": 0,
+            "slippage_bps": 0,
+            "signal_delay_bars": 1,
+            "equity_rtol": 1e-10,
+            "equity_atol": 1e-06,
+            "price_rtol": 1e-12,
+            "price_atol": 1e-08,
+            "quantity_rtol": 1e-10,
+            "quantity_atol": 1e-10,
+            "schema_version": 1,
+            "name": "prior-close-decision_next-close-fill_long-flat_v1",
+            "sizing": "All affordable continuous units on entry; hold units until exit; no ongoing rebalancing",
+            "signal_availability": "Decision uses only the prefix through close[t]; earliest fill is close[t+1]",
+            "fill_price": "Entry close*(1+slippage); exit close*(1-slippage)",
+            "fee_basis": "fee_bps/10000 times actual fill price times absolute executed quantity",
+            "equity_observation": "Cash plus units marked at the unadjusted close, after the close fill",
+            "held_observation": "Incoming held state over the interval ending at the current close, before its fill",
+            "terminal_rule": "Predeclared liquidation at penultimate real close; final real row settles delayed bookkeeping",
+            "unmodelled": [
+              "market impact",
+              "partial fills",
+              "funding",
+              "borrowing",
+              "corporate actions",
+              "exchange calendars"
+            ]
+          },
+          "oracle_ms": 0.459063,
+          "adapter_prepare_ms": 4861.558549,
+          "engine_scope": "Public Backtest construction and run including strategy deepcopy, event loop, allocation/accounting and native ffn performance statistics",
+          "settings": {
+            "integer_positions": false,
+            "rebalance": "Only on desired long/flat transitions",
+            "universe": "One explicitly registered native Security, including flat scenarios",
+            "progress_bar": false,
+            "processed_rows": 1000,
+            "native_stats_requested": true,
+            "bt_core_import_path": "/workspace/scratch/008a76ec4981/Backtest-Benchmark/.work/envs/bt/lib/python3.12/site-packages/bt/core.cpython-312-x86_64-linux-gnu.so",
+            "native_reference_row": "Engine adds a nontrading NaN bootstrap row; no fabricated market price"
+          },
+          "output_observation": {
+            "equity_cash_units": "Native strategy values, cash and position histories",
+            "fills": "Native get_transactions; per-bar native fee history on fill bars"
+          },
+          "rank_against_full_engine": true,
+          "runtime": {
+            "python": "3.12.14 (main, Aug 25 2026, 14:00:49) [Clang 22.1.3 ]",
+            "executable": "/workspace/scratch/008a76ec4981/Backtest-Benchmark/.work/envs/bt/bin/python",
+            "prefix": "/workspace/scratch/008a76ec4981/Backtest-Benchmark/.work/envs/bt",
+            "platform": "Linux-6.18.55-x86_64-with-glibc2.39",
+            "machine": "x86_64",
+            "cpu_model": null,
+            "logical_cpus_visible": 9,
+            "cpu_affinity": [
+              0,
+              1,
+              2,
+              3,
+              4,
+              5,
+              6,
+              7,
+              8
+            ],
+            "container_constraints": {},
+            "thread_environment": {
+              "OMP_NUM_THREADS": "1",
+              "OPENBLAS_NUM_THREADS": "1",
+              "MKL_NUM_THREADS": "1",
+              "VECLIB_MAXIMUM_THREADS": "1",
+              "NUMEXPR_NUM_THREADS": "1",
+              "NUMBA_NUM_THREADS": "1",
+              "RAYON_NUM_THREADS": "1",
+              "BLIS_NUM_THREADS": "1"
+            },
+            "packages": [
+              {
+                "name": "bt",
+                "version": "1.4.1"
+              },
+              {
+                "name": "cloudpickle",
+                "version": "3.1.2"
+              },
+              {
+                "name": "contourpy",
+                "version": "1.4.0"
+              },
+              {
+                "name": "cycler",
+                "version": "0.12.1"
+              },
+              {
+                "name": "Cython",
+                "version": "3.3.0"
+              },
+              {
+                "name": "decorator",
+                "version": "5.3.1"
+              },
+              {
+                "name": "ffn",
+                "version": "1.4.1"
+              },
+              {
+                "name": "fonttools",
+                "version": "4.67.0"
+              },
+              {
+                "name": "hatch-cython",
+                "version": "0.6.0"
+              },
+              {
+                "name": "hatchling",
+                "version": "1.32.4"
+              },
+              {
+                "name": "joblib",
+                "version": "1.6.0"
+              },
+              {
+                "name": "kiwisolver",
+                "version": "1.5.1"
+              },
+              {
+                "name": "matplotlib",
+                "version": "3.11.2"
+              },
+              {
+                "name": "narwhals",
+                "version": "2.27.1"
+              },
+              {
+                "name": "numpy",
+                "version": "2.2.6"
+              },
+              {
+                "name": "packaging",
+                "version": "26.3"
+              },
+              {
+                "name": "pandas",
+                "version": "2.3.3"
+              },
+              {
+                "name": "pathspec",
+                "version": "1.1.1"
+              },
+              {
+                "name": "pillow",
+                "version": "13.0.0"
+              },
+              {
+                "name": "pluggy",
+                "version": "1.7.0"
+              },
+              {
+                "name": "pyarrow",
+                "version": "23.0.1"
+              },
+              {
+                "name": "pyparsing",
+                "version": "3.3.3"
+              },
+              {
+                "name": "PyPrind",
+                "version": "2.11.3"
+              },
+              {
+                "name": "python-dateutil",
+                "version": "2.9.0.post0"
+              },
+              {
+                "name": "pytz",
+                "version": "2026.5"
+              },
+              {
+                "name": "scikit-learn",
+                "version": "1.9.1"
+              },
+              {
+                "name": "scipy",
+                "version": "1.18.1"
+              },
+              {
+                "name": "setuptools",
+                "version": "84.0.0"
+              },
+              {
+                "name": "six",
+                "version": "1.17.0"
+              },
+              {
+                "name": "tabulate",
+                "version": "0.10.0"
+              },
+              {
+                "name": "threadpoolctl",
+                "version": "3.6.0"
+              },
+              {
+                "name": "tomlkit",
+                "version": "0.15.2"
+              },
+              {
+                "name": "tqdm",
+                "version": "4.70.1"
+              },
+              {
+                "name": "trove-classifiers",
+                "version": "2026.9.21.13"
+              },
+              {
+                "name": "tzdata",
+                "version": "2026.5"
+              },
+              {
+                "name": "wheel",
+                "version": "0.48.0"
+              }
+            ],
+            "threadpools": [
+              {
+                "user_api": "blas",
+                "internal_api": "openblas",
+                "num_threads": 1,
+                "prefix": "libscipy_openblas",
+                "filepath": "/workspace/scratch/008a76ec4981/Backtest-Benchmark/.work/envs/bt/lib/python3.12/site-packages/numpy.libs/libscipy_openblas64_-56d6093b.so",
+                "version": "0.3.29",
+                "threading_layer": "pthreads",
+                "architecture": "SkylakeX"
+              },
+              {
+                "user_api": "blas",
+                "internal_api": "openblas",
+                "num_threads": 1,
+                "prefix": "libscipy_openblas",
+                "filepath": "/workspace/scratch/008a76ec4981/Backtest-Benchmark/.work/envs/bt/lib/python3.12/site-packages/scipy.libs/libscipy_openblas-5f890258.so",
+                "version": "0.3.31.dev",
+                "threading_layer": "pthreads",
+                "architecture": "SkylakeX"
+              },
+              {
+                "user_api": "openmp",
+                "internal_api": "openmp",
+                "num_threads": 1,
+                "prefix": "libgomp",
+                "filepath": "/workspace/scratch/008a76ec4981/Backtest-Benchmark/.work/envs/bt/lib/python3.12/site-packages/scikit_learn.libs/libgomp-e985bcbb.so.1.0.0",
+                "version": null
+              }
+            ]
+          },
+          "summary": {
+            "final_equity": 1037319.1359301013,
+            "total_return": 0.03731913593010128,
+            "max_drawdown": -0.12479035939389616,
+            "mean_bar_return": 4.348263704688092e-05,
+            "held_fraction": 0.4244244244244244,
+            "entries": 3,
+            "exits": 3
+          },
+          "parity": {
+            "equity_samples_checked": 999,
+            "fills_checked": 6,
+            "max_abs_equity_error": 0.0,
+            "max_relative_equity_error": 0.0,
+            "optional_observed_fields_checked": [
+              "cash",
+              "units",
+              "fill_quantities",
+              "fill_fees"
+            ],
+            "optional_unobserved_fields": []
+          },
+          "peak_rss_bytes_after_first": 257069056,
+          "peak_rss_bytes_after_full_calls": 257069056,
+          "peak_rss_bytes_final": 257069056,
+          "rss_scope": "Process lifetime high-water memory, including imports, validation, all repetitions, and optional separately labeled core diagnostics; Linux KiB converted to bytes, macOS bytes unchanged"
+        },
+        "process": {
+          "command": [
+            "/workspace/scratch/008a76ec4981/Backtest-Benchmark/.work/envs/bt/bin/python",
+            "-m",
+            "bench.worker",
+            "--engine",
+            "bt",
+            "--prepared",
+            "/workspace/scratch/008a76ec4981/Backtest-Benchmark/.work/runs/core-preflight-retest-003/prepared-sma_cross.npz",
+            "--prepared-sha256",
+            "a4ae634f0328a37b7080e5131271a4cddce4d9c47bdbb428744338dbb6e754fb",
+            "--contract",
+            "/workspace/scratch/008a76ec4981/Backtest-Benchmark/.work/runs/core-preflight-retest-003/contract.json",
+            "--environment-manifest",
+            "/workspace/scratch/008a76ec4981/Backtest-Benchmark/.work/manifests/bt.json",
+            "--output",
+            "/workspace/scratch/008a76ec4981/Backtest-Benchmark/.work/runs/core-preflight-retest-003/bt/sma_cross/preflight/result",
+            "--mode",
+            "preflight",
+            "--warm-repeats",
+            "7"
+          ],
+          "returncode": 0,
+          "timed_out": false,
+          "process_wall_ms": 6319.140756,
+          "launch_to_ready_ms": 32.591557,
+          "launch_to_first_valid_ms": 5843.885756,
+          "parent_observed_events_ms": {
+            "ready": 32.591557,
+            "first_valid": 5843.885756,
+            "complete": 5845.253514
+          },
+          "stdout_path": "/workspace/scratch/008a76ec4981/Backtest-Benchmark/.work/runs/core-preflight-retest-003/bt/sma_cross/preflight/stdout.log",
+          "startup_scope": "Parent observed process launch to worker ready event, before scientific/engine imports; IPC scheduling is included",
+          "first_valid_scope": "Process launch through source verification, imports, input load, independent oracle, first engine call, extraction and successful parity"
+        },
+        "directory": "/workspace/scratch/008a76ec4981/Backtest-Benchmark/.work/runs/core-preflight-retest-003/bt/sma_cross/preflight"
+      },
+      "preflight_status": "verified",
+      "rank_against_full_engine": true
+    },
+    {
+      "engine": "backtesting_py",
+      "strategy": "flat",
+      "measurements": [],
+      "requested_processes": 0,
+      "preflight": {
+        "worker": {
+          "schema_version": 1,
+          "engine": "backtesting_py",
+          "mode": "preflight",
+          "started_utc": "2026-10-19T17:36:43.751412+00:00",
+          "status": "verified",
+          "timing_samples": [],
+          "core_diagnostic_samples": [],
+          "measurement_policy": "Untimed preflight precedes independent fresh timed worker; each timed result is checked outside its timed region",
+          "provenance": {
+            "catalog": {
+              "id": "backtesting_py",
+              "repository": "kernc/backtesting.py",
+              "name": "backtesting.py",
+              "track": "execution",
+              "url": "https://github.com/kernc/backtesting.py",
+              "commit": "ca2e2611621e472542ba90f7243a1fa06a7d7108",
+              "commit_date": "2026-08-05T14:39:16+02:00",
+              "source_url": "https://github.com/kernc/backtesting.py/tree/ca2e2611621e472542ba90f7243a1fa06a7d7108",
+              "license_files": [
+                {
+                  "path": "LICENSE.md",
+                  "sha256": "ad858d53cae05eed9531ecd4c467440803acffe34c69de7b88e03affc5b6a1bd",
+                  "url": "https://github.com/kernc/backtesting.py/blob/ca2e2611621e472542ba90f7243a1fa06a7d7108/LICENSE.md"
+                }
+              ],
+              "revision_policy": "Default branch HEAD captured 2026-10-19",
+              "eligibility": "source_auditable",
+              "license_label": "AGPL-3.0",
+              "license_scope": "Observed repository license text; third-party components retain their own terms. This label does not authorize a particular redistribution or commercial deployment.",
+              "source_category": "public_source"
+            },
+            "source_commit_verified": "ca2e2611621e472542ba90f7243a1fa06a7d7108",
+            "source_path": "/workspace/scratch/008a76ec4981/benchmark-sources/backtesting_py",
+            "tracked_source_clean": true,
+            "distribution": "backtesting",
+            "distribution_version": "0.1.dev1+gca2e26116",
+            "direct_url": {
+              "url": "file:///workspace/scratch/008a76ec4981/benchmark-sources/backtesting_py",
+              "dir_info": {}
+            },
+            "installed_code_files": 10,
+            "installed_code_sha256": "da4358729df4802a5f031cbb5e7bdb8c5bc77993ecde882ab61c4df5d6cb923a",
+            "setup_manifest_sha256": "83a0a2ddb91341c024b9579e6f9fb5db26e47c0e63807f10dcae958e0a840bd6",
+            "system_site_packages": false
+          },
+          "source_verification_ms": 11.778042,
+          "prepared_load_ms": 1.484519,
+          "prepared_arrays_sha256": "edf9788717e11c56ac1a831924e7e737f84ed33a3d7cdaf31135595b51b56736",
+          "contract": {
+            "initial_cash": 1000000,
+            "fee_bps": 0,
+            "slippage_bps": 0,
+            "signal_delay_bars": 1,
+            "equity_rtol": 1e-10,
+            "equity_atol": 1e-06,
+            "price_rtol": 1e-12,
+            "price_atol": 1e-08,
+            "quantity_rtol": 1e-10,
+            "quantity_atol": 1e-10,
+            "schema_version": 1,
+            "name": "prior-close-decision_next-close-fill_long-flat_v1",
+            "sizing": "All affordable continuous units on entry; hold units until exit; no ongoing rebalancing",
+            "signal_availability": "Decision uses only the prefix through close[t]; earliest fill is close[t+1]",
+            "fill_price": "Entry close*(1+slippage); exit close*(1-slippage)",
+            "fee_basis": "fee_bps/10000 times actual fill price times absolute executed quantity",
+            "equity_observation": "Cash plus units marked at the unadjusted close, after the close fill",
+            "held_observation": "Incoming held state over the interval ending at the current close, before its fill",
+            "terminal_rule": "Predeclared liquidation at penultimate real close; final real row settles delayed bookkeeping",
+            "unmodelled": [
+              "market impact",
+              "partial fills",
+              "funding",
+              "borrowing",
+              "corporate actions",
+              "exchange calendars"
+            ]
+          },
+          "oracle_ms": 0.395977,
+          "adapter_prepare_ms": 671.063075,
+          "engine_scope": "Public FractionalBacktest.run including broker event loop, fractional conversion, equity and native performance statistics",
+          "settings": {
+            "trade_on_close": true,
+            "fractional_unit": 1e-12,
+            "buy_fraction": 0.9999999999999999,
+            "finalize_trades": false,
+            "processed_rows": 1000,
+            "native_stats_requested": true
+          },
+          "output_observation": {
+            "equity": "Native equity curve; its first backfilled slot replaced with the actual initial strategy equity observation",
+            "held_and_fills": "Native completed trade entry/exit bars, prices and fractional quantities",
+            "cash_units_fees": "Not separately observed by this adapter"
+          },
+          "rank_against_full_engine": true,
+          "runtime": {
+            "python": "3.12.14 (main, Aug 25 2026, 14:00:49) [Clang 22.1.3 ]",
+            "executable": "/workspace/scratch/008a76ec4981/Backtest-Benchmark/.work/envs/backtesting_py/bin/python",
+            "prefix": "/workspace/scratch/008a76ec4981/Backtest-Benchmark/.work/envs/backtesting_py",
+            "platform": "Linux-6.18.55-x86_64-with-glibc2.39",
+            "machine": "x86_64",
+            "cpu_model": null,
+            "logical_cpus_visible": 9,
+            "cpu_affinity": [
+              0,
+              1,
+              2,
+              3,
+              4,
+              5,
+              6,
+              7,
+              8
+            ],
+            "container_constraints": {},
+            "thread_environment": {
+              "OMP_NUM_THREADS": "1",
+              "OPENBLAS_NUM_THREADS": "1",
+              "MKL_NUM_THREADS": "1",
+              "VECLIB_MAXIMUM_THREADS": "1",
+              "NUMEXPR_NUM_THREADS": "1",
+              "NUMBA_NUM_THREADS": "1",
+              "RAYON_NUM_THREADS": "1",
+              "BLIS_NUM_THREADS": "1"
+            },
+            "packages": [
+              {
+                "name": "backtesting",
+                "version": "0.1.dev1+gca2e26116"
+              },
+              {
+                "name": "backtesting",
+                "version": "0.0.0"
+              },
+              {
+                "name": "bokeh",
+                "version": "3.10.1"
+              },
+              {
+                "name": "Cython",
+                "version": "3.3.0"
+              },
+              {
+                "name": "hatch-cython",
+                "version": "0.6.0"
+              },
+              {
+                "name": "hatchling",
+                "version": "1.32.4"
+              },
+              {
+                "name": "Jinja2",
+                "version": "3.1.6"
+              },
+              {
+                "name": "MarkupSafe",
+                "version": "3.0.4"
+              },
+              {
+                "name": "narwhals",
+                "version": "2.27.1"
+              },
+              {
+                "name": "numpy",
+                "version": "2.2.6"
+              },
+              {
+                "name": "packaging",
+                "version": "26.3"
+              },
+              {
+                "name": "pandas",
+                "version": "2.3.3"
+              },
+              {
+                "name": "pathspec",
+                "version": "1.1.1"
+              },
+              {
+                "name": "pillow",
+                "version": "13.0.0"
+              },
+              {
+                "name": "pluggy",
+                "version": "1.7.0"
+              },
+              {
+                "name": "pyarrow",
+                "version": "23.0.1"
+              },
+              {
+                "name": "python-dateutil",
+                "version": "2.9.0.post0"
+              },
+              {
+                "name": "pytz",
+                "version": "2026.5"
+              },
+              {
+                "name": "PyYAML",
+                "version": "6.0.3"
+              },
+              {
+                "name": "setuptools",
+                "version": "84.0.0"
+              },
+              {
+                "name": "setuptools-git",
+                "version": "1.2"
+              },
+              {
+                "name": "setuptools-scm",
+                "version": "10.3.4"
+              },
+              {
+                "name": "six",
+                "version": "1.17.0"
+              },
+              {
+                "name": "threadpoolctl",
+                "version": "3.6.0"
+              },
+              {
+                "name": "tomlkit",
+                "version": "0.15.2"
+              },
+              {
+                "name": "tornado",
+                "version": "6.5.10"
+              },
+              {
+                "name": "trove-classifiers",
+                "version": "2026.9.21.13"
+              },
+              {
+                "name": "tzdata",
+                "version": "2026.5"
+              },
+              {
+                "name": "vcs-versioning",
+                "version": "2.6.0"
+              },
+              {
+                "name": "wheel",
+                "version": "0.48.0"
+              },
+              {
+                "name": "xyzservices",
+                "version": "2026.9.1"
+              }
+            ],
+            "threadpools": [
+              {
+                "user_api": "blas",
+                "internal_api": "openblas",
+                "num_threads": 1,
+                "prefix": "libscipy_openblas",
+                "filepath": "/workspace/scratch/008a76ec4981/Backtest-Benchmark/.work/envs/backtesting_py/lib/python3.12/site-packages/numpy.libs/libscipy_openblas64_-56d6093b.so",
+                "version": "0.3.29",
+                "threading_layer": "pthreads",
+                "architecture": "SkylakeX"
+              }
+            ]
+          },
+          "summary": {
+            "final_equity": 1000000.0,
+            "total_return": 0.0,
+            "max_drawdown": 0.0,
+            "mean_bar_return": 0.0,
+            "held_fraction": 0.0,
+            "entries": 0,
+            "exits": 0
+          },
+          "parity": {
+            "equity_samples_checked": 999,
+            "fills_checked": 0,
+            "max_abs_equity_error": 0.0,
+            "max_relative_equity_error": 0.0,
+            "optional_observed_fields_checked": [
+              "fill_quantities"
+            ],
+            "optional_unobserved_fields": [
+              "cash",
+              "units",
+              "fill_fees"
+            ]
+          },
+          "peak_rss_bytes_after_first": 155947008,
+          "peak_rss_bytes_after_full_calls": 155947008,
+          "peak_rss_bytes_final": 155947008,
+          "rss_scope": "Process lifetime high-water memory, including imports, validation, all repetitions, and optional separately labeled core diagnostics; Linux KiB converted to bytes, macOS bytes unchanged"
+        },
+        "process": {
+          "command": [
+            "/workspace/scratch/008a76ec4981/Backtest-Benchmark/.work/envs/backtesting_py/bin/python",
+            "-m",
+            "bench.worker",
+            "--engine",
+            "backtesting_py",
+            "--prepared",
+            "/workspace/scratch/008a76ec4981/Backtest-Benchmark/.work/runs/core-preflight-retest-003/prepared-flat.npz",
+            "--prepared-sha256",
+            "e5c906ff2f45fb6d8250e4f42303534a3a4034cdae1b4b720c9e984420979629",
+            "--contract",
+            "/workspace/scratch/008a76ec4981/Backtest-Benchmark/.work/runs/core-preflight-retest-003/contract.json",
+            "--environment-manifest",
+            "/workspace/scratch/008a76ec4981/Backtest-Benchmark/.work/manifests/backtesting_py.json",
+            "--output",
+            "/workspace/scratch/008a76ec4981/Backtest-Benchmark/.work/runs/core-preflight-retest-003/backtesting_py/flat/preflight/result",
+            "--mode",
+            "preflight",
+            "--warm-repeats",
+            "7"
+          ],
+          "returncode": 0,
+          "timed_out": false,
+          "process_wall_ms": 1214.564878,
+          "launch_to_ready_ms": 40.393001,
+          "launch_to_first_valid_ms": 937.195316,
+          "parent_observed_events_ms": {
+            "ready": 40.393001,
+            "first_valid": 937.195316,
+            "complete": 938.419102
+          },
+          "stdout_path": "/workspace/scratch/008a76ec4981/Backtest-Benchmark/.work/runs/core-preflight-retest-003/backtesting_py/flat/preflight/stdout.log",
+          "startup_scope": "Parent observed process launch to worker ready event, before scientific/engine imports; IPC scheduling is included",
+          "first_valid_scope": "Process launch through source verification, imports, input load, independent oracle, first engine call, extraction and successful parity"
+        },
+        "directory": "/workspace/scratch/008a76ec4981/Backtest-Benchmark/.work/runs/core-preflight-retest-003/backtesting_py/flat/preflight"
+      },
+      "preflight_status": "verified",
+      "rank_against_full_engine": true
+    },
+    {
+      "engine": "bt",
+      "strategy": "flat",
+      "measurements": [],
+      "requested_processes": 0,
+      "preflight": {
+        "worker": {
+          "schema_version": 1,
+          "engine": "bt",
+          "mode": "preflight",
+          "started_utc": "2026-10-19T17:36:44.963838+00:00",
+          "status": "verified",
+          "timing_samples": [],
+          "core_diagnostic_samples": [],
+          "measurement_policy": "Untimed preflight precedes independent fresh timed worker; each timed result is checked outside its timed region",
+          "provenance": {
+            "catalog": {
+              "id": "bt",
+              "repository": "pmorissette/bt",
+              "name": "bt",
+              "track": "portfolio",
+              "url": "https://github.com/pmorissette/bt",
+              "commit": "4b76bad2dbf3a49e99feb49db3eee1dde2ef8e12",
+              "commit_date": "2026-10-17T14:54:28-04:00",
+              "source_url": "https://github.com/pmorissette/bt/tree/4b76bad2dbf3a49e99feb49db3eee1dde2ef8e12",
+              "license_files": [
+                {
+                  "path": "LICENSE",
+                  "sha256": "8711471566d722d55eca3f09196f342b2ee2960616e68127ec2a17b39ff99949",
+                  "url": "https://github.com/pmorissette/bt/blob/4b76bad2dbf3a49e99feb49db3eee1dde2ef8e12/LICENSE"
+                }
+              ],
+              "revision_policy": "Default branch HEAD captured 2026-10-19",
+              "eligibility": "source_auditable",
+              "license_label": "MIT",
+              "license_scope": "Observed repository license text; third-party components retain their own terms. This label does not authorize a particular redistribution or commercial deployment.",
+              "source_category": "public_source"
+            },
+            "source_commit_verified": "4b76bad2dbf3a49e99feb49db3eee1dde2ef8e12",
+            "source_path": "/workspace/scratch/008a76ec4981/benchmark-sources/bt",
+            "tracked_source_clean": true,
+            "distribution": "bt",
+            "distribution_version": "1.4.1",
+            "direct_url": {
+              "url": "file:///workspace/scratch/008a76ec4981/benchmark-sources/bt",
+              "dir_info": {}
+            },
+            "installed_code_files": 5,
+            "installed_code_sha256": "04d19dc402a9a4b3a4a142debd61991425f6d4511f707a310b4587bbd9ab966c",
+            "setup_manifest_sha256": "34bd820d0de10a8cd8ef3c8af6fb37dc5b23649bb77a607e7df2aa1707459cee",
+            "system_site_packages": false
+          },
+          "source_verification_ms": 53.871262,
+          "prepared_load_ms": 1.384088,
+          "prepared_arrays_sha256": "edf9788717e11c56ac1a831924e7e737f84ed33a3d7cdaf31135595b51b56736",
+          "contract": {
+            "initial_cash": 1000000,
+            "fee_bps": 0,
+            "slippage_bps": 0,
+            "signal_delay_bars": 1,
+            "equity_rtol": 1e-10,
+            "equity_atol": 1e-06,
+            "price_rtol": 1e-12,
+            "price_atol": 1e-08,
+            "quantity_rtol": 1e-10,
+            "quantity_atol": 1e-10,
+            "schema_version": 1,
+            "name": "prior-close-decision_next-close-fill_long-flat_v1",
+            "sizing": "All affordable continuous units on entry; hold units until exit; no ongoing rebalancing",
+            "signal_availability": "Decision uses only the prefix through close[t]; earliest fill is close[t+1]",
+            "fill_price": "Entry close*(1+slippage); exit close*(1-slippage)",
+            "fee_basis": "fee_bps/10000 times actual fill price times absolute executed quantity",
+            "equity_observation": "Cash plus units marked at the unadjusted close, after the close fill",
+            "held_observation": "Incoming held state over the interval ending at the current close, before its fill",
+            "terminal_rule": "Predeclared liquidation at penultimate real close; final real row settles delayed bookkeeping",
+            "unmodelled": [
+              "market impact",
+              "partial fills",
+              "funding",
+              "borrowing",
+              "corporate actions",
+              "exchange calendars"
+            ]
+          },
+          "oracle_ms": 0.483409,
+          "adapter_prepare_ms": 4288.714362,
+          "engine_scope": "Public Backtest construction and run including strategy deepcopy, event loop, allocation/accounting and native ffn performance statistics",
+          "settings": {
+            "integer_positions": false,
+            "rebalance": "Only on desired long/flat transitions",
+            "universe": "One explicitly registered native Security, including flat scenarios",
+            "progress_bar": false,
+            "processed_rows": 1000,
+            "native_stats_requested": true,
+            "bt_core_import_path": "/workspace/scratch/008a76ec4981/Backtest-Benchmark/.work/envs/bt/lib/python3.12/site-packages/bt/core.cpython-312-x86_64-linux-gnu.so",
+            "native_reference_row": "Engine adds a nontrading NaN bootstrap row; no fabricated market price"
+          },
+          "output_observation": {
+            "equity_cash_units": "Native strategy values, cash and position histories",
+            "fills": "Native get_transactions; per-bar native fee history on fill bars"
+          },
+          "rank_against_full_engine": true,
+          "runtime": {
+            "python": "3.12.14 (main, Aug 25 2026, 14:00:49) [Clang 22.1.3 ]",
+            "executable": "/workspace/scratch/008a76ec4981/Backtest-Benchmark/.work/envs/bt/bin/python",
+            "prefix": "/workspace/scratch/008a76ec4981/Backtest-Benchmark/.work/envs/bt",
+            "platform": "Linux-6.18.55-x86_64-with-glibc2.39",
+            "machine": "x86_64",
+            "cpu_model": null,
+            "logical_cpus_visible": 9,
+            "cpu_affinity": [
+              0,
+              1,
+              2,
+              3,
+              4,
+              5,
+              6,
+              7,
+              8
+            ],
+            "container_constraints": {},
+            "thread_environment": {
+              "OMP_NUM_THREADS": "1",
+              "OPENBLAS_NUM_THREADS": "1",
+              "MKL_NUM_THREADS": "1",
+              "VECLIB_MAXIMUM_THREADS": "1",
+              "NUMEXPR_NUM_THREADS": "1",
+              "NUMBA_NUM_THREADS": "1",
+              "RAYON_NUM_THREADS": "1",
+              "BLIS_NUM_THREADS": "1"
+            },
+            "packages": [
+              {
+                "name": "bt",
+                "version": "1.4.1"
+              },
+              {
+                "name": "cloudpickle",
+                "version": "3.1.2"
+              },
+              {
+                "name": "contourpy",
+                "version": "1.4.0"
+              },
+              {
+                "name": "cycler",
+                "version": "0.12.1"
+              },
+              {
+                "name": "Cython",
+                "version": "3.3.0"
+              },
+              {
+                "name": "decorator",
+                "version": "5.3.1"
+              },
+              {
+                "name": "ffn",
+                "version": "1.4.1"
+              },
+              {
+                "name": "fonttools",
+                "version": "4.67.0"
+              },
+              {
+                "name": "hatch-cython",
+                "version": "0.6.0"
+              },
+              {
+                "name": "hatchling",
+                "version": "1.32.4"
+              },
+              {
+                "name": "joblib",
+                "version": "1.6.0"
+              },
+              {
+                "name": "kiwisolver",
+                "version": "1.5.1"
+              },
+              {
+                "name": "matplotlib",
+                "version": "3.11.2"
+              },
+              {
+                "name": "narwhals",
+                "version": "2.27.1"
+              },
+              {
+                "name": "numpy",
+                "version": "2.2.6"
+              },
+              {
+                "name": "packaging",
+                "version": "26.3"
+              },
+              {
+                "name": "pandas",
+                "version": "2.3.3"
+              },
+              {
+                "name": "pathspec",
+                "version": "1.1.1"
+              },
+              {
+                "name": "pillow",
+                "version": "13.0.0"
+              },
+              {
+                "name": "pluggy",
+                "version": "1.7.0"
+              },
+              {
+                "name": "pyarrow",
+                "version": "23.0.1"
+              },
+              {
+                "name": "pyparsing",
+                "version": "3.3.3"
+              },
+              {
+                "name": "PyPrind",
+                "version": "2.11.3"
+              },
+              {
+                "name": "python-dateutil",
+                "version": "2.9.0.post0"
+              },
+              {
+                "name": "pytz",
+                "version": "2026.5"
+              },
+              {
+                "name": "scikit-learn",
+                "version": "1.9.1"
+              },
+              {
+                "name": "scipy",
+                "version": "1.18.1"
+              },
+              {
+                "name": "setuptools",
+                "version": "84.0.0"
+              },
+              {
+                "name": "six",
+                "version": "1.17.0"
+              },
+              {
+                "name": "tabulate",
+                "version": "0.10.0"
+              },
+              {
+                "name": "threadpoolctl",
+                "version": "3.6.0"
+              },
+              {
+                "name": "tomlkit",
+                "version": "0.15.2"
+              },
+              {
+                "name": "tqdm",
+                "version": "4.70.1"
+              },
+              {
+                "name": "trove-classifiers",
+                "version": "2026.9.21.13"
+              },
+              {
+                "name": "tzdata",
+                "version": "2026.5"
+              },
+              {
+                "name": "wheel",
+                "version": "0.48.0"
+              }
+            ],
+            "threadpools": [
+              {
+                "user_api": "blas",
+                "internal_api": "openblas",
+                "num_threads": 1,
+                "prefix": "libscipy_openblas",
+                "filepath": "/workspace/scratch/008a76ec4981/Backtest-Benchmark/.work/envs/bt/lib/python3.12/site-packages/numpy.libs/libscipy_openblas64_-56d6093b.so",
+                "version": "0.3.29",
+                "threading_layer": "pthreads",
+                "architecture": "SkylakeX"
+              },
+              {
+                "user_api": "blas",
+                "internal_api": "openblas",
+                "num_threads": 1,
+                "prefix": "libscipy_openblas",
+                "filepath": "/workspace/scratch/008a76ec4981/Backtest-Benchmark/.work/envs/bt/lib/python3.12/site-packages/scipy.libs/libscipy_openblas-5f890258.so",
+                "version": "0.3.31.dev",
+                "threading_layer": "pthreads",
+                "architecture": "SkylakeX"
+              },
+              {
+                "user_api": "openmp",
+                "internal_api": "openmp",
+                "num_threads": 1,
+                "prefix": "libgomp",
+                "filepath": "/workspace/scratch/008a76ec4981/Backtest-Benchmark/.work/envs/bt/lib/python3.12/site-packages/scikit_learn.libs/libgomp-e985bcbb.so.1.0.0",
+                "version": null
+              }
+            ]
+          },
+          "summary": {
+            "final_equity": 1000000.0,
+            "total_return": 0.0,
+            "max_drawdown": 0.0,
+            "mean_bar_return": 0.0,
+            "held_fraction": 0.0,
+            "entries": 0,
+            "exits": 0
+          },
+          "parity": {
+            "equity_samples_checked": 999,
+            "fills_checked": 0,
+            "max_abs_equity_error": 0.0,
+            "max_relative_equity_error": 0.0,
+            "optional_observed_fields_checked": [
+              "cash",
+              "units",
+              "fill_quantities",
+              "fill_fees"
+            ],
+            "optional_unobserved_fields": []
+          },
+          "peak_rss_bytes_after_first": 256634880,
+          "peak_rss_bytes_after_full_calls": 256634880,
+          "peak_rss_bytes_final": 256634880,
+          "rss_scope": "Process lifetime high-water memory, including imports, validation, all repetitions, and optional separately labeled core diagnostics; Linux KiB converted to bytes, macOS bytes unchanged"
+        },
+        "process": {
+          "command": [
+            "/workspace/scratch/008a76ec4981/Backtest-Benchmark/.work/envs/bt/bin/python",
+            "-m",
+            "bench.worker",
+            "--engine",
+            "bt",
+            "--prepared",
+            "/workspace/scratch/008a76ec4981/Backtest-Benchmark/.work/runs/core-preflight-retest-003/prepared-flat.npz",
+            "--prepared-sha256",
+            "e5c906ff2f45fb6d8250e4f42303534a3a4034cdae1b4b720c9e984420979629",
+            "--contract",
+            "/workspace/scratch/008a76ec4981/Backtest-Benchmark/.work/runs/core-preflight-retest-003/contract.json",
+            "--environment-manifest",
+            "/workspace/scratch/008a76ec4981/Backtest-Benchmark/.work/manifests/bt.json",
+            "--output",
+            "/workspace/scratch/008a76ec4981/Backtest-Benchmark/.work/runs/core-preflight-retest-003/bt/flat/preflight/result",
+            "--mode",
+            "preflight",
+            "--warm-repeats",
+            "7"
+          ],
+          "returncode": 0,
+          "timed_out": false,
+          "process_wall_ms": 5778.777462,
+          "launch_to_ready_ms": 36.971836,
+          "launch_to_first_valid_ms": 5339.777264,
+          "parent_observed_events_ms": {
+            "ready": 36.971836,
+            "first_valid": 5339.777264,
+            "complete": 5341.545271
+          },
+          "stdout_path": "/workspace/scratch/008a76ec4981/Backtest-Benchmark/.work/runs/core-preflight-retest-003/bt/flat/preflight/stdout.log",
+          "startup_scope": "Parent observed process launch to worker ready event, before scientific/engine imports; IPC scheduling is included",
+          "first_valid_scope": "Process launch through source verification, imports, input load, independent oracle, first engine call, extraction and successful parity"
+        },
+        "directory": "/workspace/scratch/008a76ec4981/Backtest-Benchmark/.work/runs/core-preflight-retest-003/bt/flat/preflight"
+      },
+      "preflight_status": "verified",
+      "rank_against_full_engine": true
+    }
+  ],
+  "execution_order": [
+    {
+      "engine": "backtesting_py",
+      "strategy": "buy_and_hold",
+      "mode": "preflight",
+      "process_block": 0
+    },
+    {
+      "engine": "bt",
+      "strategy": "buy_and_hold",
+      "mode": "preflight",
+      "process_block": 0
+    },
+    {
+      "engine": "backtesting_py",
+      "strategy": "sma_cross",
+      "mode": "preflight",
+      "process_block": 0
+    },
+    {
+      "engine": "bt",
+      "strategy": "sma_cross",
+      "mode": "preflight",
+      "process_block": 0
+    },
+    {
+      "engine": "backtesting_py",
+      "strategy": "flat",
+      "mode": "preflight",
+      "process_block": 0
+    },
+    {
+      "engine": "bt",
+      "strategy": "flat",
+      "mode": "preflight",
+      "process_block": 0
+    }
+  ],
+  "aggregation": "Median of within-process warm medians; fresh-process first calls separate; no outlier removal",
+  "protocol": {
+    "native_threads": 1,
+    "fresh_jit_cache_directory_per_worker": true,
+    "preflight_process_separate_from_measurement": true,
+    "balanced_blocks": "Forward engine order on even process blocks, reversed order on odd blocks",
+    "signals_outside_engine_interval": true,
+    "parity_outside_engine_interval": true,
+    "scope_warning": "Full engines perform different native extra work; engine_scope and settings must accompany comparisons. Native-component and internal-core calls never receive full-engine ratios."
+  },
+  "benchmark_code_sha256": {
+    "bench/__init__.py": "5c0c4675c67347c7eb144f8514b34fc5e13c19676e0516b5e95f75c86bff21d7",
+    "bench/__main__.py": "8ffd81e7324729dee2d96a3d514e1f7562aaee96aa5fe7ab0d1ceaf76b5d20f1",
+    "bench/adapters/__init__.py": "8e55c1a67e94282df80f29eee2003caeb1e68e8080f262203a199e66562b7435",
+    "bench/adapters/backtesting_py.py": "98a35a425681ca1c8a4ae1d8b68deb6728d96565341b4bea91c7601cd409796b",
+    "bench/adapters/backtrader.py": "d2db7fbe23d2aaf03eb298f1b5e3598fab87fffc6b9a864377f384b3820c9ae4",
+    "bench/adapters/bt.py": "e616252a3683a2e15e37f4a28933bab118b10399d4fc695080db32d8b96de556",
+    "bench/adapters/limen.py": "fe0c698b8c20626e39f4e0ba45bfa93b388b88a16fe638000591b3b31ccefad0",
+    "bench/adapters/qlib.py": "ef84ae221b2f55caf0e780986b2540ae1077b2ffe2f5a4eed2b06da05058ec60",
+    "bench/adapters/qstrader.py": "63e97ab46b91d1ebeae0c2c0ceb6dec98a2d68580da776abe14fbee6204d7dba",
+    "bench/adapters/vectorbt.py": "5250c6ed778ce3002de0aaa885acf63f46708532f146d255a9b972ec66854c8f",
+    "bench/api.py": "6c31a489a1e80ca3dc7974d0cd92d3958092cc2e5e5cd006572c367409c00491",
+    "bench/cli.py": "17d0c32fb19f7babab660d5b45c3599db95ec3c24be424efbaa94f7bd470599a",
+    "bench/contract.py": "b0b19b537c36c16097774ec14cf556c48fb44086a5f063aa3c53a5cda0c4d8d4",
+    "bench/data.py": "549cdfee46c31cfccb2f36eb56ba3b49626d9f260772e22a3ef5f7312379faf3",
+    "bench/provenance.py": "4dbf408abe779f18670788e3442bed07357b6190a490ef0bb91aaefa7079bac8",
+    "bench/worker.py": "2801350e5d240316a383f371a87c140066196605d1a73ffc1425b111697ad10f"
+  },
+  "input": {
+    "input_path": "/workspace/scratch/008a76ec4981/limen-review-source/tests/fixtures/spot_1h_20240101_20241231.parquet",
+    "input_sha256": "a634bbd4f3692fac7bc88512da588e7772f4bd1b749567606d5314e54d0adf72",
+    "source_file_rows": 8784,
+    "source_rows_used": 1000,
+    "evaluation_rows": 999,
+    "timestamp_column": "datetime",
+    "source_timestamp_semantics": "bar_open",
+    "bar_interval_seconds": 3600,
+    "normalization": "Original prices unchanged; close event timestamp derived from declared source interval semantics",
+    "first_close_timestamp_ns": 1704070800000000000,
+    "last_evaluated_close_timestamp_ns": 1707663600000000000,
+    "settlement_close_timestamp_ns": 1707667200000000000,
+    "venue_provenance": "Byte identity only unless an external data manifest establishes more"
+  },
+  "scenarios": {
+    "buy_and_hold": {
+      "strategy": "buy_and_hold",
+      "strategy_parameters": {},
+      "prepared_arrays_sha256": "6ed121548c11927b7f74f01d686d54a88c1a64fa81bcaac2875213f53e992167",
+      "signal_sha256": "353c38352a855c80f4ecb0793a76493228541b5fab5ef7af26effac91e77ec46",
+      "prepared_file_sha256": "928f6143505ce916d7afb6d43a147b6b575e25a41000daa3ae1f55ef21671cf0",
+      "prepared_path": "/workspace/scratch/008a76ec4981/Backtest-Benchmark/.work/runs/core-preflight-retest-003/prepared-buy_and_hold.npz"
+    },
+    "sma_cross": {
+      "strategy": "sma_cross",
+      "strategy_parameters": {
+        "fast_period": 50,
+        "slow_period": 200
+      },
+      "prepared_arrays_sha256": "73607efc67181174ab6f26db14ae391e5c20087d4afbc6709f1629e5eff287ac",
+      "signal_sha256": "b5e06de49507d189f71c283d827bf967c0dfce0ae8106568401fe7148a516902",
+      "prepared_file_sha256": "a4ae634f0328a37b7080e5131271a4cddce4d9c47bdbb428744338dbb6e754fb",
+      "prepared_path": "/workspace/scratch/008a76ec4981/Backtest-Benchmark/.work/runs/core-preflight-retest-003/prepared-sma_cross.npz"
+    },
+    "flat": {
+      "strategy": "flat",
+      "strategy_parameters": {},
+      "prepared_arrays_sha256": "edf9788717e11c56ac1a831924e7e737f84ed33a3d7cdaf31135595b51b56736",
+      "signal_sha256": "541b3e9daa09b20bf85fa273e5cbd3e80185aa4ec298e765db87742b70138a53",
+      "prepared_file_sha256": "e5c906ff2f45fb6d8250e4f42303534a3a4034cdae1b4b720c9e984420979629",
+      "prepared_path": "/workspace/scratch/008a76ec4981/Backtest-Benchmark/.work/runs/core-preflight-retest-003/prepared-flat.npz"
+    }
+  },
+  "summary": [
+    {
+      "engine": "backtesting_py",
+      "strategy": "buy_and_hold",
+      "status": "verified",
+      "rank_against_full_engine": true,
+      "independent_processes": 0,
+      "equity_samples": 999,
+      "fills_checked": 2,
+      "first_full_common_ms_median": null,
+      "warm_full_common_ms_median": null,
+      "warm_engine_ms_median": null,
+      "warm_extraction_common_ms_median": null,
+      "warm_full_common_cpu_ms_median": null,
+      "peak_rss_bytes_median": null,
+      "launch_to_ready_ms_median": null,
+      "launch_to_first_valid_ms_median": null,
+      "warm_full_common_ms_samples": [],
+      "first_full_common_ms_samples": [],
+      "warm_process_medians_ms": [],
+      "relative_to_limen_warm_full_common": null,
+      "relative_to_limen_interpretation": "Candidate duration divided by Limen duration; only complete same-contract full-engine cases qualify"
+    },
+    {
+      "engine": "bt",
+      "strategy": "buy_and_hold",
+      "status": "verified",
+      "rank_against_full_engine": true,
+      "independent_processes": 0,
+      "equity_samples": 999,
+      "fills_checked": 2,
+      "first_full_common_ms_median": null,
+      "warm_full_common_ms_median": null,
+      "warm_engine_ms_median": null,
+      "warm_extraction_common_ms_median": null,
+      "warm_full_common_cpu_ms_median": null,
+      "peak_rss_bytes_median": null,
+      "launch_to_ready_ms_median": null,
+      "launch_to_first_valid_ms_median": null,
+      "warm_full_common_ms_samples": [],
+      "first_full_common_ms_samples": [],
+      "warm_process_medians_ms": [],
+      "relative_to_limen_warm_full_common": null,
+      "relative_to_limen_interpretation": "Candidate duration divided by Limen duration; only complete same-contract full-engine cases qualify"
+    },
+    {
+      "engine": "backtesting_py",
+      "strategy": "sma_cross",
+      "status": "verified",
+      "rank_against_full_engine": true,
+      "independent_processes": 0,
+      "equity_samples": 999,
+      "fills_checked": 6,
+      "first_full_common_ms_median": null,
+      "warm_full_common_ms_median": null,
+      "warm_engine_ms_median": null,
+      "warm_extraction_common_ms_median": null,
+      "warm_full_common_cpu_ms_median": null,
+      "peak_rss_bytes_median": null,
+      "launch_to_ready_ms_median": null,
+      "launch_to_first_valid_ms_median": null,
+      "warm_full_common_ms_samples": [],
+      "first_full_common_ms_samples": [],
+      "warm_process_medians_ms": [],
+      "relative_to_limen_warm_full_common": null,
+      "relative_to_limen_interpretation": "Candidate duration divided by Limen duration; only complete same-contract full-engine cases qualify"
+    },
+    {
+      "engine": "bt",
+      "strategy": "sma_cross",
+      "status": "verified",
+      "rank_against_full_engine": true,
+      "independent_processes": 0,
+      "equity_samples": 999,
+      "fills_checked": 6,
+      "first_full_common_ms_median": null,
+      "warm_full_common_ms_median": null,
+      "warm_engine_ms_median": null,
+      "warm_extraction_common_ms_median": null,
+      "warm_full_common_cpu_ms_median": null,
+      "peak_rss_bytes_median": null,
+      "launch_to_ready_ms_median": null,
+      "launch_to_first_valid_ms_median": null,
+      "warm_full_common_ms_samples": [],
+      "first_full_common_ms_samples": [],
+      "warm_process_medians_ms": [],
+      "relative_to_limen_warm_full_common": null,
+      "relative_to_limen_interpretation": "Candidate duration divided by Limen duration; only complete same-contract full-engine cases qualify"
+    },
+    {
+      "engine": "backtesting_py",
+      "strategy": "flat",
+      "status": "verified",
+      "rank_against_full_engine": true,
+      "independent_processes": 0,
+      "equity_samples": 999,
+      "fills_checked": 0,
+      "first_full_common_ms_median": null,
+      "warm_full_common_ms_median": null,
+      "warm_engine_ms_median": null,
+      "warm_extraction_common_ms_median": null,
+      "warm_full_common_cpu_ms_median": null,
+      "peak_rss_bytes_median": null,
+      "launch_to_ready_ms_median": null,
+      "launch_to_first_valid_ms_median": null,
+      "warm_full_common_ms_samples": [],
+      "first_full_common_ms_samples": [],
+      "warm_process_medians_ms": [],
+      "relative_to_limen_warm_full_common": null,
+      "relative_to_limen_interpretation": "Candidate duration divided by Limen duration; only complete same-contract full-engine cases qualify"
+    },
+    {
+      "engine": "bt",
+      "strategy": "flat",
+      "status": "verified",
+      "rank_against_full_engine": true,
+      "independent_processes": 0,
+      "equity_samples": 999,
+      "fills_checked": 0,
+      "first_full_common_ms_median": null,
+      "warm_full_common_ms_median": null,
+      "warm_engine_ms_median": null,
+      "warm_extraction_common_ms_median": null,
+      "warm_full_common_cpu_ms_median": null,
+      "peak_rss_bytes_median": null,
+      "launch_to_ready_ms_median": null,
+      "launch_to_first_valid_ms_median": null,
+      "warm_full_common_ms_samples": [],
+      "first_full_common_ms_samples": [],
+      "warm_process_medians_ms": [],
+      "relative_to_limen_warm_full_common": null,
+      "relative_to_limen_interpretation": "Candidate duration divided by Limen duration; only complete same-contract full-engine cases qualify"
+    }
+  ],
+  "status": "completed",
+  "finished_utc": "2026-10-19T17:36:50.708442+00:00"
+}

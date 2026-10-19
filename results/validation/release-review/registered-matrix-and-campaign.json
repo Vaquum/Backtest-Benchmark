@@ -1,0 +1,25 @@
+{
+  "ok": true,
+  "assessment_rows": 546,
+  "expected_rows": 546,
+  "candidates": 13,
+  "criteria": 42,
+  "source_references": 1309,
+  "local_source_files_checked": 346,
+  "scope": "Assessment structure, pinned source-link syntax, and referenced local file containment/existence/line bounds.",
+  "campaigns": [
+    {
+      "path": "/workspace/scratch/008a76ec4981/Backtest-Benchmark/results/campaigns/2026-10-19-common-zero-single-thread/report.json",
+      "command": "run",
+      "cases": 14,
+      "verified_timed_processes": 70,
+      "native_thread_observation_policy": "loaded-pools-v1",
+      "native_thread_observed_workers_checked": 84,
+      "native_thread_timed_samples_checked": 800,
+      "native_thread_control_scope": "Declared environment values and observed loaded native/Polars pool limits checked for 84 verified workers; 800 recorded post-call admission flags checked. No physical thread/CPU isolation verification.",
+      "scope": "Recorded settings, completeness, parity admission metadata, aggregate arithmetic and ranking separation; no engine execution or array-parity recomputation."
+    }
+  ],
+  "limitations": "This read-only gate does not verify local git/build byte identity, interpret whether source lines support a claim, exclude comments within code, replay numerical/statistical results, or enforce CPU/thread-pool isolation.",
+  "errors": []
+}

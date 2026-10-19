@@ -1,0 +1,24 @@
+{
+  "documents": [
+    {
+      "path": "README.md",
+      "sha256": "4b7cbf5ba54fb1063b80ad4539c40d835096884e0e1b0ce88aed145b69195960",
+      "lines": 129
+    },
+    {
+      "path": "protocol/README.md",
+      "sha256": "6153de1e8c6bbac05e38c651926aba07d9e28621e110da00fcc018751d459ee2",
+      "lines": 100
+    },
+    {
+      "path": "reports/academic-analysis.md",
+      "sha256": "f3f7f955139b37784a7fa56637eebe8b92d64767df3ed2b7e185d6b4a365e95a",
+      "lines": 131
+    },
+    {
+      "path": "reports/safety-analysis.md",
+      "sha256": "53210326ab00554c901a9da97dddc2cda8c6bd925c84aa7e43762bdde61914e4",
+      "lines": 51
+    }
+  ]
+}

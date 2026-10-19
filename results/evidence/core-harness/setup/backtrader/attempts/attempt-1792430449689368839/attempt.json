@@ -1,0 +1,175 @@
+{
+  "engine": "backtrader",
+  "status": "installed",
+  "source_path": "/workspace/scratch/008a76ec4981/benchmark-sources/backtrader",
+  "environment_path": "/workspace/scratch/008a76ec4981/Backtest-Benchmark/.work/envs/backtrader",
+  "catalog": {
+    "id": "backtrader",
+    "repository": "mementum/backtrader",
+    "name": "Backtrader",
+    "track": "execution",
+    "url": "https://github.com/mementum/backtrader",
+    "commit": "b853d7c90b6721476eb5a5ea3135224e33db1f14",
+    "commit_date": "2023-04-19T16:13:08+02:00",
+    "source_url": "https://github.com/mementum/backtrader/tree/b853d7c90b6721476eb5a5ea3135224e33db1f14",
+    "license_files": [
+      {
+        "path": "LICENSE",
+        "sha256": "e1c0ad728983d8a57335e52cf1064f1affd1d454173d8cebd3ed8b4a72b48704",
+        "url": "https://github.com/mementum/backtrader/blob/b853d7c90b6721476eb5a5ea3135224e33db1f14/LICENSE"
+      }
+    ],
+    "revision_policy": "Default branch HEAD captured 2026-10-19",
+    "eligibility": "source_auditable"
+  },
+  "created_utc": "2026-10-19T17:20:49.690205+00:00",
+  "commands": [
+    {
+      "command": [
+        "uv",
+        "venv",
+        "--python",
+        "/opt/codex/runtimes/codex-primary-runtime/dependencies/python/bin/python3.12",
+        "/workspace/scratch/008a76ec4981/Backtest-Benchmark/.work/envs/backtrader"
+      ],
+      "returncode": 0,
+      "wall_seconds": 0.12573653000436025
+    },
+    {
+      "command": [
+        "uv",
+        "pip",
+        "compile",
+        "/workspace/scratch/008a76ec4981/Backtest-Benchmark/.work/bootstrap/backtrader/attempt-1792430449689368839/requirements.in",
+        "--python",
+        "/workspace/scratch/008a76ec4981/Backtest-Benchmark/.work/envs/backtrader/bin/python",
+        "--generate-hashes",
+        "--no-emit-package",
+        "backtrader",
+        "--output-file",
+        "/workspace/scratch/008a76ec4981/Backtest-Benchmark/.work/bootstrap/backtrader/attempt-1792430449689368839/dependencies.lock"
+      ],
+      "returncode": 0,
+      "wall_seconds": 0.5935970310019911
+    },
+    {
+      "command": [
+        "uv",
+        "pip",
+        "install",
+        "--python",
+        "/workspace/scratch/008a76ec4981/Backtest-Benchmark/.work/envs/backtrader/bin/python",
+        "--require-hashes",
+        "-r",
+        "/workspace/scratch/008a76ec4981/Backtest-Benchmark/.work/bootstrap/backtrader/attempt-1792430449689368839/dependencies.lock"
+      ],
+      "returncode": 0,
+      "wall_seconds": 0.4564191399986157
+    },
+    {
+      "command": [
+        "uv",
+        "pip",
+        "install",
+        "--python",
+        "/workspace/scratch/008a76ec4981/Backtest-Benchmark/.work/envs/backtrader/bin/python",
+        "--no-deps",
+        "--no-build-isolation",
+        "/workspace/scratch/008a76ec4981/benchmark-sources/backtrader"
+      ],
+      "returncode": 0,
+      "wall_seconds": 1.0191792309997254
+    }
+  ],
+  "lock_origin": "new dependency resolution; exact generated hash lock retained",
+  "source_commit": "b853d7c90b6721476eb5a5ea3135224e33db1f14",
+  "python": "/workspace/scratch/008a76ec4981/Backtest-Benchmark/.work/envs/backtrader/bin/python",
+  "dependency_lock": "/workspace/scratch/008a76ec4981/Backtest-Benchmark/.work/bootstrap/backtrader/attempt-1792430449689368839/dependencies.lock",
+  "dependency_lock_sha256": "89ec11a3c5d23c0eb8840fb34ede42e8c71c991d81dcfccf46e89b41eac4b6ae",
+  "observed": {
+    "python": "3.12.14 (main, Aug 25 2026, 14:00:49) [Clang 22.1.3 ]",
+    "platform": "Linux-6.18.55-x86_64-with-glibc2.39",
+    "prefix": "/workspace/scratch/008a76ec4981/Backtest-Benchmark/.work/envs/backtrader",
+    "distributions": [
+      {
+        "name": "backtrader",
+        "version": "1.9.78.123"
+      },
+      {
+        "name": "Cython",
+        "version": "3.3.0"
+      },
+      {
+        "name": "hatch-cython",
+        "version": "0.6.0"
+      },
+      {
+        "name": "hatchling",
+        "version": "1.32.4"
+      },
+      {
+        "name": "numpy",
+        "version": "2.2.6"
+      },
+      {
+        "name": "packaging",
+        "version": "26.3"
+      },
+      {
+        "name": "pandas",
+        "version": "2.3.3"
+      },
+      {
+        "name": "pathspec",
+        "version": "1.1.1"
+      },
+      {
+        "name": "pluggy",
+        "version": "1.7.0"
+      },
+      {
+        "name": "pyarrow",
+        "version": "23.0.1"
+      },
+      {
+        "name": "python-dateutil",
+        "version": "2.9.0.post0"
+      },
+      {
+        "name": "pytz",
+        "version": "2026.5"
+      },
+      {
+        "name": "setuptools",
+        "version": "84.0.0"
+      },
+      {
+        "name": "six",
+        "version": "1.17.0"
+      },
+      {
+        "name": "threadpoolctl",
+        "version": "3.6.0"
+      },
+      {
+        "name": "tomlkit",
+        "version": "0.15.2"
+      },
+      {
+        "name": "trove-classifiers",
+        "version": "2026.9.21.13"
+      },
+      {
+        "name": "tzdata",
+        "version": "2026.5"
+      },
+      {
+        "name": "wheel",
+        "version": "0.48.0"
+      }
+    ],
+    "candidate_version": "1.9.78.123",
+    "candidate_direct_url": "{\"url\":\"file:///workspace/scratch/008a76ec4981/benchmark-sources/backtrader\",\"dir_info\":{}}"
+  },
+  "system_site_packages": false
+}

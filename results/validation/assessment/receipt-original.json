@@ -1,0 +1,69 @@
+{
+  "recorded_utc": "2026-10-19T18:27:16.464104+00:00",
+  "campaign_disposition": "Original campaign; superseded control configuration. Its timings do not establish a single-thread native-pool run.",
+  "scope": "Read-only assessment validation and recorded campaign structural/admission/arithmetic checks, plus bounded corruption checks on copied or in-memory metadata. No engine imports, numerical parity replay, timings, or CPU/thread-isolation proof.",
+  "runtime": {
+    "python": "3.12.14 (main, Aug 25 2026, 14:00:49) [Clang 22.1.3 ]",
+    "executable": "/opt/codex/runtimes/codex-primary-runtime/dependencies/python/bin/python"
+  },
+  "commands": [
+    {
+      "argv": [
+        "python",
+        "scripts/validate_assessment.py",
+        "--json"
+      ],
+      "cwd": "/workspace/scratch/008a76ec4981/Backtest-Benchmark",
+      "exit_code": 0,
+      "stdout": "results/validation/assessment/matrix-syntax-original.json",
+      "stdout_sha256": "b189317a1a75950bdeec207627b344284eaa73b5d18d4092a06727a4b275d42f",
+      "stderr": ""
+    },
+    {
+      "argv": [
+        "python",
+        "scripts/validate_assessment.py",
+        "--sources",
+        "/workspace/scratch/008a76ec4981/benchmark-sources",
+        "--campaign",
+        "/workspace/scratch/008a76ec4981/Backtest-Benchmark/.work/runs/full-cpu-2026-10-19/report.json",
+        "--json"
+      ],
+      "cwd": "/workspace/scratch/008a76ec4981/Backtest-Benchmark",
+      "exit_code": 0,
+      "stdout": "results/validation/assessment/matrix-and-original-campaign.json",
+      "stdout_sha256": "397595929f27a18ba54954bbf2207220d88d1f8e87f5017c8c4020a40d3bfa38",
+      "stderr": ""
+    },
+    {
+      "argv": [
+        "python",
+        "results/validation/assessment/check_validator.py",
+        "--sources",
+        "/workspace/scratch/008a76ec4981/benchmark-sources",
+        "--campaign",
+        "/workspace/scratch/008a76ec4981/Backtest-Benchmark/.work/runs/full-cpu-2026-10-19/report.json"
+      ],
+      "cwd": "/workspace/scratch/008a76ec4981/Backtest-Benchmark",
+      "exit_code": 0,
+      "stdout": "results/validation/assessment/corruption-checks-original.json",
+      "stdout_sha256": "1d09ad93f5ce6157138bb4fc8b24e87c4443eed9de8f5b1ec3c88a60b8758294",
+      "stderr": ""
+    }
+  ],
+  "input_sha256": {
+    "scripts/validate_assessment.py": "50da3b582dc589833bd2828b37f77871453a05fb43c0afdba9b1c2f63dabb266",
+    "results/validation/assessment/check_validator.py": "22c5ad6e2620f13cb6c28b481ba2a1a3ed8074304b217e6b55599c669b083593",
+    "catalog/candidates.json": "82852db1b463fed07f2bcffbb6e53e195138ff9296bb384ebdd75a67719231a5",
+    "catalog/auxiliary_sources.json": "3fed78aeb218161f6ddd6dd531386d88f11cb7ed40a20889bc951f3b47201d84",
+    "protocol/criteria.json": "999d7e6649527750e0e164d3f05db94bcea5297022afcfdebc8610fe77a624d5",
+    "assessment/academic.json": "a0f8ff3bea86acf2f7a7721b6611f2d2dc2c8b46ade391c0e2093202343bb84e",
+    "assessment/safety.json": "08d3d95df4d2b38bda3120983c8442a90e530dd56abf286a8fa6f00da6e87b66",
+    "assessment/performance.json": "2a657b066fd5e9789088ba151405f0a3d46c452d7d2574bdc5d38139c04187a2"
+  },
+  "campaign_report": {
+    "path": "/workspace/scratch/008a76ec4981/Backtest-Benchmark/.work/runs/full-cpu-2026-10-19/report.json",
+    "sha256": "e663f96c576f6386fd897f20d26cac04f5ef7af319d7d4a2dc2c529a16343bab"
+  },
+  "source_scope": "Referenced local files were checked for containment/existence/line bounds. Source git/byte/build identity was not independently re-established by this gate."
+}

@@ -1,0 +1,236 @@
+{
+  "engine": "bt",
+  "status": "installed",
+  "source_path": "/workspace/scratch/008a76ec4981/benchmark-sources/bt",
+  "environment_path": "/workspace/scratch/008a76ec4981/Backtest-Benchmark/.work/envs/bt",
+  "catalog": {
+    "id": "bt",
+    "repository": "pmorissette/bt",
+    "name": "bt",
+    "track": "portfolio",
+    "url": "https://github.com/pmorissette/bt",
+    "commit": "4b76bad2dbf3a49e99feb49db3eee1dde2ef8e12",
+    "commit_date": "2026-10-17T14:54:28-04:00",
+    "source_url": "https://github.com/pmorissette/bt/tree/4b76bad2dbf3a49e99feb49db3eee1dde2ef8e12",
+    "license_files": [
+      {
+        "path": "LICENSE",
+        "sha256": "8711471566d722d55eca3f09196f342b2ee2960616e68127ec2a17b39ff99949",
+        "url": "https://github.com/pmorissette/bt/blob/4b76bad2dbf3a49e99feb49db3eee1dde2ef8e12/LICENSE"
+      }
+    ],
+    "revision_policy": "Default branch HEAD captured 2026-10-19",
+    "eligibility": "source_auditable"
+  },
+  "compiler_overrides": {
+    "CC": "/usr/bin/gcc",
+    "CXX": "/usr/bin/g++"
+  },
+  "created_utc": "2026-10-19T17:26:17.237290+00:00",
+  "commands": [
+    {
+      "command": [
+        "uv",
+        "pip",
+        "compile",
+        "/workspace/scratch/008a76ec4981/Backtest-Benchmark/.work/bootstrap/bt/attempt-1792430777237160463/requirements.in",
+        "--python",
+        "/workspace/scratch/008a76ec4981/Backtest-Benchmark/.work/envs/bt/bin/python",
+        "--generate-hashes",
+        "--no-emit-package",
+        "bt",
+        "--output-file",
+        "/workspace/scratch/008a76ec4981/Backtest-Benchmark/.work/bootstrap/bt/attempt-1792430777237160463/dependencies.lock"
+      ],
+      "returncode": 0,
+      "wall_seconds": 0.15281636900181184
+    },
+    {
+      "command": [
+        "uv",
+        "pip",
+        "install",
+        "--python",
+        "/workspace/scratch/008a76ec4981/Backtest-Benchmark/.work/envs/bt/bin/python",
+        "--require-hashes",
+        "-r",
+        "/workspace/scratch/008a76ec4981/Backtest-Benchmark/.work/bootstrap/bt/attempt-1792430777237160463/dependencies.lock"
+      ],
+      "returncode": 0,
+      "wall_seconds": 0.014498800999717787
+    },
+    {
+      "command": [
+        "uv",
+        "pip",
+        "install",
+        "--python",
+        "/workspace/scratch/008a76ec4981/Backtest-Benchmark/.work/envs/bt/bin/python",
+        "--no-deps",
+        "--no-build-isolation",
+        "/workspace/scratch/008a76ec4981/benchmark-sources/bt"
+      ],
+      "returncode": 0,
+      "wall_seconds": 19.608904034997977
+    }
+  ],
+  "lock_origin": "new dependency resolution; exact generated hash lock retained",
+  "source_commit": "4b76bad2dbf3a49e99feb49db3eee1dde2ef8e12",
+  "python": "/workspace/scratch/008a76ec4981/Backtest-Benchmark/.work/envs/bt/bin/python",
+  "dependency_lock": "/workspace/scratch/008a76ec4981/Backtest-Benchmark/.work/bootstrap/bt/attempt-1792430777237160463/dependencies.lock",
+  "dependency_lock_sha256": "bf0707551e5f4b6313da0bdb148d2948161e455020934fc8eedcfa546e180375",
+  "observed": {
+    "python": "3.12.14 (main, Aug 25 2026, 14:00:49) [Clang 22.1.3 ]",
+    "platform": "Linux-6.18.55-x86_64-with-glibc2.39",
+    "prefix": "/workspace/scratch/008a76ec4981/Backtest-Benchmark/.work/envs/bt",
+    "distributions": [
+      {
+        "name": "bt",
+        "version": "1.4.1"
+      },
+      {
+        "name": "cloudpickle",
+        "version": "3.1.2"
+      },
+      {
+        "name": "contourpy",
+        "version": "1.4.0"
+      },
+      {
+        "name": "cycler",
+        "version": "0.12.1"
+      },
+      {
+        "name": "Cython",
+        "version": "3.3.0"
+      },
+      {
+        "name": "decorator",
+        "version": "5.3.1"
+      },
+      {
+        "name": "ffn",
+        "version": "1.4.1"
+      },
+      {
+        "name": "fonttools",
+        "version": "4.67.0"
+      },
+      {
+        "name": "hatch-cython",
+        "version": "0.6.0"
+      },
+      {
+        "name": "hatchling",
+        "version": "1.32.4"
+      },
+      {
+        "name": "joblib",
+        "version": "1.6.0"
+      },
+      {
+        "name": "kiwisolver",
+        "version": "1.5.1"
+      },
+      {
+        "name": "matplotlib",
+        "version": "3.11.2"
+      },
+      {
+        "name": "narwhals",
+        "version": "2.27.1"
+      },
+      {
+        "name": "numpy",
+        "version": "2.2.6"
+      },
+      {
+        "name": "packaging",
+        "version": "26.3"
+      },
+      {
+        "name": "pandas",
+        "version": "2.3.3"
+      },
+      {
+        "name": "pathspec",
+        "version": "1.1.1"
+      },
+      {
+        "name": "pillow",
+        "version": "13.0.0"
+      },
+      {
+        "name": "pluggy",
+        "version": "1.7.0"
+      },
+      {
+        "name": "pyarrow",
+        "version": "23.0.1"
+      },
+      {
+        "name": "pyparsing",
+        "version": "3.3.3"
+      },
+      {
+        "name": "PyPrind",
+        "version": "2.11.3"
+      },
+      {
+        "name": "python-dateutil",
+        "version": "2.9.0.post0"
+      },
+      {
+        "name": "pytz",
+        "version": "2026.5"
+      },
+      {
+        "name": "scikit-learn",
+        "version": "1.9.1"
+      },
+      {
+        "name": "scipy",
+        "version": "1.18.1"
+      },
+      {
+        "name": "setuptools",
+        "version": "84.0.0"
+      },
+      {
+        "name": "six",
+        "version": "1.17.0"
+      },
+      {
+        "name": "tabulate",
+        "version": "0.10.0"
+      },
+      {
+        "name": "threadpoolctl",
+        "version": "3.6.0"
+      },
+      {
+        "name": "tomlkit",
+        "version": "0.15.2"
+      },
+      {
+        "name": "tqdm",
+        "version": "4.70.1"
+      },
+      {
+        "name": "trove-classifiers",
+        "version": "2026.9.21.13"
+      },
+      {
+        "name": "tzdata",
+        "version": "2026.5"
+      },
+      {
+        "name": "wheel",
+        "version": "0.48.0"
+      }
+    ],
+    "candidate_version": "1.4.1",
+    "candidate_direct_url": "{\"url\":\"file:///workspace/scratch/008a76ec4981/benchmark-sources/bt\",\"dir_info\":{}}"
+  },
+  "system_site_packages": false
+}

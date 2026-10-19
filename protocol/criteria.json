@@ -1,0 +1,380 @@
+[
+  {
+    "id": "P01",
+    "aspect": "Computation performance",
+    "criterion": "Parameter-space construction and retained memory",
+    "scope": "Native parameter/task-domain construction and retained candidate state",
+    "protocol": "Freeze parameter domains, types, ordering, intended candidate count and work layer. Measure domain construction separately from candidate consumption; report peak RSS, actual objects/rows retained and Cartesian cardinality. Distinguish task windows, raw data sharing and true lazy generation.",
+    "baseline_scope": "Standard ParamSpace versus MSQ Grid initialization for identical domains and requested candidate count k",
+    "baseline_protocol": "Use existing configured parameter domains; time initialization separately from consumption over k and Cartesian size P. Report peak RSS, construction CPU time and actual rows retained. Keep enum order/value typing identical."
+  },
+  {
+    "id": "P02",
+    "aspect": "Computation performance",
+    "criterion": "Candidate generation throughput, novelty and exhaustion",
+    "scope": "Accepted candidate generation, duplicates, rejection and finite exhaustion",
+    "protocol": "Freeze the accepted candidate sequence when comparing engine cost. Separately measure sampler generation across occupancy levels; retain proposed/accepted/duplicate/rejected/failed counts and timestamps. Distinguish deterministic finite enumeration from random or adaptive proposals.",
+    "baseline_scope": "Standard generate(); MSQ Grid/Random/Sobol accepted candidate stream",
+    "baseline_protocol": "Measure full consumption for finite grids and fixed accepted k for sparse searches, with increasing occupancy k/P. Require exact candidate identity/order for deterministic same-strategy comparisons and track rejects/failures. Profile source hash/serialization/deletion time and seen-set memory."
+  },
+  {
+    "id": "P03",
+    "aspect": "Computation performance",
+    "criterion": "Cold process and first valid result latency",
+    "scope": "Fresh process through the first complete, parity-accepted result",
+    "protocol": "Separate process startup, source/build verification, dependency and engine imports, input reading, adapter construction, first native call, lazy extraction and parity. Use fresh processes and empty optional JIT caches; freeze native thread limits and retain first-versus-warm differences.",
+    "baseline_scope": "Fresh source/pipeline construction through one semantically complete accepted output",
+    "baseline_protocol": "Use fresh processes, fixed dependencies and empty optional JIT caches. Separately record dependency import, Limen import, source read, preparation/model construction, first engine call and complete first output. Repeat independent process pairs with balanced order."
+  },
+  {
+    "id": "P04",
+    "aspect": "Computation performance",
+    "criterion": "Complete research campaign throughput and stage attribution",
+    "scope": "Complete scientific research campaign under identical work and evidence retention",
+    "protocol": "Freeze model family, temporal folds, preprocessing, accepted candidate sequence, precision, losses and output retention. Measure source/preparation/fit/predict/execution/metrics/persistence separately and end-to-end; count all attempts. An execution-only loop requires an explicit research adapter.",
+    "baseline_scope": "Specified split/model/search/recording contract from local source load through durable successful rounds",
+    "baseline_protocol": "Run identical accepted candidate sequence, model parameters, tolerances, folds and output retention. Record source/prep/fit/predict/backtest/metrics/persistence spans. Repeat independent campaigns; include strict failures separately from successes."
+  },
+  {
+    "id": "P05",
+    "aspect": "Computation performance",
+    "criterion": "Fitted preparation and prediction reuse",
+    "scope": "Learned preprocessing and prediction reuse with scientific equivalence",
+    "protocol": "Identify actual fitted-state or prediction reuse separately from raw-data sharing, deterministic feature caches or result memoization. Fix training support, models, candidate order and cost axes; count transform/model fits, compare complete scientific outputs and record cold/hit/invalidation/eviction cases. No speedup claim from availability alone.",
+    "baseline_scope": "Eligible serial deterministic snapshot GridStrategy workloads with factorize=True",
+    "baseline_protocol": "Run tests.benchmark_factorized_preparation once to validate mechanism on its configured fixture: 48 terminal rows, 24 model configurations, 2 fee values; compare cache-cleared fitted prep against fitted-prep reuse. Assert scientific digests equal at 12dp and instrument target/scaler/model fits. For statistical ranking, use additional preregistered independent paired campaigns."
+  },
+  {
+    "id": "P06",
+    "aspect": "Computation performance",
+    "criterion": "Indicator and feature kernel throughput by n and lookback",
+    "scope": "Native numerical indicator/feature kernels and wrappers",
+    "protocol": "Compare actual aligned native outputs for equal recorded prefixes, period, lookback, dtype, null/NaN policy and timestamp availability. Separate core, wrapper, compilation and memory. A common externally prepared signal is not a native indicator benchmark.",
+    "baseline_scope": "SMA/EMA/RSI/CCI/linearreg/stochastic/Hilbert/line features/FFD, preserving full aligned arrays",
+    "baseline_protocol": "Use recorded data prefixes only, fixed period/window/cadence, identical dtype and null/NaN behavior. Measure core and DataFrame wrapper separately. Assert timestamp/null-mask equality before numeric tolerances. Include large valid lookbacks and high feature width; report missing larger inputs."
+  },
+  {
+    "id": "P07",
+    "aspect": "Computation performance",
+    "criterion": "Snapshot backtest latency under full execution parity",
+    "scope": "Complete public backtest result under a declared common execution contract",
+    "protocol": "Version cash, units, fees, slippage, decision/fill lag, liquidation, holding/equity conventions and every required observable. Admit only parity-verified native results against an independent oracle. Measure fresh native call and lazy common extraction together and separately; label full engine, native component and internal core distinctly.",
+    "baseline_scope": "Zero-cost close-to-close all-in long/flat buy_and_hold and sma_cross on supplied 1h fixture",
+    "baseline_protocol": "Run tests.benchmark_backtest_strategies with engines limen, strategies buy_and_hold sma_cross, repeats 7. Independent cash replay must match each equity sample, held bar and fill bar/side/price. Record engine-only, common-output and full snapshot timings separately, plus raw samples and source/code hashes."
+  },
+  {
+    "id": "P08",
+    "aspect": "Computation performance",
+    "criterion": "Event execution and forward-label scaling",
+    "scope": "Event, account and forward-label work at matched semantic density",
+    "protocol": "Freeze recorded events, calendars, products, tie ordering, precision, queue/fill assumptions, funding, barriers and required output tape. Scale real input prefixes and actual event/asset/timer counts; separate event execution, ledger materialization and optional forward labels. Do not synthesize missing market depth from OHLC.",
+    "baseline_scope": "Full account ledger and both-side forward labels, with sparse/dense timers and funding modes",
+    "baseline_protocol": "Fix identical product, source availability, event tie order, fill precision, funding, barriers, exposure and outputs. Measure plan miss/hit separately, complete ledger materialization and optional label-only computation separately. Increase recorded partition prefixes and timer cadence within safe budgets; record actual event/state/candidate counts."
+  },
+  {
+    "id": "P09",
+    "aspect": "Computation performance",
+    "criterion": "Peak memory and resource amplification",
+    "scope": "Resident memory and amplification across the full admitted work layer",
+    "protocol": "Record input/retained/output sizes, per-process high-water RSS and, in a dedicated campaign, process-tree RSS/PSS with sampling interval. Include worker sharing, IPC, compilation, caches, models and records. Distinguish entry-count cache limits, live allocations, resident memory and proven hard resource bounds.",
+    "baseline_scope": "Complete serial/parallel campaign including sources, caches, IPC, models, logs and ledgers",
+    "baseline_protocol": "Sample process-tree RSS/PSS at stated interval; also record per-process high-water marks. Measure input/preparation/model/cache/output contributions where possible; distinguish byte-accounted cache size, live allocations and OS resident pages. Run matched datasets/workers without overlapping campaigns."
+  },
+  {
+    "id": "P10",
+    "aspect": "Computation performance",
+    "criterion": "Parallel speedup, efficiency and load imbalance",
+    "scope": "Parallel scientific-work throughput, efficiency and load imbalance",
+    "protocol": "Run a fixed accepted workload at workers1,2,4,... with native inner threads fixed, after full scientific-output parity. Retain scheduling order, start/end intervals, worker/parent commit time and process-tree memory. Distinguish I/O prefetch from parallel simulation or model fitting; no inferred speedup from worker availability.",
+    "baseline_scope": "Eligible compiled CPU logreg/LightGBM rounds at workers 1,2,4,... with native_threads=1",
+    "baseline_protocol": "Use identical candidate order and full result/evidence parity; run homogeneous and naturally heterogeneous existing parameter workloads. Measure start/end intervals, parent commit time, barriers and process-tree memory; repeat independent balanced serial/parallel runs after startup controls."
+  },
+  {
+    "id": "P11",
+    "aspect": "Computation performance",
+    "criterion": "Cache locality, hit cost and optimization coverage",
+    "scope": "Cache costs, locality, invalidation and supported-path coverage",
+    "protocol": "Name the exact cached entity: raw bytes, features, fit state, predictions, quotes, execution plan or result. Compare cold/hit/eviction/resume under identical outputs; mutate consumed source/config fields individually and require fresh-equivalent results. Measure hash/copy/lookup cost, actual bytes and retained-entry limits.",
+    "baseline_scope": "Computation, fitted-prep, prediction and EventPlan caches at cold/warm/eviction boundaries",
+    "baseline_protocol": "Count calls and actual retained bytes for repeated/unique keys below and above capacities using existing admissible domains. Mutate one consumed parameter/source at a time and require fresh-equivalent output. Measure hashing/copy overhead and revisit after eviction/resume. Publish a supported-workload matrix alongside timing."
+  },
+  {
+    "id": "P12",
+    "aspect": "Computation performance",
+    "criterion": "Recording/checkpoint overhead and restart recovery",
+    "scope": "Native result recording, checkpoint overhead and restart recovery",
+    "protocol": "Treat plain result serialization and complete checkpoint continuation as distinct sub-capabilities. Measure writes/bytes/hash/compression and output-equivalent recording modes; interrupt at declared commit boundaries and compare the full durable ordered prefix after restart. Distinguish process crash, power loss and competing writers.",
+    "baseline_scope": "Full terminal prefix with recording variants and interrupted serial/parallel campaigns",
+    "baseline_protocol": "Run same candidates and outputs under permitted recording profiles; measure serialization/hash/compression/write spans, physical bytes and dedup ratio. Interrupt after known durable checkpoints, resume and compare complete ordered terminal prefix and scientific outputs. Measure recovery versus history size; distinguish crash integrity from power-loss durability."
+  },
+  {
+    "id": "A01",
+    "aspect": "Academic rigor/robustness",
+    "criterion": "Causal predictor invariance",
+    "scope": "Information available at each historical decision: native features and indicators, point-in-time data access, callback inputs, and batch versus successive-prefix inference.",
+    "protocol": "For each supported interface, declare the decision time and information set. Compare historical outputs on an unchanged recorded prefix with the corresponding outputs after a future extension, excluding legitimately incomplete targets and declared warmup rows. Retain changed-row counts, first divergence, numerical tolerance, and a causal control. Separately test latest-row-only prefix replay and point-in-time data getters. Distinguish a native future-dependent operation from caller-supplied future inputs or unrestricted custom callbacks; an execution engine's callback ordering does not prove arbitrary user features causal.",
+    "baseline_scope": "Point-in-time predictor values from native batch features; successive-prefix inference evaluated separately",
+    "baseline_protocol": "For batch outputs claimed to represent historical predictor values, compare warmed prefixes against identical prefixes of future-extended input and point-in-time replay. Count differences and retain first divergence/tolerance. For latest-row-only inference, audit each prediction using only its available prefix."
+  },
+  {
+    "id": "A02",
+    "aspect": "Academic rigor/robustness",
+    "criterion": "Training and evaluation isolation",
+    "scope": "Separation of fitting, selection, calibration, and evaluation observations for native or explicitly supplied adapter models, including online portfolio estimators.",
+    "protocol": "Identify which component owns each fitted object and record its exact source-row support, fit cutoff, and evaluation membership. With split identities fixed, change only later held-out records using permitted recorded observations and compare fitted state and earlier outputs. Trace target construction, feature processing, model selection, and cache reuse as well as model fitting. Do not infer a managed research capability from a generic training callback. Where the execution layer has no native fitted model, mark the research requirement as adapter-required rather than grading the engine as a failed learner.",
+    "baseline_scope": "Built-in MLManifest preparation versus arbitrary Python callbacks",
+    "baseline_protocol": "Freeze raw IDs and split bounds; alter only later held-out records using permitted actual observations; compare fitted objects and train/validation outputs before comparing score."
+  },
+  {
+    "id": "A03",
+    "aspect": "Academic rigor/robustness",
+    "criterion": "Label availability and censoring",
+    "scope": "Availability and censoring of forward labels, event-completion outcomes, and any targets consumed by a fitted decision rule.",
+    "protocol": "Retain source-row identity, decision time, local observation time where relevant, label completion time, and fit cutoff for every consumed target. Verify that fit support excludes unfinished outcomes and that split-terminal targets are censored or purged according to the implemented horizon. Inspect negative shifts and forward windows as target operations separately from predictor construction. Check actual post-filter membership and adaptive event horizons, not just a configured gap. A known future calendar event is not itself an unavailable outcome. For engines without native targets, identify the adapter obligation explicitly.",
+    "baseline_scope": "Built-in forward targets and bound private trade labels",
+    "baseline_protocol": "Retain source row IDs, decision time, label completion time and fit cutoff; audit every training row and terminal label separately."
+  },
+  {
+    "id": "A04",
+    "aspect": "Academic rigor/robustness",
+    "criterion": "Temporal split geometry",
+    "scope": "Temporal geometry of training, validation, calibration, final evaluation, and online estimation windows, including horizon-dependent purge and embargo where applicable.",
+    "protocol": "Declare identical raw observation windows, chronology, rolling or expanding policy, retained history, and evaluation schedule before comparing solutions. Audit actual sample membership after label censoring, missing-value removal, warmup, and transform filtering. Verify any purge or embargo against the outcomes actually used and state whether the guard is mandatory or configured. Test boundary ordering and empty or insufficient windows. Separate an online trailing estimator from a supervised cross-validation workflow; replay chunks, reporting periods, and rebalance schedules do not by themselves implement independent validation.",
+    "baseline_scope": "Configured walk-forward and ordinary ratio/date splitters",
+    "baseline_protocol": "Use identical raw date windows and retention policy across solutions; audit actual post-transform membership, not configuration alone."
+  },
+  {
+    "id": "A05",
+    "aspect": "Academic rigor/robustness",
+    "criterion": "Fold-local preprocessing and stacking",
+    "scope": "Locality of learned preprocessing, feature selection, covariance estimation, dimensionality reduction, stacked models, and out-of-fold predictions within their intended training windows.",
+    "protocol": "Hold observation identities and folds fixed. For every learned transform and estimator, inspect fit support, application support, state reuse, and refit timing. Verify that validation or evaluation data cannot alter an earlier fitted object and that out-of-fold predictions are produced without training on the current row or any outcome unavailable at its decision time. Include nested preprocessing and second-stage model labels. Distinguish a deterministic rolling calculation from a learned transform, and report absent native model ownership as adapter-required rather than asserting leakage from the absence of a pipeline manager.",
+    "baseline_scope": "Walk-forward ML and conditional direction/sizing",
+    "baseline_protocol": "Hold fold IDs fixed; inspect each learned transform/model's training support and confirm OOF prediction never trained on current/future labels."
+  },
+  {
+    "id": "A06",
+    "aspect": "Academic rigor/robustness",
+    "criterion": "Calibration and threshold selection",
+    "scope": "Fitting and selecting probability calibrators, decision thresholds, and other policies that translate model or strategy outputs into actions.",
+    "protocol": "Record separate sample identities and evidence access for estimator training, calibration, policy selection, and final evaluation. Trace whether calibration labels or policy-objective outcomes are reused in the reported selection score. Declare the action space, costs, risk constraints, and optimization objective; include an all-flat action when it is admissible under that economic decision contract. Evaluate the frozen selected policy on an external final sample. Distinguish parameter optimization from probability calibration and do not require an execution-only engine to implement either without a stated research adapter.",
+    "baseline_scope": "Built-in binary model calibration and event validation objective",
+    "baseline_protocol": "Record separate train/calibration/threshold/evaluation sample IDs; use external final sample for performance comparison; include all-flat decision when optimizing economic objective."
+  },
+  {
+    "id": "A07",
+    "aspect": "Academic rigor/robustness",
+    "criterion": "Metric definitions and aggregation",
+    "scope": "Definitions, units, numerical edge cases, and aggregation of prediction, execution, portfolio, risk, and statistical summary metrics.",
+    "protocol": "Recompute comparable metrics from a shared audited observation and equity or return tape. Pin prediction and action semantics, currency and capital basis, cash flows, gross or net costs, sampling calendar, annualization, compounding, variance and moment conventions, and benchmark alignment. Record warmup and terminal-position policies, missing or nonfinite handling, zero-variance sentinels, and fallback return bases. Distinguish averages of fold metrics from metrics on pooled ordered returns. A matching metric name or output hash is insufficient evidence of a matching mathematical quantity.",
+    "baseline_scope": "Binary metrics, walk-forward summaries and execution return tapes",
+    "baseline_protocol": "Pin probability/action semantics, return units, equity basis, periods, annualization, cost convention and fold aggregation before comparing."
+  },
+  {
+    "id": "A08",
+    "aspect": "Academic rigor/robustness",
+    "criterion": "Numerical and mathematical verification",
+    "scope": "Independent evidence for numerical correctness, mathematical implementation, temporal invariants, statistical calibration, and execution-model accounting within the declared capability.",
+    "protocol": "Separate independent analytical or ledger oracles, optimized-versus-reference parity, metamorphic temporal checks, empirical probability calibration, and empirical execution-model validation. Prefer expected quantities derived without reusing the implementation under test. Retain exact source and dependency identity, executable or binary identity where available, fixture hashes, tolerances, test invocation, and result artifacts. Label source-inspected assertions separately from tests actually executed in this assessment, and report the bounded test set. Passing an implementation parity test does not establish statistical calibration or real-market execution fidelity.",
+    "baseline_scope": "DSR/PBO and numerical correctness test surfaces",
+    "baseline_protocol": "Separate algebraic formula agreement, optimized-versus-reference equality, and empirical probability calibration. Retain exact fixture hashes and dependency/runtime identity."
+  },
+  {
+    "id": "A09",
+    "aspect": "Academic rigor/robustness",
+    "criterion": "Convergence and fit stability",
+    "scope": "Convergence, numerical fit stability, failure reporting, and fallback behavior for native iterative learners, calibration routines, and portfolio optimizers.",
+    "protocol": "For each applicable fitting stage, retain termination reason, iteration or evaluation budget, warnings, exceptions, and any fallback selected. Carry warned successes and failed attempts into the declared attempt denominator and predeclare their selection eligibility. Check whether downstream records distinguish an optimized solution from a default or equal-weight fallback. Assess stability of the selected result under meaningful repeated fits or perturbations when supported and authorized. A completed simulation is not evidence of model convergence; a framework with no iterative fitted component has an adapter requirement rather than a convergence failure.",
+    "baseline_scope": "Experiment successful/failed round records",
+    "baseline_protocol": "Carry warned successes into denominator; predeclare whether they are eligible; independently test selected result stability."
+  },
+  {
+    "id": "A10",
+    "aspect": "Academic rigor/robustness",
+    "criterion": "Search-family history completeness",
+    "scope": "Completeness and durability of the search history used to select a strategy, model, parameterization, data choice, or execution scenario.",
+    "protocol": "Predeclare the search family or adaptive search policy, evidence-access rules, and budget. Append every attempted configuration and occurrence, including failed, warned, cancelled, repeated, and resumed attempts, with seeds, costs, data identity, source identity, and terminal disposition. Reconcile searchable results with the attempt ledger and preserve selection decisions. Distinguish a local parameter product or a supplied collection of successful results from the full effective research family; count choices made outside that collection when they influenced selection. A final best-result object alone is not a complete search history.",
+    "baseline_scope": "Per-run returns/CSV and explicitly supplied experiment families",
+    "baseline_protocol": "Predeclare full family before testing; append every attempted choice, cost, seed and evidence access, including failures; reconcile artifacts to terminal occurrences."
+  },
+  {
+    "id": "A11",
+    "aspect": "Academic rigor/robustness",
+    "criterion": "Multiple-selection and dependence control",
+    "scope": "Inferential control for repeated or adaptive selection and for dependence within the observations supporting a reported result.",
+    "protocol": "Declare the inferential target, null, candidate family or adaptive policy, and dependence assumptions. Use aligned observations and the complete declared selection family where the method requires them. Distinguish marginal significance or probabilistic Sharpe from corrections for multiple selection, and a diagnostic from an enforced admission rule. Audit effective sample size, horizon overlap, serial dependence, moment conventions, resampling unit, and degenerate outcomes. Evaluate calibration separately where empirical evidence exists. Never treat combinatorial partitions or overlapping folds as independent observations, or a zero Monte Carlo exceedance count as a proven zero error probability.",
+    "baseline_scope": "DSR and CSCV PBO reports",
+    "baseline_protocol": "Use synchronous returns and full declared search family; evaluate calibration under plausible dependence and adaptive selection separately; never substitute partition count for independent observations."
+  },
+  {
+    "id": "A12",
+    "aspect": "Academic rigor/robustness",
+    "criterion": "Cross-run evaluation comparability",
+    "scope": "Comparability and provenance of results across runs, candidates, execution paths, and research families.",
+    "protocol": "Require the same ordered evaluation identities and a declared mapping of assets, decision times, data availability, capital, costs, and return conventions. Retain actual post-warmup observations, configuration, source and environment identifiers, input digests, and failure dispositions. Reject incompatible results with reasons rather than silently intersecting samples. Check whether persisted artifacts and asynchronous logging preserve the evidence needed to reproduce selection. Distinguish a canonical output digest from input or build identity and a date-based data-vintage selector from immutable content verification. Report native compatibility checks separately from adapter checks.",
+    "baseline_scope": "Family acceptance reports over supplied directories",
+    "baseline_protocol": "Compare only identical ordered evaluation observations and return conventions; retain incompatible candidates and reasons, with no silent sample intersection."
+  },
+  {
+    "id": "A13",
+    "aspect": "Academic rigor/robustness",
+    "criterion": "Final holdout protocol and compatibility",
+    "scope": "Protection and evidentiary accounting of final evaluation data after strategy or model selection, including supported execution paths and known access boundaries.",
+    "protocol": "Freeze the selected policy, fitted objects or allowed refit rule, features, data interpretation, costs, and execution scenarios before final-data access. Record an attempt durably before exposure and retain every attempt, result, failure, and subsequent access in the owned workflow. Verify point-in-time evaluation and state the supported and rejected paths. Label access history as initial-recorded, subsequent, unknown, or post-release as appropriate. Do not equate a train/test split or a repeatedly viewed optimization test window with a reserved final holdout, or claim that a local ledger prevents external reading of the same data.",
+    "baseline_scope": "Reserved local holdout for native dated binary Sensors/Cohorts",
+    "baseline_protocol": "Freeze selection/cost scenarios before final data access, allocate exposure durably, assess prefixes and retain every attempt; report initial-recorded/subsequent/unknown/post-release."
+  },
+  {
+    "id": "A14",
+    "aspect": "Academic rigor/robustness",
+    "criterion": "Baseline quality and external validity",
+    "scope": "Quality of comparison baselines and evidence that predictive, portfolio, or execution conclusions extend beyond the specific tested fixture and model assumptions.",
+    "protocol": "Match data availability, evaluation dates, costs, exposure and risk budget, capacity assumptions, execution semantics, and selection opportunity across candidate and reference strategies. Use buy-and-hold, fixed rules, random or resampled controls, and simple learned baselines where relevant, recording all choices. Assess predictive generalization separately from execution-model fidelity and distinguish code capability from demonstrated empirical validity. Use recorded data appropriate to each specialist track; do not manufacture order-book evidence from OHLC bars. State which assets, periods, regimes, fill assumptions, and real-world effects remain unvalidated.",
+    "baseline_scope": "Fixed strategy baselines, random actions and future use claims",
+    "baseline_protocol": "Require matched data, cost/execution, dates, risk budget and information availability for buy/hold, fixed rules, simple learned and candidate solutions; count all choices."
+  },
+  {
+    "id": "A15",
+    "aspect": "Academic rigor/robustness",
+    "criterion": "Sensitivity, ablation and reproducibility",
+    "scope": "Implemented and demonstrated sensitivity analysis, ablation, dependence-aware uncertainty, and reproduction of selected results within the declared capability.",
+    "protocol": "Predeclare a bounded set of meaningful perturbations such as feature removal, parameter changes, costs, latency, queue assumptions, model seeds, and recorded market regimes. Preserve observation, configuration, source, dependency, and runtime identity and compare each perturbation against the same declared reference contract. Distinguish the existence of configurable knobs or a bootstrap helper from an executed sensitivity or ablation result. Report uncertainty intervals with the resampling unit and dependence assumptions, retain failures and repeated draws, and check whether fixed seeds unintentionally reproduce the same sample instead of generating a reproducible sequence.",
+    "baseline_scope": "Feature ablation, recorded evidence and parameter diagnostics",
+    "baseline_protocol": "Predeclare perturbations and budgets; preserve hashes/configs/runtime IDs; rerun chosen result with meaningful perturbations and report intervals with their dependence assumptions."
+  },
+  {
+    "id": "S01",
+    "aspect": "Safety properties",
+    "criterion": "Untrusted configuration callable boundary",
+    "scope": "Configuration-to-code and serialized-object admission on each supported public route; trusted strategy code, authenticated operators and hostile declarative inputs are separate threat models.",
+    "protocol": "Trace parser, schema, resolver, attribute lookup and final invocation together. Where executable guards constrain code selection, check disallowed names, prefix collisions, imported-attribute traversal, trust-flag types and pickle globals without invoking dangerous targets. Record defaults and explicit opt-outs. Treat ordinary trusted Python/compiled strategies as code, not a sandbox failure; a fixed engine without a constrained configuration surface is out of scope for that surface.",
+    "baseline_scope": "YAML parse/validate/build_manifest/data-source execution when manifests are supplied by another party",
+    "baseline_protocol": "Attempt direct disallowed names, namespace-prefix collisions, and traversal through attributes imported by allowed modules. Assert no prohibited callable can be resolved, admitted, bound or invoked. Identity checking is sufficient for dangerous callable probes."
+  },
+  {
+    "id": "S02",
+    "aspect": "Safety properties",
+    "criterion": "Input schema and numeric admission consistency",
+    "scope": "Numeric, type, shape and schema admission at equivalent public constructors, configuration paths, data loaders, callbacks and execution kernels.",
+    "protocol": "Run the same applicable invalid-type, NaN/Inf, bound, missing/duplicate field, axis/shape and unknown-key corpus at each route. Record rejection type and stage, unchanged-state checks and any numerical consequences of accepted inputs. Test Python assertions under the declared optimization mode. Separate intended sentinels, score domains, fee rebates and borrowing from invalid values; never compare rejection percentages across different applicable corpora.",
+    "baseline_scope": "Manifest validation versus public direct snapshot/event/sensor APIs",
+    "baseline_protocol": "Run the same invalid-type, NaN/Inf, bound, missing-column, shape, duplicate-key and unknown-key corpus at every public equivalent route; report rejected/applicable count and any accepted case affecting numerical results. Treat explicitly modeled rebates separately."
+  },
+  {
+    "id": "S03",
+    "aspect": "Safety properties",
+    "criterion": "Algorithm and process resource bounds",
+    "scope": "Input-dependent loops, allocation, archive expansion, queues, process/thread dispatch and algorithm-runtime budgets; configuration defaults and native versus OS-enforced bounds are distinguished.",
+    "protocol": "Inspect progress/termination conditions, finite parameter checks, dimensions, queue capacities, concurrency limits and workload deadlines. Probe extreme small inputs only under an external process deadline and memory limit. Report admitted work, peak RSS, wall time and cleanup, separating simulated-time deadlines, polling intervals, managed-heap monitors and hard process limits. Do not execute an unbounded case without containment.",
+    "baseline_scope": "Feature generation, input parsing, event scheduling and worker runtime",
+    "baseline_protocol": "Reject nonfinite numeric parameters before work; bound data-dependent work and allocations. For admitted small inputs, test adversarial parameter extremes under external memory/time limits and report maximum time/RSS and clean termination. Do not actually run an unbounded NaN case without containment."
+  },
+  {
+    "id": "S04",
+    "aspect": "Safety properties",
+    "criterion": "Data source network, archive and path boundaries",
+    "scope": "Native or explicitly supplied ingestion adapters for files, network responses, archives, caches and public download endpoints; each address/path trust boundary is named.",
+    "protocol": "Use controlled local fixtures to check scheme/address policy, redirect behavior, path normalization and containment, connection/read/overall timeouts, response bytes, decompressed bytes/member counts and cache/source revalidation. Keep traversal probes entirely inside one newly created temporary root. Attribute guarantees only to actual call paths and the pinned standard-library/dependency version. An already-loaded-array engine requires a separately audited ingestion adapter.",
+    "baseline_scope": "HistoricalData CSV/Parquet/ZIP/local/HTTP(S) ingestion and dataset cache",
+    "baseline_protocol": "With controlled local fixtures, verify schemes, address/path containment, redirects, bounded responses, decompression expansion, timeout propagation and cache revalidation. Report each route separately; do not probe external private endpoints."
+  },
+  {
+    "id": "S05",
+    "aspect": "Safety properties",
+    "criterion": "Manifest content-address verification on read",
+    "scope": "Claimed content identity of configuration, input data, code, model, result and environment artifacts at creation, reuse and every consuming read.",
+    "protocol": "Declare exactly which bytes and semantic fields each identifier binds. Change a non-identity field or referenced artifact while retaining the claimed digest/key and require consumers claiming that identity to recompute and reject mismatches. Test malformed hashes, alias/prefix ambiguity and changed reference targets. Distinguish UUIDs, configuration-only cache keys, canonical result digests and full study manifests. Fixed execution routes need an identity adapter for a managed-research comparison.",
+    "baseline_scope": "Committed manifest URI resolution, existing-content reuse, and family-evidence verification",
+    "baseline_protocol": "Commit a copy of an existing valid manifest; mutate non-lineage content while retaining the filename and lineage ID. Every operation claiming that ID should recompute and reject mismatch. Separately test label tampering, malformed hash and prefix ambiguity."
+  },
+  {
+    "id": "S06",
+    "aspect": "Safety properties",
+    "criterion": "Recorded round corruption and reference integrity",
+    "scope": "Persisted records, event logs, model/results, reference graphs and cache reads; immutable experiment evidence and disposable caches have different contracts.",
+    "protocol": "For the declared format, mutate headers/checksums, encoding, order, duplicate IDs, references, digests, missing members, counts and aligned arrays. Verify the documented-by-code error route, expected logical reconstruction and whether failure changes bytes/mtime. Distinguish explicit cache invalidation/recompute from fail-closed immutable admission, type allowlists from integrity hashes, and hashes from tamper authentication. State which optional backend and verifier must be enabled.",
+    "baseline_scope": "gzip-jsonl-v2 rounds and content-addressed market/signal blobs",
+    "baseline_protocol": "Mutate CRC, gzip header, UTF-8, layout metadata, duplicate order, references, digest, missing blob, count and array alignment. Verify rejection and byte/mtime equality of persisted files after a failed resume; compare restored logical data with legacy storage."
+  },
+  {
+    "id": "S07",
+    "aspect": "Safety properties",
+    "criterion": "Crash/restart consistency and durable commit frontier",
+    "scope": "Native or adapter-owned persistent commit frontiers, experiment/task recovery, event replay and live startup reconciliation; each durable store and external side effect is scoped separately.",
+    "protocol": "Interrupt at write, flush, rename, database commit, watermark and acknowledgement boundaries. Require exact logical committed-prefix identity, coherent parameters/predictions/orders/results and defined recovery of in-flight work. Test competing writers and malformed committed evidence. Report process kill, write exception, OS/power loss and network-storage cases separately. Do not equate a local atomic batch with exactly-once external orders, or in-memory caches with durable experiment restart.",
+    "baseline_scope": "Experiment checkpoint and parallel resume over CSV, compressed records, blobs and audits",
+    "baseline_protocol": "Interrupt at every write/commit boundary and restart. Require exact ordered committed-prefix equality, consistent parameters/predictions/ledgers and no mutation on malformed committed evidence. Distinguish process termination, write exceptions, OS crash, power loss and competing writers."
+  },
+  {
+    "id": "S08",
+    "aspect": "Safety properties",
+    "criterion": "Parallel worker failure handling and bounded dispatch",
+    "scope": "Native or adapter-owned worker processes, threads, asynchronous I/O, result channels and bounded dispatch; sequential execution without workers is out of scope for this route.",
+    "protocol": "Exercise successful work, ordinary exceptions, initializer failure, panic, worker death, failed result publication and cancellation at zero/outstanding/final work. Capture caller-visible error, remaining queue entries, worker/orphan count, shutdown time and completed-prefix identity. Check that EOF/disconnection and no-progress reads terminate. If restart is offered, compare resumed output under the same order/seed/state contract; a simulated-time timeout or thread join is not a workload deadline.",
+    "baseline_scope": "Admitted built-in compiled CPU logreg/lightgbm parallel rounds",
+    "baseline_protocol": "Exercise normal, strict-rejection, raised exception, dead worker, failed initializer, SIGTERM at zero/final/outstanding phases. Report completed-prefix identity, orphan count, shutdown time and subsequent resumed equality."
+  },
+  {
+    "id": "S09",
+    "aspect": "Safety properties",
+    "criterion": "Inference output validity and unavailable-signal behavior",
+    "scope": "Model/strategy output admission and the actual downstream treatment of unavailable, invalid or rejected outputs; probabilities, scores, targets and orders keep distinct domains.",
+    "protocol": "Identify the native or adapter output contract and follow it to execution. Test warmup, missing/nonfinite features, invalid length/shape, nonfinite scores/quantities, probability bounds when relevant, callback exceptions and rejection status. Verify invalid output is distinguished from a valid flat decision and whether prior intent/protective orders are retained, canceled or rejected. A caller-visible mask counts as a mask unless an execution gate consumes it; fixed non-ML routes do not inherit a probability contract.",
+    "baseline_scope": "Python Sensor versus compiled Sensor handoff to downstream consumers",
+    "baseline_protocol": "For each public Sensor route, test warm-up, preselection periods, missing/nonfinite features, malformed length/shape, nonfinite predictions/probabilities, out-of-range probabilities and thrown callbacks. Assert unavailable is distinguishable from numeric flat and test downstream treatment of unavailable signals."
+  },
+  {
+    "id": "S10",
+    "aspect": "Safety properties",
+    "criterion": "Execution chronology and source evidence admission",
+    "scope": "Source-observation admission, event/availability clocks and order/fill chronology across data getters, vectorized arrays, bar replay and exchange/local event replay.",
+    "protocol": "Declare observation, availability, decision, submission and executable times. Use identical recorded events to test prehistory queries, duplicates, reordered/overlapping intervals, malformed OHLC, delayed availability, simultaneous events and partition boundaries. Require no fill or historical decision based on unavailable evidence. Test default and cheat/alternate modes separately. Timestamp validation does not authenticate a feed or repair future-dependent user features; array adapters must explicitly align signals, fills and valuation.",
+    "baseline_scope": "Event-engine observations/signals/funding and their declared availability timestamps",
+    "baseline_protocol": "Use identical recorded events with true availability times; test missing/duplicate IDs, reordered/overlapping bars, invalid OHLC, delayed availability, partition boundaries, source-content mutation and simultaneous events. Require no fill on evidence before its declared availability."
+  },
+  {
+    "id": "S11",
+    "aspect": "Safety properties",
+    "criterion": "Economic affordability, exposure and quantity constraints",
+    "scope": "Configured capital, exposure, quantity, margin and fee admission plus accounting identities; cash-only, permitted borrowing, derivatives and fill-derived PnL models are separate contracts.",
+    "protocol": "Replay the same recorded prices with declared costs, lot steps, minimum notionals, account currency and leverage. Reconcile cash/equity, fees, funding, realized/unrealized PnL and reservations; test post-cost affordability, reversal, pending orders, reduce-only, liquidation and no-mutation on rejected transactions. Identify required risk-model registration and bypass modes. Do not label intentional borrowed cash or an order-book PnL balance as an affordability defect; add a capital adapter where the selected engine omits that policy.",
+    "baseline_scope": "Event-engine target sizing, cash spot and linear perpetual accounting",
+    "baseline_protocol": "Replay the same recorded price path under fixed costs, lot step, minimum notional and margins. Verify equity identities, net/gross/cost/funding reconciliation, post-cost affordability, reversal handling and rejection of out-of-contract exposure or spot borrowing."
+  },
+  {
+    "id": "S12",
+    "aspect": "Safety properties",
+    "criterion": "Exit rules, gap treatment and execution uncertainty",
+    "scope": "Fill and protective-exit semantics for the selected native/adapter execution model: OHLC, quote, period-price, partial-fill, queue and terminal-position behavior.",
+    "protocol": "Use recorded windows containing adverse gaps, simultaneous barriers, intrabar entry/resize, repeated signals and terminal inventory; use real order-book events for queue tests. Declare stop/limit precedence, trigger versus executable price, slippage, volume, partial-fill, order rejection, latency, randomness and market-impact assumptions. Match these semantics before comparing outcomes. Record uncertainty and counterfactual replay limits; a simulated protective rule is not a guarantee of a live fill.",
+    "baseline_scope": "Event stop-loss/take-profit/time-stop logic and comparison with snapshot conventions",
+    "baseline_protocol": "Replay recorded OHLC windows with adverse opening gaps, both barriers touched, intrabar entry/resize, timeout and repeated signals. Align fill-price, costs, liquidity, terminal close and unavailable-signal conventions before comparing return/risks."
+  },
+  {
+    "id": "S13",
+    "aspect": "Safety properties",
+    "criterion": "Protected holdout reservation and exposure accounting",
+    "scope": "Managed research admission for protected holdout intervals, datasets/assets, candidate revisions and retained exposure history; fixed execution alone requires a governance adapter.",
+    "protocol": "Reserve a declared future holdout, attempt overlap/revision changes and concurrent use, attempt withdrawal after exposure, and interrupt before/after evaluation starts. Verify started/completed/failed history, used-reservation retention and explicit refusal of unsupported modes. Separate temporal train/test splits, account reservations and experiment UUIDs from durable holdout governance. A bounded unsuccessful implementation search yields Unknown with the searched paths; it is not proof of repository-wide absence.",
+    "baseline_scope": "Supported local project-bound protected holdout mode",
+    "baseline_protocol": "Reserve future intervals, attempt overlap/revision changes, concurrently run admitted research, try withdrawal after use, interrupt evaluation after attempt allocation and replay final assessment. Verify started/completed/failed history and explicit refusal of unsupported modes."
+  },
+  {
+    "id": "S14",
+    "aspect": "Safety properties",
+    "criterion": "Executable supply-chain and security CI coverage",
+    "scope": "Executable source, build, test, security and release workflows, resolved dependencies, native extensions and released artifact provenance.",
+    "protocol": "Inspect exact dependency/tool/action identities, mutable tags, workflow permissions, credential persistence, audit target sets, exception expiry and attestations. Record whether controls are merely configured or actually executed. Separately verify hosted enforcement, resolved advisories and released-byte provenance when permitted. A successful source build, matching version string or auxiliary source tag does not by itself prove wheel/binary identity.",
+    "baseline_scope": "Checked-in CI/release configuration and vulnerability audit implementation",
+    "baseline_protocol": "Inspect executable workflows, exact tool/dependency pins, permissions, credential persistence, audit input set, expiry enforcement and package attestation generation. For a completed release separately verify hosted run status, resolved dependency advisories and provenance against released bytes."
+  },
+  {
+    "id": "S15",
+    "aspect": "Safety properties",
+    "criterion": "Adversarial validation evidence and mutation coverage",
+    "scope": "Executable adversarial, numerical-property, corruption and concurrency assertions and independently bounded probes, with exact source/runtime/fixture identity.",
+    "protocol": "Publish a case-by-case expected-outcome matrix and distinguish Inspected, Tested, Reproduced and Measured. Record applicable case counts, skips, run results, environment, script/source/data hashes and limitations. Include relevant resolver, nonfinite resource, archive, invalid inference, stale identity, EOF, worker death, writer race and crash cases. Keep code/branch coverage separate from reachable attack-case and mutation coverage; neither test count nor a failed-build workaround is a global safety score.",
+    "baseline_scope": "Property tests, fuzz harness, corruption tests and worker lifecycle tests",
+    "baseline_protocol": "Publish an attack/failure-case matrix with expected outcomes and run counts. Include malicious attribute traversal, stale content hash, nonfinite resource parameters, archive expansion, concurrent writer and power-loss cases where applicable. Report reachable-code and mutation coverage separately from line coverage."
+  }
+]

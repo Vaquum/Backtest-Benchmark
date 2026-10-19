@@ -1,0 +1,27 @@
+{
+  "candidate_id": "jesse",
+  "source_path": "benchmark-sources/jesse",
+  "source_commit": "4fcbcdd500b9cd14ca9bdb142e4f46a34884a1ae",
+  "started_unix": 1792432208.0273807,
+  "commands": [
+    {
+      "argv": [
+        "uv",
+        "pip",
+        "sync",
+        "--python",
+        "/workspace/scratch/008a76ec4981/Backtest-Benchmark/.work/envs/jesse/bin/python",
+        "--require-hashes",
+        "-r",
+        "/workspace/scratch/008a76ec4981/Backtest-Benchmark/locks/jesse.txt"
+      ],
+      "returncode": 2,
+      "seconds": 0.015977656999893952
+    }
+  ],
+  "status": "blocked",
+  "build_isolation": false,
+  "dependency_lock_sha256": "710bb94c90ecd71c01b47ba7e4c31a91e0513e32013a36496201f53fd7de78cc",
+  "error": "RuntimeError: Command exited 2",
+  "elapsed_seconds": 0.01695704460144043
+}

@@ -1,0 +1,103 @@
+[
+  {
+    "original_item": 1,
+    "product": "TradingView",
+    "decision": "excluded_from_code_only_engine_comparison",
+    "reason": "No inspectable engine implementation was supplied or admitted in this campaign. Public scripts, user strategies, APIs and documentation do not establish the behavior of the underlying engine.",
+    "epistemic_limit": "This is an evidence-admission decision, not a proof that no source can exist or a negative capability, performance, rigor or safety judgment.",
+    "reentry_requirement": "Provide engine source with a fixed revision and a lawful reproducible build/runtime path, then pass the same semantic contract."
+  },
+  {
+    "original_item": 2,
+    "product": "TrendSpider",
+    "decision": "excluded_from_code_only_engine_comparison",
+    "reason": "No inspectable engine implementation was supplied or admitted in this campaign. Public scripts, user strategies, APIs and documentation do not establish the behavior of the underlying engine.",
+    "epistemic_limit": "This is an evidence-admission decision, not a proof that no source can exist or a negative capability, performance, rigor or safety judgment.",
+    "reentry_requirement": "Provide engine source with a fixed revision and a lawful reproducible build/runtime path, then pass the same semantic contract."
+  },
+  {
+    "original_item": 3,
+    "product": "MetaTrader 5",
+    "decision": "excluded_from_code_only_engine_comparison",
+    "reason": "No inspectable engine implementation was supplied or admitted in this campaign. Public scripts, user strategies, APIs and documentation do not establish the behavior of the underlying engine.",
+    "epistemic_limit": "This is an evidence-admission decision, not a proof that no source can exist or a negative capability, performance, rigor or safety judgment.",
+    "reentry_requirement": "Provide engine source with a fixed revision and a lawful reproducible build/runtime path, then pass the same semantic contract."
+  },
+  {
+    "original_item": 4,
+    "product": "NinjaTrader",
+    "decision": "excluded_from_code_only_engine_comparison",
+    "reason": "No inspectable engine implementation was supplied or admitted in this campaign. Public scripts, user strategies, APIs and documentation do not establish the behavior of the underlying engine.",
+    "epistemic_limit": "This is an evidence-admission decision, not a proof that no source can exist or a negative capability, performance, rigor or safety judgment.",
+    "reentry_requirement": "Provide engine source with a fixed revision and a lawful reproducible build/runtime path, then pass the same semantic contract."
+  },
+  {
+    "original_item": 5,
+    "product": "TradeStation",
+    "decision": "excluded_from_code_only_engine_comparison",
+    "reason": "No inspectable engine implementation was supplied or admitted in this campaign. Public scripts, user strategies, APIs and documentation do not establish the behavior of the underlying engine.",
+    "epistemic_limit": "This is an evidence-admission decision, not a proof that no source can exist or a negative capability, performance, rigor or safety judgment.",
+    "reentry_requirement": "Provide engine source with a fixed revision and a lawful reproducible build/runtime path, then pass the same semantic contract."
+  },
+  {
+    "original_item": 6,
+    "product": "AmiBroker",
+    "decision": "excluded_from_code_only_engine_comparison",
+    "reason": "No inspectable engine implementation was supplied or admitted in this campaign. Public scripts, user strategies, APIs and documentation do not establish the behavior of the underlying engine.",
+    "epistemic_limit": "This is an evidence-admission decision, not a proof that no source can exist or a negative capability, performance, rigor or safety judgment.",
+    "reentry_requirement": "Provide engine source with a fixed revision and a lawful reproducible build/runtime path, then pass the same semantic contract."
+  },
+  {
+    "original_item": 7,
+    "product": "MultiCharts",
+    "decision": "excluded_from_code_only_engine_comparison",
+    "reason": "No inspectable engine implementation was supplied or admitted in this campaign. Public scripts, user strategies, APIs and documentation do not establish the behavior of the underlying engine.",
+    "epistemic_limit": "This is an evidence-admission decision, not a proof that no source can exist or a negative capability, performance, rigor or safety judgment.",
+    "reentry_requirement": "Provide engine source with a fixed revision and a lawful reproducible build/runtime path, then pass the same semantic contract."
+  },
+  {
+    "original_item": 15,
+    "product": "Portfolio123",
+    "decision": "excluded_from_code_only_engine_comparison",
+    "reason": "No inspectable engine implementation was supplied or admitted in this campaign. Public scripts, user strategies, APIs and documentation do not establish the behavior of the underlying engine.",
+    "epistemic_limit": "This is an evidence-admission decision, not a proof that no source can exist or a negative capability, performance, rigor or safety judgment.",
+    "reentry_requirement": "Provide engine source with a fixed revision and a lawful reproducible build/runtime path, then pass the same semantic contract."
+  },
+  {
+    "original_item": 16,
+    "product": "Portfolio Visualizer",
+    "decision": "excluded_from_code_only_engine_comparison",
+    "reason": "No inspectable engine implementation was supplied or admitted in this campaign. Public scripts, user strategies, APIs and documentation do not establish the behavior of the underlying engine.",
+    "epistemic_limit": "This is an evidence-admission decision, not a proof that no source can exist or a negative capability, performance, rigor or safety judgment.",
+    "reentry_requirement": "Provide engine source with a fixed revision and a lawful reproducible build/runtime path, then pass the same semantic contract."
+  },
+  {
+    "original_item": 17,
+    "product": "StrategyQuant / StrategyQuant X",
+    "decision": "excluded_from_code_only_engine_comparison",
+    "reason": "No inspectable engine implementation was supplied or admitted in this campaign. Public scripts, user strategies, APIs and documentation do not establish the behavior of the underlying engine.",
+    "epistemic_limit": "This is an evidence-admission decision, not a proof that no source can exist or a negative capability, performance, rigor or safety judgment.",
+    "reentry_requirement": "Provide engine source with a fixed revision and a lawful reproducible build/runtime path, then pass the same semantic contract."
+  },
+  {
+    "original_item": 8,
+    "product": "QuantConnect hosted platform",
+    "decision": "split",
+    "selected_engine": "lean",
+    "reason": "The audit covers the pinned LEAN implementation. Hosted orchestration, proprietary datasets, service deployment and production access controls are outside that source boundary."
+  },
+  {
+    "original_item": 10,
+    "product": "vectorbt PRO",
+    "decision": "split",
+    "selected_engine": "vectorbt",
+    "reason": "Only the pinned public vectorbt implementation is admitted. No PRO source was supplied; OSS results must not be transferred to PRO."
+  },
+  {
+    "original_item": 12,
+    "product": "Original Quantopian Zipline",
+    "decision": "lineage_choice",
+    "selected_engine": "zipline",
+    "reason": "Use the independently pinned Zipline-reloaded fork for this campaign. Results do not automatically transfer to original Zipline or other forks."
+  }
+]

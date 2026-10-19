@@ -1,0 +1,11 @@
+@@BENCH_EVENT@@{"event": "ready", "worker_perf_counter_ns": 38229137846111}
+Traceback (most recent call last):
+  File "/workspace/scratch/008a76ec4981/Backtest-Benchmark/bench/worker.py", line 77, in main
+    adapter = create_adapter(args.engine, data, contract)
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/workspace/scratch/008a76ec4981/Backtest-Benchmark/bench/adapters/__init__.py", line 18, in create_adapter
+    adapter = module.create_adapter(data, contract)
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/workspace/scratch/008a76ec4981/Backtest-Benchmark/bench/adapters/limen.py", line 14, in create_adapter
+    raise UnsupportedContract(
+bench.api.UnsupportedContract: Limen snapshot uses entry-notional fee subtraction and charges entry costs on the first held return bar; this differs from the common cash-affordable fill-time fee contract. No costed speed score is emitted.

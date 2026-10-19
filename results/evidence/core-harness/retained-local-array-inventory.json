@@ -1,0 +1,947 @@
+[
+  {
+    "original_run": "core-preflight-001",
+    "relative_path": "limen/buy_and_hold/preflight/result/actual.npz",
+    "sha256": "77e3f399aeb677e972bd178bf5a988cd3dd9e0b24f9692f8162a985440d23571",
+    "bytes": 18535,
+    "reason": "Array artifact retained locally; market-price inputs/full traces are not bundled in public evidence. Recreate from the separately supplied hash-pinned recorded fixture."
+  },
+  {
+    "original_run": "core-preflight-001",
+    "relative_path": "limen/buy_and_hold/preflight/result/oracle.npz",
+    "sha256": "cfcfc53e7e460b6a790af48b0e4b038c02d2da8d132ced485ea1122a3d9feeb5",
+    "bytes": 35545,
+    "reason": "Array artifact retained locally; market-price inputs/full traces are not bundled in public evidence. Recreate from the separately supplied hash-pinned recorded fixture."
+  },
+  {
+    "original_run": "core-preflight-001",
+    "relative_path": "prepared-buy_and_hold.npz",
+    "sha256": "928f6143505ce916d7afb6d43a147b6b575e25a41000daa3ae1f55ef21671cf0",
+    "bytes": 60240,
+    "reason": "Array artifact retained locally; market-price inputs/full traces are not bundled in public evidence. Recreate from the separately supplied hash-pinned recorded fixture."
+  },
+  {
+    "original_run": "core-preflight-001",
+    "relative_path": "prepared-flat.npz",
+    "sha256": "e5c906ff2f45fb6d8250e4f42303534a3a4034cdae1b4b720c9e984420979629",
+    "bytes": 60240,
+    "reason": "Array artifact retained locally; market-price inputs/full traces are not bundled in public evidence. Recreate from the separately supplied hash-pinned recorded fixture."
+  },
+  {
+    "original_run": "core-preflight-001",
+    "relative_path": "prepared-sma_cross.npz",
+    "sha256": "a4ae634f0328a37b7080e5131271a4cddce4d9c47bdbb428744338dbb6e754fb",
+    "bytes": 60240,
+    "reason": "Array artifact retained locally; market-price inputs/full traces are not bundled in public evidence. Recreate from the separately supplied hash-pinned recorded fixture."
+  },
+  {
+    "original_run": "core-preflight-002",
+    "relative_path": "backtesting_py/buy_and_hold/preflight/result/oracle.npz",
+    "sha256": "cfcfc53e7e460b6a790af48b0e4b038c02d2da8d132ced485ea1122a3d9feeb5",
+    "bytes": 35545,
+    "reason": "Array artifact retained locally; market-price inputs/full traces are not bundled in public evidence. Recreate from the separately supplied hash-pinned recorded fixture."
+  },
+  {
+    "original_run": "core-preflight-002",
+    "relative_path": "backtesting_py/flat/preflight/result/oracle.npz",
+    "sha256": "dd523ab5d79a6df0f0ce32695e69d8bbd28ad1a31cf25f0e65c5bf2b7d8db098",
+    "bytes": 35479,
+    "reason": "Array artifact retained locally; market-price inputs/full traces are not bundled in public evidence. Recreate from the separately supplied hash-pinned recorded fixture."
+  },
+  {
+    "original_run": "core-preflight-002",
+    "relative_path": "backtesting_py/sma_cross/preflight/result/oracle.npz",
+    "sha256": "bcf85a116153f17c0c86702218e87e672303b1892a6f3e04d03f1613ae6614de",
+    "bytes": 35677,
+    "reason": "Array artifact retained locally; market-price inputs/full traces are not bundled in public evidence. Recreate from the separately supplied hash-pinned recorded fixture."
+  },
+  {
+    "original_run": "core-preflight-002",
+    "relative_path": "backtrader/buy_and_hold/preflight/result/actual.npz",
+    "sha256": "d65602cab12fc88f03671f7d6c5cb96b7c4c671eefe9107ee58add3b61edcf68",
+    "bytes": 19079,
+    "reason": "Array artifact retained locally; market-price inputs/full traces are not bundled in public evidence. Recreate from the separately supplied hash-pinned recorded fixture."
+  },
+  {
+    "original_run": "core-preflight-002",
+    "relative_path": "backtrader/buy_and_hold/preflight/result/oracle.npz",
+    "sha256": "cfcfc53e7e460b6a790af48b0e4b038c02d2da8d132ced485ea1122a3d9feeb5",
+    "bytes": 35545,
+    "reason": "Array artifact retained locally; market-price inputs/full traces are not bundled in public evidence. Recreate from the separately supplied hash-pinned recorded fixture."
+  },
+  {
+    "original_run": "core-preflight-002",
+    "relative_path": "backtrader/flat/preflight/result/actual.npz",
+    "sha256": "5c74768ec512a4e80979879c0e965c230894952f254dcaa678684415e656d767",
+    "bytes": 19013,
+    "reason": "Array artifact retained locally; market-price inputs/full traces are not bundled in public evidence. Recreate from the separately supplied hash-pinned recorded fixture."
+  },
+  {
+    "original_run": "core-preflight-002",
+    "relative_path": "backtrader/flat/preflight/result/oracle.npz",
+    "sha256": "dd523ab5d79a6df0f0ce32695e69d8bbd28ad1a31cf25f0e65c5bf2b7d8db098",
+    "bytes": 35479,
+    "reason": "Array artifact retained locally; market-price inputs/full traces are not bundled in public evidence. Recreate from the separately supplied hash-pinned recorded fixture."
+  },
+  {
+    "original_run": "core-preflight-002",
+    "relative_path": "backtrader/sma_cross/preflight/result/actual.npz",
+    "sha256": "46110f0c9a8eb13192e8306043b680f0b6544c39a0882a050c9d7ef875f3c7e6",
+    "bytes": 19211,
+    "reason": "Array artifact retained locally; market-price inputs/full traces are not bundled in public evidence. Recreate from the separately supplied hash-pinned recorded fixture."
+  },
+  {
+    "original_run": "core-preflight-002",
+    "relative_path": "backtrader/sma_cross/preflight/result/oracle.npz",
+    "sha256": "bcf85a116153f17c0c86702218e87e672303b1892a6f3e04d03f1613ae6614de",
+    "bytes": 35677,
+    "reason": "Array artifact retained locally; market-price inputs/full traces are not bundled in public evidence. Recreate from the separately supplied hash-pinned recorded fixture."
+  },
+  {
+    "original_run": "core-preflight-002",
+    "relative_path": "bt/buy_and_hold/preflight/result/actual.npz",
+    "sha256": "cfcfc53e7e460b6a790af48b0e4b038c02d2da8d132ced485ea1122a3d9feeb5",
+    "bytes": 35545,
+    "reason": "Array artifact retained locally; market-price inputs/full traces are not bundled in public evidence. Recreate from the separately supplied hash-pinned recorded fixture."
+  },
+  {
+    "original_run": "core-preflight-002",
+    "relative_path": "bt/buy_and_hold/preflight/result/oracle.npz",
+    "sha256": "cfcfc53e7e460b6a790af48b0e4b038c02d2da8d132ced485ea1122a3d9feeb5",
+    "bytes": 35545,
+    "reason": "Array artifact retained locally; market-price inputs/full traces are not bundled in public evidence. Recreate from the separately supplied hash-pinned recorded fixture."
+  },
+  {
+    "original_run": "core-preflight-002",
+    "relative_path": "bt/flat/preflight/result/oracle.npz",
+    "sha256": "dd523ab5d79a6df0f0ce32695e69d8bbd28ad1a31cf25f0e65c5bf2b7d8db098",
+    "bytes": 35479,
+    "reason": "Array artifact retained locally; market-price inputs/full traces are not bundled in public evidence. Recreate from the separately supplied hash-pinned recorded fixture."
+  },
+  {
+    "original_run": "core-preflight-002",
+    "relative_path": "bt/sma_cross/preflight/result/actual.npz",
+    "sha256": "bcf85a116153f17c0c86702218e87e672303b1892a6f3e04d03f1613ae6614de",
+    "bytes": 35677,
+    "reason": "Array artifact retained locally; market-price inputs/full traces are not bundled in public evidence. Recreate from the separately supplied hash-pinned recorded fixture."
+  },
+  {
+    "original_run": "core-preflight-002",
+    "relative_path": "bt/sma_cross/preflight/result/oracle.npz",
+    "sha256": "bcf85a116153f17c0c86702218e87e672303b1892a6f3e04d03f1613ae6614de",
+    "bytes": 35677,
+    "reason": "Array artifact retained locally; market-price inputs/full traces are not bundled in public evidence. Recreate from the separately supplied hash-pinned recorded fixture."
+  },
+  {
+    "original_run": "core-preflight-002",
+    "relative_path": "limen/buy_and_hold/preflight/result/actual.npz",
+    "sha256": "77e3f399aeb677e972bd178bf5a988cd3dd9e0b24f9692f8162a985440d23571",
+    "bytes": 18535,
+    "reason": "Array artifact retained locally; market-price inputs/full traces are not bundled in public evidence. Recreate from the separately supplied hash-pinned recorded fixture."
+  },
+  {
+    "original_run": "core-preflight-002",
+    "relative_path": "limen/buy_and_hold/preflight/result/oracle.npz",
+    "sha256": "cfcfc53e7e460b6a790af48b0e4b038c02d2da8d132ced485ea1122a3d9feeb5",
+    "bytes": 35545,
+    "reason": "Array artifact retained locally; market-price inputs/full traces are not bundled in public evidence. Recreate from the separately supplied hash-pinned recorded fixture."
+  },
+  {
+    "original_run": "core-preflight-002",
+    "relative_path": "limen/flat/preflight/result/actual.npz",
+    "sha256": "82027783c9ed422dd1987c9242f3a85543abdb2e835b35bd290c62121b44f21c",
+    "bytes": 18501,
+    "reason": "Array artifact retained locally; market-price inputs/full traces are not bundled in public evidence. Recreate from the separately supplied hash-pinned recorded fixture."
+  },
+  {
+    "original_run": "core-preflight-002",
+    "relative_path": "limen/flat/preflight/result/oracle.npz",
+    "sha256": "dd523ab5d79a6df0f0ce32695e69d8bbd28ad1a31cf25f0e65c5bf2b7d8db098",
+    "bytes": 35479,
+    "reason": "Array artifact retained locally; market-price inputs/full traces are not bundled in public evidence. Recreate from the separately supplied hash-pinned recorded fixture."
+  },
+  {
+    "original_run": "core-preflight-002",
+    "relative_path": "limen/sma_cross/preflight/result/actual.npz",
+    "sha256": "88bf3a488c1289585d41f0f81f39bd495a7b5108c5b35982fb92f6c45d0c056f",
+    "bytes": 18603,
+    "reason": "Array artifact retained locally; market-price inputs/full traces are not bundled in public evidence. Recreate from the separately supplied hash-pinned recorded fixture."
+  },
+  {
+    "original_run": "core-preflight-002",
+    "relative_path": "limen/sma_cross/preflight/result/oracle.npz",
+    "sha256": "bcf85a116153f17c0c86702218e87e672303b1892a6f3e04d03f1613ae6614de",
+    "bytes": 35677,
+    "reason": "Array artifact retained locally; market-price inputs/full traces are not bundled in public evidence. Recreate from the separately supplied hash-pinned recorded fixture."
+  },
+  {
+    "original_run": "core-preflight-002",
+    "relative_path": "prepared-buy_and_hold.npz",
+    "sha256": "928f6143505ce916d7afb6d43a147b6b575e25a41000daa3ae1f55ef21671cf0",
+    "bytes": 60240,
+    "reason": "Array artifact retained locally; market-price inputs/full traces are not bundled in public evidence. Recreate from the separately supplied hash-pinned recorded fixture."
+  },
+  {
+    "original_run": "core-preflight-002",
+    "relative_path": "prepared-flat.npz",
+    "sha256": "e5c906ff2f45fb6d8250e4f42303534a3a4034cdae1b4b720c9e984420979629",
+    "bytes": 60240,
+    "reason": "Array artifact retained locally; market-price inputs/full traces are not bundled in public evidence. Recreate from the separately supplied hash-pinned recorded fixture."
+  },
+  {
+    "original_run": "core-preflight-002",
+    "relative_path": "prepared-sma_cross.npz",
+    "sha256": "a4ae634f0328a37b7080e5131271a4cddce4d9c47bdbb428744338dbb6e754fb",
+    "bytes": 60240,
+    "reason": "Array artifact retained locally; market-price inputs/full traces are not bundled in public evidence. Recreate from the separately supplied hash-pinned recorded fixture."
+  },
+  {
+    "original_run": "core-preflight-002",
+    "relative_path": "qlib/buy_and_hold/preflight/result/actual.npz",
+    "sha256": "cfcfc53e7e460b6a790af48b0e4b038c02d2da8d132ced485ea1122a3d9feeb5",
+    "bytes": 35545,
+    "reason": "Array artifact retained locally; market-price inputs/full traces are not bundled in public evidence. Recreate from the separately supplied hash-pinned recorded fixture."
+  },
+  {
+    "original_run": "core-preflight-002",
+    "relative_path": "qlib/buy_and_hold/preflight/result/oracle.npz",
+    "sha256": "cfcfc53e7e460b6a790af48b0e4b038c02d2da8d132ced485ea1122a3d9feeb5",
+    "bytes": 35545,
+    "reason": "Array artifact retained locally; market-price inputs/full traces are not bundled in public evidence. Recreate from the separately supplied hash-pinned recorded fixture."
+  },
+  {
+    "original_run": "core-preflight-002",
+    "relative_path": "qlib/flat/preflight/result/actual.npz",
+    "sha256": "9e01026e66f92c0419e5a7c75d0996d2398f4bff7503be19136bde4f00bbdbe4",
+    "bytes": 35479,
+    "reason": "Array artifact retained locally; market-price inputs/full traces are not bundled in public evidence. Recreate from the separately supplied hash-pinned recorded fixture."
+  },
+  {
+    "original_run": "core-preflight-002",
+    "relative_path": "qlib/flat/preflight/result/oracle.npz",
+    "sha256": "dd523ab5d79a6df0f0ce32695e69d8bbd28ad1a31cf25f0e65c5bf2b7d8db098",
+    "bytes": 35479,
+    "reason": "Array artifact retained locally; market-price inputs/full traces are not bundled in public evidence. Recreate from the separately supplied hash-pinned recorded fixture."
+  },
+  {
+    "original_run": "core-preflight-002",
+    "relative_path": "qlib/sma_cross/preflight/result/actual.npz",
+    "sha256": "bcf85a116153f17c0c86702218e87e672303b1892a6f3e04d03f1613ae6614de",
+    "bytes": 35677,
+    "reason": "Array artifact retained locally; market-price inputs/full traces are not bundled in public evidence. Recreate from the separately supplied hash-pinned recorded fixture."
+  },
+  {
+    "original_run": "core-preflight-002",
+    "relative_path": "qlib/sma_cross/preflight/result/oracle.npz",
+    "sha256": "bcf85a116153f17c0c86702218e87e672303b1892a6f3e04d03f1613ae6614de",
+    "bytes": 35677,
+    "reason": "Array artifact retained locally; market-price inputs/full traces are not bundled in public evidence. Recreate from the separately supplied hash-pinned recorded fixture."
+  },
+  {
+    "original_run": "core-preflight-002",
+    "relative_path": "qstrader/buy_and_hold/preflight/result/actual.npz",
+    "sha256": "cfcfc53e7e460b6a790af48b0e4b038c02d2da8d132ced485ea1122a3d9feeb5",
+    "bytes": 35545,
+    "reason": "Array artifact retained locally; market-price inputs/full traces are not bundled in public evidence. Recreate from the separately supplied hash-pinned recorded fixture."
+  },
+  {
+    "original_run": "core-preflight-002",
+    "relative_path": "qstrader/buy_and_hold/preflight/result/oracle.npz",
+    "sha256": "cfcfc53e7e460b6a790af48b0e4b038c02d2da8d132ced485ea1122a3d9feeb5",
+    "bytes": 35545,
+    "reason": "Array artifact retained locally; market-price inputs/full traces are not bundled in public evidence. Recreate from the separately supplied hash-pinned recorded fixture."
+  },
+  {
+    "original_run": "core-preflight-002",
+    "relative_path": "qstrader/flat/preflight/result/actual.npz",
+    "sha256": "dd523ab5d79a6df0f0ce32695e69d8bbd28ad1a31cf25f0e65c5bf2b7d8db098",
+    "bytes": 35479,
+    "reason": "Array artifact retained locally; market-price inputs/full traces are not bundled in public evidence. Recreate from the separately supplied hash-pinned recorded fixture."
+  },
+  {
+    "original_run": "core-preflight-002",
+    "relative_path": "qstrader/flat/preflight/result/oracle.npz",
+    "sha256": "dd523ab5d79a6df0f0ce32695e69d8bbd28ad1a31cf25f0e65c5bf2b7d8db098",
+    "bytes": 35479,
+    "reason": "Array artifact retained locally; market-price inputs/full traces are not bundled in public evidence. Recreate from the separately supplied hash-pinned recorded fixture."
+  },
+  {
+    "original_run": "core-preflight-002",
+    "relative_path": "qstrader/sma_cross/preflight/result/actual.npz",
+    "sha256": "bcf85a116153f17c0c86702218e87e672303b1892a6f3e04d03f1613ae6614de",
+    "bytes": 35677,
+    "reason": "Array artifact retained locally; market-price inputs/full traces are not bundled in public evidence. Recreate from the separately supplied hash-pinned recorded fixture."
+  },
+  {
+    "original_run": "core-preflight-002",
+    "relative_path": "qstrader/sma_cross/preflight/result/oracle.npz",
+    "sha256": "bcf85a116153f17c0c86702218e87e672303b1892a6f3e04d03f1613ae6614de",
+    "bytes": 35677,
+    "reason": "Array artifact retained locally; market-price inputs/full traces are not bundled in public evidence. Recreate from the separately supplied hash-pinned recorded fixture."
+  },
+  {
+    "original_run": "core-preflight-002",
+    "relative_path": "vectorbt/buy_and_hold/preflight/result/actual.npz",
+    "sha256": "cfcfc53e7e460b6a790af48b0e4b038c02d2da8d132ced485ea1122a3d9feeb5",
+    "bytes": 35545,
+    "reason": "Array artifact retained locally; market-price inputs/full traces are not bundled in public evidence. Recreate from the separately supplied hash-pinned recorded fixture."
+  },
+  {
+    "original_run": "core-preflight-002",
+    "relative_path": "vectorbt/buy_and_hold/preflight/result/oracle.npz",
+    "sha256": "cfcfc53e7e460b6a790af48b0e4b038c02d2da8d132ced485ea1122a3d9feeb5",
+    "bytes": 35545,
+    "reason": "Array artifact retained locally; market-price inputs/full traces are not bundled in public evidence. Recreate from the separately supplied hash-pinned recorded fixture."
+  },
+  {
+    "original_run": "core-preflight-002",
+    "relative_path": "vectorbt/flat/preflight/result/actual.npz",
+    "sha256": "dd523ab5d79a6df0f0ce32695e69d8bbd28ad1a31cf25f0e65c5bf2b7d8db098",
+    "bytes": 35479,
+    "reason": "Array artifact retained locally; market-price inputs/full traces are not bundled in public evidence. Recreate from the separately supplied hash-pinned recorded fixture."
+  },
+  {
+    "original_run": "core-preflight-002",
+    "relative_path": "vectorbt/flat/preflight/result/oracle.npz",
+    "sha256": "dd523ab5d79a6df0f0ce32695e69d8bbd28ad1a31cf25f0e65c5bf2b7d8db098",
+    "bytes": 35479,
+    "reason": "Array artifact retained locally; market-price inputs/full traces are not bundled in public evidence. Recreate from the separately supplied hash-pinned recorded fixture."
+  },
+  {
+    "original_run": "core-preflight-002",
+    "relative_path": "vectorbt/sma_cross/preflight/result/actual.npz",
+    "sha256": "7b7ca4e6931334b975f3d0f50adfbd9b5672710b03f246eedf63805699e182a9",
+    "bytes": 35677,
+    "reason": "Array artifact retained locally; market-price inputs/full traces are not bundled in public evidence. Recreate from the separately supplied hash-pinned recorded fixture."
+  },
+  {
+    "original_run": "core-preflight-002",
+    "relative_path": "vectorbt/sma_cross/preflight/result/oracle.npz",
+    "sha256": "bcf85a116153f17c0c86702218e87e672303b1892a6f3e04d03f1613ae6614de",
+    "bytes": 35677,
+    "reason": "Array artifact retained locally; market-price inputs/full traces are not bundled in public evidence. Recreate from the separately supplied hash-pinned recorded fixture."
+  },
+  {
+    "original_run": "core-preflight-retest-003",
+    "relative_path": "backtesting_py/buy_and_hold/preflight/result/actual.npz",
+    "sha256": "40ed5ae5b26dd80164388b29aa25b605e5a5c1e6e77a0fcadbad78d4d07c835c",
+    "bytes": 18813,
+    "reason": "Array artifact retained locally; market-price inputs/full traces are not bundled in public evidence. Recreate from the separately supplied hash-pinned recorded fixture."
+  },
+  {
+    "original_run": "core-preflight-retest-003",
+    "relative_path": "backtesting_py/buy_and_hold/preflight/result/oracle.npz",
+    "sha256": "cfcfc53e7e460b6a790af48b0e4b038c02d2da8d132ced485ea1122a3d9feeb5",
+    "bytes": 35545,
+    "reason": "Array artifact retained locally; market-price inputs/full traces are not bundled in public evidence. Recreate from the separately supplied hash-pinned recorded fixture."
+  },
+  {
+    "original_run": "core-preflight-retest-003",
+    "relative_path": "backtesting_py/flat/preflight/result/actual.npz",
+    "sha256": "1ccf579ab3b77fee8174db657553f3522f5f3c78086ea346c43a03582604a39b",
+    "bytes": 18763,
+    "reason": "Array artifact retained locally; market-price inputs/full traces are not bundled in public evidence. Recreate from the separately supplied hash-pinned recorded fixture."
+  },
+  {
+    "original_run": "core-preflight-retest-003",
+    "relative_path": "backtesting_py/flat/preflight/result/oracle.npz",
+    "sha256": "dd523ab5d79a6df0f0ce32695e69d8bbd28ad1a31cf25f0e65c5bf2b7d8db098",
+    "bytes": 35479,
+    "reason": "Array artifact retained locally; market-price inputs/full traces are not bundled in public evidence. Recreate from the separately supplied hash-pinned recorded fixture."
+  },
+  {
+    "original_run": "core-preflight-retest-003",
+    "relative_path": "backtesting_py/sma_cross/preflight/result/actual.npz",
+    "sha256": "0a514b7d8949582d011209e471123dc477004d86745acda6eb2ff8c5885870e8",
+    "bytes": 18913,
+    "reason": "Array artifact retained locally; market-price inputs/full traces are not bundled in public evidence. Recreate from the separately supplied hash-pinned recorded fixture."
+  },
+  {
+    "original_run": "core-preflight-retest-003",
+    "relative_path": "backtesting_py/sma_cross/preflight/result/oracle.npz",
+    "sha256": "bcf85a116153f17c0c86702218e87e672303b1892a6f3e04d03f1613ae6614de",
+    "bytes": 35677,
+    "reason": "Array artifact retained locally; market-price inputs/full traces are not bundled in public evidence. Recreate from the separately supplied hash-pinned recorded fixture."
+  },
+  {
+    "original_run": "core-preflight-retest-003",
+    "relative_path": "bt/buy_and_hold/preflight/result/actual.npz",
+    "sha256": "cfcfc53e7e460b6a790af48b0e4b038c02d2da8d132ced485ea1122a3d9feeb5",
+    "bytes": 35545,
+    "reason": "Array artifact retained locally; market-price inputs/full traces are not bundled in public evidence. Recreate from the separately supplied hash-pinned recorded fixture."
+  },
+  {
+    "original_run": "core-preflight-retest-003",
+    "relative_path": "bt/buy_and_hold/preflight/result/oracle.npz",
+    "sha256": "cfcfc53e7e460b6a790af48b0e4b038c02d2da8d132ced485ea1122a3d9feeb5",
+    "bytes": 35545,
+    "reason": "Array artifact retained locally; market-price inputs/full traces are not bundled in public evidence. Recreate from the separately supplied hash-pinned recorded fixture."
+  },
+  {
+    "original_run": "core-preflight-retest-003",
+    "relative_path": "bt/flat/preflight/result/actual.npz",
+    "sha256": "dd523ab5d79a6df0f0ce32695e69d8bbd28ad1a31cf25f0e65c5bf2b7d8db098",
+    "bytes": 35479,
+    "reason": "Array artifact retained locally; market-price inputs/full traces are not bundled in public evidence. Recreate from the separately supplied hash-pinned recorded fixture."
+  },
+  {
+    "original_run": "core-preflight-retest-003",
+    "relative_path": "bt/flat/preflight/result/oracle.npz",
+    "sha256": "dd523ab5d79a6df0f0ce32695e69d8bbd28ad1a31cf25f0e65c5bf2b7d8db098",
+    "bytes": 35479,
+    "reason": "Array artifact retained locally; market-price inputs/full traces are not bundled in public evidence. Recreate from the separately supplied hash-pinned recorded fixture."
+  },
+  {
+    "original_run": "core-preflight-retest-003",
+    "relative_path": "bt/sma_cross/preflight/result/actual.npz",
+    "sha256": "bcf85a116153f17c0c86702218e87e672303b1892a6f3e04d03f1613ae6614de",
+    "bytes": 35677,
+    "reason": "Array artifact retained locally; market-price inputs/full traces are not bundled in public evidence. Recreate from the separately supplied hash-pinned recorded fixture."
+  },
+  {
+    "original_run": "core-preflight-retest-003",
+    "relative_path": "bt/sma_cross/preflight/result/oracle.npz",
+    "sha256": "bcf85a116153f17c0c86702218e87e672303b1892a6f3e04d03f1613ae6614de",
+    "bytes": 35677,
+    "reason": "Array artifact retained locally; market-price inputs/full traces are not bundled in public evidence. Recreate from the separately supplied hash-pinned recorded fixture."
+  },
+  {
+    "original_run": "core-preflight-retest-003",
+    "relative_path": "prepared-buy_and_hold.npz",
+    "sha256": "928f6143505ce916d7afb6d43a147b6b575e25a41000daa3ae1f55ef21671cf0",
+    "bytes": 60240,
+    "reason": "Array artifact retained locally; market-price inputs/full traces are not bundled in public evidence. Recreate from the separately supplied hash-pinned recorded fixture."
+  },
+  {
+    "original_run": "core-preflight-retest-003",
+    "relative_path": "prepared-flat.npz",
+    "sha256": "e5c906ff2f45fb6d8250e4f42303534a3a4034cdae1b4b720c9e984420979629",
+    "bytes": 60240,
+    "reason": "Array artifact retained locally; market-price inputs/full traces are not bundled in public evidence. Recreate from the separately supplied hash-pinned recorded fixture."
+  },
+  {
+    "original_run": "core-preflight-retest-003",
+    "relative_path": "prepared-sma_cross.npz",
+    "sha256": "a4ae634f0328a37b7080e5131271a4cddce4d9c47bdbb428744338dbb6e754fb",
+    "bytes": 60240,
+    "reason": "Array artifact retained locally; market-price inputs/full traces are not bundled in public evidence. Recreate from the separately supplied hash-pinned recorded fixture."
+  },
+  {
+    "original_run": "core-costed-preflight-001",
+    "relative_path": "backtesting_py/buy_and_hold/preflight/result/oracle.npz",
+    "sha256": "ae8ecea4bc6bb5c9abc9439dbf8d584d39295269ffd383074da31a5c357d7cb6",
+    "bytes": 35545,
+    "reason": "Array artifact retained locally; market-price inputs/full traces are not bundled in public evidence. Recreate from the separately supplied hash-pinned recorded fixture."
+  },
+  {
+    "original_run": "core-costed-preflight-001",
+    "relative_path": "backtesting_py/sma_cross/preflight/result/oracle.npz",
+    "sha256": "d6d405e26ded726f5cf54d21c1456a1d2c1b14ab64806991e385886dd9aa3ecb",
+    "bytes": 35677,
+    "reason": "Array artifact retained locally; market-price inputs/full traces are not bundled in public evidence. Recreate from the separately supplied hash-pinned recorded fixture."
+  },
+  {
+    "original_run": "core-costed-preflight-001",
+    "relative_path": "backtrader/buy_and_hold/preflight/result/oracle.npz",
+    "sha256": "ae8ecea4bc6bb5c9abc9439dbf8d584d39295269ffd383074da31a5c357d7cb6",
+    "bytes": 35545,
+    "reason": "Array artifact retained locally; market-price inputs/full traces are not bundled in public evidence. Recreate from the separately supplied hash-pinned recorded fixture."
+  },
+  {
+    "original_run": "core-costed-preflight-001",
+    "relative_path": "backtrader/sma_cross/preflight/result/oracle.npz",
+    "sha256": "d6d405e26ded726f5cf54d21c1456a1d2c1b14ab64806991e385886dd9aa3ecb",
+    "bytes": 35677,
+    "reason": "Array artifact retained locally; market-price inputs/full traces are not bundled in public evidence. Recreate from the separately supplied hash-pinned recorded fixture."
+  },
+  {
+    "original_run": "core-costed-preflight-001",
+    "relative_path": "bt/buy_and_hold/preflight/result/oracle.npz",
+    "sha256": "ae8ecea4bc6bb5c9abc9439dbf8d584d39295269ffd383074da31a5c357d7cb6",
+    "bytes": 35545,
+    "reason": "Array artifact retained locally; market-price inputs/full traces are not bundled in public evidence. Recreate from the separately supplied hash-pinned recorded fixture."
+  },
+  {
+    "original_run": "core-costed-preflight-001",
+    "relative_path": "bt/sma_cross/preflight/result/oracle.npz",
+    "sha256": "d6d405e26ded726f5cf54d21c1456a1d2c1b14ab64806991e385886dd9aa3ecb",
+    "bytes": 35677,
+    "reason": "Array artifact retained locally; market-price inputs/full traces are not bundled in public evidence. Recreate from the separately supplied hash-pinned recorded fixture."
+  },
+  {
+    "original_run": "core-costed-preflight-001",
+    "relative_path": "limen/buy_and_hold/preflight/result/oracle.npz",
+    "sha256": "ae8ecea4bc6bb5c9abc9439dbf8d584d39295269ffd383074da31a5c357d7cb6",
+    "bytes": 35545,
+    "reason": "Array artifact retained locally; market-price inputs/full traces are not bundled in public evidence. Recreate from the separately supplied hash-pinned recorded fixture."
+  },
+  {
+    "original_run": "core-costed-preflight-001",
+    "relative_path": "limen/sma_cross/preflight/result/oracle.npz",
+    "sha256": "d6d405e26ded726f5cf54d21c1456a1d2c1b14ab64806991e385886dd9aa3ecb",
+    "bytes": 35677,
+    "reason": "Array artifact retained locally; market-price inputs/full traces are not bundled in public evidence. Recreate from the separately supplied hash-pinned recorded fixture."
+  },
+  {
+    "original_run": "core-costed-preflight-001",
+    "relative_path": "prepared-buy_and_hold.npz",
+    "sha256": "928f6143505ce916d7afb6d43a147b6b575e25a41000daa3ae1f55ef21671cf0",
+    "bytes": 60240,
+    "reason": "Array artifact retained locally; market-price inputs/full traces are not bundled in public evidence. Recreate from the separately supplied hash-pinned recorded fixture."
+  },
+  {
+    "original_run": "core-costed-preflight-001",
+    "relative_path": "prepared-sma_cross.npz",
+    "sha256": "a4ae634f0328a37b7080e5131271a4cddce4d9c47bdbb428744338dbb6e754fb",
+    "bytes": 60240,
+    "reason": "Array artifact retained locally; market-price inputs/full traces are not bundled in public evidence. Recreate from the separately supplied hash-pinned recorded fixture."
+  },
+  {
+    "original_run": "core-costed-preflight-001",
+    "relative_path": "qlib/buy_and_hold/preflight/result/actual.npz",
+    "sha256": "00907badbaa86b137ee993f234b56ee4c5e5a9604a2db2867c9e7fdb7d4d5532",
+    "bytes": 35545,
+    "reason": "Array artifact retained locally; market-price inputs/full traces are not bundled in public evidence. Recreate from the separately supplied hash-pinned recorded fixture."
+  },
+  {
+    "original_run": "core-costed-preflight-001",
+    "relative_path": "qlib/buy_and_hold/preflight/result/oracle.npz",
+    "sha256": "ae8ecea4bc6bb5c9abc9439dbf8d584d39295269ffd383074da31a5c357d7cb6",
+    "bytes": 35545,
+    "reason": "Array artifact retained locally; market-price inputs/full traces are not bundled in public evidence. Recreate from the separately supplied hash-pinned recorded fixture."
+  },
+  {
+    "original_run": "core-costed-preflight-001",
+    "relative_path": "qlib/sma_cross/preflight/result/actual.npz",
+    "sha256": "61b9bfa3686475dab8d9e2f68d8af440511687641f4cf276654b79d45fe68479",
+    "bytes": 35677,
+    "reason": "Array artifact retained locally; market-price inputs/full traces are not bundled in public evidence. Recreate from the separately supplied hash-pinned recorded fixture."
+  },
+  {
+    "original_run": "core-costed-preflight-001",
+    "relative_path": "qlib/sma_cross/preflight/result/oracle.npz",
+    "sha256": "d6d405e26ded726f5cf54d21c1456a1d2c1b14ab64806991e385886dd9aa3ecb",
+    "bytes": 35677,
+    "reason": "Array artifact retained locally; market-price inputs/full traces are not bundled in public evidence. Recreate from the separately supplied hash-pinned recorded fixture."
+  },
+  {
+    "original_run": "core-costed-preflight-001",
+    "relative_path": "qstrader/buy_and_hold/preflight/result/oracle.npz",
+    "sha256": "ae8ecea4bc6bb5c9abc9439dbf8d584d39295269ffd383074da31a5c357d7cb6",
+    "bytes": 35545,
+    "reason": "Array artifact retained locally; market-price inputs/full traces are not bundled in public evidence. Recreate from the separately supplied hash-pinned recorded fixture."
+  },
+  {
+    "original_run": "core-costed-preflight-001",
+    "relative_path": "qstrader/sma_cross/preflight/result/oracle.npz",
+    "sha256": "d6d405e26ded726f5cf54d21c1456a1d2c1b14ab64806991e385886dd9aa3ecb",
+    "bytes": 35677,
+    "reason": "Array artifact retained locally; market-price inputs/full traces are not bundled in public evidence. Recreate from the separately supplied hash-pinned recorded fixture."
+  },
+  {
+    "original_run": "core-costed-preflight-001",
+    "relative_path": "vectorbt/buy_and_hold/preflight/result/actual.npz",
+    "sha256": "4b85a1d91528f47067b969707d14d7c64f62282558a9523cb0270cd8f0b73fb9",
+    "bytes": 35545,
+    "reason": "Array artifact retained locally; market-price inputs/full traces are not bundled in public evidence. Recreate from the separately supplied hash-pinned recorded fixture."
+  },
+  {
+    "original_run": "core-costed-preflight-001",
+    "relative_path": "vectorbt/buy_and_hold/preflight/result/oracle.npz",
+    "sha256": "ae8ecea4bc6bb5c9abc9439dbf8d584d39295269ffd383074da31a5c357d7cb6",
+    "bytes": 35545,
+    "reason": "Array artifact retained locally; market-price inputs/full traces are not bundled in public evidence. Recreate from the separately supplied hash-pinned recorded fixture."
+  },
+  {
+    "original_run": "core-costed-preflight-001",
+    "relative_path": "vectorbt/sma_cross/preflight/result/actual.npz",
+    "sha256": "fac3be8e0fce3820944d0f1801b8340d2d53555c4fd0b2baa6effaa754e182b5",
+    "bytes": 35677,
+    "reason": "Array artifact retained locally; market-price inputs/full traces are not bundled in public evidence. Recreate from the separately supplied hash-pinned recorded fixture."
+  },
+  {
+    "original_run": "core-costed-preflight-001",
+    "relative_path": "vectorbt/sma_cross/preflight/result/oracle.npz",
+    "sha256": "d6d405e26ded726f5cf54d21c1456a1d2c1b14ab64806991e385886dd9aa3ecb",
+    "bytes": 35677,
+    "reason": "Array artifact retained locally; market-price inputs/full traces are not bundled in public evidence. Recreate from the separately supplied hash-pinned recorded fixture."
+  },
+  {
+    "original_run": "full-preflight-001",
+    "relative_path": "backtesting_py/buy_and_hold/preflight/result/actual.npz",
+    "sha256": "11de005a874454b5e999135143296b2a5e1c251c904b9440cdf0f18679a7e1b0",
+    "bytes": 151141,
+    "reason": "Array artifact retained locally; market-price inputs/full traces are not bundled in public evidence. Recreate from the separately supplied hash-pinned recorded fixture."
+  },
+  {
+    "original_run": "full-preflight-001",
+    "relative_path": "backtesting_py/buy_and_hold/preflight/result/oracle.npz",
+    "sha256": "5794585200f3b0548ab9cc79a3a5bcbec5934c0dbba52b90519eebe2bda0cc4a",
+    "bytes": 292417,
+    "reason": "Array artifact retained locally; market-price inputs/full traces are not bundled in public evidence. Recreate from the separately supplied hash-pinned recorded fixture."
+  },
+  {
+    "original_run": "full-preflight-001",
+    "relative_path": "backtesting_py/sma_cross/preflight/result/actual.npz",
+    "sha256": "b63a9ec46a6feeb27cb34b48b4f8ee4d721f3d5b7e25938cfa2ea28d74114330",
+    "bytes": 152391,
+    "reason": "Array artifact retained locally; market-price inputs/full traces are not bundled in public evidence. Recreate from the separately supplied hash-pinned recorded fixture."
+  },
+  {
+    "original_run": "full-preflight-001",
+    "relative_path": "backtesting_py/sma_cross/preflight/result/oracle.npz",
+    "sha256": "ef3dad88768ddc54579d0e3bbc58514b378afbf183bdee2f8a9f6c205961e536",
+    "bytes": 294067,
+    "reason": "Array artifact retained locally; market-price inputs/full traces are not bundled in public evidence. Recreate from the separately supplied hash-pinned recorded fixture."
+  },
+  {
+    "original_run": "full-preflight-001",
+    "relative_path": "backtrader/buy_and_hold/preflight/result/actual.npz",
+    "sha256": "af61fac91d699063d567aaf66ad87426735fe79f4350c91477362f7ecd0faf01",
+    "bytes": 151407,
+    "reason": "Array artifact retained locally; market-price inputs/full traces are not bundled in public evidence. Recreate from the separately supplied hash-pinned recorded fixture."
+  },
+  {
+    "original_run": "full-preflight-001",
+    "relative_path": "backtrader/buy_and_hold/preflight/result/oracle.npz",
+    "sha256": "5794585200f3b0548ab9cc79a3a5bcbec5934c0dbba52b90519eebe2bda0cc4a",
+    "bytes": 292417,
+    "reason": "Array artifact retained locally; market-price inputs/full traces are not bundled in public evidence. Recreate from the separately supplied hash-pinned recorded fixture."
+  },
+  {
+    "original_run": "full-preflight-001",
+    "relative_path": "backtrader/sma_cross/preflight/result/actual.npz",
+    "sha256": "06573098302016ae3f8c2a6c9795e9fe37063b1a00145703d593e14fad5be90f",
+    "bytes": 153057,
+    "reason": "Array artifact retained locally; market-price inputs/full traces are not bundled in public evidence. Recreate from the separately supplied hash-pinned recorded fixture."
+  },
+  {
+    "original_run": "full-preflight-001",
+    "relative_path": "backtrader/sma_cross/preflight/result/oracle.npz",
+    "sha256": "ef3dad88768ddc54579d0e3bbc58514b378afbf183bdee2f8a9f6c205961e536",
+    "bytes": 294067,
+    "reason": "Array artifact retained locally; market-price inputs/full traces are not bundled in public evidence. Recreate from the separately supplied hash-pinned recorded fixture."
+  },
+  {
+    "original_run": "full-preflight-001",
+    "relative_path": "bt/buy_and_hold/preflight/result/actual.npz",
+    "sha256": "5794585200f3b0548ab9cc79a3a5bcbec5934c0dbba52b90519eebe2bda0cc4a",
+    "bytes": 292417,
+    "reason": "Array artifact retained locally; market-price inputs/full traces are not bundled in public evidence. Recreate from the separately supplied hash-pinned recorded fixture."
+  },
+  {
+    "original_run": "full-preflight-001",
+    "relative_path": "bt/buy_and_hold/preflight/result/oracle.npz",
+    "sha256": "5794585200f3b0548ab9cc79a3a5bcbec5934c0dbba52b90519eebe2bda0cc4a",
+    "bytes": 292417,
+    "reason": "Array artifact retained locally; market-price inputs/full traces are not bundled in public evidence. Recreate from the separately supplied hash-pinned recorded fixture."
+  },
+  {
+    "original_run": "full-preflight-001",
+    "relative_path": "bt/sma_cross/preflight/result/actual.npz",
+    "sha256": "ef3dad88768ddc54579d0e3bbc58514b378afbf183bdee2f8a9f6c205961e536",
+    "bytes": 294067,
+    "reason": "Array artifact retained locally; market-price inputs/full traces are not bundled in public evidence. Recreate from the separately supplied hash-pinned recorded fixture."
+  },
+  {
+    "original_run": "full-preflight-001",
+    "relative_path": "bt/sma_cross/preflight/result/oracle.npz",
+    "sha256": "ef3dad88768ddc54579d0e3bbc58514b378afbf183bdee2f8a9f6c205961e536",
+    "bytes": 294067,
+    "reason": "Array artifact retained locally; market-price inputs/full traces are not bundled in public evidence. Recreate from the separately supplied hash-pinned recorded fixture."
+  },
+  {
+    "original_run": "full-preflight-001",
+    "relative_path": "limen/buy_and_hold/preflight/result/actual.npz",
+    "sha256": "65646e71394b678f2f93d40208a93e5fefc08af3906273789e6255a0b7d2cf98",
+    "bytes": 150863,
+    "reason": "Array artifact retained locally; market-price inputs/full traces are not bundled in public evidence. Recreate from the separately supplied hash-pinned recorded fixture."
+  },
+  {
+    "original_run": "full-preflight-001",
+    "relative_path": "limen/buy_and_hold/preflight/result/oracle.npz",
+    "sha256": "5794585200f3b0548ab9cc79a3a5bcbec5934c0dbba52b90519eebe2bda0cc4a",
+    "bytes": 292417,
+    "reason": "Array artifact retained locally; market-price inputs/full traces are not bundled in public evidence. Recreate from the separately supplied hash-pinned recorded fixture."
+  },
+  {
+    "original_run": "full-preflight-001",
+    "relative_path": "limen/sma_cross/preflight/result/actual.npz",
+    "sha256": "8ad80b3bd4e366ca07a31f73966eeb1fc8d1b7566d7d82582f7db522aa6130af",
+    "bytes": 151713,
+    "reason": "Array artifact retained locally; market-price inputs/full traces are not bundled in public evidence. Recreate from the separately supplied hash-pinned recorded fixture."
+  },
+  {
+    "original_run": "full-preflight-001",
+    "relative_path": "limen/sma_cross/preflight/result/oracle.npz",
+    "sha256": "ef3dad88768ddc54579d0e3bbc58514b378afbf183bdee2f8a9f6c205961e536",
+    "bytes": 294067,
+    "reason": "Array artifact retained locally; market-price inputs/full traces are not bundled in public evidence. Recreate from the separately supplied hash-pinned recorded fixture."
+  },
+  {
+    "original_run": "full-preflight-001",
+    "relative_path": "prepared-buy_and_hold.npz",
+    "sha256": "0d7f3e9914beb1ec021bcaca04d90fcfa9792341278359a439080c7c86c1c2a0",
+    "bytes": 511712,
+    "reason": "Array artifact retained locally; market-price inputs/full traces are not bundled in public evidence. Recreate from the separately supplied hash-pinned recorded fixture."
+  },
+  {
+    "original_run": "full-preflight-001",
+    "relative_path": "prepared-sma_cross.npz",
+    "sha256": "a4e10483b2e46a229340eaad6cbe38af40824a63b7ce39d11dee57b0045f5c5a",
+    "bytes": 511712,
+    "reason": "Array artifact retained locally; market-price inputs/full traces are not bundled in public evidence. Recreate from the separately supplied hash-pinned recorded fixture."
+  },
+  {
+    "original_run": "full-preflight-001",
+    "relative_path": "qlib/buy_and_hold/preflight/result/actual.npz",
+    "sha256": "5794585200f3b0548ab9cc79a3a5bcbec5934c0dbba52b90519eebe2bda0cc4a",
+    "bytes": 292417,
+    "reason": "Array artifact retained locally; market-price inputs/full traces are not bundled in public evidence. Recreate from the separately supplied hash-pinned recorded fixture."
+  },
+  {
+    "original_run": "full-preflight-001",
+    "relative_path": "qlib/buy_and_hold/preflight/result/oracle.npz",
+    "sha256": "5794585200f3b0548ab9cc79a3a5bcbec5934c0dbba52b90519eebe2bda0cc4a",
+    "bytes": 292417,
+    "reason": "Array artifact retained locally; market-price inputs/full traces are not bundled in public evidence. Recreate from the separately supplied hash-pinned recorded fixture."
+  },
+  {
+    "original_run": "full-preflight-001",
+    "relative_path": "qlib/sma_cross/preflight/result/actual.npz",
+    "sha256": "ef3dad88768ddc54579d0e3bbc58514b378afbf183bdee2f8a9f6c205961e536",
+    "bytes": 294067,
+    "reason": "Array artifact retained locally; market-price inputs/full traces are not bundled in public evidence. Recreate from the separately supplied hash-pinned recorded fixture."
+  },
+  {
+    "original_run": "full-preflight-001",
+    "relative_path": "qlib/sma_cross/preflight/result/oracle.npz",
+    "sha256": "ef3dad88768ddc54579d0e3bbc58514b378afbf183bdee2f8a9f6c205961e536",
+    "bytes": 294067,
+    "reason": "Array artifact retained locally; market-price inputs/full traces are not bundled in public evidence. Recreate from the separately supplied hash-pinned recorded fixture."
+  },
+  {
+    "original_run": "full-preflight-001",
+    "relative_path": "qstrader/buy_and_hold/preflight/result/actual.npz",
+    "sha256": "5794585200f3b0548ab9cc79a3a5bcbec5934c0dbba52b90519eebe2bda0cc4a",
+    "bytes": 292417,
+    "reason": "Array artifact retained locally; market-price inputs/full traces are not bundled in public evidence. Recreate from the separately supplied hash-pinned recorded fixture."
+  },
+  {
+    "original_run": "full-preflight-001",
+    "relative_path": "qstrader/buy_and_hold/preflight/result/oracle.npz",
+    "sha256": "5794585200f3b0548ab9cc79a3a5bcbec5934c0dbba52b90519eebe2bda0cc4a",
+    "bytes": 292417,
+    "reason": "Array artifact retained locally; market-price inputs/full traces are not bundled in public evidence. Recreate from the separately supplied hash-pinned recorded fixture."
+  },
+  {
+    "original_run": "full-preflight-001",
+    "relative_path": "qstrader/sma_cross/preflight/result/actual.npz",
+    "sha256": "ef3dad88768ddc54579d0e3bbc58514b378afbf183bdee2f8a9f6c205961e536",
+    "bytes": 294067,
+    "reason": "Array artifact retained locally; market-price inputs/full traces are not bundled in public evidence. Recreate from the separately supplied hash-pinned recorded fixture."
+  },
+  {
+    "original_run": "full-preflight-001",
+    "relative_path": "qstrader/sma_cross/preflight/result/oracle.npz",
+    "sha256": "ef3dad88768ddc54579d0e3bbc58514b378afbf183bdee2f8a9f6c205961e536",
+    "bytes": 294067,
+    "reason": "Array artifact retained locally; market-price inputs/full traces are not bundled in public evidence. Recreate from the separately supplied hash-pinned recorded fixture."
+  },
+  {
+    "original_run": "full-preflight-001",
+    "relative_path": "vectorbt/buy_and_hold/preflight/result/actual.npz",
+    "sha256": "5794585200f3b0548ab9cc79a3a5bcbec5934c0dbba52b90519eebe2bda0cc4a",
+    "bytes": 292417,
+    "reason": "Array artifact retained locally; market-price inputs/full traces are not bundled in public evidence. Recreate from the separately supplied hash-pinned recorded fixture."
+  },
+  {
+    "original_run": "full-preflight-001",
+    "relative_path": "vectorbt/buy_and_hold/preflight/result/oracle.npz",
+    "sha256": "5794585200f3b0548ab9cc79a3a5bcbec5934c0dbba52b90519eebe2bda0cc4a",
+    "bytes": 292417,
+    "reason": "Array artifact retained locally; market-price inputs/full traces are not bundled in public evidence. Recreate from the separately supplied hash-pinned recorded fixture."
+  },
+  {
+    "original_run": "full-preflight-001",
+    "relative_path": "vectorbt/sma_cross/preflight/result/actual.npz",
+    "sha256": "ad2a39f3c03d9e5d6986a7018dc0441906b2416b161f72a12fe188162269d310",
+    "bytes": 294067,
+    "reason": "Array artifact retained locally; market-price inputs/full traces are not bundled in public evidence. Recreate from the separately supplied hash-pinned recorded fixture."
+  },
+  {
+    "original_run": "full-preflight-001",
+    "relative_path": "vectorbt/sma_cross/preflight/result/oracle.npz",
+    "sha256": "ef3dad88768ddc54579d0e3bbc58514b378afbf183bdee2f8a9f6c205961e536",
+    "bytes": 294067,
+    "reason": "Array artifact retained locally; market-price inputs/full traces are not bundled in public evidence. Recreate from the separately supplied hash-pinned recorded fixture."
+  },
+  {
+    "original_run": "protocol-guard-smoke-001",
+    "relative_path": "limen/buy_and_hold/preflight/result/actual.npz",
+    "sha256": "c6e6c5f239a18f10950afd6070fb0c6475031a81221b5dca11b305ec3932e33e",
+    "bytes": 8080,
+    "reason": "Array artifact retained locally; market-price inputs/full traces are not bundled in public evidence. Recreate from the separately supplied hash-pinned recorded fixture."
+  },
+  {
+    "original_run": "protocol-guard-smoke-001",
+    "relative_path": "limen/buy_and_hold/preflight/result/oracle.npz",
+    "sha256": "8c244d9524d34933530f20508710601631ce98bd0b1c255c8b0b6d2a623aa614",
+    "bytes": 15250,
+    "reason": "Array artifact retained locally; market-price inputs/full traces are not bundled in public evidence. Recreate from the separately supplied hash-pinned recorded fixture."
+  },
+  {
+    "original_run": "protocol-guard-smoke-001",
+    "relative_path": "prepared-buy_and_hold.npz",
+    "sha256": "fb81e57683a4136bcb74b322ec8f6d12cfef1fdad916268e18249b5e1cf8703a",
+    "bytes": 24570,
+    "reason": "Array artifact retained locally; market-price inputs/full traces are not bundled in public evidence. Recreate from the separately supplied hash-pinned recorded fixture."
+  },
+  {
+    "original_run": "import-provenance-smoke-001",
+    "relative_path": "limen/sma_cross/preflight/result/actual.npz",
+    "sha256": "88bf3a488c1289585d41f0f81f39bd495a7b5108c5b35982fb92f6c45d0c056f",
+    "bytes": 18603,
+    "reason": "Array artifact retained locally; market-price inputs/full traces are not bundled in public evidence. Recreate from the separately supplied hash-pinned recorded fixture."
+  },
+  {
+    "original_run": "import-provenance-smoke-001",
+    "relative_path": "limen/sma_cross/preflight/result/oracle.npz",
+    "sha256": "bcf85a116153f17c0c86702218e87e672303b1892a6f3e04d03f1613ae6614de",
+    "bytes": 35677,
+    "reason": "Array artifact retained locally; market-price inputs/full traces are not bundled in public evidence. Recreate from the separately supplied hash-pinned recorded fixture."
+  },
+  {
+    "original_run": "import-provenance-smoke-001",
+    "relative_path": "prepared-sma_cross.npz",
+    "sha256": "a4ae634f0328a37b7080e5131271a4cddce4d9c47bdbb428744338dbb6e754fb",
+    "bytes": 60240,
+    "reason": "Array artifact retained locally; market-price inputs/full traces are not bundled in public evidence. Recreate from the separately supplied hash-pinned recorded fixture."
+  },
+  {
+    "original_run": "final-protocol-smoke",
+    "relative_path": "limen/buy_and_hold/preflight/result/actual.npz",
+    "sha256": "c6e6c5f239a18f10950afd6070fb0c6475031a81221b5dca11b305ec3932e33e",
+    "bytes": 8080,
+    "reason": "Array artifact retained locally; market-price inputs/full traces are not bundled in public evidence. Recreate from the separately supplied hash-pinned recorded fixture."
+  },
+  {
+    "original_run": "final-protocol-smoke",
+    "relative_path": "limen/buy_and_hold/preflight/result/oracle.npz",
+    "sha256": "8c244d9524d34933530f20508710601631ce98bd0b1c255c8b0b6d2a623aa614",
+    "bytes": 15250,
+    "reason": "Array artifact retained locally; market-price inputs/full traces are not bundled in public evidence. Recreate from the separately supplied hash-pinned recorded fixture."
+  },
+  {
+    "original_run": "final-protocol-smoke",
+    "relative_path": "prepared-buy_and_hold.npz",
+    "sha256": "fb81e57683a4136bcb74b322ec8f6d12cfef1fdad916268e18249b5e1cf8703a",
+    "bytes": 24570,
+    "reason": "Array artifact retained locally; market-price inputs/full traces are not bundled in public evidence. Recreate from the separately supplied hash-pinned recorded fixture."
+  },
+  {
+    "original_run": "qlib-locked-full-preflight",
+    "relative_path": "prepared-buy_and_hold.npz",
+    "sha256": "0d7f3e9914beb1ec021bcaca04d90fcfa9792341278359a439080c7c86c1c2a0",
+    "bytes": 511712,
+    "reason": "Array artifact retained locally; recreate from separately supplied recorded fixture."
+  },
+  {
+    "original_run": "qlib-locked-full-preflight",
+    "relative_path": "prepared-sma_cross.npz",
+    "sha256": "a4e10483b2e46a229340eaad6cbe38af40824a63b7ce39d11dee57b0045f5c5a",
+    "bytes": 511712,
+    "reason": "Array artifact retained locally; recreate from separately supplied recorded fixture."
+  },
+  {
+    "original_run": "qlib-locked-full-preflight",
+    "relative_path": "qlib/sma_cross/preflight/result/actual.npz",
+    "sha256": "ef3dad88768ddc54579d0e3bbc58514b378afbf183bdee2f8a9f6c205961e536",
+    "bytes": 294067,
+    "reason": "Array artifact retained locally; recreate from separately supplied recorded fixture."
+  },
+  {
+    "original_run": "qlib-locked-full-preflight",
+    "relative_path": "qlib/sma_cross/preflight/result/oracle.npz",
+    "sha256": "ef3dad88768ddc54579d0e3bbc58514b378afbf183bdee2f8a9f6c205961e536",
+    "bytes": 294067,
+    "reason": "Array artifact retained locally; recreate from separately supplied recorded fixture."
+  },
+  {
+    "original_run": "qlib-locked-full-preflight",
+    "relative_path": "qlib/buy_and_hold/preflight/result/actual.npz",
+    "sha256": "5794585200f3b0548ab9cc79a3a5bcbec5934c0dbba52b90519eebe2bda0cc4a",
+    "bytes": 292417,
+    "reason": "Array artifact retained locally; recreate from separately supplied recorded fixture."
+  },
+  {
+    "original_run": "qlib-locked-full-preflight",
+    "relative_path": "qlib/buy_and_hold/preflight/result/oracle.npz",
+    "sha256": "5794585200f3b0548ab9cc79a3a5bcbec5934c0dbba52b90519eebe2bda0cc4a",
+    "bytes": 292417,
+    "reason": "Array artifact retained locally; recreate from separately supplied recorded fixture."
+  },
+  {
+    "original_run": "polars-corrective-preflight",
+    "relative_path": "prepared-buy_and_hold.npz",
+    "sha256": "0d7f3e9914beb1ec021bcaca04d90fcfa9792341278359a439080c7c86c1c2a0",
+    "bytes": 511712,
+    "reason": "Recorded array artifact retained locally, not bundled in public evidence."
+  },
+  {
+    "original_run": "polars-corrective-preflight",
+    "relative_path": "prepared-sma_cross.npz",
+    "sha256": "a4e10483b2e46a229340eaad6cbe38af40824a63b7ce39d11dee57b0045f5c5a",
+    "bytes": 511712,
+    "reason": "Recorded array artifact retained locally, not bundled in public evidence."
+  },
+  {
+    "original_run": "polars-corrective-preflight",
+    "relative_path": "prepared-flat.npz",
+    "sha256": "bf19663a2343053e30a6c532126758b57aa464aedce283dadcf73d94adefcd40",
+    "bytes": 511712,
+    "reason": "Recorded array artifact retained locally, not bundled in public evidence."
+  },
+  {
+    "original_run": "polars-corrective-preflight",
+    "relative_path": "limen/sma_cross/preflight/result/actual.npz",
+    "sha256": "8ad80b3bd4e366ca07a31f73966eeb1fc8d1b7566d7d82582f7db522aa6130af",
+    "bytes": 151713,
+    "reason": "Recorded array artifact retained locally, not bundled in public evidence."
+  },
+  {
+    "original_run": "polars-corrective-preflight",
+    "relative_path": "limen/sma_cross/preflight/result/oracle.npz",
+    "sha256": "ef3dad88768ddc54579d0e3bbc58514b378afbf183bdee2f8a9f6c205961e536",
+    "bytes": 294067,
+    "reason": "Recorded array artifact retained locally, not bundled in public evidence."
+  },
+  {
+    "original_run": "polars-corrective-preflight",
+    "relative_path": "limen/flat/preflight/result/actual.npz",
+    "sha256": "bc7e960ebba89f552273158ac1992e36cc6d71716e60e7bdd87aa2ff538429a2",
+    "bytes": 150829,
+    "reason": "Recorded array artifact retained locally, not bundled in public evidence."
+  },
+  {
+    "original_run": "polars-corrective-preflight",
+    "relative_path": "limen/flat/preflight/result/oracle.npz",
+    "sha256": "50c6e7c124dabc3a756987f9e5c3bda6369d4d1ce1373f94c22140049d308d86",
+    "bytes": 292351,
+    "reason": "Recorded array artifact retained locally, not bundled in public evidence."
+  },
+  {
+    "original_run": "polars-corrective-preflight",
+    "relative_path": "limen/buy_and_hold/preflight/result/actual.npz",
+    "sha256": "65646e71394b678f2f93d40208a93e5fefc08af3906273789e6255a0b7d2cf98",
+    "bytes": 150863,
+    "reason": "Recorded array artifact retained locally, not bundled in public evidence."
+  },
+  {
+    "original_run": "polars-corrective-preflight",
+    "relative_path": "limen/buy_and_hold/preflight/result/oracle.npz",
+    "sha256": "5794585200f3b0548ab9cc79a3a5bcbec5934c0dbba52b90519eebe2bda0cc4a",
+    "bytes": 292417,
+    "reason": "Recorded array artifact retained locally, not bundled in public evidence."
+  }
+]

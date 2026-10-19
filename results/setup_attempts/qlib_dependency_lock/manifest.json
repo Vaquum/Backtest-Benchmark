@@ -1,0 +1,15 @@
+{
+  "command": [
+    "uv",
+    "pip",
+    "compile",
+    "--generate-hashes",
+    "--python",
+    "/workspace/scratch/008a76ec4981/Backtest-Benchmark/.work/envs/qlib/bin/python",
+    "--output-file",
+    "/workspace/scratch/008a76ec4981/Backtest-Benchmark/locks/qlib.txt",
+    "/workspace/scratch/008a76ec4981/Backtest-Benchmark/environments/qlib.txt"
+  ],
+  "returncode": 0,
+  "status": "passed"
+}

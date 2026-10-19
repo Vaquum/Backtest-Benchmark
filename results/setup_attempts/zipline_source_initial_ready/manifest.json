@@ -1,0 +1,58 @@
+{
+  "candidate_id": "zipline",
+  "source_path": "/workspace/scratch/008a76ec4981/benchmark-sources/zipline",
+  "started_unix": 1792430192.2128003,
+  "commands": [
+    {
+      "argv": [
+        "uv",
+        "pip",
+        "install",
+        "--python",
+        "/workspace/scratch/008a76ec4981/Backtest-Benchmark/.work/envs/zipline/bin/python",
+        "setuptools",
+        "wheel",
+        "pyarrow",
+        "pytest",
+        "Cython<3.2",
+        "setuptools-scm"
+      ],
+      "returncode": 0,
+      "seconds": 0.015925546002108604
+    },
+    {
+      "argv": [
+        "uv",
+        "pip",
+        "install",
+        "--python",
+        "/workspace/scratch/008a76ec4981/Backtest-Benchmark/.work/envs/zipline/bin/python",
+        "/workspace/scratch/008a76ec4981/benchmark-sources/zipline"
+      ],
+      "returncode": 0,
+      "seconds": 134.73003232300107
+    },
+    {
+      "argv": [
+        "/workspace/scratch/008a76ec4981/Backtest-Benchmark/.work/envs/zipline/bin/python",
+        "-c",
+        "import zipline; print(zipline.__file__)"
+      ],
+      "returncode": 0,
+      "seconds": 5.886312563998217
+    },
+    {
+      "argv": [
+        "uv",
+        "pip",
+        "check",
+        "--python",
+        "/workspace/scratch/008a76ec4981/Backtest-Benchmark/.work/envs/zipline/bin/python"
+      ],
+      "returncode": 0,
+      "seconds": 0.016022208998037968
+    }
+  ],
+  "status": "ready",
+  "elapsed_seconds": 140.65958714485168
+}

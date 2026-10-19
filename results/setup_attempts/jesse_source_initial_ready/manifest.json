@@ -1,0 +1,68 @@
+{
+  "candidate_id": "jesse",
+  "source_path": "/workspace/scratch/008a76ec4981/benchmark-sources/jesse",
+  "started_unix": 1792430070.6549711,
+  "commands": [
+    {
+      "argv": [
+        "uv",
+        "venv",
+        "--seed",
+        "--python",
+        "/opt/codex/runtimes/codex-primary-runtime/dependencies/python/bin/python3",
+        "/workspace/scratch/008a76ec4981/Backtest-Benchmark/.work/envs/jesse"
+      ],
+      "returncode": 0,
+      "seconds": 0.03207537499838509
+    },
+    {
+      "argv": [
+        "uv",
+        "pip",
+        "install",
+        "--python",
+        "/workspace/scratch/008a76ec4981/Backtest-Benchmark/.work/envs/jesse/bin/python",
+        "setuptools",
+        "wheel",
+        "pyarrow",
+        "pytest"
+      ],
+      "returncode": 0,
+      "seconds": 0.11820213000464719
+    },
+    {
+      "argv": [
+        "uv",
+        "pip",
+        "install",
+        "--python",
+        "/workspace/scratch/008a76ec4981/Backtest-Benchmark/.work/envs/jesse/bin/python",
+        "/workspace/scratch/008a76ec4981/benchmark-sources/jesse"
+      ],
+      "returncode": 0,
+      "seconds": 9.420519478000642
+    },
+    {
+      "argv": [
+        "/workspace/scratch/008a76ec4981/Backtest-Benchmark/.work/envs/jesse/bin/python",
+        "-c",
+        "import jesse; print(jesse.__file__)"
+      ],
+      "returncode": 0,
+      "seconds": 0.03204363500117324
+    },
+    {
+      "argv": [
+        "uv",
+        "pip",
+        "check",
+        "--python",
+        "/workspace/scratch/008a76ec4981/Backtest-Benchmark/.work/envs/jesse/bin/python"
+      ],
+      "returncode": 0,
+      "seconds": 0.03346856600546744
+    }
+  ],
+  "status": "ready",
+  "elapsed_seconds": 9.64801573753357
+}

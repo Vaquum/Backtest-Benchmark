@@ -1,0 +1,58 @@
+{
+  "candidate_id": "qlib",
+  "source_path": "/workspace/scratch/008a76ec4981/benchmark-sources/qlib",
+  "started_unix": 1792430135.3531399,
+  "commands": [
+    {
+      "argv": [
+        "uv",
+        "pip",
+        "install",
+        "--python",
+        "/workspace/scratch/008a76ec4981/Backtest-Benchmark/.work/envs/qlib/bin/python",
+        "setuptools",
+        "wheel",
+        "pyarrow",
+        "pytest",
+        "Cython<3.2",
+        "setuptools-scm"
+      ],
+      "returncode": 0,
+      "seconds": 0.015860377003264148
+    },
+    {
+      "argv": [
+        "uv",
+        "pip",
+        "install",
+        "--python",
+        "/workspace/scratch/008a76ec4981/Backtest-Benchmark/.work/envs/qlib/bin/python",
+        "/workspace/scratch/008a76ec4981/benchmark-sources/qlib"
+      ],
+      "returncode": 0,
+      "seconds": 11.570210509002209
+    },
+    {
+      "argv": [
+        "/workspace/scratch/008a76ec4981/Backtest-Benchmark/.work/envs/qlib/bin/python",
+        "-c",
+        "import qlib; print(qlib.__file__)"
+      ],
+      "returncode": 0,
+      "seconds": 1.7219846630032407
+    },
+    {
+      "argv": [
+        "uv",
+        "pip",
+        "check",
+        "--python",
+        "/workspace/scratch/008a76ec4981/Backtest-Benchmark/.work/envs/qlib/bin/python"
+      ],
+      "returncode": 0,
+      "seconds": 0.032018194993725047
+    }
+  ],
+  "status": "ready",
+  "elapsed_seconds": 13.351525783538818
+}

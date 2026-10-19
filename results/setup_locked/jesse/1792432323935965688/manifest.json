@@ -1,0 +1,73 @@
+{
+  "candidate_id": "jesse",
+  "source_path": "benchmark-sources/jesse",
+  "source_commit": "4fcbcdd500b9cd14ca9bdb142e4f46a34884a1ae",
+  "started_unix": 1792432323.942591,
+  "commands": [
+    {
+      "argv": [
+        "uv",
+        "venv",
+        "--seed",
+        "--python",
+        "/opt/codex/runtimes/codex-primary-runtime/dependencies/python/bin/python",
+        "/workspace/scratch/008a76ec4981/Backtest-Benchmark/.work/envs/jesse"
+      ],
+      "returncode": 0,
+      "seconds": 0.0641493060029461
+    },
+    {
+      "argv": [
+        "uv",
+        "pip",
+        "sync",
+        "--python",
+        "/workspace/scratch/008a76ec4981/Backtest-Benchmark/.work/envs/jesse/bin/python",
+        "--require-hashes",
+        "/workspace/scratch/008a76ec4981/Backtest-Benchmark/locks/jesse.txt"
+      ],
+      "returncode": 0,
+      "seconds": 0.21461486799671547
+    },
+    {
+      "argv": [
+        "uv",
+        "pip",
+        "install",
+        "--python",
+        "/workspace/scratch/008a76ec4981/Backtest-Benchmark/.work/envs/jesse/bin/python",
+        "--no-deps",
+        "--no-build-isolation",
+        "--reinstall",
+        "benchmark-sources/jesse"
+      ],
+      "returncode": 0,
+      "seconds": 4.579485674003081
+    },
+    {
+      "argv": [
+        "/workspace/scratch/008a76ec4981/Backtest-Benchmark/.work/envs/jesse/bin/python",
+        "-c",
+        "import jesse; print(jesse.__file__)"
+      ],
+      "returncode": 0,
+      "seconds": 0.03193588300200645
+    },
+    {
+      "argv": [
+        "uv",
+        "pip",
+        "check",
+        "--python",
+        "/workspace/scratch/008a76ec4981/Backtest-Benchmark/.work/envs/jesse/bin/python"
+      ],
+      "returncode": 0,
+      "seconds": 0.03208534900477389
+    }
+  ],
+  "status": "ready",
+  "build_isolation": false,
+  "dependency_lock_sha256": "710bb94c90ecd71c01b47ba7e4c31a91e0513e32013a36496201f53fd7de78cc",
+  "tracked_source_clean_after": true,
+  "elapsed_seconds": 4.9377806186676025
+}

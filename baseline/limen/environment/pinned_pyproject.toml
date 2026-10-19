@@ -1,0 +1,269 @@
+[build-system]
+requires = ["setuptools>=77", "wheel"]
+build-backend = "limen_build_backend"
+backend-path = ["."]
+
+[project]
+name = "vaquum-limen"
+version = "5.40.1"
+description = "Manifest-driven Bitcoin research software for YAML-defined experiments, benchmark artifacts, backtest ledgers, and decoder cohorts."
+readme = "README.md"
+authors = [
+  { name = "Mikko Kotila", email = "mailme@mikkokotila.com" },
+  { name = "Prasenjit Dey" },
+  { name = "Arun Raguraman" },
+  { name = "Jatin Thakur" },
+  { name = "Soujanyaa Boruah" },
+  { name = "Ng Wei Da" },
+]
+license = "MIT"
+license-files = ["LICENSE", "NOTICE", "AUTHORS"]
+requires-python = ">=3.10,<3.14"
+keywords = ["bitcoin", "machine-learning", "research", "backtest", "yaml"]
+classifiers = [
+  "Development Status :: 4 - Beta",
+  "Intended Audience :: Developers",
+  "Intended Audience :: Financial and Insurance Industry",
+  "Operating System :: MacOS",
+  "Operating System :: POSIX :: Linux",
+  "Programming Language :: Python :: 3",
+  "Programming Language :: Python :: 3.10",
+  "Programming Language :: Python :: 3.11",
+  "Programming Language :: Python :: 3.12",
+  "Programming Language :: Python :: 3.13",
+  "Topic :: Scientific/Engineering :: Artificial Intelligence",
+]
+dependencies = [
+  "click>=8.1,<9",
+  "numpy>=2.2,<3",
+  "pandas>=2.3,<3",
+  "polars>=1.0,<2",
+  "requests>=2.32,<3",
+  "ruamel.yaml>=0.18,<0.19",
+  "scikit-learn>=1.6,<2",
+  "tomli>=2.0,<3; python_version < '3.11'",
+  "tqdm>=4.67,<5",
+  "typing_extensions>=4.12,<5",
+]
+
+[project.scripts]
+limen = "limen.cli.main:cli"
+
+[project.optional-dependencies]
+data = ["pyarrow>=23.0.1,<24"]
+boosting = ["lightgbm>=4.6,<5", "xgboost>=2.1,<4"]
+indicators = ["ta-lib>=0.6,<0.7"]
+stats = ["scipy>=1.15,<2", "statsmodels>=0.14,<0.15"]
+tabpfn = ["tabpfn>=6,<7"]
+all = [
+  "lightgbm>=4.6,<5",
+  "pyarrow>=23.0.1,<24",
+  "scipy>=1.15,<2",
+  "statsmodels>=0.14,<0.15",
+  "ta-lib>=0.6,<0.7",
+  "tabpfn>=6,<7",
+  "xgboost>=2.1,<4",
+]
+test = ["coverage[toml]>=7,<8", "hypothesis>=6,<7", "pytest>=8,<10"]
+release = ["anthropic>=0.54,<1"]
+dev = [
+  "build>=1,<2",
+  "check-manifest>=0.50,<1",
+  "check-wheel-contents>=0.6,<1",
+  "coverage[toml]>=7,<8",
+  "cyclonedx-bom>=5,<8",
+  "pandas-stubs>=2.3,<2.4",
+  "pip-audit>=2.9,<3",
+  "pip-licenses>=5,<6",
+  "pyright>=1.1.408,<1.1.409",
+  "pyroma>=5,<6",
+  "pytest>=8,<10",
+  "ruff>=0.15.21,<0.15.22",
+  "scipy-stubs>=1.15,<1.16",
+  "tomli>=2.0,<3",
+  "twine>=6,<7",
+]
+
+[project.urls]
+Homepage = "https://docs.vaquum.fi/limen/"
+Documentation = "https://docs.vaquum.fi/limen/"
+Repository = "https://github.com/vaquum/limen"
+Issues = "https://github.com/Vaquum/Limen/issues"
+Security = "https://github.com/Vaquum/Limen/security/advisories/new"
+
+[tool.setuptools.packages.find]
+where = ["."]
+include = ["limen*"]
+exclude = ["tests*", "scripts*"]
+
+[tool.setuptools.package-data]
+limen = ["py.typed", "yaml/templates/*.yaml"]
+
+[tool.setuptools.data-files]
+"share/limen" = [
+  "CHANGELOG.md",
+  "CITATION.cff",
+  "CODE_OF_CONDUCT.md",
+  "CONTRIBUTING.md",
+  "GOVERNANCE.md",
+  "MAINTAINERS.md",
+  "README.md",
+  "SECURITY.md",
+  "SUPPORT.md",
+  "THIRD_PARTY.md",
+]
+"share/limen/docs" = ["docs/*.md"]
+"share/limen/docs/Developer" = ["docs/Developer/*.md"]
+"share/limen/github" = [
+  ".github/PULL_REQUEST_TEMPLATE.md",
+  ".github/ISSUE_TEMPLATE/*.yml",
+  ".github/ISSUE_TEMPLATE/*.md",
+]
+"share/limen/scripts" = ["scripts/*.py"]
+
+[tool.coverage.run]
+source = ["limen"]
+relative_files = true
+
+[tool.coverage.report]
+omit = ["tests/*"]
+
+[tool.check-manifest]
+# The sdist is deliberately not a repository snapshot: governance/ is the
+# enforcement plane, not shippable source (docs/Developer/Packaging.md).
+# check-manifest's globs do not cross '/', so the nested test layer needs its
+# own recursive pattern.
+# governance.yml is the contract anchor for the enforcement plane, not
+# shippable source -- same reason governance/ is excluded.
+ignore = ["governance/*", "governance/**", "governance.yml"]
+
+[tool.pyright]
+include = ["limen"]
+exclude = ["**/__pycache__", "governance"]
+typeCheckingMode = "strict"
+pythonVersion = "3.10"
+reportPropertyTypeMismatch = "error"
+reportUnnecessaryTypeIgnoreComment = "error"
+reportCallInDefaultInitializer = "error"
+reportImplicitOverride = "error"
+reportImplicitStringConcatenation = "error"
+reportImportCycles = "error"
+reportMissingSuperCall = "error"
+reportUninitializedInstanceVariable = "error"
+reportUnusedCallResult = "error"
+reportMissingTypeStubs = "none"  # lightgbm/xgboost/talib/tabpfn ship no stubs
+# Strict already implies these; declared explicitly so the typing gate can
+# verify the posture rather than infer it from typeCheckingMode alone.
+reportExplicitAny = "error"
+reportMissingImports = "error"
+reportUnknownArgumentType = "error"
+reportUnknownMemberType = "error"
+reportUnknownVariableType = "error"
+reportUnknownLambdaType = "error"
+reportUnknownParameterType = "error"
+reportMissingParameterType = "error"
+reportConstantRedefinition = "error"
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+addopts = ["-ra"]
+filterwarnings = [
+  "error",
+  # Dependency warning filters are version-sensitive; re-check them on dependency bumps.
+  "ignore:'penalty' was deprecated.*:FutureWarning:sklearn.linear_model._logistic",
+  "ignore:'n_jobs' has no effect.*:FutureWarning:sklearn.linear_model._logistic",
+  "ignore:'n_jobs' > 1 does not have any effect when 'solver' is set to 'liblinear'.*:UserWarning",
+  "ignore:Inconsistent values:UserWarning:sklearn.linear_model._logistic",
+  "ignore:lbfgs failed to converge after .*:sklearn.exceptions.ConvergenceWarning",
+  "ignore:X does not have valid feature names.*:UserWarning:sklearn.utils.validation",
+  "ignore:Support for the dataframe interchange protocol is deprecated since version 1\\.40\\.0:DeprecationWarning",
+]
+markers = [
+  "tabpfn_model: opt-in TabPFN model-download integration tests tracked by #628.",
+]
+
+[tool.ruff]
+target-version = "py310"
+line-length = 88
+fix = false
+exclude = ["governance/tests/fixtures"]
+
+[tool.ruff.lint]
+select = [
+  "F",    # Pyflakes
+  "E",
+  "W",    # pycodestyle
+  "N",    # pep8-naming
+  "UP",   # pyupgrade
+  "ANN",  # flake8-annotations
+  "S",    # flake8-bandit
+  "BLE",  # flake8-blind-except
+  "B",    # flake8-bugbear
+  "A",    # flake8-builtins
+  "C4",   # flake8-comprehensions
+  "G",    # flake8-logging-format
+  "T20",  # flake8-print
+  "PT",   # flake8-pytest-style
+  "RET",  # flake8-return
+  "SIM",  # flake8-simplify
+  "ARG",  # flake8-unused-arguments
+  "PTH1", # flake8-use-pathlib (PTH1xx only: os.path replacements)
+  "ERA",  # eradicate
+  "PL",   # Pylint
+  "RUF",  # Ruff-specific rules
+]
+ignore = [
+  "D201", # No blank line before function docstring (We want the opposite)
+  "D202", # No blank line after function docstring (We want the opposite)
+  "D203", # 1 blank line required before class docstring (Conflicts with D211)
+  "D212", # Multi-line docstring summary at first line (Conflicts with D213)
+  "E501", # Line too long (Handled by formatter/wrap)
+  "I",    # Ignore isort import order rules
+  "D200", # Allow one-line docstring to span multiple lines
+  "D100", # Ignore missing docstring in public module
+  "ANN201", # Missing return type annotation for public function
+  "D102",   # Missing docstring in public method
+  "PLR0913", # Too many arguments in function definition
+  "D107",   # Missing docstring in __init__
+  "S101",    # Use of assert detected
+  "S113",    # Probable use of requests call without timeout
+  "S608",    # Possible SQL injection vector through string-based query construction
+  "S311",    # Standard pseudo-random generators are not suitable for cryptographic purposes
+  "N806",    # Variable in function should be lowercase
+  "PLC0415", # Import should be at the top-level of a file
+  "PLR0912", # Too many branches
+  "PLR0915", # Too many statements
+  "RUF002",  # Docstring contains ambiguous unicode character
+  "PT",      # flake8-pytest-style
+  "N803",    # Argument name should be lowercase
+  "ANN401",  # Dynamically typed expressions (typing.Any) are disallowed
+  "C401",    # Unnecessary generator (rewrite as a set comprehension)
+  "RET504",  # Unnecessary assignment to variable before return statement
+  "PLW0108", # Lambda may be unnecessary; consider inlining inner function
+]
+
+# Allow unused variables when underscore-prefixed.
+dummy-variable-rgx = "^(_+|(_+[a-zA-Z0-9_]*[a-zA-Z0-9]+?))$"
+
+[tool.ruff.lint.per-file-ignores]
+"governance/*.py" = ["T201", "S603", "S607", "PLR5501", "PLR0911", "PLR2004", "B007", "PTH123"]
+"governance/tests/**/*.py" = ["S101", "BLE001", "PLR2004", "B011", "ANN", "ARG", "S603", "S607", "S102", "S108"]
+"tests/**/*.py" = ["S101", "BLE001", "PLR2004", "B011", "ANN", "ARG", "S603", "S607"]
+"limen/targets/*.py" = ["ARG002"]
+"limen/cli/**/*.py" = ["S603"]
+
+[tool.ruff.lint.pylint]
+max-statements = 50
+
+[tool.ruff.lint.isort]
+known-first-party = ["limen"]
+section-order = [
+  "future",
+  "standard-library",
+  "third-party",
+  "first-party",
+  "local-folder",
+]
+
+[tool.ruff.lint.pydocstyle]
+convention = "google"

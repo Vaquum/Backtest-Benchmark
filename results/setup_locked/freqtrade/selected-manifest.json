@@ -1,0 +1,62 @@
+{
+  "candidate_id": "freqtrade",
+  "source_path": "/workspace/scratch/008a76ec4981/benchmark-sources/freqtrade",
+  "source_commit": "3ce38b587d6c7a1ea479fb3e59d724dee5195561",
+  "started_unix": 1792432251.7440026,
+  "commands": [
+    {
+      "argv": [
+        "uv",
+        "pip",
+        "sync",
+        "--python",
+        "/workspace/scratch/008a76ec4981/Backtest-Benchmark/.work/envs/freqtrade/bin/python",
+        "--require-hashes",
+        "/workspace/scratch/008a76ec4981/Backtest-Benchmark/locks/freqtrade.txt"
+      ],
+      "returncode": 0,
+      "seconds": 0.0643514179973863
+    },
+    {
+      "argv": [
+        "uv",
+        "pip",
+        "install",
+        "--python",
+        "/workspace/scratch/008a76ec4981/Backtest-Benchmark/.work/envs/freqtrade/bin/python",
+        "--no-deps",
+        "--no-build-isolation",
+        "--reinstall",
+        "benchmark-sources/freqtrade"
+      ],
+      "returncode": 0,
+      "seconds": 1.1800857500056736
+    },
+    {
+      "argv": [
+        "/workspace/scratch/008a76ec4981/Backtest-Benchmark/.work/envs/freqtrade/bin/python",
+        "-c",
+        "import freqtrade; print(freqtrade.__file__)"
+      ],
+      "returncode": 0,
+      "seconds": 0.06450301199947717
+    },
+    {
+      "argv": [
+        "uv",
+        "pip",
+        "check",
+        "--python",
+        "/workspace/scratch/008a76ec4981/Backtest-Benchmark/.work/envs/freqtrade/bin/python"
+      ],
+      "returncode": 0,
+      "seconds": 0.06849186899489723
+    }
+  ],
+  "status": "ready",
+  "build_isolation": false,
+  "dependency_lock_sha256": "30baf74e8002f963e2680d65db0127073145fec0a5afc9d18719dece7ceb066f",
+  "tracked_source_clean_after": true,
+  "elapsed_seconds": 1.419931173324585,
+  "manifest_path_note": "Absolute routing of the observed original source path; commands retain actual argv."
+}

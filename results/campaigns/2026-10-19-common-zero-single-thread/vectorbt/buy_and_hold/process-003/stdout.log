@@ -1,0 +1,3 @@
+@@BENCH_EVENT@@{"event": "ready", "worker_perf_counter_ns": 42015156920958}
+@@BENCH_EVENT@@{"event": "first_valid", "worker_perf_counter_ns": 42038454846209}
+@@BENCH_EVENT@@{"event": "complete", "worker_perf_counter_ns": 42041452925591}

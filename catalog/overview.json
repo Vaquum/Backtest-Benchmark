@@ -1,0 +1,80 @@
+{
+  "limen": {
+    "layer": "Managed research workflow plus snapshot/event execution",
+    "computation": "Full snapshot is admitted to the common zero-cost replay; historical fitted-preparation reuse reduced fit counts without a demonstrated whole-campaign speedup.",
+    "academic": "Native temporal research, selection statistics and reserved-holdout machinery; a reproduced batch-quantile predictor violation and restricted holdout compatibility limit the relevant paths.",
+    "safety": "Research record/integrity and account controls coexist with reproduced resolver and manifest-read boundaries, inconsistent direct cost admission and a static nonfinite-parameter liveness defect."
+  },
+  "lean": {
+    "layer": "Full local market/algorithm/account engine and optimizer",
+    "computation": "Pinned launcher builds, including locked NuGet restore; common-contract execution latency remains unmeasured.",
+    "academic": "Native algorithm-time/history guards and portfolio diagnostics; reported PSR is a marginal statistic and does not include search-family deflation.",
+    "safety": "Buying-power/resource/storage controls are real and route-dependent; a bounded native reproduction confirms path escape in the public ZIP overwrite helper."
+  },
+  "backtrader": {
+    "layer": "Strategy, broker, feed and indicator execution framework",
+    "computation": "Full Cerebro replay is admitted; preload/runonce, exactbars and optimization multiprocessing are distinct native tradeoffs.",
+    "academic": "Default event/indicator chronology has concrete controls, while cheat modes, external reads and user-owned research stages require explicit contracts.",
+    "safety": "Native cash/submission checks and cancellation behavior are scoped controls; arbitrary strategy code remains trusted and durable research governance is an adapter responsibility."
+  },
+  "vectorbt": {
+    "layer": "Public-source array portfolio and parameter/indicator toolkit",
+    "computation": "Native Numba from_signals replay is admitted, including lazy common-output extraction; first/JIT and warm results are separate.",
+    "academic": "Optional rolling/expanding splits and DSR calculation; input signals, lookahead discipline and complete selection history remain caller-owned.",
+    "safety": "Detailed native order-domain checks, with native sentinel/rebate/rejection choices; trusted-object serialization is not an authenticated research manifest."
+  },
+  "backtesting_py": {
+    "layer": "Bar broker/strategy execution and parameter optimizer",
+    "computation": "Full FractionalBacktest replay is admitted; mandatory native statistics and representation conversion remain in its timed work.",
+    "academic": "The core slices registered data/indicators; the percentage trailing helper changes all 153 mature stop distances under a real-prefix extension probe.",
+    "safety": "Native affordability/cost controls are present; optional helper chronology and trusted strategy execution remain separate boundaries."
+  },
+  "zipline": {
+    "layer": "Calendar/asset-aware algorithm engine and Pipeline factors",
+    "computation": "Pinned zipline-reloaded source builds/imports; no matching native hourly calendar/bundle adapter was admitted for this campaign.",
+    "academic": "Substantial point-in-time pricing/event-loader machinery and local rolling estimators; model-selection folds and final holdout governance require another layer.",
+    "safety": "Native CSV/tar ingestion checks and optional trading controls; control registration, log-versus-raise behavior and provider ownership matter."
+  },
+  "freqtrade": {
+    "layer": "Crypto execution/backtest platform, hyperopt and FreqAI research",
+    "computation": "Pinned source builds/imports; data preprocessing and batched joblib optimization are implemented, but matching execution and research timings remain unmeasured.",
+    "academic": "Optional lookahead/recursive diagnostics and FreqAI temporal workflow; label-horizon, inner-validation and search-selection assumptions need explicit auditing.",
+    "safety": "Wallet, authentication and operational controls are scoped; arbitrary strategies are trusted and prediction-mask/cache admission requires care."
+  },
+  "nautilus": {
+    "layer": "Native event/actor/account engine and optional durable event store",
+    "computation": "Pinned v2 source is assessed; native test compilation timed out twice before completion. No runtime throughput or older-release figure is substituted.",
+    "academic": "Availability-time replay and canonical result bytes provide concrete primitives; they do not establish complete input identity, research isolation or market calibration.",
+    "safety": "Configured risk gates and transactional/hash-verified redb persistence are substantive; bypass, backend selection and trusted callbacks delimit enforcement."
+  },
+  "bt": {
+    "layer": "Hierarchical portfolio allocation and account simulation",
+    "computation": "Source-compiled Cython portfolio replay is admitted, including native ffn statistics; a single-asset result does not establish tree/grid scaling.",
+    "academic": "Native trailing portfolio estimators operate on bounded histories; supervised research, multiple-search correction and final holdout require an adapter.",
+    "safety": "Targeted finite-cost/state-preservation checks and bounded allocation iteration; direct transaction, borrowing and fixed-income semantics need a declared account contract."
+  },
+  "qstrader": {
+    "layer": "Daily portfolio workflow; native broker/portfolio components measured",
+    "computation": "Hourly broker/portfolio component replay is admitted; the benchmark supplies the driver, so no full-engine Limen duration ratio is assigned.",
+    "academic": "A public prehistory getter returns the final future quote; native first-peak drawdown handling also has a source-level issue. Native daily output conventions need alignment.",
+    "safety": "The prehistory probe and an insufficient-cash one-unit fill are reproduced; the latter fails a required cash-only policy, with borrowing treated separately."
+  },
+  "hftbacktest": {
+    "layer": "Specialist recorded order-book, queue and latency replay",
+    "computation": "Native library tests pass 22/22 after dependency lock capture; no suitable recorded-depth workload was admitted, so there is no false OHLC speed ranking.",
+    "academic": "Distinct local/exchange clocks and queue/fill models are meaningful; venue calibration, sampling/return units and general research governance remain separate obligations.",
+    "safety": "Native replay/state behavior is inspected and library tests ran; malformed NPY/read-thread liveness counterexamples remain inspected, not executed hangs."
+  },
+  "qlib": {
+    "layer": "Model/dataset/task research platform; exchange/position components measured",
+    "computation": "Native Exchange/Position replay passes the common trace contract; full executor, provider, training and recorder throughput are unmeasured.",
+    "academic": "Train-bounded processors, segmented datasets and horizon-aware rolling tasks make it a close research-workflow comparator; static and rolling paths have different leakage guards.",
+    "safety": "Native guarded paths coexist with trusted configuration/artifacts; AsyncCaller was reproduced returning normally after worker failure and leaving later work unexecuted."
+  },
+  "jesse": {
+    "layer": "Crypto minute replay, optimization and research helpers",
+    "computation": "Pinned Python source and declared native dependency import; Ray candle sharing and Rust kernels are inspected, with no relabelled-hourly minute benchmark.",
+    "academic": "Separate training/testing metrics and optional stationary-bootstrap rule testing; exposed testing feedback is not a protected final holdout or full search-family correction.",
+    "safety": "Native account and operational controls have explicit limits; strategy/module paths, pickle cache ownership and dashboard-versus-research persistence are separate scopes."
+  }
+}

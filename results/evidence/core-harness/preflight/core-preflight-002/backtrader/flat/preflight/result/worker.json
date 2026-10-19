@@ -1,0 +1,245 @@
+{
+  "schema_version": 1,
+  "engine": "backtrader",
+  "mode": "preflight",
+  "started_utc": "2026-10-19T17:34:33.138476+00:00",
+  "status": "verified",
+  "timing_samples": [],
+  "core_diagnostic_samples": [],
+  "measurement_policy": "Untimed preflight precedes independent fresh timed worker; each timed result is checked outside its timed region",
+  "provenance": {
+    "catalog": {
+      "id": "backtrader",
+      "repository": "mementum/backtrader",
+      "name": "Backtrader",
+      "track": "execution",
+      "url": "https://github.com/mementum/backtrader",
+      "commit": "b853d7c90b6721476eb5a5ea3135224e33db1f14",
+      "commit_date": "2023-04-19T16:13:08+02:00",
+      "source_url": "https://github.com/mementum/backtrader/tree/b853d7c90b6721476eb5a5ea3135224e33db1f14",
+      "license_files": [
+        {
+          "path": "LICENSE",
+          "sha256": "e1c0ad728983d8a57335e52cf1064f1affd1d454173d8cebd3ed8b4a72b48704",
+          "url": "https://github.com/mementum/backtrader/blob/b853d7c90b6721476eb5a5ea3135224e33db1f14/LICENSE"
+        }
+      ],
+      "revision_policy": "Default branch HEAD captured 2026-10-19",
+      "eligibility": "source_auditable",
+      "license_label": "GPL-3.0",
+      "license_scope": "Observed repository license text; third-party components retain their own terms. This label does not authorize a particular redistribution or commercial deployment.",
+      "source_category": "public_source"
+    },
+    "source_commit_verified": "b853d7c90b6721476eb5a5ea3135224e33db1f14",
+    "source_path": "/workspace/scratch/008a76ec4981/benchmark-sources/backtrader",
+    "tracked_source_clean": true,
+    "distribution": "backtrader",
+    "distribution_version": "1.9.78.123",
+    "direct_url": {
+      "url": "file:///workspace/scratch/008a76ec4981/benchmark-sources/backtrader",
+      "dir_info": {}
+    },
+    "installed_code_files": 172,
+    "installed_code_sha256": "339e2b1a82fa62bb1a27493373a7667cd3f71bfb1ad7bb45432eed8a7aebbd1d",
+    "setup_manifest_sha256": "9a2a8544400702487d32c5fdd19bce883b4344ef05bb987252973c0c25a6d5d9",
+    "system_site_packages": false
+  },
+  "source_verification_ms": 38.011927,
+  "prepared_load_ms": 1.543879,
+  "prepared_arrays_sha256": "edf9788717e11c56ac1a831924e7e737f84ed33a3d7cdaf31135595b51b56736",
+  "contract": {
+    "initial_cash": 1000000,
+    "fee_bps": 0,
+    "slippage_bps": 0,
+    "signal_delay_bars": 1,
+    "equity_rtol": 1e-10,
+    "equity_atol": 1e-06,
+    "price_rtol": 1e-12,
+    "price_atol": 1e-08,
+    "quantity_rtol": 1e-10,
+    "quantity_atol": 1e-10,
+    "schema_version": 1,
+    "name": "prior-close-decision_next-close-fill_long-flat_v1",
+    "sizing": "All affordable continuous units on entry; hold units until exit; no ongoing rebalancing",
+    "signal_availability": "Decision uses only the prefix through close[t]; earliest fill is close[t+1]",
+    "fill_price": "Entry close*(1+slippage); exit close*(1-slippage)",
+    "fee_basis": "fee_bps/10000 times actual fill price times absolute executed quantity",
+    "equity_observation": "Cash plus units marked at the unadjusted close, after the close fill",
+    "held_observation": "Incoming held state over the interval ending at the current close, before its fill",
+    "terminal_rule": "Predeclared liquidation at penultimate real close; final real row settles delayed bookkeeping",
+    "unmodelled": [
+      "market impact",
+      "partial fills",
+      "funding",
+      "borrowing",
+      "corporate actions",
+      "exchange calendars"
+    ]
+  },
+  "oracle_ms": 0.393514,
+  "adapter_prepare_ms": 1241.95521,
+  "engine_scope": "Cerebro construction, PandasData ingestion, preload and runonce event simulation; standard chart observers disabled",
+  "settings": {
+    "close_on_close": true,
+    "preload": true,
+    "runonce": true,
+    "stdstats": false,
+    "processed_rows": 1000,
+    "native_stats_requested": false
+  },
+  "output_observation": {
+    "equity": "Actual broker value at each strategy callback; equivalent after a same-close zero-cost fill",
+    "held": "Incoming state reconstructed from actual completed order sides",
+    "fills": "Native completed order timestamps, prices, quantities and commissions",
+    "cash_units": "Not separately observed by this adapter"
+  },
+  "rank_against_full_engine": true,
+  "runtime": {
+    "python": "3.12.14 (main, Aug 25 2026, 14:00:49) [Clang 22.1.3 ]",
+    "executable": "/workspace/scratch/008a76ec4981/Backtest-Benchmark/.work/envs/backtrader/bin/python",
+    "prefix": "/workspace/scratch/008a76ec4981/Backtest-Benchmark/.work/envs/backtrader",
+    "platform": "Linux-6.18.55-x86_64-with-glibc2.39",
+    "machine": "x86_64",
+    "cpu_model": null,
+    "logical_cpus_visible": 9,
+    "cpu_affinity": [
+      0,
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8
+    ],
+    "container_constraints": {},
+    "thread_environment": {
+      "OMP_NUM_THREADS": "1",
+      "OPENBLAS_NUM_THREADS": "1",
+      "MKL_NUM_THREADS": "1",
+      "VECLIB_MAXIMUM_THREADS": "1",
+      "NUMEXPR_NUM_THREADS": "1",
+      "NUMBA_NUM_THREADS": "1",
+      "RAYON_NUM_THREADS": "1",
+      "BLIS_NUM_THREADS": "1"
+    },
+    "packages": [
+      {
+        "name": "backtrader",
+        "version": "1.9.78.123"
+      },
+      {
+        "name": "Cython",
+        "version": "3.3.0"
+      },
+      {
+        "name": "hatch-cython",
+        "version": "0.6.0"
+      },
+      {
+        "name": "hatchling",
+        "version": "1.32.4"
+      },
+      {
+        "name": "numpy",
+        "version": "2.2.6"
+      },
+      {
+        "name": "packaging",
+        "version": "26.3"
+      },
+      {
+        "name": "pandas",
+        "version": "2.3.3"
+      },
+      {
+        "name": "pathspec",
+        "version": "1.1.1"
+      },
+      {
+        "name": "pluggy",
+        "version": "1.7.0"
+      },
+      {
+        "name": "pyarrow",
+        "version": "23.0.1"
+      },
+      {
+        "name": "python-dateutil",
+        "version": "2.9.0.post0"
+      },
+      {
+        "name": "pytz",
+        "version": "2026.5"
+      },
+      {
+        "name": "setuptools",
+        "version": "84.0.0"
+      },
+      {
+        "name": "six",
+        "version": "1.17.0"
+      },
+      {
+        "name": "threadpoolctl",
+        "version": "3.6.0"
+      },
+      {
+        "name": "tomlkit",
+        "version": "0.15.2"
+      },
+      {
+        "name": "trove-classifiers",
+        "version": "2026.9.21.13"
+      },
+      {
+        "name": "tzdata",
+        "version": "2026.5"
+      },
+      {
+        "name": "wheel",
+        "version": "0.48.0"
+      }
+    ],
+    "threadpools": [
+      {
+        "user_api": "blas",
+        "internal_api": "openblas",
+        "num_threads": 1,
+        "prefix": "libscipy_openblas",
+        "filepath": "/workspace/scratch/008a76ec4981/Backtest-Benchmark/.work/envs/backtrader/lib/python3.12/site-packages/numpy.libs/libscipy_openblas64_-56d6093b.so",
+        "version": "0.3.29",
+        "threading_layer": "pthreads",
+        "architecture": "SkylakeX"
+      }
+    ]
+  },
+  "summary": {
+    "final_equity": 1000000.0,
+    "total_return": 0.0,
+    "max_drawdown": 0.0,
+    "mean_bar_return": 0.0,
+    "held_fraction": 0.0,
+    "entries": 0,
+    "exits": 0
+  },
+  "parity": {
+    "equity_samples_checked": 999,
+    "fills_checked": 0,
+    "max_abs_equity_error": 0.0,
+    "max_relative_equity_error": 0.0,
+    "optional_observed_fields_checked": [
+      "fill_quantities",
+      "fill_fees"
+    ],
+    "optional_unobserved_fields": [
+      "cash",
+      "units"
+    ]
+  },
+  "peak_rss_bytes_after_first": 146378752,
+  "peak_rss_bytes_after_full_calls": 146378752,
+  "peak_rss_bytes_final": 146378752,
+  "rss_scope": "Process lifetime high-water memory, including imports, validation, all repetitions, and optional separately labeled core diagnostics; Linux KiB converted to bytes, macOS bytes unchanged"
+}

@@ -1,0 +1,24 @@
+{
+  "candidate_id": "hftbacktest",
+  "commit": "5f3ec40b2afb764e0fea112f941ed85523ef4e88",
+  "command": [
+    "/workspace/scratch/008a76ec4981/Backtest-Benchmark/.work/toolchains/rust/bin/cargo",
+    "test",
+    "--locked",
+    "-p",
+    "hftbacktest",
+    "--lib",
+    "--no-default-features",
+    "--features",
+    "backtest"
+  ],
+  "source": "/workspace/scratch/008a76ec4981/benchmark-sources/hftbacktest",
+  "seconds": 30.29267931400682,
+  "returncode": 0,
+  "timed_out": false,
+  "status": "passed",
+  "scope": "Native backtest crate library tests; not a matched-market performance workload",
+  "timeout_seconds": 600,
+  "parallel_compile_jobs_per_process": 2,
+  "tracked_source_clean_after": true
+}

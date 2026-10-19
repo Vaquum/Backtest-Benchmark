@@ -1,0 +1,21 @@
+{
+  "candidate_id": "nautilus",
+  "commit": "42c3ca5f8f8d537f69772277e77792bb5b307ea5",
+  "command": [
+    "/workspace/scratch/008a76ec4981/Backtest-Benchmark/.work/toolchains/rust/bin/cargo",
+    "test",
+    "--locked",
+    "-p",
+    "nautilus-backtest",
+    "--lib"
+  ],
+  "source": "/workspace/scratch/008a76ec4981/benchmark-sources/nautilus",
+  "seconds": 720.03493342,
+  "returncode": -15,
+  "timed_out": true,
+  "status": "timeout",
+  "scope": "Native backtest crate library tests; not a matched-market performance workload",
+  "timeout_seconds": 720,
+  "parallel_compile_jobs_per_process": 2,
+  "tracked_source_clean_after": true
+}

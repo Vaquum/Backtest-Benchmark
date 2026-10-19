@@ -1,0 +1,36 @@
+{
+  "command": [
+    "/workspace/scratch/008a76ec4981/Backtest-Benchmark/.work/envs/vectorbt/bin/python",
+    "-m",
+    "bench.worker",
+    "--engine",
+    "vectorbt",
+    "--prepared",
+    "/workspace/scratch/008a76ec4981/Backtest-Benchmark/.work/runs/core-costed-preflight-001/prepared-sma_cross.npz",
+    "--prepared-sha256",
+    "a4ae634f0328a37b7080e5131271a4cddce4d9c47bdbb428744338dbb6e754fb",
+    "--contract",
+    "/workspace/scratch/008a76ec4981/Backtest-Benchmark/.work/runs/core-costed-preflight-001/contract.json",
+    "--environment-manifest",
+    "/workspace/scratch/008a76ec4981/Backtest-Benchmark/.work/manifests/vectorbt.json",
+    "--output",
+    "/workspace/scratch/008a76ec4981/Backtest-Benchmark/.work/runs/core-costed-preflight-001/vectorbt/sma_cross/preflight/result",
+    "--mode",
+    "preflight",
+    "--warm-repeats",
+    "7"
+  ],
+  "returncode": 0,
+  "timed_out": false,
+  "process_wall_ms": 24414.13422,
+  "launch_to_ready_ms": 31.912893,
+  "launch_to_first_valid_ms": 23351.188722,
+  "parent_observed_events_ms": {
+    "ready": 31.912893,
+    "first_valid": 23351.188722,
+    "complete": 23352.488063
+  },
+  "stdout_path": "/workspace/scratch/008a76ec4981/Backtest-Benchmark/.work/runs/core-costed-preflight-001/vectorbt/sma_cross/preflight/stdout.log",
+  "startup_scope": "Parent observed process launch to worker ready event, before scientific/engine imports; IPC scheduling is included",
+  "first_valid_scope": "Process launch through source verification, imports, input load, independent oracle, first engine call, extraction and successful parity"
+}

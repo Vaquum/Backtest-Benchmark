@@ -1,0 +1,288 @@
+[
+  {
+    "id": "limen",
+    "repository": "Vaquum/Limen",
+    "name": "Limen",
+    "track": "baseline",
+    "url": "https://github.com/Vaquum/Limen",
+    "commit": "29837e666604eee74a2ac94f328fb9803724342a",
+    "commit_date": "2026-10-19T17:59:12+03:00",
+    "source_url": "https://github.com/Vaquum/Limen/tree/29837e666604eee74a2ac94f328fb9803724342a",
+    "license_files": [
+      {
+        "path": "LICENSE",
+        "sha256": "91520bc6b0382654ae49e3fb93b5484b3296cc6306fa0563c1d8e85f19aec9a5",
+        "url": "https://github.com/Vaquum/Limen/blob/29837e666604eee74a2ac94f328fb9803724342a/LICENSE"
+      }
+    ],
+    "revision_policy": "Previously reviewed baseline retained; no claim this is the newest Limen revision",
+    "eligibility": "source_auditable",
+    "license_label": "MIT",
+    "license_scope": "Observed repository license text; third-party components retain their own terms. This label does not authorize a particular redistribution or commercial deployment.",
+    "source_category": "public_source"
+  },
+  {
+    "id": "lean",
+    "repository": "QuantConnect/Lean",
+    "name": "QuantConnect LEAN",
+    "track": "event",
+    "url": "https://github.com/QuantConnect/Lean",
+    "commit": "d4cac37514427c84d40064cecbf3f0e6be4b0137",
+    "commit_date": "2026-10-16T17:33:14-04:00",
+    "source_url": "https://github.com/QuantConnect/Lean/tree/d4cac37514427c84d40064cecbf3f0e6be4b0137",
+    "license_files": [
+      {
+        "path": "LICENSE",
+        "sha256": "522cf0a716ce03f67d46f8fceb5bf78c5b84400ec5cd8d14bf9f02cddc1cb6ba",
+        "url": "https://github.com/QuantConnect/Lean/blob/d4cac37514427c84d40064cecbf3f0e6be4b0137/LICENSE"
+      }
+    ],
+    "revision_policy": "Default branch HEAD captured 2026-10-19",
+    "eligibility": "source_auditable",
+    "license_label": "Apache-2.0",
+    "license_scope": "Observed repository license text; third-party components retain their own terms. This label does not authorize a particular redistribution or commercial deployment.",
+    "source_category": "public_source"
+  },
+  {
+    "id": "backtrader",
+    "repository": "mementum/backtrader",
+    "name": "Backtrader",
+    "track": "execution",
+    "url": "https://github.com/mementum/backtrader",
+    "commit": "b853d7c90b6721476eb5a5ea3135224e33db1f14",
+    "commit_date": "2023-04-19T16:13:08+02:00",
+    "source_url": "https://github.com/mementum/backtrader/tree/b853d7c90b6721476eb5a5ea3135224e33db1f14",
+    "license_files": [
+      {
+        "path": "LICENSE",
+        "sha256": "e1c0ad728983d8a57335e52cf1064f1affd1d454173d8cebd3ed8b4a72b48704",
+        "url": "https://github.com/mementum/backtrader/blob/b853d7c90b6721476eb5a5ea3135224e33db1f14/LICENSE"
+      }
+    ],
+    "revision_policy": "Default branch HEAD captured 2026-10-19",
+    "eligibility": "source_auditable",
+    "license_label": "GPL-3.0",
+    "license_scope": "Observed repository license text; third-party components retain their own terms. This label does not authorize a particular redistribution or commercial deployment.",
+    "source_category": "public_source"
+  },
+  {
+    "id": "vectorbt",
+    "repository": "polakowo/vectorbt",
+    "name": "vectorbt (public-source edition)",
+    "track": "vectorized",
+    "url": "https://github.com/polakowo/vectorbt",
+    "commit": "0875d984fbd66f8305d172980e55ee30a45153e3",
+    "commit_date": "2026-10-19T17:40:05+02:00",
+    "source_url": "https://github.com/polakowo/vectorbt/tree/0875d984fbd66f8305d172980e55ee30a45153e3",
+    "license_files": [
+      {
+        "path": "LICENSE.md",
+        "sha256": "a914859a115b70e80956a3cbd613139ad74c04e5d1bd38da8bcc16725822ec84",
+        "url": "https://github.com/polakowo/vectorbt/blob/0875d984fbd66f8305d172980e55ee30a45153e3/LICENSE.md"
+      }
+    ],
+    "revision_policy": "Default branch HEAD captured 2026-10-19",
+    "eligibility": "source_auditable",
+    "license_label": "Apache-2.0 with Commons Clause 1.0",
+    "license_scope": "Observed repository license text; third-party components retain their own terms. This label does not authorize a particular redistribution or commercial deployment.",
+    "source_category": "public_source_with_commons_clause"
+  },
+  {
+    "id": "backtesting_py",
+    "repository": "kernc/backtesting.py",
+    "name": "backtesting.py",
+    "track": "execution",
+    "url": "https://github.com/kernc/backtesting.py",
+    "commit": "ca2e2611621e472542ba90f7243a1fa06a7d7108",
+    "commit_date": "2026-08-05T14:39:16+02:00",
+    "source_url": "https://github.com/kernc/backtesting.py/tree/ca2e2611621e472542ba90f7243a1fa06a7d7108",
+    "license_files": [
+      {
+        "path": "LICENSE.md",
+        "sha256": "ad858d53cae05eed9531ecd4c467440803acffe34c69de7b88e03affc5b6a1bd",
+        "url": "https://github.com/kernc/backtesting.py/blob/ca2e2611621e472542ba90f7243a1fa06a7d7108/LICENSE.md"
+      }
+    ],
+    "revision_policy": "Default branch HEAD captured 2026-10-19",
+    "eligibility": "source_auditable",
+    "license_label": "AGPL-3.0",
+    "license_scope": "Observed repository license text; third-party components retain their own terms. This label does not authorize a particular redistribution or commercial deployment.",
+    "source_category": "public_source"
+  },
+  {
+    "id": "zipline",
+    "repository": "stefan-jansen/zipline-reloaded",
+    "name": "Zipline-reloaded",
+    "track": "event",
+    "url": "https://github.com/stefan-jansen/zipline-reloaded",
+    "commit": "cf649ac06fddce76f6caa2403cd8494ac84f72ad",
+    "commit_date": "2026-10-17T16:17:55-04:00",
+    "source_url": "https://github.com/stefan-jansen/zipline-reloaded/tree/cf649ac06fddce76f6caa2403cd8494ac84f72ad",
+    "license_files": [
+      {
+        "path": "LICENSE",
+        "sha256": "e35c4578f7db4498e62e278978f6c42e0fce6f21f9993a060b08a33549cd3044",
+        "url": "https://github.com/stefan-jansen/zipline-reloaded/blob/cf649ac06fddce76f6caa2403cd8494ac84f72ad/LICENSE"
+      }
+    ],
+    "revision_policy": "Default branch HEAD captured 2026-10-19",
+    "eligibility": "source_auditable",
+    "license_label": "Apache-2.0",
+    "license_scope": "Observed repository license text; third-party components retain their own terms. This label does not authorize a particular redistribution or commercial deployment.",
+    "source_category": "public_source"
+  },
+  {
+    "id": "freqtrade",
+    "repository": "freqtrade/freqtrade",
+    "name": "Freqtrade",
+    "track": "platform",
+    "url": "https://github.com/freqtrade/freqtrade",
+    "commit": "3ce38b587d6c7a1ea479fb3e59d724dee5195561",
+    "commit_date": "2026-10-19T06:44:59+02:00",
+    "source_url": "https://github.com/freqtrade/freqtrade/tree/3ce38b587d6c7a1ea479fb3e59d724dee5195561",
+    "license_files": [
+      {
+        "path": "LICENSE",
+        "sha256": "589ed823e9a84c56feb95ac58e7cf384626b9cbf4fda2a907bc36e103de1bad2",
+        "url": "https://github.com/freqtrade/freqtrade/blob/3ce38b587d6c7a1ea479fb3e59d724dee5195561/LICENSE"
+      }
+    ],
+    "revision_policy": "Default branch HEAD captured 2026-10-19",
+    "eligibility": "source_auditable",
+    "license_label": "GPL-3.0",
+    "license_scope": "Observed repository license text; third-party components retain their own terms. This label does not authorize a particular redistribution or commercial deployment.",
+    "source_category": "public_source"
+  },
+  {
+    "id": "nautilus",
+    "repository": "nautechsystems/nautilus_trader",
+    "name": "NautilusTrader",
+    "track": "event",
+    "url": "https://github.com/nautechsystems/nautilus_trader",
+    "commit": "42c3ca5f8f8d537f69772277e77792bb5b307ea5",
+    "commit_date": "2026-10-19T17:53:13+10:00",
+    "source_url": "https://github.com/nautechsystems/nautilus_trader/tree/42c3ca5f8f8d537f69772277e77792bb5b307ea5",
+    "license_files": [
+      {
+        "path": "LICENSE",
+        "sha256": "ee907919ec88c9c017b1f8b608db20960b6598aefcc4fe58820bde955d65ed3c",
+        "url": "https://github.com/nautechsystems/nautilus_trader/blob/42c3ca5f8f8d537f69772277e77792bb5b307ea5/LICENSE"
+      }
+    ],
+    "revision_policy": "Default branch HEAD captured 2026-10-19",
+    "eligibility": "source_auditable",
+    "license_label": "LGPL-3.0",
+    "license_scope": "Observed repository license text; third-party components retain their own terms. This label does not authorize a particular redistribution or commercial deployment.",
+    "source_category": "public_source"
+  },
+  {
+    "id": "bt",
+    "repository": "pmorissette/bt",
+    "name": "bt",
+    "track": "portfolio",
+    "url": "https://github.com/pmorissette/bt",
+    "commit": "4b76bad2dbf3a49e99feb49db3eee1dde2ef8e12",
+    "commit_date": "2026-10-17T14:54:28-04:00",
+    "source_url": "https://github.com/pmorissette/bt/tree/4b76bad2dbf3a49e99feb49db3eee1dde2ef8e12",
+    "license_files": [
+      {
+        "path": "LICENSE",
+        "sha256": "8711471566d722d55eca3f09196f342b2ee2960616e68127ec2a17b39ff99949",
+        "url": "https://github.com/pmorissette/bt/blob/4b76bad2dbf3a49e99feb49db3eee1dde2ef8e12/LICENSE"
+      }
+    ],
+    "revision_policy": "Default branch HEAD captured 2026-10-19",
+    "eligibility": "source_auditable",
+    "license_label": "MIT",
+    "license_scope": "Observed repository license text; third-party components retain their own terms. This label does not authorize a particular redistribution or commercial deployment.",
+    "source_category": "public_source"
+  },
+  {
+    "id": "qstrader",
+    "repository": "mhallsmoore/qstrader",
+    "name": "QSTrader",
+    "track": "portfolio",
+    "url": "https://github.com/mhallsmoore/qstrader",
+    "commit": "4c59e1584e83fcc2be644b820f827c0dd1b45c02",
+    "commit_date": "2024-06-24T13:51:17+01:00",
+    "source_url": "https://github.com/mhallsmoore/qstrader/tree/4c59e1584e83fcc2be644b820f827c0dd1b45c02",
+    "license_files": [
+      {
+        "path": "LICENSE",
+        "sha256": "dc1797cc31d307ad8f651df2bd739ca623db4e4c6bf6a411eb2c15fd4f33c9d4",
+        "url": "https://github.com/mhallsmoore/qstrader/blob/4c59e1584e83fcc2be644b820f827c0dd1b45c02/LICENSE"
+      }
+    ],
+    "revision_policy": "Default branch HEAD captured 2026-10-19",
+    "eligibility": "source_auditable",
+    "license_label": "MIT",
+    "license_scope": "Observed repository license text; third-party components retain their own terms. This label does not authorize a particular redistribution or commercial deployment.",
+    "source_category": "public_source"
+  },
+  {
+    "id": "hftbacktest",
+    "repository": "nkaz001/hftbacktest",
+    "name": "hftbacktest",
+    "track": "orderbook",
+    "url": "https://github.com/nkaz001/hftbacktest",
+    "commit": "5f3ec40b2afb764e0fea112f941ed85523ef4e88",
+    "commit_date": "2025-12-23T10:31:05-05:00",
+    "source_url": "https://github.com/nkaz001/hftbacktest/tree/5f3ec40b2afb764e0fea112f941ed85523ef4e88",
+    "license_files": [
+      {
+        "path": "LICENSE",
+        "sha256": "b40367c13dfa67c617d6e8037d45581496d9f0429a3274ab19f117404b519a5a",
+        "url": "https://github.com/nkaz001/hftbacktest/blob/5f3ec40b2afb764e0fea112f941ed85523ef4e88/LICENSE"
+      }
+    ],
+    "revision_policy": "Default branch HEAD captured 2026-10-19",
+    "eligibility": "source_auditable",
+    "license_label": "MIT",
+    "license_scope": "Observed repository license text; third-party components retain their own terms. This label does not authorize a particular redistribution or commercial deployment.",
+    "source_category": "public_source"
+  },
+  {
+    "id": "qlib",
+    "repository": "microsoft/qlib",
+    "name": "Qlib",
+    "track": "research",
+    "url": "https://github.com/microsoft/qlib",
+    "commit": "54355232463878d2eebb91fe0ee5fa7fa1f5976c",
+    "commit_date": "2026-10-08T18:15:27+08:00",
+    "source_url": "https://github.com/microsoft/qlib/tree/54355232463878d2eebb91fe0ee5fa7fa1f5976c",
+    "license_files": [
+      {
+        "path": "LICENSE",
+        "sha256": "c2cfccb812fe482101a8f04597dfc5a9991a6b2748266c47ac91b6a5aae15383",
+        "url": "https://github.com/microsoft/qlib/blob/54355232463878d2eebb91fe0ee5fa7fa1f5976c/LICENSE"
+      }
+    ],
+    "revision_policy": "Default branch HEAD captured 2026-10-19",
+    "eligibility": "source_auditable",
+    "license_label": "MIT",
+    "license_scope": "Observed repository license text; third-party components retain their own terms. This label does not authorize a particular redistribution or commercial deployment.",
+    "source_category": "public_source"
+  },
+  {
+    "id": "jesse",
+    "repository": "jesse-ai/jesse",
+    "name": "Jesse",
+    "track": "platform",
+    "url": "https://github.com/jesse-ai/jesse",
+    "commit": "4fcbcdd500b9cd14ca9bdb142e4f46a34884a1ae",
+    "commit_date": "2026-10-17T16:26:18+02:00",
+    "source_url": "https://github.com/jesse-ai/jesse/tree/4fcbcdd500b9cd14ca9bdb142e4f46a34884a1ae",
+    "license_files": [
+      {
+        "path": "LICENSE",
+        "sha256": "8985ca8447e233f34397a52fe77989c02e27b8145d43bd8c715ae9c7a96056d4",
+        "url": "https://github.com/jesse-ai/jesse/blob/4fcbcdd500b9cd14ca9bdb142e4f46a34884a1ae/LICENSE"
+      }
+    ],
+    "revision_policy": "Default branch HEAD captured 2026-10-19",
+    "eligibility": "source_auditable",
+    "license_label": "MIT",
+    "license_scope": "Observed repository license text; third-party components retain their own terms. This label does not authorize a particular redistribution or commercial deployment.",
+    "source_category": "public_source"
+  }
+]

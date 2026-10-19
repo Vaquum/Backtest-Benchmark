@@ -1,0 +1,29 @@
+{
+  "initial_cash": 1000000,
+  "fee_bps": 5.0,
+  "slippage_bps": 5.0,
+  "signal_delay_bars": 1,
+  "equity_rtol": 1e-10,
+  "equity_atol": 1e-06,
+  "price_rtol": 1e-12,
+  "price_atol": 1e-08,
+  "quantity_rtol": 1e-10,
+  "quantity_atol": 1e-10,
+  "schema_version": 1,
+  "name": "prior-close-decision_next-close-fill_long-flat_v1",
+  "sizing": "All affordable continuous units on entry; hold units until exit; no ongoing rebalancing",
+  "signal_availability": "Decision uses only the prefix through close[t]; earliest fill is close[t+1]",
+  "fill_price": "Entry close*(1+slippage); exit close*(1-slippage)",
+  "fee_basis": "fee_bps/10000 times actual fill price times absolute executed quantity",
+  "equity_observation": "Cash plus units marked at the unadjusted close, after the close fill",
+  "held_observation": "Incoming held state over the interval ending at the current close, before its fill",
+  "terminal_rule": "Predeclared liquidation at penultimate real close; final real row settles delayed bookkeeping",
+  "unmodelled": [
+    "market impact",
+    "partial fills",
+    "funding",
+    "borrowing",
+    "corporate actions",
+    "exchange calendars"
+  ]
+}

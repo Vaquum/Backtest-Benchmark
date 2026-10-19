@@ -1,0 +1,19 @@
+COMMAND ["uv", "pip", "sync", "--python", "/workspace/scratch/008a76ec4981/Backtest-Benchmark/.work/envs/freqtrade/bin/python", "--require-hashes", "/workspace/scratch/008a76ec4981/Backtest-Benchmark/locks/freqtrade.txt"]
+Using Python 3.12.14 environment at: Backtest-Benchmark/.work/envs/freqtrade
+Resolved 87 packages in 35ms
+Uninstalled 1 package in 6ms
+ - freqtrade==2026.10.dev0 (from file:///workspace/scratch/008a76ec4981/benchmark-sources/freqtrade)
+COMMAND ["uv", "pip", "install", "--python", "/workspace/scratch/008a76ec4981/Backtest-Benchmark/.work/envs/freqtrade/bin/python", "--no-deps", "--no-build-isolation", "--reinstall", "benchmark-sources/freqtrade"]
+Using Python 3.12.14 environment at: Backtest-Benchmark/.work/envs/freqtrade
+Resolved 1 package in 464ms
+   Building freqtrade @ file:///workspace/scratch/008a76ec4981/benchmark-sources/freqtrade
+      Built freqtrade @ file:///workspace/scratch/008a76ec4981/benchmark-sources/freqtrade
+Prepared 1 package in 595ms
+Installed 1 package in 8ms
+ + freqtrade==2026.10.dev0 (from file:///workspace/scratch/008a76ec4981/benchmark-sources/freqtrade)
+COMMAND ["/workspace/scratch/008a76ec4981/Backtest-Benchmark/.work/envs/freqtrade/bin/python", "-c", "import freqtrade; print(freqtrade.__file__)"]
+/workspace/scratch/008a76ec4981/Backtest-Benchmark/.work/envs/freqtrade/lib/python3.12/site-packages/freqtrade/__init__.py
+COMMAND ["uv", "pip", "check", "--python", "/workspace/scratch/008a76ec4981/Backtest-Benchmark/.work/envs/freqtrade/bin/python"]
+Using Python 3.12.14 environment at: Backtest-Benchmark/.work/envs/freqtrade
+Checked 88 packages in 1ms
+All installed packages are compatible

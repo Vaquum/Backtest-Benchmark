@@ -1,0 +1,19 @@
+COMMAND ["uv", "pip", "sync", "--python", "/workspace/scratch/008a76ec4981/Backtest-Benchmark/.work/envs/qlib/bin/python", "--require-hashes", "/workspace/scratch/008a76ec4981/Backtest-Benchmark/locks/qlib.txt"]
+Using Python 3.12.14 environment at: Backtest-Benchmark/.work/envs/qlib
+Resolved 197 packages in 55ms
+Uninstalled 1 package in 8ms
+ - pyqlib==0.9.8 (from file:///workspace/scratch/008a76ec4981/benchmark-sources/qlib)
+COMMAND ["uv", "pip", "install", "--python", "/workspace/scratch/008a76ec4981/Backtest-Benchmark/.work/envs/qlib/bin/python", "--no-deps", "--no-build-isolation", "--reinstall", "benchmark-sources/qlib"]
+Using Python 3.12.14 environment at: Backtest-Benchmark/.work/envs/qlib
+Resolved 1 package in 1.02s
+   Building pyqlib @ file:///workspace/scratch/008a76ec4981/benchmark-sources/qlib
+      Built pyqlib @ file:///workspace/scratch/008a76ec4981/benchmark-sources/qlib
+Prepared 1 package in 10.81s
+Installed 1 package in 18ms
+ + pyqlib==0.9.8 (from file:///workspace/scratch/008a76ec4981/benchmark-sources/qlib)
+COMMAND ["/workspace/scratch/008a76ec4981/Backtest-Benchmark/.work/envs/qlib/bin/python", "-c", "import qlib; print(qlib.__file__)"]
+/workspace/scratch/008a76ec4981/Backtest-Benchmark/.work/envs/qlib/lib/python3.12/site-packages/qlib/__init__.py
+COMMAND ["uv", "pip", "check", "--python", "/workspace/scratch/008a76ec4981/Backtest-Benchmark/.work/envs/qlib/bin/python"]
+Using Python 3.12.14 environment at: Backtest-Benchmark/.work/envs/qlib
+Checked 198 packages in 3ms
+All installed packages are compatible

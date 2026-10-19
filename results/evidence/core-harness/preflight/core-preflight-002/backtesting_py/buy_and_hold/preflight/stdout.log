@@ -1,0 +1,19 @@
+@@BENCH_EVENT@@{"event": "ready", "worker_perf_counter_ns": 38027408788056}
+Traceback (most recent call last):
+  File "/workspace/scratch/008a76ec4981/Backtest-Benchmark/bench/worker.py", line 77, in main
+    adapter = create_adapter(args.engine, data, contract)
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/workspace/scratch/008a76ec4981/Backtest-Benchmark/bench/adapters/__init__.py", line 18, in create_adapter
+    adapter = module.create_adapter(data, contract)
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/workspace/scratch/008a76ec4981/Backtest-Benchmark/bench/adapters/backtesting_py.py", line 11, in create_adapter
+    from backtesting import Strategy
+  File "/workspace/scratch/008a76ec4981/Backtest-Benchmark/.work/envs/backtesting_py/lib/python3.12/site-packages/backtesting/__init__.py", line 68, in <module>
+    from . import lib  # noqa: F401
+    ^^^^^^^^^^^^^^^^^
+  File "/workspace/scratch/008a76ec4981/Backtest-Benchmark/.work/envs/backtesting_py/lib/python3.12/site-packages/backtesting/lib.py", line 26, in <module>
+    from ._plotting import plot_heatmaps as _plot_heatmaps
+  File "/workspace/scratch/008a76ec4981/Backtest-Benchmark/.work/envs/backtesting_py/lib/python3.12/site-packages/backtesting/_plotting.py", line 47, in <module>
+    with open(os.path.join(os.path.dirname(__file__), 'autoscale_cb.js'),
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+FileNotFoundError: [Errno 2] No such file or directory: '/workspace/scratch/008a76ec4981/Backtest-Benchmark/.work/envs/backtesting_py/lib/python3.12/site-packages/backtesting/autoscale_cb.js'

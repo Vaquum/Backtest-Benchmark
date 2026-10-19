@@ -1,0 +1,152 @@
+{
+  "engine": "limen",
+  "status": "verified",
+  "python_executable": "/workspace/scratch/008a76ec4981/review-venv/bin/python",
+  "versions": {
+    "python": "3.12.14",
+    "vaquum-limen": "5.40.1",
+    "numpy": "2.2.6",
+    "pandas": "2.3.3",
+    "polars": "1.42.1",
+    "vectorbt": null,
+    "vectorbt-rust": null,
+    "numba": null,
+    "llvmlite": null,
+    "backtesting": null,
+    "backtrader": null
+  },
+  "evaluation_rows": 8783,
+  "processed_rows": 8783,
+  "portfolio_count": 1,
+  "threads": {
+    "OMP_NUM_THREADS": "1",
+    "OPENBLAS_NUM_THREADS": "1",
+    "MKL_NUM_THREADS": "1",
+    "VECLIB_MAXIMUM_THREADS": "1",
+    "BLIS_NUM_THREADS": "1",
+    "POLARS_MAX_THREADS": "1",
+    "NUMBA_NUM_THREADS": "1",
+    "RAYON_NUM_THREADS": "1",
+    "OMP_THREAD_LIMIT": "1"
+  },
+  "numba_cache_dir": "/workspace/scratch/008a76ec4981/review-work/performance/backtest-current/spot_1h_20240101_20241231-a634bbd4-8783-sma_cross/limen-numba-cache",
+  "rss_before_adapter_mib": 100.234375,
+  "adapter_preparation_ms": 85.407332,
+  "scope": "return kernel; public snapshot measured separately",
+  "settings": {
+    "execution_lag_bars": 1
+  },
+  "cold": {
+    "engine_ms": 0.893429,
+    "normalization_ms": 0.270598,
+    "common_outputs_ms": 1.164027,
+    "cpu_ms": 1.162398
+  },
+  "metrics": {
+    "final_equity": 1830874.6846070187,
+    "total_return": 0.8308746846070187,
+    "max_drawdown": -0.18992204415299196,
+    "mean_bar_return": 7.703467140290217e-05,
+    "held_fraction": 0.5550495274962997,
+    "entries": 26,
+    "exits": 26
+  },
+  "warm": {
+    "engine_ms": {
+      "median_ms": 0.342447,
+      "p95_ms": 0.7407361999999996,
+      "samples_ms": [
+        0.908792,
+        0.309918,
+        0.348606,
+        0.342447,
+        0.346964,
+        0.264319,
+        0.262306
+      ]
+    },
+    "normalization_ms": {
+      "median_ms": 0.184728,
+      "p95_ms": 0.3642561999999999,
+      "samples_ms": [
+        0.287644,
+        0.178129,
+        0.39709,
+        0.184728,
+        0.173602,
+        0.186702,
+        0.15872
+      ]
+    },
+    "common_outputs_ms": {
+      "median_ms": 0.520566,
+      "p95_ms": 1.0612139999999997,
+      "samples_ms": [
+        1.196436,
+        0.488047,
+        0.745696,
+        0.527175,
+        0.520566,
+        0.451021,
+        0.421026
+      ]
+    },
+    "cpu_ms": {
+      "median_ms": 0.521646,
+      "p95_ms": 1.0612245999999996,
+      "samples_ms": [
+        1.195999,
+        0.488726,
+        0.746751,
+        0.527775,
+        0.521646,
+        0.451822,
+        0.421707
+      ]
+    }
+  },
+  "peak_rss_mib": 100.234375,
+  "max_abs_equity_error": 1.234002411365509e-08,
+  "max_relative_equity_error": 6.426506481472742e-15,
+  "native_snapshot": {
+    "first_call_ms": 2.16623,
+    "warm": {
+      "median_ms": 1.699665,
+      "p95_ms": 6.111651499999995,
+      "samples_ms": [
+        1.612584,
+        1.831064,
+        1.699665,
+        1.781118,
+        1.647927,
+        1.666155,
+        7.946189
+      ]
+    },
+    "metrics": {
+      "edge_bps_p5": -54.24503556270877,
+      "edge_bps_p50": 0.0,
+      "edge_bps_p95": 58.38728144471212,
+      "pnl_bps_p5": -54.245035562707656,
+      "pnl_bps_p50": 0.0,
+      "pnl_bps_p95": 58.38728144471212,
+      "cost_bps_p5": -1.1102230246251565e-12,
+      "cost_bps_p50": 0.0,
+      "cost_bps_p95": 1.1102230246251565e-12,
+      "drawdown_bps_p5": -1544.3236032275825,
+      "drawdown_bps_p50": -624.164909445638,
+      "drawdown_bps_p95": -26.359532557136657,
+      "wins_per_bar": 0.28247751337811683,
+      "pnl_per_bar_bps": 0.7703467140290209,
+      "avg_win_bps": 36.96232101739091,
+      "avg_loss_bps": -35.479349730505426,
+      "cvar_95_pnl_bps": -101.78888456934888,
+      "trades_per_bar": 0.002960264146646932,
+      "inventory_per_bar": 0.5550495274962997,
+      "cost_per_bar_bps": 1.3904649061683618e-15
+    },
+    "scope": "backtest_snapshot validation, execution and all native bar metrics"
+  },
+  "peak_rss_including_snapshot_mib": 100.234375,
+  "limen_imported": true
+}

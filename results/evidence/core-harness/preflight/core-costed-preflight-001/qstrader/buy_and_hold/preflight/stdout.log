@@ -1,0 +1,11 @@
+@@BENCH_EVENT@@{"event": "ready", "worker_perf_counter_ns": 38226172927984}
+Traceback (most recent call last):
+  File "/workspace/scratch/008a76ec4981/Backtest-Benchmark/bench/worker.py", line 77, in main
+    adapter = create_adapter(args.engine, data, contract)
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/workspace/scratch/008a76ec4981/Backtest-Benchmark/bench/adapters/__init__.py", line 18, in create_adapter
+    adapter = module.create_adapter(data, contract)
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/workspace/scratch/008a76ec4981/Backtest-Benchmark/bench/adapters/qstrader.py", line 17, in create_adapter
+    raise UnsupportedContract('QSTrader SimulatedBroker rounds consideration before calculating percentage fees; the common fee contract uses unrounded actual fill notional')
+bench.api.UnsupportedContract: QSTrader SimulatedBroker rounds consideration before calculating percentage fees; the common fee contract uses unrounded actual fill notional

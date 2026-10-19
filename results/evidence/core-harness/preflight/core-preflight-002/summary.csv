@@ -1,0 +1,22 @@
+engine,strategy,status,rank_against_full_engine,independent_processes,equity_samples,fills_checked,first_full_common_ms_median,warm_full_common_ms_median,warm_engine_ms_median,warm_extraction_common_ms_median,warm_full_common_cpu_ms_median,peak_rss_bytes_median,launch_to_ready_ms_median,launch_to_first_valid_ms_median,relative_to_limen_warm_full_common,relative_to_limen_interpretation
+limen,buy_and_hold,verified,True,0,999,2,,,,,,,,,,Candidate duration divided by Limen duration; only complete same-contract full-engine cases qualify
+backtrader,buy_and_hold,verified,True,0,999,2,,,,,,,,,,Candidate duration divided by Limen duration; only complete same-contract full-engine cases qualify
+vectorbt,buy_and_hold,verified,True,0,999,2,,,,,,,,,,Candidate duration divided by Limen duration; only complete same-contract full-engine cases qualify
+backtesting_py,buy_and_hold,error,False,0,,,,,,,,,,,,Candidate duration divided by Limen duration; only complete same-contract full-engine cases qualify
+bt,buy_and_hold,verified,True,0,999,2,,,,,,,,,,Candidate duration divided by Limen duration; only complete same-contract full-engine cases qualify
+qstrader,buy_and_hold,verified,False,0,999,2,,,,,,,,,,Candidate duration divided by Limen duration; only complete same-contract full-engine cases qualify
+qlib,buy_and_hold,verified,False,0,999,2,,,,,,,,,,Candidate duration divided by Limen duration; only complete same-contract full-engine cases qualify
+limen,sma_cross,verified,True,0,999,6,,,,,,,,,,Candidate duration divided by Limen duration; only complete same-contract full-engine cases qualify
+backtrader,sma_cross,verified,True,0,999,6,,,,,,,,,,Candidate duration divided by Limen duration; only complete same-contract full-engine cases qualify
+vectorbt,sma_cross,verified,True,0,999,6,,,,,,,,,,Candidate duration divided by Limen duration; only complete same-contract full-engine cases qualify
+backtesting_py,sma_cross,error,False,0,,,,,,,,,,,,Candidate duration divided by Limen duration; only complete same-contract full-engine cases qualify
+bt,sma_cross,verified,True,0,999,6,,,,,,,,,,Candidate duration divided by Limen duration; only complete same-contract full-engine cases qualify
+qstrader,sma_cross,verified,False,0,999,6,,,,,,,,,,Candidate duration divided by Limen duration; only complete same-contract full-engine cases qualify
+qlib,sma_cross,verified,False,0,999,6,,,,,,,,,,Candidate duration divided by Limen duration; only complete same-contract full-engine cases qualify
+limen,flat,verified,True,0,999,0,,,,,,,,,,Candidate duration divided by Limen duration; only complete same-contract full-engine cases qualify
+backtrader,flat,verified,True,0,999,0,,,,,,,,,,Candidate duration divided by Limen duration; only complete same-contract full-engine cases qualify
+vectorbt,flat,verified,True,0,999,0,,,,,,,,,,Candidate duration divided by Limen duration; only complete same-contract full-engine cases qualify
+backtesting_py,flat,error,False,0,,,,,,,,,,,,Candidate duration divided by Limen duration; only complete same-contract full-engine cases qualify
+bt,flat,error,True,0,,,,,,,,,,,,Candidate duration divided by Limen duration; only complete same-contract full-engine cases qualify
+qstrader,flat,verified,False,0,999,0,,,,,,,,,,Candidate duration divided by Limen duration; only complete same-contract full-engine cases qualify
+qlib,flat,verified,False,0,999,0,,,,,,,,,,Candidate duration divided by Limen duration; only complete same-contract full-engine cases qualify

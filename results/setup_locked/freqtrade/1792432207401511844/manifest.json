@@ -1,0 +1,27 @@
+{
+  "candidate_id": "freqtrade",
+  "source_path": "benchmark-sources/freqtrade",
+  "source_commit": "3ce38b587d6c7a1ea479fb3e59d724dee5195561",
+  "started_unix": 1792432207.7077296,
+  "commands": [
+    {
+      "argv": [
+        "uv",
+        "pip",
+        "sync",
+        "--python",
+        "/workspace/scratch/008a76ec4981/Backtest-Benchmark/.work/envs/freqtrade/bin/python",
+        "--require-hashes",
+        "-r",
+        "/workspace/scratch/008a76ec4981/Backtest-Benchmark/locks/freqtrade.txt"
+      ],
+      "returncode": 2,
+      "seconds": 0.007765105001453776
+    }
+  ],
+  "status": "blocked",
+  "build_isolation": false,
+  "dependency_lock_sha256": "30baf74e8002f963e2680d65db0127073145fec0a5afc9d18719dece7ceb066f",
+  "error": "RuntimeError: Command exited 2",
+  "elapsed_seconds": 0.008376598358154297
+}

@@ -1,0 +1,1839 @@
+{
+  "review_type": "bounded_release_prose_scope_links_and_retained_evidence",
+  "reviewed_documents_before": [
+    {
+      "path": "README.md",
+      "sha256": "4b7cbf5ba54fb1063b80ad4539c40d835096884e0e1b0ce88aed145b69195960",
+      "lines": 129
+    },
+    {
+      "path": "protocol/README.md",
+      "sha256": "6153de1e8c6bbac05e38c651926aba07d9e28621e110da00fcc018751d459ee2",
+      "lines": 100
+    },
+    {
+      "path": "reports/academic-analysis.md",
+      "sha256": "f3f7f955139b37784a7fa56637eebe8b92d64767df3ed2b7e185d6b4a365e95a",
+      "lines": 131
+    },
+    {
+      "path": "reports/safety-analysis.md",
+      "sha256": "53210326ab00554c901a9da97dddc2cda8c6bd925c84aa7e43762bdde61914e4",
+      "lines": 51
+    }
+  ],
+  "reviewed_documents_after": [
+    {
+      "path": "README.md",
+      "sha256": "4b7cbf5ba54fb1063b80ad4539c40d835096884e0e1b0ce88aed145b69195960"
+    },
+    {
+      "path": "protocol/README.md",
+      "sha256": "6153de1e8c6bbac05e38c651926aba07d9e28621e110da00fcc018751d459ee2"
+    },
+    {
+      "path": "reports/academic-analysis.md",
+      "sha256": "d61535136a26f4a955be7944bded4a8bff84e7e6d9ff44e557f4c84b84a38624"
+    },
+    {
+      "path": "reports/safety-analysis.md",
+      "sha256": "3ea6b7b4063175ca4268dc2976577360f925582addd9e5397f8ebdc551a363e4"
+    }
+  ],
+  "source_of_truth": "Canonical assessment JSON, retained original probe/test results and pinned executable source; release prose itself is under review.",
+  "engines_or_builds_executed": false,
+  "measured_data_changed": false,
+  "permitted_prose_edit": "reports/safety-analysis.md only",
+  "checks": {
+    "complete_grid_counts": true,
+    "safety_source_reference_count_465": true,
+    "all_13_A14_rows_unknown": true,
+    "qstrader_prehistory_price_and_times": true,
+    "qstrader_cash_case": true,
+    "qlib_async_scope": true,
+    "lean_bounded_archive_scope": true,
+    "backtesting_trailing_count_control": true,
+    "hft_22_library_tests": true,
+    "hft_loader_failures_still_inspected_only": true,
+    "original_campaign_component_rows_excluded_from_full_engine_rank": true,
+    "original_thread_environment_omits_POLARS_MAX_THREADS": true
+  },
+  "link_summary": {
+    "local_links": 24,
+    "pinned_source_links": 212,
+    "other_external_links": 0,
+    "errors": 5
+  },
+  "local_links": [
+    {
+      "document": "README.md",
+      "line": 5,
+      "target": "reports/overview.md",
+      "exists": false,
+      "resolved_repository_path": "reports/overview.md"
+    },
+    {
+      "document": "README.md",
+      "line": 5,
+      "target": "reports/comparison-grid.md",
+      "exists": false,
+      "resolved_repository_path": "reports/comparison-grid.md"
+    },
+    {
+      "document": "README.md",
+      "line": 5,
+      "target": "reports/performance-results.md",
+      "exists": false,
+      "resolved_repository_path": "reports/performance-results.md"
+    },
+    {
+      "document": "README.md",
+      "line": 5,
+      "target": "reports/assessment-grid.csv",
+      "exists": false,
+      "resolved_repository_path": "reports/assessment-grid.csv"
+    },
+    {
+      "document": "README.md",
+      "line": 5,
+      "target": "reports/assessment-grid.json",
+      "exists": false,
+      "resolved_repository_path": "reports/assessment-grid.json"
+    },
+    {
+      "document": "README.md",
+      "line": 11,
+      "target": "catalog/candidates.json",
+      "exists": true,
+      "resolved_repository_path": "catalog/candidates.json"
+    },
+    {
+      "document": "README.md",
+      "line": 11,
+      "target": "baseline/limen/",
+      "exists": true,
+      "resolved_repository_path": "baseline/limen"
+    },
+    {
+      "document": "README.md",
+      "line": 21,
+      "target": "catalog/exclusions.json",
+      "exists": true,
+      "resolved_repository_path": "catalog/exclusions.json"
+    },
+    {
+      "document": "README.md",
+      "line": 37,
+      "target": "protocol/README.md",
+      "exists": true,
+      "resolved_repository_path": "protocol/README.md"
+    },
+    {
+      "document": "README.md",
+      "line": 37,
+      "target": "reports/academic-analysis.md",
+      "exists": true,
+      "resolved_repository_path": "reports/academic-analysis.md"
+    },
+    {
+      "document": "README.md",
+      "line": 37,
+      "target": "reports/safety-analysis.md",
+      "exists": true,
+      "resolved_repository_path": "reports/safety-analysis.md"
+    },
+    {
+      "document": "README.md",
+      "line": 102,
+      "target": "scripts/probes/",
+      "exists": true,
+      "resolved_repository_path": "scripts/probes"
+    },
+    {
+      "document": "README.md",
+      "line": 102,
+      "target": "baseline/limen/scripts/",
+      "exists": true,
+      "resolved_repository_path": "baseline/limen/scripts"
+    },
+    {
+      "document": "README.md",
+      "line": 102,
+      "target": "results/probes/probe_admission_revision.json",
+      "exists": true,
+      "resolved_repository_path": "results/probes/probe_admission_revision.json"
+    },
+    {
+      "document": "README.md",
+      "line": 111,
+      "target": "scripts/validate_assessment.py",
+      "exists": true,
+      "resolved_repository_path": "scripts/validate_assessment.py"
+    },
+    {
+      "document": "reports/safety-analysis.md",
+      "line": 5,
+      "target": "../assessment/safety.json",
+      "exists": true,
+      "resolved_repository_path": "assessment/safety.json"
+    },
+    {
+      "document": "reports/safety-analysis.md",
+      "line": 5,
+      "target": "../assessment/safety_protocol_overrides.json",
+      "exists": true,
+      "resolved_repository_path": "assessment/safety_protocol_overrides.json"
+    },
+    {
+      "document": "reports/safety-analysis.md",
+      "line": 49,
+      "target": "../results/probes/qstrader_boundaries.json",
+      "exists": true,
+      "resolved_repository_path": "results/probes/qstrader_boundaries.json"
+    },
+    {
+      "document": "reports/safety-analysis.md",
+      "line": 49,
+      "target": "../results/probes/qlib_async_boundary.json",
+      "exists": true,
+      "resolved_repository_path": "results/probes/qlib_async_boundary.json"
+    },
+    {
+      "document": "reports/safety-analysis.md",
+      "line": 49,
+      "target": "../results/probes/lean_unzip_boundary.json",
+      "exists": true,
+      "resolved_repository_path": "results/probes/lean_unzip_boundary.json"
+    },
+    {
+      "document": "reports/safety-analysis.md",
+      "line": 49,
+      "target": "../results/probes/backtesting_trailing_prefix.json",
+      "exists": true,
+      "resolved_repository_path": "results/probes/backtesting_trailing_prefix.json"
+    },
+    {
+      "document": "reports/safety-analysis.md",
+      "line": 49,
+      "target": "../results/native_checks/hft_frozen_dependencies/hftbacktest.json",
+      "exists": true,
+      "resolved_repository_path": "results/native_checks/hft_frozen_dependencies/hftbacktest.json"
+    },
+    {
+      "document": "reports/safety-analysis.md",
+      "line": 51,
+      "target": "../results/campaigns/2026-10-19-common-zero-original/benchmark-source/bench/provenance.py",
+      "exists": true,
+      "resolved_repository_path": "results/campaigns/2026-10-19-common-zero-original/benchmark-source/bench/provenance.py"
+    },
+    {
+      "document": "reports/safety-analysis.md",
+      "line": 51,
+      "target": "../results/probes/probe_admission_revision.json",
+      "exists": true,
+      "resolved_repository_path": "results/probes/probe_admission_revision.json"
+    }
+  ],
+  "pinned_source_links": [
+    {
+      "document": "reports/academic-analysis.md",
+      "line": 21,
+      "target": "https://github.com/Vaquum/Limen/blob/29837e666604eee74a2ac94f328fb9803724342a/limen/experiment/_walk_forward_run.py#L152-L165",
+      "source_id": "limen",
+      "source_and_range_valid": true
+    },
+    {
+      "document": "reports/academic-analysis.md",
+      "line": 21,
+      "target": "https://github.com/Vaquum/Limen/blob/29837e666604eee74a2ac94f328fb9803724342a/limen/sfd/reference_architecture/direction_sizing.py#L163-L188",
+      "source_id": "limen",
+      "source_and_range_valid": true
+    },
+    {
+      "document": "reports/academic-analysis.md",
+      "line": 21,
+      "target": "https://github.com/Vaquum/Limen/blob/29837e666604eee74a2ac94f328fb9803724342a/limen/experiment/_prepare_trade_context.py#L306-L325",
+      "source_id": "limen",
+      "source_and_range_valid": true
+    },
+    {
+      "document": "reports/academic-analysis.md",
+      "line": 23,
+      "target": "https://github.com/Vaquum/Limen/blob/29837e666604eee74a2ac94f328fb9803724342a/limen/features/quantile_price_lines.py#L146-L189",
+      "source_id": "limen",
+      "source_and_range_valid": true
+    },
+    {
+      "document": "reports/academic-analysis.md",
+      "line": 23,
+      "target": "https://github.com/Vaquum/Limen/blob/29837e666604eee74a2ac94f328fb9803724342a/limen/sfd/foundational_sfd/lightgbm_binary.py#L82-L103",
+      "source_id": "limen",
+      "source_and_range_valid": true
+    },
+    {
+      "document": "reports/academic-analysis.md",
+      "line": 25,
+      "target": "https://github.com/Vaquum/Limen/blob/29837e666604eee74a2ac94f328fb9803724342a/limen/metrics/deflated_sharpe_ratio.py#L33-L55",
+      "source_id": "limen",
+      "source_and_range_valid": true
+    },
+    {
+      "document": "reports/academic-analysis.md",
+      "line": 25,
+      "target": "https://github.com/Vaquum/Limen/blob/29837e666604eee74a2ac94f328fb9803724342a/limen/metrics/probability_of_backtest_overfitting.py#L47-L58",
+      "source_id": "limen",
+      "source_and_range_valid": true
+    },
+    {
+      "document": "reports/academic-analysis.md",
+      "line": 25,
+      "target": "https://github.com/Vaquum/Limen/blob/29837e666604eee74a2ac94f328fb9803724342a/limen/experiment/_acceptance_settings.py#L105-L115",
+      "source_id": "limen",
+      "source_and_range_valid": true
+    },
+    {
+      "document": "reports/academic-analysis.md",
+      "line": 25,
+      "target": "https://github.com/Vaquum/Limen/blob/29837e666604eee74a2ac94f328fb9803724342a/limen/experiment/acceptance_report.py#L138-L159",
+      "source_id": "limen",
+      "source_and_range_valid": true
+    },
+    {
+      "document": "reports/academic-analysis.md",
+      "line": 25,
+      "target": "https://github.com/Vaquum/Limen/blob/29837e666604eee74a2ac94f328fb9803724342a/limen/experiment/experiment_core.py#L157-L159",
+      "source_id": "limen",
+      "source_and_range_valid": true
+    },
+    {
+      "document": "reports/academic-analysis.md",
+      "line": 27,
+      "target": "https://github.com/Vaquum/Limen/blob/29837e666604eee74a2ac94f328fb9803724342a/limen/experiment/_holdout_research.py#L71-L100",
+      "source_id": "limen",
+      "source_and_range_valid": true
+    },
+    {
+      "document": "reports/academic-analysis.md",
+      "line": 27,
+      "target": "https://github.com/Vaquum/Limen/blob/29837e666604eee74a2ac94f328fb9803724342a/limen/experiment/_holdout_freeze.py#L159-L225",
+      "source_id": "limen",
+      "source_and_range_valid": true
+    },
+    {
+      "document": "reports/academic-analysis.md",
+      "line": 27,
+      "target": "https://github.com/Vaquum/Limen/blob/29837e666604eee74a2ac94f328fb9803724342a/limen/experiment/_holdout_assessment.py#L91-L113",
+      "source_id": "limen",
+      "source_and_range_valid": true
+    },
+    {
+      "document": "reports/academic-analysis.md",
+      "line": 27,
+      "target": "https://github.com/Vaquum/Limen/blob/29837e666604eee74a2ac94f328fb9803724342a/limen/experiment/_holdout_assessment.py#L153-L174",
+      "source_id": "limen",
+      "source_and_range_valid": true
+    },
+    {
+      "document": "reports/academic-analysis.md",
+      "line": 27,
+      "target": "https://github.com/Vaquum/Limen/blob/29837e666604eee74a2ac94f328fb9803724342a/limen/experiment/_holdout_report.py#L146-L162",
+      "source_id": "limen",
+      "source_and_range_valid": true
+    },
+    {
+      "document": "reports/academic-analysis.md",
+      "line": 31,
+      "target": "https://github.com/microsoft/qlib/blob/54355232463878d2eebb91fe0ee5fa7fa1f5976c/qlib/contrib/model/gbdt.py#L34-L54",
+      "source_id": "qlib",
+      "source_and_range_valid": true
+    },
+    {
+      "document": "reports/academic-analysis.md",
+      "line": 31,
+      "target": "https://github.com/microsoft/qlib/blob/54355232463878d2eebb91fe0ee5fa7fa1f5976c/qlib/data/dataset/processor.py#L231-L258",
+      "source_id": "qlib",
+      "source_and_range_valid": true
+    },
+    {
+      "document": "reports/academic-analysis.md",
+      "line": 31,
+      "target": "https://github.com/microsoft/qlib/blob/54355232463878d2eebb91fe0ee5fa7fa1f5976c/qlib/data/dataset/handler.py#L529-L539",
+      "source_id": "qlib",
+      "source_and_range_valid": true
+    },
+    {
+      "document": "reports/academic-analysis.md",
+      "line": 33,
+      "target": "https://github.com/microsoft/qlib/blob/54355232463878d2eebb91fe0ee5fa7fa1f5976c/qlib/contrib/data/handler.py#L151-L152",
+      "source_id": "qlib",
+      "source_and_range_valid": true
+    },
+    {
+      "document": "reports/academic-analysis.md",
+      "line": 33,
+      "target": "https://github.com/microsoft/qlib/blob/54355232463878d2eebb91fe0ee5fa7fa1f5976c/qlib/data/dataset/__init__.py#L171-L183",
+      "source_id": "qlib",
+      "source_and_range_valid": true
+    },
+    {
+      "document": "reports/academic-analysis.md",
+      "line": 33,
+      "target": "https://github.com/microsoft/qlib/blob/54355232463878d2eebb91fe0ee5fa7fa1f5976c/examples/benchmarks/LightGBM/workflow_config_lightgbm_Alpha158.yaml#L49-L56",
+      "source_id": "qlib",
+      "source_and_range_valid": true
+    },
+    {
+      "document": "reports/academic-analysis.md",
+      "line": 33,
+      "target": "https://github.com/microsoft/qlib/blob/54355232463878d2eebb91fe0ee5fa7fa1f5976c/qlib/contrib/rolling/base.py#L194-L199",
+      "source_id": "qlib",
+      "source_and_range_valid": true
+    },
+    {
+      "document": "reports/academic-analysis.md",
+      "line": 35,
+      "target": "https://github.com/microsoft/qlib/blob/54355232463878d2eebb91fe0ee5fa7fa1f5976c/qlib/utils/paral.py#L84-L116",
+      "source_id": "qlib",
+      "source_and_range_valid": true
+    },
+    {
+      "document": "reports/academic-analysis.md",
+      "line": 35,
+      "target": "https://github.com/microsoft/qlib/blob/54355232463878d2eebb91fe0ee5fa7fa1f5976c/qlib/workflow/recorder.py#L390-L405",
+      "source_id": "qlib",
+      "source_and_range_valid": true
+    },
+    {
+      "document": "reports/academic-analysis.md",
+      "line": 35,
+      "target": "https://github.com/microsoft/qlib/blob/54355232463878d2eebb91fe0ee5fa7fa1f5976c/qlib/workflow/recorder.py#L490-L506",
+      "source_id": "qlib",
+      "source_and_range_valid": true
+    },
+    {
+      "document": "reports/academic-analysis.md",
+      "line": 35,
+      "target": "https://github.com/microsoft/qlib/blob/54355232463878d2eebb91fe0ee5fa7fa1f5976c/qlib/contrib/evaluate.py#L49-L90",
+      "source_id": "qlib",
+      "source_and_range_valid": true
+    },
+    {
+      "document": "reports/academic-analysis.md",
+      "line": 39,
+      "target": "https://github.com/freqtrade/freqtrade/blob/3ce38b587d6c7a1ea479fb3e59d724dee5195561/freqtrade/optimize/backtesting.py#L550-L566",
+      "source_id": "freqtrade",
+      "source_and_range_valid": true
+    },
+    {
+      "document": "reports/academic-analysis.md",
+      "line": 39,
+      "target": "https://github.com/freqtrade/freqtrade/blob/3ce38b587d6c7a1ea479fb3e59d724dee5195561/freqtrade/optimize/analysis/lookahead.py#L66-L95",
+      "source_id": "freqtrade",
+      "source_and_range_valid": true
+    },
+    {
+      "document": "reports/academic-analysis.md",
+      "line": 39,
+      "target": "https://github.com/freqtrade/freqtrade/blob/3ce38b587d6c7a1ea479fb3e59d724dee5195561/freqtrade/optimize/analysis/lookahead.py#L139-L169",
+      "source_id": "freqtrade",
+      "source_and_range_valid": true
+    },
+    {
+      "document": "reports/academic-analysis.md",
+      "line": 39,
+      "target": "https://github.com/freqtrade/freqtrade/blob/3ce38b587d6c7a1ea479fb3e59d724dee5195561/freqtrade/optimize/analysis/lookahead.py#L203-L251",
+      "source_id": "freqtrade",
+      "source_and_range_valid": true
+    },
+    {
+      "document": "reports/academic-analysis.md",
+      "line": 41,
+      "target": "https://github.com/freqtrade/freqtrade/blob/3ce38b587d6c7a1ea479fb3e59d724dee5195561/freqtrade/freqai/freqai_interface.py#L341-L359",
+      "source_id": "freqtrade",
+      "source_and_range_valid": true
+    },
+    {
+      "document": "reports/academic-analysis.md",
+      "line": 41,
+      "target": "https://github.com/freqtrade/freqtrade/blob/3ce38b587d6c7a1ea479fb3e59d724dee5195561/freqtrade/freqai/base_models/BaseRegressionModel.py#L53-L79",
+      "source_id": "freqtrade",
+      "source_and_range_valid": true
+    },
+    {
+      "document": "reports/academic-analysis.md",
+      "line": 41,
+      "target": "https://github.com/freqtrade/freqtrade/blob/3ce38b587d6c7a1ea479fb3e59d724dee5195561/freqtrade/freqai/data_kitchen.py#L134-L158",
+      "source_id": "freqtrade",
+      "source_and_range_valid": true
+    },
+    {
+      "document": "reports/academic-analysis.md",
+      "line": 41,
+      "target": "https://github.com/freqtrade/freqtrade/blob/3ce38b587d6c7a1ea479fb3e59d724dee5195561/freqtrade/freqai/freqai_interface.py#L347-L359",
+      "source_id": "freqtrade",
+      "source_and_range_valid": true
+    },
+    {
+      "document": "reports/academic-analysis.md",
+      "line": 41,
+      "target": "https://github.com/freqtrade/freqtrade/blob/3ce38b587d6c7a1ea479fb3e59d724dee5195561/freqtrade/freqai/data_kitchen.py#L248-L265",
+      "source_id": "freqtrade",
+      "source_and_range_valid": true
+    },
+    {
+      "document": "reports/academic-analysis.md",
+      "line": 41,
+      "target": "https://github.com/freqtrade/freqtrade/blob/3ce38b587d6c7a1ea479fb3e59d724dee5195561/freqtrade/freqai/data_kitchen.py#L145-L158",
+      "source_id": "freqtrade",
+      "source_and_range_valid": true
+    },
+    {
+      "document": "reports/academic-analysis.md",
+      "line": 43,
+      "target": "https://github.com/freqtrade/freqtrade/blob/3ce38b587d6c7a1ea479fb3e59d724dee5195561/freqtrade/optimize/hyperopt/hyperopt.py#L95-L119",
+      "source_id": "freqtrade",
+      "source_and_range_valid": true
+    },
+    {
+      "document": "reports/academic-analysis.md",
+      "line": 43,
+      "target": "https://github.com/freqtrade/freqtrade/blob/3ce38b587d6c7a1ea479fb3e59d724dee5195561/freqtrade/optimize/hyperopt/hyperopt.py#L192-L214",
+      "source_id": "freqtrade",
+      "source_and_range_valid": true
+    },
+    {
+      "document": "reports/academic-analysis.md",
+      "line": 43,
+      "target": "https://github.com/freqtrade/freqtrade/blob/3ce38b587d6c7a1ea479fb3e59d724dee5195561/freqtrade/optimize/hyperopt/hyperopt.py#L255-L275",
+      "source_id": "freqtrade",
+      "source_and_range_valid": true
+    },
+    {
+      "document": "reports/academic-analysis.md",
+      "line": 43,
+      "target": "https://github.com/freqtrade/freqtrade/blob/3ce38b587d6c7a1ea479fb3e59d724dee5195561/freqtrade/data/metrics.py#L654-L660",
+      "source_id": "freqtrade",
+      "source_and_range_valid": true
+    },
+    {
+      "document": "reports/academic-analysis.md",
+      "line": 43,
+      "target": "https://github.com/freqtrade/freqtrade/blob/3ce38b587d6c7a1ea479fb3e59d724dee5195561/freqtrade/optimize/hyperopt/hyperopt_optimizer.py#L362-L388",
+      "source_id": "freqtrade",
+      "source_and_range_valid": true
+    },
+    {
+      "document": "reports/academic-analysis.md",
+      "line": 47,
+      "target": "https://github.com/jesse-ai/jesse/blob/4fcbcdd500b9cd14ca9bdb142e4f46a34884a1ae/requirements.txt#L34-L34",
+      "source_id": "jesse",
+      "source_and_range_valid": true
+    },
+    {
+      "document": "reports/academic-analysis.md",
+      "line": 47,
+      "target": "https://github.com/jesse-ai/jesse-rust/blob/bab04ada5f652fc369de06141ff6ea84896130a6/Cargo.toml#L3-L3",
+      "source_id": "jesse_rust",
+      "source_and_range_valid": true
+    },
+    {
+      "document": "reports/academic-analysis.md",
+      "line": 47,
+      "target": "https://github.com/jesse-ai/jesse/blob/4fcbcdd500b9cd14ca9bdb142e4f46a34884a1ae/jesse/modes/backtest_mode.py#L987-L1014",
+      "source_id": "jesse",
+      "source_and_range_valid": true
+    },
+    {
+      "document": "reports/academic-analysis.md",
+      "line": 47,
+      "target": "https://github.com/jesse-ai/jesse-rust/blob/bab04ada5f652fc369de06141ff6ea84896130a6/src/moving_averages.rs#L108-L139",
+      "source_id": "jesse_rust",
+      "source_and_range_valid": true
+    },
+    {
+      "document": "reports/academic-analysis.md",
+      "line": 47,
+      "target": "https://github.com/jesse-ai/jesse-rust/blob/bab04ada5f652fc369de06141ff6ea84896130a6/src/moving_averages.rs#L350-L382",
+      "source_id": "jesse_rust",
+      "source_and_range_valid": true
+    },
+    {
+      "document": "reports/academic-analysis.md",
+      "line": 49,
+      "target": "https://github.com/jesse-ai/jesse/blob/4fcbcdd500b9cd14ca9bdb142e4f46a34884a1ae/jesse/modes/optimize_mode/fitness.py#L91-L116",
+      "source_id": "jesse",
+      "source_and_range_valid": true
+    },
+    {
+      "document": "reports/academic-analysis.md",
+      "line": 49,
+      "target": "https://github.com/jesse-ai/jesse/blob/4fcbcdd500b9cd14ca9bdb142e4f46a34884a1ae/jesse/modes/optimize_mode/Optimize.py#L440-L461",
+      "source_id": "jesse",
+      "source_and_range_valid": true
+    },
+    {
+      "document": "reports/academic-analysis.md",
+      "line": 49,
+      "target": "https://github.com/jesse-ai/jesse/blob/4fcbcdd500b9cd14ca9bdb142e4f46a34884a1ae/jesse/modes/optimize_mode/Optimize.py#L113-L117",
+      "source_id": "jesse",
+      "source_and_range_valid": true
+    },
+    {
+      "document": "reports/academic-analysis.md",
+      "line": 49,
+      "target": "https://github.com/jesse-ai/jesse/blob/4fcbcdd500b9cd14ca9bdb142e4f46a34884a1ae/jesse/modes/optimize_mode/Optimize.py#L151-L156",
+      "source_id": "jesse",
+      "source_and_range_valid": true
+    },
+    {
+      "document": "reports/academic-analysis.md",
+      "line": 49,
+      "target": "https://github.com/jesse-ai/jesse/blob/4fcbcdd500b9cd14ca9bdb142e4f46a34884a1ae/jesse/modes/optimize_mode/Optimize.py#L314-L329",
+      "source_id": "jesse",
+      "source_and_range_valid": true
+    },
+    {
+      "document": "reports/academic-analysis.md",
+      "line": 49,
+      "target": "https://github.com/jesse-ai/jesse/blob/4fcbcdd500b9cd14ca9bdb142e4f46a34884a1ae/jesse/modes/optimize_mode/fitness.py#L118-L131",
+      "source_id": "jesse",
+      "source_and_range_valid": true
+    },
+    {
+      "document": "reports/academic-analysis.md",
+      "line": 49,
+      "target": "https://github.com/jesse-ai/jesse/blob/4fcbcdd500b9cd14ca9bdb142e4f46a34884a1ae/jesse/research/optimize/__init__.py#L306-L327",
+      "source_id": "jesse",
+      "source_and_range_valid": true
+    },
+    {
+      "document": "reports/academic-analysis.md",
+      "line": 51,
+      "target": "https://github.com/jesse-ai/jesse/blob/4fcbcdd500b9cd14ca9bdb142e4f46a34884a1ae/jesse/research/rule_significance_testing/bootstrap.py#L29-L66",
+      "source_id": "jesse",
+      "source_and_range_valid": true
+    },
+    {
+      "document": "reports/academic-analysis.md",
+      "line": 51,
+      "target": "https://github.com/jesse-ai/jesse/blob/4fcbcdd500b9cd14ca9bdb142e4f46a34884a1ae/jesse/research/rule_significance_testing/rule_significance.py#L183-L224",
+      "source_id": "jesse",
+      "source_and_range_valid": true
+    },
+    {
+      "document": "reports/academic-analysis.md",
+      "line": 55,
+      "target": "https://github.com/polakowo/vectorbt/blob/0875d984fbd66f8305d172980e55ee30a45153e3/vectorbt/portfolio/nb.py#L2696-L2706",
+      "source_id": "vectorbt",
+      "source_and_range_valid": true
+    },
+    {
+      "document": "reports/academic-analysis.md",
+      "line": 55,
+      "target": "https://github.com/polakowo/vectorbt/blob/0875d984fbd66f8305d172980e55ee30a45153e3/vectorbt/portfolio/nb.py#L2943-L2973",
+      "source_id": "vectorbt",
+      "source_and_range_valid": true
+    },
+    {
+      "document": "reports/academic-analysis.md",
+      "line": 55,
+      "target": "https://github.com/polakowo/vectorbt/blob/0875d984fbd66f8305d172980e55ee30a45153e3/vectorbt/indicators/nb.py#L23-L28",
+      "source_id": "vectorbt",
+      "source_and_range_valid": true
+    },
+    {
+      "document": "reports/academic-analysis.md",
+      "line": 55,
+      "target": "https://github.com/polakowo/vectorbt/blob/0875d984fbd66f8305d172980e55ee30a45153e3/vectorbt/generic/splitters.py#L81-L103",
+      "source_id": "vectorbt",
+      "source_and_range_valid": true
+    },
+    {
+      "document": "reports/academic-analysis.md",
+      "line": 55,
+      "target": "https://github.com/polakowo/vectorbt/blob/0875d984fbd66f8305d172980e55ee30a45153e3/vectorbt/generic/splitters.py#L213-L239",
+      "source_id": "vectorbt",
+      "source_and_range_valid": true
+    },
+    {
+      "document": "reports/academic-analysis.md",
+      "line": 55,
+      "target": "https://github.com/polakowo/vectorbt/blob/0875d984fbd66f8305d172980e55ee30a45153e3/vectorbt/generic/splitters.py#L255-L275",
+      "source_id": "vectorbt",
+      "source_and_range_valid": true
+    },
+    {
+      "document": "reports/academic-analysis.md",
+      "line": 57,
+      "target": "https://github.com/polakowo/vectorbt/blob/0875d984fbd66f8305d172980e55ee30a45153e3/vectorbt/returns/metrics.py#L12-L38",
+      "source_id": "vectorbt",
+      "source_and_range_valid": true
+    },
+    {
+      "document": "reports/academic-analysis.md",
+      "line": 57,
+      "target": "https://github.com/polakowo/vectorbt/blob/0875d984fbd66f8305d172980e55ee30a45153e3/vectorbt/returns/accessors.py#L684-L696",
+      "source_id": "vectorbt",
+      "source_and_range_valid": true
+    },
+    {
+      "document": "reports/academic-analysis.md",
+      "line": 59,
+      "target": "https://github.com/polakowo/vectorbt/blob/0875d984fbd66f8305d172980e55ee30a45153e3/tests/test_returns.py#L435-L473",
+      "source_id": "vectorbt",
+      "source_and_range_valid": true
+    },
+    {
+      "document": "reports/academic-analysis.md",
+      "line": 59,
+      "target": "https://github.com/polakowo/vectorbt/blob/0875d984fbd66f8305d172980e55ee30a45153e3/tests/test_returns.py#L476-L490",
+      "source_id": "vectorbt",
+      "source_and_range_valid": true
+    },
+    {
+      "document": "reports/academic-analysis.md",
+      "line": 63,
+      "target": "https://github.com/kernc/backtesting.py/blob/ca2e2611621e472542ba90f7243a1fa06a7d7108/backtesting/backtesting.py#L1321-L1354",
+      "source_id": "backtesting_py",
+      "source_and_range_valid": true
+    },
+    {
+      "document": "reports/academic-analysis.md",
+      "line": 63,
+      "target": "https://github.com/kernc/backtesting.py/blob/ca2e2611621e472542ba90f7243a1fa06a7d7108/backtesting/lib.py#L471-L474",
+      "source_id": "backtesting_py",
+      "source_and_range_valid": true
+    },
+    {
+      "document": "reports/academic-analysis.md",
+      "line": 63,
+      "target": "https://github.com/kernc/backtesting.py/blob/ca2e2611621e472542ba90f7243a1fa06a7d7108/backtesting/lib.py#L492-L506",
+      "source_id": "backtesting_py",
+      "source_and_range_valid": true
+    },
+    {
+      "document": "reports/academic-analysis.md",
+      "line": 67,
+      "target": "https://github.com/kernc/backtesting.py/blob/ca2e2611621e472542ba90f7243a1fa06a7d7108/backtesting/_stats.py#L115-L155",
+      "source_id": "backtesting_py",
+      "source_and_range_valid": true
+    },
+    {
+      "document": "reports/academic-analysis.md",
+      "line": 67,
+      "target": "https://github.com/kernc/backtesting.py/blob/ca2e2611621e472542ba90f7243a1fa06a7d7108/backtesting/backtesting.py#L1355-L1379",
+      "source_id": "backtesting_py",
+      "source_and_range_valid": true
+    },
+    {
+      "document": "reports/academic-analysis.md",
+      "line": 67,
+      "target": "https://github.com/kernc/backtesting.py/blob/ca2e2611621e472542ba90f7243a1fa06a7d7108/backtesting/backtesting.py#L1514-L1523",
+      "source_id": "backtesting_py",
+      "source_and_range_valid": true
+    },
+    {
+      "document": "reports/academic-analysis.md",
+      "line": 67,
+      "target": "https://github.com/kernc/backtesting.py/blob/ca2e2611621e472542ba90f7243a1fa06a7d7108/backtesting/lib.py#L338-L372",
+      "source_id": "backtesting_py",
+      "source_and_range_valid": true
+    },
+    {
+      "document": "reports/academic-analysis.md",
+      "line": 71,
+      "target": "https://github.com/mementum/backtrader/blob/b853d7c90b6721476eb5a5ea3135224e33db1f14/backtrader/cerebro.py#L1538-L1559",
+      "source_id": "backtrader",
+      "source_and_range_valid": true
+    },
+    {
+      "document": "reports/academic-analysis.md",
+      "line": 71,
+      "target": "https://github.com/mementum/backtrader/blob/b853d7c90b6721476eb5a5ea3135224e33db1f14/backtrader/cerebro.py#L1620-L1635",
+      "source_id": "backtrader",
+      "source_and_range_valid": true
+    },
+    {
+      "document": "reports/academic-analysis.md",
+      "line": 71,
+      "target": "https://github.com/mementum/backtrader/blob/b853d7c90b6721476eb5a5ea3135224e33db1f14/backtrader/cerebro.py#L1656-L1700",
+      "source_id": "backtrader",
+      "source_and_range_valid": true
+    },
+    {
+      "document": "reports/academic-analysis.md",
+      "line": 71,
+      "target": "https://github.com/mementum/backtrader/blob/b853d7c90b6721476eb5a5ea3135224e33db1f14/backtrader/linebuffer.py#L162-L163",
+      "source_id": "backtrader",
+      "source_and_range_valid": true
+    },
+    {
+      "document": "reports/academic-analysis.md",
+      "line": 73,
+      "target": "https://github.com/mementum/backtrader/blob/b853d7c90b6721476eb5a5ea3135224e33db1f14/tests/test_ind_sma.py#L29-L46",
+      "source_id": "backtrader",
+      "source_and_range_valid": true
+    },
+    {
+      "document": "reports/academic-analysis.md",
+      "line": 73,
+      "target": "https://github.com/mementum/backtrader/blob/b853d7c90b6721476eb5a5ea3135224e33db1f14/tests/testcommon.py#L73-L111",
+      "source_id": "backtrader",
+      "source_and_range_valid": true
+    },
+    {
+      "document": "reports/academic-analysis.md",
+      "line": 73,
+      "target": "https://github.com/mementum/backtrader/blob/b853d7c90b6721476eb5a5ea3135224e33db1f14/tests/testcommon.py#L206-L223",
+      "source_id": "backtrader",
+      "source_and_range_valid": true
+    },
+    {
+      "document": "reports/academic-analysis.md",
+      "line": 73,
+      "target": "https://github.com/mementum/backtrader/blob/b853d7c90b6721476eb5a5ea3135224e33db1f14/tests/test_strategy_optimized.py#L125-L145",
+      "source_id": "backtrader",
+      "source_and_range_valid": true
+    },
+    {
+      "document": "reports/academic-analysis.md",
+      "line": 75,
+      "target": "https://github.com/mementum/backtrader/blob/b853d7c90b6721476eb5a5ea3135224e33db1f14/backtrader/analyzers/timereturn.py#L96-L141",
+      "source_id": "backtrader",
+      "source_and_range_valid": true
+    },
+    {
+      "document": "reports/academic-analysis.md",
+      "line": 75,
+      "target": "https://github.com/mementum/backtrader/blob/b853d7c90b6721476eb5a5ea3135224e33db1f14/backtrader/analyzers/sharpe.py#L112-L132",
+      "source_id": "backtrader",
+      "source_and_range_valid": true
+    },
+    {
+      "document": "reports/academic-analysis.md",
+      "line": 75,
+      "target": "https://github.com/mementum/backtrader/blob/b853d7c90b6721476eb5a5ea3135224e33db1f14/backtrader/analyzers/sharpe.py#L153-L202",
+      "source_id": "backtrader",
+      "source_and_range_valid": true
+    },
+    {
+      "document": "reports/academic-analysis.md",
+      "line": 79,
+      "target": "https://github.com/pmorissette/bt/blob/4b76bad2dbf3a49e99feb49db3eee1dde2ef8e12/bt/algos.py#L1231-L1244",
+      "source_id": "bt",
+      "source_and_range_valid": true
+    },
+    {
+      "document": "reports/academic-analysis.md",
+      "line": 79,
+      "target": "https://github.com/pmorissette/bt/blob/4b76bad2dbf3a49e99feb49db3eee1dde2ef8e12/bt/algos.py#L1318-L1330",
+      "source_id": "bt",
+      "source_and_range_valid": true
+    },
+    {
+      "document": "reports/academic-analysis.md",
+      "line": 79,
+      "target": "https://github.com/pmorissette/bt/blob/4b76bad2dbf3a49e99feb49db3eee1dde2ef8e12/bt/backtest.py#L235-L240",
+      "source_id": "bt",
+      "source_and_range_valid": true
+    },
+    {
+      "document": "reports/academic-analysis.md",
+      "line": 79,
+      "target": "https://github.com/pmorissette/bt/blob/4b76bad2dbf3a49e99feb49db3eee1dde2ef8e12/bt/backtest.py#L227-L240",
+      "source_id": "bt",
+      "source_and_range_valid": true
+    },
+    {
+      "document": "reports/academic-analysis.md",
+      "line": 79,
+      "target": "https://github.com/pmorissette/bt/blob/4b76bad2dbf3a49e99feb49db3eee1dde2ef8e12/bt/core.py#L552-L566",
+      "source_id": "bt",
+      "source_and_range_valid": true
+    },
+    {
+      "document": "reports/academic-analysis.md",
+      "line": 79,
+      "target": "https://github.com/pmorissette/bt/blob/4b76bad2dbf3a49e99feb49db3eee1dde2ef8e12/bt/algos.py#L1231-L1244",
+      "source_id": "bt",
+      "source_and_range_valid": true
+    },
+    {
+      "document": "reports/academic-analysis.md",
+      "line": 79,
+      "target": "https://github.com/pmorissette/bt/blob/4b76bad2dbf3a49e99feb49db3eee1dde2ef8e12/bt/algos.py#L1318-L1330",
+      "source_id": "bt",
+      "source_and_range_valid": true
+    },
+    {
+      "document": "reports/academic-analysis.md",
+      "line": 79,
+      "target": "https://github.com/pmorissette/bt/blob/4b76bad2dbf3a49e99feb49db3eee1dde2ef8e12/tests/test_backtest.py#L50-L60",
+      "source_id": "bt",
+      "source_and_range_valid": true
+    },
+    {
+      "document": "reports/academic-analysis.md",
+      "line": 81,
+      "target": "https://github.com/pmorissette/bt/blob/4b76bad2dbf3a49e99feb49db3eee1dde2ef8e12/tests/test_backtest.py#L38-L60",
+      "source_id": "bt",
+      "source_and_range_valid": true
+    },
+    {
+      "document": "reports/academic-analysis.md",
+      "line": 81,
+      "target": "https://github.com/pmorissette/bt/blob/4b76bad2dbf3a49e99feb49db3eee1dde2ef8e12/tests/test_backtest.py#L671-L707",
+      "source_id": "bt",
+      "source_and_range_valid": true
+    },
+    {
+      "document": "reports/academic-analysis.md",
+      "line": 81,
+      "target": "https://github.com/pmorissette/bt/blob/4b76bad2dbf3a49e99feb49db3eee1dde2ef8e12/bt/backtest.py#L90-L113",
+      "source_id": "bt",
+      "source_and_range_valid": true
+    },
+    {
+      "document": "reports/academic-analysis.md",
+      "line": 81,
+      "target": "https://github.com/pmorissette/bt/blob/4b76bad2dbf3a49e99feb49db3eee1dde2ef8e12/bt/backtest.py#L797-L802",
+      "source_id": "bt",
+      "source_and_range_valid": true
+    },
+    {
+      "document": "reports/academic-analysis.md",
+      "line": 81,
+      "target": "https://github.com/pmorissette/bt/blob/4b76bad2dbf3a49e99feb49db3eee1dde2ef8e12/tests/test_backtest.py#L671-L707",
+      "source_id": "bt",
+      "source_and_range_valid": true
+    },
+    {
+      "document": "reports/academic-analysis.md",
+      "line": 83,
+      "target": "https://github.com/pmorissette/bt/blob/4b76bad2dbf3a49e99feb49db3eee1dde2ef8e12/bt/backtest.py#L417-L423",
+      "source_id": "bt",
+      "source_and_range_valid": true
+    },
+    {
+      "document": "reports/academic-analysis.md",
+      "line": 83,
+      "target": "https://github.com/pmorissette/bt/blob/4b76bad2dbf3a49e99feb49db3eee1dde2ef8e12/bt/backtest.py#L486-L509",
+      "source_id": "bt",
+      "source_and_range_valid": true
+    },
+    {
+      "document": "reports/academic-analysis.md",
+      "line": 83,
+      "target": "https://github.com/pmorissette/bt/blob/4b76bad2dbf3a49e99feb49db3eee1dde2ef8e12/bt/backtest.py#L637-L641",
+      "source_id": "bt",
+      "source_and_range_valid": true
+    },
+    {
+      "document": "reports/academic-analysis.md",
+      "line": 83,
+      "target": "https://github.com/pmorissette/bt/blob/4b76bad2dbf3a49e99feb49db3eee1dde2ef8e12/pyproject.toml#L38-L38",
+      "source_id": "bt",
+      "source_and_range_valid": true
+    },
+    {
+      "document": "reports/academic-analysis.md",
+      "line": 87,
+      "target": "https://github.com/mhallsmoore/qstrader/blob/4c59e1584e83fcc2be644b820f827c0dd1b45c02/qstrader/data/daily_bar_csv.py#L217-L248",
+      "source_id": "qstrader",
+      "source_and_range_valid": true
+    },
+    {
+      "document": "reports/academic-analysis.md",
+      "line": 89,
+      "target": "https://github.com/mhallsmoore/qstrader/blob/4c59e1584e83fcc2be644b820f827c0dd1b45c02/qstrader/statistics/performance.py#L40-L65",
+      "source_id": "qstrader",
+      "source_and_range_valid": true
+    },
+    {
+      "document": "reports/academic-analysis.md",
+      "line": 89,
+      "target": "https://github.com/mhallsmoore/qstrader/blob/4c59e1584e83fcc2be644b820f827c0dd1b45c02/qstrader/statistics/performance.py#L82-L98",
+      "source_id": "qstrader",
+      "source_and_range_valid": true
+    },
+    {
+      "document": "reports/academic-analysis.md",
+      "line": 91,
+      "target": "https://github.com/mhallsmoore/qstrader/blob/4c59e1584e83fcc2be644b820f827c0dd1b45c02/qstrader/trading/backtest.py#L343-L347",
+      "source_id": "qstrader",
+      "source_and_range_valid": true
+    },
+    {
+      "document": "reports/academic-analysis.md",
+      "line": 91,
+      "target": "https://github.com/mhallsmoore/qstrader/blob/4c59e1584e83fcc2be644b820f827c0dd1b45c02/qstrader/trading/backtest.py#L420-L425",
+      "source_id": "qstrader",
+      "source_and_range_valid": true
+    },
+    {
+      "document": "reports/academic-analysis.md",
+      "line": 91,
+      "target": "https://github.com/mhallsmoore/qstrader/blob/4c59e1584e83fcc2be644b820f827c0dd1b45c02/qstrader/statistics/json_statistics.py#L79-L88",
+      "source_id": "qstrader",
+      "source_and_range_valid": true
+    },
+    {
+      "document": "reports/academic-analysis.md",
+      "line": 91,
+      "target": "https://github.com/mhallsmoore/qstrader/blob/4c59e1584e83fcc2be644b820f827c0dd1b45c02/qstrader/statistics/json_statistics.py#L389-L391",
+      "source_id": "qstrader",
+      "source_and_range_valid": true
+    },
+    {
+      "document": "reports/academic-analysis.md",
+      "line": 95,
+      "target": "https://github.com/nkaz001/hftbacktest/blob/5f3ec40b2afb764e0fea112f941ed85523ef4e88/hftbacktest/src/backtest/mod.rs#L755-L855",
+      "source_id": "hftbacktest",
+      "source_and_range_valid": true
+    },
+    {
+      "document": "reports/academic-analysis.md",
+      "line": 95,
+      "target": "https://github.com/nkaz001/hftbacktest/blob/5f3ec40b2afb764e0fea112f941ed85523ef4e88/hftbacktest/src/backtest/mod.rs#L1098-L1118",
+      "source_id": "hftbacktest",
+      "source_and_range_valid": true
+    },
+    {
+      "document": "reports/academic-analysis.md",
+      "line": 95,
+      "target": "https://github.com/nkaz001/hftbacktest/blob/5f3ec40b2afb764e0fea112f941ed85523ef4e88/hftbacktest/src/backtest/models/queue.rs#L124-L155",
+      "source_id": "hftbacktest",
+      "source_and_range_valid": true
+    },
+    {
+      "document": "reports/academic-analysis.md",
+      "line": 95,
+      "target": "https://github.com/nkaz001/hftbacktest/blob/5f3ec40b2afb764e0fea112f941ed85523ef4e88/hftbacktest/src/backtest/models/latency.rs#L39-L54",
+      "source_id": "hftbacktest",
+      "source_and_range_valid": true
+    },
+    {
+      "document": "reports/academic-analysis.md",
+      "line": 97,
+      "target": "https://github.com/nkaz001/hftbacktest/blob/5f3ec40b2afb764e0fea112f941ed85523ef4e88/hftbacktest/src/backtest/recorder.rs#L45-L60",
+      "source_id": "hftbacktest",
+      "source_and_range_valid": true
+    },
+    {
+      "document": "reports/academic-analysis.md",
+      "line": 97,
+      "target": "https://github.com/nkaz001/hftbacktest/blob/5f3ec40b2afb764e0fea112f941ed85523ef4e88/py-hftbacktest/hftbacktest/stats/metrics.py#L91-L130",
+      "source_id": "hftbacktest",
+      "source_and_range_valid": true
+    },
+    {
+      "document": "reports/academic-analysis.md",
+      "line": 97,
+      "target": "https://github.com/nkaz001/hftbacktest/blob/5f3ec40b2afb764e0fea112f941ed85523ef4e88/py-hftbacktest/hftbacktest/stats/utils.py#L9-L18",
+      "source_id": "hftbacktest",
+      "source_and_range_valid": true
+    },
+    {
+      "document": "reports/academic-analysis.md",
+      "line": 99,
+      "target": "https://github.com/nkaz001/hftbacktest/blob/5f3ec40b2afb764e0fea112f941ed85523ef4e88/hftbacktest/src/backtest/mod.rs#L1212-L1237",
+      "source_id": "hftbacktest",
+      "source_and_range_valid": true
+    },
+    {
+      "document": "reports/academic-analysis.md",
+      "line": 99,
+      "target": "https://github.com/nkaz001/hftbacktest/blob/5f3ec40b2afb764e0fea112f941ed85523ef4e88/hftbacktest/src/backtest/models/queue.rs#L1207-L1216",
+      "source_id": "hftbacktest",
+      "source_and_range_valid": true
+    },
+    {
+      "document": "reports/academic-analysis.md",
+      "line": 103,
+      "target": "https://github.com/nautechsystems/nautilus_trader/blob/42c3ca5f8f8d537f69772277e77792bb5b307ea5/crates/backtest/src/engine.rs#L420-L434",
+      "source_id": "nautilus",
+      "source_and_range_valid": true
+    },
+    {
+      "document": "reports/academic-analysis.md",
+      "line": 103,
+      "target": "https://github.com/nautechsystems/nautilus_trader/blob/42c3ca5f8f8d537f69772277e77792bb5b307ea5/crates/backtest/src/engine.rs#L760-L765",
+      "source_id": "nautilus",
+      "source_and_range_valid": true
+    },
+    {
+      "document": "reports/academic-analysis.md",
+      "line": 103,
+      "target": "https://github.com/nautechsystems/nautilus_trader/blob/42c3ca5f8f8d537f69772277e77792bb5b307ea5/crates/backtest/src/engine.rs#L907-L952",
+      "source_id": "nautilus",
+      "source_and_range_valid": true
+    },
+    {
+      "document": "reports/academic-analysis.md",
+      "line": 105,
+      "target": "https://github.com/nautechsystems/nautilus_trader/blob/42c3ca5f8f8d537f69772277e77792bb5b307ea5/crates/backtest/src/result.rs#L94-L114",
+      "source_id": "nautilus",
+      "source_and_range_valid": true
+    },
+    {
+      "document": "reports/academic-analysis.md",
+      "line": 105,
+      "target": "https://github.com/nautechsystems/nautilus_trader/blob/42c3ca5f8f8d537f69772277e77792bb5b307ea5/crates/backtest/src/result.rs#L188-L222",
+      "source_id": "nautilus",
+      "source_and_range_valid": true
+    },
+    {
+      "document": "reports/academic-analysis.md",
+      "line": 105,
+      "target": "https://github.com/nautechsystems/nautilus_trader/blob/42c3ca5f8f8d537f69772277e77792bb5b307ea5/crates/backtest/src/result.rs#L1393-L1427",
+      "source_id": "nautilus",
+      "source_and_range_valid": true
+    },
+    {
+      "document": "reports/academic-analysis.md",
+      "line": 107,
+      "target": "https://github.com/nautechsystems/nautilus_trader/blob/42c3ca5f8f8d537f69772277e77792bb5b307ea5/crates/analysis/src/statistics/sharpe_ratio.rs#L73-L88",
+      "source_id": "nautilus",
+      "source_and_range_valid": true
+    },
+    {
+      "document": "reports/academic-analysis.md",
+      "line": 107,
+      "target": "https://github.com/nautechsystems/nautilus_trader/blob/42c3ca5f8f8d537f69772277e77792bb5b307ea5/crates/analysis/src/statistic.rs#L122-L148",
+      "source_id": "nautilus",
+      "source_and_range_valid": true
+    },
+    {
+      "document": "reports/academic-analysis.md",
+      "line": 107,
+      "target": "https://github.com/nautechsystems/nautilus_trader/blob/42c3ca5f8f8d537f69772277e77792bb5b307ea5/crates/analysis/src/analyzer.rs#L514-L547",
+      "source_id": "nautilus",
+      "source_and_range_valid": true
+    },
+    {
+      "document": "reports/academic-analysis.md",
+      "line": 107,
+      "target": "https://github.com/nautechsystems/nautilus_trader/blob/42c3ca5f8f8d537f69772277e77792bb5b307ea5/crates/analysis/src/analyzer.rs#L870-L876",
+      "source_id": "nautilus",
+      "source_and_range_valid": true
+    },
+    {
+      "document": "reports/academic-analysis.md",
+      "line": 111,
+      "target": "https://github.com/QuantConnect/Lean/blob/d4cac37514427c84d40064cecbf3f0e6be4b0137/Engine/AlgorithmManager.cs#L242-L256",
+      "source_id": "lean",
+      "source_and_range_valid": true
+    },
+    {
+      "document": "reports/academic-analysis.md",
+      "line": 111,
+      "target": "https://github.com/QuantConnect/Lean/blob/d4cac37514427c84d40064cecbf3f0e6be4b0137/Algorithm/QCAlgorithm.History.cs#L1045-L1061",
+      "source_id": "lean",
+      "source_and_range_valid": true
+    },
+    {
+      "document": "reports/academic-analysis.md",
+      "line": 111,
+      "target": "https://github.com/QuantConnect/Lean/blob/d4cac37514427c84d40064cecbf3f0e6be4b0137/Algorithm.Framework/Portfolio/ReturnsSymbolData.cs#L43-L48",
+      "source_id": "lean",
+      "source_and_range_valid": true
+    },
+    {
+      "document": "reports/academic-analysis.md",
+      "line": 111,
+      "target": "https://github.com/QuantConnect/Lean/blob/d4cac37514427c84d40064cecbf3f0e6be4b0137/Algorithm.Framework/Portfolio/ReturnsSymbolData.cs#L94-L110",
+      "source_id": "lean",
+      "source_and_range_valid": true
+    },
+    {
+      "document": "reports/academic-analysis.md",
+      "line": 113,
+      "target": "https://github.com/QuantConnect/Lean/blob/d4cac37514427c84d40064cecbf3f0e6be4b0137/Algorithm.Framework/Portfolio/MaximumSharpeRatioPortfolioOptimizer.cs#L89-L137",
+      "source_id": "lean",
+      "source_and_range_valid": true
+    },
+    {
+      "document": "reports/academic-analysis.md",
+      "line": 113,
+      "target": "https://github.com/QuantConnect/Lean/blob/d4cac37514427c84d40064cecbf3f0e6be4b0137/Algorithm/QCAlgorithm.cs#L3246-L3261",
+      "source_id": "lean",
+      "source_and_range_valid": true
+    },
+    {
+      "document": "reports/academic-analysis.md",
+      "line": 115,
+      "target": "https://github.com/QuantConnect/Lean/blob/d4cac37514427c84d40064cecbf3f0e6be4b0137/Common/Statistics/Statistics.cs#L200-L236",
+      "source_id": "lean",
+      "source_and_range_valid": true
+    },
+    {
+      "document": "reports/academic-analysis.md",
+      "line": 115,
+      "target": "https://github.com/QuantConnect/Lean/blob/d4cac37514427c84d40064cecbf3f0e6be4b0137/Common/Statistics/PortfolioStatistics.cs#L310-L312",
+      "source_id": "lean",
+      "source_and_range_valid": true
+    },
+    {
+      "document": "reports/academic-analysis.md",
+      "line": 115,
+      "target": "https://github.com/QuantConnect/Lean/blob/d4cac37514427c84d40064cecbf3f0e6be4b0137/Optimizer/Strategies/StepBaseOptimizationStrategy.cs#L162-L168",
+      "source_id": "lean",
+      "source_and_range_valid": true
+    },
+    {
+      "document": "reports/academic-analysis.md",
+      "line": 115,
+      "target": "https://github.com/QuantConnect/Lean/blob/d4cac37514427c84d40064cecbf3f0e6be4b0137/Optimizer/Analysis/OptimizationAnalyzer.cs#L35-L80",
+      "source_id": "lean",
+      "source_and_range_valid": true
+    },
+    {
+      "document": "reports/academic-analysis.md",
+      "line": 119,
+      "target": "https://github.com/stefan-jansen/zipline-reloaded/blob/cf649ac06fddce76f6caa2403cd8494ac84f72ad/src/zipline/pipeline/loaders/equity_pricing_loader.py#L79-L115",
+      "source_id": "zipline",
+      "source_and_range_valid": true
+    },
+    {
+      "document": "reports/academic-analysis.md",
+      "line": 119,
+      "target": "https://github.com/stefan-jansen/zipline-reloaded/blob/cf649ac06fddce76f6caa2403cd8494ac84f72ad/src/zipline/pipeline/loaders/utils.py#L57-L78",
+      "source_id": "zipline",
+      "source_and_range_valid": true
+    },
+    {
+      "document": "reports/academic-analysis.md",
+      "line": 119,
+      "target": "https://github.com/stefan-jansen/zipline-reloaded/blob/cf649ac06fddce76f6caa2403cd8494ac84f72ad/src/zipline/pipeline/loaders/utils.py#L115-L140",
+      "source_id": "zipline",
+      "source_and_range_valid": true
+    },
+    {
+      "document": "reports/academic-analysis.md",
+      "line": 119,
+      "target": "https://github.com/stefan-jansen/zipline-reloaded/blob/cf649ac06fddce76f6caa2403cd8494ac84f72ad/src/zipline/gens/tradesimulation.py#L115-L141",
+      "source_id": "zipline",
+      "source_and_range_valid": true
+    },
+    {
+      "document": "reports/academic-analysis.md",
+      "line": 121,
+      "target": "https://github.com/stefan-jansen/zipline-reloaded/blob/cf649ac06fddce76f6caa2403cd8494ac84f72ad/src/zipline/pipeline/factors/statistical.py#L177-L188",
+      "source_id": "zipline",
+      "source_and_range_valid": true
+    },
+    {
+      "document": "reports/academic-analysis.md",
+      "line": 121,
+      "target": "https://github.com/stefan-jansen/zipline-reloaded/blob/cf649ac06fddce76f6caa2403cd8494ac84f72ad/src/zipline/pipeline/engine.py#L314-L332",
+      "source_id": "zipline",
+      "source_and_range_valid": true
+    },
+    {
+      "document": "reports/academic-analysis.md",
+      "line": 121,
+      "target": "https://github.com/stefan-jansen/zipline-reloaded/blob/cf649ac06fddce76f6caa2403cd8494ac84f72ad/src/zipline/pipeline/factors/statistical.py#L175-L205",
+      "source_id": "zipline",
+      "source_and_range_valid": true
+    },
+    {
+      "document": "reports/academic-analysis.md",
+      "line": 121,
+      "target": "https://github.com/stefan-jansen/zipline-reloaded/blob/cf649ac06fddce76f6caa2403cd8494ac84f72ad/src/zipline/finance/metrics/__init__.py#L85-L87",
+      "source_id": "zipline",
+      "source_and_range_valid": true
+    },
+    {
+      "document": "reports/academic-analysis.md",
+      "line": 123,
+      "target": "https://github.com/stefan-jansen/zipline-reloaded/blob/cf649ac06fddce76f6caa2403cd8494ac84f72ad/src/zipline/utils/run_algo.py#L93-L97",
+      "source_id": "zipline",
+      "source_and_range_valid": true
+    },
+    {
+      "document": "reports/academic-analysis.md",
+      "line": 123,
+      "target": "https://github.com/stefan-jansen/zipline-reloaded/blob/cf649ac06fddce76f6caa2403cd8494ac84f72ad/src/zipline/data/bundles/core.py#L510-L524",
+      "source_id": "zipline",
+      "source_and_range_valid": true
+    },
+    {
+      "document": "reports/academic-analysis.md",
+      "line": 123,
+      "target": "https://github.com/stefan-jansen/zipline-reloaded/blob/cf649ac06fddce76f6caa2403cd8494ac84f72ad/src/zipline/data/bundles/core.py#L557-L559",
+      "source_id": "zipline",
+      "source_and_range_valid": true
+    },
+    {
+      "document": "reports/academic-analysis.md",
+      "line": 123,
+      "target": "https://github.com/stefan-jansen/zipline-reloaded/blob/cf649ac06fddce76f6caa2403cd8494ac84f72ad/src/zipline/utils/run_algo.py#L244-L247",
+      "source_id": "zipline",
+      "source_and_range_valid": true
+    },
+    {
+      "document": "reports/academic-analysis.md",
+      "line": 123,
+      "target": "https://github.com/stefan-jansen/zipline-reloaded/blob/cf649ac06fddce76f6caa2403cd8494ac84f72ad/src/zipline/finance/metrics/metric.py#L299-L310",
+      "source_id": "zipline",
+      "source_and_range_valid": true
+    },
+    {
+      "document": "reports/academic-analysis.md",
+      "line": 123,
+      "target": "https://github.com/stefan-jansen/zipline-reloaded/blob/cf649ac06fddce76f6caa2403cd8494ac84f72ad/src/zipline/finance/metrics/__init__.py#L85-L87",
+      "source_id": "zipline",
+      "source_and_range_valid": true
+    },
+    {
+      "document": "reports/academic-analysis.md",
+      "line": 123,
+      "target": "https://github.com/stefan-jansen/zipline-reloaded/blob/cf649ac06fddce76f6caa2403cd8494ac84f72ad/src/zipline/finance/metrics/metric.py#L474-L506",
+      "source_id": "zipline",
+      "source_and_range_valid": true
+    },
+    {
+      "document": "reports/academic-analysis.md",
+      "line": 123,
+      "target": "https://github.com/stefan-jansen/zipline-reloaded/blob/cf649ac06fddce76f6caa2403cd8494ac84f72ad/pyproject.toml#L48-L48",
+      "source_id": "zipline",
+      "source_and_range_valid": true
+    },
+    {
+      "document": "reports/safety-analysis.md",
+      "line": 13,
+      "target": "https://github.com/nkaz001/hftbacktest/blob/5f3ec40b2afb764e0fea112f941ed85523ef4e88/hftbacktest/src/backtest/state.rs#L22-L55",
+      "source_id": "hftbacktest",
+      "source_and_range_valid": true
+    },
+    {
+      "document": "reports/safety-analysis.md",
+      "line": 17,
+      "target": "https://github.com/Vaquum/Limen/blob/29837e666604eee74a2ac94f328fb9803724342a/limen/yaml/resolver.py#L39-L55",
+      "source_id": "limen",
+      "source_and_range_valid": true
+    },
+    {
+      "document": "reports/safety-analysis.md",
+      "line": 17,
+      "target": "https://github.com/Vaquum/Limen/blob/29837e666604eee74a2ac94f328fb9803724342a/limen/yaml/compiler.py#L104-L119",
+      "source_id": "limen",
+      "source_and_range_valid": true
+    },
+    {
+      "document": "reports/safety-analysis.md",
+      "line": 17,
+      "target": "https://github.com/Vaquum/Limen/blob/29837e666604eee74a2ac94f328fb9803724342a/limen/features/fractional_diff.py#L30-L40",
+      "source_id": "limen",
+      "source_and_range_valid": true
+    },
+    {
+      "document": "reports/safety-analysis.md",
+      "line": 17,
+      "target": "https://github.com/Vaquum/Limen/blob/29837e666604eee74a2ac94f328fb9803724342a/limen/features/fractional_diff.py#L74-L97",
+      "source_id": "limen",
+      "source_and_range_valid": true
+    },
+    {
+      "document": "reports/safety-analysis.md",
+      "line": 19,
+      "target": "https://github.com/QuantConnect/Lean/blob/d4cac37514427c84d40064cecbf3f0e6be4b0137/Compression/Compression.cs#L539-L564",
+      "source_id": "lean",
+      "source_and_range_valid": true
+    },
+    {
+      "document": "reports/safety-analysis.md",
+      "line": 19,
+      "target": "https://github.com/QuantConnect/Lean/blob/d4cac37514427c84d40064cecbf3f0e6be4b0137/Engine/Storage/LocalObjectStore.cs#L319-L340",
+      "source_id": "lean",
+      "source_and_range_valid": true
+    },
+    {
+      "document": "reports/safety-analysis.md",
+      "line": 21,
+      "target": "https://github.com/mhallsmoore/qstrader/blob/4c59e1584e83fcc2be644b820f827c0dd1b45c02/qstrader/data/daily_bar_csv.py#L217-L247",
+      "source_id": "qstrader",
+      "source_and_range_valid": true
+    },
+    {
+      "document": "reports/safety-analysis.md",
+      "line": 21,
+      "target": "https://github.com/mhallsmoore/qstrader/blob/4c59e1584e83fcc2be644b820f827c0dd1b45c02/qstrader/broker/simulated_broker.py#L586-L603",
+      "source_id": "qstrader",
+      "source_and_range_valid": true
+    },
+    {
+      "document": "reports/safety-analysis.md",
+      "line": 21,
+      "target": "https://github.com/mhallsmoore/qstrader/blob/4c59e1584e83fcc2be644b820f827c0dd1b45c02/qstrader/broker/portfolio/portfolio.py#L216-L232",
+      "source_id": "qstrader",
+      "source_and_range_valid": true
+    },
+    {
+      "document": "reports/safety-analysis.md",
+      "line": 23,
+      "target": "https://github.com/microsoft/qlib/blob/54355232463878d2eebb91fe0ee5fa7fa1f5976c/qlib/utils/paral.py#L84-L116",
+      "source_id": "qlib",
+      "source_and_range_valid": true
+    },
+    {
+      "document": "reports/safety-analysis.md",
+      "line": 23,
+      "target": "https://github.com/microsoft/qlib/blob/54355232463878d2eebb91fe0ee5fa7fa1f5976c/qlib/workflow/recorder.py#L360-L405",
+      "source_id": "qlib",
+      "source_and_range_valid": true
+    },
+    {
+      "document": "reports/safety-analysis.md",
+      "line": 25,
+      "target": "https://github.com/nkaz001/hftbacktest/blob/5f3ec40b2afb764e0fea112f941ed85523ef4e88/hftbacktest/src/backtest/data/npy/mod.rs#L235-L261",
+      "source_id": "hftbacktest",
+      "source_and_range_valid": true
+    },
+    {
+      "document": "reports/safety-analysis.md",
+      "line": 25,
+      "target": "https://github.com/nkaz001/hftbacktest/blob/5f3ec40b2afb764e0fea112f941ed85523ef4e88/hftbacktest/src/backtest/data/reader.rs#L319-L375",
+      "source_id": "hftbacktest",
+      "source_and_range_valid": true
+    },
+    {
+      "document": "reports/safety-analysis.md",
+      "line": 25,
+      "target": "https://github.com/nkaz001/hftbacktest/blob/5f3ec40b2afb764e0fea112f941ed85523ef4e88/hftbacktest/src/backtest/data/reader.rs#L386-L438",
+      "source_id": "hftbacktest",
+      "source_and_range_valid": true
+    },
+    {
+      "document": "reports/safety-analysis.md",
+      "line": 27,
+      "target": "https://github.com/kernc/backtesting.py/blob/ca2e2611621e472542ba90f7243a1fa06a7d7108/backtesting/backtesting.py#L1321-L1355",
+      "source_id": "backtesting_py",
+      "source_and_range_valid": true
+    },
+    {
+      "document": "reports/safety-analysis.md",
+      "line": 27,
+      "target": "https://github.com/kernc/backtesting.py/blob/ca2e2611621e472542ba90f7243a1fa06a7d7108/backtesting/lib.py#L471-L506",
+      "source_id": "backtesting_py",
+      "source_and_range_valid": true
+    },
+    {
+      "document": "reports/safety-analysis.md",
+      "line": 31,
+      "target": "https://github.com/Vaquum/Limen/blob/29837e666604eee74a2ac94f328fb9803724342a/limen/experiment/_round_storage.py#L28-L45",
+      "source_id": "limen",
+      "source_and_range_valid": true
+    },
+    {
+      "document": "reports/safety-analysis.md",
+      "line": 31,
+      "target": "https://github.com/Vaquum/Limen/blob/29837e666604eee74a2ac94f328fb9803724342a/limen/yaml/store.py#L175-L186",
+      "source_id": "limen",
+      "source_and_range_valid": true
+    },
+    {
+      "document": "reports/safety-analysis.md",
+      "line": 31,
+      "target": "https://github.com/Vaquum/Limen/blob/29837e666604eee74a2ac94f328fb9803724342a/limen/experiment/_family_evidence.py#L65-L88",
+      "source_id": "limen",
+      "source_and_range_valid": true
+    },
+    {
+      "document": "reports/safety-analysis.md",
+      "line": 31,
+      "target": "https://github.com/Vaquum/Limen/blob/29837e666604eee74a2ac94f328fb9803724342a/limen/backtest/_snapshot_execution.py#L45-L123",
+      "source_id": "limen",
+      "source_and_range_valid": true
+    },
+    {
+      "document": "reports/safety-analysis.md",
+      "line": 31,
+      "target": "https://github.com/Vaquum/Limen/blob/29837e666604eee74a2ac94f328fb9803724342a/limen/backtest/trade_contract.py#L107-L126",
+      "source_id": "limen",
+      "source_and_range_valid": true
+    },
+    {
+      "document": "reports/safety-analysis.md",
+      "line": 33,
+      "target": "https://github.com/nautechsystems/nautilus_trader/blob/42c3ca5f8f8d537f69772277e77792bb5b307ea5/crates/event_store/src/backend/redb.rs#L546-L607",
+      "source_id": "nautilus",
+      "source_and_range_valid": true
+    },
+    {
+      "document": "reports/safety-analysis.md",
+      "line": 33,
+      "target": "https://github.com/nautechsystems/nautilus_trader/blob/42c3ca5f8f8d537f69772277e77792bb5b307ea5/crates/event_store/src/backend/redb.rs#L827-L831",
+      "source_id": "nautilus",
+      "source_and_range_valid": true
+    },
+    {
+      "document": "reports/safety-analysis.md",
+      "line": 33,
+      "target": "https://github.com/nautechsystems/nautilus_trader/blob/42c3ca5f8f8d537f69772277e77792bb5b307ea5/crates/live/src/node/mod.rs#L529-L545",
+      "source_id": "nautilus",
+      "source_and_range_valid": true
+    },
+    {
+      "document": "reports/safety-analysis.md",
+      "line": 33,
+      "target": "https://github.com/nautechsystems/nautilus_trader/blob/42c3ca5f8f8d537f69772277e77792bb5b307ea5/crates/event_store/src/backend/redb.rs#L681-L708",
+      "source_id": "nautilus",
+      "source_and_range_valid": true
+    },
+    {
+      "document": "reports/safety-analysis.md",
+      "line": 33,
+      "target": "https://github.com/nautechsystems/nautilus_trader/blob/42c3ca5f8f8d537f69772277e77792bb5b307ea5/crates/live/src/node/config.rs#L809-L825",
+      "source_id": "nautilus",
+      "source_and_range_valid": true
+    },
+    {
+      "document": "reports/safety-analysis.md",
+      "line": 35,
+      "target": "https://github.com/kernc/backtesting.py/blob/ca2e2611621e472542ba90f7243a1fa06a7d7108/backtesting/backtesting.py#L956-L980",
+      "source_id": "backtesting_py",
+      "source_and_range_valid": true
+    },
+    {
+      "document": "reports/safety-analysis.md",
+      "line": 35,
+      "target": "https://github.com/mementum/backtrader/blob/b853d7c90b6721476eb5a5ea3135224e33db1f14/backtrader/brokers/bbroker.py#L558-L583",
+      "source_id": "backtrader",
+      "source_and_range_valid": true
+    },
+    {
+      "document": "reports/safety-analysis.md",
+      "line": 35,
+      "target": "https://github.com/QuantConnect/Lean/blob/d4cac37514427c84d40064cecbf3f0e6be4b0137/Engine/TransactionHandlers/BrokerageTransactionHandler.cs#L1216-L1260",
+      "source_id": "lean",
+      "source_and_range_valid": true
+    },
+    {
+      "document": "reports/safety-analysis.md",
+      "line": 35,
+      "target": "https://github.com/QuantConnect/Lean/blob/d4cac37514427c84d40064cecbf3f0e6be4b0137/Common/Securities/NullBuyingPowerModel.cs#L28-L40",
+      "source_id": "lean",
+      "source_and_range_valid": true
+    },
+    {
+      "document": "reports/safety-analysis.md",
+      "line": 35,
+      "target": "https://github.com/nautechsystems/nautilus_trader/blob/42c3ca5f8f8d537f69772277e77792bb5b307ea5/crates/risk/src/engine/mod.rs#L587-L664",
+      "source_id": "nautilus",
+      "source_and_range_valid": true
+    },
+    {
+      "document": "reports/safety-analysis.md",
+      "line": 35,
+      "target": "https://github.com/freqtrade/freqtrade/blob/3ce38b587d6c7a1ea479fb3e59d724dee5195561/freqtrade/wallets.py#L414-L457",
+      "source_id": "freqtrade",
+      "source_and_range_valid": true
+    },
+    {
+      "document": "reports/safety-analysis.md",
+      "line": 35,
+      "target": "https://github.com/microsoft/qlib/blob/54355232463878d2eebb91fe0ee5fa7fa1f5976c/qlib/backtest/exchange.py#L859-L952",
+      "source_id": "qlib",
+      "source_and_range_valid": true
+    },
+    {
+      "document": "reports/safety-analysis.md",
+      "line": 37,
+      "target": "https://github.com/pmorissette/bt/blob/4b76bad2dbf3a49e99feb49db3eee1dde2ef8e12/bt/core.py#L1532-L1581",
+      "source_id": "bt",
+      "source_and_range_valid": true
+    },
+    {
+      "document": "reports/safety-analysis.md",
+      "line": 37,
+      "target": "https://github.com/pmorissette/bt/blob/4b76bad2dbf3a49e99feb49db3eee1dde2ef8e12/bt/core.py#L1788-L1816",
+      "source_id": "bt",
+      "source_and_range_valid": true
+    },
+    {
+      "document": "reports/safety-analysis.md",
+      "line": 37,
+      "target": "https://github.com/pmorissette/bt/blob/4b76bad2dbf3a49e99feb49db3eee1dde2ef8e12/bt/core.py#L1727-L1754",
+      "source_id": "bt",
+      "source_and_range_valid": true
+    },
+    {
+      "document": "reports/safety-analysis.md",
+      "line": 37,
+      "target": "https://github.com/pmorissette/bt/blob/4b76bad2dbf3a49e99feb49db3eee1dde2ef8e12/tests/test_core.py#L3467-L3511",
+      "source_id": "bt",
+      "source_and_range_valid": true
+    },
+    {
+      "document": "reports/safety-analysis.md",
+      "line": 39,
+      "target": "https://github.com/polakowo/vectorbt/blob/0875d984fbd66f8305d172980e55ee30a45153e3/vectorbt/portfolio/nb.py#L343-L443",
+      "source_id": "vectorbt",
+      "source_and_range_valid": true
+    },
+    {
+      "document": "reports/safety-analysis.md",
+      "line": 39,
+      "target": "https://github.com/polakowo/vectorbt/blob/0875d984fbd66f8305d172980e55ee30a45153e3/vectorbt/portfolio/nb.py#L72-L213",
+      "source_id": "vectorbt",
+      "source_and_range_valid": true
+    },
+    {
+      "document": "reports/safety-analysis.md",
+      "line": 39,
+      "target": "https://github.com/polakowo/vectorbt/blob/0875d984fbd66f8305d172980e55ee30a45153e3/vectorbt/portfolio/dispatch.py#L60-L74",
+      "source_id": "vectorbt",
+      "source_and_range_valid": true
+    },
+    {
+      "document": "reports/safety-analysis.md",
+      "line": 39,
+      "target": "https://github.com/polakowo/vectorbt/blob/0875d984fbd66f8305d172980e55ee30a45153e3/vectorbt/utils/config.py#L231-L277",
+      "source_id": "vectorbt",
+      "source_and_range_valid": true
+    },
+    {
+      "document": "reports/safety-analysis.md",
+      "line": 41,
+      "target": "https://github.com/stefan-jansen/zipline-reloaded/blob/cf649ac06fddce76f6caa2403cd8494ac84f72ad/src/zipline/finance/controls.py#L67-L116",
+      "source_id": "zipline",
+      "source_and_range_valid": true
+    },
+    {
+      "document": "reports/safety-analysis.md",
+      "line": 41,
+      "target": "https://github.com/stefan-jansen/zipline-reloaded/blob/cf649ac06fddce76f6caa2403cd8494ac84f72ad/src/zipline/finance/controls.py#L191-L249",
+      "source_id": "zipline",
+      "source_and_range_valid": true
+    },
+    {
+      "document": "reports/safety-analysis.md",
+      "line": 41,
+      "target": "https://github.com/stefan-jansen/zipline-reloaded/blob/cf649ac06fddce76f6caa2403cd8494ac84f72ad/src/zipline/sources/requests_csv.py#L105-L131",
+      "source_id": "zipline",
+      "source_and_range_valid": true
+    },
+    {
+      "document": "reports/safety-analysis.md",
+      "line": 41,
+      "target": "https://github.com/stefan-jansen/zipline-reloaded/blob/cf649ac06fddce76f6caa2403cd8494ac84f72ad/src/zipline/data/bundles/quandl.py#L294-L318",
+      "source_id": "zipline",
+      "source_and_range_valid": true
+    },
+    {
+      "document": "reports/safety-analysis.md",
+      "line": 43,
+      "target": "https://github.com/freqtrade/freqtrade/blob/3ce38b587d6c7a1ea479fb3e59d724dee5195561/freqtrade/resolvers/iresolver.py#L89-L120",
+      "source_id": "freqtrade",
+      "source_and_range_valid": true
+    },
+    {
+      "document": "reports/safety-analysis.md",
+      "line": 43,
+      "target": "https://github.com/freqtrade/freqtrade/blob/3ce38b587d6c7a1ea479fb3e59d724dee5195561/freqtrade/rpc/api_server/webserver.py#L222-L250",
+      "source_id": "freqtrade",
+      "source_and_range_valid": true
+    },
+    {
+      "document": "reports/safety-analysis.md",
+      "line": 43,
+      "target": "https://github.com/freqtrade/freqtrade/blob/3ce38b587d6c7a1ea479fb3e59d724dee5195561/freqtrade/optimize/backtest_caching.py#L8-L37",
+      "source_id": "freqtrade",
+      "source_and_range_valid": true
+    },
+    {
+      "document": "reports/safety-analysis.md",
+      "line": 43,
+      "target": "https://github.com/freqtrade/freqtrade/blob/3ce38b587d6c7a1ea479fb3e59d724dee5195561/freqtrade/freqai/data_kitchen.py#L924-L945",
+      "source_id": "freqtrade",
+      "source_and_range_valid": true
+    },
+    {
+      "document": "reports/safety-analysis.md",
+      "line": 43,
+      "target": "https://github.com/freqtrade/freqtrade/blob/3ce38b587d6c7a1ea479fb3e59d724dee5195561/freqtrade/freqai/data_kitchen.py#L234-L284",
+      "source_id": "freqtrade",
+      "source_and_range_valid": true
+    },
+    {
+      "document": "reports/safety-analysis.md",
+      "line": 43,
+      "target": "https://github.com/freqtrade/freqtrade/blob/3ce38b587d6c7a1ea479fb3e59d724dee5195561/freqtrade/freqai/freqai_interface.py#L195-L218",
+      "source_id": "freqtrade",
+      "source_and_range_valid": true
+    },
+    {
+      "document": "reports/safety-analysis.md",
+      "line": 45,
+      "target": "https://github.com/jesse-ai/jesse-rust/blob/bab04ada5f652fc369de06141ff6ea84896130a6/coordination/src/lib.rs#L17-L31",
+      "source_id": "jesse_rust",
+      "source_and_range_valid": true
+    },
+    {
+      "document": "reports/safety-analysis.md",
+      "line": 45,
+      "target": "https://github.com/jesse-ai/jesse-rust/blob/bab04ada5f652fc369de06141ff6ea84896130a6/coordination/src/lib.rs#L467-L499",
+      "source_id": "jesse_rust",
+      "source_and_range_valid": true
+    },
+    {
+      "document": "reports/safety-analysis.md",
+      "line": 45,
+      "target": "https://github.com/jesse-ai/jesse-rust/blob/bab04ada5f652fc369de06141ff6ea84896130a6/coordination/src/lib.rs#L587-L634",
+      "source_id": "jesse_rust",
+      "source_and_range_valid": true
+    },
+    {
+      "document": "reports/safety-analysis.md",
+      "line": 45,
+      "target": "https://github.com/jesse-ai/jesse-rust/blob/bab04ada5f652fc369de06141ff6ea84896130a6/coordination/src/lib.rs#L779-L811",
+      "source_id": "jesse_rust",
+      "source_and_range_valid": true
+    },
+    {
+      "document": "reports/safety-analysis.md",
+      "line": 45,
+      "target": "https://github.com/jesse-ai/jesse/blob/4fcbcdd500b9cd14ca9bdb142e4f46a34884a1ae/jesse/strategies/Strategy.py#L799-L808",
+      "source_id": "jesse",
+      "source_and_range_valid": true
+    },
+    {
+      "document": "reports/safety-analysis.md",
+      "line": 45,
+      "target": "https://github.com/jesse-ai/jesse/blob/4fcbcdd500b9cd14ca9bdb142e4f46a34884a1ae/jesse/strategies/Strategy.py#L979-L1030",
+      "source_id": "jesse",
+      "source_and_range_valid": true
+    },
+    {
+      "document": "reports/safety-analysis.md",
+      "line": 45,
+      "target": "https://github.com/jesse-ai/jesse/blob/4fcbcdd500b9cd14ca9bdb142e4f46a34884a1ae/jesse/models/SpotExchange.py#L36-L73",
+      "source_id": "jesse",
+      "source_and_range_valid": true
+    },
+    {
+      "document": "reports/safety-analysis.md",
+      "line": 45,
+      "target": "https://github.com/jesse-ai/jesse/blob/4fcbcdd500b9cd14ca9bdb142e4f46a34884a1ae/jesse/models/FuturesExchange.py#L106-L128",
+      "source_id": "jesse",
+      "source_and_range_valid": true
+    }
+  ],
+  "other_external_links_not_fetched": [],
+  "errors": [
+    {
+      "document": "README.md",
+      "line": 5,
+      "target": "reports/overview.md",
+      "exists": false,
+      "resolved_repository_path": "reports/overview.md",
+      "error": "missing local link target"
+    },
+    {
+      "document": "README.md",
+      "line": 5,
+      "target": "reports/comparison-grid.md",
+      "exists": false,
+      "resolved_repository_path": "reports/comparison-grid.md",
+      "error": "missing local link target"
+    },
+    {
+      "document": "README.md",
+      "line": 5,
+      "target": "reports/performance-results.md",
+      "exists": false,
+      "resolved_repository_path": "reports/performance-results.md",
+      "error": "missing local link target"
+    },
+    {
+      "document": "README.md",
+      "line": 5,
+      "target": "reports/assessment-grid.csv",
+      "exists": false,
+      "resolved_repository_path": "reports/assessment-grid.csv",
+      "error": "missing local link target"
+    },
+    {
+      "document": "README.md",
+      "line": 5,
+      "target": "reports/assessment-grid.json",
+      "exists": false,
+      "resolved_repository_path": "reports/assessment-grid.json",
+      "error": "missing local link target"
+    }
+  ],
+  "findings": [
+    {
+      "id": "SR01",
+      "severity": "material",
+      "documents": [
+        "README.md",
+        "protocol/README.md"
+      ],
+      "status": "reported_to_owner_corrective_campaign_pending",
+      "finding": "The original campaign's configured thread list omitted Polars. Unqualified one-native-thread wording must not describe that original run or imply one OS thread.",
+      "required_action": "Retain the original campaign with its deviation, identify/register the corrective run separately, verify named runtime/pool limits there, and use only admitted campaign identity for headline ratios; do not pool samples.",
+      "evidence": "results/campaigns/2026-10-19-common-zero-original/benchmark-source/bench/provenance.py"
+    },
+    {
+      "id": "SR02",
+      "severity": "clarification",
+      "documents": [
+        "reports/academic-analysis.md"
+      ],
+      "status": "reported_to_owner",
+      "finding": "The core callback-prefix description should name per-bar next callbacks; Strategy.init receives the full batch.",
+      "locations_at_initial_review": [
+        13,
+        63
+      ],
+      "required_action": "Replace generic correctly restricted callbacks/current callback prefix with per-bar next slicing and retain the full-init limitation."
+    },
+    {
+      "id": "SR03",
+      "severity": "precision",
+      "documents": [
+        "reports/academic-analysis.md",
+        "assessment/academic.json"
+      ],
+      "status": "reported_to_owner",
+      "finding": "CanonicalBacktestResult.from_slice validates; digest() is a separate method. Calling the decoder itself the digest-producing operation is imprecise.",
+      "locations_at_initial_review": [
+        105
+      ],
+      "required_action": "Attribute validation and available digest/first-divergence operations to the canonical-result type, without implying parsing verifies an externally expected digest."
+    },
+    {
+      "id": "SR04",
+      "severity": "clarification",
+      "documents": [
+        "reports/safety-analysis.md"
+      ],
+      "status": "patched",
+      "finding": "Added correct relative links to canonical rows, protocols and retained probes; made next-versus-init chronology explicit; distinguished original/corrective timing and original/revised probe wrappers.",
+      "scientific_conclusions_changed": false
+    },
+    {
+      "id": "SR05",
+      "severity": "precision",
+      "documents": [
+        "reports/academic-analysis.md"
+      ],
+      "status": "reported_to_owner",
+      "locations_at_initial_review": [
+        23
+      ],
+      "finding": "The Limen prefix probe has 173 rows with at least one changed value; each of the five columns changes on some rows, rather than all columns changing on 173 rows each.",
+      "required_action": "Prefer explicit any-feature row counting; retained per-column counts are 56, 173, 105, 157 and 92.",
+      "evidence": "baseline/limen/evidence/academic/causal_prefix_probe.json"
+    }
+  ],
+  "scope_limitations": [
+    "This checks the named document snapshots and bounded claims against existing evidence; it is not a new full source or security audit.",
+    "Source-link validation uses admitted local clones and exact line ranges; remote URL availability was not tested.",
+    "No original or corrective engine/timing work was run here. Completion/admission of the pending corrective campaign requires its own final evidence gate.",
+    "Owner edits after the recorded document hashes require final render/link verification; this receipt is not an approval of unseen future prose."
+  ],
+  "status": "issues"
+}

@@ -1,0 +1,243 @@
+{
+  "engine": "limen",
+  "status": "installed",
+  "source_path": "/workspace/scratch/008a76ec4981/benchmark-sources/limen",
+  "environment_path": "/workspace/scratch/008a76ec4981/Backtest-Benchmark/.work/envs/limen",
+  "catalog": {
+    "id": "limen",
+    "repository": "Vaquum/Limen",
+    "name": "Limen",
+    "track": "baseline",
+    "url": "https://github.com/Vaquum/Limen",
+    "commit": "29837e666604eee74a2ac94f328fb9803724342a",
+    "commit_date": "2026-10-19T17:59:12+03:00",
+    "source_url": "https://github.com/Vaquum/Limen/tree/29837e666604eee74a2ac94f328fb9803724342a",
+    "license_files": [
+      {
+        "path": "LICENSE",
+        "sha256": "91520bc6b0382654ae49e3fb93b5484b3296cc6306fa0563c1d8e85f19aec9a5",
+        "url": "https://github.com/Vaquum/Limen/blob/29837e666604eee74a2ac94f328fb9803724342a/LICENSE"
+      }
+    ],
+    "revision_policy": "Previously reviewed baseline retained; no claim this is the newest Limen revision",
+    "eligibility": "source_auditable"
+  },
+  "created_utc": "2026-10-19T17:20:49.689429+00:00",
+  "commands": [
+    {
+      "command": [
+        "uv",
+        "venv",
+        "--python",
+        "/opt/codex/runtimes/codex-primary-runtime/dependencies/python/bin/python3.12",
+        "/workspace/scratch/008a76ec4981/Backtest-Benchmark/.work/envs/limen"
+      ],
+      "returncode": 0,
+      "wall_seconds": 0.10002966900356114
+    },
+    {
+      "command": [
+        "uv",
+        "pip",
+        "compile",
+        "/workspace/scratch/008a76ec4981/Backtest-Benchmark/.work/bootstrap/limen/attempt-1792430449688370603/requirements.in",
+        "--python",
+        "/workspace/scratch/008a76ec4981/Backtest-Benchmark/.work/envs/limen/bin/python",
+        "--generate-hashes",
+        "--no-emit-package",
+        "vaquum-limen",
+        "--output-file",
+        "/workspace/scratch/008a76ec4981/Backtest-Benchmark/.work/bootstrap/limen/attempt-1792430449688370603/dependencies.lock"
+      ],
+      "returncode": 0,
+      "wall_seconds": 0.25162022500444436
+    },
+    {
+      "command": [
+        "uv",
+        "pip",
+        "install",
+        "--python",
+        "/workspace/scratch/008a76ec4981/Backtest-Benchmark/.work/envs/limen/bin/python",
+        "--require-hashes",
+        "-r",
+        "/workspace/scratch/008a76ec4981/Backtest-Benchmark/.work/bootstrap/limen/attempt-1792430449688370603/dependencies.lock"
+      ],
+      "returncode": 0,
+      "wall_seconds": 2.1522695630046655
+    },
+    {
+      "command": [
+        "uv",
+        "pip",
+        "install",
+        "--python",
+        "/workspace/scratch/008a76ec4981/Backtest-Benchmark/.work/envs/limen/bin/python",
+        "--no-deps",
+        "--no-build-isolation",
+        "/workspace/scratch/008a76ec4981/benchmark-sources/limen"
+      ],
+      "returncode": 0,
+      "wall_seconds": 1.1239199310002732
+    }
+  ],
+  "lock_origin": "new dependency resolution; exact generated hash lock retained",
+  "source_commit": "29837e666604eee74a2ac94f328fb9803724342a",
+  "python": "/workspace/scratch/008a76ec4981/Backtest-Benchmark/.work/envs/limen/bin/python",
+  "dependency_lock": "/workspace/scratch/008a76ec4981/Backtest-Benchmark/.work/bootstrap/limen/attempt-1792430449688370603/dependencies.lock",
+  "dependency_lock_sha256": "793e670f6af3df99ec7cbcd7752844a383758299b87c9aa17f5e372fd6c63b7f",
+  "observed": {
+    "python": "3.12.14 (main, Aug 25 2026, 14:00:49) [Clang 22.1.3 ]",
+    "platform": "Linux-6.18.55-x86_64-with-glibc2.39",
+    "prefix": "/workspace/scratch/008a76ec4981/Backtest-Benchmark/.work/envs/limen",
+    "distributions": [
+      {
+        "name": "certifi",
+        "version": "2026.10.18"
+      },
+      {
+        "name": "charset-normalizer",
+        "version": "3.5.2"
+      },
+      {
+        "name": "click",
+        "version": "8.5.0"
+      },
+      {
+        "name": "cloudpickle",
+        "version": "3.1.2"
+      },
+      {
+        "name": "Cython",
+        "version": "3.3.0"
+      },
+      {
+        "name": "hatch-cython",
+        "version": "0.6.0"
+      },
+      {
+        "name": "hatchling",
+        "version": "1.32.4"
+      },
+      {
+        "name": "idna",
+        "version": "3.20"
+      },
+      {
+        "name": "joblib",
+        "version": "1.6.0"
+      },
+      {
+        "name": "narwhals",
+        "version": "2.27.1"
+      },
+      {
+        "name": "numpy",
+        "version": "2.2.6"
+      },
+      {
+        "name": "packaging",
+        "version": "26.3"
+      },
+      {
+        "name": "pandas",
+        "version": "2.3.3"
+      },
+      {
+        "name": "pathspec",
+        "version": "1.1.1"
+      },
+      {
+        "name": "pluggy",
+        "version": "1.7.0"
+      },
+      {
+        "name": "polars",
+        "version": "1.44.2"
+      },
+      {
+        "name": "polars-runtime-32",
+        "version": "1.44.2"
+      },
+      {
+        "name": "pyarrow",
+        "version": "23.0.1"
+      },
+      {
+        "name": "python-dateutil",
+        "version": "2.9.0.post0"
+      },
+      {
+        "name": "pytz",
+        "version": "2026.5"
+      },
+      {
+        "name": "requests",
+        "version": "2.34.2"
+      },
+      {
+        "name": "ruamel.yaml",
+        "version": "0.18.17"
+      },
+      {
+        "name": "ruamel.yaml.clib",
+        "version": "0.2.15"
+      },
+      {
+        "name": "scikit-learn",
+        "version": "1.9.1"
+      },
+      {
+        "name": "scipy",
+        "version": "1.18.1"
+      },
+      {
+        "name": "setuptools",
+        "version": "84.0.0"
+      },
+      {
+        "name": "six",
+        "version": "1.17.0"
+      },
+      {
+        "name": "threadpoolctl",
+        "version": "3.6.0"
+      },
+      {
+        "name": "tomlkit",
+        "version": "0.15.2"
+      },
+      {
+        "name": "tqdm",
+        "version": "4.70.1"
+      },
+      {
+        "name": "trove-classifiers",
+        "version": "2026.9.21.13"
+      },
+      {
+        "name": "typing_extensions",
+        "version": "4.16.0"
+      },
+      {
+        "name": "tzdata",
+        "version": "2026.5"
+      },
+      {
+        "name": "urllib3",
+        "version": "2.8.0"
+      },
+      {
+        "name": "vaquum-limen",
+        "version": "5.40.1"
+      },
+      {
+        "name": "wheel",
+        "version": "0.48.0"
+      }
+    ],
+    "candidate_version": "5.40.1",
+    "candidate_direct_url": "{\"url\":\"file:///workspace/scratch/008a76ec4981/benchmark-sources/limen\",\"dir_info\":{}}"
+  },
+  "system_site_packages": false
+}

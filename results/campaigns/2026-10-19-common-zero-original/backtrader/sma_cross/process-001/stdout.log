@@ -1,0 +1,7 @@
+@@BENCH_EVENT@@{"event": "ready", "worker_perf_counter_ns": 39991420840583}
+/workspace/scratch/008a76ec4981/Backtest-Benchmark/.work/envs/backtrader/lib/python3.12/site-packages/backtrader/cerebro.py:675: SyntaxWarning: invalid escape sequence '\*'
+  - callback(msg, \*args, \*\*kwargs)
+/workspace/scratch/008a76ec4981/Backtest-Benchmark/.work/envs/backtrader/lib/python3.12/site-packages/backtrader/cerebro.py:717: SyntaxWarning: invalid escape sequence '\*'
+  - callback(data, status, \*args, \*\*kwargs)
+@@BENCH_EVENT@@{"event": "first_valid", "worker_perf_counter_ns": 39993763499394}
+@@BENCH_EVENT@@{"event": "complete", "worker_perf_counter_ns": 40000844840971}

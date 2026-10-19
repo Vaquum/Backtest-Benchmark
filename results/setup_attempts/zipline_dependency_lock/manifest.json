@@ -1,0 +1,15 @@
+{
+  "command": [
+    "uv",
+    "pip",
+    "compile",
+    "--generate-hashes",
+    "--python",
+    "/workspace/scratch/008a76ec4981/Backtest-Benchmark/.work/envs/zipline/bin/python",
+    "--output-file",
+    "/workspace/scratch/008a76ec4981/Backtest-Benchmark/locks/zipline.txt",
+    "/workspace/scratch/008a76ec4981/Backtest-Benchmark/environments/zipline.txt"
+  ],
+  "returncode": 0,
+  "status": "passed"
+}

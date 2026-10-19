@@ -1,0 +1,7 @@
+{
+  "campaign_id": "full-cpu-2026-10-19",
+  "observed_utc": "2026-10-19T18:01:39.228597+00:00",
+  "coordination": "Root explicitly confirmed all native builds, installations, and native tests ended; parent will perform only light reads/prose/validation during measurements.",
+  "code_matches_preregistration": true,
+  "native_other_workload": "Nautilus compilation attempts exhausted bounded build timeouts before this campaign; those are setup outcomes, not benchmark speed samples."
+}

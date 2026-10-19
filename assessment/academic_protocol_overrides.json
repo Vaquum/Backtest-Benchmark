@@ -1,0 +1,77 @@
+[
+  {
+    "id": "A01",
+    "scope": "Information available at each historical decision: native features and indicators, point-in-time data access, callback inputs, and batch versus successive-prefix inference.",
+    "protocol": "For each supported interface, declare the decision time and information set. Compare historical outputs on an unchanged recorded prefix with the corresponding outputs after a future extension, excluding legitimately incomplete targets and declared warmup rows. Retain changed-row counts, first divergence, numerical tolerance, and a causal control. Separately test latest-row-only prefix replay and point-in-time data getters. Distinguish a native future-dependent operation from caller-supplied future inputs or unrestricted custom callbacks; an execution engine's callback ordering does not prove arbitrary user features causal."
+  },
+  {
+    "id": "A02",
+    "scope": "Separation of fitting, selection, calibration, and evaluation observations for native or explicitly supplied adapter models, including online portfolio estimators.",
+    "protocol": "Identify which component owns each fitted object and record its exact source-row support, fit cutoff, and evaluation membership. With split identities fixed, change only later held-out records using permitted recorded observations and compare fitted state and earlier outputs. Trace target construction, feature processing, model selection, and cache reuse as well as model fitting. Do not infer a managed research capability from a generic training callback. Where the execution layer has no native fitted model, mark the research requirement as adapter-required rather than grading the engine as a failed learner."
+  },
+  {
+    "id": "A03",
+    "scope": "Availability and censoring of forward labels, event-completion outcomes, and any targets consumed by a fitted decision rule.",
+    "protocol": "Retain source-row identity, decision time, local observation time where relevant, label completion time, and fit cutoff for every consumed target. Verify that fit support excludes unfinished outcomes and that split-terminal targets are censored or purged according to the implemented horizon. Inspect negative shifts and forward windows as target operations separately from predictor construction. Check actual post-filter membership and adaptive event horizons, not just a configured gap. A known future calendar event is not itself an unavailable outcome. For engines without native targets, identify the adapter obligation explicitly."
+  },
+  {
+    "id": "A04",
+    "scope": "Temporal geometry of training, validation, calibration, final evaluation, and online estimation windows, including horizon-dependent purge and embargo where applicable.",
+    "protocol": "Declare identical raw observation windows, chronology, rolling or expanding policy, retained history, and evaluation schedule before comparing solutions. Audit actual sample membership after label censoring, missing-value removal, warmup, and transform filtering. Verify any purge or embargo against the outcomes actually used and state whether the guard is mandatory or configured. Test boundary ordering and empty or insufficient windows. Separate an online trailing estimator from a supervised cross-validation workflow; replay chunks, reporting periods, and rebalance schedules do not by themselves implement independent validation."
+  },
+  {
+    "id": "A05",
+    "scope": "Locality of learned preprocessing, feature selection, covariance estimation, dimensionality reduction, stacked models, and out-of-fold predictions within their intended training windows.",
+    "protocol": "Hold observation identities and folds fixed. For every learned transform and estimator, inspect fit support, application support, state reuse, and refit timing. Verify that validation or evaluation data cannot alter an earlier fitted object and that out-of-fold predictions are produced without training on the current row or any outcome unavailable at its decision time. Include nested preprocessing and second-stage model labels. Distinguish a deterministic rolling calculation from a learned transform, and report absent native model ownership as adapter-required rather than asserting leakage from the absence of a pipeline manager."
+  },
+  {
+    "id": "A06",
+    "scope": "Fitting and selecting probability calibrators, decision thresholds, and other policies that translate model or strategy outputs into actions.",
+    "protocol": "Record separate sample identities and evidence access for estimator training, calibration, policy selection, and final evaluation. Trace whether calibration labels or policy-objective outcomes are reused in the reported selection score. Declare the action space, costs, risk constraints, and optimization objective; include an all-flat action when it is admissible under that economic decision contract. Evaluate the frozen selected policy on an external final sample. Distinguish parameter optimization from probability calibration and do not require an execution-only engine to implement either without a stated research adapter."
+  },
+  {
+    "id": "A07",
+    "scope": "Definitions, units, numerical edge cases, and aggregation of prediction, execution, portfolio, risk, and statistical summary metrics.",
+    "protocol": "Recompute comparable metrics from a shared audited observation and equity or return tape. Pin prediction and action semantics, currency and capital basis, cash flows, gross or net costs, sampling calendar, annualization, compounding, variance and moment conventions, and benchmark alignment. Record warmup and terminal-position policies, missing or nonfinite handling, zero-variance sentinels, and fallback return bases. Distinguish averages of fold metrics from metrics on pooled ordered returns. A matching metric name or output hash is insufficient evidence of a matching mathematical quantity."
+  },
+  {
+    "id": "A08",
+    "scope": "Independent evidence for numerical correctness, mathematical implementation, temporal invariants, statistical calibration, and execution-model accounting within the declared capability.",
+    "protocol": "Separate independent analytical or ledger oracles, optimized-versus-reference parity, metamorphic temporal checks, empirical probability calibration, and empirical execution-model validation. Prefer expected quantities derived without reusing the implementation under test. Retain exact source and dependency identity, executable or binary identity where available, fixture hashes, tolerances, test invocation, and result artifacts. Label source-inspected assertions separately from tests actually executed in this assessment, and report the bounded test set. Passing an implementation parity test does not establish statistical calibration or real-market execution fidelity."
+  },
+  {
+    "id": "A09",
+    "scope": "Convergence, numerical fit stability, failure reporting, and fallback behavior for native iterative learners, calibration routines, and portfolio optimizers.",
+    "protocol": "For each applicable fitting stage, retain termination reason, iteration or evaluation budget, warnings, exceptions, and any fallback selected. Carry warned successes and failed attempts into the declared attempt denominator and predeclare their selection eligibility. Check whether downstream records distinguish an optimized solution from a default or equal-weight fallback. Assess stability of the selected result under meaningful repeated fits or perturbations when supported and authorized. A completed simulation is not evidence of model convergence; a framework with no iterative fitted component has an adapter requirement rather than a convergence failure."
+  },
+  {
+    "id": "A10",
+    "scope": "Completeness and durability of the search history used to select a strategy, model, parameterization, data choice, or execution scenario.",
+    "protocol": "Predeclare the search family or adaptive search policy, evidence-access rules, and budget. Append every attempted configuration and occurrence, including failed, warned, cancelled, repeated, and resumed attempts, with seeds, costs, data identity, source identity, and terminal disposition. Reconcile searchable results with the attempt ledger and preserve selection decisions. Distinguish a local parameter product or a supplied collection of successful results from the full effective research family; count choices made outside that collection when they influenced selection. A final best-result object alone is not a complete search history."
+  },
+  {
+    "id": "A11",
+    "scope": "Inferential control for repeated or adaptive selection and for dependence within the observations supporting a reported result.",
+    "protocol": "Declare the inferential target, null, candidate family or adaptive policy, and dependence assumptions. Use aligned observations and the complete declared selection family where the method requires them. Distinguish marginal significance or probabilistic Sharpe from corrections for multiple selection, and a diagnostic from an enforced admission rule. Audit effective sample size, horizon overlap, serial dependence, moment conventions, resampling unit, and degenerate outcomes. Evaluate calibration separately where empirical evidence exists. Never treat combinatorial partitions or overlapping folds as independent observations, or a zero Monte Carlo exceedance count as a proven zero error probability."
+  },
+  {
+    "id": "A12",
+    "scope": "Comparability and provenance of results across runs, candidates, execution paths, and research families.",
+    "protocol": "Require the same ordered evaluation identities and a declared mapping of assets, decision times, data availability, capital, costs, and return conventions. Retain actual post-warmup observations, configuration, source and environment identifiers, input digests, and failure dispositions. Reject incompatible results with reasons rather than silently intersecting samples. Check whether persisted artifacts and asynchronous logging preserve the evidence needed to reproduce selection. Distinguish a canonical output digest from input or build identity and a date-based data-vintage selector from immutable content verification. Report native compatibility checks separately from adapter checks."
+  },
+  {
+    "id": "A13",
+    "scope": "Protection and evidentiary accounting of final evaluation data after strategy or model selection, including supported execution paths and known access boundaries.",
+    "protocol": "Freeze the selected policy, fitted objects or allowed refit rule, features, data interpretation, costs, and execution scenarios before final-data access. Record an attempt durably before exposure and retain every attempt, result, failure, and subsequent access in the owned workflow. Verify point-in-time evaluation and state the supported and rejected paths. Label access history as initial-recorded, subsequent, unknown, or post-release as appropriate. Do not equate a train/test split or a repeatedly viewed optimization test window with a reserved final holdout, or claim that a local ledger prevents external reading of the same data."
+  },
+  {
+    "id": "A14",
+    "scope": "Quality of comparison baselines and evidence that predictive, portfolio, or execution conclusions extend beyond the specific tested fixture and model assumptions.",
+    "protocol": "Match data availability, evaluation dates, costs, exposure and risk budget, capacity assumptions, execution semantics, and selection opportunity across candidate and reference strategies. Use buy-and-hold, fixed rules, random or resampled controls, and simple learned baselines where relevant, recording all choices. Assess predictive generalization separately from execution-model fidelity and distinguish code capability from demonstrated empirical validity. Use recorded data appropriate to each specialist track; do not manufacture order-book evidence from OHLC bars. State which assets, periods, regimes, fill assumptions, and real-world effects remain unvalidated."
+  },
+  {
+    "id": "A15",
+    "scope": "Implemented and demonstrated sensitivity analysis, ablation, dependence-aware uncertainty, and reproduction of selected results within the declared capability.",
+    "protocol": "Predeclare a bounded set of meaningful perturbations such as feature removal, parameter changes, costs, latency, queue assumptions, model seeds, and recorded market regimes. Preserve observation, configuration, source, dependency, and runtime identity and compare each perturbation against the same declared reference contract. Distinguish the existence of configurable knobs or a bootstrap helper from an executed sensitivity or ablation result. Report uncertainty intervals with the resampling unit and dependence assumptions, retain failures and repeated draws, and check whether fixed seeds unintentionally reproduce the same sample instead of generating a reproducible sequence."
+  }
+]

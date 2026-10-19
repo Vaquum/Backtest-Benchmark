@@ -1,0 +1,13 @@
+{
+  "dotnet": {
+    "version": "10.0.402",
+    "initial_status": "Failed to create CoreCLR, HRESULT: 0x8007000E; exit137 under default process sandbox",
+    "heap_limit_retry": "Same error with DOTNET_GCHeapHardLimit=40000000 and DOTNET_gcServer=0",
+    "resolved_status": "SDK10.0.402 runs outside the default process sandbox with the same bounded heap settings; launcher source build subsequently passed"
+  },
+  "rust": {
+    "version": "1.99.0",
+    "initial_status": "Shared librustc_driver lookup failed before explicit local library path",
+    "resolved_status": "rustc1.99.0 runs after local toolchain lib is supplied in LD_LIBRARY_PATH"
+  }
+}

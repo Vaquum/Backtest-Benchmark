@@ -1,0 +1,768 @@
+[
+  {
+    "engine": "limen",
+    "strategy": "buy_and_hold",
+    "actual_result_array_fingerprints": [
+      "6d1813fa00aa009ee03818809d76fddfffce4edc22592391f663ef912668c4ff"
+    ],
+    "distinct_actual_result_array_fingerprints": 1,
+    "source_commits": [
+      "29837e666604eee74a2ac94f328fb9803724342a"
+    ],
+    "installed_candidate_code_fingerprints": [
+      "24c435f78410d7883c7b752796c6e0545c9f71dc007d1932d5595bd259135cb1"
+    ],
+    "distribution_versions": [
+      "5.40.1"
+    ],
+    "benchmark_code_manifest_fingerprints": [
+      "d97d3526aa473df05b3c53ec1569e6f849993c250c22737e729a1782624d918a"
+    ],
+    "worker_native_thread_observations": [
+      {
+        "polars": {
+          "loaded": true,
+          "pool_size": 1,
+          "version": "1.44.2"
+        }
+      },
+      {
+        "polars": {
+          "loaded": true,
+          "pool_size": 1,
+          "version": "1.44.2"
+        }
+      },
+      {
+        "polars": {
+          "loaded": true,
+          "pool_size": 1,
+          "version": "1.44.2"
+        }
+      },
+      {
+        "polars": {
+          "loaded": true,
+          "pool_size": 1,
+          "version": "1.44.2"
+        }
+      },
+      {
+        "polars": {
+          "loaded": true,
+          "pool_size": 1,
+          "version": "1.44.2"
+        }
+      },
+      {
+        "polars": {
+          "loaded": true,
+          "pool_size": 1,
+          "version": "1.44.2"
+        }
+      }
+    ],
+    "scope": "Observed identity of checked native/common result arrays and source/build fingerprints across this case; does not establish all possible workload or build determinism"
+  },
+  {
+    "engine": "backtrader",
+    "strategy": "buy_and_hold",
+    "actual_result_array_fingerprints": [
+      "5bb64ff572779879bf9ccb9e75ea68bbc1ccb33c71b41e54df80e2b0aae9863a"
+    ],
+    "distinct_actual_result_array_fingerprints": 1,
+    "source_commits": [
+      "b853d7c90b6721476eb5a5ea3135224e33db1f14"
+    ],
+    "installed_candidate_code_fingerprints": [
+      "339e2b1a82fa62bb1a27493373a7667cd3f71bfb1ad7bb45432eed8a7aebbd1d"
+    ],
+    "distribution_versions": [
+      "1.9.78.123"
+    ],
+    "benchmark_code_manifest_fingerprints": [
+      "d97d3526aa473df05b3c53ec1569e6f849993c250c22737e729a1782624d918a"
+    ],
+    "worker_native_thread_observations": [
+      {
+        "polars": {
+          "loaded": false
+        }
+      },
+      {
+        "polars": {
+          "loaded": false
+        }
+      },
+      {
+        "polars": {
+          "loaded": false
+        }
+      },
+      {
+        "polars": {
+          "loaded": false
+        }
+      },
+      {
+        "polars": {
+          "loaded": false
+        }
+      },
+      {
+        "polars": {
+          "loaded": false
+        }
+      }
+    ],
+    "scope": "Observed identity of checked native/common result arrays and source/build fingerprints across this case; does not establish all possible workload or build determinism"
+  },
+  {
+    "engine": "vectorbt",
+    "strategy": "buy_and_hold",
+    "actual_result_array_fingerprints": [
+      "860e0ac66bec599b62da68f27173188a784775cf7eca747fa899c860001102de"
+    ],
+    "distinct_actual_result_array_fingerprints": 1,
+    "source_commits": [
+      "0875d984fbd66f8305d172980e55ee30a45153e3"
+    ],
+    "installed_candidate_code_fingerprints": [
+      "15f08632d60c7e2135eb57d26517197e89cc780a06bc994829e7ee462d8b15e5"
+    ],
+    "distribution_versions": [
+      "1.2.0"
+    ],
+    "benchmark_code_manifest_fingerprints": [
+      "d97d3526aa473df05b3c53ec1569e6f849993c250c22737e729a1782624d918a"
+    ],
+    "worker_native_thread_observations": [
+      {
+        "polars": {
+          "loaded": false
+        }
+      },
+      {
+        "polars": {
+          "loaded": false
+        }
+      },
+      {
+        "polars": {
+          "loaded": false
+        }
+      },
+      {
+        "polars": {
+          "loaded": false
+        }
+      },
+      {
+        "polars": {
+          "loaded": false
+        }
+      },
+      {
+        "polars": {
+          "loaded": false
+        }
+      }
+    ],
+    "scope": "Observed identity of checked native/common result arrays and source/build fingerprints across this case; does not establish all possible workload or build determinism"
+  },
+  {
+    "engine": "backtesting_py",
+    "strategy": "buy_and_hold",
+    "actual_result_array_fingerprints": [
+      "564ffca72ed30902ad56729a38c6831a68bfdb965cea69c04459503c8b63f5b6"
+    ],
+    "distinct_actual_result_array_fingerprints": 1,
+    "source_commits": [
+      "ca2e2611621e472542ba90f7243a1fa06a7d7108"
+    ],
+    "installed_candidate_code_fingerprints": [
+      "da4358729df4802a5f031cbb5e7bdb8c5bc77993ecde882ab61c4df5d6cb923a"
+    ],
+    "distribution_versions": [
+      "0.1.dev1+gca2e26116"
+    ],
+    "benchmark_code_manifest_fingerprints": [
+      "d97d3526aa473df05b3c53ec1569e6f849993c250c22737e729a1782624d918a"
+    ],
+    "worker_native_thread_observations": [
+      {
+        "polars": {
+          "loaded": false
+        }
+      },
+      {
+        "polars": {
+          "loaded": false
+        }
+      },
+      {
+        "polars": {
+          "loaded": false
+        }
+      },
+      {
+        "polars": {
+          "loaded": false
+        }
+      },
+      {
+        "polars": {
+          "loaded": false
+        }
+      },
+      {
+        "polars": {
+          "loaded": false
+        }
+      }
+    ],
+    "scope": "Observed identity of checked native/common result arrays and source/build fingerprints across this case; does not establish all possible workload or build determinism"
+  },
+  {
+    "engine": "bt",
+    "strategy": "buy_and_hold",
+    "actual_result_array_fingerprints": [
+      "860e0ac66bec599b62da68f27173188a784775cf7eca747fa899c860001102de"
+    ],
+    "distinct_actual_result_array_fingerprints": 1,
+    "source_commits": [
+      "4b76bad2dbf3a49e99feb49db3eee1dde2ef8e12"
+    ],
+    "installed_candidate_code_fingerprints": [
+      "04d19dc402a9a4b3a4a142debd61991425f6d4511f707a310b4587bbd9ab966c"
+    ],
+    "distribution_versions": [
+      "1.4.1"
+    ],
+    "benchmark_code_manifest_fingerprints": [
+      "d97d3526aa473df05b3c53ec1569e6f849993c250c22737e729a1782624d918a"
+    ],
+    "worker_native_thread_observations": [
+      {
+        "polars": {
+          "loaded": false
+        }
+      },
+      {
+        "polars": {
+          "loaded": false
+        }
+      },
+      {
+        "polars": {
+          "loaded": false
+        }
+      },
+      {
+        "polars": {
+          "loaded": false
+        }
+      },
+      {
+        "polars": {
+          "loaded": false
+        }
+      },
+      {
+        "polars": {
+          "loaded": false
+        }
+      }
+    ],
+    "scope": "Observed identity of checked native/common result arrays and source/build fingerprints across this case; does not establish all possible workload or build determinism"
+  },
+  {
+    "engine": "qstrader",
+    "strategy": "buy_and_hold",
+    "actual_result_array_fingerprints": [
+      "860e0ac66bec599b62da68f27173188a784775cf7eca747fa899c860001102de"
+    ],
+    "distinct_actual_result_array_fingerprints": 1,
+    "source_commits": [
+      "4c59e1584e83fcc2be644b820f827c0dd1b45c02"
+    ],
+    "installed_candidate_code_fingerprints": [
+      "69444d467a1d4ba009380873cdf0466573ca64dfa93f55f29c380e244773834a"
+    ],
+    "distribution_versions": [
+      "0.3.0"
+    ],
+    "benchmark_code_manifest_fingerprints": [
+      "d97d3526aa473df05b3c53ec1569e6f849993c250c22737e729a1782624d918a"
+    ],
+    "worker_native_thread_observations": [
+      {
+        "polars": {
+          "loaded": false
+        }
+      },
+      {
+        "polars": {
+          "loaded": false
+        }
+      },
+      {
+        "polars": {
+          "loaded": false
+        }
+      },
+      {
+        "polars": {
+          "loaded": false
+        }
+      },
+      {
+        "polars": {
+          "loaded": false
+        }
+      },
+      {
+        "polars": {
+          "loaded": false
+        }
+      }
+    ],
+    "scope": "Observed identity of checked native/common result arrays and source/build fingerprints across this case; does not establish all possible workload or build determinism"
+  },
+  {
+    "engine": "qlib",
+    "strategy": "buy_and_hold",
+    "actual_result_array_fingerprints": [
+      "860e0ac66bec599b62da68f27173188a784775cf7eca747fa899c860001102de"
+    ],
+    "distinct_actual_result_array_fingerprints": 1,
+    "source_commits": [
+      "54355232463878d2eebb91fe0ee5fa7fa1f5976c"
+    ],
+    "installed_candidate_code_fingerprints": [
+      "3203c3121782ceec3311a77fe4aa255ec83467b7fd7f1210d820642a2486d848"
+    ],
+    "distribution_versions": [
+      "0.9.8"
+    ],
+    "benchmark_code_manifest_fingerprints": [
+      "d97d3526aa473df05b3c53ec1569e6f849993c250c22737e729a1782624d918a"
+    ],
+    "worker_native_thread_observations": [
+      {
+        "polars": {
+          "loaded": false
+        }
+      },
+      {
+        "polars": {
+          "loaded": false
+        }
+      },
+      {
+        "polars": {
+          "loaded": false
+        }
+      },
+      {
+        "polars": {
+          "loaded": false
+        }
+      },
+      {
+        "polars": {
+          "loaded": false
+        }
+      },
+      {
+        "polars": {
+          "loaded": false
+        }
+      }
+    ],
+    "scope": "Observed identity of checked native/common result arrays and source/build fingerprints across this case; does not establish all possible workload or build determinism"
+  },
+  {
+    "engine": "limen",
+    "strategy": "sma_cross",
+    "actual_result_array_fingerprints": [
+      "c9b5be398715b8e3b6249eb01aab57f2a7b5e7e532f3940edda68122e4edb415"
+    ],
+    "distinct_actual_result_array_fingerprints": 1,
+    "source_commits": [
+      "29837e666604eee74a2ac94f328fb9803724342a"
+    ],
+    "installed_candidate_code_fingerprints": [
+      "24c435f78410d7883c7b752796c6e0545c9f71dc007d1932d5595bd259135cb1"
+    ],
+    "distribution_versions": [
+      "5.40.1"
+    ],
+    "benchmark_code_manifest_fingerprints": [
+      "d97d3526aa473df05b3c53ec1569e6f849993c250c22737e729a1782624d918a"
+    ],
+    "worker_native_thread_observations": [
+      {
+        "polars": {
+          "loaded": true,
+          "pool_size": 1,
+          "version": "1.44.2"
+        }
+      },
+      {
+        "polars": {
+          "loaded": true,
+          "pool_size": 1,
+          "version": "1.44.2"
+        }
+      },
+      {
+        "polars": {
+          "loaded": true,
+          "pool_size": 1,
+          "version": "1.44.2"
+        }
+      },
+      {
+        "polars": {
+          "loaded": true,
+          "pool_size": 1,
+          "version": "1.44.2"
+        }
+      },
+      {
+        "polars": {
+          "loaded": true,
+          "pool_size": 1,
+          "version": "1.44.2"
+        }
+      },
+      {
+        "polars": {
+          "loaded": true,
+          "pool_size": 1,
+          "version": "1.44.2"
+        }
+      }
+    ],
+    "scope": "Observed identity of checked native/common result arrays and source/build fingerprints across this case; does not establish all possible workload or build determinism"
+  },
+  {
+    "engine": "backtrader",
+    "strategy": "sma_cross",
+    "actual_result_array_fingerprints": [
+      "92df3a623d5dc6655daec1d5d4611988458880244789c40bc1e9c256c3924ae7"
+    ],
+    "distinct_actual_result_array_fingerprints": 1,
+    "source_commits": [
+      "b853d7c90b6721476eb5a5ea3135224e33db1f14"
+    ],
+    "installed_candidate_code_fingerprints": [
+      "339e2b1a82fa62bb1a27493373a7667cd3f71bfb1ad7bb45432eed8a7aebbd1d"
+    ],
+    "distribution_versions": [
+      "1.9.78.123"
+    ],
+    "benchmark_code_manifest_fingerprints": [
+      "d97d3526aa473df05b3c53ec1569e6f849993c250c22737e729a1782624d918a"
+    ],
+    "worker_native_thread_observations": [
+      {
+        "polars": {
+          "loaded": false
+        }
+      },
+      {
+        "polars": {
+          "loaded": false
+        }
+      },
+      {
+        "polars": {
+          "loaded": false
+        }
+      },
+      {
+        "polars": {
+          "loaded": false
+        }
+      },
+      {
+        "polars": {
+          "loaded": false
+        }
+      },
+      {
+        "polars": {
+          "loaded": false
+        }
+      }
+    ],
+    "scope": "Observed identity of checked native/common result arrays and source/build fingerprints across this case; does not establish all possible workload or build determinism"
+  },
+  {
+    "engine": "vectorbt",
+    "strategy": "sma_cross",
+    "actual_result_array_fingerprints": [
+      "09ce5bf8455f45489e1398badb1afb173b179bb6be2ee6afcec1a0f7354c97ef"
+    ],
+    "distinct_actual_result_array_fingerprints": 1,
+    "source_commits": [
+      "0875d984fbd66f8305d172980e55ee30a45153e3"
+    ],
+    "installed_candidate_code_fingerprints": [
+      "15f08632d60c7e2135eb57d26517197e89cc780a06bc994829e7ee462d8b15e5"
+    ],
+    "distribution_versions": [
+      "1.2.0"
+    ],
+    "benchmark_code_manifest_fingerprints": [
+      "d97d3526aa473df05b3c53ec1569e6f849993c250c22737e729a1782624d918a"
+    ],
+    "worker_native_thread_observations": [
+      {
+        "polars": {
+          "loaded": false
+        }
+      },
+      {
+        "polars": {
+          "loaded": false
+        }
+      },
+      {
+        "polars": {
+          "loaded": false
+        }
+      },
+      {
+        "polars": {
+          "loaded": false
+        }
+      },
+      {
+        "polars": {
+          "loaded": false
+        }
+      },
+      {
+        "polars": {
+          "loaded": false
+        }
+      }
+    ],
+    "scope": "Observed identity of checked native/common result arrays and source/build fingerprints across this case; does not establish all possible workload or build determinism"
+  },
+  {
+    "engine": "backtesting_py",
+    "strategy": "sma_cross",
+    "actual_result_array_fingerprints": [
+      "dfdaabe7327693609bed1806738ba94a63d625d66390e82b4717f12afd6748b0"
+    ],
+    "distinct_actual_result_array_fingerprints": 1,
+    "source_commits": [
+      "ca2e2611621e472542ba90f7243a1fa06a7d7108"
+    ],
+    "installed_candidate_code_fingerprints": [
+      "da4358729df4802a5f031cbb5e7bdb8c5bc77993ecde882ab61c4df5d6cb923a"
+    ],
+    "distribution_versions": [
+      "0.1.dev1+gca2e26116"
+    ],
+    "benchmark_code_manifest_fingerprints": [
+      "d97d3526aa473df05b3c53ec1569e6f849993c250c22737e729a1782624d918a"
+    ],
+    "worker_native_thread_observations": [
+      {
+        "polars": {
+          "loaded": false
+        }
+      },
+      {
+        "polars": {
+          "loaded": false
+        }
+      },
+      {
+        "polars": {
+          "loaded": false
+        }
+      },
+      {
+        "polars": {
+          "loaded": false
+        }
+      },
+      {
+        "polars": {
+          "loaded": false
+        }
+      },
+      {
+        "polars": {
+          "loaded": false
+        }
+      }
+    ],
+    "scope": "Observed identity of checked native/common result arrays and source/build fingerprints across this case; does not establish all possible workload or build determinism"
+  },
+  {
+    "engine": "bt",
+    "strategy": "sma_cross",
+    "actual_result_array_fingerprints": [
+      "be2fd5f253d15c683e741b49c22b20b6d02258ce50492d06870a915a0ab79296"
+    ],
+    "distinct_actual_result_array_fingerprints": 1,
+    "source_commits": [
+      "4b76bad2dbf3a49e99feb49db3eee1dde2ef8e12"
+    ],
+    "installed_candidate_code_fingerprints": [
+      "04d19dc402a9a4b3a4a142debd61991425f6d4511f707a310b4587bbd9ab966c"
+    ],
+    "distribution_versions": [
+      "1.4.1"
+    ],
+    "benchmark_code_manifest_fingerprints": [
+      "d97d3526aa473df05b3c53ec1569e6f849993c250c22737e729a1782624d918a"
+    ],
+    "worker_native_thread_observations": [
+      {
+        "polars": {
+          "loaded": false
+        }
+      },
+      {
+        "polars": {
+          "loaded": false
+        }
+      },
+      {
+        "polars": {
+          "loaded": false
+        }
+      },
+      {
+        "polars": {
+          "loaded": false
+        }
+      },
+      {
+        "polars": {
+          "loaded": false
+        }
+      },
+      {
+        "polars": {
+          "loaded": false
+        }
+      }
+    ],
+    "scope": "Observed identity of checked native/common result arrays and source/build fingerprints across this case; does not establish all possible workload or build determinism"
+  },
+  {
+    "engine": "qstrader",
+    "strategy": "sma_cross",
+    "actual_result_array_fingerprints": [
+      "be2fd5f253d15c683e741b49c22b20b6d02258ce50492d06870a915a0ab79296"
+    ],
+    "distinct_actual_result_array_fingerprints": 1,
+    "source_commits": [
+      "4c59e1584e83fcc2be644b820f827c0dd1b45c02"
+    ],
+    "installed_candidate_code_fingerprints": [
+      "69444d467a1d4ba009380873cdf0466573ca64dfa93f55f29c380e244773834a"
+    ],
+    "distribution_versions": [
+      "0.3.0"
+    ],
+    "benchmark_code_manifest_fingerprints": [
+      "d97d3526aa473df05b3c53ec1569e6f849993c250c22737e729a1782624d918a"
+    ],
+    "worker_native_thread_observations": [
+      {
+        "polars": {
+          "loaded": false
+        }
+      },
+      {
+        "polars": {
+          "loaded": false
+        }
+      },
+      {
+        "polars": {
+          "loaded": false
+        }
+      },
+      {
+        "polars": {
+          "loaded": false
+        }
+      },
+      {
+        "polars": {
+          "loaded": false
+        }
+      },
+      {
+        "polars": {
+          "loaded": false
+        }
+      }
+    ],
+    "scope": "Observed identity of checked native/common result arrays and source/build fingerprints across this case; does not establish all possible workload or build determinism"
+  },
+  {
+    "engine": "qlib",
+    "strategy": "sma_cross",
+    "actual_result_array_fingerprints": [
+      "be2fd5f253d15c683e741b49c22b20b6d02258ce50492d06870a915a0ab79296"
+    ],
+    "distinct_actual_result_array_fingerprints": 1,
+    "source_commits": [
+      "54355232463878d2eebb91fe0ee5fa7fa1f5976c"
+    ],
+    "installed_candidate_code_fingerprints": [
+      "3203c3121782ceec3311a77fe4aa255ec83467b7fd7f1210d820642a2486d848"
+    ],
+    "distribution_versions": [
+      "0.9.8"
+    ],
+    "benchmark_code_manifest_fingerprints": [
+      "d97d3526aa473df05b3c53ec1569e6f849993c250c22737e729a1782624d918a"
+    ],
+    "worker_native_thread_observations": [
+      {
+        "polars": {
+          "loaded": false
+        }
+      },
+      {
+        "polars": {
+          "loaded": false
+        }
+      },
+      {
+        "polars": {
+          "loaded": false
+        }
+      },
+      {
+        "polars": {
+          "loaded": false
+        }
+      },
+      {
+        "polars": {
+          "loaded": false
+        }
+      },
+      {
+        "polars": {
+          "loaded": false
+        }
+      }
+    ],
+    "scope": "Observed identity of checked native/common result arrays and source/build fingerprints across this case; does not establish all possible workload or build determinism"
+  }
+]

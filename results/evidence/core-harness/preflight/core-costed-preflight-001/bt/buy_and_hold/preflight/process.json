@@ -1,0 +1,34 @@
+{
+  "command": [
+    "/workspace/scratch/008a76ec4981/Backtest-Benchmark/.work/envs/bt/bin/python",
+    "-m",
+    "bench.worker",
+    "--engine",
+    "bt",
+    "--prepared",
+    "/workspace/scratch/008a76ec4981/Backtest-Benchmark/.work/runs/core-costed-preflight-001/prepared-buy_and_hold.npz",
+    "--prepared-sha256",
+    "928f6143505ce916d7afb6d43a147b6b575e25a41000daa3ae1f55ef21671cf0",
+    "--contract",
+    "/workspace/scratch/008a76ec4981/Backtest-Benchmark/.work/runs/core-costed-preflight-001/contract.json",
+    "--environment-manifest",
+    "/workspace/scratch/008a76ec4981/Backtest-Benchmark/.work/manifests/bt.json",
+    "--output",
+    "/workspace/scratch/008a76ec4981/Backtest-Benchmark/.work/runs/core-costed-preflight-001/bt/buy_and_hold/preflight/result",
+    "--mode",
+    "preflight",
+    "--warm-repeats",
+    "7"
+  ],
+  "returncode": 2,
+  "timed_out": false,
+  "process_wall_ms": 5624.65851,
+  "launch_to_ready_ms": 29.174708,
+  "launch_to_first_valid_ms": null,
+  "parent_observed_events_ms": {
+    "ready": 29.174708
+  },
+  "stdout_path": "/workspace/scratch/008a76ec4981/Backtest-Benchmark/.work/runs/core-costed-preflight-001/bt/buy_and_hold/preflight/stdout.log",
+  "startup_scope": "Parent observed process launch to worker ready event, before scientific/engine imports; IPC scheduling is included",
+  "first_valid_scope": "Process launch through source verification, imports, input load, independent oracle, first engine call, extraction and successful parity"
+}

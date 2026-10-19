@@ -1,0 +1,49 @@
+{
+  "repository": "https://github.com/Vaquum/Limen.git",
+  "commit": "29837e666604eee74a2ac94f328fb9803724342a",
+  "version": "5.40.1",
+  "fixture_source_rows": 8784,
+  "files": [
+    {
+      "path": "tests/fixtures/spot_1h_20240101_20241231.parquet",
+      "sha256": "a634bbd4f3692fac7bc88512da588e7772f4bd1b749567606d5314e54d0adf72",
+      "bytes": 827695
+    },
+    {
+      "path": "requirements/ci/research-env.txt",
+      "sha256": "e1cdf86ec14ea2c7e9f57036197097e7290007fbc8f45a239386e0fb749ec748",
+      "bytes": 67573
+    },
+    {
+      "path": "requirements/constraints.txt",
+      "sha256": "9dbe0053001de9af65df1d962b39d205fcb4a4462c97eadbbea23082f4bca703",
+      "bytes": 438
+    },
+    {
+      "path": "pyproject.toml",
+      "sha256": "5945c4a8be87f2932e11ef72793c07243ca37dc145657e78c442db91f2f830ba",
+      "bytes": 9012
+    },
+    {
+      "path": "tests/benchmark_factorized_preparation.py",
+      "sha256": "555799b93ae288bfd7bc0d81713c7a372d5b566cfd0f8dfe773bcced985a5f99",
+      "bytes": 10783
+    },
+    {
+      "path": "tests/benchmark_backtest_strategies.py",
+      "sha256": "4079f960cacfbc72542caf7e645c7d64b0f4d1b7b8f8690046ee0e82d6589163",
+      "bytes": 12890
+    },
+    {
+      "path": "tests/backtest_benchmark/contract.py",
+      "sha256": "a6bff9b85b6750494323aa5846c1ff56e84ec6daa6156fffd5428d8d92d1b6e1",
+      "bytes": 5216
+    },
+    {
+      "path": "tests/backtest_benchmark/worker.py",
+      "sha256": "cb26fb12e70ee4931b777bb731d2a5b7c99b862e0aab66ad7ba018eb9a92656d",
+      "bytes": 5957
+    }
+  ],
+  "fixture_provenance_scope": "Exact committed bytes; upstream market-data provenance was not independently verified."
+}

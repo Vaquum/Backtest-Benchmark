@@ -1,0 +1,10 @@
+{
+  "command": [
+    "/workspace/scratch/008a76ec4981/Backtest-Benchmark/.work/toolchains/rust/bin/cargo",
+    "generate-lockfile"
+  ],
+  "status": "passed",
+  "returncode": 0,
+  "seconds": 1.5131920229978277,
+  "scope": "Upstream has no committed Cargo.lock; freeze one campaign dependency resolution for subsequent --locked tests"
+}

@@ -1,0 +1,6 @@
+Resolved 1 package in 1ms
+   Building backtest-benchmark @ file:///workspace/scratch/008a76ec4981/Backtest-Benchmark
+      Built backtest-benchmark @ file:///workspace/scratch/008a76ec4981/Backtest-Benchmark
+Prepared 1 package in 464ms
+Installed 1 package in 0.62ms
+ + backtest-benchmark==0.1.0 (from file:///workspace/scratch/008a76ec4981/Backtest-Benchmark)

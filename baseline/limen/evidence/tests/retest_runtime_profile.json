@@ -1,0 +1,38 @@
+{
+  "schema_version": 1,
+  "suite": {
+    "started_at": "2026-10-19T15:09:12.389Z",
+    "finished_at": "2026-10-19T15:09:25.798Z",
+    "duration_seconds": 13.409666,
+    "test_count": 3,
+    "passed_count": 3,
+    "failed_count": 0,
+    "skipped_count": 0
+  },
+  "tests": [
+    {
+      "test_name": "tests/test_holdout_research.py::test_holdout_revision_admission",
+      "module": "tests.test_holdout_research",
+      "status": "passed",
+      "duration_seconds": 0.887221,
+      "started_at": "2026-10-19T15:09:13.853Z",
+      "finished_at": "2026-10-19T15:09:14.746Z"
+    },
+    {
+      "test_name": "tests/test_holdout_assessment.py::test_holdout_frozen_causal_assessment",
+      "module": "tests.test_holdout_assessment",
+      "status": "passed",
+      "duration_seconds": 1.095256,
+      "started_at": "2026-10-19T15:09:14.747Z",
+      "finished_at": "2026-10-19T15:09:17.854Z"
+    },
+    {
+      "test_name": "tests/test_factorize_equivalence.py::test_four_cli_experiments_match_precision_baseline_at_12_decimals",
+      "module": "tests.test_factorize_equivalence",
+      "status": "passed",
+      "duration_seconds": 7.708152,
+      "started_at": "2026-10-19T15:09:17.855Z",
+      "finished_at": "2026-10-19T15:09:25.564Z"
+    }
+  ]
+}

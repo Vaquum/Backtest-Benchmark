@@ -1,0 +1,51 @@
+{
+  "candidate_id": "zipline",
+  "source_path": "/workspace/scratch/008a76ec4981/benchmark-sources/zipline",
+  "started_unix": 1792430059.6141207,
+  "commands": [
+    {
+      "argv": [
+        "uv",
+        "venv",
+        "--seed",
+        "--python",
+        "/opt/codex/runtimes/codex-primary-runtime/dependencies/python/bin/python3",
+        "/workspace/scratch/008a76ec4981/Backtest-Benchmark/.work/envs/zipline"
+      ],
+      "returncode": 0,
+      "seconds": 0.2650917999999365
+    },
+    {
+      "argv": [
+        "uv",
+        "pip",
+        "install",
+        "--python",
+        "/workspace/scratch/008a76ec4981/Backtest-Benchmark/.work/envs/zipline/bin/python",
+        "setuptools",
+        "wheel",
+        "pyarrow",
+        "pytest",
+        "Cython<3.2",
+        "setuptools-scm"
+      ],
+      "returncode": 0,
+      "seconds": 1.3243614489983884
+    },
+    {
+      "argv": [
+        "uv",
+        "pip",
+        "install",
+        "--python",
+        "/workspace/scratch/008a76ec4981/Backtest-Benchmark/.work/envs/zipline/bin/python",
+        "/workspace/scratch/008a76ec4981/benchmark-sources/zipline"
+      ],
+      "returncode": 1,
+      "seconds": 50.81262674900063
+    }
+  ],
+  "status": "blocked",
+  "error": "RuntimeError: Command exited 1",
+  "elapsed_seconds": 52.402724742889404
+}

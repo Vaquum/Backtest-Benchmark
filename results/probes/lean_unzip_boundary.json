@@ -1,0 +1,35 @@
+{
+  "candidate_id": "lean",
+  "commit": "d4cac37514427c84d40064cecbf3f0e6be4b0137",
+  "evidence_type": [
+    "Inspected",
+    "Reproduced"
+  ],
+  "scope": "Public Compression.Unzip overwrite=true helper; no automatic remote-data ingestion reachability is claimed.",
+  "protocol": "Call the built pinned source helper with an innocuous parent-relative archive entry targeting a sibling of the extraction subdirectory, entirely inside one new temporary root; verify marker bytes and cleanup the root.",
+  "observed": {
+    "unzip_returned": true,
+    "marker_exists": true,
+    "marker_outside_intended_extraction_subdirectory": true,
+    "marker_inside_probe_temporary_root": true,
+    "marker_sha256": "04cdd539e927169dc7cb5eaeffefcf8317eb0b57e57aa0d755ced786e9e4276b",
+    "loaded_assembly": "/workspace/scratch/008a76ec4981/Backtest-Benchmark/.work/probes/lean-unzip-verz5vj0/bin/Release/net10.0/QuantConnect.Compression.dll",
+    "loaded_assembly_sha256": "459976897a804478a11ca687f2316df8577ea01560d49ccc8dc3fea118c5de3d"
+  },
+  "compiled_source_assembly": "/workspace/scratch/008a76ec4981/benchmark-sources/lean/Compression/bin/Release/QuantConnect.Compression.dll",
+  "build_output": "  Determining projects to restore...\n  Restored /workspace/scratch/008a76ec4981/Backtest-Benchmark/.work/probes/lean-unzip-verz5vj0/Probe.csproj (in 144 ms).\n  Probe -> /workspace/scratch/008a76ec4981/Backtest-Benchmark/.work/probes/lean-unzip-verz5vj0/bin/Release/net10.0/Probe.dll\n\nBuild succeeded.\n    0 Warning(s)\n    0 Error(s)\n\nTime Elapsed 00:00:01.55\n",
+  "runtime_stderr": "",
+  "limits": {
+    "caller_build_timeout_seconds": 60,
+    "probe_timeout_seconds": 15
+  },
+  "source_refs": [
+    {
+      "path": "Compression/Compression.cs",
+      "start_line": 539,
+      "end_line": 564,
+      "url": "https://github.com/QuantConnect/Lean/blob/d4cac37514427c84d40064cecbf3f0e6be4b0137/Compression/Compression.cs#L539-L564"
+    }
+  ],
+  "limitation": "No existing user files were accessed or overwritten. The non-overwrite branch and ordinary market-data readers are separate routes. No claim of a remotely reachable service exploit or live trading effect."
+}

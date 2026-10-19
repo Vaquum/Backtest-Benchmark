@@ -1,0 +1,20 @@
+COMMAND ["uv", "pip", "sync", "--python", "/workspace/scratch/008a76ec4981/Backtest-Benchmark/.work/envs/zipline/bin/python", "--require-hashes", "/workspace/scratch/008a76ec4981/Backtest-Benchmark/locks/zipline.txt"]
+Using Python 3.12.14 environment at: Backtest-Benchmark/.work/envs/zipline
+Resolved 73 packages in 22ms
+Uninstalled 1 package in 10ms
+ - zipline-reloaded==3.2.0 (from file:///workspace/scratch/008a76ec4981/benchmark-sources/zipline)
+COMMAND ["uv", "pip", "install", "--python", "/workspace/scratch/008a76ec4981/Backtest-Benchmark/.work/envs/zipline/bin/python", "--no-deps", "--no-build-isolation", "--reinstall", "benchmark-sources/zipline"]
+Using Python 3.12.14 environment at: Backtest-Benchmark/.work/envs/zipline
+Resolved 1 package in 18.11s
+   Building zipline-reloaded @ file:///workspace/scratch/008a76ec4981/benchmark-sources/zipline
+      Built zipline-reloaded @ file:///workspace/scratch/008a76ec4981/benchmark-sources/zipline
+Prepared 1 package in 1m 54s
+Uninstalled 1 package in 533ms
+Installed 1 package in 6ms
+ ~ zipline-reloaded==3.2.0 (from file:///workspace/scratch/008a76ec4981/benchmark-sources/zipline)
+COMMAND ["/workspace/scratch/008a76ec4981/Backtest-Benchmark/.work/envs/zipline/bin/python", "-c", "import zipline; print(zipline.__file__)"]
+/workspace/scratch/008a76ec4981/Backtest-Benchmark/.work/envs/zipline/lib/python3.12/site-packages/zipline/__init__.py
+COMMAND ["uv", "pip", "check", "--python", "/workspace/scratch/008a76ec4981/Backtest-Benchmark/.work/envs/zipline/bin/python"]
+Using Python 3.12.14 environment at: Backtest-Benchmark/.work/envs/zipline
+Checked 74 packages in 1ms
+All installed packages are compatible

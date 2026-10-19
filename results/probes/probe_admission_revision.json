@@ -1,0 +1,80 @@
+{
+  "scope": "Add source/fixture admission and non-overwriting output without changing scientific probe expectations.",
+  "files": [
+    {
+      "script": "scripts/probes/qstrader_boundaries.py",
+      "before_sha256": "d10b4d2472cbef4084411693ac63254b385aa5c7b76af5479c65910b7035c672",
+      "retained_result": "results/probes/qstrader_boundaries.json",
+      "retained_result_sha256": "26c52268c5b88382a5031afc90155acf2193be3cc04c62cdc77247c2e738012b",
+      "after_sha256": "0694f3c2618e5ac9cb0c185e906346513b288d51eeec38ef3bdd863e3cdeeb7c",
+      "scientific_projection_sha256": "bdba0bf646ed77bf53b0b09189017437eac1d0954c20f2941292a357d191cd52",
+      "scientific_projection_unchanged": true
+    },
+    {
+      "script": "scripts/probes/backtesting_trailing_prefix.py",
+      "before_sha256": "81c726dd69d8464c4c9cb6ef9a7905a5c702ee08461c5539faecd98a9cf2413f",
+      "retained_result": "results/probes/backtesting_trailing_prefix.json",
+      "retained_result_sha256": "0dbb1c7744cae0a8f8906ac87343a1a318f0de2c363e9a1acb2287e98bb09880",
+      "after_sha256": "766d08aea1066624fbed9faaf7da0fd6bac0f2a42fb8a0aedc8ab7dc92680210",
+      "scientific_projection_sha256": "b3434f915fcb3a5362569186d8c39d286761e889ceaad71325bcb6817dc3e954",
+      "scientific_projection_unchanged": true
+    },
+    {
+      "script": "scripts/probes/qlib_async_boundary.py",
+      "before_sha256": "42646e73c9c5ff95a257b096a2634cc7af89594cbb85b736fce54e995d619d63",
+      "retained_result": "results/probes/qlib_async_boundary.json",
+      "retained_result_sha256": "704f2ea6265def2bd997b7a91df3eaf077f0afd169f0fd2c2a61328dafd66025",
+      "after_sha256": "75e85c9604f9e4c808ef1a225724904b19fc3684a99ccd21c711be388cb1782c",
+      "scientific_projection_sha256": "541f6ee6d535a9444673c206a119816d077d27338412290ab844754ec6e25d4f",
+      "scientific_projection_unchanged": true
+    },
+    {
+      "script": "scripts/probes/lean_unzip_boundary.py",
+      "before_sha256": "3f7d2148ade18d4e6c628295639bac4dade61bc47f5dec57d73e00a7538efeaf",
+      "retained_result": "results/probes/lean_unzip_boundary.json",
+      "retained_result_sha256": "86aaa98d55d64ac805f3cc4554dc2b4710515b986d44a7eb12e8ca2a9cb67103",
+      "after_sha256": "a72b3c19c66b5ecbb6479ebe887be0707936eba0fbdc9e8fd76493f7e99b619c",
+      "scientific_projection_sha256": "e2e67a97d5cd7bae75b3c32d27e3aecf4004d0f27ae8221bd8b812c1bffe8046",
+      "scientific_projection_unchanged": true
+    }
+  ],
+  "change_contract": {
+    "candidate_admission": "Catalog commit and clean tracked source required before candidate imports/native invocation and rechecked before output.",
+    "fixture_admission": "Exact catalog SHA-256 required before recorded-data probes and rechecked before output.",
+    "output_admission": "Existing path, including a dangling symlink, rejected before candidate work; final output uses exclusive creation.",
+    "scientific_logic": "Probe bodies, parameters and scientific outcome assertions unchanged after projecting out admission checks, result-admission metadata and output serialization.",
+    "native_binary_limit": "LEAN still requires its recorded source build; source cleanliness alone does not prove arbitrary prebuilt DLL provenance. Loaded/built assembly byte equality is checked by the unchanged native probe."
+  },
+  "shared_helper": {
+    "path": "scripts/probes/common.py",
+    "sha256": "b176bf55a41101b822807674707cb08ae3c6ae2013e9a9b42367a2a64fae1f20"
+  },
+  "wrapper_validation": [
+    {
+      "script": "scripts/probes/qstrader_boundaries.py",
+      "existing_output_rejected_before_source_or_candidate_work": true,
+      "python_optimized_mode": true,
+      "retained_result_unchanged": true
+    },
+    {
+      "script": "scripts/probes/backtesting_trailing_prefix.py",
+      "existing_output_rejected_before_source_or_candidate_work": true,
+      "python_optimized_mode": true,
+      "retained_result_unchanged": true
+    },
+    {
+      "script": "scripts/probes/qlib_async_boundary.py",
+      "existing_output_rejected_before_source_or_candidate_work": true,
+      "python_optimized_mode": true,
+      "retained_result_unchanged": true
+    },
+    {
+      "script": "scripts/probes/lean_unzip_boundary.py",
+      "existing_output_rejected_before_source_or_candidate_work": true,
+      "python_optimized_mode": true,
+      "retained_result_unchanged": true
+    }
+  ],
+  "candidate_probe_rerun_during_revision": false,
+  "validation_scope": "Static scientific-AST equivalence, syntax, before/after/result hashes and four early refusal checks only; native/scientific probes were not rerun during exclusive timing."
+}

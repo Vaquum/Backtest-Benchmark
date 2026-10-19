@@ -1,0 +1,368 @@
+{
+  "limen": [
+    {
+      "claim": "Linear array return path; multiple full-length temporaries and cumulative transforms; internal kernel alone omits snapshot validation/native metrics.",
+      "evidence": "Inspected",
+      "source_refs": [
+        {
+          "path": "limen/backtest/long_flat_strategy.py",
+          "start_line": 96,
+          "end_line": 133,
+          "url": "https://github.com/Vaquum/Limen/blob/29837e666604eee74a2ac94f328fb9803724342a/limen/backtest/long_flat_strategy.py#L96-L133"
+        },
+        {
+          "path": "limen/backtest/_snapshot_execution.py",
+          "start_line": 128,
+          "end_line": 149,
+          "url": "https://github.com/Vaquum/Limen/blob/29837e666604eee74a2ac94f328fb9803724342a/limen/backtest/_snapshot_execution.py#L128-L149"
+        }
+      ]
+    },
+    {
+      "claim": "Return-based trace has no native order cash/quantity ledger. Full snapshot validates its execution result before producing metrics.",
+      "evidence": "Inspected",
+      "source_refs": [
+        {
+          "path": "limen/backtest/_snapshot_execution.py",
+          "start_line": 16,
+          "end_line": 34,
+          "url": "https://github.com/Vaquum/Limen/blob/29837e666604eee74a2ac94f328fb9803724342a/limen/backtest/_snapshot_execution.py#L16-L34"
+        },
+        {
+          "path": "limen/backtest/_snapshot_execution.py",
+          "start_line": 110,
+          "end_line": 149,
+          "url": "https://github.com/Vaquum/Limen/blob/29837e666604eee74a2ac94f328fb9803724342a/limen/backtest/_snapshot_execution.py#L110-L149"
+        }
+      ]
+    },
+    {
+      "claim": "Zero-cost common contract admitted; native cost formula differs from cash-affordable fill-time entry fees. No costed timing may be assigned for this adapter.",
+      "evidence": "Inspected",
+      "source_refs": [
+        {
+          "path": "limen/backtest/long_flat_strategy.py",
+          "start_line": 118,
+          "end_line": 131,
+          "url": "https://github.com/Vaquum/Limen/blob/29837e666604eee74a2ac94f328fb9803724342a/limen/backtest/long_flat_strategy.py#L118-L131"
+        }
+      ]
+    }
+  ],
+  "backtrader": [
+    {
+      "claim": "Single strategy executes through native Cerebro runstrategies; optimization uses a separate process pool branch. Our preload/runonce/one-strategy path is not an optimization scaling measurement.",
+      "evidence": "Inspected",
+      "source_refs": [
+        {
+          "path": "backtrader/cerebro.py",
+          "start_line": 1126,
+          "end_line": 1157,
+          "url": "https://github.com/mementum/backtrader/blob/b853d7c90b6721476eb5a5ea3135224e33db1f14/backtrader/cerebro.py#L1126-L1157"
+        },
+        {
+          "path": "backtrader/cerebro.py",
+          "start_line": 1207,
+          "end_line": 1218,
+          "url": "https://github.com/mementum/backtrader/blob/b853d7c90b6721476eb5a5ea3135224e33db1f14/backtrader/cerebro.py#L1207-L1218"
+        },
+        {
+          "path": "backtrader/cerebro.py",
+          "start_line": 1294,
+          "end_line": 1304,
+          "url": "https://github.com/mementum/backtrader/blob/b853d7c90b6721476eb5a5ea3135224e33db1f14/backtrader/cerebro.py#L1294-L1304"
+        }
+      ]
+    },
+    {
+      "claim": "Memory-saving exactbars changes the execution path by disabling runonce and possibly preload; current full-input benchmark does not measure that tradeoff.",
+      "evidence": "Inspected",
+      "source_refs": [
+        {
+          "path": "backtrader/cerebro.py",
+          "start_line": 1062,
+          "end_line": 1068,
+          "url": "https://github.com/mementum/backtrader/blob/b853d7c90b6721476eb5a5ea3135224e33db1f14/backtrader/cerebro.py#L1062-L1068"
+        }
+      ]
+    },
+    {
+      "claim": "Preload feeds plus event/strategy history mean an actual full framework simulation, not only a return kernel. Native observers disabled explicitly, not statistical or optimization methods measured.",
+      "evidence": "Inspected",
+      "source_refs": [
+        {
+          "path": "backtrader/cerebro.py",
+          "start_line": 1649,
+          "end_line": 1711,
+          "url": "https://github.com/mementum/backtrader/blob/b853d7c90b6721476eb5a5ea3135224e33db1f14/backtrader/cerebro.py#L1649-L1711"
+        }
+      ]
+    }
+  ],
+  "vectorbt": [
+    {
+      "claim": "Public from_signals broadcasts inputs and chooses the static signal dispatcher where callbacks are default. The adapter explicitly selects Numba; Rust is not measured.",
+      "evidence": "Inspected",
+      "source_refs": [
+        {
+          "path": "vectorbt/portfolio/base.py",
+          "start_line": 2937,
+          "end_line": 2953,
+          "url": "https://github.com/polakowo/vectorbt/blob/0875d984fbd66f8305d172980e55ee30a45153e3/vectorbt/portfolio/base.py#L2937-L2953"
+        },
+        {
+          "path": "vectorbt/portfolio/base.py",
+          "start_line": 2998,
+          "end_line": 3010,
+          "url": "https://github.com/polakowo/vectorbt/blob/0875d984fbd66f8305d172980e55ee30a45153e3/vectorbt/portfolio/base.py#L2998-L3010"
+        },
+        {
+          "path": "vectorbt/portfolio/dispatch.py",
+          "start_line": 1097,
+          "end_line": 1127,
+          "url": "https://github.com/polakowo/vectorbt/blob/0875d984fbd66f8305d172980e55ee30a45153e3/vectorbt/portfolio/dispatch.py#L1097-L1127"
+        }
+      ]
+    },
+    {
+      "claim": "Numba compiled primitives cache code; fresh NUMBA_CACHE_DIR per worker and distinct first/warm timings avoid presenting warm compilation as process-cold behavior.",
+      "evidence": "Inspected",
+      "source_refs": [
+        {
+          "path": "vectorbt/portfolio/nb.py",
+          "start_line": 65,
+          "end_line": 86,
+          "url": "https://github.com/polakowo/vectorbt/blob/0875d984fbd66f8305d172980e55ee30a45153e3/vectorbt/portfolio/nb.py#L65-L86"
+        },
+        {
+          "path": "vectorbt/portfolio/nb.py",
+          "start_line": 1915,
+          "end_line": 1918,
+          "url": "https://github.com/polakowo/vectorbt/blob/0875d984fbd66f8305d172980e55ee30a45153e3/vectorbt/portfolio/nb.py#L1915-L1918"
+        }
+      ]
+    },
+    {
+      "claim": "Native assets/cash/value accessors are cached/lazy; extraction can compile/materialize arrays and must be included in full-common latency. Each timed call builds a fresh Portfolio; no reuse of old Portfolio output.",
+      "evidence": "Inspected",
+      "source_refs": [
+        {
+          "path": "vectorbt/portfolio/base.py",
+          "start_line": 4332,
+          "end_line": 4347,
+          "url": "https://github.com/polakowo/vectorbt/blob/0875d984fbd66f8305d172980e55ee30a45153e3/vectorbt/portfolio/base.py#L4332-L4347"
+        },
+        {
+          "path": "vectorbt/portfolio/base.py",
+          "start_line": 4446,
+          "end_line": 4485,
+          "url": "https://github.com/polakowo/vectorbt/blob/0875d984fbd66f8305d172980e55ee30a45153e3/vectorbt/portfolio/base.py#L4446-L4485"
+        },
+        {
+          "path": "vectorbt/portfolio/base.py",
+          "start_line": 4546,
+          "end_line": 4580,
+          "url": "https://github.com/polakowo/vectorbt/blob/0875d984fbd66f8305d172980e55ee30a45153e3/vectorbt/portfolio/base.py#L4546-L4580"
+        }
+      ]
+    }
+  ],
+  "backtesting_py": [
+    {
+      "claim": "Public run copies the data wrapper, constructs broker/strategy, iterates every bar and computes native statistics. Native statistics are unavoidable work included in its full engine scope.",
+      "evidence": "Inspected",
+      "source_refs": [
+        {
+          "path": "backtesting/backtesting.py",
+          "start_line": 1321,
+          "end_line": 1346,
+          "url": "https://github.com/kernc/backtesting.py/blob/ca2e2611621e472542ba90f7243a1fa06a7d7108/backtesting/backtesting.py#L1321-L1346"
+        },
+        {
+          "path": "backtesting/backtesting.py",
+          "start_line": 1373,
+          "end_line": 1383,
+          "url": "https://github.com/kernc/backtesting.py/blob/ca2e2611621e472542ba90f7243a1fa06a7d7108/backtesting/backtesting.py#L1373-L1383"
+        }
+      ]
+    },
+    {
+      "claim": "FractionalBacktest transforms OHLC and volume into small-unit representation, invokes the parent run, then rescales actual trade outputs. Our 1e-12 unit is explicit; prices are input-real, representation conversion is native.",
+      "evidence": "Inspected",
+      "source_refs": [
+        {
+          "path": "backtesting/lib.py",
+          "start_line": 536,
+          "end_line": 557,
+          "url": "https://github.com/kernc/backtesting.py/blob/ca2e2611621e472542ba90f7243a1fa06a7d7108/backtesting/lib.py#L536-L557"
+        }
+      ]
+    },
+    {
+      "claim": "Optimization is a distinct Pool/shared-memory path; single-run timing cannot establish parameter-search scaling.",
+      "evidence": "Inspected",
+      "source_refs": [
+        {
+          "path": "backtesting/backtesting.py",
+          "start_line": 1538,
+          "end_line": 1553,
+          "url": "https://github.com/kernc/backtesting.py/blob/ca2e2611621e472542ba90f7243a1fa06a7d7108/backtesting/backtesting.py#L1538-L1553"
+        }
+      ]
+    },
+    {
+      "claim": "Frozen setup.py explicitly requires setuptools_git and setuptools_scm. Initial nonisolated build lacked them, omitted its JS import resource; rebuilt with exact declared build tools, original failure retained.",
+      "evidence": "Inspected",
+      "source_refs": [
+        {
+          "path": "setup.py",
+          "start_line": 23,
+          "end_line": 32,
+          "url": "https://github.com/kernc/backtesting.py/blob/ca2e2611621e472542ba90f7243a1fa06a7d7108/setup.py#L23-L32"
+        },
+        {
+          "path": "backtesting/_plotting.py",
+          "start_line": 47,
+          "end_line": 49,
+          "url": "https://github.com/kernc/backtesting.py/blob/ca2e2611621e472542ba90f7243a1fa06a7d7108/backtesting/_plotting.py#L47-L49"
+        }
+      ]
+    }
+  ],
+  "bt": [
+    {
+      "claim": "Source build compiles core.py with Cython; observed installed core extension is recorded by adapter. Backtest copies strategy, loops dates, and computes native ffn stats.",
+      "evidence": "Inspected",
+      "source_refs": [
+        {
+          "path": "pyproject.toml",
+          "start_line": 124,
+          "end_line": 132,
+          "url": "https://github.com/pmorissette/bt/blob/4b76bad2dbf3a49e99feb49db3eee1dde2ef8e12/pyproject.toml#L124-L132"
+        },
+        {
+          "path": "bt/backtest.py",
+          "start_line": 236,
+          "end_line": 244,
+          "url": "https://github.com/pmorissette/bt/blob/4b76bad2dbf3a49e99feb49db3eee1dde2ef8e12/bt/backtest.py#L236-L244"
+        },
+        {
+          "path": "bt/backtest.py",
+          "start_line": 440,
+          "end_line": 488,
+          "url": "https://github.com/pmorissette/bt/blob/4b76bad2dbf3a49e99feb49db3eee1dde2ef8e12/bt/backtest.py#L440-L488"
+        }
+      ]
+    },
+    {
+      "claim": "Native state caches use backing NumPy arrays; update writes values, fees and cash by row. This is a compiled stateful portfolio path, not pure Python vectorized returns.",
+      "evidence": "Inspected",
+      "source_refs": [
+        {
+          "path": "bt/core.py",
+          "start_line": 140,
+          "end_line": 177,
+          "url": "https://github.com/pmorissette/bt/blob/4b76bad2dbf3a49e99feb49db3eee1dde2ef8e12/bt/core.py#L140-L177"
+        },
+        {
+          "path": "bt/core.py",
+          "start_line": 680,
+          "end_line": 700,
+          "url": "https://github.com/pmorissette/bt/blob/4b76bad2dbf3a49e99feb49db3eee1dde2ef8e12/bt/core.py#L680-L700"
+        },
+        {
+          "path": "bt/core.py",
+          "start_line": 916,
+          "end_line": 919,
+          "url": "https://github.com/pmorissette/bt/blob/4b76bad2dbf3a49e99feb49db3eee1dde2ef8e12/bt/core.py#L916-L919"
+        },
+        {
+          "path": "bt/core.py",
+          "start_line": 1532,
+          "end_line": 1605,
+          "url": "https://github.com/pmorissette/bt/blob/4b76bad2dbf3a49e99feb49db3eee1dde2ef8e12/bt/core.py#L1532-L1605"
+        }
+      ]
+    },
+    {
+      "claim": "Native allocation may iteratively adjust quantity for arbitrary commission functions; max-iteration and progress checks exist. Zero costs avoid those extra iterations; costed comparisons cannot extrapolate that case.",
+      "evidence": "Inspected",
+      "source_refs": [
+        {
+          "path": "bt/core.py",
+          "start_line": 1642,
+          "end_line": 1679,
+          "url": "https://github.com/pmorissette/bt/blob/4b76bad2dbf3a49e99feb49db3eee1dde2ef8e12/bt/core.py#L1642-L1679"
+        },
+        {
+          "path": "bt/core.py",
+          "start_line": 1694,
+          "end_line": 1758,
+          "url": "https://github.com/pmorissette/bt/blob/4b76bad2dbf3a49e99feb49db3eee1dde2ef8e12/bt/core.py#L1694-L1758"
+        }
+      ]
+    },
+    {
+      "claim": "Native transaction extraction reconstructs differences in position histories; empty-security strategies hit iloc[0] after an empty frame. Adapter now explicitly registers the one real-data Security in all scenarios.",
+      "evidence": "Inspected",
+      "source_refs": [
+        {
+          "path": "bt/core.py",
+          "start_line": 1199,
+          "end_line": 1248,
+          "url": "https://github.com/pmorissette/bt/blob/4b76bad2dbf3a49e99feb49db3eee1dde2ef8e12/bt/core.py#L1199-L1248"
+        }
+      ]
+    }
+  ],
+  "qstrader": [
+    {
+      "claim": "Native BacktestTradingSession builds DailyBusinessDaySimulationEngine and runs broker/quant-system/equity updates. The hourly adapter uses native broker/portfolio components with its own loop; no full-framework ranking is allowed.",
+      "evidence": "Inspected",
+      "source_refs": [
+        {
+          "path": "qstrader/trading/backtest.py",
+          "start_line": 206,
+          "end_line": 215,
+          "url": "https://github.com/mhallsmoore/qstrader/blob/4c59e1584e83fcc2be644b820f827c0dd1b45c02/qstrader/trading/backtest.py#L206-L215"
+        },
+        {
+          "path": "qstrader/trading/backtest.py",
+          "start_line": 382,
+          "end_line": 432,
+          "url": "https://github.com/mhallsmoore/qstrader/blob/4c59e1584e83fcc2be644b820f827c0dd1b45c02/qstrader/trading/backtest.py#L382-L432"
+        }
+      ]
+    },
+    {
+      "claim": "Broker marks all held assets each update and drains/sorts its order queues before native execution. Component memory and latency do not include higher-level optimization, risk or historical data workflow.",
+      "evidence": "Inspected",
+      "source_refs": [
+        {
+          "path": "qstrader/broker/simulated_broker.py",
+          "start_line": 650,
+          "end_line": 682,
+          "url": "https://github.com/mhallsmoore/qstrader/blob/4c59e1584e83fcc2be644b820f827c0dd1b45c02/qstrader/broker/simulated_broker.py#L650-L682"
+        }
+      ]
+    },
+    {
+      "claim": "Percentage fee basis rounds consideration; cash update uses exact price times quantity. Current common fee contract is explicitly rejected, not silently altered.",
+      "evidence": "Inspected",
+      "source_refs": [
+        {
+          "path": "qstrader/broker/simulated_broker.py",
+          "start_line": 567,
+          "end_line": 603,
+          "url": "https://github.com/mhallsmoore/qstrader/blob/4c59e1584e83fcc2be644b820f827c0dd1b45c02/qstrader/broker/simulated_broker.py#L567-L603"
+        },
+        {
+          "path": "qstrader/broker/portfolio/portfolio.py",
+          "start_line": 214,
+          "end_line": 233,
+          "url": "https://github.com/mhallsmoore/qstrader/blob/4c59e1584e83fcc2be644b820f827c0dd1b45c02/qstrader/broker/portfolio/portfolio.py#L214-L233"
+        }
+      ]
+    }
+  ]
+}

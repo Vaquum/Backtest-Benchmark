@@ -1,0 +1,38 @@
+{
+  "command": [
+    "/workspace/scratch/008a76ec4981/Backtest-Benchmark/.work/repro-envs/limen/bin/python",
+    "-m",
+    "bench.worker",
+    "--engine",
+    "limen",
+    "--prepared",
+    "/workspace/scratch/008a76ec4981/Backtest-Benchmark/.work/runs/fresh-limen-verification/prepared-sma_cross.npz",
+    "--prepared-sha256",
+    "a4ae634f0328a37b7080e5131271a4cddce4d9c47bdbb428744338dbb6e754fb",
+    "--contract",
+    "/workspace/scratch/008a76ec4981/Backtest-Benchmark/.work/runs/fresh-limen-verification/contract.json",
+    "--environment-manifest",
+    "/workspace/scratch/008a76ec4981/Backtest-Benchmark/.work/manifests/limen.json",
+    "--output",
+    "/workspace/scratch/008a76ec4981/Backtest-Benchmark/.work/runs/fresh-limen-verification/limen/sma_cross/preflight/result",
+    "--benchmark-code-manifest",
+    "/workspace/scratch/008a76ec4981/Backtest-Benchmark/.work/runs/fresh-limen-verification/benchmark-code.json",
+    "--mode",
+    "preflight",
+    "--warm-repeats",
+    "9"
+  ],
+  "returncode": 0,
+  "timed_out": false,
+  "process_wall_ms": 1036.332034,
+  "launch_to_ready_ms": 39.810067,
+  "launch_to_first_valid_ms": 929.77847,
+  "parent_observed_events_ms": {
+    "ready": 39.810067,
+    "first_valid": 929.77847,
+    "complete": 931.739909
+  },
+  "stdout_path": "/workspace/scratch/008a76ec4981/Backtest-Benchmark/.work/runs/fresh-limen-verification/limen/sma_cross/preflight/stdout.log",
+  "startup_scope": "Parent observed process launch to worker ready event, before scientific/engine imports; IPC scheduling is included",
+  "first_valid_scope": "Process launch through source verification, imports, input load, independent oracle, first engine call, extraction and successful parity"
+}

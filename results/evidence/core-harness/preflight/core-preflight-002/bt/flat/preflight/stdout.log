@@ -1,0 +1,20 @@
+@@BENCH_EVENT@@{"event": "ready", "worker_perf_counter_ns": 38101317347904}
+Traceback (most recent call last):
+  File "/workspace/scratch/008a76ec4981/Backtest-Benchmark/bench/worker.py", line 116, in main
+    actual, summary, parity = execute(adapter.run, adapter.extract, 'first', report['timing_samples'])
+                              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/workspace/scratch/008a76ec4981/Backtest-Benchmark/bench/worker.py", line 99, in execute
+    actual = extract(native)
+             ^^^^^^^^^^^^^^^
+  File "/workspace/scratch/008a76ec4981/Backtest-Benchmark/bench/adapters/bt.py", line 48, in extract
+    transactions = strategy.get_transactions()
+                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "bt/core.py", line 1224, in bt.core.StrategyBase.get_transactions
+  File "/workspace/scratch/008a76ec4981/Backtest-Benchmark/.work/envs/bt/lib/python3.12/site-packages/pandas/core/indexing.py", line 1192, in __getitem__
+    return self._getitem_axis(maybe_callable, axis=axis)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/workspace/scratch/008a76ec4981/Backtest-Benchmark/.work/envs/bt/lib/python3.12/site-packages/pandas/core/indexing.py", line 1753, in _getitem_axis
+    self._validate_integer(key, axis)
+  File "/workspace/scratch/008a76ec4981/Backtest-Benchmark/.work/envs/bt/lib/python3.12/site-packages/pandas/core/indexing.py", line 1686, in _validate_integer
+    raise IndexError("single positional indexer is out-of-bounds")
+IndexError: single positional indexer is out-of-bounds

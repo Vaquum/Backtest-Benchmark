@@ -1,0 +1,56 @@
+[
+  {
+    "path": "prepared-buy_and_hold.npz",
+    "bytes": 60240,
+    "sha256": "928f6143505ce916d7afb6d43a147b6b575e25a41000daa3ae1f55ef21671cf0",
+    "reason": "Recorded market/result array or runtime cache; regenerate from the pinned input"
+  },
+  {
+    "path": "prepared-flat.npz",
+    "bytes": 60240,
+    "sha256": "e5c906ff2f45fb6d8250e4f42303534a3a4034cdae1b4b720c9e984420979629",
+    "reason": "Recorded market/result array or runtime cache; regenerate from the pinned input"
+  },
+  {
+    "path": "prepared-sma_cross.npz",
+    "bytes": 60240,
+    "sha256": "a4ae634f0328a37b7080e5131271a4cddce4d9c47bdbb428744338dbb6e754fb",
+    "reason": "Recorded market/result array or runtime cache; regenerate from the pinned input"
+  },
+  {
+    "path": "qlib/buy_and_hold/preflight/result/actual.npz",
+    "bytes": 35545,
+    "sha256": "cfcfc53e7e460b6a790af48b0e4b038c02d2da8d132ced485ea1122a3d9feeb5",
+    "reason": "Recorded market/result array or runtime cache; regenerate from the pinned input"
+  },
+  {
+    "path": "qlib/buy_and_hold/preflight/result/oracle.npz",
+    "bytes": 35545,
+    "sha256": "cfcfc53e7e460b6a790af48b0e4b038c02d2da8d132ced485ea1122a3d9feeb5",
+    "reason": "Recorded market/result array or runtime cache; regenerate from the pinned input"
+  },
+  {
+    "path": "qlib/flat/preflight/result/actual.npz",
+    "bytes": 35479,
+    "sha256": "9e01026e66f92c0419e5a7c75d0996d2398f4bff7503be19136bde4f00bbdbe4",
+    "reason": "Recorded market/result array or runtime cache; regenerate from the pinned input"
+  },
+  {
+    "path": "qlib/flat/preflight/result/oracle.npz",
+    "bytes": 35479,
+    "sha256": "dd523ab5d79a6df0f0ce32695e69d8bbd28ad1a31cf25f0e65c5bf2b7d8db098",
+    "reason": "Recorded market/result array or runtime cache; regenerate from the pinned input"
+  },
+  {
+    "path": "qlib/sma_cross/preflight/result/actual.npz",
+    "bytes": 35677,
+    "sha256": "bcf85a116153f17c0c86702218e87e672303b1892a6f3e04d03f1613ae6614de",
+    "reason": "Recorded market/result array or runtime cache; regenerate from the pinned input"
+  },
+  {
+    "path": "qlib/sma_cross/preflight/result/oracle.npz",
+    "bytes": 35677,
+    "sha256": "bcf85a116153f17c0c86702218e87e672303b1892a6f3e04d03f1613ae6614de",
+    "reason": "Recorded market/result array or runtime cache; regenerate from the pinned input"
+  }
+]

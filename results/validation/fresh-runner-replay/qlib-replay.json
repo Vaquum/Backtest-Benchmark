@@ -1,0 +1,27 @@
+{
+  "purpose": "Exercise the stable manifest emitted by a fresh bootstrap_extra.py environment",
+  "command": [
+    "/workspace/scratch/008a76ec4981/Backtest-Benchmark/.venv/bin/python",
+    "-m",
+    "bench",
+    "verify",
+    "--input",
+    ".work/data/recorded_spot_1h_2024.parquet",
+    "--expected-sha256",
+    "a634bbd4f3692fac7bc88512da588e7772f4bd1b749567606d5314e54d0adf72",
+    "--output",
+    ".work/runs/fresh-qlib-verification",
+    "--engines",
+    "qlib",
+    "--strategies",
+    "buy_and_hold",
+    "sma_cross",
+    "flat",
+    "--rows",
+    "999",
+    "--env-root",
+    "/workspace/scratch/008a76ec4981/Backtest-Benchmark/.work/repro-extra/envs"
+  ],
+  "returncode": 0,
+  "log": "7-qlib-replay.log"
+}

@@ -1,0 +1,211 @@
+{
+  "engine": "qstrader",
+  "status": "installed",
+  "source_path": "/workspace/scratch/008a76ec4981/benchmark-sources/qstrader",
+  "environment_path": "/workspace/scratch/008a76ec4981/Backtest-Benchmark/.work/envs/qstrader",
+  "catalog": {
+    "id": "qstrader",
+    "repository": "mhallsmoore/qstrader",
+    "name": "QSTrader",
+    "track": "portfolio",
+    "url": "https://github.com/mhallsmoore/qstrader",
+    "commit": "4c59e1584e83fcc2be644b820f827c0dd1b45c02",
+    "commit_date": "2024-06-24T13:51:17+01:00",
+    "source_url": "https://github.com/mhallsmoore/qstrader/tree/4c59e1584e83fcc2be644b820f827c0dd1b45c02",
+    "license_files": [
+      {
+        "path": "LICENSE",
+        "sha256": "dc1797cc31d307ad8f651df2bd739ca623db4e4c6bf6a411eb2c15fd4f33c9d4",
+        "url": "https://github.com/mhallsmoore/qstrader/blob/4c59e1584e83fcc2be644b820f827c0dd1b45c02/LICENSE"
+      }
+    ],
+    "revision_policy": "Default branch HEAD captured 2026-10-19",
+    "eligibility": "source_auditable"
+  },
+  "created_utc": "2026-10-19T17:20:54.119791+00:00",
+  "commands": [
+    {
+      "command": [
+        "uv",
+        "venv",
+        "--python",
+        "/opt/codex/runtimes/codex-primary-runtime/dependencies/python/bin/python3.12",
+        "/workspace/scratch/008a76ec4981/Backtest-Benchmark/.work/envs/qstrader"
+      ],
+      "returncode": 0,
+      "wall_seconds": 0.013198025000747293
+    },
+    {
+      "command": [
+        "uv",
+        "pip",
+        "compile",
+        "/workspace/scratch/008a76ec4981/Backtest-Benchmark/.work/bootstrap/qstrader/attempt-1792430454119662213/requirements.in",
+        "--python",
+        "/workspace/scratch/008a76ec4981/Backtest-Benchmark/.work/envs/qstrader/bin/python",
+        "--generate-hashes",
+        "--no-emit-package",
+        "qstrader",
+        "--output-file",
+        "/workspace/scratch/008a76ec4981/Backtest-Benchmark/.work/bootstrap/qstrader/attempt-1792430454119662213/dependencies.lock"
+      ],
+      "returncode": 0,
+      "wall_seconds": 0.17213509099383373
+    },
+    {
+      "command": [
+        "uv",
+        "pip",
+        "install",
+        "--python",
+        "/workspace/scratch/008a76ec4981/Backtest-Benchmark/.work/envs/qstrader/bin/python",
+        "--require-hashes",
+        "-r",
+        "/workspace/scratch/008a76ec4981/Backtest-Benchmark/.work/bootstrap/qstrader/attempt-1792430454119662213/dependencies.lock"
+      ],
+      "returncode": 0,
+      "wall_seconds": 0.16608940100559266
+    },
+    {
+      "command": [
+        "uv",
+        "pip",
+        "install",
+        "--python",
+        "/workspace/scratch/008a76ec4981/Backtest-Benchmark/.work/envs/qstrader/bin/python",
+        "--no-deps",
+        "--no-build-isolation",
+        "/workspace/scratch/008a76ec4981/benchmark-sources/qstrader"
+      ],
+      "returncode": 0,
+      "wall_seconds": 0.31167048800125485
+    }
+  ],
+  "lock_origin": "new dependency resolution; exact generated hash lock retained",
+  "source_commit": "4c59e1584e83fcc2be644b820f827c0dd1b45c02",
+  "python": "/workspace/scratch/008a76ec4981/Backtest-Benchmark/.work/envs/qstrader/bin/python",
+  "dependency_lock": "/workspace/scratch/008a76ec4981/Backtest-Benchmark/.work/bootstrap/qstrader/attempt-1792430454119662213/dependencies.lock",
+  "dependency_lock_sha256": "1ca35129da3bb9cdaefb3576664373d3de27988ebb65d4a574149ca393f678ed",
+  "observed": {
+    "python": "3.12.14 (main, Aug 25 2026, 14:00:49) [Clang 22.1.3 ]",
+    "platform": "Linux-6.18.55-x86_64-with-glibc2.39",
+    "prefix": "/workspace/scratch/008a76ec4981/Backtest-Benchmark/.work/envs/qstrader",
+    "distributions": [
+      {
+        "name": "click",
+        "version": "8.5.0"
+      },
+      {
+        "name": "contourpy",
+        "version": "1.4.0"
+      },
+      {
+        "name": "cycler",
+        "version": "0.12.1"
+      },
+      {
+        "name": "Cython",
+        "version": "3.3.0"
+      },
+      {
+        "name": "fonttools",
+        "version": "4.67.0"
+      },
+      {
+        "name": "hatch-cython",
+        "version": "0.6.0"
+      },
+      {
+        "name": "hatchling",
+        "version": "1.32.4"
+      },
+      {
+        "name": "kiwisolver",
+        "version": "1.5.1"
+      },
+      {
+        "name": "matplotlib",
+        "version": "3.11.2"
+      },
+      {
+        "name": "numpy",
+        "version": "2.2.6"
+      },
+      {
+        "name": "packaging",
+        "version": "26.3"
+      },
+      {
+        "name": "pandas",
+        "version": "2.3.3"
+      },
+      {
+        "name": "pathspec",
+        "version": "1.1.1"
+      },
+      {
+        "name": "pillow",
+        "version": "13.0.0"
+      },
+      {
+        "name": "pluggy",
+        "version": "1.7.0"
+      },
+      {
+        "name": "pyarrow",
+        "version": "23.0.1"
+      },
+      {
+        "name": "pyparsing",
+        "version": "3.3.3"
+      },
+      {
+        "name": "python-dateutil",
+        "version": "2.9.0.post0"
+      },
+      {
+        "name": "pytz",
+        "version": "2026.5"
+      },
+      {
+        "name": "qstrader",
+        "version": "0.3.0"
+      },
+      {
+        "name": "seaborn",
+        "version": "0.13.2"
+      },
+      {
+        "name": "setuptools",
+        "version": "84.0.0"
+      },
+      {
+        "name": "six",
+        "version": "1.17.0"
+      },
+      {
+        "name": "threadpoolctl",
+        "version": "3.6.0"
+      },
+      {
+        "name": "tomlkit",
+        "version": "0.15.2"
+      },
+      {
+        "name": "trove-classifiers",
+        "version": "2026.9.21.13"
+      },
+      {
+        "name": "tzdata",
+        "version": "2026.5"
+      },
+      {
+        "name": "wheel",
+        "version": "0.48.0"
+      }
+    ],
+    "candidate_version": "0.3.0",
+    "candidate_direct_url": "{\"url\":\"file:///workspace/scratch/008a76ec4981/benchmark-sources/qstrader\",\"dir_info\":{}}"
+  },
+  "system_site_packages": false
+}

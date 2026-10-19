@@ -1,0 +1,11 @@
+@@BENCH_EVENT@@{"event": "ready", "worker_perf_counter_ns": 38254906882256}
+Traceback (most recent call last):
+  File "/workspace/scratch/008a76ec4981/Backtest-Benchmark/bench/worker.py", line 77, in main
+    adapter = create_adapter(args.engine, data, contract)
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/workspace/scratch/008a76ec4981/Backtest-Benchmark/bench/adapters/__init__.py", line 18, in create_adapter
+    adapter = module.create_adapter(data, contract)
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/workspace/scratch/008a76ec4981/Backtest-Benchmark/bench/adapters/backtesting_py.py", line 15, in create_adapter
+    raise UnsupportedContract('The current FractionalBacktest adapter admits only zero costs; cost-time observations and spread semantics require a separate validated adapter')
+bench.api.UnsupportedContract: The current FractionalBacktest adapter admits only zero costs; cost-time observations and spread semantics require a separate validated adapter

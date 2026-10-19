@@ -1,0 +1,77 @@
+[
+  {
+    "id": "S01",
+    "scope": "Configuration-to-code and serialized-object admission on each supported public route; trusted strategy code, authenticated operators and hostile declarative inputs are separate threat models.",
+    "protocol": "Trace parser, schema, resolver, attribute lookup and final invocation together. Where executable guards constrain code selection, check disallowed names, prefix collisions, imported-attribute traversal, trust-flag types and pickle globals without invoking dangerous targets. Record defaults and explicit opt-outs. Treat ordinary trusted Python/compiled strategies as code, not a sandbox failure; a fixed engine without a constrained configuration surface is out of scope for that surface."
+  },
+  {
+    "id": "S02",
+    "scope": "Numeric, type, shape and schema admission at equivalent public constructors, configuration paths, data loaders, callbacks and execution kernels.",
+    "protocol": "Run the same applicable invalid-type, NaN/Inf, bound, missing/duplicate field, axis/shape and unknown-key corpus at each route. Record rejection type and stage, unchanged-state checks and any numerical consequences of accepted inputs. Test Python assertions under the declared optimization mode. Separate intended sentinels, score domains, fee rebates and borrowing from invalid values; never compare rejection percentages across different applicable corpora."
+  },
+  {
+    "id": "S03",
+    "scope": "Input-dependent loops, allocation, archive expansion, queues, process/thread dispatch and algorithm-runtime budgets; configuration defaults and native versus OS-enforced bounds are distinguished.",
+    "protocol": "Inspect progress/termination conditions, finite parameter checks, dimensions, queue capacities, concurrency limits and workload deadlines. Probe extreme small inputs only under an external process deadline and memory limit. Report admitted work, peak RSS, wall time and cleanup, separating simulated-time deadlines, polling intervals, managed-heap monitors and hard process limits. Do not execute an unbounded case without containment."
+  },
+  {
+    "id": "S04",
+    "scope": "Native or explicitly supplied ingestion adapters for files, network responses, archives, caches and public download endpoints; each address/path trust boundary is named.",
+    "protocol": "Use controlled local fixtures to check scheme/address policy, redirect behavior, path normalization and containment, connection/read/overall timeouts, response bytes, decompressed bytes/member counts and cache/source revalidation. Keep traversal probes entirely inside one newly created temporary root. Attribute guarantees only to actual call paths and the pinned standard-library/dependency version. An already-loaded-array engine requires a separately audited ingestion adapter."
+  },
+  {
+    "id": "S05",
+    "scope": "Claimed content identity of configuration, input data, code, model, result and environment artifacts at creation, reuse and every consuming read.",
+    "protocol": "Declare exactly which bytes and semantic fields each identifier binds. Change a non-identity field or referenced artifact while retaining the claimed digest/key and require consumers claiming that identity to recompute and reject mismatches. Test malformed hashes, alias/prefix ambiguity and changed reference targets. Distinguish UUIDs, configuration-only cache keys, canonical result digests and full study manifests. Fixed execution routes need an identity adapter for a managed-research comparison."
+  },
+  {
+    "id": "S06",
+    "scope": "Persisted records, event logs, model/results, reference graphs and cache reads; immutable experiment evidence and disposable caches have different contracts.",
+    "protocol": "For the declared format, mutate headers/checksums, encoding, order, duplicate IDs, references, digests, missing members, counts and aligned arrays. Verify the documented-by-code error route, expected logical reconstruction and whether failure changes bytes/mtime. Distinguish explicit cache invalidation/recompute from fail-closed immutable admission, type allowlists from integrity hashes, and hashes from tamper authentication. State which optional backend and verifier must be enabled."
+  },
+  {
+    "id": "S07",
+    "scope": "Native or adapter-owned persistent commit frontiers, experiment/task recovery, event replay and live startup reconciliation; each durable store and external side effect is scoped separately.",
+    "protocol": "Interrupt at write, flush, rename, database commit, watermark and acknowledgement boundaries. Require exact logical committed-prefix identity, coherent parameters/predictions/orders/results and defined recovery of in-flight work. Test competing writers and malformed committed evidence. Report process kill, write exception, OS/power loss and network-storage cases separately. Do not equate a local atomic batch with exactly-once external orders, or in-memory caches with durable experiment restart."
+  },
+  {
+    "id": "S08",
+    "scope": "Native or adapter-owned worker processes, threads, asynchronous I/O, result channels and bounded dispatch; sequential execution without workers is out of scope for this route.",
+    "protocol": "Exercise successful work, ordinary exceptions, initializer failure, panic, worker death, failed result publication and cancellation at zero/outstanding/final work. Capture caller-visible error, remaining queue entries, worker/orphan count, shutdown time and completed-prefix identity. Check that EOF/disconnection and no-progress reads terminate. If restart is offered, compare resumed output under the same order/seed/state contract; a simulated-time timeout or thread join is not a workload deadline."
+  },
+  {
+    "id": "S09",
+    "scope": "Model/strategy output admission and the actual downstream treatment of unavailable, invalid or rejected outputs; probabilities, scores, targets and orders keep distinct domains.",
+    "protocol": "Identify the native or adapter output contract and follow it to execution. Test warmup, missing/nonfinite features, invalid length/shape, nonfinite scores/quantities, probability bounds when relevant, callback exceptions and rejection status. Verify invalid output is distinguished from a valid flat decision and whether prior intent/protective orders are retained, canceled or rejected. A caller-visible mask counts as a mask unless an execution gate consumes it; fixed non-ML routes do not inherit a probability contract."
+  },
+  {
+    "id": "S10",
+    "scope": "Source-observation admission, event/availability clocks and order/fill chronology across data getters, vectorized arrays, bar replay and exchange/local event replay.",
+    "protocol": "Declare observation, availability, decision, submission and executable times. Use identical recorded events to test prehistory queries, duplicates, reordered/overlapping intervals, malformed OHLC, delayed availability, simultaneous events and partition boundaries. Require no fill or historical decision based on unavailable evidence. Test default and cheat/alternate modes separately. Timestamp validation does not authenticate a feed or repair future-dependent user features; array adapters must explicitly align signals, fills and valuation."
+  },
+  {
+    "id": "S11",
+    "scope": "Configured capital, exposure, quantity, margin and fee admission plus accounting identities; cash-only, permitted borrowing, derivatives and fill-derived PnL models are separate contracts.",
+    "protocol": "Replay the same recorded prices with declared costs, lot steps, minimum notionals, account currency and leverage. Reconcile cash/equity, fees, funding, realized/unrealized PnL and reservations; test post-cost affordability, reversal, pending orders, reduce-only, liquidation and no-mutation on rejected transactions. Identify required risk-model registration and bypass modes. Do not label intentional borrowed cash or an order-book PnL balance as an affordability defect; add a capital adapter where the selected engine omits that policy."
+  },
+  {
+    "id": "S12",
+    "scope": "Fill and protective-exit semantics for the selected native/adapter execution model: OHLC, quote, period-price, partial-fill, queue and terminal-position behavior.",
+    "protocol": "Use recorded windows containing adverse gaps, simultaneous barriers, intrabar entry/resize, repeated signals and terminal inventory; use real order-book events for queue tests. Declare stop/limit precedence, trigger versus executable price, slippage, volume, partial-fill, order rejection, latency, randomness and market-impact assumptions. Match these semantics before comparing outcomes. Record uncertainty and counterfactual replay limits; a simulated protective rule is not a guarantee of a live fill."
+  },
+  {
+    "id": "S13",
+    "scope": "Managed research admission for protected holdout intervals, datasets/assets, candidate revisions and retained exposure history; fixed execution alone requires a governance adapter.",
+    "protocol": "Reserve a declared future holdout, attempt overlap/revision changes and concurrent use, attempt withdrawal after exposure, and interrupt before/after evaluation starts. Verify started/completed/failed history, used-reservation retention and explicit refusal of unsupported modes. Separate temporal train/test splits, account reservations and experiment UUIDs from durable holdout governance. A bounded unsuccessful implementation search yields Unknown with the searched paths; it is not proof of repository-wide absence."
+  },
+  {
+    "id": "S14",
+    "scope": "Executable source, build, test, security and release workflows, resolved dependencies, native extensions and released artifact provenance.",
+    "protocol": "Inspect exact dependency/tool/action identities, mutable tags, workflow permissions, credential persistence, audit target sets, exception expiry and attestations. Record whether controls are merely configured or actually executed. Separately verify hosted enforcement, resolved advisories and released-byte provenance when permitted. A successful source build, matching version string or auxiliary source tag does not by itself prove wheel/binary identity."
+  },
+  {
+    "id": "S15",
+    "scope": "Executable adversarial, numerical-property, corruption and concurrency assertions and independently bounded probes, with exact source/runtime/fixture identity.",
+    "protocol": "Publish a case-by-case expected-outcome matrix and distinguish Inspected, Tested, Reproduced and Measured. Record applicable case counts, skips, run results, environment, script/source/data hashes and limitations. Include relevant resolver, nonfinite resource, archive, invalid inference, stale identity, EOF, worker death, writer race and crash cases. Keep code/branch coverage separate from reachable attack-case and mutation coverage; neither test count nor a failed-build workaround is a global safety score."
+  }
+]

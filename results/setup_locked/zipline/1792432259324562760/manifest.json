@@ -1,0 +1,61 @@
+{
+  "candidate_id": "zipline",
+  "source_path": "benchmark-sources/zipline",
+  "source_commit": "cf649ac06fddce76f6caa2403cd8494ac84f72ad",
+  "started_unix": 1792432259.3322976,
+  "commands": [
+    {
+      "argv": [
+        "uv",
+        "pip",
+        "sync",
+        "--python",
+        "/workspace/scratch/008a76ec4981/Backtest-Benchmark/.work/envs/zipline/bin/python",
+        "--require-hashes",
+        "/workspace/scratch/008a76ec4981/Backtest-Benchmark/locks/zipline.txt"
+      ],
+      "returncode": 0,
+      "seconds": 0.06438332900142996
+    },
+    {
+      "argv": [
+        "uv",
+        "pip",
+        "install",
+        "--python",
+        "/workspace/scratch/008a76ec4981/Backtest-Benchmark/.work/envs/zipline/bin/python",
+        "--no-deps",
+        "--no-build-isolation",
+        "--reinstall",
+        "benchmark-sources/zipline"
+      ],
+      "returncode": 0,
+      "seconds": 133.7151002419996
+    },
+    {
+      "argv": [
+        "/workspace/scratch/008a76ec4981/Backtest-Benchmark/.work/envs/zipline/bin/python",
+        "-c",
+        "import zipline; print(zipline.__file__)"
+      ],
+      "returncode": 0,
+      "seconds": 3.0928730000014184
+    },
+    {
+      "argv": [
+        "uv",
+        "pip",
+        "check",
+        "--python",
+        "/workspace/scratch/008a76ec4981/Backtest-Benchmark/.work/envs/zipline/bin/python"
+      ],
+      "returncode": 0,
+      "seconds": 0.032732793006289285
+    }
+  ],
+  "status": "ready",
+  "build_isolation": false,
+  "dependency_lock_sha256": "08c9f8862c12305af377abc37bcf723373435637e9e5ba62d8073a7524b0ced1",
+  "tracked_source_clean_after": true,
+  "elapsed_seconds": 136.92391920089722
+}

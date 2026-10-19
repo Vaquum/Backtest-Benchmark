@@ -1,0 +1,27 @@
+{
+  "candidate_id": "qlib",
+  "source_path": "benchmark-sources/qlib",
+  "source_commit": "54355232463878d2eebb91fe0ee5fa7fa1f5976c",
+  "started_unix": 1792432207.4072537,
+  "commands": [
+    {
+      "argv": [
+        "uv",
+        "pip",
+        "sync",
+        "--python",
+        "/workspace/scratch/008a76ec4981/Backtest-Benchmark/.work/envs/qlib/bin/python",
+        "--require-hashes",
+        "-r",
+        "/workspace/scratch/008a76ec4981/Backtest-Benchmark/locks/qlib.txt"
+      ],
+      "returncode": 2,
+      "seconds": 0.008664319997478742
+    }
+  ],
+  "status": "blocked",
+  "build_isolation": false,
+  "dependency_lock_sha256": "4458614532eaa03d1eb1fb91941418cb6d9335c9a3861bdf3f3fb1de5b02ceff",
+  "error": "RuntimeError: Command exited 2",
+  "elapsed_seconds": 0.00978231430053711
+}

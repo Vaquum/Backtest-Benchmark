@@ -1,0 +1,32 @@
+{
+  "recorded_utc": "2026-10-19T18:32:44.721644+00:00",
+  "argv": [
+    "python",
+    "scripts/validate_assessment.py",
+    "--sources",
+    "/workspace/scratch/008a76ec4981/benchmark-sources",
+    "--campaign",
+    "/workspace/scratch/008a76ec4981/Backtest-Benchmark/.work/runs/polars-corrective-preflight/report.json",
+    "--require-native-thread-policy",
+    "--json"
+  ],
+  "cwd": "/workspace/scratch/008a76ec4981/Backtest-Benchmark",
+  "exit_code": 0,
+  "stdout": "results/validation/assessment/matrix-and-corrective-preflight.json",
+  "stdout_sha256": "5c32f2ed9fe24b8e71ce4459f70977bf3d2d6f32fadf1d3235defe9869f70b1f",
+  "stderr": "",
+  "input_sha256": {
+    "scripts/validate_assessment.py": "f810db1bfa7c16d332b134acfb698d731d477a1a35703a00e440230f33313c2b",
+    "catalog/candidates.json": "82852db1b463fed07f2bcffbb6e53e195138ff9296bb384ebdd75a67719231a5",
+    "catalog/auxiliary_sources.json": "3fed78aeb218161f6ddd6dd531386d88f11cb7ed40a20889bc951f3b47201d84",
+    "protocol/criteria.json": "999d7e6649527750e0e164d3f05db94bcea5297022afcfdebc8610fe77a624d5",
+    "assessment/academic.json": "d56bdf12bff742abcc300806b27ea1e4e6caac016588f6f3fea7e40997c65188",
+    "assessment/safety.json": "08d3d95df4d2b38bda3120983c8442a90e530dd56abf286a8fa6f00da6e87b66",
+    "assessment/performance.json": "2a657b066fd5e9789088ba151405f0a3d46c452d7d2574bdc5d38139c04187a2"
+  },
+  "campaign_report": {
+    "path": "/workspace/scratch/008a76ec4981/Backtest-Benchmark/.work/runs/polars-corrective-preflight/report.json",
+    "sha256": "3459d85fd31a3733ef9e41af15f7d0b9932c553d7536608aeb4e8e9cf748044e"
+  },
+  "scope": "Read-only source-reference/metadata gate on the corrective preflight. Three recorded verified workers have declared native-thread environment/loaded-pool observations. No timed-call samples exist in this verify report; no engine was imported or executed by validation, and this is not physical CPU/thread-isolation proof."
+}

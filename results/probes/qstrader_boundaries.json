@@ -1,0 +1,70 @@
+{
+  "candidate_id": "qstrader",
+  "commit": "4c59e1584e83fcc2be644b820f827c0dd1b45c02",
+  "imported_module": "/workspace/scratch/008a76ec4981/benchmark-sources/qstrader/qstrader/__init__.py",
+  "fixture": {
+    "path": "/workspace/scratch/008a76ec4981/limen-review-source/tests/fixtures/spot_1h_20240101_20241231.parquet",
+    "sha256": "a634bbd4f3692fac7bc88512da588e7772f4bd1b749567606d5314e54d0adf72",
+    "rows": 8784
+  },
+  "selection": {
+    "source_rows": [
+      0,
+      24
+    ],
+    "observations": [
+      {
+        "source_row": 0,
+        "datetime": "2024-01-01 00:00:00+00:00",
+        "open": 42283.58,
+        "close": 42475.23
+      },
+      {
+        "source_row": 24,
+        "datetime": "2024-01-02 00:00:00+00:00",
+        "open": 44179.55,
+        "close": 45056.0
+      }
+    ],
+    "price_transformation": "None; unchanged open/close values, columns renamed, UTC zone marker removed for native CSV parser."
+  },
+  "prehistory_lookup": {
+    "query_time": "2024-01-01 14:29:59+00:00",
+    "first_available_quote_time": "2024-01-01 14:30:00+00:00",
+    "selected_future_quote_time": "2024-01-02 21:00:00+00:00",
+    "returned_bid": 45056.0,
+    "returned_ask": 45056.0,
+    "last_quote_price": 45056.0,
+    "matches_last_quote": true,
+    "native_padded_index": -1,
+    "criteria": [
+      "S10",
+      "A01"
+    ]
+  },
+  "cash_affordability": {
+    "path": "SimulatedBroker.create_portfolio -> subscribe_funds_to_portfolio -> submit_order -> update -> _execute_order -> Portfolio.transact_asset",
+    "starting_cash": 21141.79,
+    "recorded_execution_price": 42283.58,
+    "submitted_quantity": 1,
+    "filled_quantity": 1.0,
+    "fee_model": "native default ZeroFeeModel",
+    "cash_after": -21141.79,
+    "negative_cash_admitted": true,
+    "criteria": [
+      "S11"
+    ]
+  },
+  "limitations": [
+    "A local simulator only; no network request or live order occurred.",
+    "The source synthesizes fixed 14:30/21:00 timestamps for CSV open/close quotes. This probe tests that source's getter boundary on two unchanged price observations; it does not assert daily market-clock fidelity.",
+    "Negative cash can represent borrowing in a chosen model. The demonstrated property is absence of a hard cash-only affordability constraint on the tested default simulated-broker route.",
+    "The prehistory query is a reachable public getter input; no claim is made that every configured trading-session loop queries before the data begins."
+  ],
+  "versions": {
+    "python": "3.12.14",
+    "numpy": "2.2.6",
+    "pandas": "2.3.3",
+    "polars": "1.42.1"
+  }
+}

@@ -1,0 +1,544 @@
+{
+  "schema_version": 1,
+  "engine": "backtesting_py",
+  "mode": "measure",
+  "started_utc": "2026-10-19T18:03:43.875939+00:00",
+  "status": "verified",
+  "timing_samples": [
+    {
+      "phase": "first",
+      "engine_ms": 43.343926,
+      "extraction_common_ms": 0.69541,
+      "full_common_ms": 44.039336,
+      "engine_cpu_ms": 43.348776,
+      "full_common_cpu_ms": 44.042858,
+      "parity": {
+        "equity_samples_checked": 8783,
+        "fills_checked": 2,
+        "max_abs_equity_error": 4.563480615615845e-08,
+        "max_relative_equity_error": 1.8088803019056705e-14,
+        "optional_observed_fields_checked": [
+          "fill_quantities"
+        ],
+        "optional_unobserved_fields": [
+          "cash",
+          "units",
+          "fill_fees"
+        ],
+        "actual_result_arrays_sha256": "564ffca72ed30902ad56729a38c6831a68bfdb965cea69c04459503c8b63f5b6"
+      },
+      "admitted": true
+    },
+    {
+      "phase": "warm-1",
+      "engine_ms": 41.552744,
+      "extraction_common_ms": 0.832506,
+      "full_common_ms": 42.38525,
+      "engine_cpu_ms": 41.558615,
+      "full_common_cpu_ms": 42.388769,
+      "parity": {
+        "equity_samples_checked": 8783,
+        "fills_checked": 2,
+        "max_abs_equity_error": 4.563480615615845e-08,
+        "max_relative_equity_error": 1.8088803019056705e-14,
+        "optional_observed_fields_checked": [
+          "fill_quantities"
+        ],
+        "optional_unobserved_fields": [
+          "cash",
+          "units",
+          "fill_fees"
+        ],
+        "actual_result_arrays_sha256": "564ffca72ed30902ad56729a38c6831a68bfdb965cea69c04459503c8b63f5b6"
+      },
+      "admitted": true
+    },
+    {
+      "phase": "warm-2",
+      "engine_ms": 42.083515,
+      "extraction_common_ms": 0.788459,
+      "full_common_ms": 42.871974,
+      "engine_cpu_ms": 42.081903,
+      "full_common_cpu_ms": 42.867721,
+      "parity": {
+        "equity_samples_checked": 8783,
+        "fills_checked": 2,
+        "max_abs_equity_error": 4.563480615615845e-08,
+        "max_relative_equity_error": 1.8088803019056705e-14,
+        "optional_observed_fields_checked": [
+          "fill_quantities"
+        ],
+        "optional_unobserved_fields": [
+          "cash",
+          "units",
+          "fill_fees"
+        ],
+        "actual_result_arrays_sha256": "564ffca72ed30902ad56729a38c6831a68bfdb965cea69c04459503c8b63f5b6"
+      },
+      "admitted": true
+    },
+    {
+      "phase": "warm-3",
+      "engine_ms": 49.567096,
+      "extraction_common_ms": 0.698484,
+      "full_common_ms": 50.26558,
+      "engine_cpu_ms": 49.568995,
+      "full_common_cpu_ms": 50.264329,
+      "parity": {
+        "equity_samples_checked": 8783,
+        "fills_checked": 2,
+        "max_abs_equity_error": 4.563480615615845e-08,
+        "max_relative_equity_error": 1.8088803019056705e-14,
+        "optional_observed_fields_checked": [
+          "fill_quantities"
+        ],
+        "optional_unobserved_fields": [
+          "cash",
+          "units",
+          "fill_fees"
+        ],
+        "actual_result_arrays_sha256": "564ffca72ed30902ad56729a38c6831a68bfdb965cea69c04459503c8b63f5b6"
+      },
+      "admitted": true
+    },
+    {
+      "phase": "warm-4",
+      "engine_ms": 41.319372,
+      "extraction_common_ms": 0.856292,
+      "full_common_ms": 42.175664,
+      "engine_cpu_ms": 41.324406,
+      "full_common_cpu_ms": 42.178516,
+      "parity": {
+        "equity_samples_checked": 8783,
+        "fills_checked": 2,
+        "max_abs_equity_error": 4.563480615615845e-08,
+        "max_relative_equity_error": 1.8088803019056705e-14,
+        "optional_observed_fields_checked": [
+          "fill_quantities"
+        ],
+        "optional_unobserved_fields": [
+          "cash",
+          "units",
+          "fill_fees"
+        ],
+        "actual_result_arrays_sha256": "564ffca72ed30902ad56729a38c6831a68bfdb965cea69c04459503c8b63f5b6"
+      },
+      "admitted": true
+    },
+    {
+      "phase": "warm-5",
+      "engine_ms": 48.004729,
+      "extraction_common_ms": 1.320221,
+      "full_common_ms": 49.32495,
+      "engine_cpu_ms": 48.002516,
+      "full_common_cpu_ms": 49.319945,
+      "parity": {
+        "equity_samples_checked": 8783,
+        "fills_checked": 2,
+        "max_abs_equity_error": 4.563480615615845e-08,
+        "max_relative_equity_error": 1.8088803019056705e-14,
+        "optional_observed_fields_checked": [
+          "fill_quantities"
+        ],
+        "optional_unobserved_fields": [
+          "cash",
+          "units",
+          "fill_fees"
+        ],
+        "actual_result_arrays_sha256": "564ffca72ed30902ad56729a38c6831a68bfdb965cea69c04459503c8b63f5b6"
+      },
+      "admitted": true
+    },
+    {
+      "phase": "warm-6",
+      "engine_ms": 51.095151,
+      "extraction_common_ms": 1.085358,
+      "full_common_ms": 52.180509,
+      "engine_cpu_ms": 51.100182,
+      "full_common_cpu_ms": 52.186498,
+      "parity": {
+        "equity_samples_checked": 8783,
+        "fills_checked": 2,
+        "max_abs_equity_error": 4.563480615615845e-08,
+        "max_relative_equity_error": 1.8088803019056705e-14,
+        "optional_observed_fields_checked": [
+          "fill_quantities"
+        ],
+        "optional_unobserved_fields": [
+          "cash",
+          "units",
+          "fill_fees"
+        ],
+        "actual_result_arrays_sha256": "564ffca72ed30902ad56729a38c6831a68bfdb965cea69c04459503c8b63f5b6"
+      },
+      "admitted": true
+    },
+    {
+      "phase": "warm-7",
+      "engine_ms": 48.45974,
+      "extraction_common_ms": 0.830564,
+      "full_common_ms": 49.290304,
+      "engine_cpu_ms": 48.466932,
+      "full_common_cpu_ms": 49.294533,
+      "parity": {
+        "equity_samples_checked": 8783,
+        "fills_checked": 2,
+        "max_abs_equity_error": 4.563480615615845e-08,
+        "max_relative_equity_error": 1.8088803019056705e-14,
+        "optional_observed_fields_checked": [
+          "fill_quantities"
+        ],
+        "optional_unobserved_fields": [
+          "cash",
+          "units",
+          "fill_fees"
+        ],
+        "actual_result_arrays_sha256": "564ffca72ed30902ad56729a38c6831a68bfdb965cea69c04459503c8b63f5b6"
+      },
+      "admitted": true
+    },
+    {
+      "phase": "warm-8",
+      "engine_ms": 42.604842,
+      "extraction_common_ms": 0.709771,
+      "full_common_ms": 43.314613,
+      "engine_cpu_ms": 42.630648,
+      "full_common_cpu_ms": 43.33798,
+      "parity": {
+        "equity_samples_checked": 8783,
+        "fills_checked": 2,
+        "max_abs_equity_error": 4.563480615615845e-08,
+        "max_relative_equity_error": 1.8088803019056705e-14,
+        "optional_observed_fields_checked": [
+          "fill_quantities"
+        ],
+        "optional_unobserved_fields": [
+          "cash",
+          "units",
+          "fill_fees"
+        ],
+        "actual_result_arrays_sha256": "564ffca72ed30902ad56729a38c6831a68bfdb965cea69c04459503c8b63f5b6"
+      },
+      "admitted": true
+    },
+    {
+      "phase": "warm-9",
+      "engine_ms": 42.13329,
+      "extraction_common_ms": 0.844134,
+      "full_common_ms": 42.977424,
+      "engine_cpu_ms": 42.138827,
+      "full_common_cpu_ms": 42.971616,
+      "parity": {
+        "equity_samples_checked": 8783,
+        "fills_checked": 2,
+        "max_abs_equity_error": 4.563480615615845e-08,
+        "max_relative_equity_error": 1.8088803019056705e-14,
+        "optional_observed_fields_checked": [
+          "fill_quantities"
+        ],
+        "optional_unobserved_fields": [
+          "cash",
+          "units",
+          "fill_fees"
+        ],
+        "actual_result_arrays_sha256": "564ffca72ed30902ad56729a38c6831a68bfdb965cea69c04459503c8b63f5b6"
+      },
+      "admitted": true
+    }
+  ],
+  "core_diagnostic_samples": [],
+  "measurement_policy": "Untimed preflight precedes independent fresh timed worker; each timed result is checked outside its timed region",
+  "benchmark_code_manifest_sha256": "fdde07bc601acf600ce85769676f18596c513a4549ed7ee3b452b965806e0747",
+  "provenance": {
+    "catalog": {
+      "id": "backtesting_py",
+      "repository": "kernc/backtesting.py",
+      "name": "backtesting.py",
+      "track": "execution",
+      "url": "https://github.com/kernc/backtesting.py",
+      "commit": "ca2e2611621e472542ba90f7243a1fa06a7d7108",
+      "commit_date": "2026-08-05T14:39:16+02:00",
+      "source_url": "https://github.com/kernc/backtesting.py/tree/ca2e2611621e472542ba90f7243a1fa06a7d7108",
+      "license_files": [
+        {
+          "path": "LICENSE.md",
+          "sha256": "ad858d53cae05eed9531ecd4c467440803acffe34c69de7b88e03affc5b6a1bd",
+          "url": "https://github.com/kernc/backtesting.py/blob/ca2e2611621e472542ba90f7243a1fa06a7d7108/LICENSE.md"
+        }
+      ],
+      "revision_policy": "Default branch HEAD captured 2026-10-19",
+      "eligibility": "source_auditable",
+      "license_label": "AGPL-3.0",
+      "license_scope": "Observed repository license text; third-party components retain their own terms. This label does not authorize a particular redistribution or commercial deployment.",
+      "source_category": "public_source"
+    },
+    "source_commit_verified": "ca2e2611621e472542ba90f7243a1fa06a7d7108",
+    "source_path": "/workspace/scratch/008a76ec4981/benchmark-sources/backtesting_py",
+    "tracked_source_clean": true,
+    "distribution": "backtesting",
+    "distribution_version": "0.1.dev1+gca2e26116",
+    "direct_url": {
+      "url": "file:///workspace/scratch/008a76ec4981/benchmark-sources/backtesting_py",
+      "dir_info": {}
+    },
+    "installed_code_files": 10,
+    "installed_code_sha256": "da4358729df4802a5f031cbb5e7bdb8c5bc77993ecde882ab61c4df5d6cb923a",
+    "setup_manifest_sha256": "83a0a2ddb91341c024b9579e6f9fb5db26e47c0e63807f10dcae958e0a840bd6",
+    "system_site_packages": false,
+    "observed_candidate_imports": {
+      "backtesting._version": "/workspace/scratch/008a76ec4981/Backtest-Benchmark/.work/envs/backtesting_py/lib/python3.12/site-packages/backtesting/_version.py",
+      "backtesting._util": "/workspace/scratch/008a76ec4981/Backtest-Benchmark/.work/envs/backtesting_py/lib/python3.12/site-packages/backtesting/_util.py",
+      "backtesting._plotting": "/workspace/scratch/008a76ec4981/Backtest-Benchmark/.work/envs/backtesting_py/lib/python3.12/site-packages/backtesting/_plotting.py",
+      "backtesting._stats": "/workspace/scratch/008a76ec4981/Backtest-Benchmark/.work/envs/backtesting_py/lib/python3.12/site-packages/backtesting/_stats.py",
+      "backtesting.backtesting": "/workspace/scratch/008a76ec4981/Backtest-Benchmark/.work/envs/backtesting_py/lib/python3.12/site-packages/backtesting/backtesting.py",
+      "backtesting.lib": "/workspace/scratch/008a76ec4981/Backtest-Benchmark/.work/envs/backtesting_py/lib/python3.12/site-packages/backtesting/lib.py",
+      "backtesting": "/workspace/scratch/008a76ec4981/Backtest-Benchmark/.work/envs/backtesting_py/lib/python3.12/site-packages/backtesting/__init__.py"
+    }
+  },
+  "source_verification_ms": 14.248639,
+  "prepared_load_ms": 3.403055,
+  "prepared_arrays_sha256": "5205d28c2d6652fed69f0324522853b53f9a52d481778227240153d86ebd4864",
+  "contract": {
+    "initial_cash": 1000000,
+    "fee_bps": 0,
+    "slippage_bps": 0,
+    "signal_delay_bars": 1,
+    "equity_rtol": 1e-10,
+    "equity_atol": 1e-06,
+    "price_rtol": 1e-12,
+    "price_atol": 1e-08,
+    "quantity_rtol": 1e-10,
+    "quantity_atol": 1e-10,
+    "schema_version": 1,
+    "name": "prior-close-decision_next-close-fill_long-flat_v1",
+    "sizing": "All affordable continuous units on entry; hold units until exit; no ongoing rebalancing",
+    "signal_availability": "Decision uses only the prefix through close[t]; earliest fill is close[t+1]",
+    "fill_price": "Entry close*(1+slippage); exit close*(1-slippage)",
+    "fee_basis": "fee_bps/10000 times actual fill price times absolute executed quantity",
+    "equity_observation": "Cash plus units marked at the unadjusted close, after the close fill",
+    "held_observation": "Incoming held state over the interval ending at the current close, before its fill",
+    "terminal_rule": "Predeclared liquidation at penultimate real close; final real row settles delayed bookkeeping",
+    "unmodelled": [
+      "market impact",
+      "partial fills",
+      "funding",
+      "borrowing",
+      "corporate actions",
+      "exchange calendars"
+    ]
+  },
+  "oracle_ms": 4.056341,
+  "adapter_prepare_ms": 595.503517,
+  "engine_scope": "Public FractionalBacktest.run including broker event loop, fractional conversion, equity and native performance statistics",
+  "settings": {
+    "trade_on_close": true,
+    "fractional_unit": 1e-12,
+    "buy_fraction": 0.9999999999999999,
+    "finalize_trades": false,
+    "processed_rows": 8784,
+    "native_stats_requested": true
+  },
+  "output_observation": {
+    "equity": "Native equity curve; its first backfilled slot replaced with the actual initial strategy equity observation",
+    "held_and_fills": "Native completed trade entry/exit bars, prices and fractional quantities",
+    "cash_units_fees": "Not separately observed by this adapter"
+  },
+  "rank_against_full_engine": true,
+  "runtime": {
+    "python": "3.12.14 (main, Aug 25 2026, 14:00:49) [Clang 22.1.3 ]",
+    "executable": "/workspace/scratch/008a76ec4981/Backtest-Benchmark/.work/envs/backtesting_py/bin/python",
+    "prefix": "/workspace/scratch/008a76ec4981/Backtest-Benchmark/.work/envs/backtesting_py",
+    "platform": "Linux-6.18.55-x86_64-with-glibc2.39",
+    "machine": "x86_64",
+    "cpu_model": null,
+    "logical_cpus_visible": 9,
+    "cpu_affinity": [
+      0,
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8
+    ],
+    "container_constraints": {},
+    "thread_environment": {
+      "OMP_NUM_THREADS": "1",
+      "OPENBLAS_NUM_THREADS": "1",
+      "MKL_NUM_THREADS": "1",
+      "VECLIB_MAXIMUM_THREADS": "1",
+      "NUMEXPR_NUM_THREADS": "1",
+      "NUMBA_NUM_THREADS": "1",
+      "RAYON_NUM_THREADS": "1",
+      "BLIS_NUM_THREADS": "1"
+    },
+    "packages": [
+      {
+        "name": "backtesting",
+        "version": "0.1.dev1+gca2e26116"
+      },
+      {
+        "name": "backtesting",
+        "version": "0.0.0"
+      },
+      {
+        "name": "bokeh",
+        "version": "3.10.1"
+      },
+      {
+        "name": "Cython",
+        "version": "3.3.0"
+      },
+      {
+        "name": "hatch-cython",
+        "version": "0.6.0"
+      },
+      {
+        "name": "hatchling",
+        "version": "1.32.4"
+      },
+      {
+        "name": "Jinja2",
+        "version": "3.1.6"
+      },
+      {
+        "name": "MarkupSafe",
+        "version": "3.0.4"
+      },
+      {
+        "name": "narwhals",
+        "version": "2.27.1"
+      },
+      {
+        "name": "numpy",
+        "version": "2.2.6"
+      },
+      {
+        "name": "packaging",
+        "version": "26.3"
+      },
+      {
+        "name": "pandas",
+        "version": "2.3.3"
+      },
+      {
+        "name": "pathspec",
+        "version": "1.1.1"
+      },
+      {
+        "name": "pillow",
+        "version": "13.0.0"
+      },
+      {
+        "name": "pluggy",
+        "version": "1.7.0"
+      },
+      {
+        "name": "pyarrow",
+        "version": "23.0.1"
+      },
+      {
+        "name": "python-dateutil",
+        "version": "2.9.0.post0"
+      },
+      {
+        "name": "pytz",
+        "version": "2026.5"
+      },
+      {
+        "name": "PyYAML",
+        "version": "6.0.3"
+      },
+      {
+        "name": "setuptools",
+        "version": "84.0.0"
+      },
+      {
+        "name": "setuptools-git",
+        "version": "1.2"
+      },
+      {
+        "name": "setuptools-scm",
+        "version": "10.3.4"
+      },
+      {
+        "name": "six",
+        "version": "1.17.0"
+      },
+      {
+        "name": "threadpoolctl",
+        "version": "3.6.0"
+      },
+      {
+        "name": "tomlkit",
+        "version": "0.15.2"
+      },
+      {
+        "name": "tornado",
+        "version": "6.5.10"
+      },
+      {
+        "name": "trove-classifiers",
+        "version": "2026.9.21.13"
+      },
+      {
+        "name": "tzdata",
+        "version": "2026.5"
+      },
+      {
+        "name": "vcs-versioning",
+        "version": "2.6.0"
+      },
+      {
+        "name": "wheel",
+        "version": "0.48.0"
+      },
+      {
+        "name": "xyzservices",
+        "version": "2026.9.1"
+      }
+    ],
+    "threadpools": [
+      {
+        "user_api": "blas",
+        "internal_api": "openblas",
+        "num_threads": 1,
+        "prefix": "libscipy_openblas",
+        "filepath": "/workspace/scratch/008a76ec4981/Backtest-Benchmark/.work/envs/backtesting_py/lib/python3.12/site-packages/numpy.libs/libscipy_openblas64_-56d6093b.so",
+        "version": "0.3.29",
+        "threading_layer": "pthreads",
+        "architecture": "SkylakeX"
+      }
+    ]
+  },
+  "summary": {
+    "final_equity": 2193875.3767579733,
+    "total_return": 1.1938753767579735,
+    "max_drawdown": -0.32310690722076296,
+    "mean_bar_return": 0.00010524043731848091,
+    "held_fraction": 0.9997722873733349,
+    "entries": 1,
+    "exits": 1
+  },
+  "parity": {
+    "equity_samples_checked": 8783,
+    "fills_checked": 2,
+    "max_abs_equity_error": 4.563480615615845e-08,
+    "max_relative_equity_error": 1.8088803019056705e-14,
+    "optional_observed_fields_checked": [
+      "fill_quantities"
+    ],
+    "optional_unobserved_fields": [
+      "cash",
+      "units",
+      "fill_fees"
+    ],
+    "actual_result_arrays_sha256": "564ffca72ed30902ad56729a38c6831a68bfdb965cea69c04459503c8b63f5b6"
+  },
+  "peak_rss_bytes_after_first": 136318976,
+  "peak_rss_bytes_after_full_calls": 136318976,
+  "peak_rss_bytes_final": 136318976,
+  "rss_scope": "Process lifetime high-water memory, including imports, validation, all repetitions, and optional separately labeled core diagnostics; Linux KiB converted to bytes, macOS bytes unchanged"
+}

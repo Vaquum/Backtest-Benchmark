@@ -1,0 +1,15 @@
+Preflight limen/buy_and_hold
+Preflight backtrader/buy_and_hold
+Preflight vectorbt/buy_and_hold
+Preflight backtesting_py/buy_and_hold
+Preflight bt/buy_and_hold
+Preflight qstrader/buy_and_hold
+Preflight qlib/buy_and_hold
+Preflight limen/sma_cross
+Preflight backtrader/sma_cross
+Preflight vectorbt/sma_cross
+Preflight backtesting_py/sma_cross
+Preflight bt/sma_cross
+Preflight qstrader/sma_cross
+Preflight qlib/sma_cross
+/workspace/scratch/008a76ec4981/Backtest-Benchmark/.work/runs/core-costed-preflight-001/report.json

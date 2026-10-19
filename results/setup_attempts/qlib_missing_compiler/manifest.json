@@ -1,0 +1,51 @@
+{
+  "candidate_id": "qlib",
+  "source_path": "/workspace/scratch/008a76ec4981/benchmark-sources/qlib",
+  "started_unix": 1792430065.0588698,
+  "commands": [
+    {
+      "argv": [
+        "uv",
+        "venv",
+        "--seed",
+        "--python",
+        "/opt/codex/runtimes/codex-primary-runtime/dependencies/python/bin/python3",
+        "/workspace/scratch/008a76ec4981/Backtest-Benchmark/.work/envs/qlib"
+      ],
+      "returncode": 0,
+      "seconds": 0.03625523600203451
+    },
+    {
+      "argv": [
+        "uv",
+        "pip",
+        "install",
+        "--python",
+        "/workspace/scratch/008a76ec4981/Backtest-Benchmark/.work/envs/qlib/bin/python",
+        "setuptools",
+        "wheel",
+        "pyarrow",
+        "pytest",
+        "Cython<3.2",
+        "setuptools-scm"
+      ],
+      "returncode": 0,
+      "seconds": 0.11439006100408733
+    },
+    {
+      "argv": [
+        "uv",
+        "pip",
+        "install",
+        "--python",
+        "/workspace/scratch/008a76ec4981/Backtest-Benchmark/.work/envs/qlib/bin/python",
+        "/workspace/scratch/008a76ec4981/benchmark-sources/qlib"
+      ],
+      "returncode": 1,
+      "seconds": 5.444302939999034
+    }
+  ],
+  "status": "blocked",
+  "error": "RuntimeError: Command exited 1",
+  "elapsed_seconds": 5.595486879348755
+}

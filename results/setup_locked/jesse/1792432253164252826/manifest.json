@@ -1,0 +1,61 @@
+{
+  "candidate_id": "jesse",
+  "source_path": "benchmark-sources/jesse",
+  "source_commit": "4fcbcdd500b9cd14ca9bdb142e4f46a34884a1ae",
+  "started_unix": 1792432253.1731026,
+  "commands": [
+    {
+      "argv": [
+        "uv",
+        "pip",
+        "sync",
+        "--python",
+        "/workspace/scratch/008a76ec4981/Backtest-Benchmark/.work/envs/jesse/bin/python",
+        "--require-hashes",
+        "/workspace/scratch/008a76ec4981/Backtest-Benchmark/locks/jesse.txt"
+      ],
+      "returncode": 0,
+      "seconds": 0.11513931000081357
+    },
+    {
+      "argv": [
+        "uv",
+        "pip",
+        "install",
+        "--python",
+        "/workspace/scratch/008a76ec4981/Backtest-Benchmark/.work/envs/jesse/bin/python",
+        "--no-deps",
+        "--no-build-isolation",
+        "--reinstall",
+        "benchmark-sources/jesse"
+      ],
+      "returncode": 0,
+      "seconds": 5.968129730994406
+    },
+    {
+      "argv": [
+        "/workspace/scratch/008a76ec4981/Backtest-Benchmark/.work/envs/jesse/bin/python",
+        "-c",
+        "import jesse; print(jesse.__file__)"
+      ],
+      "returncode": 0,
+      "seconds": 0.032019359001424164
+    },
+    {
+      "argv": [
+        "uv",
+        "pip",
+        "check",
+        "--python",
+        "/workspace/scratch/008a76ec4981/Backtest-Benchmark/.work/envs/jesse/bin/python"
+      ],
+      "returncode": 1,
+      "seconds": 0.0345542029972421
+    }
+  ],
+  "status": "blocked",
+  "build_isolation": false,
+  "dependency_lock_sha256": "710bb94c90ecd71c01b47ba7e4c31a91e0513e32013a36496201f53fd7de78cc",
+  "error": "RuntimeError: Command exited 1",
+  "elapsed_seconds": 6.150968313217163
+}

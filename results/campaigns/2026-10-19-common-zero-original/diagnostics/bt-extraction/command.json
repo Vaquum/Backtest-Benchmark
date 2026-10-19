@@ -1,0 +1,16 @@
+{
+  "argv": [
+    "/workspace/scratch/008a76ec4981/Backtest-Benchmark/.work/envs/bt/bin/python",
+    "/workspace/scratch/008a76ec4981/Backtest-Benchmark/.work/diagnostics/bt-extraction/profile_extract.py",
+    "--root",
+    "/workspace/scratch/008a76ec4981/Backtest-Benchmark",
+    "--campaign",
+    "/workspace/scratch/008a76ec4981/Backtest-Benchmark/.work/runs/full-cpu-2026-10-19",
+    "--manifest",
+    "/workspace/scratch/008a76ec4981/Backtest-Benchmark/.work/manifests/bt.json",
+    "--output",
+    "/workspace/scratch/008a76ec4981/Backtest-Benchmark/.work/diagnostics/bt-extraction/result"
+  ],
+  "timeout_seconds": 120,
+  "scope": "Post-campaign single profile, not comparative timing"
+}

@@ -1,0 +1,16 @@
+{
+  "scope": "Post-campaign native pool observation under the same eight explicitly fixed thread variables; not a timing result",
+  "returncode": 0,
+  "stdout": "{\"polars_version\": \"1.44.2\", \"polars_thread_pool_size\": 9, \"POLARS_MAX_THREADS\": null, \"RAYON_NUM_THREADS\": \"1\"}\n",
+  "stderr": "",
+  "declared_environment": {
+    "OMP_NUM_THREADS": "1",
+    "OPENBLAS_NUM_THREADS": "1",
+    "MKL_NUM_THREADS": "1",
+    "VECLIB_MAXIMUM_THREADS": "1",
+    "NUMEXPR_NUM_THREADS": "1",
+    "NUMBA_NUM_THREADS": "1",
+    "RAYON_NUM_THREADS": "1",
+    "BLIS_NUM_THREADS": "1"
+  }
+}

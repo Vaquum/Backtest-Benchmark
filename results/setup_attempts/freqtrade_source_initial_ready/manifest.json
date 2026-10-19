@@ -1,0 +1,68 @@
+{
+  "candidate_id": "freqtrade",
+  "source_path": "/workspace/scratch/008a76ec4981/benchmark-sources/freqtrade",
+  "started_unix": 1792430059.6142995,
+  "commands": [
+    {
+      "argv": [
+        "uv",
+        "venv",
+        "--seed",
+        "--python",
+        "/opt/codex/runtimes/codex-primary-runtime/dependencies/python/bin/python3",
+        "/workspace/scratch/008a76ec4981/Backtest-Benchmark/.work/envs/freqtrade"
+      ],
+      "returncode": 0,
+      "seconds": 0.26538885699847015
+    },
+    {
+      "argv": [
+        "uv",
+        "pip",
+        "install",
+        "--python",
+        "/workspace/scratch/008a76ec4981/Backtest-Benchmark/.work/envs/freqtrade/bin/python",
+        "setuptools",
+        "wheel",
+        "pyarrow",
+        "pytest"
+      ],
+      "returncode": 0,
+      "seconds": 1.3177264609985286
+    },
+    {
+      "argv": [
+        "uv",
+        "pip",
+        "install",
+        "--python",
+        "/workspace/scratch/008a76ec4981/Backtest-Benchmark/.work/envs/freqtrade/bin/python",
+        "/workspace/scratch/008a76ec4981/benchmark-sources/freqtrade"
+      ],
+      "returncode": 0,
+      "seconds": 3.7831884440020076
+    },
+    {
+      "argv": [
+        "/workspace/scratch/008a76ec4981/Backtest-Benchmark/.work/envs/freqtrade/bin/python",
+        "-c",
+        "import freqtrade; print(freqtrade.__file__)"
+      ],
+      "returncode": 0,
+      "seconds": 0.03408964700065553
+    },
+    {
+      "argv": [
+        "uv",
+        "pip",
+        "check",
+        "--python",
+        "/workspace/scratch/008a76ec4981/Backtest-Benchmark/.work/envs/freqtrade/bin/python"
+      ],
+      "returncode": 0,
+      "seconds": 0.032231682002020534
+    }
+  ],
+  "status": "ready",
+  "elapsed_seconds": 5.444215774536133
+}

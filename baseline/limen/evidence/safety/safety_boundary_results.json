@@ -1,0 +1,62 @@
+{
+  "source_commit": "29837e666604eee74a2ac94f328fb9803724342a",
+  "resolver": {
+    "direct_os_system_rejected": true,
+    "prefixed_path": "limen.data.historical_data.os.system",
+    "resolves_to_os_system": true,
+    "modified_manifest_valid": true,
+    "validation_errors": [],
+    "compiled_data_source_is_os_system": true,
+    "callable_invoked": false
+  },
+  "snapshot_boundary": {
+    "fixture": "tests/fixtures/spot_1h_20240101_20241231.parquet",
+    "fixture_sha256": "a634bbd4f3692fac7bc88512da588e7772f4bd1b749567606d5314e54d0adf72",
+    "fixture_rows": 8784,
+    "signal_rule": "sma_cross",
+    "public_snapshot_results": {
+      "ordinary_costs": {
+        "accepted": true,
+        "all_net_returns_finite": true,
+        "mean_cost_bps": 0.0588361873020466,
+        "mean_pnl_bps": 0.7114228278751964
+      },
+      "negative_fee": {
+        "accepted": true,
+        "all_net_returns_finite": true,
+        "mean_cost_bps": 0.00036455490515887576,
+        "mean_pnl_bps": 0.7698944602720841
+      },
+      "negative_slippage": {
+        "accepted": true,
+        "all_net_returns_finite": true,
+        "mean_cost_bps": -0.0003645426039393306,
+        "mean_pnl_bps": 0.7706235577811823
+      },
+      "zero_lag": {
+        "accepted": true,
+        "all_net_returns_finite": true,
+        "mean_cost_bps": 0.05888897138147569,
+        "mean_pnl_bps": 0.7976915007940678
+      }
+    },
+    "event_policy_contrast": {
+      "negative_fee": {
+        "rejected": true,
+        "error": "fee_bps must be nonnegative"
+      },
+      "negative_slippage": {
+        "rejected": true,
+        "error": "slip_bps must be nonnegative"
+      }
+    }
+  },
+  "manifest_uri_integrity": {
+    "requested_identity": "sha256:92db34345d064319d172c3d0b69da9391f2f94cf7e440a13b3750ccf07c6f6e8",
+    "actual_current_identity": "sha256:7629fd0d61638ba1cdceaa6aaaac02cc62663cb9e848313da38075d0203ccf2e",
+    "content_changed": true,
+    "stale_uri_still_resolves": true,
+    "mutated_field": "metadata.name",
+    "repository_files_modified": false
+  }
+}

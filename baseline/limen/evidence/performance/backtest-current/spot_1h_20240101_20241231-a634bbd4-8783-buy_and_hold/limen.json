@@ -1,0 +1,152 @@
+{
+  "engine": "limen",
+  "status": "verified",
+  "python_executable": "/workspace/scratch/008a76ec4981/review-venv/bin/python",
+  "versions": {
+    "python": "3.12.14",
+    "vaquum-limen": "5.40.1",
+    "numpy": "2.2.6",
+    "pandas": "2.3.3",
+    "polars": "1.42.1",
+    "vectorbt": null,
+    "vectorbt-rust": null,
+    "numba": null,
+    "llvmlite": null,
+    "backtesting": null,
+    "backtrader": null
+  },
+  "evaluation_rows": 8783,
+  "processed_rows": 8783,
+  "portfolio_count": 1,
+  "threads": {
+    "OMP_NUM_THREADS": "1",
+    "OPENBLAS_NUM_THREADS": "1",
+    "MKL_NUM_THREADS": "1",
+    "VECLIB_MAXIMUM_THREADS": "1",
+    "BLIS_NUM_THREADS": "1",
+    "POLARS_MAX_THREADS": "1",
+    "NUMBA_NUM_THREADS": "1",
+    "RAYON_NUM_THREADS": "1",
+    "OMP_THREAD_LIMIT": "1"
+  },
+  "numba_cache_dir": "/workspace/scratch/008a76ec4981/review-work/performance/backtest-current/spot_1h_20240101_20241231-a634bbd4-8783-buy_and_hold/limen-numba-cache",
+  "rss_before_adapter_mib": 99.859375,
+  "adapter_preparation_ms": 102.716028,
+  "scope": "return kernel; public snapshot measured separately",
+  "settings": {
+    "execution_lag_bars": 1
+  },
+  "cold": {
+    "engine_ms": 0.910244,
+    "normalization_ms": 0.361726,
+    "common_outputs_ms": 1.27197,
+    "cpu_ms": 1.27123
+  },
+  "metrics": {
+    "final_equity": 2201020.2181366165,
+    "total_return": 1.2010202181366165,
+    "max_drawdown": -0.3231069072207581,
+    "mean_bar_return": 0.00010561123563607608,
+    "held_fraction": 0.9998861436866674,
+    "entries": 1,
+    "exits": 1
+  },
+  "warm": {
+    "engine_ms": {
+      "median_ms": 0.375106,
+      "p95_ms": 0.5673499999999999,
+      "samples_ms": [
+        0.605363,
+        0.478653,
+        0.375106,
+        0.373654,
+        0.374515,
+        0.374335,
+        0.376368
+      ]
+    },
+    "normalization_ms": {
+      "median_ms": 0.220883,
+      "p95_ms": 0.33556839999999993,
+      "samples_ms": [
+        0.288065,
+        0.227944,
+        0.219581,
+        0.355927,
+        0.220883,
+        0.214815,
+        0.217178
+      ]
+    },
+    "common_outputs_ms": {
+      "median_ms": 0.595398,
+      "p95_ms": 0.8442738999999999,
+      "samples_ms": [
+        0.893428,
+        0.706597,
+        0.594687,
+        0.729581,
+        0.595398,
+        0.58915,
+        0.593546
+      ]
+    },
+    "cpu_ms": {
+      "median_ms": 0.595786,
+      "p95_ms": 0.8445253999999999,
+      "samples_ms": [
+        0.893348,
+        0.707151,
+        0.595235,
+        0.730606,
+        0.595786,
+        0.589557,
+        0.594224
+      ]
+    }
+  },
+  "peak_rss_mib": 99.859375,
+  "max_abs_equity_error": 7.82310962677002e-08,
+  "max_relative_equity_error": 3.196302838629506e-14,
+  "native_snapshot": {
+    "first_call_ms": 2.384609,
+    "warm": {
+      "median_ms": 2.150025,
+      "p95_ms": 2.2020975,
+      "samples_ms": [
+        2.190677,
+        2.106771,
+        2.148263,
+        2.150025,
+        2.162955,
+        2.121192,
+        2.206992
+      ]
+    },
+    "metrics": {
+      "edge_bps_p5": -82.13323253083492,
+      "edge_bps_p50": 0.893496286771267,
+      "edge_bps_p95": 82.78449877135016,
+      "pnl_bps_p5": -82.13323253083581,
+      "pnl_bps_p50": 0.893496286771267,
+      "pnl_bps_p95": 82.78449877135016,
+      "cost_bps_p5": -1.1102230246251565e-12,
+      "cost_bps_p50": 0.0,
+      "cost_bps_p95": 1.1102230246251565e-12,
+      "drawdown_bps_p5": -2159.4600784071763,
+      "drawdown_bps_p50": -1018.4329824325678,
+      "drawdown_bps_p95": -57.31818702002552,
+      "wins_per_bar": 0.5113287031765912,
+      "pnl_per_bar_bps": 1.056112356360733,
+      "avg_win_bps": 37.17229685024052,
+      "avg_loss_bps": -36.75173667331325,
+      "cvar_95_pnl_bps": -136.75946709417337,
+      "trades_per_bar": 0.00011385631333257428,
+      "inventory_per_bar": 0.9998861436866674,
+      "cost_per_bar_bps": -4.550612420187366e-15
+    },
+    "scope": "backtest_snapshot validation, execution and all native bar metrics"
+  },
+  "peak_rss_including_snapshot_mib": 99.859375,
+  "limen_imported": true
+}

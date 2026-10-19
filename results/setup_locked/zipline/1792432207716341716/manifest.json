@@ -1,0 +1,27 @@
+{
+  "candidate_id": "zipline",
+  "source_path": "benchmark-sources/zipline",
+  "source_commit": "cf649ac06fddce76f6caa2403cd8494ac84f72ad",
+  "started_unix": 1792432207.7236376,
+  "commands": [
+    {
+      "argv": [
+        "uv",
+        "pip",
+        "sync",
+        "--python",
+        "/workspace/scratch/008a76ec4981/Backtest-Benchmark/.work/envs/zipline/bin/python",
+        "--require-hashes",
+        "-r",
+        "/workspace/scratch/008a76ec4981/Backtest-Benchmark/locks/zipline.txt"
+      ],
+      "returncode": 2,
+      "seconds": 0.007659775001229718
+    }
+  ],
+  "status": "blocked",
+  "build_isolation": false,
+  "dependency_lock_sha256": "08c9f8862c12305af377abc37bcf723373435637e9e5ba62d8073a7524b0ced1",
+  "error": "RuntimeError: Command exited 2",
+  "elapsed_seconds": 0.008033514022827148
+}

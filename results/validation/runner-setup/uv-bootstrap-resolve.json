@@ -1,0 +1,17 @@
+{
+  "command": [
+    "uv",
+    "pip",
+    "compile",
+    "-",
+    "--generate-hashes",
+    "--output-file",
+    "/workspace/scratch/008a76ec4981/Backtest-Benchmark/results/validation/runner-setup/uv-bootstrap.lock",
+    "--no-header",
+    "--quiet"
+  ],
+  "stdin": "uv==0.12.23\n",
+  "returncode": 0,
+  "seconds": 0.1483750909974333,
+  "purpose": "Verify the exact uv version required by CI is resolvable from the package index; this is setup, not ranked timing"
+}

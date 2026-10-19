@@ -1,0 +1,35 @@
+{
+  "command": [
+    "/workspace/scratch/008a76ec4981/Backtest-Benchmark/.work/toolchains/dotnet/dotnet",
+    "restore",
+    "Launcher/QuantConnect.Lean.Launcher.csproj",
+    "--use-lock-file",
+    "--disable-parallel"
+  ],
+  "returncode": 0,
+  "seconds": 3.5805964520041016,
+  "status": "passed",
+  "scope": "Freeze NuGet resolution of the successfully source-built local launcher",
+  "lock_paths": [
+    "Algorithm.CSharp/packages.lock.json",
+    "Algorithm.Framework/packages.lock.json",
+    "Algorithm/packages.lock.json",
+    "AlgorithmFactory/packages.lock.json",
+    "Api/packages.lock.json",
+    "Brokerages/packages.lock.json",
+    "Common/packages.lock.json",
+    "Compression/packages.lock.json",
+    "Configuration/packages.lock.json",
+    "DownloaderDataProvider/packages.lock.json",
+    "Engine/packages.lock.json",
+    "Indicators/packages.lock.json",
+    "Launcher/packages.lock.json",
+    "Logging/packages.lock.json",
+    "Messaging/packages.lock.json",
+    "Optimizer.Launcher/packages.lock.json",
+    "Optimizer/packages.lock.json",
+    "Queues/packages.lock.json",
+    "Research/packages.lock.json",
+    "ToolBox/packages.lock.json"
+  ]
+}

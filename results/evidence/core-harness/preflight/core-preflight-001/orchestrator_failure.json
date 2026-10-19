@@ -1,0 +1,9 @@
+{
+  "status": "orchestrator_error",
+  "capture": "Observed exception from the tool-returned process output; initial console output was not separately redirected",
+  "error": "TypeError: unsupported operand type(s) for /: 'NoneType' and 'NoneType'",
+  "location": "bench/cli.py aggregate_cases relative_to_limen_warm_full_common assignment",
+  "cause": "Untimed verify results were eligible for the status check but have no timing medians; aggregator attempted a ratio of null values",
+  "scope": "The first Limen preflight passed parity; orchestration then stopped before other engines. No performance measurement was performed.",
+  "resolution": "Ratio calculation now explicitly requires non-null complete measured medians. A fresh preflight attempt follows; this original worker result and failed attempt are retained."
+}
