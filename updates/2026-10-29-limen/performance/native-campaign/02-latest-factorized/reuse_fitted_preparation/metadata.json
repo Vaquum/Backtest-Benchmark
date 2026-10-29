@@ -1,0 +1,166 @@
+{
+  "sfd_module": "yaml:factorized_preparation_benchmark",
+  "limen_version": "5.46.2",
+  "created_at": "2026-10-29T11:29:39.645657+00:00",
+  "round_storage": "gzip-jsonl-v2",
+  "record_execution": true,
+  "record_model_outputs": true,
+  "recording": {
+    "predictions": false,
+    "alignment": false,
+    "trade_ledger": false,
+    "fold_details": false
+  },
+  "factorize": true,
+  "yaml_reference": {
+    "schema_version": "1.0",
+    "metadata": {
+      "name": "factorized_preparation_benchmark",
+      "limen_version": "5.46.2",
+      "mode": "development",
+      "description": "Recorded fitted-preparation comparison within factorize=True"
+    },
+    "sfd": {
+      "manifest": {
+        "type": "ml",
+        "data_source": {
+          "method": "limen.data.HistoricalData.get_any_file",
+          "params": {
+            "file_path_or_url": "/workspace/scratch/008a76ec4981/Limen/tests/fixtures/spot_1h_20240101_20241231.parquet"
+          }
+        },
+        "split_dates": {
+          "train_start": "2024-01-01",
+          "train_end": "2024-08-31",
+          "val_start": "2024-09-01",
+          "val_end": "2024-09-30",
+          "test_start": "2024-10-01",
+          "test_end": "2024-10-31"
+        },
+        "indicators": [
+          {
+            "func": "limen.indicators.window_return",
+            "params": {
+              "period": 1
+            }
+          }
+        ],
+        "features": [
+          {
+            "func": "limen.features.lag_range",
+            "params": {
+              "col": "ret_1",
+              "start": 0,
+              "end": 192
+            }
+          }
+        ],
+        "target": {
+          "name": "up_next",
+          "class": "limen.targets.QuantileBinaryTarget",
+          "fit_params": {
+            "source_column": "ret_1",
+            "quantile": 0.5
+          },
+          "transform_params": {
+            "shift": -1
+          }
+        },
+        "scaler": {
+          "class": "limen.scalers.RobustScaler"
+        },
+        "strict_mode": true,
+        "reference_architecture": "limen.sfd.reference_architecture.lightgbm_binary.lightgbm_binary",
+        "backtest": {
+          "fee_bps": "{fee}",
+          "slip_bps": 2.0,
+          "notional_rate": 1.0
+        }
+      },
+      "params": {
+        "learning_rate": [
+          0.025,
+          0.030000000000000002,
+          0.035,
+          0.04,
+          0.045,
+          0.05,
+          0.055,
+          0.060000000000000005,
+          0.065,
+          0.07,
+          0.07500000000000001,
+          0.08,
+          0.08499999999999999,
+          0.09,
+          0.095,
+          0.1,
+          0.10500000000000001,
+          0.11000000000000001,
+          0.11499999999999999,
+          0.12,
+          0.125,
+          0.13,
+          0.135,
+          0.14
+        ],
+        "n_estimators": [
+          8
+        ],
+        "num_leaves": [
+          7
+        ],
+        "max_depth": [
+          4
+        ],
+        "early_stopping_rounds": [
+          0
+        ],
+        "random_state": [
+          42
+        ],
+        "n_jobs": [
+          1
+        ],
+        "verbosity": [
+          -1
+        ],
+        "deterministic": [
+          true
+        ],
+        "force_row_wise": [
+          true
+        ],
+        "boosting_type": [
+          "gbdt"
+        ],
+        "subsample_freq": [
+          0
+        ],
+        "subsample": [
+          1.0
+        ],
+        "colsample_bytree": [
+          1.0
+        ],
+        "fee": [
+          3.0,
+          12.0
+        ]
+      }
+    },
+    "uel": {
+      "n_permutations": 48,
+      "search_strategy": {
+        "type": "grid"
+      },
+      "factorize": true,
+      "prep_each_round": true,
+      "checkpoint_interval": 1000,
+      "feedback_interval": 1000,
+      "record_execution": true,
+      "record_model_outputs": true
+    }
+  },
+  "manifest_id": "sha256:959ed6c6c8ceab770d1c708d3dc04a9472bafa9bb8f936537be73f8972f91de7"
+}

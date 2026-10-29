@@ -1,0 +1,35 @@
+{
+  "scope": "Successful source-pinned causal probes, no source edits or comparative timing claims.",
+  "cwd": "/workspace/scratch/008a76ec4981/Backtest-Benchmark",
+  "commands": [
+    "env PYTHONDONTWRITEBYTECODE=1 PYTHONHASHSEED=0 OMP_NUM_THREADS=1 OPENBLAS_NUM_THREADS=1 MKL_NUM_THREADS=1 VECLIB_MAXIMUM_THREADS=1 BLIS_NUM_THREADS=1 POLARS_MAX_THREADS=1 RAYON_NUM_THREADS=1 NUMEXPR_NUM_THREADS=1 .work/envs-baseline/limen/bin/python updates/2026-10-29-limen/academic/probe_causal_prefix.py --repo-root /workspace/scratch/008a76ec4981/Limen-baseline --revision baseline --output updates/2026-10-29-limen/academic/causal-prefix-baseline.json",
+    "env PYTHONDONTWRITEBYTECODE=1 PYTHONHASHSEED=0 OMP_NUM_THREADS=1 OPENBLAS_NUM_THREADS=1 MKL_NUM_THREADS=1 VECLIB_MAXIMUM_THREADS=1 BLIS_NUM_THREADS=1 POLARS_MAX_THREADS=1 RAYON_NUM_THREADS=1 NUMEXPR_NUM_THREADS=1 .work/envs-latest/limen/bin/python updates/2026-10-29-limen/academic/probe_causal_prefix.py --repo-root /workspace/scratch/008a76ec4981/Limen --revision latest --output updates/2026-10-29-limen/academic/causal-prefix-latest.json"
+  ],
+  "results": [
+    {
+      "status": "fulfilled",
+      "value": {
+        "chunk_id": "cab2fa",
+        "wall_time_seconds": 0.000030254,
+        "exit_code": 0,
+        "original_token_count": 96,
+        "output": "{\n  \"output\": \"/workspace/scratch/008a76ec4981/Backtest-Benchmark/updates/2026-10-29-limen/academic/causal-prefix-baseline.json\",\n  \"sha256\": \"cc600036f02de5f530df8f6b24ba8eb1c08fb679daf5c387d2378eea678a7db5\",\n  \"revision\": \"baseline\",\n  \"original_changed_rows\": [\n    0,\n    173,\n    0\n  ],\n  \"expanded_changed_rows\": [\n    173,\n    173,\n    138,\n    138\n  ],\n  \"asof_rows\": 32\n}\n"
+      }
+    },
+    {
+      "status": "fulfilled",
+      "value": {
+        "chunk_id": "5d0632",
+        "wall_time_seconds": 0.000023955,
+        "exit_code": 0,
+        "original_token_count": 92,
+        "output": "{\n  \"output\": \"/workspace/scratch/008a76ec4981/Backtest-Benchmark/updates/2026-10-29-limen/academic/causal-prefix-latest.json\",\n  \"sha256\": \"35fb24173b8fbb32a682017a1c2561ced57fc2c3b61bc1959daab4d3d35bf222\",\n  \"revision\": \"latest\",\n  \"original_changed_rows\": [\n    0,\n    0,\n    0\n  ],\n  \"expanded_changed_rows\": [\n    0,\n    0,\n    0,\n    0\n  ],\n  \"asof_rows\": 32\n}\n"
+      }
+    }
+  ],
+  "initial_setup_error": {
+    "script_sha256": "bed18ea4f27e5590d97a7f9b851775d75f2370d6787e1821bba50ee8f4279d6e",
+    "file": "probe-setup-errors.json",
+    "reason": "Probe queried import-name limen rather than installed distribution vaquum-limen; corrected metadata lookup only, then repeated same bounded work."
+  }
+}

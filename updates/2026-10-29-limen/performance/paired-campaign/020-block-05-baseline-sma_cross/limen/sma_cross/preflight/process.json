@@ -1,0 +1,39 @@
+{
+  "command": [
+    "/workspace/scratch/008a76ec4981/Backtest-Benchmark/.work/envs-baseline/limen/bin/python",
+    "-m",
+    "bench.worker",
+    "--engine",
+    "limen",
+    "--prepared",
+    "/workspace/scratch/008a76ec4981/Backtest-Benchmark/updates/2026-10-29-limen/performance/paired-campaign/020-block-05-baseline-sma_cross/prepared-sma_cross.npz",
+    "--prepared-sha256",
+    "a4e10483b2e46a229340eaad6cbe38af40824a63b7ce39d11dee57b0045f5c5a",
+    "--contract",
+    "/workspace/scratch/008a76ec4981/Backtest-Benchmark/updates/2026-10-29-limen/performance/paired-campaign/020-block-05-baseline-sma_cross/contract.json",
+    "--environment-manifest",
+    "/workspace/scratch/008a76ec4981/Backtest-Benchmark/updates/2026-10-29-limen/performance/runner/baseline/.work/manifests/limen.json",
+    "--output",
+    "/workspace/scratch/008a76ec4981/Backtest-Benchmark/updates/2026-10-29-limen/performance/paired-campaign/020-block-05-baseline-sma_cross/limen/sma_cross/preflight/result",
+    "--benchmark-code-manifest",
+    "/workspace/scratch/008a76ec4981/Backtest-Benchmark/updates/2026-10-29-limen/performance/paired-campaign/020-block-05-baseline-sma_cross/benchmark-code.json",
+    "--mode",
+    "preflight",
+    "--warm-repeats",
+    "9",
+    "--diagnostic-core"
+  ],
+  "returncode": 0,
+  "timed_out": false,
+  "process_wall_ms": 908.807305,
+  "launch_to_ready_ms": 35.250361,
+  "launch_to_first_valid_ms": 770.791003,
+  "parent_observed_events_ms": {
+    "ready": 35.250361,
+    "first_valid": 770.791003,
+    "complete": 804.151732
+  },
+  "stdout_path": "/workspace/scratch/008a76ec4981/Backtest-Benchmark/updates/2026-10-29-limen/performance/paired-campaign/020-block-05-baseline-sma_cross/limen/sma_cross/preflight/stdout.log",
+  "startup_scope": "Parent observed process launch to worker ready event, before scientific/engine imports; IPC scheduling is included",
+  "first_valid_scope": "Process launch through source verification, imports, input load, independent oracle, first engine call, extraction and successful parity"
+}

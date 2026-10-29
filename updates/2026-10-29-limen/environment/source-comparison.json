@@ -1,0 +1,17 @@
+{
+  "assessed_at_utc": "2026-10-29T11:09:20.959137+00:00",
+  "baseline_sha": "29837e666604eee74a2ac94f328fb9803724342a",
+  "current_sha": "25e47866422d007da55cb19625344183599ba671",
+  "two_week_cutoff_local": "2026-10-15T00:00:00+03:00",
+  "two_week_predecessor_sha": "d52a868a35c41f580167cd9d8be9c72633cc991e",
+  "baseline_commit": "29837e666604eee74a2ac94f328fb9803724342a 2026-10-19T17:59:12+03:00 Merge pull request #1023 from Vaquum/codex/readme-research-paths",
+  "current_commit": "25e47866422d007da55cb19625344183599ba671 2026-10-28T21:50:53+02:00 Merge pull request #1339 from Vaquum/codex/weight-link-binary",
+  "delta_first_parent_commits": 145,
+  "delta_all_commits": 1403,
+  "two_week_first_parent_commits": 178,
+  "package_shortstat": "466 files changed, 17779 insertions(+), 2859 deletions(-)",
+  "tests_shortstat": "175 files changed, 26447 insertions(+), 693 deletions(-)",
+  "governance_shortstat": "49 files changed, 1672 insertions(+), 4604 deletions(-)",
+  "baseline_fixture_sha256": "a634bbd4f3692fac7bc88512da588e7772f4bd1b749567606d5314e54d0adf72",
+  "current_fixture_sha256": "a634bbd4f3692fac7bc88512da588e7772f4bd1b749567606d5314e54d0adf72"
+}

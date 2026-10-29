@@ -1,0 +1,10 @@
+{
+  "reviewed_utc": "2026-10-29T11:22:26.783840+00:00",
+  "reviewer": "academic agent",
+  "scope": "Read-only inspection of paired outer driver and preregistration; no engine execution",
+  "driver_sha256": "3df3b1872afac01e7d45d3cc2f20ae4c53eaa917db89ff68057490bae2f09e25",
+  "preregistration_sha256": "bd4c724a952ecc9fa5967954ae3c540e495db2bf6298f9c63308085d9288a06d",
+  "material_defects_found": false,
+  "finding": "Five matched old/new blocks per strategy; balanced revision order; only five admitted measurement processes aggregated; source/install/code/fixture gates remain delegated to byte-identical CLI/worker; dependency equality excludes only vaquum-limen.",
+  "interpretation": "Relative duration is the ratio of the revisions' aggregate median durations, not the median of within-block ratios or a paired confidence interval."
+}

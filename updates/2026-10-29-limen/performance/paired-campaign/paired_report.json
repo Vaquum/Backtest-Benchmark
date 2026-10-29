@@ -1,0 +1,1372 @@
+{
+  "schema_version": 1,
+  "mode": "run",
+  "started_utc": "2026-10-29T11:27:26.331526+00:00",
+  "preregistration_sha256": "818e677a98ac254500b140676249548d94497c4b2a64c30f7785f02001204b0f",
+  "status": "verified",
+  "commands": [
+    {
+      "block": 1,
+      "variant": "baseline",
+      "strategies": [
+        "buy_and_hold"
+      ],
+      "process": {
+        "command": [
+          "/workspace/scratch/008a76ec4981/Backtest-Benchmark/.work/envs-baseline/limen/bin/python",
+          "-m",
+          "bench",
+          "run",
+          "--input",
+          "/workspace/scratch/008a76ec4981/Limen-baseline/tests/fixtures/spot_1h_20240101_20241231.parquet",
+          "--expected-sha256",
+          "a634bbd4f3692fac7bc88512da588e7772f4bd1b749567606d5314e54d0adf72",
+          "--output",
+          "/workspace/scratch/008a76ec4981/Backtest-Benchmark/updates/2026-10-29-limen/performance/paired-campaign/001-block-01-baseline-buy_and_hold",
+          "--engines",
+          "limen",
+          "--strategies",
+          "buy_and_hold",
+          "--rows",
+          "8783",
+          "--env-root",
+          "/workspace/scratch/008a76ec4981/Backtest-Benchmark/.work/envs-baseline",
+          "--processes",
+          "1",
+          "--warm-repeats",
+          "9",
+          "--diagnostic-core"
+        ],
+        "returncode": 0,
+        "timed_out": false,
+        "process_wall_ms": 2959.378946,
+        "launch_to_ready_ms": null,
+        "launch_to_first_valid_ms": null,
+        "parent_observed_events_ms": {},
+        "stdout_path": "/workspace/scratch/008a76ec4981/Backtest-Benchmark/updates/2026-10-29-limen/performance/paired-campaign/001-block-01-baseline-buy_and_hold-launcher/stdout.log",
+        "startup_scope": "Parent observed process launch to worker ready event, before scientific/engine imports; IPC scheduling is included",
+        "first_valid_scope": "Process launch through source verification, imports, input load, independent oracle, first engine call, extraction and successful parity"
+      },
+      "report_path": "/workspace/scratch/008a76ec4981/Backtest-Benchmark/updates/2026-10-29-limen/performance/paired-campaign/001-block-01-baseline-buy_and_hold/report.json",
+      "report_sha256": "dcf5b72d5df74032ffadf2f971329350173e54b16fe6329c81328ddf87c42814",
+      "case_statuses": [
+        "verified"
+      ]
+    },
+    {
+      "block": 1,
+      "variant": "latest",
+      "strategies": [
+        "buy_and_hold"
+      ],
+      "process": {
+        "command": [
+          "/workspace/scratch/008a76ec4981/Backtest-Benchmark/.work/envs-latest/limen/bin/python",
+          "-m",
+          "bench",
+          "run",
+          "--input",
+          "/workspace/scratch/008a76ec4981/Limen-baseline/tests/fixtures/spot_1h_20240101_20241231.parquet",
+          "--expected-sha256",
+          "a634bbd4f3692fac7bc88512da588e7772f4bd1b749567606d5314e54d0adf72",
+          "--output",
+          "/workspace/scratch/008a76ec4981/Backtest-Benchmark/updates/2026-10-29-limen/performance/paired-campaign/002-block-01-latest-buy_and_hold",
+          "--engines",
+          "limen",
+          "--strategies",
+          "buy_and_hold",
+          "--rows",
+          "8783",
+          "--env-root",
+          "/workspace/scratch/008a76ec4981/Backtest-Benchmark/.work/envs-latest",
+          "--processes",
+          "1",
+          "--warm-repeats",
+          "9",
+          "--diagnostic-core"
+        ],
+        "returncode": 0,
+        "timed_out": false,
+        "process_wall_ms": 3323.086984,
+        "launch_to_ready_ms": null,
+        "launch_to_first_valid_ms": null,
+        "parent_observed_events_ms": {},
+        "stdout_path": "/workspace/scratch/008a76ec4981/Backtest-Benchmark/updates/2026-10-29-limen/performance/paired-campaign/002-block-01-latest-buy_and_hold-launcher/stdout.log",
+        "startup_scope": "Parent observed process launch to worker ready event, before scientific/engine imports; IPC scheduling is included",
+        "first_valid_scope": "Process launch through source verification, imports, input load, independent oracle, first engine call, extraction and successful parity"
+      },
+      "report_path": "/workspace/scratch/008a76ec4981/Backtest-Benchmark/updates/2026-10-29-limen/performance/paired-campaign/002-block-01-latest-buy_and_hold/report.json",
+      "report_sha256": "7a88438ae91299969165154bdb42d6681c58f69985c2b856bc6e61881cc9e234",
+      "case_statuses": [
+        "verified"
+      ]
+    },
+    {
+      "block": 1,
+      "variant": "latest",
+      "strategies": [
+        "sma_cross"
+      ],
+      "process": {
+        "command": [
+          "/workspace/scratch/008a76ec4981/Backtest-Benchmark/.work/envs-latest/limen/bin/python",
+          "-m",
+          "bench",
+          "run",
+          "--input",
+          "/workspace/scratch/008a76ec4981/Limen-baseline/tests/fixtures/spot_1h_20240101_20241231.parquet",
+          "--expected-sha256",
+          "a634bbd4f3692fac7bc88512da588e7772f4bd1b749567606d5314e54d0adf72",
+          "--output",
+          "/workspace/scratch/008a76ec4981/Backtest-Benchmark/updates/2026-10-29-limen/performance/paired-campaign/003-block-01-latest-sma_cross",
+          "--engines",
+          "limen",
+          "--strategies",
+          "sma_cross",
+          "--rows",
+          "8783",
+          "--env-root",
+          "/workspace/scratch/008a76ec4981/Backtest-Benchmark/.work/envs-latest",
+          "--processes",
+          "1",
+          "--warm-repeats",
+          "9",
+          "--diagnostic-core"
+        ],
+        "returncode": 0,
+        "timed_out": false,
+        "process_wall_ms": 3465.629014,
+        "launch_to_ready_ms": null,
+        "launch_to_first_valid_ms": null,
+        "parent_observed_events_ms": {},
+        "stdout_path": "/workspace/scratch/008a76ec4981/Backtest-Benchmark/updates/2026-10-29-limen/performance/paired-campaign/003-block-01-latest-sma_cross-launcher/stdout.log",
+        "startup_scope": "Parent observed process launch to worker ready event, before scientific/engine imports; IPC scheduling is included",
+        "first_valid_scope": "Process launch through source verification, imports, input load, independent oracle, first engine call, extraction and successful parity"
+      },
+      "report_path": "/workspace/scratch/008a76ec4981/Backtest-Benchmark/updates/2026-10-29-limen/performance/paired-campaign/003-block-01-latest-sma_cross/report.json",
+      "report_sha256": "7a9a4cbeb9b9690afa99168961f47c07fcfd044a13080821acd206a70ea8b7af",
+      "case_statuses": [
+        "verified"
+      ]
+    },
+    {
+      "block": 1,
+      "variant": "baseline",
+      "strategies": [
+        "sma_cross"
+      ],
+      "process": {
+        "command": [
+          "/workspace/scratch/008a76ec4981/Backtest-Benchmark/.work/envs-baseline/limen/bin/python",
+          "-m",
+          "bench",
+          "run",
+          "--input",
+          "/workspace/scratch/008a76ec4981/Limen-baseline/tests/fixtures/spot_1h_20240101_20241231.parquet",
+          "--expected-sha256",
+          "a634bbd4f3692fac7bc88512da588e7772f4bd1b749567606d5314e54d0adf72",
+          "--output",
+          "/workspace/scratch/008a76ec4981/Backtest-Benchmark/updates/2026-10-29-limen/performance/paired-campaign/004-block-01-baseline-sma_cross",
+          "--engines",
+          "limen",
+          "--strategies",
+          "sma_cross",
+          "--rows",
+          "8783",
+          "--env-root",
+          "/workspace/scratch/008a76ec4981/Backtest-Benchmark/.work/envs-baseline",
+          "--processes",
+          "1",
+          "--warm-repeats",
+          "9",
+          "--diagnostic-core"
+        ],
+        "returncode": 0,
+        "timed_out": false,
+        "process_wall_ms": 3541.199381,
+        "launch_to_ready_ms": null,
+        "launch_to_first_valid_ms": null,
+        "parent_observed_events_ms": {},
+        "stdout_path": "/workspace/scratch/008a76ec4981/Backtest-Benchmark/updates/2026-10-29-limen/performance/paired-campaign/004-block-01-baseline-sma_cross-launcher/stdout.log",
+        "startup_scope": "Parent observed process launch to worker ready event, before scientific/engine imports; IPC scheduling is included",
+        "first_valid_scope": "Process launch through source verification, imports, input load, independent oracle, first engine call, extraction and successful parity"
+      },
+      "report_path": "/workspace/scratch/008a76ec4981/Backtest-Benchmark/updates/2026-10-29-limen/performance/paired-campaign/004-block-01-baseline-sma_cross/report.json",
+      "report_sha256": "d4794d9620b956f37868b61251ee4e772d6cc8a6f96068272b0414a8f6049bdb",
+      "case_statuses": [
+        "verified"
+      ]
+    },
+    {
+      "block": 2,
+      "variant": "baseline",
+      "strategies": [
+        "sma_cross"
+      ],
+      "process": {
+        "command": [
+          "/workspace/scratch/008a76ec4981/Backtest-Benchmark/.work/envs-baseline/limen/bin/python",
+          "-m",
+          "bench",
+          "run",
+          "--input",
+          "/workspace/scratch/008a76ec4981/Limen-baseline/tests/fixtures/spot_1h_20240101_20241231.parquet",
+          "--expected-sha256",
+          "a634bbd4f3692fac7bc88512da588e7772f4bd1b749567606d5314e54d0adf72",
+          "--output",
+          "/workspace/scratch/008a76ec4981/Backtest-Benchmark/updates/2026-10-29-limen/performance/paired-campaign/005-block-02-baseline-sma_cross",
+          "--engines",
+          "limen",
+          "--strategies",
+          "sma_cross",
+          "--rows",
+          "8783",
+          "--env-root",
+          "/workspace/scratch/008a76ec4981/Backtest-Benchmark/.work/envs-baseline",
+          "--processes",
+          "1",
+          "--warm-repeats",
+          "9",
+          "--diagnostic-core"
+        ],
+        "returncode": 0,
+        "timed_out": false,
+        "process_wall_ms": 3363.351176,
+        "launch_to_ready_ms": null,
+        "launch_to_first_valid_ms": null,
+        "parent_observed_events_ms": {},
+        "stdout_path": "/workspace/scratch/008a76ec4981/Backtest-Benchmark/updates/2026-10-29-limen/performance/paired-campaign/005-block-02-baseline-sma_cross-launcher/stdout.log",
+        "startup_scope": "Parent observed process launch to worker ready event, before scientific/engine imports; IPC scheduling is included",
+        "first_valid_scope": "Process launch through source verification, imports, input load, independent oracle, first engine call, extraction and successful parity"
+      },
+      "report_path": "/workspace/scratch/008a76ec4981/Backtest-Benchmark/updates/2026-10-29-limen/performance/paired-campaign/005-block-02-baseline-sma_cross/report.json",
+      "report_sha256": "7eebf5d9b48271622739f682c230fc7b2d175b231381711bbd1c99b266f8b99c",
+      "case_statuses": [
+        "verified"
+      ]
+    },
+    {
+      "block": 2,
+      "variant": "latest",
+      "strategies": [
+        "sma_cross"
+      ],
+      "process": {
+        "command": [
+          "/workspace/scratch/008a76ec4981/Backtest-Benchmark/.work/envs-latest/limen/bin/python",
+          "-m",
+          "bench",
+          "run",
+          "--input",
+          "/workspace/scratch/008a76ec4981/Limen-baseline/tests/fixtures/spot_1h_20240101_20241231.parquet",
+          "--expected-sha256",
+          "a634bbd4f3692fac7bc88512da588e7772f4bd1b749567606d5314e54d0adf72",
+          "--output",
+          "/workspace/scratch/008a76ec4981/Backtest-Benchmark/updates/2026-10-29-limen/performance/paired-campaign/006-block-02-latest-sma_cross",
+          "--engines",
+          "limen",
+          "--strategies",
+          "sma_cross",
+          "--rows",
+          "8783",
+          "--env-root",
+          "/workspace/scratch/008a76ec4981/Backtest-Benchmark/.work/envs-latest",
+          "--processes",
+          "1",
+          "--warm-repeats",
+          "9",
+          "--diagnostic-core"
+        ],
+        "returncode": 0,
+        "timed_out": false,
+        "process_wall_ms": 3534.956909,
+        "launch_to_ready_ms": null,
+        "launch_to_first_valid_ms": null,
+        "parent_observed_events_ms": {},
+        "stdout_path": "/workspace/scratch/008a76ec4981/Backtest-Benchmark/updates/2026-10-29-limen/performance/paired-campaign/006-block-02-latest-sma_cross-launcher/stdout.log",
+        "startup_scope": "Parent observed process launch to worker ready event, before scientific/engine imports; IPC scheduling is included",
+        "first_valid_scope": "Process launch through source verification, imports, input load, independent oracle, first engine call, extraction and successful parity"
+      },
+      "report_path": "/workspace/scratch/008a76ec4981/Backtest-Benchmark/updates/2026-10-29-limen/performance/paired-campaign/006-block-02-latest-sma_cross/report.json",
+      "report_sha256": "c7eab360f6b549c2a65a6c37f215006bc9078b1de24ede71b4ebb220bad2c8b0",
+      "case_statuses": [
+        "verified"
+      ]
+    },
+    {
+      "block": 2,
+      "variant": "latest",
+      "strategies": [
+        "buy_and_hold"
+      ],
+      "process": {
+        "command": [
+          "/workspace/scratch/008a76ec4981/Backtest-Benchmark/.work/envs-latest/limen/bin/python",
+          "-m",
+          "bench",
+          "run",
+          "--input",
+          "/workspace/scratch/008a76ec4981/Limen-baseline/tests/fixtures/spot_1h_20240101_20241231.parquet",
+          "--expected-sha256",
+          "a634bbd4f3692fac7bc88512da588e7772f4bd1b749567606d5314e54d0adf72",
+          "--output",
+          "/workspace/scratch/008a76ec4981/Backtest-Benchmark/updates/2026-10-29-limen/performance/paired-campaign/007-block-02-latest-buy_and_hold",
+          "--engines",
+          "limen",
+          "--strategies",
+          "buy_and_hold",
+          "--rows",
+          "8783",
+          "--env-root",
+          "/workspace/scratch/008a76ec4981/Backtest-Benchmark/.work/envs-latest",
+          "--processes",
+          "1",
+          "--warm-repeats",
+          "9",
+          "--diagnostic-core"
+        ],
+        "returncode": 0,
+        "timed_out": false,
+        "process_wall_ms": 3355.008843,
+        "launch_to_ready_ms": null,
+        "launch_to_first_valid_ms": null,
+        "parent_observed_events_ms": {},
+        "stdout_path": "/workspace/scratch/008a76ec4981/Backtest-Benchmark/updates/2026-10-29-limen/performance/paired-campaign/007-block-02-latest-buy_and_hold-launcher/stdout.log",
+        "startup_scope": "Parent observed process launch to worker ready event, before scientific/engine imports; IPC scheduling is included",
+        "first_valid_scope": "Process launch through source verification, imports, input load, independent oracle, first engine call, extraction and successful parity"
+      },
+      "report_path": "/workspace/scratch/008a76ec4981/Backtest-Benchmark/updates/2026-10-29-limen/performance/paired-campaign/007-block-02-latest-buy_and_hold/report.json",
+      "report_sha256": "695c62b0f45388a5610f3a4a4d7b5682ae71d2ddadfb109b144438c10efd94f3",
+      "case_statuses": [
+        "verified"
+      ]
+    },
+    {
+      "block": 2,
+      "variant": "baseline",
+      "strategies": [
+        "buy_and_hold"
+      ],
+      "process": {
+        "command": [
+          "/workspace/scratch/008a76ec4981/Backtest-Benchmark/.work/envs-baseline/limen/bin/python",
+          "-m",
+          "bench",
+          "run",
+          "--input",
+          "/workspace/scratch/008a76ec4981/Limen-baseline/tests/fixtures/spot_1h_20240101_20241231.parquet",
+          "--expected-sha256",
+          "a634bbd4f3692fac7bc88512da588e7772f4bd1b749567606d5314e54d0adf72",
+          "--output",
+          "/workspace/scratch/008a76ec4981/Backtest-Benchmark/updates/2026-10-29-limen/performance/paired-campaign/008-block-02-baseline-buy_and_hold",
+          "--engines",
+          "limen",
+          "--strategies",
+          "buy_and_hold",
+          "--rows",
+          "8783",
+          "--env-root",
+          "/workspace/scratch/008a76ec4981/Backtest-Benchmark/.work/envs-baseline",
+          "--processes",
+          "1",
+          "--warm-repeats",
+          "9",
+          "--diagnostic-core"
+        ],
+        "returncode": 0,
+        "timed_out": false,
+        "process_wall_ms": 3157.265325,
+        "launch_to_ready_ms": null,
+        "launch_to_first_valid_ms": null,
+        "parent_observed_events_ms": {},
+        "stdout_path": "/workspace/scratch/008a76ec4981/Backtest-Benchmark/updates/2026-10-29-limen/performance/paired-campaign/008-block-02-baseline-buy_and_hold-launcher/stdout.log",
+        "startup_scope": "Parent observed process launch to worker ready event, before scientific/engine imports; IPC scheduling is included",
+        "first_valid_scope": "Process launch through source verification, imports, input load, independent oracle, first engine call, extraction and successful parity"
+      },
+      "report_path": "/workspace/scratch/008a76ec4981/Backtest-Benchmark/updates/2026-10-29-limen/performance/paired-campaign/008-block-02-baseline-buy_and_hold/report.json",
+      "report_sha256": "a709a811944a0ba720d6f5b3422f0c7233123f9d598d588f73227cb6eefeafa1",
+      "case_statuses": [
+        "verified"
+      ]
+    },
+    {
+      "block": 3,
+      "variant": "baseline",
+      "strategies": [
+        "buy_and_hold"
+      ],
+      "process": {
+        "command": [
+          "/workspace/scratch/008a76ec4981/Backtest-Benchmark/.work/envs-baseline/limen/bin/python",
+          "-m",
+          "bench",
+          "run",
+          "--input",
+          "/workspace/scratch/008a76ec4981/Limen-baseline/tests/fixtures/spot_1h_20240101_20241231.parquet",
+          "--expected-sha256",
+          "a634bbd4f3692fac7bc88512da588e7772f4bd1b749567606d5314e54d0adf72",
+          "--output",
+          "/workspace/scratch/008a76ec4981/Backtest-Benchmark/updates/2026-10-29-limen/performance/paired-campaign/009-block-03-baseline-buy_and_hold",
+          "--engines",
+          "limen",
+          "--strategies",
+          "buy_and_hold",
+          "--rows",
+          "8783",
+          "--env-root",
+          "/workspace/scratch/008a76ec4981/Backtest-Benchmark/.work/envs-baseline",
+          "--processes",
+          "1",
+          "--warm-repeats",
+          "9",
+          "--diagnostic-core"
+        ],
+        "returncode": 0,
+        "timed_out": false,
+        "process_wall_ms": 2954.028765,
+        "launch_to_ready_ms": null,
+        "launch_to_first_valid_ms": null,
+        "parent_observed_events_ms": {},
+        "stdout_path": "/workspace/scratch/008a76ec4981/Backtest-Benchmark/updates/2026-10-29-limen/performance/paired-campaign/009-block-03-baseline-buy_and_hold-launcher/stdout.log",
+        "startup_scope": "Parent observed process launch to worker ready event, before scientific/engine imports; IPC scheduling is included",
+        "first_valid_scope": "Process launch through source verification, imports, input load, independent oracle, first engine call, extraction and successful parity"
+      },
+      "report_path": "/workspace/scratch/008a76ec4981/Backtest-Benchmark/updates/2026-10-29-limen/performance/paired-campaign/009-block-03-baseline-buy_and_hold/report.json",
+      "report_sha256": "e55694d737640f5475734d332fdbedfc0e51800fae89f9b1b3a4d9073e021327",
+      "case_statuses": [
+        "verified"
+      ]
+    },
+    {
+      "block": 3,
+      "variant": "latest",
+      "strategies": [
+        "buy_and_hold"
+      ],
+      "process": {
+        "command": [
+          "/workspace/scratch/008a76ec4981/Backtest-Benchmark/.work/envs-latest/limen/bin/python",
+          "-m",
+          "bench",
+          "run",
+          "--input",
+          "/workspace/scratch/008a76ec4981/Limen-baseline/tests/fixtures/spot_1h_20240101_20241231.parquet",
+          "--expected-sha256",
+          "a634bbd4f3692fac7bc88512da588e7772f4bd1b749567606d5314e54d0adf72",
+          "--output",
+          "/workspace/scratch/008a76ec4981/Backtest-Benchmark/updates/2026-10-29-limen/performance/paired-campaign/010-block-03-latest-buy_and_hold",
+          "--engines",
+          "limen",
+          "--strategies",
+          "buy_and_hold",
+          "--rows",
+          "8783",
+          "--env-root",
+          "/workspace/scratch/008a76ec4981/Backtest-Benchmark/.work/envs-latest",
+          "--processes",
+          "1",
+          "--warm-repeats",
+          "9",
+          "--diagnostic-core"
+        ],
+        "returncode": 0,
+        "timed_out": false,
+        "process_wall_ms": 2895.714351,
+        "launch_to_ready_ms": null,
+        "launch_to_first_valid_ms": null,
+        "parent_observed_events_ms": {},
+        "stdout_path": "/workspace/scratch/008a76ec4981/Backtest-Benchmark/updates/2026-10-29-limen/performance/paired-campaign/010-block-03-latest-buy_and_hold-launcher/stdout.log",
+        "startup_scope": "Parent observed process launch to worker ready event, before scientific/engine imports; IPC scheduling is included",
+        "first_valid_scope": "Process launch through source verification, imports, input load, independent oracle, first engine call, extraction and successful parity"
+      },
+      "report_path": "/workspace/scratch/008a76ec4981/Backtest-Benchmark/updates/2026-10-29-limen/performance/paired-campaign/010-block-03-latest-buy_and_hold/report.json",
+      "report_sha256": "5ef17c3ef6af3b9e5f4f5596a90936c5ca23ecf05dd320abfe71ff7c77b0363f",
+      "case_statuses": [
+        "verified"
+      ]
+    },
+    {
+      "block": 3,
+      "variant": "latest",
+      "strategies": [
+        "sma_cross"
+      ],
+      "process": {
+        "command": [
+          "/workspace/scratch/008a76ec4981/Backtest-Benchmark/.work/envs-latest/limen/bin/python",
+          "-m",
+          "bench",
+          "run",
+          "--input",
+          "/workspace/scratch/008a76ec4981/Limen-baseline/tests/fixtures/spot_1h_20240101_20241231.parquet",
+          "--expected-sha256",
+          "a634bbd4f3692fac7bc88512da588e7772f4bd1b749567606d5314e54d0adf72",
+          "--output",
+          "/workspace/scratch/008a76ec4981/Backtest-Benchmark/updates/2026-10-29-limen/performance/paired-campaign/011-block-03-latest-sma_cross",
+          "--engines",
+          "limen",
+          "--strategies",
+          "sma_cross",
+          "--rows",
+          "8783",
+          "--env-root",
+          "/workspace/scratch/008a76ec4981/Backtest-Benchmark/.work/envs-latest",
+          "--processes",
+          "1",
+          "--warm-repeats",
+          "9",
+          "--diagnostic-core"
+        ],
+        "returncode": 0,
+        "timed_out": false,
+        "process_wall_ms": 3087.733968,
+        "launch_to_ready_ms": null,
+        "launch_to_first_valid_ms": null,
+        "parent_observed_events_ms": {},
+        "stdout_path": "/workspace/scratch/008a76ec4981/Backtest-Benchmark/updates/2026-10-29-limen/performance/paired-campaign/011-block-03-latest-sma_cross-launcher/stdout.log",
+        "startup_scope": "Parent observed process launch to worker ready event, before scientific/engine imports; IPC scheduling is included",
+        "first_valid_scope": "Process launch through source verification, imports, input load, independent oracle, first engine call, extraction and successful parity"
+      },
+      "report_path": "/workspace/scratch/008a76ec4981/Backtest-Benchmark/updates/2026-10-29-limen/performance/paired-campaign/011-block-03-latest-sma_cross/report.json",
+      "report_sha256": "c8d97a993029c5ef3317ccd59dec486242e39c42f1410d8fb744aaea4ba491bb",
+      "case_statuses": [
+        "verified"
+      ]
+    },
+    {
+      "block": 3,
+      "variant": "baseline",
+      "strategies": [
+        "sma_cross"
+      ],
+      "process": {
+        "command": [
+          "/workspace/scratch/008a76ec4981/Backtest-Benchmark/.work/envs-baseline/limen/bin/python",
+          "-m",
+          "bench",
+          "run",
+          "--input",
+          "/workspace/scratch/008a76ec4981/Limen-baseline/tests/fixtures/spot_1h_20240101_20241231.parquet",
+          "--expected-sha256",
+          "a634bbd4f3692fac7bc88512da588e7772f4bd1b749567606d5314e54d0adf72",
+          "--output",
+          "/workspace/scratch/008a76ec4981/Backtest-Benchmark/updates/2026-10-29-limen/performance/paired-campaign/012-block-03-baseline-sma_cross",
+          "--engines",
+          "limen",
+          "--strategies",
+          "sma_cross",
+          "--rows",
+          "8783",
+          "--env-root",
+          "/workspace/scratch/008a76ec4981/Backtest-Benchmark/.work/envs-baseline",
+          "--processes",
+          "1",
+          "--warm-repeats",
+          "9",
+          "--diagnostic-core"
+        ],
+        "returncode": 0,
+        "timed_out": false,
+        "process_wall_ms": 3070.015556,
+        "launch_to_ready_ms": null,
+        "launch_to_first_valid_ms": null,
+        "parent_observed_events_ms": {},
+        "stdout_path": "/workspace/scratch/008a76ec4981/Backtest-Benchmark/updates/2026-10-29-limen/performance/paired-campaign/012-block-03-baseline-sma_cross-launcher/stdout.log",
+        "startup_scope": "Parent observed process launch to worker ready event, before scientific/engine imports; IPC scheduling is included",
+        "first_valid_scope": "Process launch through source verification, imports, input load, independent oracle, first engine call, extraction and successful parity"
+      },
+      "report_path": "/workspace/scratch/008a76ec4981/Backtest-Benchmark/updates/2026-10-29-limen/performance/paired-campaign/012-block-03-baseline-sma_cross/report.json",
+      "report_sha256": "7f0ce8b6cdc3690d92fee2b2bb736ba3c8bca598b70c7bec13ab693cbf5ebd6d",
+      "case_statuses": [
+        "verified"
+      ]
+    },
+    {
+      "block": 4,
+      "variant": "baseline",
+      "strategies": [
+        "sma_cross"
+      ],
+      "process": {
+        "command": [
+          "/workspace/scratch/008a76ec4981/Backtest-Benchmark/.work/envs-baseline/limen/bin/python",
+          "-m",
+          "bench",
+          "run",
+          "--input",
+          "/workspace/scratch/008a76ec4981/Limen-baseline/tests/fixtures/spot_1h_20240101_20241231.parquet",
+          "--expected-sha256",
+          "a634bbd4f3692fac7bc88512da588e7772f4bd1b749567606d5314e54d0adf72",
+          "--output",
+          "/workspace/scratch/008a76ec4981/Backtest-Benchmark/updates/2026-10-29-limen/performance/paired-campaign/013-block-04-baseline-sma_cross",
+          "--engines",
+          "limen",
+          "--strategies",
+          "sma_cross",
+          "--rows",
+          "8783",
+          "--env-root",
+          "/workspace/scratch/008a76ec4981/Backtest-Benchmark/.work/envs-baseline",
+          "--processes",
+          "1",
+          "--warm-repeats",
+          "9",
+          "--diagnostic-core"
+        ],
+        "returncode": 0,
+        "timed_out": false,
+        "process_wall_ms": 3325.76578,
+        "launch_to_ready_ms": null,
+        "launch_to_first_valid_ms": null,
+        "parent_observed_events_ms": {},
+        "stdout_path": "/workspace/scratch/008a76ec4981/Backtest-Benchmark/updates/2026-10-29-limen/performance/paired-campaign/013-block-04-baseline-sma_cross-launcher/stdout.log",
+        "startup_scope": "Parent observed process launch to worker ready event, before scientific/engine imports; IPC scheduling is included",
+        "first_valid_scope": "Process launch through source verification, imports, input load, independent oracle, first engine call, extraction and successful parity"
+      },
+      "report_path": "/workspace/scratch/008a76ec4981/Backtest-Benchmark/updates/2026-10-29-limen/performance/paired-campaign/013-block-04-baseline-sma_cross/report.json",
+      "report_sha256": "722e29474d97d3fe35873533c5c88b4e69185d400dd385f413a936883f65602b",
+      "case_statuses": [
+        "verified"
+      ]
+    },
+    {
+      "block": 4,
+      "variant": "latest",
+      "strategies": [
+        "sma_cross"
+      ],
+      "process": {
+        "command": [
+          "/workspace/scratch/008a76ec4981/Backtest-Benchmark/.work/envs-latest/limen/bin/python",
+          "-m",
+          "bench",
+          "run",
+          "--input",
+          "/workspace/scratch/008a76ec4981/Limen-baseline/tests/fixtures/spot_1h_20240101_20241231.parquet",
+          "--expected-sha256",
+          "a634bbd4f3692fac7bc88512da588e7772f4bd1b749567606d5314e54d0adf72",
+          "--output",
+          "/workspace/scratch/008a76ec4981/Backtest-Benchmark/updates/2026-10-29-limen/performance/paired-campaign/014-block-04-latest-sma_cross",
+          "--engines",
+          "limen",
+          "--strategies",
+          "sma_cross",
+          "--rows",
+          "8783",
+          "--env-root",
+          "/workspace/scratch/008a76ec4981/Backtest-Benchmark/.work/envs-latest",
+          "--processes",
+          "1",
+          "--warm-repeats",
+          "9",
+          "--diagnostic-core"
+        ],
+        "returncode": 0,
+        "timed_out": false,
+        "process_wall_ms": 2960.325156,
+        "launch_to_ready_ms": null,
+        "launch_to_first_valid_ms": null,
+        "parent_observed_events_ms": {},
+        "stdout_path": "/workspace/scratch/008a76ec4981/Backtest-Benchmark/updates/2026-10-29-limen/performance/paired-campaign/014-block-04-latest-sma_cross-launcher/stdout.log",
+        "startup_scope": "Parent observed process launch to worker ready event, before scientific/engine imports; IPC scheduling is included",
+        "first_valid_scope": "Process launch through source verification, imports, input load, independent oracle, first engine call, extraction and successful parity"
+      },
+      "report_path": "/workspace/scratch/008a76ec4981/Backtest-Benchmark/updates/2026-10-29-limen/performance/paired-campaign/014-block-04-latest-sma_cross/report.json",
+      "report_sha256": "89f3fc6a89d6fd60fa1742c17eaaaaa09883e7652c8d2615d5f611c2f49418f7",
+      "case_statuses": [
+        "verified"
+      ]
+    },
+    {
+      "block": 4,
+      "variant": "latest",
+      "strategies": [
+        "buy_and_hold"
+      ],
+      "process": {
+        "command": [
+          "/workspace/scratch/008a76ec4981/Backtest-Benchmark/.work/envs-latest/limen/bin/python",
+          "-m",
+          "bench",
+          "run",
+          "--input",
+          "/workspace/scratch/008a76ec4981/Limen-baseline/tests/fixtures/spot_1h_20240101_20241231.parquet",
+          "--expected-sha256",
+          "a634bbd4f3692fac7bc88512da588e7772f4bd1b749567606d5314e54d0adf72",
+          "--output",
+          "/workspace/scratch/008a76ec4981/Backtest-Benchmark/updates/2026-10-29-limen/performance/paired-campaign/015-block-04-latest-buy_and_hold",
+          "--engines",
+          "limen",
+          "--strategies",
+          "buy_and_hold",
+          "--rows",
+          "8783",
+          "--env-root",
+          "/workspace/scratch/008a76ec4981/Backtest-Benchmark/.work/envs-latest",
+          "--processes",
+          "1",
+          "--warm-repeats",
+          "9",
+          "--diagnostic-core"
+        ],
+        "returncode": 0,
+        "timed_out": false,
+        "process_wall_ms": 3252.486545,
+        "launch_to_ready_ms": null,
+        "launch_to_first_valid_ms": null,
+        "parent_observed_events_ms": {},
+        "stdout_path": "/workspace/scratch/008a76ec4981/Backtest-Benchmark/updates/2026-10-29-limen/performance/paired-campaign/015-block-04-latest-buy_and_hold-launcher/stdout.log",
+        "startup_scope": "Parent observed process launch to worker ready event, before scientific/engine imports; IPC scheduling is included",
+        "first_valid_scope": "Process launch through source verification, imports, input load, independent oracle, first engine call, extraction and successful parity"
+      },
+      "report_path": "/workspace/scratch/008a76ec4981/Backtest-Benchmark/updates/2026-10-29-limen/performance/paired-campaign/015-block-04-latest-buy_and_hold/report.json",
+      "report_sha256": "8dac17a653a2ae469382fb942b5ee4628fefb4a391bc5ef32efb3537c982a5d3",
+      "case_statuses": [
+        "verified"
+      ]
+    },
+    {
+      "block": 4,
+      "variant": "baseline",
+      "strategies": [
+        "buy_and_hold"
+      ],
+      "process": {
+        "command": [
+          "/workspace/scratch/008a76ec4981/Backtest-Benchmark/.work/envs-baseline/limen/bin/python",
+          "-m",
+          "bench",
+          "run",
+          "--input",
+          "/workspace/scratch/008a76ec4981/Limen-baseline/tests/fixtures/spot_1h_20240101_20241231.parquet",
+          "--expected-sha256",
+          "a634bbd4f3692fac7bc88512da588e7772f4bd1b749567606d5314e54d0adf72",
+          "--output",
+          "/workspace/scratch/008a76ec4981/Backtest-Benchmark/updates/2026-10-29-limen/performance/paired-campaign/016-block-04-baseline-buy_and_hold",
+          "--engines",
+          "limen",
+          "--strategies",
+          "buy_and_hold",
+          "--rows",
+          "8783",
+          "--env-root",
+          "/workspace/scratch/008a76ec4981/Backtest-Benchmark/.work/envs-baseline",
+          "--processes",
+          "1",
+          "--warm-repeats",
+          "9",
+          "--diagnostic-core"
+        ],
+        "returncode": 0,
+        "timed_out": false,
+        "process_wall_ms": 3189.04936,
+        "launch_to_ready_ms": null,
+        "launch_to_first_valid_ms": null,
+        "parent_observed_events_ms": {},
+        "stdout_path": "/workspace/scratch/008a76ec4981/Backtest-Benchmark/updates/2026-10-29-limen/performance/paired-campaign/016-block-04-baseline-buy_and_hold-launcher/stdout.log",
+        "startup_scope": "Parent observed process launch to worker ready event, before scientific/engine imports; IPC scheduling is included",
+        "first_valid_scope": "Process launch through source verification, imports, input load, independent oracle, first engine call, extraction and successful parity"
+      },
+      "report_path": "/workspace/scratch/008a76ec4981/Backtest-Benchmark/updates/2026-10-29-limen/performance/paired-campaign/016-block-04-baseline-buy_and_hold/report.json",
+      "report_sha256": "43c7388f964c1c58bb2553819320f67bb2bd80d68ff317a927a6dbe3dfdfda7a",
+      "case_statuses": [
+        "verified"
+      ]
+    },
+    {
+      "block": 5,
+      "variant": "baseline",
+      "strategies": [
+        "buy_and_hold"
+      ],
+      "process": {
+        "command": [
+          "/workspace/scratch/008a76ec4981/Backtest-Benchmark/.work/envs-baseline/limen/bin/python",
+          "-m",
+          "bench",
+          "run",
+          "--input",
+          "/workspace/scratch/008a76ec4981/Limen-baseline/tests/fixtures/spot_1h_20240101_20241231.parquet",
+          "--expected-sha256",
+          "a634bbd4f3692fac7bc88512da588e7772f4bd1b749567606d5314e54d0adf72",
+          "--output",
+          "/workspace/scratch/008a76ec4981/Backtest-Benchmark/updates/2026-10-29-limen/performance/paired-campaign/017-block-05-baseline-buy_and_hold",
+          "--engines",
+          "limen",
+          "--strategies",
+          "buy_and_hold",
+          "--rows",
+          "8783",
+          "--env-root",
+          "/workspace/scratch/008a76ec4981/Backtest-Benchmark/.work/envs-baseline",
+          "--processes",
+          "1",
+          "--warm-repeats",
+          "9",
+          "--diagnostic-core"
+        ],
+        "returncode": 0,
+        "timed_out": false,
+        "process_wall_ms": 4276.177461,
+        "launch_to_ready_ms": null,
+        "launch_to_first_valid_ms": null,
+        "parent_observed_events_ms": {},
+        "stdout_path": "/workspace/scratch/008a76ec4981/Backtest-Benchmark/updates/2026-10-29-limen/performance/paired-campaign/017-block-05-baseline-buy_and_hold-launcher/stdout.log",
+        "startup_scope": "Parent observed process launch to worker ready event, before scientific/engine imports; IPC scheduling is included",
+        "first_valid_scope": "Process launch through source verification, imports, input load, independent oracle, first engine call, extraction and successful parity"
+      },
+      "report_path": "/workspace/scratch/008a76ec4981/Backtest-Benchmark/updates/2026-10-29-limen/performance/paired-campaign/017-block-05-baseline-buy_and_hold/report.json",
+      "report_sha256": "b28b4d514f559969a1a487b7d3ba721502c1ad3043cfa8d3849e344c5ed7dd56",
+      "case_statuses": [
+        "verified"
+      ]
+    },
+    {
+      "block": 5,
+      "variant": "latest",
+      "strategies": [
+        "buy_and_hold"
+      ],
+      "process": {
+        "command": [
+          "/workspace/scratch/008a76ec4981/Backtest-Benchmark/.work/envs-latest/limen/bin/python",
+          "-m",
+          "bench",
+          "run",
+          "--input",
+          "/workspace/scratch/008a76ec4981/Limen-baseline/tests/fixtures/spot_1h_20240101_20241231.parquet",
+          "--expected-sha256",
+          "a634bbd4f3692fac7bc88512da588e7772f4bd1b749567606d5314e54d0adf72",
+          "--output",
+          "/workspace/scratch/008a76ec4981/Backtest-Benchmark/updates/2026-10-29-limen/performance/paired-campaign/018-block-05-latest-buy_and_hold",
+          "--engines",
+          "limen",
+          "--strategies",
+          "buy_and_hold",
+          "--rows",
+          "8783",
+          "--env-root",
+          "/workspace/scratch/008a76ec4981/Backtest-Benchmark/.work/envs-latest",
+          "--processes",
+          "1",
+          "--warm-repeats",
+          "9",
+          "--diagnostic-core"
+        ],
+        "returncode": 0,
+        "timed_out": false,
+        "process_wall_ms": 3505.620572,
+        "launch_to_ready_ms": null,
+        "launch_to_first_valid_ms": null,
+        "parent_observed_events_ms": {},
+        "stdout_path": "/workspace/scratch/008a76ec4981/Backtest-Benchmark/updates/2026-10-29-limen/performance/paired-campaign/018-block-05-latest-buy_and_hold-launcher/stdout.log",
+        "startup_scope": "Parent observed process launch to worker ready event, before scientific/engine imports; IPC scheduling is included",
+        "first_valid_scope": "Process launch through source verification, imports, input load, independent oracle, first engine call, extraction and successful parity"
+      },
+      "report_path": "/workspace/scratch/008a76ec4981/Backtest-Benchmark/updates/2026-10-29-limen/performance/paired-campaign/018-block-05-latest-buy_and_hold/report.json",
+      "report_sha256": "5f8b26fe94e9cb657f720cca25770ddc6e0ca06e9fb1ed2e1f146709b87523a3",
+      "case_statuses": [
+        "verified"
+      ]
+    },
+    {
+      "block": 5,
+      "variant": "latest",
+      "strategies": [
+        "sma_cross"
+      ],
+      "process": {
+        "command": [
+          "/workspace/scratch/008a76ec4981/Backtest-Benchmark/.work/envs-latest/limen/bin/python",
+          "-m",
+          "bench",
+          "run",
+          "--input",
+          "/workspace/scratch/008a76ec4981/Limen-baseline/tests/fixtures/spot_1h_20240101_20241231.parquet",
+          "--expected-sha256",
+          "a634bbd4f3692fac7bc88512da588e7772f4bd1b749567606d5314e54d0adf72",
+          "--output",
+          "/workspace/scratch/008a76ec4981/Backtest-Benchmark/updates/2026-10-29-limen/performance/paired-campaign/019-block-05-latest-sma_cross",
+          "--engines",
+          "limen",
+          "--strategies",
+          "sma_cross",
+          "--rows",
+          "8783",
+          "--env-root",
+          "/workspace/scratch/008a76ec4981/Backtest-Benchmark/.work/envs-latest",
+          "--processes",
+          "1",
+          "--warm-repeats",
+          "9",
+          "--diagnostic-core"
+        ],
+        "returncode": 0,
+        "timed_out": false,
+        "process_wall_ms": 3281.311796,
+        "launch_to_ready_ms": null,
+        "launch_to_first_valid_ms": null,
+        "parent_observed_events_ms": {},
+        "stdout_path": "/workspace/scratch/008a76ec4981/Backtest-Benchmark/updates/2026-10-29-limen/performance/paired-campaign/019-block-05-latest-sma_cross-launcher/stdout.log",
+        "startup_scope": "Parent observed process launch to worker ready event, before scientific/engine imports; IPC scheduling is included",
+        "first_valid_scope": "Process launch through source verification, imports, input load, independent oracle, first engine call, extraction and successful parity"
+      },
+      "report_path": "/workspace/scratch/008a76ec4981/Backtest-Benchmark/updates/2026-10-29-limen/performance/paired-campaign/019-block-05-latest-sma_cross/report.json",
+      "report_sha256": "e37d7e92e2f747dbd439cf23006164c06c36a5ff7e300f37554a0117aba749d0",
+      "case_statuses": [
+        "verified"
+      ]
+    },
+    {
+      "block": 5,
+      "variant": "baseline",
+      "strategies": [
+        "sma_cross"
+      ],
+      "process": {
+        "command": [
+          "/workspace/scratch/008a76ec4981/Backtest-Benchmark/.work/envs-baseline/limen/bin/python",
+          "-m",
+          "bench",
+          "run",
+          "--input",
+          "/workspace/scratch/008a76ec4981/Limen-baseline/tests/fixtures/spot_1h_20240101_20241231.parquet",
+          "--expected-sha256",
+          "a634bbd4f3692fac7bc88512da588e7772f4bd1b749567606d5314e54d0adf72",
+          "--output",
+          "/workspace/scratch/008a76ec4981/Backtest-Benchmark/updates/2026-10-29-limen/performance/paired-campaign/020-block-05-baseline-sma_cross",
+          "--engines",
+          "limen",
+          "--strategies",
+          "sma_cross",
+          "--rows",
+          "8783",
+          "--env-root",
+          "/workspace/scratch/008a76ec4981/Backtest-Benchmark/.work/envs-baseline",
+          "--processes",
+          "1",
+          "--warm-repeats",
+          "9",
+          "--diagnostic-core"
+        ],
+        "returncode": 0,
+        "timed_out": false,
+        "process_wall_ms": 3665.800038,
+        "launch_to_ready_ms": null,
+        "launch_to_first_valid_ms": null,
+        "parent_observed_events_ms": {},
+        "stdout_path": "/workspace/scratch/008a76ec4981/Backtest-Benchmark/updates/2026-10-29-limen/performance/paired-campaign/020-block-05-baseline-sma_cross-launcher/stdout.log",
+        "startup_scope": "Parent observed process launch to worker ready event, before scientific/engine imports; IPC scheduling is included",
+        "first_valid_scope": "Process launch through source verification, imports, input load, independent oracle, first engine call, extraction and successful parity"
+      },
+      "report_path": "/workspace/scratch/008a76ec4981/Backtest-Benchmark/updates/2026-10-29-limen/performance/paired-campaign/020-block-05-baseline-sma_cross/report.json",
+      "report_sha256": "faf79f82b2081935d527a308ea00f9cec889a22fce3ef5183bc98da2acdcbdef",
+      "case_statuses": [
+        "verified"
+      ]
+    }
+  ],
+  "summaries": [
+    {
+      "engine": "limen",
+      "strategy": "buy_and_hold",
+      "status": "verified",
+      "rank_against_full_engine": true,
+      "independent_processes": 5,
+      "equity_samples": 8783,
+      "fills_checked": 2,
+      "first_full_common_ms_median": 2.869959,
+      "warm_full_common_ms_median": 2.511363,
+      "warm_engine_ms_median": 2.077131,
+      "warm_extraction_common_ms_median": 0.25326,
+      "warm_full_common_cpu_ms_median": 2.515277,
+      "peak_rss_bytes_median": 142028800,
+      "launch_to_ready_ms_median": 30.585489,
+      "launch_to_first_valid_ms_median": 664.748453,
+      "warm_full_common_ms_samples": [
+        [
+          2.60518,
+          2.605282,
+          2.556087,
+          2.57743,
+          2.583768,
+          2.558651,
+          2.547404,
+          2.367653,
+          2.098037
+        ],
+        [
+          2.05615,
+          2.285354,
+          2.214969,
+          2.163962,
+          2.348258,
+          2.931515,
+          2.519165,
+          2.514839,
+          2.195629
+        ],
+        [
+          2.807058,
+          2.51588,
+          2.205544,
+          2.583381,
+          3.128991,
+          2.511363,
+          2.213075,
+          2.327597,
+          2.147736
+        ],
+        [
+          3.054907,
+          2.945643,
+          2.264059,
+          2.293294,
+          2.15136,
+          2.149798,
+          2.012171,
+          2.521335,
+          2.689688
+        ],
+        [
+          2.698385,
+          2.545326,
+          2.479407,
+          2.583653,
+          2.505796,
+          2.625195,
+          2.797434,
+          2.651624,
+          2.649501
+        ]
+      ],
+      "first_full_common_ms_samples": [
+        2.869959,
+        3.005766,
+        2.632275,
+        2.584811,
+        2.98796
+      ],
+      "warm_process_medians_ms": [
+        2.558651,
+        2.285354,
+        2.511363,
+        2.293294,
+        2.625195
+      ],
+      "warm_process_median_ms_min": 2.285354,
+      "warm_process_median_ms_max": 2.625195,
+      "warm_full_common_call_ms_min": 2.012171,
+      "warm_full_common_call_ms_max": 3.128991,
+      "first_full_common_ms_min": 2.584811,
+      "first_full_common_ms_max": 3.005766,
+      "warm_evaluation_bars_per_second": 3497304.053615507,
+      "variant": "baseline",
+      "source_commit": "29837e666604eee74a2ac94f328fb9803724342a"
+    },
+    {
+      "engine": "limen",
+      "strategy": "sma_cross",
+      "status": "verified",
+      "rank_against_full_engine": true,
+      "independent_processes": 5,
+      "equity_samples": 8783,
+      "fills_checked": 52,
+      "first_full_common_ms_median": 2.491598,
+      "warm_full_common_ms_median": 2.135285,
+      "warm_engine_ms_median": 1.901525,
+      "warm_extraction_common_ms_median": 0.227139,
+      "warm_full_common_cpu_ms_median": 2.138339,
+      "peak_rss_bytes_median": 144023552,
+      "launch_to_ready_ms_median": 32.935686,
+      "launch_to_first_valid_ms_median": 785.783638,
+      "warm_full_common_ms_samples": [
+        [
+          2.43174,
+          1.970659,
+          1.800695,
+          2.399371,
+          1.915527,
+          1.993814,
+          1.860494,
+          2.608053,
+          2.673922
+        ],
+        [
+          2.490865,
+          2.500479,
+          2.423403,
+          2.444465,
+          2.436512,
+          2.531486,
+          2.506448,
+          2.563654,
+          2.550895
+        ],
+        [
+          2.135285,
+          2.788391,
+          1.856137,
+          2.121804,
+          2.204448,
+          1.955215,
+          1.990438,
+          3.155871,
+          2.190427
+        ],
+        [
+          1.848576,
+          1.918512,
+          1.87767,
+          2.840367,
+          1.844651,
+          3.204554,
+          2.132223,
+          2.064542,
+          1.975507
+        ],
+        [
+          2.422544,
+          2.661523,
+          2.426791,
+          2.333711,
+          2.578188,
+          2.371738,
+          2.355023,
+          2.350487,
+          2.298579
+        ]
+      ],
+      "first_full_common_ms_samples": [
+        2.202346,
+        2.10845,
+        2.491598,
+        3.545065,
+        2.65282
+      ],
+      "warm_process_medians_ms": [
+        1.993814,
+        2.500479,
+        2.135285,
+        1.975507,
+        2.371738
+      ],
+      "warm_process_median_ms_min": 1.975507,
+      "warm_process_median_ms_max": 2.500479,
+      "warm_full_common_call_ms_min": 1.800695,
+      "warm_full_common_call_ms_max": 3.204554,
+      "first_full_common_ms_min": 2.10845,
+      "first_full_common_ms_max": 3.545065,
+      "warm_evaluation_bars_per_second": 4113268.2522473577,
+      "variant": "baseline",
+      "source_commit": "29837e666604eee74a2ac94f328fb9803724342a"
+    },
+    {
+      "engine": "limen",
+      "strategy": "buy_and_hold",
+      "status": "verified",
+      "rank_against_full_engine": true,
+      "independent_processes": 5,
+      "equity_samples": 8783,
+      "fills_checked": 2,
+      "first_full_common_ms_median": 2.60934,
+      "warm_full_common_ms_median": 2.273964,
+      "warm_engine_ms_median": 2.066945,
+      "warm_extraction_common_ms_median": 0.218388,
+      "warm_full_common_cpu_ms_median": 2.278106,
+      "peak_rss_bytes_median": 143372288,
+      "launch_to_ready_ms_median": 29.853794,
+      "launch_to_first_valid_ms_median": 734.606985,
+      "warm_full_common_ms_samples": [
+        [
+          2.907162,
+          1.991471,
+          2.109148,
+          2.273964,
+          2.535667,
+          2.432231,
+          2.199944,
+          2.270449,
+          4.48182
+        ],
+        [
+          2.390331,
+          2.424914,
+          3.516464,
+          3.319488,
+          5.734156,
+          2.552065,
+          2.335079,
+          2.98169,
+          2.822942
+        ],
+        [
+          2.766476,
+          2.013835,
+          2.220015,
+          2.190321,
+          2.352685,
+          1.923941,
+          3.032346,
+          2.154738,
+          2.159104
+        ],
+        [
+          2.194275,
+          2.747986,
+          2.327735,
+          2.254365,
+          2.134054,
+          3.296219,
+          2.225772,
+          2.444941,
+          2.699984
+        ],
+        [
+          2.146733,
+          2.128224,
+          1.921584,
+          2.543257,
+          3.25139,
+          2.179963,
+          2.04512,
+          2.108235,
+          1.953362
+        ]
+      ],
+      "first_full_common_ms_samples": [
+        2.55802,
+        2.60934,
+        2.457652,
+        3.398332,
+        6.034497
+      ],
+      "warm_process_medians_ms": [
+        2.273964,
+        2.822942,
+        2.190321,
+        2.327735,
+        2.128224
+      ],
+      "warm_process_median_ms_min": 2.128224,
+      "warm_process_median_ms_max": 2.822942,
+      "warm_full_common_call_ms_min": 1.921584,
+      "warm_full_common_call_ms_max": 5.734156,
+      "first_full_common_ms_min": 2.457652,
+      "first_full_common_ms_max": 6.034497,
+      "warm_evaluation_bars_per_second": 3862418.226497869,
+      "variant": "latest",
+      "source_commit": "25e47866422d007da55cb19625344183599ba671"
+    },
+    {
+      "engine": "limen",
+      "strategy": "sma_cross",
+      "status": "verified",
+      "rank_against_full_engine": true,
+      "independent_processes": 5,
+      "equity_samples": 8783,
+      "fills_checked": 52,
+      "first_full_common_ms_median": 2.479566,
+      "warm_full_common_ms_median": 2.046498,
+      "warm_engine_ms_median": 1.82867,
+      "warm_extraction_common_ms_median": 0.227081,
+      "warm_full_common_cpu_ms_median": 2.050779,
+      "peak_rss_bytes_median": 142471168,
+      "launch_to_ready_ms_median": 32.276467,
+      "launch_to_first_valid_ms_median": 740.955536,
+      "warm_full_common_ms_samples": [
+        [
+          2.039798,
+          2.518468,
+          3.00508,
+          1.98156,
+          1.978996,
+          2.007119,
+          5.741756,
+          2.174581,
+          2.046498
+        ],
+        [
+          2.745027,
+          2.52157,
+          1.885885,
+          2.165696,
+          2.776985,
+          2.942413,
+          2.681001,
+          2.799248,
+          2.194399
+        ],
+        [
+          1.833635,
+          1.732734,
+          1.960496,
+          1.860956,
+          2.026765,
+          1.714465,
+          3.898318,
+          3.914641,
+          3.911527
+        ],
+        [
+          2.442503,
+          2.350655,
+          2.379358,
+          2.431095,
+          2.376995,
+          2.446609,
+          2.445587,
+          2.410575,
+          2.436464
+        ],
+        [
+          2.001933,
+          2.609099,
+          3.510137,
+          1.762094,
+          1.921232,
+          1.780702,
+          1.86696,
+          1.808784,
+          1.796004
+        ]
+      ],
+      "first_full_common_ms_samples": [
+        2.276019,
+        2.635672,
+        2.479566,
+        3.36358,
+        2.216032
+      ],
+      "warm_process_medians_ms": [
+        2.046498,
+        2.681001,
+        1.960496,
+        2.431095,
+        1.86696
+      ],
+      "warm_process_median_ms_min": 1.86696,
+      "warm_process_median_ms_max": 2.681001,
+      "warm_full_common_call_ms_min": 1.714465,
+      "warm_full_common_call_ms_max": 5.741756,
+      "first_full_common_ms_min": 2.216032,
+      "first_full_common_ms_max": 3.36358,
+      "warm_evaluation_bars_per_second": 4291721.760783543,
+      "variant": "latest",
+      "source_commit": "25e47866422d007da55cb19625344183599ba671"
+    }
+  ],
+  "comparisons": [
+    {
+      "strategy": "buy_and_hold",
+      "latest_over_baseline_warm_full_common_duration": 0.9054700574946752,
+      "scope": "Same-host paired revisions only; no cross-date or competitor ratio"
+    },
+    {
+      "strategy": "sma_cross",
+      "latest_over_baseline_warm_full_common_duration": 0.9584191337456124,
+      "scope": "Same-host paired revisions only; no cross-date or competitor ratio"
+    }
+  ],
+  "finished_utc": "2026-10-29T11:28:32.530682+00:00"
+}

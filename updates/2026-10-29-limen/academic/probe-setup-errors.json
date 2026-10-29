@@ -1,0 +1,25 @@
+{
+  "scope": "Initial source-import probe receipt failures; no Limen behavior failure claim.",
+  "results": [
+    {
+      "status": "fulfilled",
+      "value": {
+        "chunk_id": "df6664",
+        "wall_time_seconds": 0.000030384,
+        "exit_code": 1,
+        "original_token_count": 401,
+        "output": "Traceback (most recent call last):\n  File \"/opt/codex/runtimes/codex-primary-runtime/dependencies/python/lib/python3.12/importlib/metadata/__init__.py\", line 397, in from_name\n    return next(cls.discover(name=name))\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\nStopIteration\n\nDuring handling of the above exception, another exception occurred:\n\nTraceback (most recent call last):\n  File \"/workspace/scratch/008a76ec4981/Backtest-Benchmark/updates/2026-10-29-limen/academic/probe_causal_prefix.py\", line 137, in <module>\n    raise SystemExit(main())\n                     ^^^^^^\n  File \"/workspace/scratch/008a76ec4981/Backtest-Benchmark/updates/2026-10-29-limen/academic/probe_causal_prefix.py\", line 115, in main\n    'installed_distribution_version': importlib.metadata.version('limen')},\n                                      ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/opt/codex/runtimes/codex-primary-runtime/dependencies/python/lib/python3.12/importlib/metadata/__init__.py\", line 889, in version\n    return distribution(distribution_name).version\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/opt/codex/runtimes/codex-primary-runtime/dependencies/python/lib/python3.12/importlib/metadata/__init__.py\", line 862, in distribution\n    return Distribution.from_name(distribution_name)\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/opt/codex/runtimes/codex-primary-runtime/dependencies/python/lib/python3.12/importlib/metadata/__init__.py\", line 399, in from_name\n    raise PackageNotFoundError(name)\nimportlib.metadata.PackageNotFoundError: No package metadata was found for limen\n"
+      }
+    },
+    {
+      "status": "fulfilled",
+      "value": {
+        "chunk_id": "c5a5c0",
+        "wall_time_seconds": 0.748884399,
+        "exit_code": 1,
+        "original_token_count": 401,
+        "output": "Traceback (most recent call last):\n  File \"/opt/codex/runtimes/codex-primary-runtime/dependencies/python/lib/python3.12/importlib/metadata/__init__.py\", line 397, in from_name\n    return next(cls.discover(name=name))\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\nStopIteration\n\nDuring handling of the above exception, another exception occurred:\n\nTraceback (most recent call last):\n  File \"/workspace/scratch/008a76ec4981/Backtest-Benchmark/updates/2026-10-29-limen/academic/probe_causal_prefix.py\", line 137, in <module>\n    raise SystemExit(main())\n                     ^^^^^^\n  File \"/workspace/scratch/008a76ec4981/Backtest-Benchmark/updates/2026-10-29-limen/academic/probe_causal_prefix.py\", line 115, in main\n    'installed_distribution_version': importlib.metadata.version('limen')},\n                                      ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/opt/codex/runtimes/codex-primary-runtime/dependencies/python/lib/python3.12/importlib/metadata/__init__.py\", line 889, in version\n    return distribution(distribution_name).version\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/opt/codex/runtimes/codex-primary-runtime/dependencies/python/lib/python3.12/importlib/metadata/__init__.py\", line 862, in distribution\n    return Distribution.from_name(distribution_name)\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/opt/codex/runtimes/codex-primary-runtime/dependencies/python/lib/python3.12/importlib/metadata/__init__.py\", line 399, in from_name\n    raise PackageNotFoundError(name)\nimportlib.metadata.PackageNotFoundError: No package metadata was found for limen\n"
+      }
+    }
+  ]
+}

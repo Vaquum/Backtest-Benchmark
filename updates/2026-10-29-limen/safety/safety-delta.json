@@ -1,0 +1,1412 @@
+{
+  "schema": "limen-safety-delta/v1",
+  "review_date": "2026-10-29",
+  "baseline_source_sha": "29837e666604eee74a2ac94f328fb9803724342a",
+  "latest_source_sha": "25e47866422d007da55cb19625344183599ba671",
+  "evidence_policy": "Executable implementation, configuration, assertions and retained execution results only. Governance files controlled operating constraints; documentation and issue closure were not behavioral proof.",
+  "status_policy": "Scoped control assessments within existing S01-S15 criteria, not numeric grades or global safety scores. Inspected source/assertions, native suite membership and independent paired probes are separate evidence. Tested means mapped native modules passed, not that every clause or adversarial case was exercised.",
+  "native_suite_state": "Admitted exact-SHA native-Linux rerun: 7,388 passed, zero failed, three skipped; four worker receipts reconciled. Initial restricted-environment attempt is preserved separately and not admitted. Native-suite duration is not used to claim code speedup.",
+  "related_campaign_receipts": [
+    "../environment/native-suite-initial-attempt.json",
+    "../environment/upstream-ci.json",
+    "native-test-membership.json"
+  ],
+  "probe_receipt": "probe-comparison.json",
+  "prior_issue_trace": [
+    {
+      "issue": 1060,
+      "boundary": "Committed manifest content identity",
+      "criterion_ids": [
+        "S05"
+      ]
+    },
+    {
+      "issue": 1061,
+      "boundary": "Resolver external re-export traversal",
+      "criterion_ids": [
+        "S01"
+      ]
+    },
+    {
+      "issue": 1062,
+      "boundary": "Compiled Sensor numeric output admission",
+      "criterion_ids": [
+        "S09"
+      ]
+    },
+    {
+      "issue": 1063,
+      "boundary": "FFD finite admission and recurrence overflow",
+      "criterion_ids": [
+        "S03"
+      ]
+    }
+  ],
+  "prior_issue_trace_note": "Issue numbers are traceability labels only; implementation and retained probes establish the changes. Quantile causality, the fifth prior fix, is assessed by the academic review.",
+  "criteria": [
+    {
+      "criterion_id": "S01",
+      "status_after": "Enforced",
+      "scope": "Native YAML resolver namespace ownership and dunder admission, assuming trusted installed Limen code.",
+      "change": "specific_defect_fixed",
+      "finding": "The resolver checks ownership at every imported-module/attribute hop and rejects dunder segments before import. The old external re-export resolved, validated and bound to the exact os.system object; current lookup and binding raise ResolutionError and validation rejects the manifest. The callable was never invoked.",
+      "evidence_type": [
+        "Inspected",
+        "Reproduced",
+        "Tested"
+      ],
+      "probe_sections": [
+        "resolver"
+      ],
+      "limitations": [
+        "This enforces a resolver namespace boundary, not a Python sandbox or filesystem/network authorization policy.",
+        "Allowed modules and callbacks remain ordinary trusted Python; hostile installed plugins, monkey-patching and a hostile machine owner are outside this claim."
+      ],
+      "source_refs": [
+        {
+          "path": "limen/yaml/resolver.py",
+          "start_line": 24,
+          "end_line": 55,
+          "url": "https://github.com/Vaquum/Limen/blob/25e47866422d007da55cb19625344183599ba671/limen/yaml/resolver.py#L24-L55",
+          "kind": "implementation"
+        },
+        {
+          "path": "tests/test_yaml.py",
+          "start_line": 222,
+          "end_line": 282,
+          "url": "https://github.com/Vaquum/Limen/blob/25e47866422d007da55cb19625344183599ba671/tests/test_yaml.py#L222-L282",
+          "kind": "native_test_assertions"
+        }
+      ],
+      "candidate_id": "limen",
+      "criterion": "Untrusted configuration callable boundary",
+      "status_before": "Fails",
+      "applicability": "native",
+      "threat_model": [
+        "trusted_user_code",
+        "hostile_configuration"
+      ],
+      "baseline_source_refs": [
+        {
+          "path": "limen/yaml/resolver.py",
+          "start_line": 39,
+          "end_line": 55,
+          "url": "https://github.com/Vaquum/Limen/blob/29837e666604eee74a2ac94f328fb9803724342a/limen/yaml/resolver.py#L39-L55"
+        },
+        {
+          "path": "limen/data/historical_data.py",
+          "start_line": 3,
+          "end_line": 20,
+          "url": "https://github.com/Vaquum/Limen/blob/29837e666604eee74a2ac94f328fb9803724342a/limen/data/historical_data.py#L3-L20"
+        },
+        {
+          "path": "limen/yaml/rules.py",
+          "start_line": 28,
+          "end_line": 46,
+          "url": "https://github.com/Vaquum/Limen/blob/29837e666604eee74a2ac94f328fb9803724342a/limen/yaml/rules.py#L28-L46"
+        },
+        {
+          "path": "limen/yaml/compiler.py",
+          "start_line": 104,
+          "end_line": 119,
+          "url": "https://github.com/Vaquum/Limen/blob/29837e666604eee74a2ac94f328fb9803724342a/limen/yaml/compiler.py#L104-L119"
+        },
+        {
+          "path": "limen/experiment/manifest_core.py",
+          "start_line": 207,
+          "end_line": 236,
+          "url": "https://github.com/Vaquum/Limen/blob/29837e666604eee74a2ac94f328fb9803724342a/limen/experiment/manifest_core.py#L207-L236"
+        }
+      ],
+      "native_test_modules": [
+        "tests.test_yaml",
+        "tests.test_yaml_callback_admission"
+      ]
+    },
+    {
+      "criterion_id": "S02",
+      "status_after": "Partial",
+      "scope": "Numeric/schema admission at inspected feature, parser, manifest, Sensor and direct snapshot entry points.",
+      "change": "strengthened_with_remaining_gap",
+      "finding": "Shared feature constraints reject booleans, non-real/nonfinite values and violated bounds. YAML parsing rejects mapping-valued keys before object construction. Manifest cost resolution and event TradePolicy admit finite nonnegative costs, but the direct snapshot path still passes fee_bps/slip_bps through to arithmetic without equivalent admission.",
+      "evidence_type": [
+        "Inspected",
+        "Tested"
+      ],
+      "probe_sections": [],
+      "limitations": [
+        "The remaining direct-snapshot cost gap is current source inspection, supported by a frozen earlier reproduction; it was not rerun in this paired campaign.",
+        "Shared-helper adoption does not establish universal admission across every Python API or callback."
+      ],
+      "source_refs": [
+        {
+          "path": "limen/_feature_constraints.py",
+          "start_line": 17,
+          "end_line": 41,
+          "url": "https://github.com/Vaquum/Limen/blob/25e47866422d007da55cb19625344183599ba671/limen/_feature_constraints.py#L17-L41",
+          "kind": "implementation"
+        },
+        {
+          "path": "limen/yaml/_parser_yaml.py",
+          "start_line": 19,
+          "end_line": 41,
+          "url": "https://github.com/Vaquum/Limen/blob/25e47866422d007da55cb19625344183599ba671/limen/yaml/_parser_yaml.py#L19-L41",
+          "kind": "implementation"
+        },
+        {
+          "path": "limen/experiment/_resolve_backtest_config.py",
+          "start_line": 42,
+          "end_line": 48,
+          "url": "https://github.com/Vaquum/Limen/blob/25e47866422d007da55cb19625344183599ba671/limen/experiment/_resolve_backtest_config.py#L42-L48",
+          "kind": "implementation"
+        },
+        {
+          "path": "limen/backtest/trade_contract.py",
+          "start_line": 123,
+          "end_line": 135,
+          "url": "https://github.com/Vaquum/Limen/blob/25e47866422d007da55cb19625344183599ba671/limen/backtest/trade_contract.py#L123-L135",
+          "kind": "implementation"
+        },
+        {
+          "path": "limen/backtest/_snapshot_execution.py",
+          "start_line": 37,
+          "end_line": 82,
+          "url": "https://github.com/Vaquum/Limen/blob/25e47866422d007da55cb19625344183599ba671/limen/backtest/_snapshot_execution.py#L37-L82",
+          "kind": "implementation"
+        },
+        {
+          "path": "limen/backtest/_snapshot_execution.py",
+          "start_line": 120,
+          "end_line": 140,
+          "url": "https://github.com/Vaquum/Limen/blob/25e47866422d007da55cb19625344183599ba671/limen/backtest/_snapshot_execution.py#L120-L140",
+          "kind": "implementation"
+        },
+        {
+          "path": "limen/backtest/long_flat_strategy.py",
+          "start_line": 118,
+          "end_line": 131,
+          "url": "https://github.com/Vaquum/Limen/blob/25e47866422d007da55cb19625344183599ba671/limen/backtest/long_flat_strategy.py#L118-L131",
+          "kind": "implementation"
+        },
+        {
+          "path": "tests/test_feature_constraints.py",
+          "start_line": 32,
+          "end_line": 55,
+          "url": "https://github.com/Vaquum/Limen/blob/25e47866422d007da55cb19625344183599ba671/tests/test_feature_constraints.py#L32-L55",
+          "kind": "native_test_assertions"
+        }
+      ],
+      "candidate_id": "limen",
+      "criterion": "Input schema and numeric admission consistency",
+      "status_before": "Partial",
+      "applicability": "native",
+      "threat_model": [
+        "invalid_inputs",
+        "research_integrity"
+      ],
+      "baseline_source_refs": [],
+      "native_test_modules": [
+        "tests.test_feature_constraints",
+        "tests.test_yaml_parser_timeout",
+        "tests.test_nullable_trade_controls"
+      ]
+    },
+    {
+      "criterion_id": "S03",
+      "status_after": "Partial",
+      "scope": "Specific FFD nonfinite/overflow failures, parser pathological keys, and native dispatch bounds.",
+      "change": "specific_defect_fixed_general_bounds_unestablished",
+      "finding": "Public FFD validates finite parameters before its identity path or weight generation; its private kernel rejects invalid parameters and nonfinite recurrence before append. Both versions pass three independent finite short-form controls. Under an external 32 MiB virtual-memory allowance the old kernel reaches MemoryError in four cases, while current methods raise ValueError in all five; the old d=0 path accepted NaN threshold.",
+      "evidence_type": [
+        "Inspected",
+        "Reproduced",
+        "Tested"
+      ],
+      "probe_sections": [
+        "fractional_difference"
+      ],
+      "limitations": [
+        "All retained FFD processes hit the teardown-inclusive outer deadline after printing a completed method receipt. Outer labels/elapsed values are not method timings or evidence that current FFD hangs; see probe-comparison.json.",
+        "No maximum weight width, universal legitimate finite-workload bound, or hard deadline for arbitrary callbacks is established. Future.result(timeout=0.1) polls; it is not a round timeout.",
+        "The parser fix and checked-in timeout cases do not establish a universal parser size/depth bound."
+      ],
+      "source_refs": [
+        {
+          "path": "limen/features/fractional_diff.py",
+          "start_line": 31,
+          "end_line": 49,
+          "url": "https://github.com/Vaquum/Limen/blob/25e47866422d007da55cb19625344183599ba671/limen/features/fractional_diff.py#L31-L49",
+          "kind": "implementation"
+        },
+        {
+          "path": "limen/features/fractional_diff.py",
+          "start_line": 83,
+          "end_line": 115,
+          "url": "https://github.com/Vaquum/Limen/blob/25e47866422d007da55cb19625344183599ba671/limen/features/fractional_diff.py#L83-L115",
+          "kind": "implementation"
+        },
+        {
+          "path": "limen/experiment/_parallel_rounds.py",
+          "start_line": 173,
+          "end_line": 220,
+          "url": "https://github.com/Vaquum/Limen/blob/25e47866422d007da55cb19625344183599ba671/limen/experiment/_parallel_rounds.py#L173-L220",
+          "kind": "implementation"
+        },
+        {
+          "path": "tests/test_fractional_diff.py",
+          "start_line": 269,
+          "end_line": 320,
+          "url": "https://github.com/Vaquum/Limen/blob/25e47866422d007da55cb19625344183599ba671/tests/test_fractional_diff.py#L269-L320",
+          "kind": "native_test_assertions"
+        },
+        {
+          "path": "tests/test_fractional_diff.py",
+          "start_line": 328,
+          "end_line": 350,
+          "url": "https://github.com/Vaquum/Limen/blob/25e47866422d007da55cb19625344183599ba671/tests/test_fractional_diff.py#L328-L350",
+          "kind": "native_test_assertions"
+        },
+        {
+          "path": "tests/test_yaml_parser_timeout.py",
+          "start_line": 14,
+          "end_line": 77,
+          "url": "https://github.com/Vaquum/Limen/blob/25e47866422d007da55cb19625344183599ba671/tests/test_yaml_parser_timeout.py#L14-L77",
+          "kind": "native_test_assertions"
+        }
+      ],
+      "candidate_id": "limen",
+      "criterion": "Algorithm and process resource bounds",
+      "status_before": "Fails",
+      "applicability": "native",
+      "threat_model": [
+        "resource_exhaustion",
+        "crash_or_concurrency"
+      ],
+      "baseline_source_refs": [
+        {
+          "path": "limen/features/fractional_diff.py",
+          "start_line": 30,
+          "end_line": 40,
+          "url": "https://github.com/Vaquum/Limen/blob/29837e666604eee74a2ac94f328fb9803724342a/limen/features/fractional_diff.py#L30-L40"
+        },
+        {
+          "path": "limen/features/fractional_diff.py",
+          "start_line": 74,
+          "end_line": 97,
+          "url": "https://github.com/Vaquum/Limen/blob/29837e666604eee74a2ac94f328fb9803724342a/limen/features/fractional_diff.py#L74-L97"
+        },
+        {
+          "path": "limen/yaml/parser.py",
+          "start_line": 27,
+          "end_line": 33,
+          "url": "https://github.com/Vaquum/Limen/blob/29837e666604eee74a2ac94f328fb9803724342a/limen/yaml/parser.py#L27-L33"
+        },
+        {
+          "path": "limen/experiment/_round_storage.py",
+          "start_line": 24,
+          "end_line": 25,
+          "url": "https://github.com/Vaquum/Limen/blob/29837e666604eee74a2ac94f328fb9803724342a/limen/experiment/_round_storage.py#L24-L25"
+        },
+        {
+          "path": "limen/backtest/_event_plan.py",
+          "start_line": 21,
+          "end_line": 24,
+          "url": "https://github.com/Vaquum/Limen/blob/29837e666604eee74a2ac94f328fb9803724342a/limen/backtest/_event_plan.py#L21-L24"
+        },
+        {
+          "path": "limen/backtest/_event_plan.py",
+          "start_line": 62,
+          "end_line": 66,
+          "url": "https://github.com/Vaquum/Limen/blob/29837e666604eee74a2ac94f328fb9803724342a/limen/backtest/_event_plan.py#L62-L66"
+        },
+        {
+          "path": "limen/experiment/_parallel_rounds.py",
+          "start_line": 208,
+          "end_line": 218,
+          "url": "https://github.com/Vaquum/Limen/blob/29837e666604eee74a2ac94f328fb9803724342a/limen/experiment/_parallel_rounds.py#L208-L218"
+        }
+      ],
+      "native_test_modules": [
+        "tests.test_fractional_diff",
+        "tests.test_yaml_parser_timeout"
+      ]
+    },
+    {
+      "criterion_id": "S04",
+      "status_after": "Partial",
+      "scope": "Historical-data ingestion and optional local recorded-Parquet identity checking.",
+      "change": "new_optional_integrity_control",
+      "finding": "get_any_file accepts expected_sha256 for a local Parquet payload, verifies bytes before parsing those same bytes, and rejects digest mismatch. A recorded source declaration can now be checked at that ingestion route.",
+      "evidence_type": [
+        "Inspected",
+        "Tested"
+      ],
+      "probe_sections": [],
+      "limitations": [
+        "Checksum verification is opt-in and establishes equality to a supplied digest, not source authenticity or authorization.",
+        "The entire payload is read before parsing; row-tail/lookback clipping is not a download/parse byte bound. Generic path/network/archive surfaces retain their prior scope; service-wide containment is unestablished."
+      ],
+      "source_refs": [
+        {
+          "path": "limen/data/historical_data.py",
+          "start_line": 969,
+          "end_line": 998,
+          "url": "https://github.com/Vaquum/Limen/blob/25e47866422d007da55cb19625344183599ba671/limen/data/historical_data.py#L969-L998",
+          "kind": "implementation"
+        },
+        {
+          "path": "tests/test_cli_assessment.py",
+          "start_line": 378,
+          "end_line": 397,
+          "url": "https://github.com/Vaquum/Limen/blob/25e47866422d007da55cb19625344183599ba671/tests/test_cli_assessment.py#L378-L397",
+          "kind": "native_test_assertions"
+        }
+      ],
+      "candidate_id": "limen",
+      "criterion": "Data source network, archive and path boundaries",
+      "status_before": "Partial",
+      "applicability": "native",
+      "threat_model": [
+        "hostile_data_or_paths",
+        "resource_exhaustion"
+      ],
+      "baseline_source_refs": [],
+      "native_test_modules": [
+        "tests.test_cli_assessment",
+        "tests.test_historical_data"
+      ]
+    },
+    {
+      "criterion_id": "S05",
+      "status_after": "Partial",
+      "scope": "Committed manifest URI reads, idempotent reuse and fork; worker-source and cost-artifact identity.",
+      "change": "read_reuse_defect_fixed_additional_seals",
+      "finding": "Committed-manifest verification recomputes canonical ID and checks lineage; URI reads, existing-object reuse and fork call it. Paired probes confirm full/short URI and reuse now reject an altered body without changing stored-object or index bytes/mtime; valid idempotence remains. Worker snapshots verify serialized source bytes, and cost artifacts use typed canonical digests and externally pinned read identities.",
+      "evidence_type": [
+        "Inspected",
+        "Reproduced",
+        "Tested"
+      ],
+      "probe_sections": [
+        "manifest_store"
+      ],
+      "limitations": [
+        "Fork is source-inspected here, not independently exercised by the paired probe.",
+        "rebuild_index still checks filename against lineage.id without recomputing content before copying metadata; do not generalize the verified-read repair to every store metadata operation.",
+        "Digests/read-only file modes do not make the machine owner untrusted or authenticate external claims. Input/model/code/environment binding remains route-specific."
+      ],
+      "source_refs": [
+        {
+          "path": "limen/yaml/store.py",
+          "start_line": 117,
+          "end_line": 130,
+          "url": "https://github.com/Vaquum/Limen/blob/25e47866422d007da55cb19625344183599ba671/limen/yaml/store.py#L117-L130",
+          "kind": "implementation"
+        },
+        {
+          "path": "limen/yaml/store.py",
+          "start_line": 183,
+          "end_line": 196,
+          "url": "https://github.com/Vaquum/Limen/blob/25e47866422d007da55cb19625344183599ba671/limen/yaml/store.py#L183-L196",
+          "kind": "implementation"
+        },
+        {
+          "path": "limen/yaml/store.py",
+          "start_line": 246,
+          "end_line": 256,
+          "url": "https://github.com/Vaquum/Limen/blob/25e47866422d007da55cb19625344183599ba671/limen/yaml/store.py#L246-L256",
+          "kind": "implementation"
+        },
+        {
+          "path": "limen/yaml/store.py",
+          "start_line": 354,
+          "end_line": 363,
+          "url": "https://github.com/Vaquum/Limen/blob/25e47866422d007da55cb19625344183599ba671/limen/yaml/store.py#L354-L363",
+          "kind": "implementation"
+        },
+        {
+          "path": "limen/yaml/store.py",
+          "start_line": 407,
+          "end_line": 436,
+          "url": "https://github.com/Vaquum/Limen/blob/25e47866422d007da55cb19625344183599ba671/limen/yaml/store.py#L407-L436",
+          "kind": "implementation"
+        },
+        {
+          "path": "limen/experiment/_parallel_sources.py",
+          "start_line": 14,
+          "end_line": 50,
+          "url": "https://github.com/Vaquum/Limen/blob/25e47866422d007da55cb19625344183599ba671/limen/experiment/_parallel_sources.py#L14-L50",
+          "kind": "implementation"
+        },
+        {
+          "path": "limen/backtest/_cost_history.py",
+          "start_line": 187,
+          "end_line": 209,
+          "url": "https://github.com/Vaquum/Limen/blob/25e47866422d007da55cb19625344183599ba671/limen/backtest/_cost_history.py#L187-L209",
+          "kind": "implementation"
+        },
+        {
+          "path": "limen/backtest/_cost_identity.py",
+          "start_line": 48,
+          "end_line": 120,
+          "url": "https://github.com/Vaquum/Limen/blob/25e47866422d007da55cb19625344183599ba671/limen/backtest/_cost_identity.py#L48-L120",
+          "kind": "implementation"
+        },
+        {
+          "path": "tests/test_yaml_store.py",
+          "start_line": 396,
+          "end_line": 456,
+          "url": "https://github.com/Vaquum/Limen/blob/25e47866422d007da55cb19625344183599ba671/tests/test_yaml_store.py#L396-L456",
+          "kind": "native_test_assertions"
+        },
+        {
+          "path": "tests/test_yaml_store.py",
+          "start_line": 543,
+          "end_line": 563,
+          "url": "https://github.com/Vaquum/Limen/blob/25e47866422d007da55cb19625344183599ba671/tests/test_yaml_store.py#L543-L563",
+          "kind": "native_test_assertions"
+        },
+        {
+          "path": "tests/test_parallel_sources.py",
+          "start_line": 13,
+          "end_line": 38,
+          "url": "https://github.com/Vaquum/Limen/blob/25e47866422d007da55cb19625344183599ba671/tests/test_parallel_sources.py#L13-L38",
+          "kind": "native_test_assertions"
+        }
+      ],
+      "candidate_id": "limen",
+      "criterion": "Manifest content-address verification on read",
+      "status_before": "Partial",
+      "applicability": "native",
+      "threat_model": [
+        "research_integrity",
+        "storage_tampering"
+      ],
+      "baseline_source_refs": [
+        {
+          "path": "limen/yaml/store.py",
+          "start_line": 45,
+          "end_line": 47,
+          "url": "https://github.com/Vaquum/Limen/blob/29837e666604eee74a2ac94f328fb9803724342a/limen/yaml/store.py#L45-L47"
+        },
+        {
+          "path": "limen/yaml/store.py",
+          "start_line": 175,
+          "end_line": 186,
+          "url": "https://github.com/Vaquum/Limen/blob/29837e666604eee74a2ac94f328fb9803724342a/limen/yaml/store.py#L175-L186"
+        },
+        {
+          "path": "limen/yaml/store.py",
+          "start_line": 244,
+          "end_line": 260,
+          "url": "https://github.com/Vaquum/Limen/blob/29837e666604eee74a2ac94f328fb9803724342a/limen/yaml/store.py#L244-L260"
+        },
+        {
+          "path": "limen/experiment/experiment_core.py",
+          "start_line": 1017,
+          "end_line": 1019,
+          "url": "https://github.com/Vaquum/Limen/blob/29837e666604eee74a2ac94f328fb9803724342a/limen/experiment/experiment_core.py#L1017-L1019"
+        },
+        {
+          "path": "limen/experiment/_family_evidence.py",
+          "start_line": 65,
+          "end_line": 88,
+          "url": "https://github.com/Vaquum/Limen/blob/29837e666604eee74a2ac94f328fb9803724342a/limen/experiment/_family_evidence.py#L65-L88"
+        },
+        {
+          "path": "tests/test_yaml_store.py",
+          "start_line": 167,
+          "end_line": 176,
+          "url": "https://github.com/Vaquum/Limen/blob/29837e666604eee74a2ac94f328fb9803724342a/tests/test_yaml_store.py#L167-L176"
+        }
+      ],
+      "native_test_modules": [
+        "tests.test_yaml_store",
+        "tests.test_parallel_sources",
+        "tests.test_observed_costs"
+      ]
+    },
+    {
+      "criterion_id": "S06",
+      "status_after": "Enforced",
+      "scope": "Recorded round integrity, configured explicit-exit evidence and protected checkpoint populations in native readers/resume.",
+      "change": "retained_and_extended",
+      "finding": "Round-record restoration and committed-prefix checks remain present. Resume verifies configured explicit-exit evidence before admitting values, recomputes its digest, and rejects missing/changed evidence. Protected checkpoints cross-check saved population against current project binding and actual recorded history.",
+      "evidence_type": [
+        "Inspected",
+        "Tested"
+      ],
+      "probe_sections": [],
+      "limitations": [
+        "This is logical consistency/corruption rejection for inspected formats/routes, not authenticity against an owner able to replace the complete evidence set.",
+        "Relevant native modules passed in the admitted full suite; module counts do not establish exhaustive corruption or crash coverage."
+      ],
+      "source_refs": [
+        {
+          "path": "limen/experiment/_round_storage.py",
+          "start_line": 102,
+          "end_line": 130,
+          "url": "https://github.com/Vaquum/Limen/blob/25e47866422d007da55cb19625344183599ba671/limen/experiment/_round_storage.py#L102-L130",
+          "kind": "implementation"
+        },
+        {
+          "path": "limen/experiment/_round_storage.py",
+          "start_line": 231,
+          "end_line": 259,
+          "url": "https://github.com/Vaquum/Limen/blob/25e47866422d007da55cb19625344183599ba671/limen/experiment/_round_storage.py#L231-L259",
+          "kind": "implementation"
+        },
+        {
+          "path": "limen/experiment/_parallel_resume.py",
+          "start_line": 60,
+          "end_line": 98,
+          "url": "https://github.com/Vaquum/Limen/blob/25e47866422d007da55cb19625344183599ba671/limen/experiment/_parallel_resume.py#L60-L98",
+          "kind": "implementation"
+        },
+        {
+          "path": "limen/experiment/_exit_rules.py",
+          "start_line": 147,
+          "end_line": 166,
+          "url": "https://github.com/Vaquum/Limen/blob/25e47866422d007da55cb19625344183599ba671/limen/experiment/_exit_rules.py#L147-L166",
+          "kind": "implementation"
+        },
+        {
+          "path": "limen/experiment/_holdout_checkpoint.py",
+          "start_line": 134,
+          "end_line": 156,
+          "url": "https://github.com/Vaquum/Limen/blob/25e47866422d007da55cb19625344183599ba671/limen/experiment/_holdout_checkpoint.py#L134-L156",
+          "kind": "implementation"
+        },
+        {
+          "path": "tests/test_round_storage.py",
+          "start_line": 172,
+          "end_line": 211,
+          "url": "https://github.com/Vaquum/Limen/blob/25e47866422d007da55cb19625344183599ba671/tests/test_round_storage.py#L172-L211",
+          "kind": "native_test_assertions"
+        }
+      ],
+      "candidate_id": "limen",
+      "criterion": "Recorded round corruption and reference integrity",
+      "status_before": "Enforced",
+      "applicability": "native",
+      "threat_model": [
+        "research_integrity",
+        "storage_corruption"
+      ],
+      "baseline_source_refs": [],
+      "native_test_modules": [
+        "tests.test_round_storage",
+        "tests.test_exit_rules",
+        "tests.test_holdout_workflows"
+      ]
+    },
+    {
+      "criterion_id": "S07",
+      "status_after": "Partial",
+      "scope": "Serial/parallel committed-prefix recovery and protected checkpoint provenance; local filesystem crash semantics.",
+      "change": "stronger_logical_resume_not_full_durability",
+      "finding": "Serial resume restores typed parameters from committed round evidence after validating CSV/round prefix. Protected resume requires matching project/revision, admitted source, occurrence identities and completed history. Checkpoint JSON still uses temporary-file replacement; round, CSV and metadata writes remain separate.",
+      "evidence_type": [
+        "Inspected",
+        "Tested"
+      ],
+      "probe_sections": [],
+      "limitations": [
+        "The inspected checkpoint writer does not fsync. A single transaction across all output files or directory-wide writer lock was not established.",
+        "Power loss, network-filesystem durability, concurrent writers and hostile whole-directory replacement remain outside this guarantee."
+      ],
+      "source_refs": [
+        {
+          "path": "limen/experiment/_serial_resume.py",
+          "start_line": 16,
+          "end_line": 60,
+          "url": "https://github.com/Vaquum/Limen/blob/25e47866422d007da55cb19625344183599ba671/limen/experiment/_serial_resume.py#L16-L60",
+          "kind": "implementation"
+        },
+        {
+          "path": "limen/experiment/_holdout_checkpoint.py",
+          "start_line": 57,
+          "end_line": 81,
+          "url": "https://github.com/Vaquum/Limen/blob/25e47866422d007da55cb19625344183599ba671/limen/experiment/_holdout_checkpoint.py#L57-L81",
+          "kind": "implementation"
+        },
+        {
+          "path": "limen/experiment/_holdout_checkpoint.py",
+          "start_line": 134,
+          "end_line": 177,
+          "url": "https://github.com/Vaquum/Limen/blob/25e47866422d007da55cb19625344183599ba671/limen/experiment/_holdout_checkpoint.py#L134-L177",
+          "kind": "implementation"
+        },
+        {
+          "path": "limen/experiment/checkpoint_manager.py",
+          "start_line": 282,
+          "end_line": 300,
+          "url": "https://github.com/Vaquum/Limen/blob/25e47866422d007da55cb19625344183599ba671/limen/experiment/checkpoint_manager.py#L282-L300",
+          "kind": "implementation"
+        },
+        {
+          "path": "limen/experiment/_parallel_commit.py",
+          "start_line": 130,
+          "end_line": 161,
+          "url": "https://github.com/Vaquum/Limen/blob/25e47866422d007da55cb19625344183599ba671/limen/experiment/_parallel_commit.py#L130-L161",
+          "kind": "implementation"
+        }
+      ],
+      "candidate_id": "limen",
+      "criterion": "Crash/restart consistency and durable commit frontier",
+      "status_before": "Partial",
+      "applicability": "native",
+      "threat_model": [
+        "crash_or_concurrency",
+        "research_integrity"
+      ],
+      "baseline_source_refs": [],
+      "native_test_modules": [
+        "tests.test_checkpoint_manager",
+        "tests.test_serial_resume_parameters",
+        "tests.test_resume_metric_types",
+        "tests.test_holdout_workflows"
+      ]
+    },
+    {
+      "criterion_id": "S08",
+      "status_after": "Enforced",
+      "scope": "Native worker failure propagation, bounded pending dispatch, ordered commit and cleanup, including protected workers.",
+      "change": "retained_and_extended",
+      "finding": "Pending work is bounded by worker count and committed in order; failures surface with round identity, and finally paths checkpoint, cancel and reap. Workers receive checksummed frozen source snapshots. Protected results must match source/history, occurrence and coordinator authority. New record-error mode is constrained to ordinary unprotected serial MSQ; integrity exceptions are rethrown.",
+      "evidence_type": [
+        "Inspected",
+        "Tested"
+      ],
+      "probe_sections": [],
+      "limitations": [
+        "Enforced refers to the dispatch/error protocol, not a hard per-round deadline, OS sandbox, or proof arbitrary callbacks terminate.",
+        "The optional serial error budget may continue after candidate failures; it is unavailable to protected, factorized, walk-forward or multiprocess execution."
+      ],
+      "source_refs": [
+        {
+          "path": "limen/experiment/_parallel_rounds.py",
+          "start_line": 114,
+          "end_line": 124,
+          "url": "https://github.com/Vaquum/Limen/blob/25e47866422d007da55cb19625344183599ba671/limen/experiment/_parallel_rounds.py#L114-L124",
+          "kind": "implementation"
+        },
+        {
+          "path": "limen/experiment/_parallel_rounds.py",
+          "start_line": 173,
+          "end_line": 253,
+          "url": "https://github.com/Vaquum/Limen/blob/25e47866422d007da55cb19625344183599ba671/limen/experiment/_parallel_rounds.py#L173-L253",
+          "kind": "implementation"
+        },
+        {
+          "path": "limen/experiment/_parallel_commit.py",
+          "start_line": 31,
+          "end_line": 51,
+          "url": "https://github.com/Vaquum/Limen/blob/25e47866422d007da55cb19625344183599ba671/limen/experiment/_parallel_commit.py#L31-L51",
+          "kind": "implementation"
+        },
+        {
+          "path": "limen/experiment/_parallel_sources.py",
+          "start_line": 14,
+          "end_line": 50,
+          "url": "https://github.com/Vaquum/Limen/blob/25e47866422d007da55cb19625344183599ba671/limen/experiment/_parallel_sources.py#L14-L50",
+          "kind": "implementation"
+        },
+        {
+          "path": "limen/experiment/_round_errors.py",
+          "start_line": 50,
+          "end_line": 61,
+          "url": "https://github.com/Vaquum/Limen/blob/25e47866422d007da55cb19625344183599ba671/limen/experiment/_round_errors.py#L50-L61",
+          "kind": "implementation"
+        },
+        {
+          "path": "limen/experiment/_round_errors.py",
+          "start_line": 85,
+          "end_line": 102,
+          "url": "https://github.com/Vaquum/Limen/blob/25e47866422d007da55cb19625344183599ba671/limen/experiment/_round_errors.py#L85-L102",
+          "kind": "implementation"
+        }
+      ],
+      "candidate_id": "limen",
+      "criterion": "Parallel worker failure handling and bounded dispatch",
+      "status_before": "Enforced",
+      "applicability": "native",
+      "threat_model": [
+        "crash_or_concurrency",
+        "resource_exhaustion"
+      ],
+      "baseline_source_refs": [],
+      "native_test_modules": [
+        "tests.test_parallel_rounds",
+        "tests.test_parallel_admission",
+        "tests.test_parallel_sources",
+        "tests.test_round_errors",
+        "tests.test_holdout_workflows"
+      ]
+    },
+    {
+      "criterion_id": "S09",
+      "status_after": "Partial",
+      "scope": "Numeric success/unavailable output admission in public compiled Sensor.predict/predict_all, plus fold failure alignment.",
+      "change": "specific_defect_fixed",
+      "finding": "Compiled Sensor uses the existing mapped_values validator in single and batch paths. Six invalid-output canaries formerly reported as successful now yield sensor-error with null prediction/probability. Valid controls, including missing probability, stay successful and datetime alignment is preserved. Fold recovery retains an established decision clock or raises if formation failed before that clock existed.",
+      "evidence_type": [
+        "Inspected",
+        "Reproduced",
+        "Tested"
+      ],
+      "probe_sections": [
+        "compiled_sensor"
+      ],
+      "limitations": [
+        "Paired probes cover scalar output admission/alignment, not fitting, calibration quality, feature causality or trading outcomes.",
+        "Model objects/callbacks remain trusted Python; a Sensor reason is not a downstream trading kill switch.",
+        "General exceptions on ordinary non-fold batch inference still recover raw-length unavailable rows without datetimes; the new fold-specific behavior is narrower."
+      ],
+      "source_refs": [
+        {
+          "path": "limen/inference/sensor.py",
+          "start_line": 131,
+          "end_line": 149,
+          "url": "https://github.com/Vaquum/Limen/blob/25e47866422d007da55cb19625344183599ba671/limen/inference/sensor.py#L131-L149",
+          "kind": "implementation"
+        },
+        {
+          "path": "limen/inference/sensor.py",
+          "start_line": 231,
+          "end_line": 257,
+          "url": "https://github.com/Vaquum/Limen/blob/25e47866422d007da55cb19625344183599ba671/limen/inference/sensor.py#L231-L257",
+          "kind": "implementation"
+        },
+        {
+          "path": "limen/inference/_python_sensor.py",
+          "start_line": 104,
+          "end_line": 133,
+          "url": "https://github.com/Vaquum/Limen/blob/25e47866422d007da55cb19625344183599ba671/limen/inference/_python_sensor.py#L104-L133",
+          "kind": "implementation"
+        },
+        {
+          "path": "limen/inference/_fold_sensor.py",
+          "start_line": 63,
+          "end_line": 92,
+          "url": "https://github.com/Vaquum/Limen/blob/25e47866422d007da55cb19625344183599ba671/limen/inference/_fold_sensor.py#L63-L92",
+          "kind": "implementation"
+        },
+        {
+          "path": "tests/test_sensor.py",
+          "start_line": 642,
+          "end_line": 731,
+          "url": "https://github.com/Vaquum/Limen/blob/25e47866422d007da55cb19625344183599ba671/tests/test_sensor.py#L642-L731",
+          "kind": "native_test_assertions"
+        }
+      ],
+      "candidate_id": "limen",
+      "criterion": "Inference output validity and unavailable-signal behavior",
+      "status_before": "Partial",
+      "applicability": "native",
+      "threat_model": [
+        "invalid_inference",
+        "research_integrity"
+      ],
+      "baseline_source_refs": [
+        {
+          "path": "limen/inference/_python_sensor.py",
+          "start_line": 65,
+          "end_line": 100,
+          "url": "https://github.com/Vaquum/Limen/blob/29837e666604eee74a2ac94f328fb9803724342a/limen/inference/_python_sensor.py#L65-L100"
+        },
+        {
+          "path": "limen/inference/_python_sensor.py",
+          "start_line": 104,
+          "end_line": 133,
+          "url": "https://github.com/Vaquum/Limen/blob/29837e666604eee74a2ac94f328fb9803724342a/limen/inference/_python_sensor.py#L104-L133"
+        },
+        {
+          "path": "limen/inference/_python_sensor.py",
+          "start_line": 183,
+          "end_line": 195,
+          "url": "https://github.com/Vaquum/Limen/blob/29837e666604eee74a2ac94f328fb9803724342a/limen/inference/_python_sensor.py#L183-L195"
+        },
+        {
+          "path": "limen/inference/sensor.py",
+          "start_line": 124,
+          "end_line": 143,
+          "url": "https://github.com/Vaquum/Limen/blob/29837e666604eee74a2ac94f328fb9803724342a/limen/inference/sensor.py#L124-L143"
+        },
+        {
+          "path": "limen/inference/sensor.py",
+          "start_line": 229,
+          "end_line": 247,
+          "url": "https://github.com/Vaquum/Limen/blob/29837e666604eee74a2ac94f328fb9803724342a/limen/inference/sensor.py#L229-L247"
+        },
+        {
+          "path": "limen/inference/sensor.py",
+          "start_line": 294,
+          "end_line": 310,
+          "url": "https://github.com/Vaquum/Limen/blob/29837e666604eee74a2ac94f328fb9803724342a/limen/inference/sensor.py#L294-L310"
+        }
+      ],
+      "native_test_modules": [
+        "tests.test_sensor",
+        "tests.test_python_sensor",
+        "tests.test_fold_sensor"
+      ]
+    },
+    {
+      "criterion_id": "S10",
+      "status_after": "Enforced",
+      "scope": "Event-engine chronology and supplied signal/observation/funding evidence, including declared barrier/source clocks.",
+      "change": "retained_and_extended",
+      "finding": "Event ordering and source/availability admission remain explicit. Predictions must match the causal signal timeline and be finite when present. Dynamic barriers require distinct named distance columns and valid interval/timestamp-role metadata; private barrier preparation preserves original row membership and validates readiness/distances.",
+      "evidence_type": [
+        "Inspected",
+        "Tested"
+      ],
+      "probe_sections": [],
+      "limitations": [
+        "These checks establish consistency of supplied timestamps/rows, not authenticity of external availability claims or causality of arbitrary trusted producers.",
+        "Direct snapshot arrays retain a different chronology contract and can permit zero lag; no cross-route equivalence is implied."
+      ],
+      "source_refs": [
+        {
+          "path": "limen/backtest/execution_events.py",
+          "start_line": 20,
+          "end_line": 108,
+          "url": "https://github.com/Vaquum/Limen/blob/25e47866422d007da55cb19625344183599ba671/limen/backtest/execution_events.py#L20-L108",
+          "kind": "implementation"
+        },
+        {
+          "path": "limen/backtest/execution_events.py",
+          "start_line": 122,
+          "end_line": 142,
+          "url": "https://github.com/Vaquum/Limen/blob/25e47866422d007da55cb19625344183599ba671/limen/backtest/execution_events.py#L122-L142",
+          "kind": "implementation"
+        },
+        {
+          "path": "limen/backtest/trade_contract.py",
+          "start_line": 137,
+          "end_line": 146,
+          "url": "https://github.com/Vaquum/Limen/blob/25e47866422d007da55cb19625344183599ba671/limen/backtest/trade_contract.py#L137-L146",
+          "kind": "implementation"
+        },
+        {
+          "path": "limen/experiment/_dynamic_barriers.py",
+          "start_line": 76,
+          "end_line": 101,
+          "url": "https://github.com/Vaquum/Limen/blob/25e47866422d007da55cb19625344183599ba671/limen/experiment/_dynamic_barriers.py#L76-L101",
+          "kind": "implementation"
+        }
+      ],
+      "candidate_id": "limen",
+      "criterion": "Execution chronology and source evidence admission",
+      "status_before": "Enforced",
+      "applicability": "native",
+      "threat_model": [
+        "invalid_market_evidence",
+        "research_integrity"
+      ],
+      "baseline_source_refs": [],
+      "native_test_modules": [
+        "tests.test_event_execution_reuse",
+        "tests.test_fixed_trade_sources",
+        "tests.test_source_interval",
+        "tests.test_dynamic_barriers"
+      ]
+    },
+    {
+      "criterion_id": "S11",
+      "status_after": "Enforced",
+      "scope": "Supported event-engine affordability, target exposure, cash-spot borrowing and quantity/margin accounting.",
+      "change": "native_control_retained",
+      "finding": "Target sizing rejects excess resolved exposure and borrowed cash-spot shorts. Fills apply costs, minimum notional and collateral checks before applying quantity. Dynamic-barrier entry requires an admitted ready row. Observed-cost scenarios replay the same engine constraints and retain economic failures as separate outcomes.",
+      "evidence_type": [
+        "Inspected",
+        "Tested"
+      ],
+      "probe_sections": [],
+      "limitations": [
+        "The target limit is not a continuously rebalanced portfolio limit. Margin/equity breach aborts rather than simulating venue liquidation/bankruptcy.",
+        "No live venue guarantee, order-book participation bound or universal economic validity is established; the direct snapshot cost-admission gap is recorded in S02."
+      ],
+      "source_refs": [
+        {
+          "path": "limen/backtest/trade_contract.py",
+          "start_line": 123,
+          "end_line": 135,
+          "url": "https://github.com/Vaquum/Limen/blob/25e47866422d007da55cb19625344183599ba671/limen/backtest/trade_contract.py#L123-L135",
+          "kind": "implementation"
+        },
+        {
+          "path": "limen/backtest/trade_execution.py",
+          "start_line": 115,
+          "end_line": 136,
+          "url": "https://github.com/Vaquum/Limen/blob/25e47866422d007da55cb19625344183599ba671/limen/backtest/trade_execution.py#L115-L136",
+          "kind": "implementation"
+        },
+        {
+          "path": "limen/backtest/trade_execution.py",
+          "start_line": 144,
+          "end_line": 184,
+          "url": "https://github.com/Vaquum/Limen/blob/25e47866422d007da55cb19625344183599ba671/limen/backtest/trade_execution.py#L144-L184",
+          "kind": "implementation"
+        },
+        {
+          "path": "limen/backtest/_cost_comparison.py",
+          "start_line": 174,
+          "end_line": 195,
+          "url": "https://github.com/Vaquum/Limen/blob/25e47866422d007da55cb19625344183599ba671/limen/backtest/_cost_comparison.py#L174-L195",
+          "kind": "implementation"
+        },
+        {
+          "path": "tests/test_target_exposure.py",
+          "start_line": 104,
+          "end_line": 134,
+          "url": "https://github.com/Vaquum/Limen/blob/25e47866422d007da55cb19625344183599ba671/tests/test_target_exposure.py#L104-L134",
+          "kind": "native_test_assertions"
+        }
+      ],
+      "candidate_id": "limen",
+      "criterion": "Economic affordability, exposure and quantity constraints",
+      "status_before": "Enforced",
+      "applicability": "native",
+      "threat_model": [
+        "economic_model_integrity"
+      ],
+      "baseline_source_refs": [],
+      "native_test_modules": [
+        "tests.test_target_exposure",
+        "tests.test_nullable_trade_controls"
+      ]
+    },
+    {
+      "criterion_id": "S12",
+      "status_after": "Partial",
+      "scope": "Event/snapshot exits and dynamic-barrier research, plus retrospective observed execution-cost calibration/comparison.",
+      "change": "substantial_new_controlled_capability",
+      "finding": "New observed-cost APIs admit normalized recorded fills, pin canonical calibration/application identities, freeze candidate inputs/policies, and rerun original versus calibrated event scenarios. Missing support/incompatible comparisons yield explicit unavailable outcomes; economic failures remain separate. Explicit exits and dynamic barriers add validated state and evidence paths with research/promotion restrictions.",
+      "evidence_type": [
+        "Inspected",
+        "Tested"
+      ],
+      "probe_sections": [],
+      "limitations": [
+        "Calibrated scenarios replace slip_bps only; account fees are not automatically transferred. Estimated constants and leave-one-day-out sensitivity are retrospective, with no empirical coverage or representative future-cost guarantee.",
+        "History validation checks supplied metadata/digest links, not raw locator authenticity, historical delivery or complete parent-order sampling. No queue, order-book, partial-fill or live-stop guarantee follows.",
+        "Dynamic barriers/allocation require fresh serial research runs and cannot be promoted. Hashing trusted producer source does not prove causality. OHLC cannot establish an exact intrabar path.",
+        "This substantial new surface was code-inspected and its mapped native modules passed in the admitted full suite. No independent observed-cost performance or market-calibration experiment was run by this agent."
+      ],
+      "source_refs": [
+        {
+          "path": "limen/backtest/observed_costs.py",
+          "start_line": 69,
+          "end_line": 111,
+          "url": "https://github.com/Vaquum/Limen/blob/25e47866422d007da55cb19625344183599ba671/limen/backtest/observed_costs.py#L69-L111",
+          "kind": "implementation"
+        },
+        {
+          "path": "limen/backtest/observed_costs.py",
+          "start_line": 144,
+          "end_line": 197,
+          "url": "https://github.com/Vaquum/Limen/blob/25e47866422d007da55cb19625344183599ba671/limen/backtest/observed_costs.py#L144-L197",
+          "kind": "implementation"
+        },
+        {
+          "path": "limen/backtest/_cost_history.py",
+          "start_line": 127,
+          "end_line": 184,
+          "url": "https://github.com/Vaquum/Limen/blob/25e47866422d007da55cb19625344183599ba671/limen/backtest/_cost_history.py#L127-L184",
+          "kind": "implementation"
+        },
+        {
+          "path": "limen/backtest/_cost_history.py",
+          "start_line": 187,
+          "end_line": 209,
+          "url": "https://github.com/Vaquum/Limen/blob/25e47866422d007da55cb19625344183599ba671/limen/backtest/_cost_history.py#L187-L209",
+          "kind": "implementation"
+        },
+        {
+          "path": "limen/backtest/_cost_identity.py",
+          "start_line": 48,
+          "end_line": 141,
+          "url": "https://github.com/Vaquum/Limen/blob/25e47866422d007da55cb19625344183599ba671/limen/backtest/_cost_identity.py#L48-L141",
+          "kind": "implementation"
+        },
+        {
+          "path": "limen/backtest/_cost_statistics.py",
+          "start_line": 90,
+          "end_line": 104,
+          "url": "https://github.com/Vaquum/Limen/blob/25e47866422d007da55cb19625344183599ba671/limen/backtest/_cost_statistics.py#L90-L104",
+          "kind": "implementation"
+        },
+        {
+          "path": "limen/backtest/_cost_statistics.py",
+          "start_line": 107,
+          "end_line": 195,
+          "url": "https://github.com/Vaquum/Limen/blob/25e47866422d007da55cb19625344183599ba671/limen/backtest/_cost_statistics.py#L107-L195",
+          "kind": "implementation"
+        },
+        {
+          "path": "limen/backtest/_cost_statistics.py",
+          "start_line": 199,
+          "end_line": 217,
+          "url": "https://github.com/Vaquum/Limen/blob/25e47866422d007da55cb19625344183599ba671/limen/backtest/_cost_statistics.py#L199-L217",
+          "kind": "implementation"
+        },
+        {
+          "path": "limen/backtest/_cost_comparison.py",
+          "start_line": 96,
+          "end_line": 171,
+          "url": "https://github.com/Vaquum/Limen/blob/25e47866422d007da55cb19625344183599ba671/limen/backtest/_cost_comparison.py#L96-L171",
+          "kind": "implementation"
+        },
+        {
+          "path": "limen/backtest/_cost_comparison.py",
+          "start_line": 174,
+          "end_line": 242,
+          "url": "https://github.com/Vaquum/Limen/blob/25e47866422d007da55cb19625344183599ba671/limen/backtest/_cost_comparison.py#L174-L242",
+          "kind": "implementation"
+        },
+        {
+          "path": "limen/experiment/_dynamic_barriers.py",
+          "start_line": 45,
+          "end_line": 112,
+          "url": "https://github.com/Vaquum/Limen/blob/25e47866422d007da55cb19625344183599ba671/limen/experiment/_dynamic_barriers.py#L45-L112",
+          "kind": "implementation"
+        },
+        {
+          "path": "limen/experiment/_exit_rules.py",
+          "start_line": 139,
+          "end_line": 171,
+          "url": "https://github.com/Vaquum/Limen/blob/25e47866422d007da55cb19625344183599ba671/limen/experiment/_exit_rules.py#L139-L171",
+          "kind": "implementation"
+        },
+        {
+          "path": "limen/backtest/_explicit_exit_strategy.py",
+          "start_line": 21,
+          "end_line": 81,
+          "url": "https://github.com/Vaquum/Limen/blob/25e47866422d007da55cb19625344183599ba671/limen/backtest/_explicit_exit_strategy.py#L21-L81",
+          "kind": "implementation"
+        },
+        {
+          "path": "limen/backtest/trade_execution.py",
+          "start_line": 219,
+          "end_line": 242,
+          "url": "https://github.com/Vaquum/Limen/blob/25e47866422d007da55cb19625344183599ba671/limen/backtest/trade_execution.py#L219-L242",
+          "kind": "implementation"
+        },
+        {
+          "path": "tests/test_observed_costs.py",
+          "start_line": 49,
+          "end_line": 110,
+          "url": "https://github.com/Vaquum/Limen/blob/25e47866422d007da55cb19625344183599ba671/tests/test_observed_costs.py#L49-L110",
+          "kind": "native_test_assertions"
+        },
+        {
+          "path": "tests/test_cost_comparison.py",
+          "start_line": 60,
+          "end_line": 126,
+          "url": "https://github.com/Vaquum/Limen/blob/25e47866422d007da55cb19625344183599ba671/tests/test_cost_comparison.py#L60-L126",
+          "kind": "native_test_assertions"
+        }
+      ],
+      "details": [
+        {
+          "topic": "history_admission",
+          "finding": "Exact schemas, duplicate leg rejection, source-window membership, receipt chronology, nonfuture references, pinned asset-link membership, canonical order and positive finite economic amounts are checked."
+        },
+        {
+          "topic": "artifact_integrity",
+          "finding": "Typed canonical hashes preserve float/Decimal/type/schema distinctions and reject cycles/duplicate JSON keys/nonfinite values. Reads require an external expected digest. Publish refuses conflicting existing bytes using a temporary-file hard-link operation; this is not fsync durability or a multi-artifact transaction."
+        },
+        {
+          "topic": "support_and_ranking",
+          "finding": "Both sides require observed support; missing/late evidence and unsupported transfer can yield unavailable. Ranks require every candidate scenario available and matching partition, benchmark, quote currency, initial equity and fee/slippage constants. Low effective support remains a distinct disposition."
+        },
+        {
+          "topic": "exit_semantics",
+          "finding": "Explicit exits require positive integer lag/nonmissing boolean masks, can cancel pending entries, schedule the snapshot rule-close row as row + execution_lag_bars - 1, and require a later flat signal to rearm. Stops precede takes on dual-touch evidence; adverse stop gaps use opening price, while beneficial take gaps do not assume improvement. Some pre-entry/resize OHLC extrema are rejected."
+        }
+      ],
+      "candidate_id": "limen",
+      "criterion": "Exit rules, gap treatment and execution uncertainty",
+      "status_before": "Partial",
+      "applicability": "native",
+      "threat_model": [
+        "economic_model_integrity"
+      ],
+      "baseline_source_refs": [],
+      "native_test_modules": [
+        "tests.test_observed_costs",
+        "tests.test_cost_comparison",
+        "tests.test_dynamic_barriers",
+        "tests.test_exit_rules",
+        "tests.test_backtest_tp_sl",
+        "tests.test_elapsed_trade_exits"
+      ]
+    },
+    {
+      "criterion_id": "S13",
+      "status_after": "Enforced",
+      "scope": "Supported project-bound protected research composition/history, workers/resume, and narrowly admitted final holdout assessment.",
+      "change": "broader_research_protection_with_final_admission_limits",
+      "finding": "Protection now follows preparation/cache/model/worker composition and checkpoint populations. Source, revision, operation, occurrence and parent history are checked instead of relying only on saved labels, and integrity exceptions propagate. Final freezing still admits exact native binary Sensor/model implementations and ordinary dated inference; contract-bearing final assessment admits a single Sensor with extra policy restrictions.",
+      "evidence_type": [
+        "Inspected",
+        "Tested"
+      ],
+      "probe_sections": [],
+      "limitations": [
+        "Final freezing is limited to exact fitted LogRegBinary/LightGBMBinary wrappers and accepted fitted state; bar formation, walk-forward final inference, alternate test sources and data_dict_extension remain rejected there.",
+        "Final event assessment rejects dynamic barriers and, absent its internal source-admission mode, funding/external execution sources and declared intervals. Newly protected research support does not mean every workflow can reach final assessment.",
+        "Local history is not secrecy from the machine owner, globally tamper-proof exposure accounting, or proof of no prior external holdout use."
+      ],
+      "source_refs": [
+        {
+          "path": "limen/experiment/_holdout_composition.py",
+          "start_line": 90,
+          "end_line": 132,
+          "url": "https://github.com/Vaquum/Limen/blob/25e47866422d007da55cb19625344183599ba671/limen/experiment/_holdout_composition.py#L90-L132",
+          "kind": "implementation"
+        },
+        {
+          "path": "limen/experiment/_holdout_composition.py",
+          "start_line": 239,
+          "end_line": 262,
+          "url": "https://github.com/Vaquum/Limen/blob/25e47866422d007da55cb19625344183599ba671/limen/experiment/_holdout_composition.py#L239-L262",
+          "kind": "implementation"
+        },
+        {
+          "path": "limen/experiment/_holdout_checkpoint.py",
+          "start_line": 57,
+          "end_line": 81,
+          "url": "https://github.com/Vaquum/Limen/blob/25e47866422d007da55cb19625344183599ba671/limen/experiment/_holdout_checkpoint.py#L57-L81",
+          "kind": "implementation"
+        },
+        {
+          "path": "limen/experiment/_holdout_checkpoint.py",
+          "start_line": 134,
+          "end_line": 177,
+          "url": "https://github.com/Vaquum/Limen/blob/25e47866422d007da55cb19625344183599ba671/limen/experiment/_holdout_checkpoint.py#L134-L177",
+          "kind": "implementation"
+        },
+        {
+          "path": "limen/experiment/_round_errors.py",
+          "start_line": 85,
+          "end_line": 98,
+          "url": "https://github.com/Vaquum/Limen/blob/25e47866422d007da55cb19625344183599ba671/limen/experiment/_round_errors.py#L85-L98",
+          "kind": "implementation"
+        },
+        {
+          "path": "limen/experiment/_holdout_freeze.py",
+          "start_line": 163,
+          "end_line": 224,
+          "url": "https://github.com/Vaquum/Limen/blob/25e47866422d007da55cb19625344183599ba671/limen/experiment/_holdout_freeze.py#L163-L224",
+          "kind": "implementation"
+        },
+        {
+          "path": "limen/experiment/_holdout_events.py",
+          "start_line": 45,
+          "end_line": 53,
+          "url": "https://github.com/Vaquum/Limen/blob/25e47866422d007da55cb19625344183599ba671/limen/experiment/_holdout_events.py#L45-L53",
+          "kind": "implementation"
+        },
+        {
+          "path": "limen/experiment/_resolve_trade_policy.py",
+          "start_line": 174,
+          "end_line": 188,
+          "url": "https://github.com/Vaquum/Limen/blob/25e47866422d007da55cb19625344183599ba671/limen/experiment/_resolve_trade_policy.py#L174-L188",
+          "kind": "implementation"
+        }
+      ],
+      "candidate_id": "limen",
+      "criterion": "Protected holdout reservation and exposure accounting",
+      "status_before": "Enforced",
+      "applicability": "native",
+      "threat_model": [
+        "research_integrity",
+        "holdout_overuse"
+      ],
+      "baseline_source_refs": [],
+      "native_test_modules": [
+        "tests.test_holdout_assessment",
+        "tests.test_holdout_event_assessment",
+        "tests.test_holdout_research",
+        "tests.test_holdout_source_admission",
+        "tests.test_holdout_workflows"
+      ]
+    },
+    {
+      "criterion_id": "S14",
+      "status_after": "Partial",
+      "scope": "Checked-in supply-chain, packaging and security CI implementation; retrieved exact-SHA upstream evidence separately identified.",
+      "change": "configured_assurance_strengthened",
+      "finding": "CI binds coverage/runtime artifacts to run attempt and verified digest. Packaging builds twice under a fixed source epoch and compares distribution hashes, audits artifacts, emits dependency reports, and checks built-wheel installation across Python versions. Pinned actions/hash-locked tool installs, configured CodeQL, bounded YAML fuzzing and release attestations remain controls.",
+      "evidence_type": [
+        "Inspected"
+      ],
+      "probe_sections": [],
+      "limitations": [
+        "Configured jobs do not establish actual branch protection, current vulnerability state or identity of a downloaded published binary. Retrieved upstream execution is separately recorded in environment/upstream-ci.json; it is not an all-green claim.",
+        "The pip-audit implementation still derives requirements from project.dependencies; this gate does not establish coverage of every optional research backend or all allowed dependency versions."
+      ],
+      "source_refs": [
+        {
+          "path": ".github/workflows/pr_checks_tests.yml",
+          "start_line": 77,
+          "end_line": 143,
+          "url": "https://github.com/Vaquum/Limen/blob/25e47866422d007da55cb19625344183599ba671/.github/workflows/pr_checks_tests.yml#L77-L143",
+          "kind": "implementation"
+        },
+        {
+          "path": ".github/workflows/pr_checks_packaging.yml",
+          "start_line": 20,
+          "end_line": 69,
+          "url": "https://github.com/Vaquum/Limen/blob/25e47866422d007da55cb19625344183599ba671/.github/workflows/pr_checks_packaging.yml#L20-L69",
+          "kind": "implementation"
+        },
+        {
+          "path": ".github/workflows/pr_checks_packaging.yml",
+          "start_line": 79,
+          "end_line": 110,
+          "url": "https://github.com/Vaquum/Limen/blob/25e47866422d007da55cb19625344183599ba671/.github/workflows/pr_checks_packaging.yml#L79-L110",
+          "kind": "implementation"
+        },
+        {
+          "path": ".github/workflows/pr_checks_codeql.yml",
+          "start_line": 15,
+          "end_line": 55,
+          "url": "https://github.com/Vaquum/Limen/blob/25e47866422d007da55cb19625344183599ba671/.github/workflows/pr_checks_codeql.yml#L15-L55",
+          "kind": "implementation"
+        },
+        {
+          "path": ".github/workflows/fuzz_smoke.yml",
+          "start_line": 30,
+          "end_line": 37,
+          "url": "https://github.com/Vaquum/Limen/blob/25e47866422d007da55cb19625344183599ba671/.github/workflows/fuzz_smoke.yml#L30-L37",
+          "kind": "implementation"
+        },
+        {
+          "path": ".github/workflows/pr_publish_pypi.yml",
+          "start_line": 186,
+          "end_line": 209,
+          "url": "https://github.com/Vaquum/Limen/blob/25e47866422d007da55cb19625344183599ba671/.github/workflows/pr_publish_pypi.yml#L186-L209",
+          "kind": "implementation"
+        },
+        {
+          "path": "governance/check_dependency_vulnerabilities.py",
+          "start_line": 38,
+          "end_line": 47,
+          "url": "https://github.com/Vaquum/Limen/blob/25e47866422d007da55cb19625344183599ba671/governance/check_dependency_vulnerabilities.py#L38-L47",
+          "kind": "implementation"
+        },
+        {
+          "path": "governance/check_dependency_vulnerabilities.py",
+          "start_line": 74,
+          "end_line": 92,
+          "url": "https://github.com/Vaquum/Limen/blob/25e47866422d007da55cb19625344183599ba671/governance/check_dependency_vulnerabilities.py#L74-L92",
+          "kind": "implementation"
+        }
+      ],
+      "candidate_id": "limen",
+      "criterion": "Executable supply-chain and security CI coverage",
+      "status_before": "Partial",
+      "applicability": "native",
+      "threat_model": [
+        "software_supply_chain"
+      ],
+      "baseline_source_refs": [],
+      "native_test_modules": []
+    },
+    {
+      "criterion_id": "S15",
+      "status_after": "Partial",
+      "scope": "Inspected adversarial/native assertions plus four independent paired boundary probes; full native suite reported separately.",
+      "change": "regression_evidence_expanded",
+      "finding": "Native assertions now cover the old resolver/store/FFD/Sensor boundaries, including valid compatibility, recurrence overflow, unchanged store/index state and aligned unavailable outputs. Parser timeout, protected workflow, source-snapshot, typed resume, cost and exit assertions broaden the evidence. Four boundary repairs were independently reproduced on admitted old/new snapshots and the identical recorded market fixture. The admitted exact-SHA native suite completed with 7,388 passed, zero failed and three skipped.",
+      "evidence_type": [
+        "Inspected",
+        "Reproduced",
+        "Tested"
+      ],
+      "probe_sections": [
+        "resolver",
+        "manifest_store",
+        "fractional_difference",
+        "compiled_sensor"
+      ],
+      "limitations": [
+        "The paired probes are specific counterexamples/positive controls, not an exhaustive security audit or estimate of failure probability.",
+        "The FFD outer deadline includes process shutdown; use completed method receipts and explicit limitation, not raw outer labels as method verdicts.",
+        "YAML fuzzing still parses/validates without compiling/executing manifests. Configured fuzz duration or coverage does not prove adversarial completeness.",
+        "The initial local native-suite attempt is not admitted. The separate approved-native rerun completed 7,388 passed, zero failed and three skipped with four worker receipts reconciled. Module membership is counted in native-test-membership.json; passing modules do not prove every stated control or exhaustive adversarial coverage."
+      ],
+      "source_refs": [
+        {
+          "path": "tests/test_yaml.py",
+          "start_line": 222,
+          "end_line": 282,
+          "url": "https://github.com/Vaquum/Limen/blob/25e47866422d007da55cb19625344183599ba671/tests/test_yaml.py#L222-L282",
+          "kind": "native_test_assertions"
+        },
+        {
+          "path": "tests/test_yaml_store.py",
+          "start_line": 396,
+          "end_line": 456,
+          "url": "https://github.com/Vaquum/Limen/blob/25e47866422d007da55cb19625344183599ba671/tests/test_yaml_store.py#L396-L456",
+          "kind": "native_test_assertions"
+        },
+        {
+          "path": "tests/test_fractional_diff.py",
+          "start_line": 269,
+          "end_line": 350,
+          "url": "https://github.com/Vaquum/Limen/blob/25e47866422d007da55cb19625344183599ba671/tests/test_fractional_diff.py#L269-L350",
+          "kind": "native_test_assertions"
+        },
+        {
+          "path": "tests/test_sensor.py",
+          "start_line": 642,
+          "end_line": 731,
+          "url": "https://github.com/Vaquum/Limen/blob/25e47866422d007da55cb19625344183599ba671/tests/test_sensor.py#L642-L731",
+          "kind": "native_test_assertions"
+        },
+        {
+          "path": "tests/test_yaml_parser_timeout.py",
+          "start_line": 14,
+          "end_line": 77,
+          "url": "https://github.com/Vaquum/Limen/blob/25e47866422d007da55cb19625344183599ba671/tests/test_yaml_parser_timeout.py#L14-L77",
+          "kind": "native_test_assertions"
+        },
+        {
+          "path": "fuzz/fuzz_yaml_manifest.py",
+          "start_line": 9,
+          "end_line": 35,
+          "url": "https://github.com/Vaquum/Limen/blob/25e47866422d007da55cb19625344183599ba671/fuzz/fuzz_yaml_manifest.py#L9-L35",
+          "kind": "implementation"
+        },
+        {
+          "path": ".github/workflows/fuzz_smoke.yml",
+          "start_line": 30,
+          "end_line": 37,
+          "url": "https://github.com/Vaquum/Limen/blob/25e47866422d007da55cb19625344183599ba671/.github/workflows/fuzz_smoke.yml#L30-L37",
+          "kind": "implementation"
+        }
+      ],
+      "candidate_id": "limen",
+      "criterion": "Adversarial validation evidence and mutation coverage",
+      "status_before": "Partial",
+      "applicability": "native",
+      "threat_model": [
+        "assurance_evidence"
+      ],
+      "baseline_source_refs": [],
+      "native_test_modules": [
+        "tests.test_property_contracts",
+        "tests.test_yaml",
+        "tests.test_yaml_store",
+        "tests.test_fractional_diff",
+        "tests.test_sensor",
+        "tests.test_yaml_parser_timeout"
+      ]
+    }
+  ]
+}

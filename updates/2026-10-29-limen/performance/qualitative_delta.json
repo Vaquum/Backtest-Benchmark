@@ -1,0 +1,876 @@
+{
+  "schema_version": 1,
+  "reviewed_utc": "2026-10-29T11:18:34.511641+00:00",
+  "review_phase": "Qualitative inspection completed before timed old/new campaign",
+  "baseline_commit": "29837e666604eee74a2ac94f328fb9803724342a",
+  "latest_commit": "25e47866422d007da55cb19625344183599ba671",
+  "evidence_policy": "Executable source, executable configuration, existing tests and observed runtime only; prose comments/docstrings are not behavioral authority. New measured results belong in separate reports.",
+  "rows": [
+    {
+      "candidate_id": "limen",
+      "criterion_id": "P01",
+      "criterion": "Parameter-space construction",
+      "previous_status": "Partial",
+      "current_status": "Partial",
+      "evidence_type": [
+        "Inspected"
+      ],
+      "scope": "Legacy ParamSpace and MSQ initialization for identical domains and requested candidate count k",
+      "code_delta": "ParamSpace now validates every supplied choice through the shared canonical execution identity and rejects collisions. Requested candidates are still materialized; Grid construction is byte-identical.",
+      "performance_implication": "Choice admission adds work proportional to the supplied choices and their serialized size. Legacy candidate columns still retain O(k*d) values; Grid initially retains dimensions without expanding the Cartesian product.",
+      "limitation": "No parameter construction latency or memory scaling rerun is prescribed. Added identity validation is meaningful work, not a demonstrated regression.",
+      "source_refs": [
+        {
+          "path": "limen/utils/param_space.py",
+          "start_line": 74,
+          "end_line": 109,
+          "url": "https://github.com/Vaquum/Limen/blob/25e47866422d007da55cb19625344183599ba671/limen/utils/param_space.py#L74-L109"
+        },
+        {
+          "path": "limen/_parameter_identity.py",
+          "start_line": 11,
+          "end_line": 33,
+          "url": "https://github.com/Vaquum/Limen/blob/25e47866422d007da55cb19625344183599ba671/limen/_parameter_identity.py#L11-L33"
+        },
+        {
+          "path": "limen/experiment/param_search/grid_strategy.py",
+          "start_line": 36,
+          "end_line": 72,
+          "url": "https://github.com/Vaquum/Limen/blob/25e47866422d007da55cb19625344183599ba671/limen/experiment/param_search/grid_strategy.py#L36-L72"
+        }
+      ],
+      "baseline_source_refs": [
+        {
+          "path": "limen/utils/param_space.py",
+          "start_line": 73,
+          "end_line": 109,
+          "url": "https://github.com/Vaquum/Limen/blob/29837e666604eee74a2ac94f328fb9803724342a/limen/utils/param_space.py#L73-L109"
+        },
+        {
+          "path": "limen/experiment/param_search/grid_strategy.py",
+          "start_line": 36,
+          "end_line": 61,
+          "url": "https://github.com/Vaquum/Limen/blob/29837e666604eee74a2ac94f328fb9803724342a/limen/experiment/param_search/grid_strategy.py#L36-L61"
+        }
+      ],
+      "new_measurements": null
+    },
+    {
+      "candidate_id": "limen",
+      "criterion_id": "P02",
+      "criterion": "Candidate consumption",
+      "previous_status": "Partial",
+      "current_status": "Partial",
+      "evidence_type": [
+        "Inspected"
+      ],
+      "scope": "Legacy generate and MSQ Grid/Random/Sobol accepted-candidate streams",
+      "code_delta": "Grid, Random and Sobol implementations are byte-identical. SearchStrategy delegates to the same canonical execution hash. Legacy generate still filters the remaining frame after each draw.",
+      "performance_implication": "Consuming a legacy k-row frame still repeatedly scans shrinking frames, approximately quadratic total row-position work. MSQ accepted-hash retention and bounded Random/Sobol retries remain.",
+      "limitation": "No enumeration throughput or search-distribution measurement. Domain identity admission should not be represented as a faster enumerator.",
+      "source_refs": [
+        {
+          "path": "limen/utils/param_space.py",
+          "start_line": 120,
+          "end_line": 146,
+          "url": "https://github.com/Vaquum/Limen/blob/25e47866422d007da55cb19625344183599ba671/limen/utils/param_space.py#L120-L146"
+        },
+        {
+          "path": "limen/experiment/param_search/search_strategy.py",
+          "start_line": 116,
+          "end_line": 175,
+          "url": "https://github.com/Vaquum/Limen/blob/25e47866422d007da55cb19625344183599ba671/limen/experiment/param_search/search_strategy.py#L116-L175"
+        },
+        {
+          "path": "limen/experiment/param_search/random_strategy.py",
+          "start_line": 51,
+          "end_line": 61,
+          "url": "https://github.com/Vaquum/Limen/blob/25e47866422d007da55cb19625344183599ba671/limen/experiment/param_search/random_strategy.py#L51-L61"
+        },
+        {
+          "path": "limen/experiment/param_search/sobol_strategy.py",
+          "start_line": 51,
+          "end_line": 67,
+          "url": "https://github.com/Vaquum/Limen/blob/25e47866422d007da55cb19625344183599ba671/limen/experiment/param_search/sobol_strategy.py#L51-L67"
+        }
+      ],
+      "baseline_source_refs": [
+        {
+          "path": "limen/utils/param_space.py",
+          "start_line": 132,
+          "end_line": 144,
+          "url": "https://github.com/Vaquum/Limen/blob/29837e666604eee74a2ac94f328fb9803724342a/limen/utils/param_space.py#L132-L144"
+        },
+        {
+          "path": "limen/experiment/param_search/search_strategy.py",
+          "start_line": 130,
+          "end_line": 175,
+          "url": "https://github.com/Vaquum/Limen/blob/29837e666604eee74a2ac94f328fb9803724342a/limen/experiment/param_search/search_strategy.py#L130-L175"
+        },
+        {
+          "path": "limen/experiment/param_search/random_strategy.py",
+          "start_line": 51,
+          "end_line": 60,
+          "url": "https://github.com/Vaquum/Limen/blob/29837e666604eee74a2ac94f328fb9803724342a/limen/experiment/param_search/random_strategy.py#L51-L60"
+        },
+        {
+          "path": "limen/experiment/param_search/sobol_strategy.py",
+          "start_line": 50,
+          "end_line": 66,
+          "url": "https://github.com/Vaquum/Limen/blob/29837e666604eee74a2ac94f328fb9803724342a/limen/experiment/param_search/sobol_strategy.py#L50-L66"
+        }
+      ],
+      "new_measurements": null
+    },
+    {
+      "candidate_id": "limen",
+      "criterion_id": "P03",
+      "criterion": "First valid output",
+      "previous_status": "Partial",
+      "current_status": "Partial",
+      "evidence_type": [
+        "Inspected"
+      ],
+      "scope": "Fresh process through one admitted output, plus first full-wrapper call separately",
+      "code_delta": "The frozen zero-cost snapshot adapter remains signature-compatible. New optional class mapping and explicit-exit support do not activate in this replay.",
+      "performance_implication": "Old and latest must be measured on the same host with identical dependencies. Process-launch-to-first-valid includes source verification, imports, data, oracle and validation; first API call is a different boundary.",
+      "limitation": "No October19-to-October29 timing ratio. The separate kernel diagnostic first call follows all full-wrapper calls and is not process-cold.",
+      "source_refs": [
+        {
+          "path": "limen/backtest/_snapshot_execution.py",
+          "start_line": 145,
+          "end_line": 168,
+          "url": "https://github.com/Vaquum/Limen/blob/25e47866422d007da55cb19625344183599ba671/limen/backtest/_snapshot_execution.py#L145-L168"
+        },
+        {
+          "path": "limen/backtest/backtest_snapshot.py",
+          "start_line": 112,
+          "end_line": 128,
+          "url": "https://github.com/Vaquum/Limen/blob/25e47866422d007da55cb19625344183599ba671/limen/backtest/backtest_snapshot.py#L112-L128"
+        }
+      ],
+      "baseline_source_refs": [
+        {
+          "path": "tests/backtest_benchmark/worker.py",
+          "start_line": 78,
+          "end_line": 105,
+          "url": "https://github.com/Vaquum/Limen/blob/29837e666604eee74a2ac94f328fb9803724342a/tests/backtest_benchmark/worker.py#L78-L105"
+        },
+        {
+          "path": "tests/benchmark_backtest_strategies.py",
+          "start_line": 141,
+          "end_line": 156,
+          "url": "https://github.com/Vaquum/Limen/blob/29837e666604eee74a2ac94f328fb9803724342a/tests/benchmark_backtest_strategies.py#L141-L156"
+        },
+        {
+          "path": "tests/benchmark_indicators.py",
+          "start_line": 59,
+          "end_line": 77,
+          "url": "https://github.com/Vaquum/Limen/blob/29837e666604eee74a2ac94f328fb9803724342a/tests/benchmark_indicators.py#L59-L77"
+        }
+      ],
+      "new_measurements": null
+    },
+    {
+      "candidate_id": "limen",
+      "criterion_id": "P04",
+      "criterion": "Complete research-campaign throughput",
+      "previous_status": "Unknown",
+      "current_status": "Unknown",
+      "evidence_type": [
+        "Inspected"
+      ],
+      "scope": "Recorded-data split/model/search/recording contract through durable successful rounds",
+      "code_delta": "Round validation, holdout composition, error handling, and additional recorded evidence have expanded. Per-round result CSV appends and buffered logging remain in the serial/MSQ execution paths.",
+      "performance_implication": "Richer evidence and admission can change end-to-end cost. The unchanged native 48-round factorized harness can measure its exact workload; it cannot establish general research throughput.",
+      "limitation": "One fresh-versus-reuse pair per revision is a mechanism check, not a repeated latency experiment. No model equivalence or broad scaling claim follows from snapshot replay.",
+      "source_refs": [
+        {
+          "path": "limen/experiment/experiment_core.py",
+          "start_line": 185,
+          "end_line": 248,
+          "url": "https://github.com/Vaquum/Limen/blob/25e47866422d007da55cb19625344183599ba671/limen/experiment/experiment_core.py#L185-L248"
+        },
+        {
+          "path": "limen/experiment/experiment_core.py",
+          "start_line": 680,
+          "end_line": 755,
+          "url": "https://github.com/Vaquum/Limen/blob/25e47866422d007da55cb19625344183599ba671/limen/experiment/experiment_core.py#L680-L755"
+        },
+        {
+          "path": "limen/experiment/experiment_core.py",
+          "start_line": 970,
+          "end_line": 983,
+          "url": "https://github.com/Vaquum/Limen/blob/25e47866422d007da55cb19625344183599ba671/limen/experiment/experiment_core.py#L970-L983"
+        }
+      ],
+      "baseline_source_refs": [
+        {
+          "path": "limen/experiment/experiment_core.py",
+          "start_line": 294,
+          "end_line": 371,
+          "url": "https://github.com/Vaquum/Limen/blob/29837e666604eee74a2ac94f328fb9803724342a/limen/experiment/experiment_core.py#L294-L371"
+        },
+        {
+          "path": "limen/experiment/experiment_core.py",
+          "start_line": 579,
+          "end_line": 599,
+          "url": "https://github.com/Vaquum/Limen/blob/29837e666604eee74a2ac94f328fb9803724342a/limen/experiment/experiment_core.py#L579-L599"
+        },
+        {
+          "path": "limen/experiment/experiment_core.py",
+          "start_line": 672,
+          "end_line": 737,
+          "url": "https://github.com/Vaquum/Limen/blob/29837e666604eee74a2ac94f328fb9803724342a/limen/experiment/experiment_core.py#L672-L737"
+        },
+        {
+          "path": "limen/sfd/reference_architecture/dlinear_regressor.py",
+          "start_line": 102,
+          "end_line": 116,
+          "url": "https://github.com/Vaquum/Limen/blob/29837e666604eee74a2ac94f328fb9803724342a/limen/sfd/reference_architecture/dlinear_regressor.py#L102-L116"
+        }
+      ],
+      "new_measurements": null
+    },
+    {
+      "candidate_id": "limen",
+      "criterion_id": "P05",
+      "criterion": "Preparation and signal reuse",
+      "previous_status": "Optional",
+      "current_status": "Optional",
+      "evidence_type": [
+        "Inspected"
+      ],
+      "scope": "Eligible deterministic serial snapshot Grid workloads using factorize=True",
+      "code_delta": "New explicit stage reuse contracts, native declarations and domain projections broaden admissible signal reuse. Fitted-preparation reuse still has narrower RobustScaler/NextReturn/QuantileBinary/window-return/lag-range admission. Cache hits now compose holdout proofs and replay warnings.",
+      "performance_implication": "Domain projections can avoid unnecessary Cartesian validation, but custom full-parameter dependencies can still enlarge admission work. Supported factorized paths retain fitted artifacts and signals to avoid repeated fits; bounded entry counts are not byte budgets.",
+      "limitation": "Folds, allocation, objectives, event execution and explicit exits remain outside factorization admission. Only the unchanged recorded-data harness is scheduled to quantify reuse; verify 48 rows, 24 model fits per arm, target/scaler 24 versus 1, and equal 12-decimal outputs within each revision.",
+      "source_refs": [
+        {
+          "path": "limen/experiment/_factorized_contract.py",
+          "start_line": 11,
+          "end_line": 53,
+          "url": "https://github.com/Vaquum/Limen/blob/25e47866422d007da55cb19625344183599ba671/limen/experiment/_factorized_contract.py#L11-L53"
+        },
+        {
+          "path": "limen/experiment/_factorized_admission.py",
+          "start_line": 72,
+          "end_line": 175,
+          "url": "https://github.com/Vaquum/Limen/blob/25e47866422d007da55cb19625344183599ba671/limen/experiment/_factorized_admission.py#L72-L175"
+        },
+        {
+          "path": "limen/experiment/_factorized_native.py",
+          "start_line": 64,
+          "end_line": 100,
+          "url": "https://github.com/Vaquum/Limen/blob/25e47866422d007da55cb19625344183599ba671/limen/experiment/_factorized_native.py#L64-L100"
+        },
+        {
+          "path": "limen/experiment/_factorized_projection.py",
+          "start_line": 28,
+          "end_line": 78,
+          "url": "https://github.com/Vaquum/Limen/blob/25e47866422d007da55cb19625344183599ba671/limen/experiment/_factorized_projection.py#L28-L78"
+        },
+        {
+          "path": "limen/experiment/_factorized_prep.py",
+          "start_line": 24,
+          "end_line": 65,
+          "url": "https://github.com/Vaquum/Limen/blob/25e47866422d007da55cb19625344183599ba671/limen/experiment/_factorized_prep.py#L24-L65"
+        },
+        {
+          "path": "limen/experiment/_factorize.py",
+          "start_line": 127,
+          "end_line": 214,
+          "url": "https://github.com/Vaquum/Limen/blob/25e47866422d007da55cb19625344183599ba671/limen/experiment/_factorize.py#L127-L214"
+        }
+      ],
+      "baseline_source_refs": [
+        {
+          "path": "limen/experiment/_factorize.py",
+          "start_line": 80,
+          "end_line": 123,
+          "url": "https://github.com/Vaquum/Limen/blob/29837e666604eee74a2ac94f328fb9803724342a/limen/experiment/_factorize.py#L80-L123"
+        },
+        {
+          "path": "limen/experiment/_factorize.py",
+          "start_line": 177,
+          "end_line": 273,
+          "url": "https://github.com/Vaquum/Limen/blob/29837e666604eee74a2ac94f328fb9803724342a/limen/experiment/_factorize.py#L177-L273"
+        },
+        {
+          "path": "limen/experiment/_factorized_prep.py",
+          "start_line": 41,
+          "end_line": 80,
+          "url": "https://github.com/Vaquum/Limen/blob/29837e666604eee74a2ac94f328fb9803724342a/limen/experiment/_factorized_prep.py#L41-L80"
+        },
+        {
+          "path": "tests/benchmark_factorized_preparation.py",
+          "start_line": 119,
+          "end_line": 229,
+          "url": "https://github.com/Vaquum/Limen/blob/29837e666604eee74a2ac94f328fb9803724342a/tests/benchmark_factorized_preparation.py#L119-L229"
+        }
+      ],
+      "new_measurements": null
+    },
+    {
+      "candidate_id": "limen",
+      "criterion_id": "P06",
+      "criterion": "Indicator and feature computation",
+      "previous_status": "Partial",
+      "current_status": "Partial",
+      "evidence_type": [
+        "Inspected"
+      ],
+      "scope": "Aligned indicator/feature outputs, including causal quantile-line columns and FFD admission",
+      "code_delta": "EMA and shared line-array computation are byte-identical. SMA/CCI gain argument validation; stochastic wrapping now supports lazy expressions. Positive-quantile end-event columns use expanding completed-line thresholds. FFD gains finite-input/recurrence checks.",
+      "performance_implication": "The causal quantile path maintains heaps per direction and scans recent completed events per row. This fixes the information set and changes the work; timing it against the old whole-frame threshold is not equal-semantics optimization. Quantile zero retains the vectorized window-sum path.",
+      "limitation": "No adapted indicator timing is scheduled: the existing hardcoded-data benchmark is not independently matched here. The research-only active-span column still uses whole-frame selection. FFD has no new arbitrary maximum-weight or runtime quota.",
+      "source_refs": [
+        {
+          "path": "limen/indicators/sma.py",
+          "start_line": 53,
+          "end_line": 63,
+          "url": "https://github.com/Vaquum/Limen/blob/25e47866422d007da55cb19625344183599ba671/limen/indicators/sma.py#L53-L63"
+        },
+        {
+          "path": "limen/indicators/cci.py",
+          "start_line": 59,
+          "end_line": 70,
+          "url": "https://github.com/Vaquum/Limen/blob/25e47866422d007da55cb19625344183599ba671/limen/indicators/cci.py#L59-L70"
+        },
+        {
+          "path": "limen/indicators/stoch.py",
+          "start_line": 167,
+          "end_line": 207,
+          "url": "https://github.com/Vaquum/Limen/blob/25e47866422d007da55cb19625344183599ba671/limen/indicators/stoch.py#L167-L207"
+        },
+        {
+          "path": "limen/features/quantile_price_lines.py",
+          "start_line": 108,
+          "end_line": 148,
+          "url": "https://github.com/Vaquum/Limen/blob/25e47866422d007da55cb19625344183599ba671/limen/features/quantile_price_lines.py#L108-L148"
+        },
+        {
+          "path": "limen/features/quantile_price_lines.py",
+          "start_line": 186,
+          "end_line": 241,
+          "url": "https://github.com/Vaquum/Limen/blob/25e47866422d007da55cb19625344183599ba671/limen/features/quantile_price_lines.py#L186-L241"
+        },
+        {
+          "path": "limen/features/fractional_diff.py",
+          "start_line": 31,
+          "end_line": 49,
+          "url": "https://github.com/Vaquum/Limen/blob/25e47866422d007da55cb19625344183599ba671/limen/features/fractional_diff.py#L31-L49"
+        },
+        {
+          "path": "limen/features/fractional_diff.py",
+          "start_line": 83,
+          "end_line": 115,
+          "url": "https://github.com/Vaquum/Limen/blob/25e47866422d007da55cb19625344183599ba671/limen/features/fractional_diff.py#L83-L115"
+        }
+      ],
+      "baseline_source_refs": [
+        {
+          "path": "limen/indicators/sma.py",
+          "start_line": 10,
+          "end_line": 31,
+          "url": "https://github.com/Vaquum/Limen/blob/29837e666604eee74a2ac94f328fb9803724342a/limen/indicators/sma.py#L10-L31"
+        },
+        {
+          "path": "limen/indicators/_ema.py",
+          "start_line": 16,
+          "end_line": 36,
+          "url": "https://github.com/Vaquum/Limen/blob/29837e666604eee74a2ac94f328fb9803724342a/limen/indicators/_ema.py#L16-L36"
+        },
+        {
+          "path": "limen/indicators/cci.py",
+          "start_line": 23,
+          "end_line": 46,
+          "url": "https://github.com/Vaquum/Limen/blob/29837e666604eee74a2ac94f328fb9803724342a/limen/indicators/cci.py#L23-L46"
+        },
+        {
+          "path": "limen/indicators/stoch.py",
+          "start_line": 69,
+          "end_line": 111,
+          "url": "https://github.com/Vaquum/Limen/blob/29837e666604eee74a2ac94f328fb9803724342a/limen/indicators/stoch.py#L69-L111"
+        },
+        {
+          "path": "limen/utils/_line_arrays.py",
+          "start_line": 21,
+          "end_line": 47,
+          "url": "https://github.com/Vaquum/Limen/blob/29837e666604eee74a2ac94f328fb9803724342a/limen/utils/_line_arrays.py#L21-L47"
+        },
+        {
+          "path": "tests/test_indicators_vs_talib.py",
+          "start_line": 1858,
+          "end_line": 1876,
+          "url": "https://github.com/Vaquum/Limen/blob/29837e666604eee74a2ac94f328fb9803724342a/tests/test_indicators_vs_talib.py#L1858-L1876"
+        }
+      ],
+      "new_measurements": null
+    },
+    {
+      "candidate_id": "limen",
+      "criterion_id": "P07",
+      "criterion": "Matched snapshot replay",
+      "previous_status": "Partial",
+      "current_status": "Partial",
+      "evidence_type": [
+        "Inspected"
+      ],
+      "scope": "Zero-cost close-to-next-close all-in long/flat buy_and_hold and sma_cross on the same recorded 1h fixture",
+      "code_delta": "The long-flat return kernel and snapshot-ledger module are byte-identical. The wrapper adds optional explicit-exit behavior; the common adapter uses the unchanged default route.",
+      "performance_implication": "The frozen external contract, oracle, adapter and extraction can be reused byte-for-byte with two explicit source-catalog overlays. Precomputed targets, complete equity/held/fill parity, and post-call thread gates remain mandatory.",
+      "limitation": "Common results do not expose independent native cash/units/fee-ledger fields for Limen; fills are reconstructed from native position segments. Costed common replay remains unsupported by this adapter, and event execution is a separate contract.",
+      "source_refs": [
+        {
+          "path": "limen/backtest/long_flat_strategy.py",
+          "start_line": 42,
+          "end_line": 133,
+          "url": "https://github.com/Vaquum/Limen/blob/25e47866422d007da55cb19625344183599ba671/limen/backtest/long_flat_strategy.py#L42-L133"
+        },
+        {
+          "path": "limen/backtest/_snapshot_ledger.py",
+          "start_line": 40,
+          "end_line": 73,
+          "url": "https://github.com/Vaquum/Limen/blob/25e47866422d007da55cb19625344183599ba671/limen/backtest/_snapshot_ledger.py#L40-L73"
+        },
+        {
+          "path": "limen/backtest/_snapshot_execution.py",
+          "start_line": 38,
+          "end_line": 168,
+          "url": "https://github.com/Vaquum/Limen/blob/25e47866422d007da55cb19625344183599ba671/limen/backtest/_snapshot_execution.py#L38-L168"
+        }
+      ],
+      "baseline_source_refs": [
+        {
+          "path": "limen/backtest/long_flat_strategy.py",
+          "start_line": 96,
+          "end_line": 133,
+          "url": "https://github.com/Vaquum/Limen/blob/29837e666604eee74a2ac94f328fb9803724342a/limen/backtest/long_flat_strategy.py#L96-L133"
+        },
+        {
+          "path": "tests/backtest_benchmark/contract.py",
+          "start_line": 49,
+          "end_line": 89,
+          "url": "https://github.com/Vaquum/Limen/blob/29837e666604eee74a2ac94f328fb9803724342a/tests/backtest_benchmark/contract.py#L49-L89"
+        },
+        {
+          "path": "tests/backtest_benchmark/worker.py",
+          "start_line": 42,
+          "end_line": 140,
+          "url": "https://github.com/Vaquum/Limen/blob/29837e666604eee74a2ac94f328fb9803724342a/tests/backtest_benchmark/worker.py#L42-L140"
+        },
+        {
+          "path": "tests/benchmark_backtest_strategies.py",
+          "start_line": 123,
+          "end_line": 184,
+          "url": "https://github.com/Vaquum/Limen/blob/29837e666604eee74a2ac94f328fb9803724342a/tests/benchmark_backtest_strategies.py#L123-L184"
+        }
+      ],
+      "new_measurements": null
+    },
+    {
+      "candidate_id": "limen",
+      "criterion_id": "P08",
+      "criterion": "Event ledger and forward-label work",
+      "previous_status": "Partial",
+      "current_status": "Partial",
+      "evidence_type": [
+        "Inspected"
+      ],
+      "scope": "Account events and both-side forward trade labels under funding/timer policies",
+      "code_delta": "Event-plan construction can bypass the global key/cache for single-use candidates. TradeOutcomeTarget caches the accrual-presence decision, shares a full plan for no-accrual cases, reuses the immediate long/short candidate plan for accrual cases, disables state retention, and reads episodes directly.",
+      "performance_implication": "This removes repeated cache-key/ledger/state work from inspected target paths. The event cache remains limited by plan count and source-event count; these limits do not bound emitted timer states.",
+      "limitation": "No event-label throughput or scaling timing is scheduled. Long horizons can still revisit long suffixes. The improvement is code-inferred work avoidance, not a measured speedup.",
+      "source_refs": [
+        {
+          "path": "limen/backtest/_event_plan.py",
+          "start_line": 27,
+          "end_line": 84,
+          "url": "https://github.com/Vaquum/Limen/blob/25e47866422d007da55cb19625344183599ba671/limen/backtest/_event_plan.py#L27-L84"
+        },
+        {
+          "path": "limen/targets/trade_outcome.py",
+          "start_line": 32,
+          "end_line": 109,
+          "url": "https://github.com/Vaquum/Limen/blob/25e47866422d007da55cb19625344183599ba671/limen/targets/trade_outcome.py#L32-L109"
+        },
+        {
+          "path": "limen/backtest/_event_clock.py",
+          "start_line": 10,
+          "end_line": 33,
+          "url": "https://github.com/Vaquum/Limen/blob/25e47866422d007da55cb19625344183599ba671/limen/backtest/_event_clock.py#L10-L33"
+        }
+      ],
+      "baseline_source_refs": [
+        {
+          "path": "limen/backtest/_event_plan.py",
+          "start_line": 21,
+          "end_line": 67,
+          "url": "https://github.com/Vaquum/Limen/blob/29837e666604eee74a2ac94f328fb9803724342a/limen/backtest/_event_plan.py#L21-L67"
+        },
+        {
+          "path": "limen/backtest/_event_clock.py",
+          "start_line": 10,
+          "end_line": 33,
+          "url": "https://github.com/Vaquum/Limen/blob/29837e666604eee74a2ac94f328fb9803724342a/limen/backtest/_event_clock.py#L10-L33"
+        },
+        {
+          "path": "limen/backtest/trade_execution.py",
+          "start_line": 246,
+          "end_line": 357,
+          "url": "https://github.com/Vaquum/Limen/blob/29837e666604eee74a2ac94f328fb9803724342a/limen/backtest/trade_execution.py#L246-L357"
+        },
+        {
+          "path": "limen/targets/trade_outcome.py",
+          "start_line": 38,
+          "end_line": 89,
+          "url": "https://github.com/Vaquum/Limen/blob/29837e666604eee74a2ac94f328fb9803724342a/limen/targets/trade_outcome.py#L38-L89"
+        },
+        {
+          "path": "limen/targets/trade_outcome.py",
+          "start_line": 129,
+          "end_line": 148,
+          "url": "https://github.com/Vaquum/Limen/blob/29837e666604eee74a2ac94f328fb9803724342a/limen/targets/trade_outcome.py#L129-L148"
+        }
+      ],
+      "new_measurements": null
+    },
+    {
+      "candidate_id": "limen",
+      "criterion_id": "P09",
+      "criterion": "Memory and resource footprint",
+      "previous_status": "Partial",
+      "current_status": "Partial",
+      "evidence_type": [
+        "Inspected"
+      ],
+      "scope": "Sources, model/preparation caches, worker duplication, IPC and recorded outputs",
+      "code_delta": "Parallel workers now load a parent-written, hashed, read-only file snapshot of each source frame. Each worker reads bytes and deserializes its own DataFrame. Computation-cache accounting is byte-identical; factorized caches remain entry bounded.",
+      "performance_implication": "Source admission is stronger and the parent serializes once, but this is not memory mapping or shared DataFrame storage. Per-worker data/model copies and temporary serialization remain possible.",
+      "limitation": "Paired snapshot and native harness RSS is process-lifetime high-water, not incremental allocation, PSS, process-tree memory or a hard bound. No memory-scaling campaign is scheduled.",
+      "source_refs": [
+        {
+          "path": "limen/experiment/_parallel_sources.py",
+          "start_line": 14,
+          "end_line": 50,
+          "url": "https://github.com/Vaquum/Limen/blob/25e47866422d007da55cb19625344183599ba671/limen/experiment/_parallel_sources.py#L14-L50"
+        },
+        {
+          "path": "limen/experiment/_parallel_worker.py",
+          "start_line": 184,
+          "end_line": 205,
+          "url": "https://github.com/Vaquum/Limen/blob/25e47866422d007da55cb19625344183599ba671/limen/experiment/_parallel_worker.py#L184-L205"
+        },
+        {
+          "path": "limen/utils/_computation_cache.py",
+          "start_line": 23,
+          "end_line": 64,
+          "url": "https://github.com/Vaquum/Limen/blob/25e47866422d007da55cb19625344183599ba671/limen/utils/_computation_cache.py#L23-L64"
+        },
+        {
+          "path": "limen/experiment/_factorize.py",
+          "start_line": 127,
+          "end_line": 214,
+          "url": "https://github.com/Vaquum/Limen/blob/25e47866422d007da55cb19625344183599ba671/limen/experiment/_factorize.py#L127-L214"
+        }
+      ],
+      "baseline_source_refs": [
+        {
+          "path": "limen/utils/_computation_cache.py",
+          "start_line": 23,
+          "end_line": 64,
+          "url": "https://github.com/Vaquum/Limen/blob/29837e666604eee74a2ac94f328fb9803724342a/limen/utils/_computation_cache.py#L23-L64"
+        },
+        {
+          "path": "limen/experiment/_factorize.py",
+          "start_line": 227,
+          "end_line": 233,
+          "url": "https://github.com/Vaquum/Limen/blob/29837e666604eee74a2ac94f328fb9803724342a/limen/experiment/_factorize.py#L227-L233"
+        },
+        {
+          "path": "limen/experiment/_parallel_rounds.py",
+          "start_line": 167,
+          "end_line": 174,
+          "url": "https://github.com/Vaquum/Limen/blob/29837e666604eee74a2ac94f328fb9803724342a/limen/experiment/_parallel_rounds.py#L167-L174"
+        },
+        {
+          "path": "tests/benchmark_parallel_rounds.py",
+          "start_line": 39,
+          "end_line": 64,
+          "url": "https://github.com/Vaquum/Limen/blob/29837e666604eee74a2ac94f328fb9803724342a/tests/benchmark_parallel_rounds.py#L39-L64"
+        }
+      ],
+      "new_measurements": null
+    },
+    {
+      "candidate_id": "limen",
+      "criterion_id": "P10",
+      "criterion": "Parallel campaign execution",
+      "previous_status": "Optional",
+      "current_status": "Optional",
+      "evidence_type": [
+        "Inspected"
+      ],
+      "scope": "Admitted compiled CPU round execution with bounded queued work and deterministic ordered commits",
+      "code_delta": "Worker admission no longer uses only the old exact MLManifest/logreg/LightGBM whitelist; it reconstructs compiled shapes and checks resolved CPU/native-thread settings. Source snapshots, holdout authority and fold-promotion context enter initialization.",
+      "performance_implication": "More admitted compiled workloads can execute in workers. Pending work remains bounded, and commits still await pending[0] with checkpoint/feedback barriers, so head-of-line blocking remains.",
+      "limitation": "No parallel timing is newly introduced: the old parallel harness was inspected rather than measured in the original baseline. Native suite results can test correctness but do not establish scaling speedups.",
+      "source_refs": [
+        {
+          "path": "limen/experiment/_parallel_worker.py",
+          "start_line": 105,
+          "end_line": 151,
+          "url": "https://github.com/Vaquum/Limen/blob/25e47866422d007da55cb19625344183599ba671/limen/experiment/_parallel_worker.py#L105-L151"
+        },
+        {
+          "path": "limen/experiment/_parallel_worker.py",
+          "start_line": 184,
+          "end_line": 258,
+          "url": "https://github.com/Vaquum/Limen/blob/25e47866422d007da55cb19625344183599ba671/limen/experiment/_parallel_worker.py#L184-L258"
+        },
+        {
+          "path": "limen/experiment/_parallel_rounds.py",
+          "start_line": 172,
+          "end_line": 244,
+          "url": "https://github.com/Vaquum/Limen/blob/25e47866422d007da55cb19625344183599ba671/limen/experiment/_parallel_rounds.py#L172-L244"
+        }
+      ],
+      "baseline_source_refs": [
+        {
+          "path": "limen/experiment/_parallel_rounds.py",
+          "start_line": 43,
+          "end_line": 63,
+          "url": "https://github.com/Vaquum/Limen/blob/29837e666604eee74a2ac94f328fb9803724342a/limen/experiment/_parallel_rounds.py#L43-L63"
+        },
+        {
+          "path": "limen/experiment/_parallel_rounds.py",
+          "start_line": 167,
+          "end_line": 237,
+          "url": "https://github.com/Vaquum/Limen/blob/29837e666604eee74a2ac94f328fb9803724342a/limen/experiment/_parallel_rounds.py#L167-L237"
+        },
+        {
+          "path": "limen/experiment/_parallel_worker.py",
+          "start_line": 101,
+          "end_line": 120,
+          "url": "https://github.com/Vaquum/Limen/blob/29837e666604eee74a2ac94f328fb9803724342a/limen/experiment/_parallel_worker.py#L101-L120"
+        },
+        {
+          "path": "limen/experiment/_parallel_worker.py",
+          "start_line": 196,
+          "end_line": 245,
+          "url": "https://github.com/Vaquum/Limen/blob/29837e666604eee74a2ac94f328fb9803724342a/limen/experiment/_parallel_worker.py#L196-L245"
+        },
+        {
+          "path": "tests/benchmark_parallel_rounds.py",
+          "start_line": 144,
+          "end_line": 175,
+          "url": "https://github.com/Vaquum/Limen/blob/29837e666604eee74a2ac94f328fb9803724342a/tests/benchmark_parallel_rounds.py#L144-L175"
+        }
+      ],
+      "new_measurements": null
+    },
+    {
+      "candidate_id": "limen",
+      "criterion_id": "P11",
+      "criterion": "Cache key, hit and eviction costs",
+      "previous_status": "Partial",
+      "current_status": "Partial",
+      "evidence_type": [
+        "Inspected"
+      ],
+      "scope": "Computation, fitted-preparation, prediction and event-plan cache boundaries",
+      "code_delta": "The computation-cache implementation is byte-identical. Prepared/signal cache paths now validate protected source/population/history evidence and refresh recency; unprotected operation has a cheaper binding path. Single-use event plans may opt out of key/cache work.",
+      "performance_implication": "Computation hits still require source scans/byte-key construction and cloned/copied outputs. Added evidence checks are real cache-hit work; reuse does not imply a zero-cost hit.",
+      "limitation": "No isolated hit/miss/eviction benchmark is scheduled. The factorized harness measures one admitted workload only, and entry bounds do not establish worst-case memory.",
+      "source_refs": [
+        {
+          "path": "limen/utils/_computation_cache.py",
+          "start_line": 86,
+          "end_line": 122,
+          "url": "https://github.com/Vaquum/Limen/blob/25e47866422d007da55cb19625344183599ba671/limen/utils/_computation_cache.py#L86-L122"
+        },
+        {
+          "path": "limen/experiment/_holdout_composition.py",
+          "start_line": 90,
+          "end_line": 132,
+          "url": "https://github.com/Vaquum/Limen/blob/25e47866422d007da55cb19625344183599ba671/limen/experiment/_holdout_composition.py#L90-L132"
+        },
+        {
+          "path": "limen/experiment/_holdout_composition.py",
+          "start_line": 162,
+          "end_line": 226,
+          "url": "https://github.com/Vaquum/Limen/blob/25e47866422d007da55cb19625344183599ba671/limen/experiment/_holdout_composition.py#L162-L226"
+        },
+        {
+          "path": "limen/backtest/_event_plan.py",
+          "start_line": 45,
+          "end_line": 76,
+          "url": "https://github.com/Vaquum/Limen/blob/25e47866422d007da55cb19625344183599ba671/limen/backtest/_event_plan.py#L45-L76"
+        }
+      ],
+      "baseline_source_refs": [
+        {
+          "path": "limen/utils/_computation_cache.py",
+          "start_line": 32,
+          "end_line": 49,
+          "url": "https://github.com/Vaquum/Limen/blob/29837e666604eee74a2ac94f328fb9803724342a/limen/utils/_computation_cache.py#L32-L49"
+        },
+        {
+          "path": "limen/utils/_computation_cache.py",
+          "start_line": 86,
+          "end_line": 122,
+          "url": "https://github.com/Vaquum/Limen/blob/29837e666604eee74a2ac94f328fb9803724342a/limen/utils/_computation_cache.py#L86-L122"
+        },
+        {
+          "path": "limen/experiment/_factorized_prep.py",
+          "start_line": 64,
+          "end_line": 83,
+          "url": "https://github.com/Vaquum/Limen/blob/29837e666604eee74a2ac94f328fb9803724342a/limen/experiment/_factorized_prep.py#L64-L83"
+        },
+        {
+          "path": "limen/backtest/_event_plan.py",
+          "start_line": 27,
+          "end_line": 67,
+          "url": "https://github.com/Vaquum/Limen/blob/29837e666604eee74a2ac94f328fb9803724342a/limen/backtest/_event_plan.py#L27-L67"
+        },
+        {
+          "path": "tests/test_factorized_cache_bounds.py",
+          "start_line": 32,
+          "end_line": 158,
+          "url": "https://github.com/Vaquum/Limen/blob/29837e666604eee74a2ac94f328fb9803724342a/tests/test_factorized_cache_bounds.py#L32-L158"
+        }
+      ],
+      "new_measurements": null
+    },
+    {
+      "candidate_id": "limen",
+      "criterion_id": "P12",
+      "criterion": "Recording and recovery costs",
+      "previous_status": "Partial",
+      "current_status": "Partial",
+      "evidence_type": [
+        "Inspected"
+      ],
+      "scope": "Recorded terminal prefixes and interrupted serial/parallel recovery",
+      "code_delta": "Round-storage serialization/compression/dedup code is unchanged apart from an internal frames rename. Recovery now checks applicable evidence, typed parameters and richer holdout/exit/fold outputs. Checkpoints accept a committed state snapshot without rewinding the live sampler.",
+      "performance_implication": "Recovery correctness work has expanded. Full-prefix validation and serial CSV truncation/rewrite remain; dedup still serializes and hashes before determining that a frame blob is already present.",
+      "limitation": "No interrupted-campaign latency or output-size scaling measurement is scheduled. Stronger recovery validation should not be mistaken for a demonstrated runtime bound.",
+      "source_refs": [
+        {
+          "path": "limen/experiment/_round_storage.py",
+          "start_line": 133,
+          "end_line": 178,
+          "url": "https://github.com/Vaquum/Limen/blob/25e47866422d007da55cb19625344183599ba671/limen/experiment/_round_storage.py#L133-L178"
+        },
+        {
+          "path": "limen/experiment/_recording.py",
+          "start_line": 54,
+          "end_line": 105,
+          "url": "https://github.com/Vaquum/Limen/blob/25e47866422d007da55cb19625344183599ba671/limen/experiment/_recording.py#L54-L105"
+        },
+        {
+          "path": "limen/experiment/_parallel_resume.py",
+          "start_line": 144,
+          "end_line": 269,
+          "url": "https://github.com/Vaquum/Limen/blob/25e47866422d007da55cb19625344183599ba671/limen/experiment/_parallel_resume.py#L144-L269"
+        },
+        {
+          "path": "limen/experiment/checkpoint_manager.py",
+          "start_line": 95,
+          "end_line": 153,
+          "url": "https://github.com/Vaquum/Limen/blob/25e47866422d007da55cb19625344183599ba671/limen/experiment/checkpoint_manager.py#L95-L153"
+        },
+        {
+          "path": "limen/experiment/experiment_core.py",
+          "start_line": 878,
+          "end_line": 959,
+          "url": "https://github.com/Vaquum/Limen/blob/25e47866422d007da55cb19625344183599ba671/limen/experiment/experiment_core.py#L878-L959"
+        }
+      ],
+      "baseline_source_refs": [
+        {
+          "path": "limen/experiment/experiment_core.py",
+          "start_line": 672,
+          "end_line": 739,
+          "url": "https://github.com/Vaquum/Limen/blob/29837e666604eee74a2ac94f328fb9803724342a/limen/experiment/experiment_core.py#L672-L739"
+        },
+        {
+          "path": "limen/experiment/_parallel_commit.py",
+          "start_line": 125,
+          "end_line": 139,
+          "url": "https://github.com/Vaquum/Limen/blob/29837e666604eee74a2ac94f328fb9803724342a/limen/experiment/_parallel_commit.py#L125-L139"
+        },
+        {
+          "path": "limen/experiment/_round_storage.py",
+          "start_line": 133,
+          "end_line": 178,
+          "url": "https://github.com/Vaquum/Limen/blob/29837e666604eee74a2ac94f328fb9803724342a/limen/experiment/_round_storage.py#L133-L178"
+        },
+        {
+          "path": "limen/experiment/_parallel_resume.py",
+          "start_line": 171,
+          "end_line": 259,
+          "url": "https://github.com/Vaquum/Limen/blob/29837e666604eee74a2ac94f328fb9803724342a/limen/experiment/_parallel_resume.py#L171-L259"
+        },
+        {
+          "path": "limen/experiment/checkpoint_manager.py",
+          "start_line": 126,
+          "end_line": 151,
+          "url": "https://github.com/Vaquum/Limen/blob/29837e666604eee74a2ac94f328fb9803724342a/limen/experiment/checkpoint_manager.py#L126-L151"
+        }
+      ],
+      "new_measurements": null
+    }
+  ],
+  "byte_identical_files": [
+    {
+      "path": "limen/experiment/param_search/grid_strategy.py",
+      "sha256": "cbf9555aec65fae891a862f5a0ca69d1d953ed2c378181974890b9b22aab0671"
+    },
+    {
+      "path": "limen/experiment/param_search/random_strategy.py",
+      "sha256": "6dd7aa26330c8914dc97c53287cd14b2352cc94195072c0c5f743030fc3e8ed8"
+    },
+    {
+      "path": "limen/experiment/param_search/sobol_strategy.py",
+      "sha256": "0d013ba7549062d534a49f940a794352357e8aea5f68dd2bada8c815745b1230"
+    },
+    {
+      "path": "limen/utils/_computation_cache.py",
+      "sha256": "fdfde1c293b575e30aa8fd2108f2b9362b58cca834d061b5e73071dae0d1fa5c"
+    },
+    {
+      "path": "limen/utils/_line_arrays.py",
+      "sha256": "3a026d9c11f6e2bfe6188f963b23cc5482921e5f36ef597483f8db49bf7e6c0c"
+    },
+    {
+      "path": "limen/indicators/_ema.py",
+      "sha256": "9e0e31bc809805c59db34de4823d00b119d472ee7503b81436e0c7a0960e87d1"
+    },
+    {
+      "path": "limen/backtest/_event_clock.py",
+      "sha256": "4d0505b0b531763c930963b90a597eeae0226994a3c4d78f9acab5e653ce51fb"
+    },
+    {
+      "path": "limen/backtest/long_flat_strategy.py",
+      "sha256": "4d0fdbbe0672179c1cc93582042b8682a24aa1ca1b720a00ba9c56d802b0e893"
+    },
+    {
+      "path": "limen/backtest/_snapshot_ledger.py",
+      "sha256": "11746e677bf32309311a00aaab656f2d4339619c16e4614e9ef8d3758701ffed"
+    },
+    {
+      "path": "tests/benchmark_factorized_preparation.py",
+      "sha256": "555799b93ae288bfd7bc0d81713c7a372d5b566cfd0f8dfe773bcced985a5f99"
+    },
+    {
+      "path": "tests/benchmark_backtest_strategies.py",
+      "sha256": "4079f960cacfbc72542caf7e645c7d64b0f4d1b7b8f8690046ee0e82d6589163"
+    },
+    {
+      "path": "tests/benchmark_parallel_rounds.py",
+      "sha256": "f87fdcebcdd38a8c69a82406221f11f76f5b65df6c7423a13f970f5cfbddfa89"
+    }
+  ]
+}

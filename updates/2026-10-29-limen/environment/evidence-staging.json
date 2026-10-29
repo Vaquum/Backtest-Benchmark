@@ -1,0 +1,175 @@
+{
+  "schema": "limen-update-evidence-staging/v1",
+  "staged_at_utc": "2026-10-29T11:36:58.292896+00:00",
+  "source_commit": "25e47866422d007da55cb19625344183599ba671",
+  "method": "Exact byte copies of selected existing raw artifacts, created without overwrite and verified against unchanged sources; no engines/tests/builds rerun.",
+  "raw_copies": [
+    {
+      "source_path": "/workspace/scratch/008a76ec4981/limen-rerun-output/native-suite-native-linux/run_manifest.json",
+      "staged_path": "native-suite/run_manifest.json",
+      "sha256": "718284d042e2f23704901e22f7f3b7e439b329b12181e8318d3f27724c0248e7",
+      "bytes": 1583,
+      "source_mtime_ns": 1793273195464866947,
+      "source_unchanged": true,
+      "staged_bytes_equal": true,
+      "admission": "admitted_completed_native_linux"
+    },
+    {
+      "source_path": "/workspace/scratch/008a76ec4981/limen-rerun-output/native-suite-native-linux/junit.xml",
+      "staged_path": "native-suite/junit.xml",
+      "sha256": "fb027529168ecc9cf24c60ae27025e0a394491f7bdfd2ddd4e8791633c1da875",
+      "bytes": 1230740,
+      "source_mtime_ns": 1793273189188607855,
+      "source_unchanged": true,
+      "staged_bytes_equal": true,
+      "admission": "admitted_completed_native_linux"
+    },
+    {
+      "source_path": "/workspace/scratch/008a76ec4981/limen-rerun-output/native-suite-native-linux/test_runtime_profile.json",
+      "staged_path": "native-suite/test_runtime_profile.json",
+      "sha256": "b1e2db97814882c2ad728acefa2d3a66cd0e6147f4a8cba452766e3473c718de",
+      "bytes": 2913604,
+      "source_mtime_ns": 1793273190098781942,
+      "source_unchanged": true,
+      "staged_bytes_equal": true,
+      "admission": "admitted_completed_native_linux"
+    },
+    {
+      "source_path": "/workspace/scratch/008a76ec4981/limen-rerun-output/native-suite-native-linux/coverage.json",
+      "staged_path": "native-suite/coverage.json",
+      "sha256": "c80888f3b79200a9e486c365fd3509e5282188374d8e30f390ce48c9003f08bb",
+      "bytes": 1948796,
+      "source_mtime_ns": 1793273194616746484,
+      "source_unchanged": true,
+      "staged_bytes_equal": true,
+      "admission": "admitted_completed_native_linux"
+    },
+    {
+      "source_path": "/workspace/scratch/008a76ec4981/limen-rerun-output/native-suite-native-linux/pytest.log",
+      "staged_path": "native-suite/pytest.log",
+      "sha256": "e7b61f3967f33f2a2c93f8f64f1c780c41804ce8ba58ea69a2cbd95b4416a9c1",
+      "bytes": 10702,
+      "source_mtime_ns": 1793273190104630973,
+      "source_unchanged": true,
+      "staged_bytes_equal": true,
+      "admission": "admitted_completed_native_linux"
+    },
+    {
+      "source_path": "/workspace/scratch/008a76ec4981/limen-rerun-output/native-suite/run_manifest.json",
+      "staged_path": "environment/initial-attempt/run_manifest.json",
+      "sha256": "fe7332b82b493058782ff91c5d4e80e22dffa97fada0c0ad8a29233c30aec276",
+      "bytes": 1531,
+      "source_mtime_ns": 1793272956627685091,
+      "source_unchanged": true,
+      "staged_bytes_equal": true,
+      "admission": "not_admitted_incomplete_native_environment_attempt"
+    },
+    {
+      "source_path": "/workspace/scratch/008a76ec4981/limen-rerun-output/native-suite/test_runtime_profile.json",
+      "staged_path": "environment/initial-attempt/test_runtime_profile.json",
+      "sha256": "c06f1c39abbcb798ea137ba216ba71a150a64432dc7cf271b140b686e9236a6f",
+      "bytes": 3620094,
+      "source_mtime_ns": 1793272950874760950,
+      "source_unchanged": true,
+      "staged_bytes_equal": true,
+      "admission": "not_admitted_incomplete_native_environment_attempt"
+    },
+    {
+      "source_path": "/workspace/scratch/008a76ec4981/limen-rerun-output/native-suite/pytest.log",
+      "staged_path": "environment/initial-attempt/pytest.log",
+      "sha256": "9bfd34a1ef6162ef7e15e5fa079f248a370bf76b2549eec0a6ca3106fc46efcc",
+      "bytes": 14615,
+      "source_mtime_ns": 1793272950894761163,
+      "source_unchanged": true,
+      "staged_bytes_equal": true,
+      "admission": "not_admitted_incomplete_native_environment_attempt"
+    },
+    {
+      "source_path": "/workspace/scratch/008a76ec4981/limen-rerun-output/native-suite/junit.xml",
+      "staged_path": "environment/initial-attempt/junit.xml",
+      "sha256": "bb64756580df955d5aa1f2e75f5670cebf646804d531c420c3d89ca69601b4c8",
+      "bytes": 1992617,
+      "source_mtime_ns": 1793272950442756353,
+      "source_unchanged": true,
+      "staged_bytes_equal": true,
+      "admission": "not_admitted_incomplete_native_environment_attempt"
+    },
+    {
+      "source_path": "/workspace/scratch/008a76ec4981/Backtest-Benchmark/updates/2026-10-29-limen/environment/native-suite-initial-attempt.json",
+      "staged_path": "environment/initial-attempt/admission.json",
+      "sha256": "2efda0f6ba79b217be438aade460ba3d161cfd648dfed2390e5d40df08214870",
+      "bytes": 992,
+      "source_mtime_ns": 1793273000102388468,
+      "source_unchanged": true,
+      "staged_bytes_equal": true,
+      "admission": "not_admitted_incomplete_native_environment_attempt"
+    }
+  ],
+  "raw_total_bytes": 11735274,
+  "largest_raw_file_bytes": 3620094,
+  "generated_environment_metadata": [
+    {
+      "path": "environment/research-package-metadata.json",
+      "sha256": "8a485d1a8283a15ae579b1151ea44b175be8cc1e3f7e5905d92c12f2ae7f293d",
+      "bytes": 62384,
+      "kind": "standard_library_distribution_metadata_capture"
+    },
+    {
+      "path": "environment/research-metadata-freeze.txt",
+      "sha256": "f353fe788e51e3dad50a675366bebae0d0f8c005b6c69c17bdd14fc279fad403",
+      "bytes": 1137,
+      "kind": "standard_library_distribution_metadata_capture"
+    }
+  ],
+  "completed_campaign": {
+    "admission": "admitted_completed_native_linux",
+    "exit_code": 0,
+    "suite": {
+      "started_at": "2026-10-29T11:23:49.654Z",
+      "finished_at": "2026-10-29T11:26:30.045Z",
+      "duration_seconds": 160.391127,
+      "test_count": 7391,
+      "passed_count": 7388,
+      "failed_count": 0,
+      "skipped_count": 3
+    },
+    "parallel_reconciled": true,
+    "worker_count": 4
+  },
+  "coverage": {
+    "meta": {
+      "format": 3,
+      "version": "7.15.1",
+      "timestamp": "2026-10-29T13:26:30.688235",
+      "branch_coverage": false,
+      "show_contexts": false
+    },
+    "totals": {
+      "covered_lines": 31136,
+      "num_statements": 32875,
+      "percent_covered": 94.71026615969582,
+      "percent_covered_display": "95",
+      "missing_lines": 1739,
+      "excluded_lines": 507,
+      "percent_statements_covered": 94.71026615969582,
+      "percent_statements_covered_display": "95"
+    },
+    "file_count": 576,
+    "scope": "Exact totals of the completed coverage.json report; statement coverage, with branch coverage disabled."
+  },
+  "initial_attempt": {
+    "admission": "not_admitted_incomplete_native_environment_attempt",
+    "reason_receipt": "environment/initial-attempt/admission.json",
+    "excluded_from_completed_results": true
+  },
+  "excluded_artifacts": [
+    "coverage.db",
+    "pytest-temp and all temporary trees",
+    "initial-attempt coverage.json"
+  ],
+  "limitations": [
+    "Raw file contents are unchanged; absolute paths embedded in the original receipts remain as originally recorded.",
+    "The CPU research environment substitutes torch==2.13.0+cpu for the upstream torch==2.13.0 selection; full installed distribution inventory is separate.",
+    "Native-suite runtime is not a matched old/new performance result."
+  ]
+}

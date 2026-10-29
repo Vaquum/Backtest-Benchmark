@@ -1,0 +1,104 @@
+{
+  "schema_version": 1,
+  "registered_utc": "2026-10-29T11:19:31.611302+00:00",
+  "status": "prepared_not_executed",
+  "variants": {
+    "baseline": {
+      "source_commit": "29837e666604eee74a2ac94f328fb9803724342a",
+      "source_path": "/workspace/scratch/008a76ec4981/Limen-baseline",
+      "python": "/workspace/scratch/008a76ec4981/Backtest-Benchmark/.work/envs-baseline/limen/bin/python",
+      "setup_manifest_sha256": "444de683528dc77c7380f52b2f0c271e12a2cc979354a78483712a61982a3ffd",
+      "harness_files_sha256": {
+        "tests/benchmark_factorized_preparation.py": "555799b93ae288bfd7bc0d81713c7a372d5b566cfd0f8dfe773bcced985a5f99",
+        "tests/benchmark_backtest_strategies.py": "4079f960cacfbc72542caf7e645c7d64b0f4d1b7b8f8690046ee0e82d6589163",
+        "tests/fixtures/factorize/generate.py": "e5af145c6e1fff9cfe9657d712980f1ca7e54ada05e840f3c98f2d9d72149ecf",
+        "tests/backtest_benchmark/__init__.py": "fe21316c7f01b156abb51664eed38efb1c3e0291d609f00789410b1f11280b28",
+        "tests/backtest_benchmark/adapters.py": "a2f16fec9930a7c134853a6e525c54419faf587bee241e276f772044c4f5c352",
+        "tests/backtest_benchmark/contract.py": "a6bff9b85b6750494323aa5846c1ff56e84ec6daa6156fffd5428d8d92d1b6e1",
+        "tests/backtest_benchmark/prepare.py": "0e8ecb81513276d93cdf8d02f72440042f470cec00e765e11558365f043ae779",
+        "tests/backtest_benchmark/worker.py": "cb26fb12e70ee4931b777bb731d2a5b7c99b862e0aab66ad7ba018eb9a92656d"
+      }
+    },
+    "latest": {
+      "source_commit": "25e47866422d007da55cb19625344183599ba671",
+      "source_path": "/workspace/scratch/008a76ec4981/Limen",
+      "python": "/workspace/scratch/008a76ec4981/Backtest-Benchmark/.work/envs-latest/limen/bin/python",
+      "setup_manifest_sha256": "a6bd4fa6d4728f97c45d04138fb0aa85e767fbbbb553ca1392316c082c8c63e2",
+      "harness_files_sha256": {
+        "tests/benchmark_factorized_preparation.py": "555799b93ae288bfd7bc0d81713c7a372d5b566cfd0f8dfe773bcced985a5f99",
+        "tests/benchmark_backtest_strategies.py": "4079f960cacfbc72542caf7e645c7d64b0f4d1b7b8f8690046ee0e82d6589163",
+        "tests/fixtures/factorize/generate.py": "9daa30e945f466070f2aa4c737f8eceeb0581d9705dfcd8015473df462e1f18c",
+        "tests/backtest_benchmark/__init__.py": "fe21316c7f01b156abb51664eed38efb1c3e0291d609f00789410b1f11280b28",
+        "tests/backtest_benchmark/adapters.py": "a2f16fec9930a7c134853a6e525c54419faf587bee241e276f772044c4f5c352",
+        "tests/backtest_benchmark/contract.py": "a6bff9b85b6750494323aa5846c1ff56e84ec6daa6156fffd5428d8d92d1b6e1",
+        "tests/backtest_benchmark/prepare.py": "0e8ecb81513276d93cdf8d02f72440042f470cec00e765e11558365f043ae779",
+        "tests/backtest_benchmark/worker.py": "cb26fb12e70ee4931b777bb731d2a5b7c99b862e0aab66ad7ba018eb9a92656d"
+      }
+    }
+  },
+  "fixture_relative_path": "tests/fixtures/spot_1h_20240101_20241231.parquet",
+  "fixture_sha256": "a634bbd4f3692fac7bc88512da588e7772f4bd1b749567606d5314e54d0adf72",
+  "source_execution": "Each unchanged native harness runs from its separately pinned source checkout with the matched environment interpreter; this differs from external replay, which verifies the installed noneditable wheel.",
+  "run_order": [
+    {
+      "variant": "baseline",
+      "harness": "factorized"
+    },
+    {
+      "variant": "latest",
+      "harness": "factorized"
+    },
+    {
+      "variant": "latest",
+      "harness": "snapshot"
+    },
+    {
+      "variant": "baseline",
+      "harness": "snapshot"
+    }
+  ],
+  "factorized": {
+    "repeats": 1,
+    "rounds_per_arm": 48,
+    "expected_target_scaler_fits": {
+      "fresh": 24,
+      "reuse": 1
+    },
+    "expected_model_fits_per_arm": 24,
+    "required_within_revision_scientific_parity": "12-decimal digest equality",
+    "scope": "One descriptive pair per revision; not repeated timing evidence. Existing fixed fresh-then-reuse arm order is preserved."
+  },
+  "snapshot": {
+    "strategies": [
+      "buy_and_hold",
+      "sma_cross"
+    ],
+    "engines": [
+      "limen"
+    ],
+    "warm_repeats": 7,
+    "scope": "Original native signal-timing contract; separate from frozen external prior-close-decision/next-close-fill replay. Kernel/common extraction and full native snapshot are reported separately."
+  },
+  "helper_digest_function_ast_sha256": {
+    "baseline": {
+      "digest": "d224aec6e7d17cba8ec04f05db3c71f0ce555cf12791fcc1786cb821f29016ce",
+      "component_digests": "2b6cabdd333d58414eeb099fedc13ca6666e3d7ddfbc16b00d3f3fb6d8f99399"
+    },
+    "latest": {
+      "digest": "d224aec6e7d17cba8ec04f05db3c71f0ce555cf12791fcc1786cb821f29016ce",
+      "component_digests": "2b6cabdd333d58414eeb099fedc13ca6666e3d7ddfbc16b00d3f3fb6d8f99399"
+    }
+  },
+  "helper_delta": "Factorized fixture generator changes only the fixture source resolver import/signature/patch; scientific digest functions are AST-identical and the benchmark calls those digest functions, not its fixture-execution helper.",
+  "admission": "Pinned clean source, fixture/harness hashes, identical dependency environments, all nine thread controls; each harness retains its original parity/count checks. Preserve failures without patching source or changing expected results.",
+  "comparison_limit": "No competitor execution or comparison to historical host timings.",
+  "native_driver_sha256": "2a9e7e1290807a9bd4668049d172bb16770a74066ab46f2ab66a29e029078f9b",
+  "native_launch_amendment": {
+    "registered_utc": "2026-10-29T11:24:43.096550+00:00",
+    "prior_preregistration_sha256": "7c7149617d8e99442ef28b37813db992c4ed839c937290859b14115f3d8839b0",
+    "execution": "Native Linux executor via require_escalated; /proc CPU/cgroup/RSS provenance observable",
+    "reason": "Root reported sandbox /proc visibility limitation during native suite. Measurement launches require the native executor; ordinary thread/resource/source/parity guards remain unchanged.",
+    "comparative_timing_started": false,
+    "earlier_untimed_preflight_scope": "Sandbox functional admission only; each timed CLI invocation has its own fresh native preflight."
+  }
+}

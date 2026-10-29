@@ -1,0 +1,913 @@
+{
+  "revision": "latest",
+  "repository_commit": "25e47866422d007da55cb19625344183599ba671",
+  "source_root": "/workspace/scratch/008a76ec4981/Limen",
+  "imported_limen": "/workspace/scratch/008a76ec4981/Limen/limen/__init__.py",
+  "recorded_at_utc": "2026-10-29T11:12:48.494802+00:00",
+  "fixture": "tests/fixtures/spot_1h_20240101_20241231.parquet",
+  "fixture_sha256": "a634bbd4f3692fac7bc88512da588e7772f4bd1b749567606d5314e54d0adf72",
+  "source_period": [
+    "2024-01-01 00:00:00+00:00",
+    "2024-01-16 23:00:00+00:00"
+  ],
+  "numeric_tolerance": {
+    "relative": 1e-12,
+    "absolute": 1e-12
+  },
+  "data_policy": "Unchanged recorded observations; only original prefix selection/extension.",
+  "runtime": {
+    "python": "3.12.14 (main, Aug 25 2026, 14:00:49) [Clang 22.1.3 ]",
+    "numpy": "2.2.6",
+    "polars": "1.44.2",
+    "installed_distribution": {
+      "name": "vaquum-limen",
+      "version": "5.46.2"
+    }
+  },
+  "probe_script_sha256": "f13fefd84a605b2a4efdfdbf0bf795b14863e96bf0b46f360bfa0a54c96fdac7",
+  "source_file_sha256": {
+    "limen/features/quantile_price_lines.py": "b83101acca2bd67f1aedc676307869c2aa03f61abcdfff602b944511400ffe82",
+    "limen/features/price_lines.py": "c6e43b353f145238b6dd11d0bce1fa6e21312ead1016fd8d61db030423b950a4",
+    "limen/utils/_line_arrays.py": "3a026d9c11f6e2bfe6188f963b23cc5482921e5f36ef597483f8db49bf7e6c0c"
+  },
+  "original_probe_cases": [
+    {
+      "function": "limen.features.price_lines.price_lines",
+      "params": {
+        "max_duration_hours": 48,
+        "min_height_pct": 0.002,
+        "include_research_only": false
+      },
+      "prefix_rows": 192,
+      "extended_rows": 384,
+      "rows_with_any_feature_change": 0,
+      "per_column": {
+        "hours_since_big_move": {
+          "changed_rows": 0,
+          "max_abs_difference": 0.0,
+          "first_change": null
+        },
+        "line_momentum_6h": {
+          "changed_rows": 0,
+          "max_abs_difference": 0.0,
+          "first_change": null
+        },
+        "trending_score": {
+          "changed_rows": 0,
+          "max_abs_difference": 0.0,
+          "first_change": null
+        },
+        "reversal_potential": {
+          "changed_rows": 0,
+          "max_abs_difference": 0.0,
+          "first_change": null
+        }
+      }
+    },
+    {
+      "function": "limen.features.quantile_price_lines.quantile_price_lines",
+      "params": {
+        "max_duration_hours": 48,
+        "min_height_pct": 0.002,
+        "include_research_only": false,
+        "quantile_threshold": 0.7
+      },
+      "prefix_rows": 192,
+      "extended_rows": 384,
+      "rows_with_any_feature_change": 0,
+      "per_column": {
+        "hours_since_quantile_line": {
+          "changed_rows": 0,
+          "max_abs_difference": 0.0,
+          "first_change": null
+        },
+        "quantile_line_density_48h": {
+          "changed_rows": 0,
+          "max_abs_difference": 0.0,
+          "first_change": null
+        },
+        "quantile_momentum_6h": {
+          "changed_rows": 0,
+          "max_abs_difference": 0.0,
+          "first_change": null
+        },
+        "avg_quantile_height_24h": {
+          "changed_rows": 0,
+          "max_abs_difference": 0.0,
+          "first_change": null
+        },
+        "quantile_direction_bias": {
+          "changed_rows": 0,
+          "max_abs_difference": 0.0,
+          "first_change": null
+        }
+      }
+    },
+    {
+      "function": "limen.features.quantile_price_lines.quantile_price_lines",
+      "params": {
+        "max_duration_hours": 48,
+        "min_height_pct": 0.002,
+        "include_research_only": false,
+        "quantile_threshold": 0.0
+      },
+      "prefix_rows": 192,
+      "extended_rows": 384,
+      "rows_with_any_feature_change": 0,
+      "per_column": {
+        "hours_since_quantile_line": {
+          "changed_rows": 0,
+          "max_abs_difference": 0.0,
+          "first_change": null
+        },
+        "quantile_line_density_48h": {
+          "changed_rows": 0,
+          "max_abs_difference": 0.0,
+          "first_change": null
+        },
+        "quantile_momentum_6h": {
+          "changed_rows": 0,
+          "max_abs_difference": 0.0,
+          "first_change": null
+        },
+        "avg_quantile_height_24h": {
+          "changed_rows": 0,
+          "max_abs_difference": 0.0,
+          "first_change": null
+        },
+        "quantile_direction_bias": {
+          "changed_rows": 0,
+          "max_abs_difference": 0.0,
+          "first_change": null
+        }
+      }
+    }
+  ],
+  "expanded_cases": [
+    {
+      "function": "limen.features.quantile_price_lines.quantile_price_lines",
+      "params": {
+        "max_duration_hours": 48,
+        "min_height_pct": 0.002,
+        "include_research_only": false,
+        "quantile_threshold": 0.7
+      },
+      "prefix_rows": 192,
+      "extended_rows": 384,
+      "rows_with_any_feature_change": 0,
+      "per_column": {
+        "hours_since_quantile_line": {
+          "changed_rows": 0,
+          "max_abs_difference": 0.0,
+          "first_change": null
+        },
+        "quantile_line_density_48h": {
+          "changed_rows": 0,
+          "max_abs_difference": 0.0,
+          "first_change": null
+        },
+        "quantile_momentum_6h": {
+          "changed_rows": 0,
+          "max_abs_difference": 0.0,
+          "first_change": null
+        },
+        "avg_quantile_height_24h": {
+          "changed_rows": 0,
+          "max_abs_difference": 0.0,
+          "first_change": null
+        },
+        "quantile_direction_bias": {
+          "changed_rows": 0,
+          "max_abs_difference": 0.0,
+          "first_change": null
+        }
+      },
+      "research_only_column": null,
+      "five_common_columns_exactly_equal_across_flags": true
+    },
+    {
+      "function": "limen.features.quantile_price_lines.quantile_price_lines",
+      "params": {
+        "max_duration_hours": 48,
+        "min_height_pct": 0.002,
+        "include_research_only": true,
+        "quantile_threshold": 0.7
+      },
+      "prefix_rows": 192,
+      "extended_rows": 384,
+      "rows_with_any_feature_change": 0,
+      "per_column": {
+        "hours_since_quantile_line": {
+          "changed_rows": 0,
+          "max_abs_difference": 0.0,
+          "first_change": null
+        },
+        "quantile_line_density_48h": {
+          "changed_rows": 0,
+          "max_abs_difference": 0.0,
+          "first_change": null
+        },
+        "quantile_momentum_6h": {
+          "changed_rows": 0,
+          "max_abs_difference": 0.0,
+          "first_change": null
+        },
+        "avg_quantile_height_24h": {
+          "changed_rows": 0,
+          "max_abs_difference": 0.0,
+          "first_change": null
+        },
+        "quantile_direction_bias": {
+          "changed_rows": 0,
+          "max_abs_difference": 0.0,
+          "first_change": null
+        }
+      },
+      "research_only_column": {
+        "changed_rows": 192,
+        "max_abs_difference": 770.0,
+        "first_change": {
+          "row": 0,
+          "datetime": "2024-01-01 00:00:00+00:00",
+          "prefix_value": 26.0,
+          "extended_value": 27.0
+        }
+      },
+      "five_common_columns_exactly_equal_across_flags": true
+    },
+    {
+      "function": "limen.features.quantile_price_lines.quantile_price_lines",
+      "params": {
+        "max_duration_hours": 48,
+        "min_height_pct": 0.002,
+        "include_research_only": false,
+        "quantile_threshold": 0.8
+      },
+      "prefix_rows": 192,
+      "extended_rows": 384,
+      "rows_with_any_feature_change": 0,
+      "per_column": {
+        "hours_since_quantile_line": {
+          "changed_rows": 0,
+          "max_abs_difference": 0.0,
+          "first_change": null
+        },
+        "quantile_line_density_48h": {
+          "changed_rows": 0,
+          "max_abs_difference": 0.0,
+          "first_change": null
+        },
+        "quantile_momentum_6h": {
+          "changed_rows": 0,
+          "max_abs_difference": 0.0,
+          "first_change": null
+        },
+        "avg_quantile_height_24h": {
+          "changed_rows": 0,
+          "max_abs_difference": 0.0,
+          "first_change": null
+        },
+        "quantile_direction_bias": {
+          "changed_rows": 0,
+          "max_abs_difference": 0.0,
+          "first_change": null
+        }
+      },
+      "research_only_column": null,
+      "five_common_columns_exactly_equal_across_flags": true
+    },
+    {
+      "function": "limen.features.quantile_price_lines.quantile_price_lines",
+      "params": {
+        "max_duration_hours": 48,
+        "min_height_pct": 0.002,
+        "include_research_only": true,
+        "quantile_threshold": 0.8
+      },
+      "prefix_rows": 192,
+      "extended_rows": 384,
+      "rows_with_any_feature_change": 0,
+      "per_column": {
+        "hours_since_quantile_line": {
+          "changed_rows": 0,
+          "max_abs_difference": 0.0,
+          "first_change": null
+        },
+        "quantile_line_density_48h": {
+          "changed_rows": 0,
+          "max_abs_difference": 0.0,
+          "first_change": null
+        },
+        "quantile_momentum_6h": {
+          "changed_rows": 0,
+          "max_abs_difference": 0.0,
+          "first_change": null
+        },
+        "avg_quantile_height_24h": {
+          "changed_rows": 0,
+          "max_abs_difference": 0.0,
+          "first_change": null
+        },
+        "quantile_direction_bias": {
+          "changed_rows": 0,
+          "max_abs_difference": 0.0,
+          "first_change": null
+        }
+      },
+      "research_only_column": {
+        "changed_rows": 150,
+        "max_abs_difference": 616.0,
+        "first_change": {
+          "row": 3,
+          "datetime": "2024-01-01 03:00:00+00:00",
+          "prefix_value": 102.0,
+          "extended_value": 103.0
+        }
+      },
+      "five_common_columns_exactly_equal_across_flags": true
+    }
+  ],
+  "asof_rows": [
+    {
+      "quantile": 0.0,
+      "cutoff": 1,
+      "prefix_last": {
+        "hours_since_quantile_line": 48.0,
+        "quantile_line_density_48h": 0.0,
+        "quantile_momentum_6h": 0.0,
+        "avg_quantile_height_24h": 0.0,
+        "quantile_direction_bias": 0.0
+      },
+      "full_historical": {
+        "hours_since_quantile_line": 48.0,
+        "quantile_line_density_48h": 0.0,
+        "quantile_momentum_6h": 0.0,
+        "avg_quantile_height_24h": 0.0,
+        "quantile_direction_bias": 0.0
+      }
+    },
+    {
+      "quantile": 0.0,
+      "cutoff": 2,
+      "prefix_last": {
+        "hours_since_quantile_line": 0.0,
+        "quantile_line_density_48h": 1.0,
+        "quantile_momentum_6h": 0.0032567216234024973,
+        "avg_quantile_height_24h": 0.0032567216234024973,
+        "quantile_direction_bias": 1.0
+      },
+      "full_historical": {
+        "hours_since_quantile_line": 0.0,
+        "quantile_line_density_48h": 1.0,
+        "quantile_momentum_6h": 0.0032567216234024973,
+        "avg_quantile_height_24h": 0.0032567216234024973,
+        "quantile_direction_bias": 1.0
+      }
+    },
+    {
+      "quantile": 0.0,
+      "cutoff": 17,
+      "prefix_last": {
+        "hours_since_quantile_line": 0.0,
+        "quantile_line_density_48h": 95.0,
+        "quantile_momentum_6h": 0.36699759975855,
+        "avg_quantile_height_24h": 0.005510601797770762,
+        "quantile_direction_bias": 0.7291585865942836
+      },
+      "full_historical": {
+        "hours_since_quantile_line": 0.0,
+        "quantile_line_density_48h": 95.0,
+        "quantile_momentum_6h": 0.36699759975855,
+        "avg_quantile_height_24h": 0.005510601797770762,
+        "quantile_direction_bias": 0.7291585865942836
+      }
+    },
+    {
+      "quantile": 0.0,
+      "cutoff": 19,
+      "prefix_last": {
+        "hours_since_quantile_line": 0.0,
+        "quantile_line_density_48h": 129.0,
+        "quantile_momentum_6h": 0.5940520522432123,
+        "avg_quantile_height_24h": 0.006573709598796069,
+        "quantile_direction_bias": 0.832799534828036
+      },
+      "full_historical": {
+        "hours_since_quantile_line": 0.0,
+        "quantile_line_density_48h": 129.0,
+        "quantile_momentum_6h": 0.5940520522432123,
+        "avg_quantile_height_24h": 0.006573709598796069,
+        "quantile_direction_bias": 0.832799534828036
+      }
+    },
+    {
+      "quantile": 0.0,
+      "cutoff": 48,
+      "prefix_last": {
+        "hours_since_quantile_line": 0.0,
+        "quantile_line_density_48h": 1038.0,
+        "quantile_momentum_6h": 7.603599613592241,
+        "avg_quantile_height_24h": 0.04225886753701229,
+        "quantile_direction_bias": 0.9321857591501093
+      },
+      "full_historical": {
+        "hours_since_quantile_line": 0.0,
+        "quantile_line_density_48h": 1038.0,
+        "quantile_momentum_6h": 7.603599613592241,
+        "avg_quantile_height_24h": 0.04225886753701229,
+        "quantile_direction_bias": 0.9321857591501093
+      }
+    },
+    {
+      "quantile": 0.0,
+      "cutoff": 96,
+      "prefix_last": {
+        "hours_since_quantile_line": 0.0,
+        "quantile_line_density_48h": 2143.0,
+        "quantile_momentum_6h": 3.2967541315651037,
+        "avg_quantile_height_24h": 0.030257092859218904,
+        "quantile_direction_bias": -0.4530208947104916
+      },
+      "full_historical": {
+        "hours_since_quantile_line": 0.0,
+        "quantile_line_density_48h": 2143.0,
+        "quantile_momentum_6h": 3.2967541315651037,
+        "avg_quantile_height_24h": 0.030257092859218904,
+        "quantile_direction_bias": -0.4530208947104916
+      }
+    },
+    {
+      "quantile": 0.0,
+      "cutoff": 192,
+      "prefix_last": {
+        "hours_since_quantile_line": 0.0,
+        "quantile_line_density_48h": 1884.0,
+        "quantile_momentum_6h": 18.920047133061136,
+        "avg_quantile_height_24h": 0.026983516909993222,
+        "quantile_direction_bias": 0.8028915705907995
+      },
+      "full_historical": {
+        "hours_since_quantile_line": 0.0,
+        "quantile_line_density_48h": 1884.0,
+        "quantile_momentum_6h": 18.920047133061136,
+        "avg_quantile_height_24h": 0.026983516909993222,
+        "quantile_direction_bias": 0.8028915705907995
+      }
+    },
+    {
+      "quantile": 0.0,
+      "cutoff": 384,
+      "prefix_last": {
+        "hours_since_quantile_line": 0.0,
+        "quantile_line_density_48h": 1908.0,
+        "quantile_momentum_6h": 3.482629404222092,
+        "avg_quantile_height_24h": 0.009216330191164936,
+        "quantile_direction_bias": 0.7609992011100377
+      },
+      "full_historical": {
+        "hours_since_quantile_line": 0.0,
+        "quantile_line_density_48h": 1908.0,
+        "quantile_momentum_6h": 3.482629404222092,
+        "avg_quantile_height_24h": 0.009216330191164936,
+        "quantile_direction_bias": 0.7609992011100377
+      }
+    },
+    {
+      "quantile": 0.7,
+      "cutoff": 1,
+      "prefix_last": {
+        "hours_since_quantile_line": 48.0,
+        "quantile_line_density_48h": 0.0,
+        "quantile_momentum_6h": 0.0,
+        "avg_quantile_height_24h": 0.0,
+        "quantile_direction_bias": 0.0
+      },
+      "full_historical": {
+        "hours_since_quantile_line": 48.0,
+        "quantile_line_density_48h": 0.0,
+        "quantile_momentum_6h": 0.0,
+        "avg_quantile_height_24h": 0.0,
+        "quantile_direction_bias": 0.0
+      }
+    },
+    {
+      "quantile": 0.7,
+      "cutoff": 2,
+      "prefix_last": {
+        "hours_since_quantile_line": 0.0,
+        "quantile_line_density_48h": 1.0,
+        "quantile_momentum_6h": 0.0032567216234024973,
+        "avg_quantile_height_24h": 0.0032567216234024973,
+        "quantile_direction_bias": 1.0
+      },
+      "full_historical": {
+        "hours_since_quantile_line": 0.0,
+        "quantile_line_density_48h": 1.0,
+        "quantile_momentum_6h": 0.0032567216234024973,
+        "avg_quantile_height_24h": 0.0032567216234024973,
+        "quantile_direction_bias": 1.0
+      }
+    },
+    {
+      "quantile": 0.7,
+      "cutoff": 17,
+      "prefix_last": {
+        "hours_since_quantile_line": 0.0,
+        "quantile_line_density_48h": 29.0,
+        "quantile_momentum_6h": 0.1927762325033199,
+        "avg_quantile_height_24h": 0.008720902706606718,
+        "quantile_direction_bias": 0.7211192755562116
+      },
+      "full_historical": {
+        "hours_since_quantile_line": 0.0,
+        "quantile_line_density_48h": 29.0,
+        "quantile_momentum_6h": 0.1927762325033199,
+        "avg_quantile_height_24h": 0.008720902706606718,
+        "quantile_direction_bias": 0.7211192755562116
+      }
+    },
+    {
+      "quantile": 0.7,
+      "cutoff": 19,
+      "prefix_last": {
+        "hours_since_quantile_line": 0.0,
+        "quantile_line_density_48h": 39.0,
+        "quantile_momentum_6h": 0.3577304333446454,
+        "avg_quantile_height_24h": 0.011102083706726778,
+        "quantile_direction_bias": 0.8371045954024406
+      },
+      "full_historical": {
+        "hours_since_quantile_line": 0.0,
+        "quantile_line_density_48h": 39.0,
+        "quantile_momentum_6h": 0.3577304333446454,
+        "avg_quantile_height_24h": 0.011102083706726778,
+        "quantile_direction_bias": 0.8371045954024406
+      }
+    },
+    {
+      "quantile": 0.7,
+      "cutoff": 48,
+      "prefix_last": {
+        "hours_since_quantile_line": 0.0,
+        "quantile_line_density_48h": 312.0,
+        "quantile_momentum_6h": 1.3610856850731496,
+        "avg_quantile_height_24h": 0.05852324694382354,
+        "quantile_direction_bias": 0.9284823576557908
+      },
+      "full_historical": {
+        "hours_since_quantile_line": 0.0,
+        "quantile_line_density_48h": 312.0,
+        "quantile_momentum_6h": 1.3610856850731496,
+        "avg_quantile_height_24h": 0.05852324694382354,
+        "quantile_direction_bias": 0.9284823576557908
+      }
+    },
+    {
+      "quantile": 0.7,
+      "cutoff": 96,
+      "prefix_last": {
+        "hours_since_quantile_line": 12.0,
+        "quantile_line_density_48h": 565.0,
+        "quantile_momentum_6h": 0.0,
+        "avg_quantile_height_24h": 0.05537490212481278,
+        "quantile_direction_bias": -1.0
+      },
+      "full_historical": {
+        "hours_since_quantile_line": 12.0,
+        "quantile_line_density_48h": 565.0,
+        "quantile_momentum_6h": 0.0,
+        "avg_quantile_height_24h": 0.05537490212481278,
+        "quantile_direction_bias": -1.0
+      }
+    },
+    {
+      "quantile": 0.7,
+      "cutoff": 192,
+      "prefix_last": {
+        "hours_since_quantile_line": 0.0,
+        "quantile_line_density_48h": 339.0,
+        "quantile_momentum_6h": 18.73214564061285,
+        "avg_quantile_height_24h": 0.05841969828693309,
+        "quantile_direction_bias": 1.0
+      },
+      "full_historical": {
+        "hours_since_quantile_line": 0.0,
+        "quantile_line_density_48h": 339.0,
+        "quantile_momentum_6h": 18.73214564061285,
+        "avg_quantile_height_24h": 0.05841969828693309,
+        "quantile_direction_bias": 1.0
+      }
+    },
+    {
+      "quantile": 0.7,
+      "cutoff": 384,
+      "prefix_last": {
+        "hours_since_quantile_line": 1.0,
+        "quantile_line_density_48h": 24.0,
+        "quantile_momentum_6h": 0.3468252196771995,
+        "avg_quantile_height_24h": 0.031434885780450374,
+        "quantile_direction_bias": 1.0
+      },
+      "full_historical": {
+        "hours_since_quantile_line": 1.0,
+        "quantile_line_density_48h": 24.0,
+        "quantile_momentum_6h": 0.3468252196771995,
+        "avg_quantile_height_24h": 0.031434885780450374,
+        "quantile_direction_bias": 1.0
+      }
+    },
+    {
+      "quantile": 0.8,
+      "cutoff": 1,
+      "prefix_last": {
+        "hours_since_quantile_line": 48.0,
+        "quantile_line_density_48h": 0.0,
+        "quantile_momentum_6h": 0.0,
+        "avg_quantile_height_24h": 0.0,
+        "quantile_direction_bias": 0.0
+      },
+      "full_historical": {
+        "hours_since_quantile_line": 48.0,
+        "quantile_line_density_48h": 0.0,
+        "quantile_momentum_6h": 0.0,
+        "avg_quantile_height_24h": 0.0,
+        "quantile_direction_bias": 0.0
+      }
+    },
+    {
+      "quantile": 0.8,
+      "cutoff": 2,
+      "prefix_last": {
+        "hours_since_quantile_line": 0.0,
+        "quantile_line_density_48h": 1.0,
+        "quantile_momentum_6h": 0.0032567216234024973,
+        "avg_quantile_height_24h": 0.0032567216234024973,
+        "quantile_direction_bias": 1.0
+      },
+      "full_historical": {
+        "hours_since_quantile_line": 0.0,
+        "quantile_line_density_48h": 1.0,
+        "quantile_momentum_6h": 0.0032567216234024973,
+        "avg_quantile_height_24h": 0.0032567216234024973,
+        "quantile_direction_bias": 1.0
+      }
+    },
+    {
+      "quantile": 0.8,
+      "cutoff": 17,
+      "prefix_last": {
+        "hours_since_quantile_line": 0.0,
+        "quantile_line_density_48h": 19.0,
+        "quantile_momentum_6h": 0.1484435713078452,
+        "avg_quantile_height_24h": 0.009578245033944558,
+        "quantile_direction_bias": 0.7395327757672299
+      },
+      "full_historical": {
+        "hours_since_quantile_line": 0.0,
+        "quantile_line_density_48h": 19.0,
+        "quantile_momentum_6h": 0.1484435713078452,
+        "avg_quantile_height_24h": 0.009578245033944558,
+        "quantile_direction_bias": 0.7395327757672299
+      }
+    },
+    {
+      "quantile": 0.8,
+      "cutoff": 19,
+      "prefix_last": {
+        "hours_since_quantile_line": 0.0,
+        "quantile_line_density_48h": 26.0,
+        "quantile_momentum_6h": 0.26455686969320596,
+        "avg_quantile_height_24h": 0.012297085871639333,
+        "quantile_direction_bias": 0.8517423635722258
+      },
+      "full_historical": {
+        "hours_since_quantile_line": 0.0,
+        "quantile_line_density_48h": 26.0,
+        "quantile_momentum_6h": 0.26455686969320596,
+        "avg_quantile_height_24h": 0.012297085871639333,
+        "quantile_direction_bias": 0.8517423635722258
+      }
+    },
+    {
+      "quantile": 0.8,
+      "cutoff": 48,
+      "prefix_last": {
+        "hours_since_quantile_line": 0.0,
+        "quantile_line_density_48h": 208.0,
+        "quantile_momentum_6h": 0.3213000488794162,
+        "avg_quantile_height_24h": 0.06097938806093468,
+        "quantile_direction_bias": 0.9242882936306265
+      },
+      "full_historical": {
+        "hours_since_quantile_line": 0.0,
+        "quantile_line_density_48h": 208.0,
+        "quantile_momentum_6h": 0.3213000488794162,
+        "avg_quantile_height_24h": 0.06097938806093468,
+        "quantile_direction_bias": 0.9242882936306265
+      }
+    },
+    {
+      "quantile": 0.8,
+      "cutoff": 96,
+      "prefix_last": {
+        "hours_since_quantile_line": 13.0,
+        "quantile_line_density_48h": 359.0,
+        "quantile_momentum_6h": 0.0,
+        "avg_quantile_height_24h": 0.05763012634007126,
+        "quantile_direction_bias": -1.0
+      },
+      "full_historical": {
+        "hours_since_quantile_line": 13.0,
+        "quantile_line_density_48h": 359.0,
+        "quantile_momentum_6h": 0.0,
+        "avg_quantile_height_24h": 0.05763012634007126,
+        "quantile_direction_bias": -1.0
+      }
+    },
+    {
+      "quantile": 0.8,
+      "cutoff": 192,
+      "prefix_last": {
+        "hours_since_quantile_line": 0.0,
+        "quantile_line_density_48h": 252.0,
+        "quantile_momentum_6h": 16.703039832943357,
+        "avg_quantile_height_24h": 0.06628190409898158,
+        "quantile_direction_bias": 1.0
+      },
+      "full_historical": {
+        "hours_since_quantile_line": 0.0,
+        "quantile_line_density_48h": 252.0,
+        "quantile_momentum_6h": 16.703039832943357,
+        "avg_quantile_height_24h": 0.06628190409898158,
+        "quantile_direction_bias": 1.0
+      }
+    },
+    {
+      "quantile": 0.8,
+      "cutoff": 384,
+      "prefix_last": {
+        "hours_since_quantile_line": 48.0,
+        "quantile_line_density_48h": 0.0,
+        "quantile_momentum_6h": 0.0,
+        "avg_quantile_height_24h": 0.0,
+        "quantile_direction_bias": 0.0
+      },
+      "full_historical": {
+        "hours_since_quantile_line": 48.0,
+        "quantile_line_density_48h": 0.0,
+        "quantile_momentum_6h": 0.0,
+        "avg_quantile_height_24h": 0.0,
+        "quantile_direction_bias": 0.0
+      }
+    },
+    {
+      "quantile": 1.0,
+      "cutoff": 1,
+      "prefix_last": {
+        "hours_since_quantile_line": 48.0,
+        "quantile_line_density_48h": 0.0,
+        "quantile_momentum_6h": 0.0,
+        "avg_quantile_height_24h": 0.0,
+        "quantile_direction_bias": 0.0
+      },
+      "full_historical": {
+        "hours_since_quantile_line": 48.0,
+        "quantile_line_density_48h": 0.0,
+        "quantile_momentum_6h": 0.0,
+        "avg_quantile_height_24h": 0.0,
+        "quantile_direction_bias": 0.0
+      }
+    },
+    {
+      "quantile": 1.0,
+      "cutoff": 2,
+      "prefix_last": {
+        "hours_since_quantile_line": 0.0,
+        "quantile_line_density_48h": 1.0,
+        "quantile_momentum_6h": 0.0032567216234024973,
+        "avg_quantile_height_24h": 0.0032567216234024973,
+        "quantile_direction_bias": 1.0
+      },
+      "full_historical": {
+        "hours_since_quantile_line": 0.0,
+        "quantile_line_density_48h": 1.0,
+        "quantile_momentum_6h": 0.0032567216234024973,
+        "avg_quantile_height_24h": 0.0032567216234024973,
+        "quantile_direction_bias": 1.0
+      }
+    },
+    {
+      "quantile": 1.0,
+      "cutoff": 17,
+      "prefix_last": {
+        "hours_since_quantile_line": 1.0,
+        "quantile_line_density_48h": 2.0,
+        "quantile_momentum_6h": 0.012999949566711777,
+        "avg_quantile_height_24h": 0.010953369430505712,
+        "quantile_direction_bias": 0.1868448014276074
+      },
+      "full_historical": {
+        "hours_since_quantile_line": 1.0,
+        "quantile_line_density_48h": 2.0,
+        "quantile_momentum_6h": 0.012999949566711777,
+        "avg_quantile_height_24h": 0.010953369430505712,
+        "quantile_direction_bias": 0.1868448014276074
+      }
+    },
+    {
+      "quantile": 1.0,
+      "cutoff": 19,
+      "prefix_last": {
+        "hours_since_quantile_line": 0.0,
+        "quantile_line_density_48h": 2.0,
+        "quantile_momentum_6h": 0.020767386284181788,
+        "avg_quantile_height_24h": 0.014837087789240717,
+        "quantile_direction_bias": 0.39969423778981034
+      },
+      "full_historical": {
+        "hours_since_quantile_line": 0.0,
+        "quantile_line_density_48h": 2.0,
+        "quantile_momentum_6h": 0.020767386284181788,
+        "avg_quantile_height_24h": 0.014837087789240717,
+        "quantile_direction_bias": 0.39969423778981034
+      }
+    },
+    {
+      "quantile": 1.0,
+      "cutoff": 48,
+      "prefix_last": {
+        "hours_since_quantile_line": 3.0,
+        "quantile_line_density_48h": 2.0,
+        "quantile_momentum_6h": -0.021220167266544812,
+        "avg_quantile_height_24h": 0.052345287086603035,
+        "quantile_direction_bias": 0.5946116938581891
+      },
+      "full_historical": {
+        "hours_since_quantile_line": 3.0,
+        "quantile_line_density_48h": 2.0,
+        "quantile_momentum_6h": -0.021220167266544812,
+        "avg_quantile_height_24h": 0.052345287086603035,
+        "quantile_direction_bias": 0.5946116938581891
+      }
+    },
+    {
+      "quantile": 1.0,
+      "cutoff": 96,
+      "prefix_last": {
+        "hours_since_quantile_line": 33.0,
+        "quantile_line_density_48h": 1.0,
+        "quantile_momentum_6h": 0.0,
+        "avg_quantile_height_24h": 0.0,
+        "quantile_direction_bias": 0.0
+      },
+      "full_historical": {
+        "hours_since_quantile_line": 33.0,
+        "quantile_line_density_48h": 1.0,
+        "quantile_momentum_6h": 0.0,
+        "avg_quantile_height_24h": 0.0,
+        "quantile_direction_bias": 0.0
+      }
+    },
+    {
+      "quantile": 1.0,
+      "cutoff": 192,
+      "prefix_last": {
+        "hours_since_quantile_line": 2.0,
+        "quantile_line_density_48h": 1.0,
+        "quantile_momentum_6h": 0.08531766206475344,
+        "avg_quantile_height_24h": 0.08531766206475344,
+        "quantile_direction_bias": 1.0
+      },
+      "full_historical": {
+        "hours_since_quantile_line": 2.0,
+        "quantile_line_density_48h": 1.0,
+        "quantile_momentum_6h": 0.08531766206475344,
+        "avg_quantile_height_24h": 0.08531766206475344,
+        "quantile_direction_bias": 1.0
+      }
+    },
+    {
+      "quantile": 1.0,
+      "cutoff": 384,
+      "prefix_last": {
+        "hours_since_quantile_line": 48.0,
+        "quantile_line_density_48h": 0.0,
+        "quantile_momentum_6h": 0.0,
+        "avg_quantile_height_24h": 0.0,
+        "quantile_direction_bias": 0.0
+      },
+      "full_historical": {
+        "hours_since_quantile_line": 48.0,
+        "quantile_line_density_48h": 0.0,
+        "quantile_momentum_6h": 0.0,
+        "avg_quantile_height_24h": 0.0,
+        "quantile_direction_bias": 0.0
+      }
+    }
+  ],
+  "limits": [
+    "No population defect-rate estimate.",
+    "Research-only active span count is reported separately.",
+    "No claim of general feature causality or split/fitting isolation."
+  ]
+}

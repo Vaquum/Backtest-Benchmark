@@ -1,0 +1,25 @@
+{
+  "run_directory": "/workspace/scratch/008a76ec4981/limen-rerun-output/native-suite",
+  "admission": "not_admitted_incomplete_native_environment_attempt",
+  "controller_interrupted_after_stall": true,
+  "interruption_signal": "SIGINT sent only to observed test controller",
+  "completed_profile": {
+    "started_at": "2026-10-29T11:13:54.552Z",
+    "finished_at": "2026-10-29T11:22:30.823Z",
+    "duration_seconds": 516.271124,
+    "test_count": 7277,
+    "passed_count": 7250,
+    "failed_count": 24,
+    "skipped_count": 3
+  },
+  "parallel_receipts_reconciled": false,
+  "failure_classes": {
+    "proxy_errors": 23,
+    "other_failures": 1
+  },
+  "observed_environment_limits": [
+    "Default execution environment lacks /proc",
+    "Public HuggingFace recorded-data fetches rejected by default network policy"
+  ],
+  "resolution": "Rerun unchanged full suite with approved native process and public-network facilities; preserve this attempt without treating its coverage as complete."
+}

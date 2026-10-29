@@ -1,0 +1,83 @@
+{
+  "checked_at_utc": "2026-10-29T11:44:20.040839+00:00",
+  "parsed_files": {
+    "json": 271,
+    "python": 80
+  },
+  "criterion_counts": {
+    "performance": 12,
+    "academic": 15,
+    "safety": 15
+  },
+  "consolidated_links_checked": true,
+  "pinned_source_links": [
+    {
+      "url": "https://github.com/Vaquum/Limen/blob/25e47866422d007da55cb19625344183599ba671/limen/features/quantile_price_lines.py#L98-L148",
+      "valid": true
+    },
+    {
+      "url": "https://github.com/Vaquum/Limen/blob/25e47866422d007da55cb19625344183599ba671/limen/experiment/_fold_preparation.py#L35-L127",
+      "valid": true
+    },
+    {
+      "url": "https://github.com/Vaquum/Limen/blob/25e47866422d007da55cb19625344183599ba671/limen/experiment/_validation_decisions.py#L38-L102",
+      "valid": true
+    },
+    {
+      "url": "https://github.com/Vaquum/Limen/blob/25e47866422d007da55cb19625344183599ba671/limen/experiment/_validation_calibration.py#L59-L121",
+      "valid": true
+    },
+    {
+      "url": "https://github.com/Vaquum/Limen/blob/25e47866422d007da55cb19625344183599ba671/limen/experiment/_objective_optimizer.py#L40-L77",
+      "valid": true
+    },
+    {
+      "url": "https://github.com/Vaquum/Limen/blob/25e47866422d007da55cb19625344183599ba671/limen/experiment/manifest_core.py#L1012-L1068",
+      "valid": true
+    },
+    {
+      "url": "https://github.com/Vaquum/Limen/blob/25e47866422d007da55cb19625344183599ba671/limen/experiment/_holdout_composition.py#L78-L118",
+      "valid": true
+    },
+    {
+      "url": "https://github.com/Vaquum/Limen/blob/25e47866422d007da55cb19625344183599ba671/limen/experiment/_result_fields.py#L14-L71",
+      "valid": true
+    },
+    {
+      "url": "https://github.com/Vaquum/Limen/blob/25e47866422d007da55cb19625344183599ba671/limen/experiment/_round_errors.py#L31-L100",
+      "valid": true
+    },
+    {
+      "url": "https://github.com/Vaquum/Limen/blob/25e47866422d007da55cb19625344183599ba671/limen/experiment/_holdout_freeze.py#L163-L239",
+      "valid": true
+    },
+    {
+      "url": "https://github.com/Vaquum/Limen/blob/25e47866422d007da55cb19625344183599ba671/limen/experiment/_resolve_trade_policy.py#L151-L188",
+      "valid": true
+    },
+    {
+      "url": "https://github.com/Vaquum/Limen/blob/25e47866422d007da55cb19625344183599ba671/limen/backtest/_cost_history.py#L127-L184",
+      "valid": true
+    },
+    {
+      "url": "https://github.com/Vaquum/Limen/blob/25e47866422d007da55cb19625344183599ba671/limen/backtest/_cost_comparison.py#L198-L242",
+      "valid": true
+    },
+    {
+      "url": "https://github.com/Vaquum/Limen/blob/25e47866422d007da55cb19625344183599ba671/limen/backtest/_cost_statistics.py#L107-L195",
+      "valid": true
+    },
+    {
+      "url": "https://github.com/Vaquum/Limen/blob/25e47866422d007da55cb19625344183599ba671/limen/sfd/reference_architecture/__init__.py",
+      "valid": true
+    }
+  ],
+  "tracked_source_clean": true,
+  "material_review_correction": {
+    "receipt": "academic/consolidated-review.json",
+    "resolved": true,
+    "resolution": "Distinguished outer raw-data splitting before feature construction from precomputed raw features at inner-fold preparation."
+  },
+  "errors": [],
+  "scope": "Structural/evidence integrity validation only. No new engine tests or performance samples."
+}

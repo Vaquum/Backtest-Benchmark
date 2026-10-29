@@ -1,0 +1,40 @@
+{
+  "scope": "Documentation syntax, linked artifact presence and existing preparation-only receipts; no dependency installation, engine run or additional timing.",
+  "reproduce_sha256": "606c8fce2a29ec2afc6192f328dc2cd1afc23c8ebf6dc05e46c662747a9c8501",
+  "bash_blocks_checked": [
+    {
+      "bash_block": 1,
+      "exit_code": 0,
+      "stderr": ""
+    },
+    {
+      "bash_block": 2,
+      "exit_code": 0,
+      "stderr": ""
+    },
+    {
+      "bash_block": 3,
+      "exit_code": 0,
+      "stderr": ""
+    },
+    {
+      "bash_block": 4,
+      "exit_code": 0,
+      "stderr": ""
+    },
+    {
+      "bash_block": 5,
+      "exit_code": 0,
+      "stderr": ""
+    },
+    {
+      "bash_block": 6,
+      "exit_code": 0,
+      "stderr": ""
+    }
+  ],
+  "linked_artifacts_missing": [],
+  "probe_relocation_preparation_check": "academic/probe-portability-check.json",
+  "paired_check": "academic/paired-report-independent-check.json",
+  "new_platform_installation_executed": false
+}

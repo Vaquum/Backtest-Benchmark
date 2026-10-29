@@ -1,0 +1,294 @@
+{
+  "source_commit": "25e47866422d007da55cb19625344183599ba671",
+  "run_id": 40757971723,
+  "run_url": "https://github.com/Vaquum/Limen/actions/runs/40757971723",
+  "evidence_kind": "Retrieved upstream execution evidence; separate from local reproduction",
+  "jobs": [
+    {
+      "id": 123069151321,
+      "name": "PR Checks Tests",
+      "status": "completed",
+      "conclusion": "success",
+      "run_id": 40757971723,
+      "logs_url": null,
+      "steps": [
+        {
+          "name": "Set up job",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 1
+        },
+        {
+          "name": "Run actions/checkout@f43a0e5ff2bd294095638e18286ca9a3d1956744",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 2
+        },
+        {
+          "name": "Set up Python",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 3
+        },
+        {
+          "name": "Install limen package (and deps)",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 4
+        },
+        {
+          "name": "Verify coverage backend contract",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 5
+        },
+        {
+          "name": "Run limen tests with coverage",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 6
+        },
+        {
+          "name": "Publish runtime summary",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 7
+        },
+        {
+          "name": "Record validation artifact identity",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 8
+        },
+        {
+          "name": "Upload coverage artifact",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 9
+        },
+        {
+          "name": "Upload runtime artifact",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 10
+        },
+        {
+          "name": "Post Set up Python",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 19
+        },
+        {
+          "name": "Post Run actions/checkout@f43a0e5ff2bd294095638e18286ca9a3d1956744",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 20
+        },
+        {
+          "name": "Complete job",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 21
+        }
+      ]
+    },
+    {
+      "id": 123072800007,
+      "name": "PR Checks Coverage",
+      "status": "completed",
+      "conclusion": "success",
+      "run_id": 40757971723,
+      "logs_url": null,
+      "steps": [
+        {
+          "name": "Set up job",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 1
+        },
+        {
+          "name": "Run actions/checkout@f43a0e5ff2bd294095638e18286ca9a3d1956744",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 2
+        },
+        {
+          "name": "Set up Python",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 3
+        },
+        {
+          "name": "Install coverage",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 4
+        },
+        {
+          "name": "Require coverage artifact identity",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 5
+        },
+        {
+          "name": "Download coverage artifact",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 6
+        },
+        {
+          "name": "Verify coverage artifact identity",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 7
+        },
+        {
+          "name": "Restore coverage data",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 8
+        },
+        {
+          "name": "Enforce package coverage floor",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 9
+        },
+        {
+          "name": "Post Set up Python",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 17
+        },
+        {
+          "name": "Post Run actions/checkout@f43a0e5ff2bd294095638e18286ca9a3d1956744",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 18
+        },
+        {
+          "name": "Complete job",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 19
+        }
+      ]
+    },
+    {
+      "id": 123072800107,
+      "name": "PR Checks Runtime",
+      "status": "completed",
+      "conclusion": "failure",
+      "run_id": 40757971723,
+      "logs_url": null,
+      "steps": [
+        {
+          "name": "Set up job",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 1
+        },
+        {
+          "name": "Run actions/checkout@f43a0e5ff2bd294095638e18286ca9a3d1956744",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 2
+        },
+        {
+          "name": "Set up Python",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 3
+        },
+        {
+          "name": "Require runtime artifact identity",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 4
+        },
+        {
+          "name": "Download runtime artifact",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 5
+        },
+        {
+          "name": "Verify runtime artifact identity",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 6
+        },
+        {
+          "name": "Skip runtime enforcement after upstream failure",
+          "status": "completed",
+          "conclusion": "skipped",
+          "number": 7
+        },
+        {
+          "name": "Enforce suite runtime budget",
+          "status": "completed",
+          "conclusion": "failure",
+          "number": 8
+        },
+        {
+          "name": "Post Set up Python",
+          "status": "completed",
+          "conclusion": "skipped",
+          "number": 15
+        },
+        {
+          "name": "Post Run actions/checkout@f43a0e5ff2bd294095638e18286ca9a3d1956744",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 16
+        },
+        {
+          "name": "Complete job",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 17
+        }
+      ]
+    },
+    {
+      "id": 123072803029,
+      "name": "Publish Coverage Comment",
+      "status": "completed",
+      "conclusion": "skipped",
+      "run_id": 40757971723,
+      "logs_url": null,
+      "steps": null
+    }
+  ],
+  "logs": [
+    {
+      "job_id": 123072800107,
+      "selected_log_lines": [
+        "2026-10-28T20:11:55.5731344Z Runtime budget exceeded: 293.049s > 280.000s (over by 13.049s)",
+        "2026-10-28T20:11:55.5744219Z - Total runtime: `4m 53.049s`",
+        "2026-10-28T20:11:55.5745733Z - Passed: `7388`",
+        "2026-10-28T20:11:55.5746128Z - Failed: `0`",
+        "2026-10-28T20:11:55.5746449Z - Skipped: `3`",
+        "2026-10-28T20:11:55.5746782Z - Budget status: `FAIL`",
+        "2026-10-28T20:11:55.5747207Z - Budget ceiling: `4m 40.000s`"
+      ]
+    },
+    {
+      "job_id": 123069151321,
+      "selected_log_lines": [
+        "2026-10-28T20:11:29.8998455Z 2026-10-28 20:11:29,899 - INFO - Test suite runtime: 4m 53.049s across 7391 tests (7388 passed, 0 failed, 3 skipped)",
+        "2026-10-28T20:11:29.9096796Z SKIPPED [1] tests/test_xgboost_research.py:178: requires an explicit CUDA integration environment",
+        "2026-10-28T20:11:29.9098106Z SKIPPED [1] tests/test_tabpfn.py:18: Set LIMEN_RUN_TABPFN_MODEL_TEST=1 for the real TabPFN CPU test",
+        "2026-10-28T20:11:29.9099100Z SKIPPED [1] tests/test_tabpfn.py:63: Set LIMEN_RUN_TABPFN_MODEL_TEST=1 for the real TabPFN CPU test",
+        "2026-10-28T20:11:29.9099921Z ================= 7388 passed, 3 skipped in 291.35s (0:04:51) ==================",
+        "2026-10-28T20:11:33.5763935Z TOTAL                                                       32875   1739    95%",
+        "2026-10-28T20:11:34.2238424Z - Total runtime: `4m 53.049s`",
+        "2026-10-28T20:11:34.2239227Z - Passed: `7388`",
+        "2026-10-28T20:11:34.2239547Z - Failed: `0`",
+        "2026-10-28T20:11:34.2239842Z - Skipped: `3`",
+        "2026-10-28T20:11:34.2240160Z - Budget status: `FAIL`",
+        "2026-10-28T20:11:34.2240508Z - Budget ceiling: `4m 40.000s`"
+      ]
+    }
+  ]
+}

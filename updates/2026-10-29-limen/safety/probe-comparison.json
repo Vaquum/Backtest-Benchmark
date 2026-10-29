@@ -1,0 +1,309 @@
+{
+  "schema": "limen-safety-boundary-comparison/v1",
+  "checks_passed": true,
+  "execution": "Read-only interpretation of retained JSON; no Limen imports, engine runs, or native tests.",
+  "sources": {
+    "baseline": "29837e666604eee74a2ac94f328fb9803724342a",
+    "latest": "25e47866422d007da55cb19625344183599ba671"
+  },
+  "files": {
+    "baseline-boundary-results.json": "6d08f4a69331c5351108166d287f2793bb9d6668b43edced8436ec025b66bae1",
+    "latest-boundary-results.json": "2762111cb93d0225ecb903bedc4038ec56634ce32ffc9b188d2a5b9301271921",
+    "boundary_probes.py": "bca9fdff1f306bacca48b4ed8d0bdf4344cf7741aecb0b6e2845e4e5f41aa9e6",
+    "interpret_boundary_probes.py": "e95a178ffadc0e0022a5bcffde2f19dc6586d87741359b214d4fa248ca8a1033"
+  },
+  "fixture": {
+    "path": "tests/fixtures/spot_1h_20240101_20241231.parquet",
+    "sha256": "a634bbd4f3692fac7bc88512da588e7772f4bd1b749567606d5314e54d0adf72",
+    "used_rows": 8
+  },
+  "reported_dependency_versions_equal": true,
+  "templates": {
+    "baseline": "4e4343fed136f06db6b74cc70083f3f62afd40d72db32f25440c884522a26453",
+    "latest": "0d60636159dfc94544fb95b46d0fcc1bce6b57f99c8b5d4b954bb0ca441cc7a3"
+  },
+  "template_scope": "Each version's unmodified native rule_based.yaml passed validation first; config bytes differ between releases.",
+  "resolver": {
+    "baseline": "External re-export resolves, validates, and binds to the exact os.system object.",
+    "latest": "Lookup and binding raise ResolutionError; validator rejects the modified manifest.",
+    "positive_lookup_passed_both": true,
+    "escaped_callable_invoked": false,
+    "scope": "Callable identity and manifest admission only; no command executed, no Python sandbox claim."
+  },
+  "manifest_store": {
+    "results": {
+      "baseline": {
+        "checks": {
+          "full_uri": "returned",
+          "short_uri": "returned",
+          "commit_reuse": "returned"
+        },
+        "valid_idempotent_control": true,
+        "index_unchanged": false
+      },
+      "latest": {
+        "checks": {
+          "full_uri": "raised",
+          "short_uri": "raised",
+          "commit_reuse": "raised"
+        },
+        "valid_idempotent_control": true,
+        "index_unchanged": true
+      }
+    },
+    "scope": "Existing committed body changed while filename and lineage.id remain fixed; full URI, short URI, and idempotent reuse. Fork inspected separately, not exercised here."
+  },
+  "fractional_difference": {
+    "cases": {
+      "public_nan_d": {
+        "baseline": {
+          "method_result": {
+            "outcome": "raised",
+            "exception": "MemoryError",
+            "message": ""
+          },
+          "outer_process_outcome": "external_deadline",
+          "child_reaped": true
+        },
+        "latest": {
+          "method_result": {
+            "outcome": "raised",
+            "exception": "ValueError",
+            "message": "fractional_diff d must be finite"
+          },
+          "outer_process_outcome": "external_deadline",
+          "child_reaped": true
+        }
+      },
+      "public_nan_threshold": {
+        "baseline": {
+          "method_result": {
+            "outcome": "raised",
+            "exception": "MemoryError",
+            "message": ""
+          },
+          "outer_process_outcome": "external_deadline",
+          "child_reaped": true
+        },
+        "latest": {
+          "method_result": {
+            "outcome": "raised",
+            "exception": "ValueError",
+            "message": "fractional_diff threshold must be finite"
+          },
+          "outer_process_outcome": "external_deadline",
+          "child_reaped": true
+        }
+      },
+      "public_zero_nan_threshold": {
+        "baseline": {
+          "method_result": {
+            "outcome": "returned",
+            "result": 8
+          },
+          "outer_process_outcome": "external_deadline",
+          "child_reaped": true
+        },
+        "latest": {
+          "method_result": {
+            "outcome": "raised",
+            "exception": "ValueError",
+            "message": "fractional_diff threshold must be finite"
+          },
+          "outer_process_outcome": "external_deadline",
+          "child_reaped": true
+        }
+      },
+      "private_nan_d": {
+        "baseline": {
+          "method_result": {
+            "outcome": "raised",
+            "exception": "MemoryError",
+            "message": ""
+          },
+          "outer_process_outcome": "external_deadline",
+          "child_reaped": true
+        },
+        "latest": {
+          "method_result": {
+            "outcome": "raised",
+            "exception": "ValueError",
+            "message": "fractional_diff d must be finite and non-negative, got nan"
+          },
+          "outer_process_outcome": "external_deadline",
+          "child_reaped": true
+        }
+      },
+      "private_finite_overflow": {
+        "baseline": {
+          "method_result": {
+            "outcome": "raised",
+            "exception": "MemoryError",
+            "message": ""
+          },
+          "outer_process_outcome": "external_deadline",
+          "child_reaped": true
+        },
+        "latest": {
+          "method_result": {
+            "outcome": "raised",
+            "exception": "ValueError",
+            "message": "fractional_diff weight must be finite, got inf at index 2"
+          },
+          "outer_process_outcome": "external_deadline",
+          "child_reaped": true
+        }
+      }
+    },
+    "finite_formula_controls_passed_both": [
+      0.0,
+      1.0,
+      0.5
+    ],
+    "finite_formula_control_threshold": 0.2,
+    "interpretation": "The child flushed a complete method receipt before outer termination in every case. Baseline hit the external address-space cap in four cases and accepted an invalid threshold on its identity path. Latest raised its explicit ValueError in all five cases.",
+    "harness_limitation": "The 0.35-second communicate deadline includes interpreter shutdown. Every raw case has outer outcome external_deadline and was killed/reaped after printing its method result. These outer labels and elapsed values are not method-latency measurements and do not demonstrate a latest-method hang. Shutdown was not separately timed.",
+    "scope": "Specific nonfinite admission and recurrence-overflow guards; no universal bound on legitimate finite workloads, no performance comparison."
+  },
+  "compiled_sensor": {
+    "cases": {
+      "valid": {
+        "baseline": {
+          "single_reason": null,
+          "batch_reason_counts": {
+            "success": 8
+          },
+          "datetime_alignment_preserved": true
+        },
+        "latest": {
+          "single_reason": null,
+          "batch_reason_counts": {
+            "success": 8
+          },
+          "datetime_alignment_preserved": true
+        }
+      },
+      "valid_missing_probability": {
+        "baseline": {
+          "single_reason": null,
+          "batch_reason_counts": {
+            "success": 8
+          },
+          "datetime_alignment_preserved": true
+        },
+        "latest": {
+          "single_reason": null,
+          "batch_reason_counts": {
+            "success": 8
+          },
+          "datetime_alignment_preserved": true
+        }
+      },
+      "nan_prediction": {
+        "baseline": {
+          "single_reason": null,
+          "batch_reason_counts": {
+            "success": 8
+          },
+          "datetime_alignment_preserved": true
+        },
+        "latest": {
+          "single_reason": "sensor-error",
+          "batch_reason_counts": {
+            "sensor-error": 8
+          },
+          "datetime_alignment_preserved": true
+        }
+      },
+      "infinite_prediction": {
+        "baseline": {
+          "single_reason": null,
+          "batch_reason_counts": {
+            "success": 8
+          },
+          "datetime_alignment_preserved": true
+        },
+        "latest": {
+          "single_reason": "sensor-error",
+          "batch_reason_counts": {
+            "sensor-error": 8
+          },
+          "datetime_alignment_preserved": true
+        }
+      },
+      "nan_probability": {
+        "baseline": {
+          "single_reason": null,
+          "batch_reason_counts": {
+            "success": 8
+          },
+          "datetime_alignment_preserved": true
+        },
+        "latest": {
+          "single_reason": "sensor-error",
+          "batch_reason_counts": {
+            "sensor-error": 8
+          },
+          "datetime_alignment_preserved": true
+        }
+      },
+      "high_probability": {
+        "baseline": {
+          "single_reason": null,
+          "batch_reason_counts": {
+            "success": 8
+          },
+          "datetime_alignment_preserved": true
+        },
+        "latest": {
+          "single_reason": "sensor-error",
+          "batch_reason_counts": {
+            "sensor-error": 8
+          },
+          "datetime_alignment_preserved": true
+        }
+      },
+      "boolean_prediction": {
+        "baseline": {
+          "single_reason": null,
+          "batch_reason_counts": {
+            "success": 8
+          },
+          "datetime_alignment_preserved": true
+        },
+        "latest": {
+          "single_reason": "sensor-error",
+          "batch_reason_counts": {
+            "sensor-error": 8
+          },
+          "datetime_alignment_preserved": true
+        }
+      },
+      "boolean_probability": {
+        "baseline": {
+          "single_reason": null,
+          "batch_reason_counts": {
+            "success": 8
+          },
+          "datetime_alignment_preserved": true
+        },
+        "latest": {
+          "single_reason": "sensor-error",
+          "batch_reason_counts": {
+            "sensor-error": 8
+          },
+          "datetime_alignment_preserved": true
+        }
+      }
+    },
+    "invalid_cases": 6,
+    "invalid_batch_rows_per_case": 8,
+    "positive_cases": 2,
+    "scope": "Public Sensor.predict and Sensor.predict_all with native MLManifest preparation and explicit invalid-output canaries. No model fit, learned forecasts, or economic outcome claim. Raw results retain all single outputs, all batch reasons, and the last full batch output."
+  },
+  "execution_notes": [
+    "Initial default-sandbox invocations failed during child setup because /proc/self/statm was unavailable, before the FFD call/ready handshake and before any result file was committed. This is a harness environment limitation, not a Limen source failure.",
+    "Retained native-runtime invocations completed with exit 0; exact source and fixture admission were rechecked afterward.",
+    "Root-owned full native-suite results are separate evidence and are not inferred from these focused probes."
+  ]
+}

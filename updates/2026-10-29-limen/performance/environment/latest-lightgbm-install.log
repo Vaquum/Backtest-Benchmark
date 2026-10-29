@@ -1,0 +1,4 @@
+Using Python 3.12.14 environment at: .work/envs-latest/limen
+Resolved 1 package in 2ms
+Installed 1 package in 2ms
+ + lightgbm==4.6.0

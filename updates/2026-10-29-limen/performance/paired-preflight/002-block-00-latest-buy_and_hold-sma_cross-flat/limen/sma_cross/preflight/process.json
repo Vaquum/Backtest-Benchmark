@@ -1,0 +1,39 @@
+{
+  "command": [
+    "/workspace/scratch/008a76ec4981/Backtest-Benchmark/.work/envs-latest/limen/bin/python",
+    "-m",
+    "bench.worker",
+    "--engine",
+    "limen",
+    "--prepared",
+    "/workspace/scratch/008a76ec4981/Backtest-Benchmark/updates/2026-10-29-limen/performance/paired-preflight/002-block-00-latest-buy_and_hold-sma_cross-flat/prepared-sma_cross.npz",
+    "--prepared-sha256",
+    "a4e10483b2e46a229340eaad6cbe38af40824a63b7ce39d11dee57b0045f5c5a",
+    "--contract",
+    "/workspace/scratch/008a76ec4981/Backtest-Benchmark/updates/2026-10-29-limen/performance/paired-preflight/002-block-00-latest-buy_and_hold-sma_cross-flat/contract.json",
+    "--environment-manifest",
+    "/workspace/scratch/008a76ec4981/Backtest-Benchmark/updates/2026-10-29-limen/performance/runner/latest/.work/manifests/limen.json",
+    "--output",
+    "/workspace/scratch/008a76ec4981/Backtest-Benchmark/updates/2026-10-29-limen/performance/paired-preflight/002-block-00-latest-buy_and_hold-sma_cross-flat/limen/sma_cross/preflight/result",
+    "--benchmark-code-manifest",
+    "/workspace/scratch/008a76ec4981/Backtest-Benchmark/updates/2026-10-29-limen/performance/paired-preflight/002-block-00-latest-buy_and_hold-sma_cross-flat/benchmark-code.json",
+    "--mode",
+    "preflight",
+    "--warm-repeats",
+    "9",
+    "--diagnostic-core"
+  ],
+  "returncode": 0,
+  "timed_out": false,
+  "process_wall_ms": 887.165528,
+  "launch_to_ready_ms": 32.889699,
+  "launch_to_first_valid_ms": 801.71806,
+  "parent_observed_events_ms": {
+    "ready": 32.889699,
+    "first_valid": 801.71806,
+    "complete": 824.246394
+  },
+  "stdout_path": "/workspace/scratch/008a76ec4981/Backtest-Benchmark/updates/2026-10-29-limen/performance/paired-preflight/002-block-00-latest-buy_and_hold-sma_cross-flat/limen/sma_cross/preflight/stdout.log",
+  "startup_scope": "Parent observed process launch to worker ready event, before scientific/engine imports; IPC scheduling is included",
+  "first_valid_scope": "Process launch through source verification, imports, input load, independent oracle, first engine call, extraction and successful parity"
+}

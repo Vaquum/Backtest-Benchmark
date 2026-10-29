@@ -1,0 +1,458 @@
+{
+  "label": "baseline",
+  "source_sha": "29837e666604eee74a2ac94f328fb9803724342a",
+  "source_root": "/workspace/scratch/008a76ec4981/Limen-baseline",
+  "probe_sha256": "bca9fdff1f306bacca48b4ed8d0bdf4344cf7741aecb0b6e2845e4e5f41aa9e6",
+  "fixture_path": "tests/fixtures/spot_1h_20240101_20241231.parquet",
+  "fixture_sha256": "a634bbd4f3692fac7bc88512da588e7772f4bd1b749567606d5314e54d0adf72",
+  "python": "3.12.14 (main, Aug 25 2026, 14:00:49) [Clang 22.1.3 ]",
+  "executable": "/workspace/scratch/008a76ec4981/Backtest-Benchmark/.work/envs-baseline/limen/bin/python",
+  "dependencies": {
+    "numpy": "2.2.6",
+    "polars": "1.44.2",
+    "scikit-learn": "1.9.1",
+    "ruamel.yaml": "0.18.17"
+  },
+  "thread_environment": {
+    "OMP_NUM_THREADS": "1",
+    "OPENBLAS_NUM_THREADS": "1",
+    "MKL_NUM_THREADS": "1",
+    "VECLIB_MAXIMUM_THREADS": "1",
+    "NUMEXPR_NUM_THREADS": "1",
+    "BLIS_NUM_THREADS": "1",
+    "RAYON_NUM_THREADS": "1",
+    "POLARS_MAX_THREADS": "1"
+  },
+  "resolver": {
+    "template_sha256": "4e4343fed136f06db6b74cc70083f3f62afd40d72db32f25440c884522a26453",
+    "lookup": {
+      "outcome": "returned",
+      "result": {
+        "is_os_system": true
+      }
+    },
+    "allowed_lookup": {
+      "outcome": "returned",
+      "result": {
+        "callable": true
+      }
+    },
+    "modified_manifest_valid": true,
+    "binding": {
+      "outcome": "returned",
+      "result": {
+        "bound_is_os_system": true
+      }
+    },
+    "escaped_callable_invoked": false
+  },
+  "manifest_store": {
+    "template_sha256": "4e4343fed136f06db6b74cc70083f3f62afd40d72db32f25440c884522a26453",
+    "valid_idempotent_control": true,
+    "retained_filename_and_lineage_id": true,
+    "canonical_content_changed": true,
+    "full_uri": {
+      "outcome": "returned",
+      "result": "manifests/committed/f1b126a45144fa86493fd6b41aa9c127735bf78eedf9a3399dc1a879deebb260.yaml"
+    },
+    "short_uri": {
+      "outcome": "returned",
+      "result": "manifests/committed/f1b126a45144fa86493fd6b41aa9c127735bf78eedf9a3399dc1a879deebb260.yaml"
+    },
+    "commit_reuse": {
+      "outcome": "returned",
+      "result": [
+        "sha256:f1b126a45144fa86493fd6b41aa9c127735bf78eedf9a3399dc1a879deebb260",
+        true
+      ]
+    },
+    "stored_bytes_unchanged_after_checks": true,
+    "index_bytes_unchanged_after_checks": false,
+    "stored_mtime_unchanged_after_checks": true,
+    "index_mtime_unchanged_after_checks": false
+  },
+  "fractional_difference": {
+    "finite_recorded_controls": [
+      {
+        "d": 0.0,
+        "threshold": 0.2,
+        "matches_independent_short_formula": true
+      },
+      {
+        "d": 1.0,
+        "threshold": 0.2,
+        "matches_independent_short_formula": true
+      },
+      {
+        "d": 0.5,
+        "threshold": 0.2,
+        "matches_independent_short_formula": true
+      }
+    ],
+    "cases": [
+      {
+        "outcome": "external_deadline",
+        "returncode": -9,
+        "stdout_after_ready": "{\"outcome\": \"raised\", \"exception\": \"MemoryError\", \"message\": \"\"}\n",
+        "stderr": "",
+        "case": "public_nan_d",
+        "controls": {
+          "phase": "ready",
+          "address_space_limit_bytes": 1378353152,
+          "additional_virtual_bytes": 33554432
+        },
+        "execution_deadline_seconds": 0.35,
+        "elapsed_after_ready_seconds": 0.3684303379995981,
+        "child_reaped": true
+      },
+      {
+        "outcome": "external_deadline",
+        "returncode": -9,
+        "stdout_after_ready": "{\"outcome\": \"raised\", \"exception\": \"MemoryError\", \"message\": \"\"}\n",
+        "stderr": "",
+        "case": "public_nan_threshold",
+        "controls": {
+          "phase": "ready",
+          "address_space_limit_bytes": 1378242560,
+          "additional_virtual_bytes": 33554432
+        },
+        "execution_deadline_seconds": 0.35,
+        "elapsed_after_ready_seconds": 0.3683398129996931,
+        "child_reaped": true
+      },
+      {
+        "outcome": "external_deadline",
+        "returncode": -9,
+        "stdout_after_ready": "{\"outcome\": \"returned\", \"result\": 8}\n",
+        "stderr": "",
+        "case": "public_zero_nan_threshold",
+        "controls": {
+          "phase": "ready",
+          "address_space_limit_bytes": 1378267136,
+          "additional_virtual_bytes": 33554432
+        },
+        "execution_deadline_seconds": 0.35,
+        "elapsed_after_ready_seconds": 0.36489902999892365,
+        "child_reaped": true
+      },
+      {
+        "outcome": "external_deadline",
+        "returncode": -9,
+        "stdout_after_ready": "{\"outcome\": \"raised\", \"exception\": \"MemoryError\", \"message\": \"\"}\n",
+        "stderr": "",
+        "case": "private_nan_d",
+        "controls": {
+          "phase": "ready",
+          "address_space_limit_bytes": 1378242560,
+          "additional_virtual_bytes": 33554432
+        },
+        "execution_deadline_seconds": 0.35,
+        "elapsed_after_ready_seconds": 0.3643326210003579,
+        "child_reaped": true
+      },
+      {
+        "outcome": "external_deadline",
+        "returncode": -9,
+        "stdout_after_ready": "{\"outcome\": \"raised\", \"exception\": \"MemoryError\", \"message\": \"\"}\n",
+        "stderr": "",
+        "case": "private_finite_overflow",
+        "controls": {
+          "phase": "ready",
+          "address_space_limit_bytes": 1378320384,
+          "additional_virtual_bytes": 33554432
+        },
+        "execution_deadline_seconds": 0.35,
+        "elapsed_after_ready_seconds": 0.36158286099998804,
+        "child_reaped": true
+      }
+    ],
+    "scope": "Nonfinite admission and overflow termination only; no bound claimed for all finite workloads."
+  },
+  "compiled_sensor": {
+    "fixture_rows": 8,
+    "cases": [
+      {
+        "case": "valid",
+        "model_call_row_counts": [
+          8,
+          1
+        ],
+        "batch_rows": 8,
+        "batch_reasons": [
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null
+        ],
+        "single": {
+          "datetime": "2024-01-01T07:00:00+00:00",
+          "prediction": 1.0,
+          "probability": 0.5,
+          "reason": null,
+          "available_at_ns": null,
+          "trade_contract_digest": null
+        },
+        "last_batch": {
+          "datetime": "2024-01-01T07:00:00+00:00",
+          "prediction": 1.0,
+          "probability": 0.5,
+          "reason": null,
+          "available_at_ns": null,
+          "trade_contract_digest": null
+        },
+        "recorded_datetime_alignment_preserved": true
+      },
+      {
+        "case": "valid_missing_probability",
+        "model_call_row_counts": [
+          8,
+          1
+        ],
+        "batch_rows": 8,
+        "batch_reasons": [
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null
+        ],
+        "single": {
+          "datetime": "2024-01-01T07:00:00+00:00",
+          "prediction": 1.0,
+          "probability": null,
+          "reason": null,
+          "available_at_ns": null,
+          "trade_contract_digest": null
+        },
+        "last_batch": {
+          "datetime": "2024-01-01T07:00:00+00:00",
+          "prediction": 1.0,
+          "probability": null,
+          "reason": null,
+          "available_at_ns": null,
+          "trade_contract_digest": null
+        },
+        "recorded_datetime_alignment_preserved": true
+      },
+      {
+        "case": "nan_prediction",
+        "model_call_row_counts": [
+          8,
+          1
+        ],
+        "batch_rows": 8,
+        "batch_reasons": [
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null
+        ],
+        "single": {
+          "datetime": "2024-01-01T07:00:00+00:00",
+          "prediction": "NaN",
+          "probability": 0.5,
+          "reason": null,
+          "available_at_ns": null,
+          "trade_contract_digest": null
+        },
+        "last_batch": {
+          "datetime": "2024-01-01T07:00:00+00:00",
+          "prediction": "NaN",
+          "probability": 0.5,
+          "reason": null,
+          "available_at_ns": null,
+          "trade_contract_digest": null
+        },
+        "recorded_datetime_alignment_preserved": true
+      },
+      {
+        "case": "infinite_prediction",
+        "model_call_row_counts": [
+          8,
+          1
+        ],
+        "batch_rows": 8,
+        "batch_reasons": [
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null
+        ],
+        "single": {
+          "datetime": "2024-01-01T07:00:00+00:00",
+          "prediction": "+Infinity",
+          "probability": 0.5,
+          "reason": null,
+          "available_at_ns": null,
+          "trade_contract_digest": null
+        },
+        "last_batch": {
+          "datetime": "2024-01-01T07:00:00+00:00",
+          "prediction": "+Infinity",
+          "probability": 0.5,
+          "reason": null,
+          "available_at_ns": null,
+          "trade_contract_digest": null
+        },
+        "recorded_datetime_alignment_preserved": true
+      },
+      {
+        "case": "nan_probability",
+        "model_call_row_counts": [
+          8,
+          1
+        ],
+        "batch_rows": 8,
+        "batch_reasons": [
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null
+        ],
+        "single": {
+          "datetime": "2024-01-01T07:00:00+00:00",
+          "prediction": 1.0,
+          "probability": "NaN",
+          "reason": null,
+          "available_at_ns": null,
+          "trade_contract_digest": null
+        },
+        "last_batch": {
+          "datetime": "2024-01-01T07:00:00+00:00",
+          "prediction": 1.0,
+          "probability": "NaN",
+          "reason": null,
+          "available_at_ns": null,
+          "trade_contract_digest": null
+        },
+        "recorded_datetime_alignment_preserved": true
+      },
+      {
+        "case": "high_probability",
+        "model_call_row_counts": [
+          8,
+          1
+        ],
+        "batch_rows": 8,
+        "batch_reasons": [
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null
+        ],
+        "single": {
+          "datetime": "2024-01-01T07:00:00+00:00",
+          "prediction": 1.0,
+          "probability": 1.1,
+          "reason": null,
+          "available_at_ns": null,
+          "trade_contract_digest": null
+        },
+        "last_batch": {
+          "datetime": "2024-01-01T07:00:00+00:00",
+          "prediction": 1.0,
+          "probability": 1.1,
+          "reason": null,
+          "available_at_ns": null,
+          "trade_contract_digest": null
+        },
+        "recorded_datetime_alignment_preserved": true
+      },
+      {
+        "case": "boolean_prediction",
+        "model_call_row_counts": [
+          8,
+          1
+        ],
+        "batch_rows": 8,
+        "batch_reasons": [
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null
+        ],
+        "single": {
+          "datetime": "2024-01-01T07:00:00+00:00",
+          "prediction": true,
+          "probability": 0.5,
+          "reason": null,
+          "available_at_ns": null,
+          "trade_contract_digest": null
+        },
+        "last_batch": {
+          "datetime": "2024-01-01T07:00:00+00:00",
+          "prediction": true,
+          "probability": 0.5,
+          "reason": null,
+          "available_at_ns": null,
+          "trade_contract_digest": null
+        },
+        "recorded_datetime_alignment_preserved": true
+      },
+      {
+        "case": "boolean_probability",
+        "model_call_row_counts": [
+          8,
+          1
+        ],
+        "batch_rows": 8,
+        "batch_reasons": [
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null
+        ],
+        "single": {
+          "datetime": "2024-01-01T07:00:00+00:00",
+          "prediction": 1.0,
+          "probability": true,
+          "reason": null,
+          "available_at_ns": null,
+          "trade_contract_digest": null
+        },
+        "last_batch": {
+          "datetime": "2024-01-01T07:00:00+00:00",
+          "prediction": 1.0,
+          "probability": true,
+          "reason": null,
+          "available_at_ns": null,
+          "trade_contract_digest": null
+        },
+        "recorded_datetime_alignment_preserved": true
+      }
+    ],
+    "scope": "Actual compiled Sensor predict/predict_all with native MLManifest preparation; explicitly synthetic invalid-output canaries, not learned forecasts or evaluation outcomes. No model fitting or quality claim."
+  },
+  "source_and_fixture_rechecked_after": true
+}

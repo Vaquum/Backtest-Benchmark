@@ -1,0 +1,1161 @@
+{
+  "format": "tar.xz",
+  "archive": "binary-evidence.tar.xz",
+  "archive_bytes": 913240,
+  "archive_sha256": "768c8d6d71204b642000a7762688770b967069c5a2ff9e8ad2040a563e84b7bb",
+  "member_count": 230,
+  "uncompressed_bytes": 38022408,
+  "members": [
+    {
+      "path": "performance/native-campaign/01-baseline-factorized/fresh_fitted_preparation/round_data.jsonl.gz",
+      "bytes": 440812,
+      "sha256": "bbf9377688441cabd7b7b360105a151348ac1c2e237091f31448660923ecc7d5"
+    },
+    {
+      "path": "performance/native-campaign/01-baseline-factorized/fresh_fitted_preparation/round_market/3cbd69698d7623a68cdc8dda9ba2263cb3b02bb7e4f074e1d5d91ee181e88a58.json.gz",
+      "bytes": 7537,
+      "sha256": "3daab71ca568f14d5e8d7f7a07009ce05c373f3a68d33b142b1f2fa8c4d317a2"
+    },
+    {
+      "path": "performance/native-campaign/01-baseline-factorized/fresh_fitted_preparation/round_signals/11f66e54755fb146cdc87809d070307d7f2128504f4e71e95a125a23806db498.json.gz",
+      "bytes": 2181,
+      "sha256": "32f5be14171328e81730276e7fd5151a30f264fa7d6a808250fd890dc9062bc1"
+    },
+    {
+      "path": "performance/native-campaign/01-baseline-factorized/fresh_fitted_preparation/round_signals/29cf820cb4dc132c56a66a3a0986a3eb369008a967930d4c6825ba0a48a0f469.json.gz",
+      "bytes": 6459,
+      "sha256": "fc4ae57d39f39167d751da0031bda8b0dc58670a2eb5bdc1a1cb570f73aac63d"
+    },
+    {
+      "path": "performance/native-campaign/01-baseline-factorized/fresh_fitted_preparation/round_signals/2bf14e63b8dec3ba651cc6b995395216b0b90c989e872c4785b332e70169ecb6.json.gz",
+      "bytes": 5034,
+      "sha256": "871c4365a194ae4f5b8de3371de8c8f2fb9833e1b9c8ac1ef83627f7805cd001"
+    },
+    {
+      "path": "performance/native-campaign/01-baseline-factorized/fresh_fitted_preparation/round_signals/2ea2ba7c5932740643e95919f5dfe8add67bd2378935ffc2a2eea65635717504.json.gz",
+      "bytes": 6417,
+      "sha256": "33a899e81087971ebdb6585f5c673029f65a958f0b2cdeb380c83fb6c58d674b"
+    },
+    {
+      "path": "performance/native-campaign/01-baseline-factorized/fresh_fitted_preparation/round_signals/3876f40b66730b3f25d009e67bd4f78657df2500270982f4c9018acaeba12e5c.json.gz",
+      "bytes": 6109,
+      "sha256": "6f0930a741bc107d7987c523a8e9c0c9fb7352bb0d9671735ca2e40f7e29c6ee"
+    },
+    {
+      "path": "performance/native-campaign/01-baseline-factorized/fresh_fitted_preparation/round_signals/440008bf37575f460159a8fb3d39f3e380f6c4bcf0e77252b2a84497248d52fb.json.gz",
+      "bytes": 6443,
+      "sha256": "02eed46e6286b60a09d04f2247326cc34aa5f680ed635cb0524c78cac0421594"
+    },
+    {
+      "path": "performance/native-campaign/01-baseline-factorized/fresh_fitted_preparation/round_signals/4b878c87c296122d8480d00fe26b4f844ff58198d6bcbecbf511db849c2d481f.json.gz",
+      "bytes": 5770,
+      "sha256": "d43cd579aad6671c4a5d89021bb0c3a6b36703442023f089f7cc6f4363a6c5fe"
+    },
+    {
+      "path": "performance/native-campaign/01-baseline-factorized/fresh_fitted_preparation/round_signals/5edd5dbbafcbe534d9e32bb888b5b8a297ff6c177cedef6d7c5655474199af75.json.gz",
+      "bytes": 2129,
+      "sha256": "d6e0c9d3501bfe6475da2e27d0a629e0486880f3053c6ee085204ec06264f80c"
+    },
+    {
+      "path": "performance/native-campaign/01-baseline-factorized/fresh_fitted_preparation/round_signals/71c5463618b335cd202d9d3ed9b4c62bd9ff15649c99617221f11489baa243f0.json.gz",
+      "bytes": 6419,
+      "sha256": "ca58ce88c22e446e607aed86827209ad3e63566a4af2fbd36484b04ed14f1215"
+    },
+    {
+      "path": "performance/native-campaign/01-baseline-factorized/fresh_fitted_preparation/round_signals/8af261fde831f6cb92a6b4d358b73fca2dcb046de3c7bdb451e5594b38605eb1.json.gz",
+      "bytes": 2429,
+      "sha256": "797a1678b6df11dd8a7b40f2720ea48ad669cc25091df779085644aec7fed731"
+    },
+    {
+      "path": "performance/native-campaign/01-baseline-factorized/fresh_fitted_preparation/round_signals/9739ebdbefe38cf4f55afcc9e575f6c3583748096e076e1771e151d67f42fc6a.json.gz",
+      "bytes": 6200,
+      "sha256": "63363df309e1f308b9404837e86a8de40ae7d0f16417cff56197cb1f68a08057"
+    },
+    {
+      "path": "performance/native-campaign/01-baseline-factorized/fresh_fitted_preparation/round_signals/9844f7597556ffca1e1e39dd84aaf4f5469dc5bc7a1b9e5fd527268feafabb9b.json.gz",
+      "bytes": 1729,
+      "sha256": "5567faa656109196481f26c2c1f47a725c865fc92051890584d78ef7c0f70cf1"
+    },
+    {
+      "path": "performance/native-campaign/01-baseline-factorized/fresh_fitted_preparation/round_signals/a6db86ae2ac20254eb17e3b8be1724f9549986228c538fb4640d139ef140fbf4.json.gz",
+      "bytes": 1779,
+      "sha256": "41541f89bd01344a3dfd3eda0938d91682bcd27c7998c08383e4cd681be5163f"
+    },
+    {
+      "path": "performance/native-campaign/01-baseline-factorized/fresh_fitted_preparation/round_signals/bccf163f9c9a4c3feac14dd7bc013c3eaf2f14759ba73b8f02874f0b0700923a.json.gz",
+      "bytes": 2997,
+      "sha256": "07ff04d99437cceebcf231dd2023c9dcfbe945a2bf20899dbc51f1b10c308d4d"
+    },
+    {
+      "path": "performance/native-campaign/01-baseline-factorized/fresh_fitted_preparation/round_signals/bcf078ffb3dd9a414289ff68ad557d79fc163bc8c4da300691107a4ae5de9d7f.json.gz",
+      "bytes": 3013,
+      "sha256": "95aef3ff5f9a06a0c1b3d7cc9b91f8e883d60a31db740b967d3f68a35d2f23a3"
+    },
+    {
+      "path": "performance/native-campaign/01-baseline-factorized/fresh_fitted_preparation/round_signals/bec7a3dea5a58ac47cf76d1cfbe032341a6653e976a369915a3e23ab377fe163.json.gz",
+      "bytes": 6423,
+      "sha256": "9f99a27e72be0f7d8b59afbbc376855e40cc3d0b0343a4f90014857b12f2eb96"
+    },
+    {
+      "path": "performance/native-campaign/01-baseline-factorized/fresh_fitted_preparation/round_signals/c41da3453ff9c6dafc410b3ff6153e382836ba198fcafb16ffe93fb9d96acf35.json.gz",
+      "bytes": 4870,
+      "sha256": "02f4191bf099cafcf3743e62fb9990dd757e320ecd64981c1131b418491d40b5"
+    },
+    {
+      "path": "performance/native-campaign/01-baseline-factorized/fresh_fitted_preparation/round_signals/c8d7238b5d17a44e33e64087884ce0212b69e258318542e89172c59805c42491.json.gz",
+      "bytes": 4027,
+      "sha256": "c78d25f77bf4d38c75d45386ff6cc59c5a76e5f88feeb3d8ffb4f29531295137"
+    },
+    {
+      "path": "performance/native-campaign/01-baseline-factorized/fresh_fitted_preparation/round_signals/c9e34aa45585a0910c2b68a64b7dc0d4d378232fa09c3ac9246ed86eb9e6470e.json.gz",
+      "bytes": 4085,
+      "sha256": "735e53af1af96115260140bd9acf60ecd275bff4275f1e592df685aede99b342"
+    },
+    {
+      "path": "performance/native-campaign/01-baseline-factorized/fresh_fitted_preparation/round_signals/cc0967cc165d0ab2ed906655cc436bba1fe7e1099752aee6f29079f763b6bec9.json.gz",
+      "bytes": 5070,
+      "sha256": "f821738efa7c57dc347969dd5c19b9e8fda47e3bd4c1f54edf07a78798dc5d80"
+    },
+    {
+      "path": "performance/native-campaign/01-baseline-factorized/fresh_fitted_preparation/round_signals/d4987b01b81f87a6525c7cf6cc44aba2de50172fe0da2aab239023bcd4913331.json.gz",
+      "bytes": 2326,
+      "sha256": "abeffc27b100fe313033ba14d21c0ea41506b3285265a7a8247815aa889641fa"
+    },
+    {
+      "path": "performance/native-campaign/01-baseline-factorized/fresh_fitted_preparation/round_signals/e21693555cea215bbc33e854358a6b7f99b2de1902f4eaba2182bd7ce13e8b89.json.gz",
+      "bytes": 4280,
+      "sha256": "b1c222fdc274f874b84da0bfc073e832fc2c9ae2f431ebf0d8b3f28649465c47"
+    },
+    {
+      "path": "performance/native-campaign/01-baseline-factorized/fresh_fitted_preparation/round_signals/ea11c447b75c6751286d8312c536f654e0de390ce7e139e60cc665fb506621d9.json.gz",
+      "bytes": 6455,
+      "sha256": "7fd29af9f61f908a14c195861cc7becb4dad43322ddf34a5f43960442f7c00fa"
+    },
+    {
+      "path": "performance/native-campaign/01-baseline-factorized/fresh_fitted_preparation/round_signals/fd69b31c10479f880a41c1a48909f619ac4664c647c48a45e05eb122731b2e4e.json.gz",
+      "bytes": 4151,
+      "sha256": "7651ee3e39cca47b8dab13eb45d5c00e1544942acf51d8cb5a14aaa4e96c685e"
+    },
+    {
+      "path": "performance/native-campaign/01-baseline-factorized/reuse_fitted_preparation/round_data.jsonl.gz",
+      "bytes": 440812,
+      "sha256": "bbf9377688441cabd7b7b360105a151348ac1c2e237091f31448660923ecc7d5"
+    },
+    {
+      "path": "performance/native-campaign/01-baseline-factorized/reuse_fitted_preparation/round_market/3cbd69698d7623a68cdc8dda9ba2263cb3b02bb7e4f074e1d5d91ee181e88a58.json.gz",
+      "bytes": 7537,
+      "sha256": "3daab71ca568f14d5e8d7f7a07009ce05c373f3a68d33b142b1f2fa8c4d317a2"
+    },
+    {
+      "path": "performance/native-campaign/01-baseline-factorized/reuse_fitted_preparation/round_signals/11f66e54755fb146cdc87809d070307d7f2128504f4e71e95a125a23806db498.json.gz",
+      "bytes": 2181,
+      "sha256": "32f5be14171328e81730276e7fd5151a30f264fa7d6a808250fd890dc9062bc1"
+    },
+    {
+      "path": "performance/native-campaign/01-baseline-factorized/reuse_fitted_preparation/round_signals/29cf820cb4dc132c56a66a3a0986a3eb369008a967930d4c6825ba0a48a0f469.json.gz",
+      "bytes": 6459,
+      "sha256": "fc4ae57d39f39167d751da0031bda8b0dc58670a2eb5bdc1a1cb570f73aac63d"
+    },
+    {
+      "path": "performance/native-campaign/01-baseline-factorized/reuse_fitted_preparation/round_signals/2bf14e63b8dec3ba651cc6b995395216b0b90c989e872c4785b332e70169ecb6.json.gz",
+      "bytes": 5034,
+      "sha256": "871c4365a194ae4f5b8de3371de8c8f2fb9833e1b9c8ac1ef83627f7805cd001"
+    },
+    {
+      "path": "performance/native-campaign/01-baseline-factorized/reuse_fitted_preparation/round_signals/2ea2ba7c5932740643e95919f5dfe8add67bd2378935ffc2a2eea65635717504.json.gz",
+      "bytes": 6417,
+      "sha256": "33a899e81087971ebdb6585f5c673029f65a958f0b2cdeb380c83fb6c58d674b"
+    },
+    {
+      "path": "performance/native-campaign/01-baseline-factorized/reuse_fitted_preparation/round_signals/3876f40b66730b3f25d009e67bd4f78657df2500270982f4c9018acaeba12e5c.json.gz",
+      "bytes": 6109,
+      "sha256": "6f0930a741bc107d7987c523a8e9c0c9fb7352bb0d9671735ca2e40f7e29c6ee"
+    },
+    {
+      "path": "performance/native-campaign/01-baseline-factorized/reuse_fitted_preparation/round_signals/440008bf37575f460159a8fb3d39f3e380f6c4bcf0e77252b2a84497248d52fb.json.gz",
+      "bytes": 6443,
+      "sha256": "02eed46e6286b60a09d04f2247326cc34aa5f680ed635cb0524c78cac0421594"
+    },
+    {
+      "path": "performance/native-campaign/01-baseline-factorized/reuse_fitted_preparation/round_signals/4b878c87c296122d8480d00fe26b4f844ff58198d6bcbecbf511db849c2d481f.json.gz",
+      "bytes": 5770,
+      "sha256": "d43cd579aad6671c4a5d89021bb0c3a6b36703442023f089f7cc6f4363a6c5fe"
+    },
+    {
+      "path": "performance/native-campaign/01-baseline-factorized/reuse_fitted_preparation/round_signals/5edd5dbbafcbe534d9e32bb888b5b8a297ff6c177cedef6d7c5655474199af75.json.gz",
+      "bytes": 2129,
+      "sha256": "d6e0c9d3501bfe6475da2e27d0a629e0486880f3053c6ee085204ec06264f80c"
+    },
+    {
+      "path": "performance/native-campaign/01-baseline-factorized/reuse_fitted_preparation/round_signals/71c5463618b335cd202d9d3ed9b4c62bd9ff15649c99617221f11489baa243f0.json.gz",
+      "bytes": 6419,
+      "sha256": "ca58ce88c22e446e607aed86827209ad3e63566a4af2fbd36484b04ed14f1215"
+    },
+    {
+      "path": "performance/native-campaign/01-baseline-factorized/reuse_fitted_preparation/round_signals/8af261fde831f6cb92a6b4d358b73fca2dcb046de3c7bdb451e5594b38605eb1.json.gz",
+      "bytes": 2429,
+      "sha256": "797a1678b6df11dd8a7b40f2720ea48ad669cc25091df779085644aec7fed731"
+    },
+    {
+      "path": "performance/native-campaign/01-baseline-factorized/reuse_fitted_preparation/round_signals/9739ebdbefe38cf4f55afcc9e575f6c3583748096e076e1771e151d67f42fc6a.json.gz",
+      "bytes": 6200,
+      "sha256": "63363df309e1f308b9404837e86a8de40ae7d0f16417cff56197cb1f68a08057"
+    },
+    {
+      "path": "performance/native-campaign/01-baseline-factorized/reuse_fitted_preparation/round_signals/9844f7597556ffca1e1e39dd84aaf4f5469dc5bc7a1b9e5fd527268feafabb9b.json.gz",
+      "bytes": 1729,
+      "sha256": "5567faa656109196481f26c2c1f47a725c865fc92051890584d78ef7c0f70cf1"
+    },
+    {
+      "path": "performance/native-campaign/01-baseline-factorized/reuse_fitted_preparation/round_signals/a6db86ae2ac20254eb17e3b8be1724f9549986228c538fb4640d139ef140fbf4.json.gz",
+      "bytes": 1779,
+      "sha256": "41541f89bd01344a3dfd3eda0938d91682bcd27c7998c08383e4cd681be5163f"
+    },
+    {
+      "path": "performance/native-campaign/01-baseline-factorized/reuse_fitted_preparation/round_signals/bccf163f9c9a4c3feac14dd7bc013c3eaf2f14759ba73b8f02874f0b0700923a.json.gz",
+      "bytes": 2997,
+      "sha256": "07ff04d99437cceebcf231dd2023c9dcfbe945a2bf20899dbc51f1b10c308d4d"
+    },
+    {
+      "path": "performance/native-campaign/01-baseline-factorized/reuse_fitted_preparation/round_signals/bcf078ffb3dd9a414289ff68ad557d79fc163bc8c4da300691107a4ae5de9d7f.json.gz",
+      "bytes": 3013,
+      "sha256": "95aef3ff5f9a06a0c1b3d7cc9b91f8e883d60a31db740b967d3f68a35d2f23a3"
+    },
+    {
+      "path": "performance/native-campaign/01-baseline-factorized/reuse_fitted_preparation/round_signals/bec7a3dea5a58ac47cf76d1cfbe032341a6653e976a369915a3e23ab377fe163.json.gz",
+      "bytes": 6423,
+      "sha256": "9f99a27e72be0f7d8b59afbbc376855e40cc3d0b0343a4f90014857b12f2eb96"
+    },
+    {
+      "path": "performance/native-campaign/01-baseline-factorized/reuse_fitted_preparation/round_signals/c41da3453ff9c6dafc410b3ff6153e382836ba198fcafb16ffe93fb9d96acf35.json.gz",
+      "bytes": 4870,
+      "sha256": "02f4191bf099cafcf3743e62fb9990dd757e320ecd64981c1131b418491d40b5"
+    },
+    {
+      "path": "performance/native-campaign/01-baseline-factorized/reuse_fitted_preparation/round_signals/c8d7238b5d17a44e33e64087884ce0212b69e258318542e89172c59805c42491.json.gz",
+      "bytes": 4027,
+      "sha256": "c78d25f77bf4d38c75d45386ff6cc59c5a76e5f88feeb3d8ffb4f29531295137"
+    },
+    {
+      "path": "performance/native-campaign/01-baseline-factorized/reuse_fitted_preparation/round_signals/c9e34aa45585a0910c2b68a64b7dc0d4d378232fa09c3ac9246ed86eb9e6470e.json.gz",
+      "bytes": 4085,
+      "sha256": "735e53af1af96115260140bd9acf60ecd275bff4275f1e592df685aede99b342"
+    },
+    {
+      "path": "performance/native-campaign/01-baseline-factorized/reuse_fitted_preparation/round_signals/cc0967cc165d0ab2ed906655cc436bba1fe7e1099752aee6f29079f763b6bec9.json.gz",
+      "bytes": 5070,
+      "sha256": "f821738efa7c57dc347969dd5c19b9e8fda47e3bd4c1f54edf07a78798dc5d80"
+    },
+    {
+      "path": "performance/native-campaign/01-baseline-factorized/reuse_fitted_preparation/round_signals/d4987b01b81f87a6525c7cf6cc44aba2de50172fe0da2aab239023bcd4913331.json.gz",
+      "bytes": 2326,
+      "sha256": "abeffc27b100fe313033ba14d21c0ea41506b3285265a7a8247815aa889641fa"
+    },
+    {
+      "path": "performance/native-campaign/01-baseline-factorized/reuse_fitted_preparation/round_signals/e21693555cea215bbc33e854358a6b7f99b2de1902f4eaba2182bd7ce13e8b89.json.gz",
+      "bytes": 4280,
+      "sha256": "b1c222fdc274f874b84da0bfc073e832fc2c9ae2f431ebf0d8b3f28649465c47"
+    },
+    {
+      "path": "performance/native-campaign/01-baseline-factorized/reuse_fitted_preparation/round_signals/ea11c447b75c6751286d8312c536f654e0de390ce7e139e60cc665fb506621d9.json.gz",
+      "bytes": 6455,
+      "sha256": "7fd29af9f61f908a14c195861cc7becb4dad43322ddf34a5f43960442f7c00fa"
+    },
+    {
+      "path": "performance/native-campaign/01-baseline-factorized/reuse_fitted_preparation/round_signals/fd69b31c10479f880a41c1a48909f619ac4664c647c48a45e05eb122731b2e4e.json.gz",
+      "bytes": 4151,
+      "sha256": "7651ee3e39cca47b8dab13eb45d5c00e1544942acf51d8cb5a14aaa4e96c685e"
+    },
+    {
+      "path": "performance/native-campaign/02-latest-factorized/fresh_fitted_preparation/round_data.jsonl.gz",
+      "bytes": 440812,
+      "sha256": "bbf9377688441cabd7b7b360105a151348ac1c2e237091f31448660923ecc7d5"
+    },
+    {
+      "path": "performance/native-campaign/02-latest-factorized/fresh_fitted_preparation/round_market/3cbd69698d7623a68cdc8dda9ba2263cb3b02bb7e4f074e1d5d91ee181e88a58.json.gz",
+      "bytes": 7537,
+      "sha256": "3daab71ca568f14d5e8d7f7a07009ce05c373f3a68d33b142b1f2fa8c4d317a2"
+    },
+    {
+      "path": "performance/native-campaign/02-latest-factorized/fresh_fitted_preparation/round_signals/11f66e54755fb146cdc87809d070307d7f2128504f4e71e95a125a23806db498.json.gz",
+      "bytes": 2181,
+      "sha256": "32f5be14171328e81730276e7fd5151a30f264fa7d6a808250fd890dc9062bc1"
+    },
+    {
+      "path": "performance/native-campaign/02-latest-factorized/fresh_fitted_preparation/round_signals/29cf820cb4dc132c56a66a3a0986a3eb369008a967930d4c6825ba0a48a0f469.json.gz",
+      "bytes": 6459,
+      "sha256": "fc4ae57d39f39167d751da0031bda8b0dc58670a2eb5bdc1a1cb570f73aac63d"
+    },
+    {
+      "path": "performance/native-campaign/02-latest-factorized/fresh_fitted_preparation/round_signals/2bf14e63b8dec3ba651cc6b995395216b0b90c989e872c4785b332e70169ecb6.json.gz",
+      "bytes": 5034,
+      "sha256": "871c4365a194ae4f5b8de3371de8c8f2fb9833e1b9c8ac1ef83627f7805cd001"
+    },
+    {
+      "path": "performance/native-campaign/02-latest-factorized/fresh_fitted_preparation/round_signals/2ea2ba7c5932740643e95919f5dfe8add67bd2378935ffc2a2eea65635717504.json.gz",
+      "bytes": 6417,
+      "sha256": "33a899e81087971ebdb6585f5c673029f65a958f0b2cdeb380c83fb6c58d674b"
+    },
+    {
+      "path": "performance/native-campaign/02-latest-factorized/fresh_fitted_preparation/round_signals/3876f40b66730b3f25d009e67bd4f78657df2500270982f4c9018acaeba12e5c.json.gz",
+      "bytes": 6109,
+      "sha256": "6f0930a741bc107d7987c523a8e9c0c9fb7352bb0d9671735ca2e40f7e29c6ee"
+    },
+    {
+      "path": "performance/native-campaign/02-latest-factorized/fresh_fitted_preparation/round_signals/440008bf37575f460159a8fb3d39f3e380f6c4bcf0e77252b2a84497248d52fb.json.gz",
+      "bytes": 6443,
+      "sha256": "02eed46e6286b60a09d04f2247326cc34aa5f680ed635cb0524c78cac0421594"
+    },
+    {
+      "path": "performance/native-campaign/02-latest-factorized/fresh_fitted_preparation/round_signals/4b878c87c296122d8480d00fe26b4f844ff58198d6bcbecbf511db849c2d481f.json.gz",
+      "bytes": 5770,
+      "sha256": "d43cd579aad6671c4a5d89021bb0c3a6b36703442023f089f7cc6f4363a6c5fe"
+    },
+    {
+      "path": "performance/native-campaign/02-latest-factorized/fresh_fitted_preparation/round_signals/5edd5dbbafcbe534d9e32bb888b5b8a297ff6c177cedef6d7c5655474199af75.json.gz",
+      "bytes": 2129,
+      "sha256": "d6e0c9d3501bfe6475da2e27d0a629e0486880f3053c6ee085204ec06264f80c"
+    },
+    {
+      "path": "performance/native-campaign/02-latest-factorized/fresh_fitted_preparation/round_signals/71c5463618b335cd202d9d3ed9b4c62bd9ff15649c99617221f11489baa243f0.json.gz",
+      "bytes": 6419,
+      "sha256": "ca58ce88c22e446e607aed86827209ad3e63566a4af2fbd36484b04ed14f1215"
+    },
+    {
+      "path": "performance/native-campaign/02-latest-factorized/fresh_fitted_preparation/round_signals/8af261fde831f6cb92a6b4d358b73fca2dcb046de3c7bdb451e5594b38605eb1.json.gz",
+      "bytes": 2429,
+      "sha256": "797a1678b6df11dd8a7b40f2720ea48ad669cc25091df779085644aec7fed731"
+    },
+    {
+      "path": "performance/native-campaign/02-latest-factorized/fresh_fitted_preparation/round_signals/9739ebdbefe38cf4f55afcc9e575f6c3583748096e076e1771e151d67f42fc6a.json.gz",
+      "bytes": 6200,
+      "sha256": "63363df309e1f308b9404837e86a8de40ae7d0f16417cff56197cb1f68a08057"
+    },
+    {
+      "path": "performance/native-campaign/02-latest-factorized/fresh_fitted_preparation/round_signals/9844f7597556ffca1e1e39dd84aaf4f5469dc5bc7a1b9e5fd527268feafabb9b.json.gz",
+      "bytes": 1729,
+      "sha256": "5567faa656109196481f26c2c1f47a725c865fc92051890584d78ef7c0f70cf1"
+    },
+    {
+      "path": "performance/native-campaign/02-latest-factorized/fresh_fitted_preparation/round_signals/a6db86ae2ac20254eb17e3b8be1724f9549986228c538fb4640d139ef140fbf4.json.gz",
+      "bytes": 1779,
+      "sha256": "41541f89bd01344a3dfd3eda0938d91682bcd27c7998c08383e4cd681be5163f"
+    },
+    {
+      "path": "performance/native-campaign/02-latest-factorized/fresh_fitted_preparation/round_signals/bccf163f9c9a4c3feac14dd7bc013c3eaf2f14759ba73b8f02874f0b0700923a.json.gz",
+      "bytes": 2997,
+      "sha256": "07ff04d99437cceebcf231dd2023c9dcfbe945a2bf20899dbc51f1b10c308d4d"
+    },
+    {
+      "path": "performance/native-campaign/02-latest-factorized/fresh_fitted_preparation/round_signals/bcf078ffb3dd9a414289ff68ad557d79fc163bc8c4da300691107a4ae5de9d7f.json.gz",
+      "bytes": 3013,
+      "sha256": "95aef3ff5f9a06a0c1b3d7cc9b91f8e883d60a31db740b967d3f68a35d2f23a3"
+    },
+    {
+      "path": "performance/native-campaign/02-latest-factorized/fresh_fitted_preparation/round_signals/bec7a3dea5a58ac47cf76d1cfbe032341a6653e976a369915a3e23ab377fe163.json.gz",
+      "bytes": 6423,
+      "sha256": "9f99a27e72be0f7d8b59afbbc376855e40cc3d0b0343a4f90014857b12f2eb96"
+    },
+    {
+      "path": "performance/native-campaign/02-latest-factorized/fresh_fitted_preparation/round_signals/c41da3453ff9c6dafc410b3ff6153e382836ba198fcafb16ffe93fb9d96acf35.json.gz",
+      "bytes": 4870,
+      "sha256": "02f4191bf099cafcf3743e62fb9990dd757e320ecd64981c1131b418491d40b5"
+    },
+    {
+      "path": "performance/native-campaign/02-latest-factorized/fresh_fitted_preparation/round_signals/c8d7238b5d17a44e33e64087884ce0212b69e258318542e89172c59805c42491.json.gz",
+      "bytes": 4027,
+      "sha256": "c78d25f77bf4d38c75d45386ff6cc59c5a76e5f88feeb3d8ffb4f29531295137"
+    },
+    {
+      "path": "performance/native-campaign/02-latest-factorized/fresh_fitted_preparation/round_signals/c9e34aa45585a0910c2b68a64b7dc0d4d378232fa09c3ac9246ed86eb9e6470e.json.gz",
+      "bytes": 4085,
+      "sha256": "735e53af1af96115260140bd9acf60ecd275bff4275f1e592df685aede99b342"
+    },
+    {
+      "path": "performance/native-campaign/02-latest-factorized/fresh_fitted_preparation/round_signals/cc0967cc165d0ab2ed906655cc436bba1fe7e1099752aee6f29079f763b6bec9.json.gz",
+      "bytes": 5070,
+      "sha256": "f821738efa7c57dc347969dd5c19b9e8fda47e3bd4c1f54edf07a78798dc5d80"
+    },
+    {
+      "path": "performance/native-campaign/02-latest-factorized/fresh_fitted_preparation/round_signals/d4987b01b81f87a6525c7cf6cc44aba2de50172fe0da2aab239023bcd4913331.json.gz",
+      "bytes": 2326,
+      "sha256": "abeffc27b100fe313033ba14d21c0ea41506b3285265a7a8247815aa889641fa"
+    },
+    {
+      "path": "performance/native-campaign/02-latest-factorized/fresh_fitted_preparation/round_signals/e21693555cea215bbc33e854358a6b7f99b2de1902f4eaba2182bd7ce13e8b89.json.gz",
+      "bytes": 4280,
+      "sha256": "b1c222fdc274f874b84da0bfc073e832fc2c9ae2f431ebf0d8b3f28649465c47"
+    },
+    {
+      "path": "performance/native-campaign/02-latest-factorized/fresh_fitted_preparation/round_signals/ea11c447b75c6751286d8312c536f654e0de390ce7e139e60cc665fb506621d9.json.gz",
+      "bytes": 6455,
+      "sha256": "7fd29af9f61f908a14c195861cc7becb4dad43322ddf34a5f43960442f7c00fa"
+    },
+    {
+      "path": "performance/native-campaign/02-latest-factorized/fresh_fitted_preparation/round_signals/fd69b31c10479f880a41c1a48909f619ac4664c647c48a45e05eb122731b2e4e.json.gz",
+      "bytes": 4151,
+      "sha256": "7651ee3e39cca47b8dab13eb45d5c00e1544942acf51d8cb5a14aaa4e96c685e"
+    },
+    {
+      "path": "performance/native-campaign/02-latest-factorized/reuse_fitted_preparation/round_data.jsonl.gz",
+      "bytes": 440812,
+      "sha256": "bbf9377688441cabd7b7b360105a151348ac1c2e237091f31448660923ecc7d5"
+    },
+    {
+      "path": "performance/native-campaign/02-latest-factorized/reuse_fitted_preparation/round_market/3cbd69698d7623a68cdc8dda9ba2263cb3b02bb7e4f074e1d5d91ee181e88a58.json.gz",
+      "bytes": 7537,
+      "sha256": "3daab71ca568f14d5e8d7f7a07009ce05c373f3a68d33b142b1f2fa8c4d317a2"
+    },
+    {
+      "path": "performance/native-campaign/02-latest-factorized/reuse_fitted_preparation/round_signals/11f66e54755fb146cdc87809d070307d7f2128504f4e71e95a125a23806db498.json.gz",
+      "bytes": 2181,
+      "sha256": "32f5be14171328e81730276e7fd5151a30f264fa7d6a808250fd890dc9062bc1"
+    },
+    {
+      "path": "performance/native-campaign/02-latest-factorized/reuse_fitted_preparation/round_signals/29cf820cb4dc132c56a66a3a0986a3eb369008a967930d4c6825ba0a48a0f469.json.gz",
+      "bytes": 6459,
+      "sha256": "fc4ae57d39f39167d751da0031bda8b0dc58670a2eb5bdc1a1cb570f73aac63d"
+    },
+    {
+      "path": "performance/native-campaign/02-latest-factorized/reuse_fitted_preparation/round_signals/2bf14e63b8dec3ba651cc6b995395216b0b90c989e872c4785b332e70169ecb6.json.gz",
+      "bytes": 5034,
+      "sha256": "871c4365a194ae4f5b8de3371de8c8f2fb9833e1b9c8ac1ef83627f7805cd001"
+    },
+    {
+      "path": "performance/native-campaign/02-latest-factorized/reuse_fitted_preparation/round_signals/2ea2ba7c5932740643e95919f5dfe8add67bd2378935ffc2a2eea65635717504.json.gz",
+      "bytes": 6417,
+      "sha256": "33a899e81087971ebdb6585f5c673029f65a958f0b2cdeb380c83fb6c58d674b"
+    },
+    {
+      "path": "performance/native-campaign/02-latest-factorized/reuse_fitted_preparation/round_signals/3876f40b66730b3f25d009e67bd4f78657df2500270982f4c9018acaeba12e5c.json.gz",
+      "bytes": 6109,
+      "sha256": "6f0930a741bc107d7987c523a8e9c0c9fb7352bb0d9671735ca2e40f7e29c6ee"
+    },
+    {
+      "path": "performance/native-campaign/02-latest-factorized/reuse_fitted_preparation/round_signals/440008bf37575f460159a8fb3d39f3e380f6c4bcf0e77252b2a84497248d52fb.json.gz",
+      "bytes": 6443,
+      "sha256": "02eed46e6286b60a09d04f2247326cc34aa5f680ed635cb0524c78cac0421594"
+    },
+    {
+      "path": "performance/native-campaign/02-latest-factorized/reuse_fitted_preparation/round_signals/4b878c87c296122d8480d00fe26b4f844ff58198d6bcbecbf511db849c2d481f.json.gz",
+      "bytes": 5770,
+      "sha256": "d43cd579aad6671c4a5d89021bb0c3a6b36703442023f089f7cc6f4363a6c5fe"
+    },
+    {
+      "path": "performance/native-campaign/02-latest-factorized/reuse_fitted_preparation/round_signals/5edd5dbbafcbe534d9e32bb888b5b8a297ff6c177cedef6d7c5655474199af75.json.gz",
+      "bytes": 2129,
+      "sha256": "d6e0c9d3501bfe6475da2e27d0a629e0486880f3053c6ee085204ec06264f80c"
+    },
+    {
+      "path": "performance/native-campaign/02-latest-factorized/reuse_fitted_preparation/round_signals/71c5463618b335cd202d9d3ed9b4c62bd9ff15649c99617221f11489baa243f0.json.gz",
+      "bytes": 6419,
+      "sha256": "ca58ce88c22e446e607aed86827209ad3e63566a4af2fbd36484b04ed14f1215"
+    },
+    {
+      "path": "performance/native-campaign/02-latest-factorized/reuse_fitted_preparation/round_signals/8af261fde831f6cb92a6b4d358b73fca2dcb046de3c7bdb451e5594b38605eb1.json.gz",
+      "bytes": 2429,
+      "sha256": "797a1678b6df11dd8a7b40f2720ea48ad669cc25091df779085644aec7fed731"
+    },
+    {
+      "path": "performance/native-campaign/02-latest-factorized/reuse_fitted_preparation/round_signals/9739ebdbefe38cf4f55afcc9e575f6c3583748096e076e1771e151d67f42fc6a.json.gz",
+      "bytes": 6200,
+      "sha256": "63363df309e1f308b9404837e86a8de40ae7d0f16417cff56197cb1f68a08057"
+    },
+    {
+      "path": "performance/native-campaign/02-latest-factorized/reuse_fitted_preparation/round_signals/9844f7597556ffca1e1e39dd84aaf4f5469dc5bc7a1b9e5fd527268feafabb9b.json.gz",
+      "bytes": 1729,
+      "sha256": "5567faa656109196481f26c2c1f47a725c865fc92051890584d78ef7c0f70cf1"
+    },
+    {
+      "path": "performance/native-campaign/02-latest-factorized/reuse_fitted_preparation/round_signals/a6db86ae2ac20254eb17e3b8be1724f9549986228c538fb4640d139ef140fbf4.json.gz",
+      "bytes": 1779,
+      "sha256": "41541f89bd01344a3dfd3eda0938d91682bcd27c7998c08383e4cd681be5163f"
+    },
+    {
+      "path": "performance/native-campaign/02-latest-factorized/reuse_fitted_preparation/round_signals/bccf163f9c9a4c3feac14dd7bc013c3eaf2f14759ba73b8f02874f0b0700923a.json.gz",
+      "bytes": 2997,
+      "sha256": "07ff04d99437cceebcf231dd2023c9dcfbe945a2bf20899dbc51f1b10c308d4d"
+    },
+    {
+      "path": "performance/native-campaign/02-latest-factorized/reuse_fitted_preparation/round_signals/bcf078ffb3dd9a414289ff68ad557d79fc163bc8c4da300691107a4ae5de9d7f.json.gz",
+      "bytes": 3013,
+      "sha256": "95aef3ff5f9a06a0c1b3d7cc9b91f8e883d60a31db740b967d3f68a35d2f23a3"
+    },
+    {
+      "path": "performance/native-campaign/02-latest-factorized/reuse_fitted_preparation/round_signals/bec7a3dea5a58ac47cf76d1cfbe032341a6653e976a369915a3e23ab377fe163.json.gz",
+      "bytes": 6423,
+      "sha256": "9f99a27e72be0f7d8b59afbbc376855e40cc3d0b0343a4f90014857b12f2eb96"
+    },
+    {
+      "path": "performance/native-campaign/02-latest-factorized/reuse_fitted_preparation/round_signals/c41da3453ff9c6dafc410b3ff6153e382836ba198fcafb16ffe93fb9d96acf35.json.gz",
+      "bytes": 4870,
+      "sha256": "02f4191bf099cafcf3743e62fb9990dd757e320ecd64981c1131b418491d40b5"
+    },
+    {
+      "path": "performance/native-campaign/02-latest-factorized/reuse_fitted_preparation/round_signals/c8d7238b5d17a44e33e64087884ce0212b69e258318542e89172c59805c42491.json.gz",
+      "bytes": 4027,
+      "sha256": "c78d25f77bf4d38c75d45386ff6cc59c5a76e5f88feeb3d8ffb4f29531295137"
+    },
+    {
+      "path": "performance/native-campaign/02-latest-factorized/reuse_fitted_preparation/round_signals/c9e34aa45585a0910c2b68a64b7dc0d4d378232fa09c3ac9246ed86eb9e6470e.json.gz",
+      "bytes": 4085,
+      "sha256": "735e53af1af96115260140bd9acf60ecd275bff4275f1e592df685aede99b342"
+    },
+    {
+      "path": "performance/native-campaign/02-latest-factorized/reuse_fitted_preparation/round_signals/cc0967cc165d0ab2ed906655cc436bba1fe7e1099752aee6f29079f763b6bec9.json.gz",
+      "bytes": 5070,
+      "sha256": "f821738efa7c57dc347969dd5c19b9e8fda47e3bd4c1f54edf07a78798dc5d80"
+    },
+    {
+      "path": "performance/native-campaign/02-latest-factorized/reuse_fitted_preparation/round_signals/d4987b01b81f87a6525c7cf6cc44aba2de50172fe0da2aab239023bcd4913331.json.gz",
+      "bytes": 2326,
+      "sha256": "abeffc27b100fe313033ba14d21c0ea41506b3285265a7a8247815aa889641fa"
+    },
+    {
+      "path": "performance/native-campaign/02-latest-factorized/reuse_fitted_preparation/round_signals/e21693555cea215bbc33e854358a6b7f99b2de1902f4eaba2182bd7ce13e8b89.json.gz",
+      "bytes": 4280,
+      "sha256": "b1c222fdc274f874b84da0bfc073e832fc2c9ae2f431ebf0d8b3f28649465c47"
+    },
+    {
+      "path": "performance/native-campaign/02-latest-factorized/reuse_fitted_preparation/round_signals/ea11c447b75c6751286d8312c536f654e0de390ce7e139e60cc665fb506621d9.json.gz",
+      "bytes": 6455,
+      "sha256": "7fd29af9f61f908a14c195861cc7becb4dad43322ddf34a5f43960442f7c00fa"
+    },
+    {
+      "path": "performance/native-campaign/02-latest-factorized/reuse_fitted_preparation/round_signals/fd69b31c10479f880a41c1a48909f619ac4664c647c48a45e05eb122731b2e4e.json.gz",
+      "bytes": 4151,
+      "sha256": "7651ee3e39cca47b8dab13eb45d5c00e1544942acf51d8cb5a14aaa4e96c685e"
+    },
+    {
+      "path": "performance/native-campaign/03-latest-snapshot/spot_1h_20240101_20241231-a634bbd4-8783-buy_and_hold/limen.npz",
+      "bytes": 80343,
+      "sha256": "452aad743afd86aecd035047e8b57f79f34f2b238878606737d5b2ba047c0035"
+    },
+    {
+      "path": "performance/native-campaign/03-latest-snapshot/spot_1h_20240101_20241231-a634bbd4-8783-buy_and_hold/prepared.npz",
+      "bytes": 432142,
+      "sha256": "9005268ca26a22a1fc898ed25b58315551293803d7fe1c48cfa35dc12561f2b5"
+    },
+    {
+      "path": "performance/native-campaign/03-latest-snapshot/spot_1h_20240101_20241231-a634bbd4-8783-sma_cross/limen.npz",
+      "bytes": 81193,
+      "sha256": "7c8235d2ea2abdbd338213a36807e303d70f61a3b286c5f05fee8d25f3d4343b"
+    },
+    {
+      "path": "performance/native-campaign/03-latest-snapshot/spot_1h_20240101_20241231-a634bbd4-8783-sma_cross/prepared.npz",
+      "bytes": 432142,
+      "sha256": "d8ff0bdb042e73af5698bd4bf28f036c2f98c2abbcd31bd508dcf15e25f4ffd8"
+    },
+    {
+      "path": "performance/native-campaign/04-baseline-snapshot/spot_1h_20240101_20241231-a634bbd4-8783-buy_and_hold/limen.npz",
+      "bytes": 80343,
+      "sha256": "452aad743afd86aecd035047e8b57f79f34f2b238878606737d5b2ba047c0035"
+    },
+    {
+      "path": "performance/native-campaign/04-baseline-snapshot/spot_1h_20240101_20241231-a634bbd4-8783-buy_and_hold/prepared.npz",
+      "bytes": 432142,
+      "sha256": "9005268ca26a22a1fc898ed25b58315551293803d7fe1c48cfa35dc12561f2b5"
+    },
+    {
+      "path": "performance/native-campaign/04-baseline-snapshot/spot_1h_20240101_20241231-a634bbd4-8783-sma_cross/limen.npz",
+      "bytes": 81193,
+      "sha256": "7c8235d2ea2abdbd338213a36807e303d70f61a3b286c5f05fee8d25f3d4343b"
+    },
+    {
+      "path": "performance/native-campaign/04-baseline-snapshot/spot_1h_20240101_20241231-a634bbd4-8783-sma_cross/prepared.npz",
+      "bytes": 432142,
+      "sha256": "d8ff0bdb042e73af5698bd4bf28f036c2f98c2abbcd31bd508dcf15e25f4ffd8"
+    },
+    {
+      "path": "performance/paired-campaign/001-block-01-baseline-buy_and_hold/limen/buy_and_hold/preflight/result/actual.npz",
+      "bytes": 150863,
+      "sha256": "65646e71394b678f2f93d40208a93e5fefc08af3906273789e6255a0b7d2cf98"
+    },
+    {
+      "path": "performance/paired-campaign/001-block-01-baseline-buy_and_hold/limen/buy_and_hold/preflight/result/oracle.npz",
+      "bytes": 292417,
+      "sha256": "5794585200f3b0548ab9cc79a3a5bcbec5934c0dbba52b90519eebe2bda0cc4a"
+    },
+    {
+      "path": "performance/paired-campaign/001-block-01-baseline-buy_and_hold/limen/buy_and_hold/process-001/result/actual.npz",
+      "bytes": 150863,
+      "sha256": "65646e71394b678f2f93d40208a93e5fefc08af3906273789e6255a0b7d2cf98"
+    },
+    {
+      "path": "performance/paired-campaign/001-block-01-baseline-buy_and_hold/limen/buy_and_hold/process-001/result/oracle.npz",
+      "bytes": 292417,
+      "sha256": "5794585200f3b0548ab9cc79a3a5bcbec5934c0dbba52b90519eebe2bda0cc4a"
+    },
+    {
+      "path": "performance/paired-campaign/001-block-01-baseline-buy_and_hold/prepared-buy_and_hold.npz",
+      "bytes": 511712,
+      "sha256": "0d7f3e9914beb1ec021bcaca04d90fcfa9792341278359a439080c7c86c1c2a0"
+    },
+    {
+      "path": "performance/paired-campaign/002-block-01-latest-buy_and_hold/limen/buy_and_hold/preflight/result/actual.npz",
+      "bytes": 150863,
+      "sha256": "65646e71394b678f2f93d40208a93e5fefc08af3906273789e6255a0b7d2cf98"
+    },
+    {
+      "path": "performance/paired-campaign/002-block-01-latest-buy_and_hold/limen/buy_and_hold/preflight/result/oracle.npz",
+      "bytes": 292417,
+      "sha256": "5794585200f3b0548ab9cc79a3a5bcbec5934c0dbba52b90519eebe2bda0cc4a"
+    },
+    {
+      "path": "performance/paired-campaign/002-block-01-latest-buy_and_hold/limen/buy_and_hold/process-001/result/actual.npz",
+      "bytes": 150863,
+      "sha256": "65646e71394b678f2f93d40208a93e5fefc08af3906273789e6255a0b7d2cf98"
+    },
+    {
+      "path": "performance/paired-campaign/002-block-01-latest-buy_and_hold/limen/buy_and_hold/process-001/result/oracle.npz",
+      "bytes": 292417,
+      "sha256": "5794585200f3b0548ab9cc79a3a5bcbec5934c0dbba52b90519eebe2bda0cc4a"
+    },
+    {
+      "path": "performance/paired-campaign/002-block-01-latest-buy_and_hold/prepared-buy_and_hold.npz",
+      "bytes": 511712,
+      "sha256": "0d7f3e9914beb1ec021bcaca04d90fcfa9792341278359a439080c7c86c1c2a0"
+    },
+    {
+      "path": "performance/paired-campaign/003-block-01-latest-sma_cross/limen/sma_cross/preflight/result/actual.npz",
+      "bytes": 151713,
+      "sha256": "8ad80b3bd4e366ca07a31f73966eeb1fc8d1b7566d7d82582f7db522aa6130af"
+    },
+    {
+      "path": "performance/paired-campaign/003-block-01-latest-sma_cross/limen/sma_cross/preflight/result/oracle.npz",
+      "bytes": 294067,
+      "sha256": "ef3dad88768ddc54579d0e3bbc58514b378afbf183bdee2f8a9f6c205961e536"
+    },
+    {
+      "path": "performance/paired-campaign/003-block-01-latest-sma_cross/limen/sma_cross/process-001/result/actual.npz",
+      "bytes": 151713,
+      "sha256": "8ad80b3bd4e366ca07a31f73966eeb1fc8d1b7566d7d82582f7db522aa6130af"
+    },
+    {
+      "path": "performance/paired-campaign/003-block-01-latest-sma_cross/limen/sma_cross/process-001/result/oracle.npz",
+      "bytes": 294067,
+      "sha256": "ef3dad88768ddc54579d0e3bbc58514b378afbf183bdee2f8a9f6c205961e536"
+    },
+    {
+      "path": "performance/paired-campaign/003-block-01-latest-sma_cross/prepared-sma_cross.npz",
+      "bytes": 511712,
+      "sha256": "a4e10483b2e46a229340eaad6cbe38af40824a63b7ce39d11dee57b0045f5c5a"
+    },
+    {
+      "path": "performance/paired-campaign/004-block-01-baseline-sma_cross/limen/sma_cross/preflight/result/actual.npz",
+      "bytes": 151713,
+      "sha256": "8ad80b3bd4e366ca07a31f73966eeb1fc8d1b7566d7d82582f7db522aa6130af"
+    },
+    {
+      "path": "performance/paired-campaign/004-block-01-baseline-sma_cross/limen/sma_cross/preflight/result/oracle.npz",
+      "bytes": 294067,
+      "sha256": "ef3dad88768ddc54579d0e3bbc58514b378afbf183bdee2f8a9f6c205961e536"
+    },
+    {
+      "path": "performance/paired-campaign/004-block-01-baseline-sma_cross/limen/sma_cross/process-001/result/actual.npz",
+      "bytes": 151713,
+      "sha256": "8ad80b3bd4e366ca07a31f73966eeb1fc8d1b7566d7d82582f7db522aa6130af"
+    },
+    {
+      "path": "performance/paired-campaign/004-block-01-baseline-sma_cross/limen/sma_cross/process-001/result/oracle.npz",
+      "bytes": 294067,
+      "sha256": "ef3dad88768ddc54579d0e3bbc58514b378afbf183bdee2f8a9f6c205961e536"
+    },
+    {
+      "path": "performance/paired-campaign/004-block-01-baseline-sma_cross/prepared-sma_cross.npz",
+      "bytes": 511712,
+      "sha256": "a4e10483b2e46a229340eaad6cbe38af40824a63b7ce39d11dee57b0045f5c5a"
+    },
+    {
+      "path": "performance/paired-campaign/005-block-02-baseline-sma_cross/limen/sma_cross/preflight/result/actual.npz",
+      "bytes": 151713,
+      "sha256": "8ad80b3bd4e366ca07a31f73966eeb1fc8d1b7566d7d82582f7db522aa6130af"
+    },
+    {
+      "path": "performance/paired-campaign/005-block-02-baseline-sma_cross/limen/sma_cross/preflight/result/oracle.npz",
+      "bytes": 294067,
+      "sha256": "ef3dad88768ddc54579d0e3bbc58514b378afbf183bdee2f8a9f6c205961e536"
+    },
+    {
+      "path": "performance/paired-campaign/005-block-02-baseline-sma_cross/limen/sma_cross/process-001/result/actual.npz",
+      "bytes": 151713,
+      "sha256": "8ad80b3bd4e366ca07a31f73966eeb1fc8d1b7566d7d82582f7db522aa6130af"
+    },
+    {
+      "path": "performance/paired-campaign/005-block-02-baseline-sma_cross/limen/sma_cross/process-001/result/oracle.npz",
+      "bytes": 294067,
+      "sha256": "ef3dad88768ddc54579d0e3bbc58514b378afbf183bdee2f8a9f6c205961e536"
+    },
+    {
+      "path": "performance/paired-campaign/005-block-02-baseline-sma_cross/prepared-sma_cross.npz",
+      "bytes": 511712,
+      "sha256": "a4e10483b2e46a229340eaad6cbe38af40824a63b7ce39d11dee57b0045f5c5a"
+    },
+    {
+      "path": "performance/paired-campaign/006-block-02-latest-sma_cross/limen/sma_cross/preflight/result/actual.npz",
+      "bytes": 151713,
+      "sha256": "8ad80b3bd4e366ca07a31f73966eeb1fc8d1b7566d7d82582f7db522aa6130af"
+    },
+    {
+      "path": "performance/paired-campaign/006-block-02-latest-sma_cross/limen/sma_cross/preflight/result/oracle.npz",
+      "bytes": 294067,
+      "sha256": "ef3dad88768ddc54579d0e3bbc58514b378afbf183bdee2f8a9f6c205961e536"
+    },
+    {
+      "path": "performance/paired-campaign/006-block-02-latest-sma_cross/limen/sma_cross/process-001/result/actual.npz",
+      "bytes": 151713,
+      "sha256": "8ad80b3bd4e366ca07a31f73966eeb1fc8d1b7566d7d82582f7db522aa6130af"
+    },
+    {
+      "path": "performance/paired-campaign/006-block-02-latest-sma_cross/limen/sma_cross/process-001/result/oracle.npz",
+      "bytes": 294067,
+      "sha256": "ef3dad88768ddc54579d0e3bbc58514b378afbf183bdee2f8a9f6c205961e536"
+    },
+    {
+      "path": "performance/paired-campaign/006-block-02-latest-sma_cross/prepared-sma_cross.npz",
+      "bytes": 511712,
+      "sha256": "a4e10483b2e46a229340eaad6cbe38af40824a63b7ce39d11dee57b0045f5c5a"
+    },
+    {
+      "path": "performance/paired-campaign/007-block-02-latest-buy_and_hold/limen/buy_and_hold/preflight/result/actual.npz",
+      "bytes": 150863,
+      "sha256": "65646e71394b678f2f93d40208a93e5fefc08af3906273789e6255a0b7d2cf98"
+    },
+    {
+      "path": "performance/paired-campaign/007-block-02-latest-buy_and_hold/limen/buy_and_hold/preflight/result/oracle.npz",
+      "bytes": 292417,
+      "sha256": "5794585200f3b0548ab9cc79a3a5bcbec5934c0dbba52b90519eebe2bda0cc4a"
+    },
+    {
+      "path": "performance/paired-campaign/007-block-02-latest-buy_and_hold/limen/buy_and_hold/process-001/result/actual.npz",
+      "bytes": 150863,
+      "sha256": "65646e71394b678f2f93d40208a93e5fefc08af3906273789e6255a0b7d2cf98"
+    },
+    {
+      "path": "performance/paired-campaign/007-block-02-latest-buy_and_hold/limen/buy_and_hold/process-001/result/oracle.npz",
+      "bytes": 292417,
+      "sha256": "5794585200f3b0548ab9cc79a3a5bcbec5934c0dbba52b90519eebe2bda0cc4a"
+    },
+    {
+      "path": "performance/paired-campaign/007-block-02-latest-buy_and_hold/prepared-buy_and_hold.npz",
+      "bytes": 511712,
+      "sha256": "0d7f3e9914beb1ec021bcaca04d90fcfa9792341278359a439080c7c86c1c2a0"
+    },
+    {
+      "path": "performance/paired-campaign/008-block-02-baseline-buy_and_hold/limen/buy_and_hold/preflight/result/actual.npz",
+      "bytes": 150863,
+      "sha256": "65646e71394b678f2f93d40208a93e5fefc08af3906273789e6255a0b7d2cf98"
+    },
+    {
+      "path": "performance/paired-campaign/008-block-02-baseline-buy_and_hold/limen/buy_and_hold/preflight/result/oracle.npz",
+      "bytes": 292417,
+      "sha256": "5794585200f3b0548ab9cc79a3a5bcbec5934c0dbba52b90519eebe2bda0cc4a"
+    },
+    {
+      "path": "performance/paired-campaign/008-block-02-baseline-buy_and_hold/limen/buy_and_hold/process-001/result/actual.npz",
+      "bytes": 150863,
+      "sha256": "65646e71394b678f2f93d40208a93e5fefc08af3906273789e6255a0b7d2cf98"
+    },
+    {
+      "path": "performance/paired-campaign/008-block-02-baseline-buy_and_hold/limen/buy_and_hold/process-001/result/oracle.npz",
+      "bytes": 292417,
+      "sha256": "5794585200f3b0548ab9cc79a3a5bcbec5934c0dbba52b90519eebe2bda0cc4a"
+    },
+    {
+      "path": "performance/paired-campaign/008-block-02-baseline-buy_and_hold/prepared-buy_and_hold.npz",
+      "bytes": 511712,
+      "sha256": "0d7f3e9914beb1ec021bcaca04d90fcfa9792341278359a439080c7c86c1c2a0"
+    },
+    {
+      "path": "performance/paired-campaign/009-block-03-baseline-buy_and_hold/limen/buy_and_hold/preflight/result/actual.npz",
+      "bytes": 150863,
+      "sha256": "65646e71394b678f2f93d40208a93e5fefc08af3906273789e6255a0b7d2cf98"
+    },
+    {
+      "path": "performance/paired-campaign/009-block-03-baseline-buy_and_hold/limen/buy_and_hold/preflight/result/oracle.npz",
+      "bytes": 292417,
+      "sha256": "5794585200f3b0548ab9cc79a3a5bcbec5934c0dbba52b90519eebe2bda0cc4a"
+    },
+    {
+      "path": "performance/paired-campaign/009-block-03-baseline-buy_and_hold/limen/buy_and_hold/process-001/result/actual.npz",
+      "bytes": 150863,
+      "sha256": "65646e71394b678f2f93d40208a93e5fefc08af3906273789e6255a0b7d2cf98"
+    },
+    {
+      "path": "performance/paired-campaign/009-block-03-baseline-buy_and_hold/limen/buy_and_hold/process-001/result/oracle.npz",
+      "bytes": 292417,
+      "sha256": "5794585200f3b0548ab9cc79a3a5bcbec5934c0dbba52b90519eebe2bda0cc4a"
+    },
+    {
+      "path": "performance/paired-campaign/009-block-03-baseline-buy_and_hold/prepared-buy_and_hold.npz",
+      "bytes": 511712,
+      "sha256": "0d7f3e9914beb1ec021bcaca04d90fcfa9792341278359a439080c7c86c1c2a0"
+    },
+    {
+      "path": "performance/paired-campaign/010-block-03-latest-buy_and_hold/limen/buy_and_hold/preflight/result/actual.npz",
+      "bytes": 150863,
+      "sha256": "65646e71394b678f2f93d40208a93e5fefc08af3906273789e6255a0b7d2cf98"
+    },
+    {
+      "path": "performance/paired-campaign/010-block-03-latest-buy_and_hold/limen/buy_and_hold/preflight/result/oracle.npz",
+      "bytes": 292417,
+      "sha256": "5794585200f3b0548ab9cc79a3a5bcbec5934c0dbba52b90519eebe2bda0cc4a"
+    },
+    {
+      "path": "performance/paired-campaign/010-block-03-latest-buy_and_hold/limen/buy_and_hold/process-001/result/actual.npz",
+      "bytes": 150863,
+      "sha256": "65646e71394b678f2f93d40208a93e5fefc08af3906273789e6255a0b7d2cf98"
+    },
+    {
+      "path": "performance/paired-campaign/010-block-03-latest-buy_and_hold/limen/buy_and_hold/process-001/result/oracle.npz",
+      "bytes": 292417,
+      "sha256": "5794585200f3b0548ab9cc79a3a5bcbec5934c0dbba52b90519eebe2bda0cc4a"
+    },
+    {
+      "path": "performance/paired-campaign/010-block-03-latest-buy_and_hold/prepared-buy_and_hold.npz",
+      "bytes": 511712,
+      "sha256": "0d7f3e9914beb1ec021bcaca04d90fcfa9792341278359a439080c7c86c1c2a0"
+    },
+    {
+      "path": "performance/paired-campaign/011-block-03-latest-sma_cross/limen/sma_cross/preflight/result/actual.npz",
+      "bytes": 151713,
+      "sha256": "8ad80b3bd4e366ca07a31f73966eeb1fc8d1b7566d7d82582f7db522aa6130af"
+    },
+    {
+      "path": "performance/paired-campaign/011-block-03-latest-sma_cross/limen/sma_cross/preflight/result/oracle.npz",
+      "bytes": 294067,
+      "sha256": "ef3dad88768ddc54579d0e3bbc58514b378afbf183bdee2f8a9f6c205961e536"
+    },
+    {
+      "path": "performance/paired-campaign/011-block-03-latest-sma_cross/limen/sma_cross/process-001/result/actual.npz",
+      "bytes": 151713,
+      "sha256": "8ad80b3bd4e366ca07a31f73966eeb1fc8d1b7566d7d82582f7db522aa6130af"
+    },
+    {
+      "path": "performance/paired-campaign/011-block-03-latest-sma_cross/limen/sma_cross/process-001/result/oracle.npz",
+      "bytes": 294067,
+      "sha256": "ef3dad88768ddc54579d0e3bbc58514b378afbf183bdee2f8a9f6c205961e536"
+    },
+    {
+      "path": "performance/paired-campaign/011-block-03-latest-sma_cross/prepared-sma_cross.npz",
+      "bytes": 511712,
+      "sha256": "a4e10483b2e46a229340eaad6cbe38af40824a63b7ce39d11dee57b0045f5c5a"
+    },
+    {
+      "path": "performance/paired-campaign/012-block-03-baseline-sma_cross/limen/sma_cross/preflight/result/actual.npz",
+      "bytes": 151713,
+      "sha256": "8ad80b3bd4e366ca07a31f73966eeb1fc8d1b7566d7d82582f7db522aa6130af"
+    },
+    {
+      "path": "performance/paired-campaign/012-block-03-baseline-sma_cross/limen/sma_cross/preflight/result/oracle.npz",
+      "bytes": 294067,
+      "sha256": "ef3dad88768ddc54579d0e3bbc58514b378afbf183bdee2f8a9f6c205961e536"
+    },
+    {
+      "path": "performance/paired-campaign/012-block-03-baseline-sma_cross/limen/sma_cross/process-001/result/actual.npz",
+      "bytes": 151713,
+      "sha256": "8ad80b3bd4e366ca07a31f73966eeb1fc8d1b7566d7d82582f7db522aa6130af"
+    },
+    {
+      "path": "performance/paired-campaign/012-block-03-baseline-sma_cross/limen/sma_cross/process-001/result/oracle.npz",
+      "bytes": 294067,
+      "sha256": "ef3dad88768ddc54579d0e3bbc58514b378afbf183bdee2f8a9f6c205961e536"
+    },
+    {
+      "path": "performance/paired-campaign/012-block-03-baseline-sma_cross/prepared-sma_cross.npz",
+      "bytes": 511712,
+      "sha256": "a4e10483b2e46a229340eaad6cbe38af40824a63b7ce39d11dee57b0045f5c5a"
+    },
+    {
+      "path": "performance/paired-campaign/013-block-04-baseline-sma_cross/limen/sma_cross/preflight/result/actual.npz",
+      "bytes": 151713,
+      "sha256": "8ad80b3bd4e366ca07a31f73966eeb1fc8d1b7566d7d82582f7db522aa6130af"
+    },
+    {
+      "path": "performance/paired-campaign/013-block-04-baseline-sma_cross/limen/sma_cross/preflight/result/oracle.npz",
+      "bytes": 294067,
+      "sha256": "ef3dad88768ddc54579d0e3bbc58514b378afbf183bdee2f8a9f6c205961e536"
+    },
+    {
+      "path": "performance/paired-campaign/013-block-04-baseline-sma_cross/limen/sma_cross/process-001/result/actual.npz",
+      "bytes": 151713,
+      "sha256": "8ad80b3bd4e366ca07a31f73966eeb1fc8d1b7566d7d82582f7db522aa6130af"
+    },
+    {
+      "path": "performance/paired-campaign/013-block-04-baseline-sma_cross/limen/sma_cross/process-001/result/oracle.npz",
+      "bytes": 294067,
+      "sha256": "ef3dad88768ddc54579d0e3bbc58514b378afbf183bdee2f8a9f6c205961e536"
+    },
+    {
+      "path": "performance/paired-campaign/013-block-04-baseline-sma_cross/prepared-sma_cross.npz",
+      "bytes": 511712,
+      "sha256": "a4e10483b2e46a229340eaad6cbe38af40824a63b7ce39d11dee57b0045f5c5a"
+    },
+    {
+      "path": "performance/paired-campaign/014-block-04-latest-sma_cross/limen/sma_cross/preflight/result/actual.npz",
+      "bytes": 151713,
+      "sha256": "8ad80b3bd4e366ca07a31f73966eeb1fc8d1b7566d7d82582f7db522aa6130af"
+    },
+    {
+      "path": "performance/paired-campaign/014-block-04-latest-sma_cross/limen/sma_cross/preflight/result/oracle.npz",
+      "bytes": 294067,
+      "sha256": "ef3dad88768ddc54579d0e3bbc58514b378afbf183bdee2f8a9f6c205961e536"
+    },
+    {
+      "path": "performance/paired-campaign/014-block-04-latest-sma_cross/limen/sma_cross/process-001/result/actual.npz",
+      "bytes": 151713,
+      "sha256": "8ad80b3bd4e366ca07a31f73966eeb1fc8d1b7566d7d82582f7db522aa6130af"
+    },
+    {
+      "path": "performance/paired-campaign/014-block-04-latest-sma_cross/limen/sma_cross/process-001/result/oracle.npz",
+      "bytes": 294067,
+      "sha256": "ef3dad88768ddc54579d0e3bbc58514b378afbf183bdee2f8a9f6c205961e536"
+    },
+    {
+      "path": "performance/paired-campaign/014-block-04-latest-sma_cross/prepared-sma_cross.npz",
+      "bytes": 511712,
+      "sha256": "a4e10483b2e46a229340eaad6cbe38af40824a63b7ce39d11dee57b0045f5c5a"
+    },
+    {
+      "path": "performance/paired-campaign/015-block-04-latest-buy_and_hold/limen/buy_and_hold/preflight/result/actual.npz",
+      "bytes": 150863,
+      "sha256": "65646e71394b678f2f93d40208a93e5fefc08af3906273789e6255a0b7d2cf98"
+    },
+    {
+      "path": "performance/paired-campaign/015-block-04-latest-buy_and_hold/limen/buy_and_hold/preflight/result/oracle.npz",
+      "bytes": 292417,
+      "sha256": "5794585200f3b0548ab9cc79a3a5bcbec5934c0dbba52b90519eebe2bda0cc4a"
+    },
+    {
+      "path": "performance/paired-campaign/015-block-04-latest-buy_and_hold/limen/buy_and_hold/process-001/result/actual.npz",
+      "bytes": 150863,
+      "sha256": "65646e71394b678f2f93d40208a93e5fefc08af3906273789e6255a0b7d2cf98"
+    },
+    {
+      "path": "performance/paired-campaign/015-block-04-latest-buy_and_hold/limen/buy_and_hold/process-001/result/oracle.npz",
+      "bytes": 292417,
+      "sha256": "5794585200f3b0548ab9cc79a3a5bcbec5934c0dbba52b90519eebe2bda0cc4a"
+    },
+    {
+      "path": "performance/paired-campaign/015-block-04-latest-buy_and_hold/prepared-buy_and_hold.npz",
+      "bytes": 511712,
+      "sha256": "0d7f3e9914beb1ec021bcaca04d90fcfa9792341278359a439080c7c86c1c2a0"
+    },
+    {
+      "path": "performance/paired-campaign/016-block-04-baseline-buy_and_hold/limen/buy_and_hold/preflight/result/actual.npz",
+      "bytes": 150863,
+      "sha256": "65646e71394b678f2f93d40208a93e5fefc08af3906273789e6255a0b7d2cf98"
+    },
+    {
+      "path": "performance/paired-campaign/016-block-04-baseline-buy_and_hold/limen/buy_and_hold/preflight/result/oracle.npz",
+      "bytes": 292417,
+      "sha256": "5794585200f3b0548ab9cc79a3a5bcbec5934c0dbba52b90519eebe2bda0cc4a"
+    },
+    {
+      "path": "performance/paired-campaign/016-block-04-baseline-buy_and_hold/limen/buy_and_hold/process-001/result/actual.npz",
+      "bytes": 150863,
+      "sha256": "65646e71394b678f2f93d40208a93e5fefc08af3906273789e6255a0b7d2cf98"
+    },
+    {
+      "path": "performance/paired-campaign/016-block-04-baseline-buy_and_hold/limen/buy_and_hold/process-001/result/oracle.npz",
+      "bytes": 292417,
+      "sha256": "5794585200f3b0548ab9cc79a3a5bcbec5934c0dbba52b90519eebe2bda0cc4a"
+    },
+    {
+      "path": "performance/paired-campaign/016-block-04-baseline-buy_and_hold/prepared-buy_and_hold.npz",
+      "bytes": 511712,
+      "sha256": "0d7f3e9914beb1ec021bcaca04d90fcfa9792341278359a439080c7c86c1c2a0"
+    },
+    {
+      "path": "performance/paired-campaign/017-block-05-baseline-buy_and_hold/limen/buy_and_hold/preflight/result/actual.npz",
+      "bytes": 150863,
+      "sha256": "65646e71394b678f2f93d40208a93e5fefc08af3906273789e6255a0b7d2cf98"
+    },
+    {
+      "path": "performance/paired-campaign/017-block-05-baseline-buy_and_hold/limen/buy_and_hold/preflight/result/oracle.npz",
+      "bytes": 292417,
+      "sha256": "5794585200f3b0548ab9cc79a3a5bcbec5934c0dbba52b90519eebe2bda0cc4a"
+    },
+    {
+      "path": "performance/paired-campaign/017-block-05-baseline-buy_and_hold/limen/buy_and_hold/process-001/result/actual.npz",
+      "bytes": 150863,
+      "sha256": "65646e71394b678f2f93d40208a93e5fefc08af3906273789e6255a0b7d2cf98"
+    },
+    {
+      "path": "performance/paired-campaign/017-block-05-baseline-buy_and_hold/limen/buy_and_hold/process-001/result/oracle.npz",
+      "bytes": 292417,
+      "sha256": "5794585200f3b0548ab9cc79a3a5bcbec5934c0dbba52b90519eebe2bda0cc4a"
+    },
+    {
+      "path": "performance/paired-campaign/017-block-05-baseline-buy_and_hold/prepared-buy_and_hold.npz",
+      "bytes": 511712,
+      "sha256": "0d7f3e9914beb1ec021bcaca04d90fcfa9792341278359a439080c7c86c1c2a0"
+    },
+    {
+      "path": "performance/paired-campaign/018-block-05-latest-buy_and_hold/limen/buy_and_hold/preflight/result/actual.npz",
+      "bytes": 150863,
+      "sha256": "65646e71394b678f2f93d40208a93e5fefc08af3906273789e6255a0b7d2cf98"
+    },
+    {
+      "path": "performance/paired-campaign/018-block-05-latest-buy_and_hold/limen/buy_and_hold/preflight/result/oracle.npz",
+      "bytes": 292417,
+      "sha256": "5794585200f3b0548ab9cc79a3a5bcbec5934c0dbba52b90519eebe2bda0cc4a"
+    },
+    {
+      "path": "performance/paired-campaign/018-block-05-latest-buy_and_hold/limen/buy_and_hold/process-001/result/actual.npz",
+      "bytes": 150863,
+      "sha256": "65646e71394b678f2f93d40208a93e5fefc08af3906273789e6255a0b7d2cf98"
+    },
+    {
+      "path": "performance/paired-campaign/018-block-05-latest-buy_and_hold/limen/buy_and_hold/process-001/result/oracle.npz",
+      "bytes": 292417,
+      "sha256": "5794585200f3b0548ab9cc79a3a5bcbec5934c0dbba52b90519eebe2bda0cc4a"
+    },
+    {
+      "path": "performance/paired-campaign/018-block-05-latest-buy_and_hold/prepared-buy_and_hold.npz",
+      "bytes": 511712,
+      "sha256": "0d7f3e9914beb1ec021bcaca04d90fcfa9792341278359a439080c7c86c1c2a0"
+    },
+    {
+      "path": "performance/paired-campaign/019-block-05-latest-sma_cross/limen/sma_cross/preflight/result/actual.npz",
+      "bytes": 151713,
+      "sha256": "8ad80b3bd4e366ca07a31f73966eeb1fc8d1b7566d7d82582f7db522aa6130af"
+    },
+    {
+      "path": "performance/paired-campaign/019-block-05-latest-sma_cross/limen/sma_cross/preflight/result/oracle.npz",
+      "bytes": 294067,
+      "sha256": "ef3dad88768ddc54579d0e3bbc58514b378afbf183bdee2f8a9f6c205961e536"
+    },
+    {
+      "path": "performance/paired-campaign/019-block-05-latest-sma_cross/limen/sma_cross/process-001/result/actual.npz",
+      "bytes": 151713,
+      "sha256": "8ad80b3bd4e366ca07a31f73966eeb1fc8d1b7566d7d82582f7db522aa6130af"
+    },
+    {
+      "path": "performance/paired-campaign/019-block-05-latest-sma_cross/limen/sma_cross/process-001/result/oracle.npz",
+      "bytes": 294067,
+      "sha256": "ef3dad88768ddc54579d0e3bbc58514b378afbf183bdee2f8a9f6c205961e536"
+    },
+    {
+      "path": "performance/paired-campaign/019-block-05-latest-sma_cross/prepared-sma_cross.npz",
+      "bytes": 511712,
+      "sha256": "a4e10483b2e46a229340eaad6cbe38af40824a63b7ce39d11dee57b0045f5c5a"
+    },
+    {
+      "path": "performance/paired-campaign/020-block-05-baseline-sma_cross/limen/sma_cross/preflight/result/actual.npz",
+      "bytes": 151713,
+      "sha256": "8ad80b3bd4e366ca07a31f73966eeb1fc8d1b7566d7d82582f7db522aa6130af"
+    },
+    {
+      "path": "performance/paired-campaign/020-block-05-baseline-sma_cross/limen/sma_cross/preflight/result/oracle.npz",
+      "bytes": 294067,
+      "sha256": "ef3dad88768ddc54579d0e3bbc58514b378afbf183bdee2f8a9f6c205961e536"
+    },
+    {
+      "path": "performance/paired-campaign/020-block-05-baseline-sma_cross/limen/sma_cross/process-001/result/actual.npz",
+      "bytes": 151713,
+      "sha256": "8ad80b3bd4e366ca07a31f73966eeb1fc8d1b7566d7d82582f7db522aa6130af"
+    },
+    {
+      "path": "performance/paired-campaign/020-block-05-baseline-sma_cross/limen/sma_cross/process-001/result/oracle.npz",
+      "bytes": 294067,
+      "sha256": "ef3dad88768ddc54579d0e3bbc58514b378afbf183bdee2f8a9f6c205961e536"
+    },
+    {
+      "path": "performance/paired-campaign/020-block-05-baseline-sma_cross/prepared-sma_cross.npz",
+      "bytes": 511712,
+      "sha256": "a4e10483b2e46a229340eaad6cbe38af40824a63b7ce39d11dee57b0045f5c5a"
+    },
+    {
+      "path": "performance/paired-preflight/001-block-00-baseline-buy_and_hold-sma_cross-flat/limen/buy_and_hold/preflight/result/actual.npz",
+      "bytes": 150863,
+      "sha256": "65646e71394b678f2f93d40208a93e5fefc08af3906273789e6255a0b7d2cf98"
+    },
+    {
+      "path": "performance/paired-preflight/001-block-00-baseline-buy_and_hold-sma_cross-flat/limen/buy_and_hold/preflight/result/oracle.npz",
+      "bytes": 292417,
+      "sha256": "5794585200f3b0548ab9cc79a3a5bcbec5934c0dbba52b90519eebe2bda0cc4a"
+    },
+    {
+      "path": "performance/paired-preflight/001-block-00-baseline-buy_and_hold-sma_cross-flat/limen/flat/preflight/result/actual.npz",
+      "bytes": 150829,
+      "sha256": "bc7e960ebba89f552273158ac1992e36cc6d71716e60e7bdd87aa2ff538429a2"
+    },
+    {
+      "path": "performance/paired-preflight/001-block-00-baseline-buy_and_hold-sma_cross-flat/limen/flat/preflight/result/oracle.npz",
+      "bytes": 292351,
+      "sha256": "50c6e7c124dabc3a756987f9e5c3bda6369d4d1ce1373f94c22140049d308d86"
+    },
+    {
+      "path": "performance/paired-preflight/001-block-00-baseline-buy_and_hold-sma_cross-flat/limen/sma_cross/preflight/result/actual.npz",
+      "bytes": 151713,
+      "sha256": "8ad80b3bd4e366ca07a31f73966eeb1fc8d1b7566d7d82582f7db522aa6130af"
+    },
+    {
+      "path": "performance/paired-preflight/001-block-00-baseline-buy_and_hold-sma_cross-flat/limen/sma_cross/preflight/result/oracle.npz",
+      "bytes": 294067,
+      "sha256": "ef3dad88768ddc54579d0e3bbc58514b378afbf183bdee2f8a9f6c205961e536"
+    },
+    {
+      "path": "performance/paired-preflight/001-block-00-baseline-buy_and_hold-sma_cross-flat/prepared-buy_and_hold.npz",
+      "bytes": 511712,
+      "sha256": "0d7f3e9914beb1ec021bcaca04d90fcfa9792341278359a439080c7c86c1c2a0"
+    },
+    {
+      "path": "performance/paired-preflight/001-block-00-baseline-buy_and_hold-sma_cross-flat/prepared-flat.npz",
+      "bytes": 511712,
+      "sha256": "bf19663a2343053e30a6c532126758b57aa464aedce283dadcf73d94adefcd40"
+    },
+    {
+      "path": "performance/paired-preflight/001-block-00-baseline-buy_and_hold-sma_cross-flat/prepared-sma_cross.npz",
+      "bytes": 511712,
+      "sha256": "a4e10483b2e46a229340eaad6cbe38af40824a63b7ce39d11dee57b0045f5c5a"
+    },
+    {
+      "path": "performance/paired-preflight/002-block-00-latest-buy_and_hold-sma_cross-flat/limen/buy_and_hold/preflight/result/actual.npz",
+      "bytes": 150863,
+      "sha256": "65646e71394b678f2f93d40208a93e5fefc08af3906273789e6255a0b7d2cf98"
+    },
+    {
+      "path": "performance/paired-preflight/002-block-00-latest-buy_and_hold-sma_cross-flat/limen/buy_and_hold/preflight/result/oracle.npz",
+      "bytes": 292417,
+      "sha256": "5794585200f3b0548ab9cc79a3a5bcbec5934c0dbba52b90519eebe2bda0cc4a"
+    },
+    {
+      "path": "performance/paired-preflight/002-block-00-latest-buy_and_hold-sma_cross-flat/limen/flat/preflight/result/actual.npz",
+      "bytes": 150829,
+      "sha256": "bc7e960ebba89f552273158ac1992e36cc6d71716e60e7bdd87aa2ff538429a2"
+    },
+    {
+      "path": "performance/paired-preflight/002-block-00-latest-buy_and_hold-sma_cross-flat/limen/flat/preflight/result/oracle.npz",
+      "bytes": 292351,
+      "sha256": "50c6e7c124dabc3a756987f9e5c3bda6369d4d1ce1373f94c22140049d308d86"
+    },
+    {
+      "path": "performance/paired-preflight/002-block-00-latest-buy_and_hold-sma_cross-flat/limen/sma_cross/preflight/result/actual.npz",
+      "bytes": 151713,
+      "sha256": "8ad80b3bd4e366ca07a31f73966eeb1fc8d1b7566d7d82582f7db522aa6130af"
+    },
+    {
+      "path": "performance/paired-preflight/002-block-00-latest-buy_and_hold-sma_cross-flat/limen/sma_cross/preflight/result/oracle.npz",
+      "bytes": 294067,
+      "sha256": "ef3dad88768ddc54579d0e3bbc58514b378afbf183bdee2f8a9f6c205961e536"
+    },
+    {
+      "path": "performance/paired-preflight/002-block-00-latest-buy_and_hold-sma_cross-flat/prepared-buy_and_hold.npz",
+      "bytes": 511712,
+      "sha256": "0d7f3e9914beb1ec021bcaca04d90fcfa9792341278359a439080c7c86c1c2a0"
+    },
+    {
+      "path": "performance/paired-preflight/002-block-00-latest-buy_and_hold-sma_cross-flat/prepared-flat.npz",
+      "bytes": 511712,
+      "sha256": "bf19663a2343053e30a6c532126758b57aa464aedce283dadcf73d94adefcd40"
+    },
+    {
+      "path": "performance/paired-preflight/002-block-00-latest-buy_and_hold-sma_cross-flat/prepared-sma_cross.npz",
+      "bytes": 511712,
+      "sha256": "a4e10483b2e46a229340eaad6cbe38af40824a63b7ce39d11dee57b0045f5c5a"
+    }
+  ],
+  "purpose": "Preserve every binary performance input/output and compressed native round artifact without duplicating them as loose Git blobs. Extract within this update directory to restore original relative paths. Raw workspace files remain unchanged."
+}

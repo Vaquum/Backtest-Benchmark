@@ -1,0 +1,81 @@
+1/20 001-block-01-baseline-buy_and_hold
+Preflight limen/buy_and_hold
+Measure limen/buy_and_hold process 1/1
+/workspace/scratch/008a76ec4981/Backtest-Benchmark/updates/2026-10-29-limen/performance/paired-campaign/001-block-01-baseline-buy_and_hold/report.json
+2/20 002-block-01-latest-buy_and_hold
+Preflight limen/buy_and_hold
+Measure limen/buy_and_hold process 1/1
+/workspace/scratch/008a76ec4981/Backtest-Benchmark/updates/2026-10-29-limen/performance/paired-campaign/002-block-01-latest-buy_and_hold/report.json
+3/20 003-block-01-latest-sma_cross
+Preflight limen/sma_cross
+Measure limen/sma_cross process 1/1
+/workspace/scratch/008a76ec4981/Backtest-Benchmark/updates/2026-10-29-limen/performance/paired-campaign/003-block-01-latest-sma_cross/report.json
+4/20 004-block-01-baseline-sma_cross
+Preflight limen/sma_cross
+Measure limen/sma_cross process 1/1
+/workspace/scratch/008a76ec4981/Backtest-Benchmark/updates/2026-10-29-limen/performance/paired-campaign/004-block-01-baseline-sma_cross/report.json
+5/20 005-block-02-baseline-sma_cross
+Preflight limen/sma_cross
+Measure limen/sma_cross process 1/1
+/workspace/scratch/008a76ec4981/Backtest-Benchmark/updates/2026-10-29-limen/performance/paired-campaign/005-block-02-baseline-sma_cross/report.json
+6/20 006-block-02-latest-sma_cross
+Preflight limen/sma_cross
+Measure limen/sma_cross process 1/1
+/workspace/scratch/008a76ec4981/Backtest-Benchmark/updates/2026-10-29-limen/performance/paired-campaign/006-block-02-latest-sma_cross/report.json
+7/20 007-block-02-latest-buy_and_hold
+Preflight limen/buy_and_hold
+Measure limen/buy_and_hold process 1/1
+/workspace/scratch/008a76ec4981/Backtest-Benchmark/updates/2026-10-29-limen/performance/paired-campaign/007-block-02-latest-buy_and_hold/report.json
+8/20 008-block-02-baseline-buy_and_hold
+Preflight limen/buy_and_hold
+Measure limen/buy_and_hold process 1/1
+/workspace/scratch/008a76ec4981/Backtest-Benchmark/updates/2026-10-29-limen/performance/paired-campaign/008-block-02-baseline-buy_and_hold/report.json
+9/20 009-block-03-baseline-buy_and_hold
+Preflight limen/buy_and_hold
+Measure limen/buy_and_hold process 1/1
+/workspace/scratch/008a76ec4981/Backtest-Benchmark/updates/2026-10-29-limen/performance/paired-campaign/009-block-03-baseline-buy_and_hold/report.json
+10/20 010-block-03-latest-buy_and_hold
+Preflight limen/buy_and_hold
+Measure limen/buy_and_hold process 1/1
+/workspace/scratch/008a76ec4981/Backtest-Benchmark/updates/2026-10-29-limen/performance/paired-campaign/010-block-03-latest-buy_and_hold/report.json
+11/20 011-block-03-latest-sma_cross
+Preflight limen/sma_cross
+Measure limen/sma_cross process 1/1
+/workspace/scratch/008a76ec4981/Backtest-Benchmark/updates/2026-10-29-limen/performance/paired-campaign/011-block-03-latest-sma_cross/report.json
+12/20 012-block-03-baseline-sma_cross
+Preflight limen/sma_cross
+Measure limen/sma_cross process 1/1
+/workspace/scratch/008a76ec4981/Backtest-Benchmark/updates/2026-10-29-limen/performance/paired-campaign/012-block-03-baseline-sma_cross/report.json
+13/20 013-block-04-baseline-sma_cross
+Preflight limen/sma_cross
+Measure limen/sma_cross process 1/1
+/workspace/scratch/008a76ec4981/Backtest-Benchmark/updates/2026-10-29-limen/performance/paired-campaign/013-block-04-baseline-sma_cross/report.json
+14/20 014-block-04-latest-sma_cross
+Preflight limen/sma_cross
+Measure limen/sma_cross process 1/1
+/workspace/scratch/008a76ec4981/Backtest-Benchmark/updates/2026-10-29-limen/performance/paired-campaign/014-block-04-latest-sma_cross/report.json
+15/20 015-block-04-latest-buy_and_hold
+Preflight limen/buy_and_hold
+Measure limen/buy_and_hold process 1/1
+/workspace/scratch/008a76ec4981/Backtest-Benchmark/updates/2026-10-29-limen/performance/paired-campaign/015-block-04-latest-buy_and_hold/report.json
+16/20 016-block-04-baseline-buy_and_hold
+Preflight limen/buy_and_hold
+Measure limen/buy_and_hold process 1/1
+/workspace/scratch/008a76ec4981/Backtest-Benchmark/updates/2026-10-29-limen/performance/paired-campaign/016-block-04-baseline-buy_and_hold/report.json
+17/20 017-block-05-baseline-buy_and_hold
+Preflight limen/buy_and_hold
+Measure limen/buy_and_hold process 1/1
+/workspace/scratch/008a76ec4981/Backtest-Benchmark/updates/2026-10-29-limen/performance/paired-campaign/017-block-05-baseline-buy_and_hold/report.json
+18/20 018-block-05-latest-buy_and_hold
+Preflight limen/buy_and_hold
+Measure limen/buy_and_hold process 1/1
+/workspace/scratch/008a76ec4981/Backtest-Benchmark/updates/2026-10-29-limen/performance/paired-campaign/018-block-05-latest-buy_and_hold/report.json
+19/20 019-block-05-latest-sma_cross
+Preflight limen/sma_cross
+Measure limen/sma_cross process 1/1
+/workspace/scratch/008a76ec4981/Backtest-Benchmark/updates/2026-10-29-limen/performance/paired-campaign/019-block-05-latest-sma_cross/report.json
+20/20 020-block-05-baseline-sma_cross
+Preflight limen/sma_cross
+Measure limen/sma_cross process 1/1
+/workspace/scratch/008a76ec4981/Backtest-Benchmark/updates/2026-10-29-limen/performance/paired-campaign/020-block-05-baseline-sma_cross/report.json
+/workspace/scratch/008a76ec4981/Backtest-Benchmark/updates/2026-10-29-limen/performance/paired-campaign/paired_report.json

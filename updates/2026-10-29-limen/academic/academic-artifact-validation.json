@@ -1,0 +1,23 @@
+{
+  "scope": "Static artifact integrity, exact local pinned source-reference bounds and native execution receipt reconciliation; not an independent scientific-validity claim.",
+  "matrix_rows": 15,
+  "matrix_refs_checked": 133,
+  "narrative_refs_checked": 48,
+  "narrative_words_excluding_link_definitions": 2214,
+  "native_suite": "Completed; counts and module membership reconciled against native runtime profile and JUnit; no test rerun performed by this attachment step.",
+  "files": {
+    "academic_delta.json": "a33490cee3d17809ee67cc8ac7f6a69fbf6c382efe2a3953e3faa1248550f491",
+    "qualitative-review.md": "4b97656b80521ed05cf28b1fe6fcd1d440352ef52e543efee6df75e13b234c82",
+    "native-suite-academic-evidence.json": "f3ecf036a3bbc4d6235f7c5b2b3b6ecedfa3beffa4982645afd77cb14a0668ea"
+  },
+  "errors": [],
+  "native_suite_counts": {
+    "collected": 7391,
+    "executed": 7391,
+    "passed": 7388,
+    "failed": 0,
+    "skipped": 3
+  },
+  "mapped_distinct_modules": 58,
+  "mapped_distinct_tests": 1523
+}

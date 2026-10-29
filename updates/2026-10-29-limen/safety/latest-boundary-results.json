@@ -1,0 +1,456 @@
+{
+  "label": "latest",
+  "source_sha": "25e47866422d007da55cb19625344183599ba671",
+  "source_root": "/workspace/scratch/008a76ec4981/Limen",
+  "probe_sha256": "bca9fdff1f306bacca48b4ed8d0bdf4344cf7741aecb0b6e2845e4e5f41aa9e6",
+  "fixture_path": "tests/fixtures/spot_1h_20240101_20241231.parquet",
+  "fixture_sha256": "a634bbd4f3692fac7bc88512da588e7772f4bd1b749567606d5314e54d0adf72",
+  "python": "3.12.14 (main, Aug 25 2026, 14:00:49) [Clang 22.1.3 ]",
+  "executable": "/workspace/scratch/008a76ec4981/Backtest-Benchmark/.work/envs-latest/limen/bin/python",
+  "dependencies": {
+    "numpy": "2.2.6",
+    "polars": "1.44.2",
+    "scikit-learn": "1.9.1",
+    "ruamel.yaml": "0.18.17"
+  },
+  "thread_environment": {
+    "OMP_NUM_THREADS": "1",
+    "OPENBLAS_NUM_THREADS": "1",
+    "MKL_NUM_THREADS": "1",
+    "VECLIB_MAXIMUM_THREADS": "1",
+    "NUMEXPR_NUM_THREADS": "1",
+    "BLIS_NUM_THREADS": "1",
+    "RAYON_NUM_THREADS": "1",
+    "POLARS_MAX_THREADS": "1"
+  },
+  "resolver": {
+    "template_sha256": "0d60636159dfc94544fb95b46d0fcc1bce6b57f99c8b5d4b954bb0ca441cc7a3",
+    "lookup": {
+      "outcome": "raised",
+      "exception": "ResolutionError",
+      "message": "Cannot resolve 'limen.data.historical_data.os.system'. Allowed namespaces: limen.backtest, limen.calibration, limen.data, limen.experiment, limen.features, limen.indicators, limen.metrics, limen.scalers, limen.sfd.reference_architecture, limen.sfd.rule_based, limen.targets, limen.transforms"
+    },
+    "allowed_lookup": {
+      "outcome": "returned",
+      "result": {
+        "callable": true
+      }
+    },
+    "modified_manifest_valid": false,
+    "binding": {
+      "outcome": "raised",
+      "exception": "ResolutionError",
+      "message": "Cannot resolve 'limen.data.historical_data.os.system'. Allowed namespaces: limen.backtest, limen.calibration, limen.data, limen.experiment, limen.features, limen.indicators, limen.metrics, limen.scalers, limen.sfd.reference_architecture, limen.sfd.rule_based, limen.targets, limen.transforms"
+    },
+    "escaped_callable_invoked": false
+  },
+  "manifest_store": {
+    "template_sha256": "0d60636159dfc94544fb95b46d0fcc1bce6b57f99c8b5d4b954bb0ca441cc7a3",
+    "valid_idempotent_control": true,
+    "retained_filename_and_lineage_id": true,
+    "canonical_content_changed": true,
+    "full_uri": {
+      "outcome": "raised",
+      "exception": "ValueError",
+      "message": "Integrity check failed: '17c8f83859aa998b9652d9d043c485d6993ab7d27fef9a808312582571c50136.yaml' content does not match expected 'sha256:17c8f83859aa998b9652d9d043c485d6993ab7d27fef9a808312582571c50136'"
+    },
+    "short_uri": {
+      "outcome": "raised",
+      "exception": "ValueError",
+      "message": "Integrity check failed: '17c8f83859aa998b9652d9d043c485d6993ab7d27fef9a808312582571c50136.yaml' content does not match expected 'sha256:17c8f83859aa998b9652d9d043c485d6993ab7d27fef9a808312582571c50136'"
+    },
+    "commit_reuse": {
+      "outcome": "raised",
+      "exception": "ValueError",
+      "message": "Integrity check failed: '17c8f83859aa998b9652d9d043c485d6993ab7d27fef9a808312582571c50136.yaml' content does not match expected 'sha256:17c8f83859aa998b9652d9d043c485d6993ab7d27fef9a808312582571c50136'"
+    },
+    "stored_bytes_unchanged_after_checks": true,
+    "index_bytes_unchanged_after_checks": true,
+    "stored_mtime_unchanged_after_checks": true,
+    "index_mtime_unchanged_after_checks": true
+  },
+  "fractional_difference": {
+    "finite_recorded_controls": [
+      {
+        "d": 0.0,
+        "threshold": 0.2,
+        "matches_independent_short_formula": true
+      },
+      {
+        "d": 1.0,
+        "threshold": 0.2,
+        "matches_independent_short_formula": true
+      },
+      {
+        "d": 0.5,
+        "threshold": 0.2,
+        "matches_independent_short_formula": true
+      }
+    ],
+    "cases": [
+      {
+        "outcome": "external_deadline",
+        "returncode": -9,
+        "stdout_after_ready": "{\"outcome\": \"raised\", \"exception\": \"ValueError\", \"message\": \"fractional_diff d must be finite\"}\n",
+        "stderr": "",
+        "case": "public_nan_d",
+        "controls": {
+          "phase": "ready",
+          "address_space_limit_bytes": 1378324480,
+          "additional_virtual_bytes": 33554432
+        },
+        "execution_deadline_seconds": 0.35,
+        "elapsed_after_ready_seconds": 0.3739093389995105,
+        "child_reaped": true
+      },
+      {
+        "outcome": "external_deadline",
+        "returncode": -9,
+        "stdout_after_ready": "{\"outcome\": \"raised\", \"exception\": \"ValueError\", \"message\": \"fractional_diff threshold must be finite\"}\n",
+        "stderr": "",
+        "case": "public_nan_threshold",
+        "controls": {
+          "phase": "ready",
+          "address_space_limit_bytes": 1378373632,
+          "additional_virtual_bytes": 33554432
+        },
+        "execution_deadline_seconds": 0.35,
+        "elapsed_after_ready_seconds": 0.3738995599996997,
+        "child_reaped": true
+      },
+      {
+        "outcome": "external_deadline",
+        "returncode": -9,
+        "stdout_after_ready": "{\"outcome\": \"raised\", \"exception\": \"ValueError\", \"message\": \"fractional_diff threshold must be finite\"}\n",
+        "stderr": "",
+        "case": "public_zero_nan_threshold",
+        "controls": {
+          "phase": "ready",
+          "address_space_limit_bytes": 1311244288,
+          "additional_virtual_bytes": 33554432
+        },
+        "execution_deadline_seconds": 0.35,
+        "elapsed_after_ready_seconds": 0.3678106570005184,
+        "child_reaped": true
+      },
+      {
+        "outcome": "external_deadline",
+        "returncode": -9,
+        "stdout_after_ready": "{\"outcome\": \"raised\", \"exception\": \"ValueError\", \"message\": \"fractional_diff d must be finite and non-negative, got nan\"}\n",
+        "stderr": "",
+        "case": "private_nan_d",
+        "controls": {
+          "phase": "ready",
+          "address_space_limit_bytes": 1378385920,
+          "additional_virtual_bytes": 33554432
+        },
+        "execution_deadline_seconds": 0.35,
+        "elapsed_after_ready_seconds": 0.36534602100073243,
+        "child_reaped": true
+      },
+      {
+        "outcome": "external_deadline",
+        "returncode": -9,
+        "stdout_after_ready": "{\"outcome\": \"raised\", \"exception\": \"ValueError\", \"message\": \"fractional_diff weight must be finite, got inf at index 2\"}\n",
+        "stderr": "",
+        "case": "private_finite_overflow",
+        "controls": {
+          "phase": "ready",
+          "address_space_limit_bytes": 1378357248,
+          "additional_virtual_bytes": 33554432
+        },
+        "execution_deadline_seconds": 0.35,
+        "elapsed_after_ready_seconds": 0.36107441899912374,
+        "child_reaped": true
+      }
+    ],
+    "scope": "Nonfinite admission and overflow termination only; no bound claimed for all finite workloads."
+  },
+  "compiled_sensor": {
+    "fixture_rows": 8,
+    "cases": [
+      {
+        "case": "valid",
+        "model_call_row_counts": [
+          8,
+          1
+        ],
+        "batch_rows": 8,
+        "batch_reasons": [
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null
+        ],
+        "single": {
+          "datetime": "2024-01-01T07:00:00+00:00",
+          "prediction": 1.0,
+          "probability": 0.5,
+          "reason": null,
+          "available_at_ns": null,
+          "trade_contract_digest": null
+        },
+        "last_batch": {
+          "datetime": "2024-01-01T07:00:00+00:00",
+          "prediction": 1.0,
+          "probability": 0.5,
+          "reason": null,
+          "available_at_ns": null,
+          "trade_contract_digest": null
+        },
+        "recorded_datetime_alignment_preserved": true
+      },
+      {
+        "case": "valid_missing_probability",
+        "model_call_row_counts": [
+          8,
+          1
+        ],
+        "batch_rows": 8,
+        "batch_reasons": [
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null
+        ],
+        "single": {
+          "datetime": "2024-01-01T07:00:00+00:00",
+          "prediction": 1.0,
+          "probability": null,
+          "reason": null,
+          "available_at_ns": null,
+          "trade_contract_digest": null
+        },
+        "last_batch": {
+          "datetime": "2024-01-01T07:00:00+00:00",
+          "prediction": 1.0,
+          "probability": null,
+          "reason": null,
+          "available_at_ns": null,
+          "trade_contract_digest": null
+        },
+        "recorded_datetime_alignment_preserved": true
+      },
+      {
+        "case": "nan_prediction",
+        "model_call_row_counts": [
+          8,
+          1
+        ],
+        "batch_rows": 8,
+        "batch_reasons": [
+          "sensor-error",
+          "sensor-error",
+          "sensor-error",
+          "sensor-error",
+          "sensor-error",
+          "sensor-error",
+          "sensor-error",
+          "sensor-error"
+        ],
+        "single": {
+          "datetime": "2024-01-01T07:00:00+00:00",
+          "prediction": null,
+          "probability": null,
+          "reason": "sensor-error",
+          "available_at_ns": null,
+          "trade_contract_digest": null
+        },
+        "last_batch": {
+          "datetime": "2024-01-01T07:00:00+00:00",
+          "prediction": null,
+          "probability": null,
+          "reason": "sensor-error",
+          "available_at_ns": null,
+          "trade_contract_digest": null
+        },
+        "recorded_datetime_alignment_preserved": true
+      },
+      {
+        "case": "infinite_prediction",
+        "model_call_row_counts": [
+          8,
+          1
+        ],
+        "batch_rows": 8,
+        "batch_reasons": [
+          "sensor-error",
+          "sensor-error",
+          "sensor-error",
+          "sensor-error",
+          "sensor-error",
+          "sensor-error",
+          "sensor-error",
+          "sensor-error"
+        ],
+        "single": {
+          "datetime": "2024-01-01T07:00:00+00:00",
+          "prediction": null,
+          "probability": null,
+          "reason": "sensor-error",
+          "available_at_ns": null,
+          "trade_contract_digest": null
+        },
+        "last_batch": {
+          "datetime": "2024-01-01T07:00:00+00:00",
+          "prediction": null,
+          "probability": null,
+          "reason": "sensor-error",
+          "available_at_ns": null,
+          "trade_contract_digest": null
+        },
+        "recorded_datetime_alignment_preserved": true
+      },
+      {
+        "case": "nan_probability",
+        "model_call_row_counts": [
+          8,
+          1
+        ],
+        "batch_rows": 8,
+        "batch_reasons": [
+          "sensor-error",
+          "sensor-error",
+          "sensor-error",
+          "sensor-error",
+          "sensor-error",
+          "sensor-error",
+          "sensor-error",
+          "sensor-error"
+        ],
+        "single": {
+          "datetime": "2024-01-01T07:00:00+00:00",
+          "prediction": null,
+          "probability": null,
+          "reason": "sensor-error",
+          "available_at_ns": null,
+          "trade_contract_digest": null
+        },
+        "last_batch": {
+          "datetime": "2024-01-01T07:00:00+00:00",
+          "prediction": null,
+          "probability": null,
+          "reason": "sensor-error",
+          "available_at_ns": null,
+          "trade_contract_digest": null
+        },
+        "recorded_datetime_alignment_preserved": true
+      },
+      {
+        "case": "high_probability",
+        "model_call_row_counts": [
+          8,
+          1
+        ],
+        "batch_rows": 8,
+        "batch_reasons": [
+          "sensor-error",
+          "sensor-error",
+          "sensor-error",
+          "sensor-error",
+          "sensor-error",
+          "sensor-error",
+          "sensor-error",
+          "sensor-error"
+        ],
+        "single": {
+          "datetime": "2024-01-01T07:00:00+00:00",
+          "prediction": null,
+          "probability": null,
+          "reason": "sensor-error",
+          "available_at_ns": null,
+          "trade_contract_digest": null
+        },
+        "last_batch": {
+          "datetime": "2024-01-01T07:00:00+00:00",
+          "prediction": null,
+          "probability": null,
+          "reason": "sensor-error",
+          "available_at_ns": null,
+          "trade_contract_digest": null
+        },
+        "recorded_datetime_alignment_preserved": true
+      },
+      {
+        "case": "boolean_prediction",
+        "model_call_row_counts": [
+          8,
+          1
+        ],
+        "batch_rows": 8,
+        "batch_reasons": [
+          "sensor-error",
+          "sensor-error",
+          "sensor-error",
+          "sensor-error",
+          "sensor-error",
+          "sensor-error",
+          "sensor-error",
+          "sensor-error"
+        ],
+        "single": {
+          "datetime": "2024-01-01T07:00:00+00:00",
+          "prediction": null,
+          "probability": null,
+          "reason": "sensor-error",
+          "available_at_ns": null,
+          "trade_contract_digest": null
+        },
+        "last_batch": {
+          "datetime": "2024-01-01T07:00:00+00:00",
+          "prediction": null,
+          "probability": null,
+          "reason": "sensor-error",
+          "available_at_ns": null,
+          "trade_contract_digest": null
+        },
+        "recorded_datetime_alignment_preserved": true
+      },
+      {
+        "case": "boolean_probability",
+        "model_call_row_counts": [
+          8,
+          1
+        ],
+        "batch_rows": 8,
+        "batch_reasons": [
+          "sensor-error",
+          "sensor-error",
+          "sensor-error",
+          "sensor-error",
+          "sensor-error",
+          "sensor-error",
+          "sensor-error",
+          "sensor-error"
+        ],
+        "single": {
+          "datetime": "2024-01-01T07:00:00+00:00",
+          "prediction": null,
+          "probability": null,
+          "reason": "sensor-error",
+          "available_at_ns": null,
+          "trade_contract_digest": null
+        },
+        "last_batch": {
+          "datetime": "2024-01-01T07:00:00+00:00",
+          "prediction": null,
+          "probability": null,
+          "reason": "sensor-error",
+          "available_at_ns": null,
+          "trade_contract_digest": null
+        },
+        "recorded_datetime_alignment_preserved": true
+      }
+    ],
+    "scope": "Actual compiled Sensor predict/predict_all with native MLManifest preparation; explicitly synthetic invalid-output canaries, not learned forecasts or evaluation outcomes. No model fitting or quality claim."
+  },
+  "source_and_fixture_rechecked_after": true
+}

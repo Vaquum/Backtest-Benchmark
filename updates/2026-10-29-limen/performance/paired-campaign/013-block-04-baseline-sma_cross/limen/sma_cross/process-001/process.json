@@ -1,0 +1,39 @@
+{
+  "command": [
+    "/workspace/scratch/008a76ec4981/Backtest-Benchmark/.work/envs-baseline/limen/bin/python",
+    "-m",
+    "bench.worker",
+    "--engine",
+    "limen",
+    "--prepared",
+    "/workspace/scratch/008a76ec4981/Backtest-Benchmark/updates/2026-10-29-limen/performance/paired-campaign/013-block-04-baseline-sma_cross/prepared-sma_cross.npz",
+    "--prepared-sha256",
+    "a4e10483b2e46a229340eaad6cbe38af40824a63b7ce39d11dee57b0045f5c5a",
+    "--contract",
+    "/workspace/scratch/008a76ec4981/Backtest-Benchmark/updates/2026-10-29-limen/performance/paired-campaign/013-block-04-baseline-sma_cross/contract.json",
+    "--environment-manifest",
+    "/workspace/scratch/008a76ec4981/Backtest-Benchmark/updates/2026-10-29-limen/performance/runner/baseline/.work/manifests/limen.json",
+    "--output",
+    "/workspace/scratch/008a76ec4981/Backtest-Benchmark/updates/2026-10-29-limen/performance/paired-campaign/013-block-04-baseline-sma_cross/limen/sma_cross/process-001/result",
+    "--benchmark-code-manifest",
+    "/workspace/scratch/008a76ec4981/Backtest-Benchmark/updates/2026-10-29-limen/performance/paired-campaign/013-block-04-baseline-sma_cross/benchmark-code.json",
+    "--mode",
+    "measure",
+    "--warm-repeats",
+    "9",
+    "--diagnostic-core"
+  ],
+  "returncode": 0,
+  "timed_out": false,
+  "process_wall_ms": 1028.018879,
+  "launch_to_ready_ms": 30.17792,
+  "launch_to_first_valid_ms": 690.736395,
+  "parent_observed_events_ms": {
+    "ready": 30.17792,
+    "first_valid": 690.736395,
+    "complete": 972.066227
+  },
+  "stdout_path": "/workspace/scratch/008a76ec4981/Backtest-Benchmark/updates/2026-10-29-limen/performance/paired-campaign/013-block-04-baseline-sma_cross/limen/sma_cross/process-001/stdout.log",
+  "startup_scope": "Parent observed process launch to worker ready event, before scientific/engine imports; IPC scheduling is included",
+  "first_valid_scope": "Process launch through source verification, imports, input load, independent oracle, first engine call, extraction and successful parity"
+}

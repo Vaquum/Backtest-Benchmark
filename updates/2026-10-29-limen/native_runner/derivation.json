@@ -1,0 +1,13 @@
+{
+  "derived_from_benchmark_commit": "c88b14c50ee8e8ded1745a7da0d0a43f709dd9a5",
+  "source_files": {
+    "kit_common.py": "1cb2a61bc07d16fb49afb1511e2c7d35f3ab6a4c3683dc02a35cfd9b768b7796",
+    "run_selected_tests.py": "5e2e083a08ebc0849e9d149175b6155b7af069ab09b204d286a33c976a3d91c2"
+  },
+  "changes": [
+    "Explicitly pin latest source SHA; retain fixture/clean-tree/outside-git guards",
+    "Select all tests/ rather than the historical82module subset",
+    "Use native default4worker loadgroup/assert=plain mode",
+    "Enable native coverage proof worker receipts; allow isolated-environment pytest plugin discovery"
+  ]
+}
