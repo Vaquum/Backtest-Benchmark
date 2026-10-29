@@ -1,0 +1,631 @@
+{
+  "fixture_sha256": "a634bbd4f3692fac7bc88512da588e7772f4bd1b749567606d5314e54d0adf72",
+  "comparison": "Same current implementation with factorize=True; baseline disables only fitted-preparation reuse",
+  "thread_limits": {
+    "OMP_NUM_THREADS": "1",
+    "OPENBLAS_NUM_THREADS": "1",
+    "MKL_NUM_THREADS": "1",
+    "VECLIB_MAXIMUM_THREADS": "1",
+    "BLIS_NUM_THREADS": "1",
+    "POLARS_MAX_THREADS": "1"
+  },
+  "workers": 1,
+  "campaigns": {
+    "fresh_fitted_preparation": {
+      "case": "fresh_fitted_preparation",
+      "limen_version": "5.46.2",
+      "python": "3.12.14 (main, Aug 25 2026, 14:00:49) [Clang 22.1.3 ]",
+      "platform": "Linux-6.18.55-x86_64-with-glibc2.39",
+      "versions": {
+        "numpy": "2.2.6",
+        "polars": "1.44.2",
+        "sklearn": "1.9.1",
+        "lightgbm": "4.6.0"
+      },
+      "rounds": 48,
+      "stages": {
+        "target_fit": {
+          "calls": 24,
+          "seconds": 0.008205371999792987
+        },
+        "scaler_fit": {
+          "calls": 24,
+          "seconds": 0.26060298300035356
+        },
+        "preparation": {
+          "calls": 24,
+          "seconds": 2.5105340159971092
+        },
+        "model_fit": {
+          "calls": 24,
+          "seconds": 5.7985294299978705
+        },
+        "model_prediction": {
+          "calls": 24,
+          "seconds": 0.11829512699841871
+        }
+      },
+      "campaign_elapsed_seconds": 9.152950220001003,
+      "peak_process_rss_bytes": 378544128,
+      "scientific_digest_12dp": "60b95033a681ffc9eece56506b6760307700ba9ca93c6dc5b1e421bd22b58be6",
+      "component_digests_12dp": {
+        "columns": "91f3709b5d9c1fb4a682bbb983301f3e4867ada2fae3842b3d753d56068db69c",
+        "rows/recall": "f60b2aeadffe12632ccb362a5a48a14d512fcc9a625f96881609c542ffb108c6",
+        "rows/precision": "3feafee7e222757a73d61e20fbd4967a32338c2d064e3895f57b447d6676a6d6",
+        "rows/fpr": "dda16b5786ad820353dd084a32492c42cbcbb08e77245a3978186d85201ebf0f",
+        "rows/auc": "bade1f3680f1333c76e0337cfcfa0fe005455c7dc3f807b65dc37e9d9e4cf311",
+        "rows/accuracy": "b392ee8b058ad2e1ff0240c918e57099b5967a6ffd172889abc0ad3ed4d66207",
+        "rows/optimal_threshold": "75b9bc766c3af1732b0a97d402638e3982a50080941b8f9308b0362b9ffcd538",
+        "rows/val_score": "75b9bc766c3af1732b0a97d402638e3982a50080941b8f9308b0362b9ffcd538",
+        "rows/best_iteration": "3291b526a298ca8451585fbd28f3ead03c3f8a92e1534213604fc8afa2ed95de",
+        "rows/confusion_tp": "e41439533ad309dee196591e5dbaf7c4477fb6e3d245bfbc1880b369d368047f",
+        "rows/confusion_fp": "7ace10bd77231bdaa0a926c4db1431333caf617f649dae694f9920320d197555",
+        "rows/confusion_tn": "dac17f201805cc757d3fdcd17cb72498a6b6f43855e5c54d9a31846c8d259e3e",
+        "rows/confusion_fn": "9cf752b9040ea6824c0394df4dea7a3a9fb2d725629cd6164e07d52d353656de",
+        "rows/confusion_precision": "3feafee7e222757a73d61e20fbd4967a32338c2d064e3895f57b447d6676a6d6",
+        "rows/confusion_recall": "f60b2aeadffe12632ccb362a5a48a14d512fcc9a625f96881609c542ffb108c6",
+        "rows/confusion_tp_mean_return_pct": "6ff72bb12c0a33e50c4863d6dda30de032a9f1c2cd6842a421f5f66dc4613c61",
+        "rows/confusion_fp_mean_return_pct": "73ac1368479007e8b2c25902744d1998db596c586ee7c185995289e8655afe8f",
+        "rows/confusion_tn_mean_return_pct": "6bad42b1ee283e08a6f90dbeef6a9b431a8619b6523a87a1633cbb74a5c4d776",
+        "rows/confusion_fn_mean_return_pct": "58a9fc282cb0e198fbb040bb60d65d141a6154a898784b0cae05a511462728bb",
+        "rows/backtest_edge_bps_p5": "02a4a60f74f83ddffac959b6b6bbf7e02fe247cd04cd80f9f25fd0572e33cd58",
+        "rows/backtest_edge_bps_p50": "ab38ee56cdf7ce17a78d7ebab63bb12837c2653accc4b62754090af9173e4ff6",
+        "rows/backtest_edge_bps_p95": "feba3c5ac21fa21b21b5d1c81933ce354746abbb049f57d7499ed52ac71005fe",
+        "rows/backtest_pnl_bps_p5": "4d81fc4dae97ca7102ac90548682eb5a26f69a2d2659cb4a9b969e77f3baecde",
+        "rows/backtest_pnl_bps_p50": "ab38ee56cdf7ce17a78d7ebab63bb12837c2653accc4b62754090af9173e4ff6",
+        "rows/backtest_pnl_bps_p95": "c1fe93ee7cb811bb9cdf26045f506bf17fb76acd2f652ac230f1be8df7957393",
+        "rows/backtest_cost_bps_p5": "905399bbda8c02e942651d6c26fcec965c0774b2be4aa380a4cd035e2b7187b7",
+        "rows/backtest_cost_bps_p50": "ab38ee56cdf7ce17a78d7ebab63bb12837c2653accc4b62754090af9173e4ff6",
+        "rows/backtest_cost_bps_p95": "b5acf26fb7b4286c5143f7e5446845fd34789afc68375dd32e520688f7dc0664",
+        "rows/backtest_drawdown_bps_p5": "ce6ce361b8cd338e74761a9862474c6fa24b3618e3fa3b38af36b06b3e00bd87",
+        "rows/backtest_drawdown_bps_p50": "8e80611f8b21d3f49f4b4f8b32108951f1a9ef67167e0476e3e6e31b2bcbf562",
+        "rows/backtest_drawdown_bps_p95": "a0b469efe7e38454f46ddd47b96b49341c4c3aa3ce4a0899f29011dd9d719f63",
+        "rows/backtest_wins_per_bar": "20cfae9c55917da23c456e866900bc6ed2838b37e9c3dec88fa39cc634dc3720",
+        "rows/backtest_pnl_per_bar_bps": "08db86db68f1c5b2b066e97f8d1a33ac247ecfcbc67e4fc2bc3ba75609021c4c",
+        "rows/backtest_avg_win_bps": "e907562e7809dd6aba7d720b389361568eb33c31770724af44721b4b2e89a52a",
+        "rows/backtest_avg_loss_bps": "a5878740e07e5fb89f8013a0e42881856489266146184c8e01ce056e69e083f1",
+        "rows/backtest_cvar_95_pnl_bps": "222de8dcb540edba283ec7c4f275a02f7aa8f26bcd3e46faa47b1942e39f43e4",
+        "rows/backtest_trades_per_bar": "de9a65a403277b737177d1692e3ed9e85198993cb42fd0ba2e3b4434970a2e66",
+        "rows/backtest_inventory_per_bar": "caf48592224a197c84818f91fa1901f9cf26eeabbdff2b3e1eefc5687c46ab01",
+        "rows/backtest_cost_per_bar_bps": "7d75aad4b491b34e1b7cd0da589b9686528a84507d6473a7fcf2266938edc0c3",
+        "rows/_warnings": "a67fdca3e20ac87731b39ea78a13b3f79e871c35ee917fd1a28edc778166392f",
+        "rows/id": "38f7aefe0579be649140b26c9524d583eade5489a624749bce3c2636dbd82f75",
+        "rows/boosting_type": "1000ce10120acc386f4eefec13bc30c47c7bd28b8f0465b22f208a80bfde5691",
+        "rows/colsample_bytree": "39040fd81afca490992d1f7d2a365174f476479d4e27458784f27c6fcc4cb1d2",
+        "rows/deterministic": "f136514112a6bceefab02b7cd9f5dfd135ce5510422d7558f81f7ad05210ee30",
+        "rows/early_stopping_rounds": "ab38ee56cdf7ce17a78d7ebab63bb12837c2653accc4b62754090af9173e4ff6",
+        "rows/fee": "1d6a173011449e5694e7850aebe297b99209ed08a943cc2626a2480c19d169ce",
+        "rows/force_row_wise": "f136514112a6bceefab02b7cd9f5dfd135ce5510422d7558f81f7ad05210ee30",
+        "rows/learning_rate": "88810bdccccc5699ff274e8c1dcf2a0b3e99bda8397da2e9e1a0387605ce4b9f",
+        "rows/max_depth": "010aeb8802ccdb78d85c819e9ab731b0432d35a6c70de3c0e30233a67e358bdf",
+        "rows/n_estimators": "3291b526a298ca8451585fbd28f3ead03c3f8a92e1534213604fc8afa2ed95de",
+        "rows/n_jobs": "39040fd81afca490992d1f7d2a365174f476479d4e27458784f27c6fcc4cb1d2",
+        "rows/num_leaves": "c0d5862a3a920c94554444e7bb767849cb8e35ddc26cf141cf61b989cde1a98c",
+        "rows/random_state": "7e7e33588236826db35d7679b9d968a3f1b1378bff1fbfa3711229a72e33cc48",
+        "rows/subsample": "39040fd81afca490992d1f7d2a365174f476479d4e27458784f27c6fcc4cb1d2",
+        "rows/subsample_freq": "ab38ee56cdf7ce17a78d7ebab63bb12837c2653accc4b62754090af9173e4ff6",
+        "rows/verbosity": "6ae8f2a0ec4b7c82db1deeef7fe3f899846b5d1b99a8cb2ff0b32df26548a30b",
+        "rows/_id": "38f7aefe0579be649140b26c9524d583eade5489a624749bce3c2636dbd82f75",
+        "rows/_round_index": "ed83351ad6f859c8f57d70f0627e248472aadff6dbb82abd2fbf32e1d5a0fb37",
+        "rows/_injected": "9f51fd996fe0ccee9bd6c24b40fd9199c636ddd9fd9642362394866237276e92",
+        "rows/_generation_index": "ed83351ad6f859c8f57d70f0627e248472aadff6dbb82abd2fbf32e1d5a0fb37",
+        "rows/_search_strategy": "7474684c65abfe44e5974b99acefac3f22be894fe7a2e279b355ed7bc341dd5e",
+        "rows/strict_mode_error": "75b9bc766c3af1732b0a97d402638e3982a50080941b8f9308b0362b9ffcd538",
+        "rows/_convergence_warning": "9f51fd996fe0ccee9bd6c24b40fd9199c636ddd9fd9642362394866237276e92",
+        "round_data/round_id": "38f7aefe0579be649140b26c9524d583eade5489a624749bce3c2636dbd82f75",
+        "round_data/_round_index": "fff6f73fe9038f8c053eeb3088d374e364eae3d6f2e5311425fb6643e0281ce5",
+        "round_data/round_params": "f5ff57442039b7d2b16e6331a5e54c4e1d8110f26ee62ab70e310f479fc07c3e",
+        "round_data/alignment": "fdd62eb9d33f130612f0fb65d38fe540aa9e206cfc1e045bf00294048c5e584c",
+        "round_data/execution": "9c888e22666a251af315651921ea7e8d5c417c91fb06ef8f5a2f28ae844aad46",
+        "round_data/market": "929c4773e4f0d0ab2f016138cb4bd40c16542fc2a71a0911edb30ece6c8850a5",
+        "round_data/probs": "b86f5dab070e4888c948223135df1131d108c2990018c597bbd937f569fca0bf",
+        "round_data/optimal_threshold": "1f1194cab19c4970df19789a5d3b3deb3b22b8abd132b32641b20b167e1f220c",
+        "round_data/threshold_rule": "a749d998e35b658127a4a9b915b8f307962ae94dce56dd76c0a9c8158fce54fa",
+        "metadata/sfd_module": "eebf82b2e898e5850aea263231ec6124f2141381f22fc457d7d631a9b1facee7",
+        "metadata/record_execution": "b15e5dc2d0858d7d9f2afcad8bf251f5b807810b68219e7ebcc645cb09c2474c",
+        "metadata/record_model_outputs": "b15e5dc2d0858d7d9f2afcad8bf251f5b807810b68219e7ebcc645cb09c2474c",
+        "metadata/recording": "06badceef71a863a489333c3948ab60f9320745d853ffcd424ea789fa55a4714"
+      },
+      "native_pools": [
+        {
+          "user_api": "blas",
+          "internal_api": "openblas",
+          "num_threads": 1,
+          "prefix": "libscipy_openblas",
+          "filepath": "/workspace/scratch/008a76ec4981/Backtest-Benchmark/.work/envs-latest/limen/lib/python3.12/site-packages/numpy.libs/libscipy_openblas64_-56d6093b.so",
+          "version": "0.3.29",
+          "threading_layer": "pthreads",
+          "architecture": "SkylakeX"
+        },
+        {
+          "user_api": "blas",
+          "internal_api": "openblas",
+          "num_threads": 1,
+          "prefix": "libscipy_openblas",
+          "filepath": "/workspace/scratch/008a76ec4981/Backtest-Benchmark/.work/envs-latest/limen/lib/python3.12/site-packages/scipy.libs/libscipy_openblas-5f890258.so",
+          "version": "0.3.31.dev",
+          "threading_layer": "pthreads",
+          "architecture": "SkylakeX"
+        },
+        {
+          "user_api": "openmp",
+          "internal_api": "openmp",
+          "num_threads": 1,
+          "prefix": "libgomp",
+          "filepath": "/workspace/scratch/008a76ec4981/Backtest-Benchmark/.work/envs-latest/limen/lib/python3.12/site-packages/scikit_learn.libs/libgomp-e985bcbb.so.1.0.0",
+          "version": null
+        },
+        {
+          "user_api": "openmp",
+          "internal_api": "openmp",
+          "num_threads": 1,
+          "prefix": "libgomp",
+          "filepath": "/usr/lib/x86_64-linux-gnu/libgomp.so.1.0.0",
+          "version": null
+        }
+      ],
+      "configuration": {
+        "schema_version": "1.0",
+        "metadata": {
+          "name": "factorized_preparation_benchmark",
+          "limen_version": "5.46.2",
+          "mode": "development",
+          "description": "Recorded fitted-preparation comparison within factorize=True"
+        },
+        "sfd": {
+          "manifest": {
+            "type": "ml",
+            "data_source": {
+              "method": "limen.data.HistoricalData.get_any_file",
+              "params": {
+                "file_path_or_url": "/workspace/scratch/008a76ec4981/Limen/tests/fixtures/spot_1h_20240101_20241231.parquet"
+              }
+            },
+            "split_dates": {
+              "train_start": "2024-01-01",
+              "train_end": "2024-08-31",
+              "val_start": "2024-09-01",
+              "val_end": "2024-09-30",
+              "test_start": "2024-10-01",
+              "test_end": "2024-10-31"
+            },
+            "indicators": [
+              {
+                "func": "limen.indicators.window_return",
+                "params": {
+                  "period": 1
+                }
+              }
+            ],
+            "features": [
+              {
+                "func": "limen.features.lag_range",
+                "params": {
+                  "col": "ret_1",
+                  "start": 0,
+                  "end": 192
+                }
+              }
+            ],
+            "target": {
+              "name": "up_next",
+              "class": "limen.targets.QuantileBinaryTarget",
+              "fit_params": {
+                "source_column": "ret_1",
+                "quantile": 0.5
+              },
+              "transform_params": {
+                "shift": -1
+              }
+            },
+            "scaler": {
+              "class": "limen.scalers.RobustScaler"
+            },
+            "strict_mode": true,
+            "reference_architecture": "limen.sfd.reference_architecture.lightgbm_binary.lightgbm_binary",
+            "backtest": {
+              "fee_bps": "{fee}",
+              "slip_bps": 2.0,
+              "notional_rate": 1.0
+            }
+          },
+          "params": {
+            "learning_rate": [
+              0.025,
+              0.030000000000000002,
+              0.035,
+              0.04,
+              0.045,
+              0.05,
+              0.055,
+              0.060000000000000005,
+              0.065,
+              0.07,
+              0.07500000000000001,
+              0.08,
+              0.08499999999999999,
+              0.09,
+              0.095,
+              0.1,
+              0.10500000000000001,
+              0.11000000000000001,
+              0.11499999999999999,
+              0.12,
+              0.125,
+              0.13,
+              0.135,
+              0.14
+            ],
+            "n_estimators": [
+              8
+            ],
+            "num_leaves": [
+              7
+            ],
+            "max_depth": [
+              4
+            ],
+            "early_stopping_rounds": [
+              0
+            ],
+            "random_state": [
+              42
+            ],
+            "n_jobs": [
+              1
+            ],
+            "verbosity": [
+              -1
+            ],
+            "deterministic": [
+              true
+            ],
+            "force_row_wise": [
+              true
+            ],
+            "boosting_type": [
+              "gbdt"
+            ],
+            "subsample_freq": [
+              0
+            ],
+            "subsample": [
+              1.0
+            ],
+            "colsample_bytree": [
+              1.0
+            ],
+            "fee": [
+              3.0,
+              12.0
+            ]
+          }
+        },
+        "uel": {
+          "n_permutations": 48,
+          "search_strategy": {
+            "type": "grid"
+          },
+          "factorize": true,
+          "prep_each_round": true,
+          "checkpoint_interval": 1000,
+          "feedback_interval": 1000,
+          "record_execution": true,
+          "record_model_outputs": true
+        }
+      },
+      "end_to_end_seconds": 14.679944900999544,
+      "rounds_per_second": 3.269767040932948
+    },
+    "reuse_fitted_preparation": {
+      "case": "reuse_fitted_preparation",
+      "limen_version": "5.46.2",
+      "python": "3.12.14 (main, Aug 25 2026, 14:00:49) [Clang 22.1.3 ]",
+      "platform": "Linux-6.18.55-x86_64-with-glibc2.39",
+      "versions": {
+        "numpy": "2.2.6",
+        "polars": "1.44.2",
+        "sklearn": "1.9.1",
+        "lightgbm": "4.6.0"
+      },
+      "rounds": 48,
+      "stages": {
+        "target_fit": {
+          "calls": 1,
+          "seconds": 0.00028854199990746565
+        },
+        "scaler_fit": {
+          "calls": 1,
+          "seconds": 0.00707800199961639
+        },
+        "preparation": {
+          "calls": 24,
+          "seconds": 2.0069083019989193
+        },
+        "model_fit": {
+          "calls": 24,
+          "seconds": 5.324475228004303
+        },
+        "model_prediction": {
+          "calls": 24,
+          "seconds": 0.11081635100345011
+        }
+      },
+      "campaign_elapsed_seconds": 8.126039811000737,
+      "peak_process_rss_bytes": 377077760,
+      "scientific_digest_12dp": "60b95033a681ffc9eece56506b6760307700ba9ca93c6dc5b1e421bd22b58be6",
+      "component_digests_12dp": {
+        "columns": "91f3709b5d9c1fb4a682bbb983301f3e4867ada2fae3842b3d753d56068db69c",
+        "rows/recall": "f60b2aeadffe12632ccb362a5a48a14d512fcc9a625f96881609c542ffb108c6",
+        "rows/precision": "3feafee7e222757a73d61e20fbd4967a32338c2d064e3895f57b447d6676a6d6",
+        "rows/fpr": "dda16b5786ad820353dd084a32492c42cbcbb08e77245a3978186d85201ebf0f",
+        "rows/auc": "bade1f3680f1333c76e0337cfcfa0fe005455c7dc3f807b65dc37e9d9e4cf311",
+        "rows/accuracy": "b392ee8b058ad2e1ff0240c918e57099b5967a6ffd172889abc0ad3ed4d66207",
+        "rows/optimal_threshold": "75b9bc766c3af1732b0a97d402638e3982a50080941b8f9308b0362b9ffcd538",
+        "rows/val_score": "75b9bc766c3af1732b0a97d402638e3982a50080941b8f9308b0362b9ffcd538",
+        "rows/best_iteration": "3291b526a298ca8451585fbd28f3ead03c3f8a92e1534213604fc8afa2ed95de",
+        "rows/confusion_tp": "e41439533ad309dee196591e5dbaf7c4477fb6e3d245bfbc1880b369d368047f",
+        "rows/confusion_fp": "7ace10bd77231bdaa0a926c4db1431333caf617f649dae694f9920320d197555",
+        "rows/confusion_tn": "dac17f201805cc757d3fdcd17cb72498a6b6f43855e5c54d9a31846c8d259e3e",
+        "rows/confusion_fn": "9cf752b9040ea6824c0394df4dea7a3a9fb2d725629cd6164e07d52d353656de",
+        "rows/confusion_precision": "3feafee7e222757a73d61e20fbd4967a32338c2d064e3895f57b447d6676a6d6",
+        "rows/confusion_recall": "f60b2aeadffe12632ccb362a5a48a14d512fcc9a625f96881609c542ffb108c6",
+        "rows/confusion_tp_mean_return_pct": "6ff72bb12c0a33e50c4863d6dda30de032a9f1c2cd6842a421f5f66dc4613c61",
+        "rows/confusion_fp_mean_return_pct": "73ac1368479007e8b2c25902744d1998db596c586ee7c185995289e8655afe8f",
+        "rows/confusion_tn_mean_return_pct": "6bad42b1ee283e08a6f90dbeef6a9b431a8619b6523a87a1633cbb74a5c4d776",
+        "rows/confusion_fn_mean_return_pct": "58a9fc282cb0e198fbb040bb60d65d141a6154a898784b0cae05a511462728bb",
+        "rows/backtest_edge_bps_p5": "02a4a60f74f83ddffac959b6b6bbf7e02fe247cd04cd80f9f25fd0572e33cd58",
+        "rows/backtest_edge_bps_p50": "ab38ee56cdf7ce17a78d7ebab63bb12837c2653accc4b62754090af9173e4ff6",
+        "rows/backtest_edge_bps_p95": "feba3c5ac21fa21b21b5d1c81933ce354746abbb049f57d7499ed52ac71005fe",
+        "rows/backtest_pnl_bps_p5": "4d81fc4dae97ca7102ac90548682eb5a26f69a2d2659cb4a9b969e77f3baecde",
+        "rows/backtest_pnl_bps_p50": "ab38ee56cdf7ce17a78d7ebab63bb12837c2653accc4b62754090af9173e4ff6",
+        "rows/backtest_pnl_bps_p95": "c1fe93ee7cb811bb9cdf26045f506bf17fb76acd2f652ac230f1be8df7957393",
+        "rows/backtest_cost_bps_p5": "905399bbda8c02e942651d6c26fcec965c0774b2be4aa380a4cd035e2b7187b7",
+        "rows/backtest_cost_bps_p50": "ab38ee56cdf7ce17a78d7ebab63bb12837c2653accc4b62754090af9173e4ff6",
+        "rows/backtest_cost_bps_p95": "b5acf26fb7b4286c5143f7e5446845fd34789afc68375dd32e520688f7dc0664",
+        "rows/backtest_drawdown_bps_p5": "ce6ce361b8cd338e74761a9862474c6fa24b3618e3fa3b38af36b06b3e00bd87",
+        "rows/backtest_drawdown_bps_p50": "8e80611f8b21d3f49f4b4f8b32108951f1a9ef67167e0476e3e6e31b2bcbf562",
+        "rows/backtest_drawdown_bps_p95": "a0b469efe7e38454f46ddd47b96b49341c4c3aa3ce4a0899f29011dd9d719f63",
+        "rows/backtest_wins_per_bar": "20cfae9c55917da23c456e866900bc6ed2838b37e9c3dec88fa39cc634dc3720",
+        "rows/backtest_pnl_per_bar_bps": "08db86db68f1c5b2b066e97f8d1a33ac247ecfcbc67e4fc2bc3ba75609021c4c",
+        "rows/backtest_avg_win_bps": "e907562e7809dd6aba7d720b389361568eb33c31770724af44721b4b2e89a52a",
+        "rows/backtest_avg_loss_bps": "a5878740e07e5fb89f8013a0e42881856489266146184c8e01ce056e69e083f1",
+        "rows/backtest_cvar_95_pnl_bps": "222de8dcb540edba283ec7c4f275a02f7aa8f26bcd3e46faa47b1942e39f43e4",
+        "rows/backtest_trades_per_bar": "de9a65a403277b737177d1692e3ed9e85198993cb42fd0ba2e3b4434970a2e66",
+        "rows/backtest_inventory_per_bar": "caf48592224a197c84818f91fa1901f9cf26eeabbdff2b3e1eefc5687c46ab01",
+        "rows/backtest_cost_per_bar_bps": "7d75aad4b491b34e1b7cd0da589b9686528a84507d6473a7fcf2266938edc0c3",
+        "rows/_warnings": "a67fdca3e20ac87731b39ea78a13b3f79e871c35ee917fd1a28edc778166392f",
+        "rows/id": "38f7aefe0579be649140b26c9524d583eade5489a624749bce3c2636dbd82f75",
+        "rows/boosting_type": "1000ce10120acc386f4eefec13bc30c47c7bd28b8f0465b22f208a80bfde5691",
+        "rows/colsample_bytree": "39040fd81afca490992d1f7d2a365174f476479d4e27458784f27c6fcc4cb1d2",
+        "rows/deterministic": "f136514112a6bceefab02b7cd9f5dfd135ce5510422d7558f81f7ad05210ee30",
+        "rows/early_stopping_rounds": "ab38ee56cdf7ce17a78d7ebab63bb12837c2653accc4b62754090af9173e4ff6",
+        "rows/fee": "1d6a173011449e5694e7850aebe297b99209ed08a943cc2626a2480c19d169ce",
+        "rows/force_row_wise": "f136514112a6bceefab02b7cd9f5dfd135ce5510422d7558f81f7ad05210ee30",
+        "rows/learning_rate": "88810bdccccc5699ff274e8c1dcf2a0b3e99bda8397da2e9e1a0387605ce4b9f",
+        "rows/max_depth": "010aeb8802ccdb78d85c819e9ab731b0432d35a6c70de3c0e30233a67e358bdf",
+        "rows/n_estimators": "3291b526a298ca8451585fbd28f3ead03c3f8a92e1534213604fc8afa2ed95de",
+        "rows/n_jobs": "39040fd81afca490992d1f7d2a365174f476479d4e27458784f27c6fcc4cb1d2",
+        "rows/num_leaves": "c0d5862a3a920c94554444e7bb767849cb8e35ddc26cf141cf61b989cde1a98c",
+        "rows/random_state": "7e7e33588236826db35d7679b9d968a3f1b1378bff1fbfa3711229a72e33cc48",
+        "rows/subsample": "39040fd81afca490992d1f7d2a365174f476479d4e27458784f27c6fcc4cb1d2",
+        "rows/subsample_freq": "ab38ee56cdf7ce17a78d7ebab63bb12837c2653accc4b62754090af9173e4ff6",
+        "rows/verbosity": "6ae8f2a0ec4b7c82db1deeef7fe3f899846b5d1b99a8cb2ff0b32df26548a30b",
+        "rows/_id": "38f7aefe0579be649140b26c9524d583eade5489a624749bce3c2636dbd82f75",
+        "rows/_round_index": "ed83351ad6f859c8f57d70f0627e248472aadff6dbb82abd2fbf32e1d5a0fb37",
+        "rows/_injected": "9f51fd996fe0ccee9bd6c24b40fd9199c636ddd9fd9642362394866237276e92",
+        "rows/_generation_index": "ed83351ad6f859c8f57d70f0627e248472aadff6dbb82abd2fbf32e1d5a0fb37",
+        "rows/_search_strategy": "7474684c65abfe44e5974b99acefac3f22be894fe7a2e279b355ed7bc341dd5e",
+        "rows/strict_mode_error": "75b9bc766c3af1732b0a97d402638e3982a50080941b8f9308b0362b9ffcd538",
+        "rows/_convergence_warning": "9f51fd996fe0ccee9bd6c24b40fd9199c636ddd9fd9642362394866237276e92",
+        "round_data/round_id": "38f7aefe0579be649140b26c9524d583eade5489a624749bce3c2636dbd82f75",
+        "round_data/_round_index": "fff6f73fe9038f8c053eeb3088d374e364eae3d6f2e5311425fb6643e0281ce5",
+        "round_data/round_params": "f5ff57442039b7d2b16e6331a5e54c4e1d8110f26ee62ab70e310f479fc07c3e",
+        "round_data/alignment": "fdd62eb9d33f130612f0fb65d38fe540aa9e206cfc1e045bf00294048c5e584c",
+        "round_data/execution": "9c888e22666a251af315651921ea7e8d5c417c91fb06ef8f5a2f28ae844aad46",
+        "round_data/market": "929c4773e4f0d0ab2f016138cb4bd40c16542fc2a71a0911edb30ece6c8850a5",
+        "round_data/probs": "b86f5dab070e4888c948223135df1131d108c2990018c597bbd937f569fca0bf",
+        "round_data/optimal_threshold": "1f1194cab19c4970df19789a5d3b3deb3b22b8abd132b32641b20b167e1f220c",
+        "round_data/threshold_rule": "a749d998e35b658127a4a9b915b8f307962ae94dce56dd76c0a9c8158fce54fa",
+        "metadata/sfd_module": "eebf82b2e898e5850aea263231ec6124f2141381f22fc457d7d631a9b1facee7",
+        "metadata/record_execution": "b15e5dc2d0858d7d9f2afcad8bf251f5b807810b68219e7ebcc645cb09c2474c",
+        "metadata/record_model_outputs": "b15e5dc2d0858d7d9f2afcad8bf251f5b807810b68219e7ebcc645cb09c2474c",
+        "metadata/recording": "06badceef71a863a489333c3948ab60f9320745d853ffcd424ea789fa55a4714"
+      },
+      "native_pools": [
+        {
+          "user_api": "blas",
+          "internal_api": "openblas",
+          "num_threads": 1,
+          "prefix": "libscipy_openblas",
+          "filepath": "/workspace/scratch/008a76ec4981/Backtest-Benchmark/.work/envs-latest/limen/lib/python3.12/site-packages/numpy.libs/libscipy_openblas64_-56d6093b.so",
+          "version": "0.3.29",
+          "threading_layer": "pthreads",
+          "architecture": "SkylakeX"
+        },
+        {
+          "user_api": "blas",
+          "internal_api": "openblas",
+          "num_threads": 1,
+          "prefix": "libscipy_openblas",
+          "filepath": "/workspace/scratch/008a76ec4981/Backtest-Benchmark/.work/envs-latest/limen/lib/python3.12/site-packages/scipy.libs/libscipy_openblas-5f890258.so",
+          "version": "0.3.31.dev",
+          "threading_layer": "pthreads",
+          "architecture": "SkylakeX"
+        },
+        {
+          "user_api": "openmp",
+          "internal_api": "openmp",
+          "num_threads": 1,
+          "prefix": "libgomp",
+          "filepath": "/workspace/scratch/008a76ec4981/Backtest-Benchmark/.work/envs-latest/limen/lib/python3.12/site-packages/scikit_learn.libs/libgomp-e985bcbb.so.1.0.0",
+          "version": null
+        },
+        {
+          "user_api": "openmp",
+          "internal_api": "openmp",
+          "num_threads": 1,
+          "prefix": "libgomp",
+          "filepath": "/usr/lib/x86_64-linux-gnu/libgomp.so.1.0.0",
+          "version": null
+        }
+      ],
+      "configuration": {
+        "schema_version": "1.0",
+        "metadata": {
+          "name": "factorized_preparation_benchmark",
+          "limen_version": "5.46.2",
+          "mode": "development",
+          "description": "Recorded fitted-preparation comparison within factorize=True"
+        },
+        "sfd": {
+          "manifest": {
+            "type": "ml",
+            "data_source": {
+              "method": "limen.data.HistoricalData.get_any_file",
+              "params": {
+                "file_path_or_url": "/workspace/scratch/008a76ec4981/Limen/tests/fixtures/spot_1h_20240101_20241231.parquet"
+              }
+            },
+            "split_dates": {
+              "train_start": "2024-01-01",
+              "train_end": "2024-08-31",
+              "val_start": "2024-09-01",
+              "val_end": "2024-09-30",
+              "test_start": "2024-10-01",
+              "test_end": "2024-10-31"
+            },
+            "indicators": [
+              {
+                "func": "limen.indicators.window_return",
+                "params": {
+                  "period": 1
+                }
+              }
+            ],
+            "features": [
+              {
+                "func": "limen.features.lag_range",
+                "params": {
+                  "col": "ret_1",
+                  "start": 0,
+                  "end": 192
+                }
+              }
+            ],
+            "target": {
+              "name": "up_next",
+              "class": "limen.targets.QuantileBinaryTarget",
+              "fit_params": {
+                "source_column": "ret_1",
+                "quantile": 0.5
+              },
+              "transform_params": {
+                "shift": -1
+              }
+            },
+            "scaler": {
+              "class": "limen.scalers.RobustScaler"
+            },
+            "strict_mode": true,
+            "reference_architecture": "limen.sfd.reference_architecture.lightgbm_binary.lightgbm_binary",
+            "backtest": {
+              "fee_bps": "{fee}",
+              "slip_bps": 2.0,
+              "notional_rate": 1.0
+            }
+          },
+          "params": {
+            "learning_rate": [
+              0.025,
+              0.030000000000000002,
+              0.035,
+              0.04,
+              0.045,
+              0.05,
+              0.055,
+              0.060000000000000005,
+              0.065,
+              0.07,
+              0.07500000000000001,
+              0.08,
+              0.08499999999999999,
+              0.09,
+              0.095,
+              0.1,
+              0.10500000000000001,
+              0.11000000000000001,
+              0.11499999999999999,
+              0.12,
+              0.125,
+              0.13,
+              0.135,
+              0.14
+            ],
+            "n_estimators": [
+              8
+            ],
+            "num_leaves": [
+              7
+            ],
+            "max_depth": [
+              4
+            ],
+            "early_stopping_rounds": [
+              0
+            ],
+            "random_state": [
+              42
+            ],
+            "n_jobs": [
+              1
+            ],
+            "verbosity": [
+              -1
+            ],
+            "deterministic": [
+              true
+            ],
+            "force_row_wise": [
+              true
+            ],
+            "boosting_type": [
+              "gbdt"
+            ],
+            "subsample_freq": [
+              0
+            ],
+            "subsample": [
+              1.0
+            ],
+            "colsample_bytree": [
+              1.0
+            ],
+            "fee": [
+              3.0,
+              12.0
+            ]
+          }
+        },
+        "uel": {
+          "n_permutations": 48,
+          "search_strategy": {
+            "type": "grid"
+          },
+          "factorize": true,
+          "prep_each_round": true,
+          "checkpoint_interval": 1000,
+          "feedback_interval": 1000,
+          "record_execution": true,
+          "record_model_outputs": true
+        }
+      },
+      "end_to_end_seconds": 13.11047854500066,
+      "rounds_per_second": 3.6611935891770746
+    }
+  },
+  "end_to_end_speedup": 1.1197108366877546,
+  "faster_on_this_workload": true,
+  "total_elapsed_seconds": 27.791771981999773,
+  "scientific_outputs_equal_at_12dp": true
+}

@@ -1,0 +1,87 @@
+{
+  "status": "passed",
+  "scope": "Independent standard-library interpretation of retained JSON: source/fixture/runner identities, completion, recorded pool observations, call admission flags, aggregate arithmetic and ratio separation. No engine import, timing or re-evaluation of raw equity.",
+  "report_sha256": "43c4130be7280e138cbfc42550d1f8479735f1c02832a3fa886cbe3dbb962741",
+  "preregistration_sha256": "818e677a98ac254500b140676249548d94497c4b2a64c30f7785f02001204b0f",
+  "checker_sha256": "ab9a77eeb994dd052f3399c1b412ae742739b00184c93fae7929c0b84eeb80d3",
+  "commands_checked": 20,
+  "counts": {
+    "preflight_workers": 20,
+    "full_timed_calls": 200,
+    "core_diagnostic_calls": 200,
+    "measurement_workers": 20
+  },
+  "aggregate_rows": [
+    {
+      "variant": "baseline",
+      "strategy": "buy_and_hold",
+      "warm_median_ms": 2.511363,
+      "first_median_ms": 2.869959,
+      "checked_aggregate_fields": 18
+    },
+    {
+      "variant": "baseline",
+      "strategy": "sma_cross",
+      "warm_median_ms": 2.135285,
+      "first_median_ms": 2.491598,
+      "checked_aggregate_fields": 18
+    },
+    {
+      "variant": "latest",
+      "strategy": "buy_and_hold",
+      "warm_median_ms": 2.273964,
+      "first_median_ms": 2.60934,
+      "checked_aggregate_fields": 18
+    },
+    {
+      "variant": "latest",
+      "strategy": "sma_cross",
+      "warm_median_ms": 2.046498,
+      "first_median_ms": 2.479566,
+      "checked_aggregate_fields": 18
+    }
+  ],
+  "comparisons": [
+    {
+      "strategy": "buy_and_hold",
+      "latest_over_baseline_warm_full_common_duration": 0.9054700574946752,
+      "scope": "Same-host paired revisions only; no cross-date or competitor ratio"
+    },
+    {
+      "strategy": "sma_cross",
+      "latest_over_baseline_warm_full_common_duration": 0.9584191337456124,
+      "scope": "Same-host paired revisions only; no cross-date or competitor ratio"
+    }
+  ],
+  "result_array_digests_by_strategy": {
+    "buy_and_hold": [
+      "6d1813fa00aa009ee03818809d76fddfffce4edc22592391f663ef912668c4ff"
+    ],
+    "sma_cross": [
+      "c9b5be398715b8e3b6249eb01aab57f2a7b5e7e532f3940edda68122e4edb415"
+    ]
+  },
+  "observation_limit": "Cash, units, fill quantities and fill fees are unobserved by this adapter. Metadata checks do not add those observations.",
+  "child_report_sha256": {
+    "001-block-01-baseline-buy_and_hold/report.json": "dcf5b72d5df74032ffadf2f971329350173e54b16fe6329c81328ddf87c42814",
+    "002-block-01-latest-buy_and_hold/report.json": "7a88438ae91299969165154bdb42d6681c58f69985c2b856bc6e61881cc9e234",
+    "003-block-01-latest-sma_cross/report.json": "7a9a4cbeb9b9690afa99168961f47c07fcfd044a13080821acd206a70ea8b7af",
+    "004-block-01-baseline-sma_cross/report.json": "d4794d9620b956f37868b61251ee4e772d6cc8a6f96068272b0414a8f6049bdb",
+    "005-block-02-baseline-sma_cross/report.json": "7eebf5d9b48271622739f682c230fc7b2d175b231381711bbd1c99b266f8b99c",
+    "006-block-02-latest-sma_cross/report.json": "c7eab360f6b549c2a65a6c37f215006bc9078b1de24ede71b4ebb220bad2c8b0",
+    "007-block-02-latest-buy_and_hold/report.json": "695c62b0f45388a5610f3a4a4d7b5682ae71d2ddadfb109b144438c10efd94f3",
+    "008-block-02-baseline-buy_and_hold/report.json": "a709a811944a0ba720d6f5b3422f0c7233123f9d598d588f73227cb6eefeafa1",
+    "009-block-03-baseline-buy_and_hold/report.json": "e55694d737640f5475734d332fdbedfc0e51800fae89f9b1b3a4d9073e021327",
+    "010-block-03-latest-buy_and_hold/report.json": "5ef17c3ef6af3b9e5f4f5596a90936c5ca23ecf05dd320abfe71ff7c77b0363f",
+    "011-block-03-latest-sma_cross/report.json": "c8d97a993029c5ef3317ccd59dec486242e39c42f1410d8fb744aaea4ba491bb",
+    "012-block-03-baseline-sma_cross/report.json": "7f0ce8b6cdc3690d92fee2b2bb736ba3c8bca598b70c7bec13ab693cbf5ebd6d",
+    "013-block-04-baseline-sma_cross/report.json": "722e29474d97d3fe35873533c5c88b4e69185d400dd385f413a936883f65602b",
+    "014-block-04-latest-sma_cross/report.json": "89f3fc6a89d6fd60fa1742c17eaaaaa09883e7652c8d2615d5f611c2f49418f7",
+    "015-block-04-latest-buy_and_hold/report.json": "8dac17a653a2ae469382fb942b5ee4628fefb4a391bc5ef32efb3537c982a5d3",
+    "016-block-04-baseline-buy_and_hold/report.json": "43c7388f964c1c58bb2553819320f67bb2bd80d68ff317a927a6dbe3dfdfda7a",
+    "017-block-05-baseline-buy_and_hold/report.json": "b28b4d514f559969a1a487b7d3ba721502c1ad3043cfa8d3849e344c5ed7dd56",
+    "018-block-05-latest-buy_and_hold/report.json": "5f8b26fe94e9cb657f720cca25770ddc6e0ca06e9fb1ed2e1f146709b87523a3",
+    "019-block-05-latest-sma_cross/report.json": "e37d7e92e2f747dbd439cf23006164c06c36a5ff7e300f37554a0117aba749d0",
+    "020-block-05-baseline-sma_cross/report.json": "faf79f82b2081935d527a308ea00f9cec889a22fce3ef5183bc98da2acdcbdef"
+  }
+}

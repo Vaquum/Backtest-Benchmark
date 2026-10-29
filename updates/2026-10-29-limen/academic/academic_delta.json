@@ -1,0 +1,1952 @@
+{
+  "baseline_commit": "29837e666604eee74a2ac94f328fb9803724342a",
+  "latest_commit": "25e47866422d007da55cb19625344183599ba671",
+  "behavioral_source_policy": "Executable source/config/tests and retained executed probes only; docs, comments and release narratives are not behavior evidence.",
+  "criteria": [
+    {
+      "candidate_id": "limen",
+      "criterion_id": "A01",
+      "criterion": "Causal predictor invariance",
+      "baseline_status": "Fails",
+      "latest_status": "Partial",
+      "movement": "Demonstrated local defect repaired",
+      "evidence_type": [
+        "Inspected",
+        "Reproduced",
+        "Tested"
+      ],
+      "applicability": "native",
+      "capability": "implemented",
+      "scope": "Information available at each historical decision: native features and indicators, point-in-time data access, callback inputs, and batch versus successive-prefix inference.",
+      "finding": "The five quantile-line end-event features now use quantiles from lines completed through each row, in both include_research_only modes. The independent rerun on the original recorded fixture reproduced baseline changes in 173 of 192 rows at q=0.7 and 138 of 192 rows at q=0.8, versus zero at the latest revision for both flags. Latest historical values matched 160 scalar values from frozen-baseline available-prefix final rows at relative and absolute tolerance 1e-12. Ordinary price_lines and q=0 controls changed zero rows in both revisions.",
+      "limitation": "This closes the named batch-feature defect, not general feature causality. active_quantile_count remains deliberately retrospective and defaults to being included when the flag is omitted. Arbitrary feature callables and pre-split selectors remain trusted. The measured counts describe one recorded fixture/configuration, not population defect rates.",
+      "baseline_finding": "Reproduced within-split lookahead in quantile_price_lines: 173 of 192 existing rows changed after extending to 384 rows. Both control configurations changed zero rows. Failed independent probe on quantile_price_lines; no generic causal enforcement.",
+      "source_refs": [
+        {
+          "path": "limen/features/quantile_price_lines.py",
+          "start_line": 108,
+          "end_line": 158,
+          "url": "https://github.com/Vaquum/Limen/blob/25e47866422d007da55cb19625344183599ba671/limen/features/quantile_price_lines.py#L108-L158"
+        },
+        {
+          "path": "limen/features/quantile_price_lines.py",
+          "start_line": 186,
+          "end_line": 241,
+          "url": "https://github.com/Vaquum/Limen/blob/25e47866422d007da55cb19625344183599ba671/limen/features/quantile_price_lines.py#L186-L241"
+        },
+        {
+          "path": "limen/experiment/manifest_core.py",
+          "start_line": 1866,
+          "end_line": 1883,
+          "url": "https://github.com/Vaquum/Limen/blob/25e47866422d007da55cb19625344183599ba671/limen/experiment/manifest_core.py#L1866-L1883"
+        },
+        {
+          "path": "tests/test_quantile_line_causality.py",
+          "start_line": 10,
+          "end_line": 55,
+          "url": "https://github.com/Vaquum/Limen/blob/25e47866422d007da55cb19625344183599ba671/tests/test_quantile_line_causality.py#L10-L55"
+        }
+      ],
+      "baseline_source_refs": [
+        {
+          "path": "limen/features/quantile_price_lines.py",
+          "start_line": 146,
+          "end_line": 189,
+          "url": "https://github.com/Vaquum/Limen/blob/29837e666604eee74a2ac94f328fb9803724342a/limen/features/quantile_price_lines.py#L146-L189"
+        },
+        {
+          "path": "limen/sfd/foundational_sfd/lightgbm_binary.py",
+          "start_line": 82,
+          "end_line": 103,
+          "url": "https://github.com/Vaquum/Limen/blob/29837e666604eee74a2ac94f328fb9803724342a/limen/sfd/foundational_sfd/lightgbm_binary.py#L82-L103"
+        },
+        {
+          "path": "limen/features/__init__.py",
+          "start_line": 62,
+          "end_line": 70,
+          "url": "https://github.com/Vaquum/Limen/blob/29837e666604eee74a2ac94f328fb9803724342a/limen/features/__init__.py#L62-L70"
+        },
+        {
+          "path": "tests/test_feature_causality.py",
+          "start_line": 17,
+          "end_line": 57,
+          "url": "https://github.com/Vaquum/Limen/blob/29837e666604eee74a2ac94f328fb9803724342a/tests/test_feature_causality.py#L17-L57"
+        }
+      ],
+      "native_test_modules": [
+        "tests/test_quantile_line_causality.py",
+        "tests/test_feature_causality.py",
+        "tests/test_feature_library_context.py",
+        "tests/test_line_performance.py"
+      ],
+      "native_test_execution": "Executed in the admitted complete native Linux suite: 101 passed tests across 4 mapped modules; zero failed or skipped in these modules. Module totals overlap across criteria and are not independent-oracle counts.",
+      "native_test_evidence": {
+        "receipt": "native-suite-academic-evidence.json",
+        "profile_source_sha256": "b1e2db97814882c2ad728acefa2d3a66cd0e6147f4a8cba452766e3473c718de",
+        "modules": [
+          {
+            "module": "tests/test_quantile_line_causality.py",
+            "test_count": 26,
+            "passed": 26,
+            "failed": 0,
+            "skipped": 0
+          },
+          {
+            "module": "tests/test_feature_causality.py",
+            "test_count": 13,
+            "passed": 13,
+            "failed": 0,
+            "skipped": 0
+          },
+          {
+            "module": "tests/test_feature_library_context.py",
+            "test_count": 15,
+            "passed": 15,
+            "failed": 0,
+            "skipped": 0
+          },
+          {
+            "module": "tests/test_line_performance.py",
+            "test_count": 47,
+            "passed": 47,
+            "failed": 0,
+            "skipped": 0
+          }
+        ],
+        "passed_test_count": 101,
+        "failed_test_count": 0,
+        "skipped_test_count": 0,
+        "scope": "Entire mapped modules in the complete native suite. Counts establish execution membership, not assertion-level coverage of every criterion or independent empirical validity."
+      }
+    },
+    {
+      "candidate_id": "limen",
+      "criterion_id": "A02",
+      "criterion": "Training and evaluation isolation",
+      "baseline_status": "Partial",
+      "latest_status": "Partial",
+      "movement": "Stronger admission and consumed-input evidence; generic isolation limit remains",
+      "evidence_type": [
+        "Inspected",
+        "Tested"
+      ],
+      "applicability": "native",
+      "capability": "implemented",
+      "scope": "Separation of fitting, selection, calibration, and evaluation observations for native or explicitly supplied adapter models, including online portfolio estimators.",
+      "finding": "Preparation still splits raw input before feature and fitted-transform processing. New dated-split admission rejects declared positive windows that become empty, and protected research now binds consumed inputs, source support and preparation ownership before model fitting. New raw-window linked models reject outer learned scaling/PCA rather than silently using it inside inner prediction folds.",
+      "limitation": "The pre-split selector still receives the admitted complete research frame; arbitrary feature functions and architecture callbacks are not proven causal. Protected source/input checks establish identity and declared support, not universal semantic correctness of user code.",
+      "baseline_finding": "Native path splits raw input first and fits preprocessing on training data. Custom callbacks and a pre-split selector can see broader data; no universal isolation guarantee. Implemented for built-in split-first and fitted preprocessing; caller-dependent for custom functions.",
+      "source_refs": [
+        {
+          "path": "limen/experiment/manifest_core.py",
+          "start_line": 1866,
+          "end_line": 1883,
+          "url": "https://github.com/Vaquum/Limen/blob/25e47866422d007da55cb19625344183599ba671/limen/experiment/manifest_core.py#L1866-L1883"
+        },
+        {
+          "path": "limen/experiment/manifest_core.py",
+          "start_line": 1012,
+          "end_line": 1068,
+          "url": "https://github.com/Vaquum/Limen/blob/25e47866422d007da55cb19625344183599ba671/limen/experiment/manifest_core.py#L1012-L1068"
+        },
+        {
+          "path": "limen/experiment/_holdout_sources.py",
+          "start_line": 184,
+          "end_line": 218,
+          "url": "https://github.com/Vaquum/Limen/blob/25e47866422d007da55cb19625344183599ba671/limen/experiment/_holdout_sources.py#L184-L218"
+        },
+        {
+          "path": "limen/sfd/reference_architecture/feature_link_binary.py",
+          "start_line": 50,
+          "end_line": 85,
+          "url": "https://github.com/Vaquum/Limen/blob/25e47866422d007da55cb19625344183599ba671/limen/sfd/reference_architecture/feature_link_binary.py#L50-L85"
+        },
+        {
+          "path": "limen/experiment/_manifest_preparation.py",
+          "start_line": 21,
+          "end_line": 41,
+          "url": "https://github.com/Vaquum/Limen/blob/25e47866422d007da55cb19625344183599ba671/limen/experiment/_manifest_preparation.py#L21-L41"
+        }
+      ],
+      "baseline_source_refs": [
+        {
+          "path": "limen/experiment/manifest_core.py",
+          "start_line": 1888,
+          "end_line": 1907,
+          "url": "https://github.com/Vaquum/Limen/blob/29837e666604eee74a2ac94f328fb9803724342a/limen/experiment/manifest_core.py#L1888-L1907"
+        },
+        {
+          "path": "limen/experiment/manifest_core.py",
+          "start_line": 1647,
+          "end_line": 1658,
+          "url": "https://github.com/Vaquum/Limen/blob/29837e666604eee74a2ac94f328fb9803724342a/limen/experiment/manifest_core.py#L1647-L1658"
+        },
+        {
+          "path": "limen/experiment/manifest_core.py",
+          "start_line": 1693,
+          "end_line": 1714,
+          "url": "https://github.com/Vaquum/Limen/blob/29837e666604eee74a2ac94f328fb9803724342a/limen/experiment/manifest_core.py#L1693-L1714"
+        },
+        {
+          "path": "tests/test_walk_forward_uel.py",
+          "start_line": 289,
+          "end_line": 363,
+          "url": "https://github.com/Vaquum/Limen/blob/29837e666604eee74a2ac94f328fb9803724342a/tests/test_walk_forward_uel.py#L289-L363"
+        }
+      ],
+      "native_test_modules": [
+        "tests/test_manifest_prepare_data.py",
+        "tests/test_dated_split_admission.py",
+        "tests/test_source_binding_admission.py",
+        "tests/test_fitted_binding_admission.py",
+        "tests/test_feature_link.py",
+        "tests/test_weight_link.py"
+      ],
+      "native_test_execution": "Executed in the admitted complete native Linux suite: 285 passed tests across 6 mapped modules; zero failed or skipped in these modules. Module totals overlap across criteria and are not independent-oracle counts.",
+      "native_test_evidence": {
+        "receipt": "native-suite-academic-evidence.json",
+        "profile_source_sha256": "b1e2db97814882c2ad728acefa2d3a66cd0e6147f4a8cba452766e3473c718de",
+        "modules": [
+          {
+            "module": "tests/test_manifest_prepare_data.py",
+            "test_count": 32,
+            "passed": 32,
+            "failed": 0,
+            "skipped": 0
+          },
+          {
+            "module": "tests/test_dated_split_admission.py",
+            "test_count": 45,
+            "passed": 45,
+            "failed": 0,
+            "skipped": 0
+          },
+          {
+            "module": "tests/test_source_binding_admission.py",
+            "test_count": 108,
+            "passed": 108,
+            "failed": 0,
+            "skipped": 0
+          },
+          {
+            "module": "tests/test_fitted_binding_admission.py",
+            "test_count": 90,
+            "passed": 90,
+            "failed": 0,
+            "skipped": 0
+          },
+          {
+            "module": "tests/test_feature_link.py",
+            "test_count": 5,
+            "passed": 5,
+            "failed": 0,
+            "skipped": 0
+          },
+          {
+            "module": "tests/test_weight_link.py",
+            "test_count": 5,
+            "passed": 5,
+            "failed": 0,
+            "skipped": 0
+          }
+        ],
+        "passed_test_count": 285,
+        "failed_test_count": 0,
+        "skipped_test_count": 0,
+        "scope": "Entire mapped modules in the complete native suite. Counts establish execution membership, not assertion-level coverage of every criterion or independent empirical validity."
+      }
+    },
+    {
+      "candidate_id": "limen",
+      "criterion_id": "A03",
+      "criterion": "Label availability and censoring",
+      "baseline_status": "Partial",
+      "latest_status": "Partial",
+      "movement": "Broader explicit availability support",
+      "evidence_type": [
+        "Inspected",
+        "Tested"
+      ],
+      "applicability": "native",
+      "capability": "implemented",
+      "scope": "Availability and censoring of forward labels, event-completion outcomes, and any targets consumed by a fitted decision rule.",
+      "finding": "Native formed bars now recover contiguous raw constituents, verify their OHLC aggregation and assign decision availability from the latest constituent availability. New linked classifiers require NextBarUpTarget and a declared regular observation interval; inner fits only consume labels completed by the first prediction decision. Allocation outcomes additionally retain actual close/label availability and censor outcomes open at the opening block boundary.",
+      "limitation": "These are scoped native contracts. They do not derive arbitrary custom-target availability or automatically set generic walk-forward purge/embargo from every target horizon. Row-gap controls remain different from actual outcome-completion times.",
+      "baseline_finding": "Built-in shifted labels are censored within splits; trade labels expose availability. Custom label horizons and availability require explicit verification. Partial: split-local forward-label censoring and explicit trade-label availability; caller-supplied label semantics unverified.",
+      "source_refs": [
+        {
+          "path": "limen/experiment/_prepare_trade_context.py",
+          "start_line": 105,
+          "end_line": 138,
+          "url": "https://github.com/Vaquum/Limen/blob/25e47866422d007da55cb19625344183599ba671/limen/experiment/_prepare_trade_context.py#L105-L138"
+        },
+        {
+          "path": "limen/sfd/reference_architecture/_chronological_link.py",
+          "start_line": 23,
+          "end_line": 59,
+          "url": "https://github.com/Vaquum/Limen/blob/25e47866422d007da55cb19625344183599ba671/limen/sfd/reference_architecture/_chronological_link.py#L23-L59"
+        },
+        {
+          "path": "limen/experiment/_allocation_folds.py",
+          "start_line": 203,
+          "end_line": 222,
+          "url": "https://github.com/Vaquum/Limen/blob/25e47866422d007da55cb19625344183599ba671/limen/experiment/_allocation_folds.py#L203-L222"
+        },
+        {
+          "path": "limen/targets/_barrier_paths.py",
+          "start_line": 7,
+          "end_line": 29,
+          "url": "https://github.com/Vaquum/Limen/blob/25e47866422d007da55cb19625344183599ba671/limen/targets/_barrier_paths.py#L7-L29"
+        }
+      ],
+      "baseline_source_refs": [
+        {
+          "path": "limen/targets/next_return.py",
+          "start_line": 39,
+          "end_line": 42,
+          "url": "https://github.com/Vaquum/Limen/blob/29837e666604eee74a2ac94f328fb9803724342a/limen/targets/next_return.py#L39-L42"
+        },
+        {
+          "path": "limen/targets/next_bar_up.py",
+          "start_line": 34,
+          "end_line": 37,
+          "url": "https://github.com/Vaquum/Limen/blob/29837e666604eee74a2ac94f328fb9803724342a/limen/targets/next_bar_up.py#L34-L37"
+        },
+        {
+          "path": "limen/targets/tradeline_long_binary.py",
+          "start_line": 100,
+          "end_line": 120,
+          "url": "https://github.com/Vaquum/Limen/blob/29837e666604eee74a2ac94f328fb9803724342a/limen/targets/tradeline_long_binary.py#L100-L120"
+        },
+        {
+          "path": "limen/sfd/reference_architecture/direction_sizing.py",
+          "start_line": 61,
+          "end_line": 76,
+          "url": "https://github.com/Vaquum/Limen/blob/29837e666604eee74a2ac94f328fb9803724342a/limen/sfd/reference_architecture/direction_sizing.py#L61-L76"
+        }
+      ],
+      "native_test_modules": [
+        "tests/test_formed_bar_availability.py",
+        "tests/test_trade_outcome_reuse.py",
+        "tests/test_feature_link.py",
+        "tests/test_weight_link.py",
+        "tests/test_meta_allocation.py",
+        "tests/test_target_perturbations.py"
+      ],
+      "native_test_execution": "Executed in the admitted complete native Linux suite: 102 passed tests across 6 mapped modules; zero failed or skipped in these modules. Module totals overlap across criteria and are not independent-oracle counts.",
+      "native_test_evidence": {
+        "receipt": "native-suite-academic-evidence.json",
+        "profile_source_sha256": "b1e2db97814882c2ad728acefa2d3a66cd0e6147f4a8cba452766e3473c718de",
+        "modules": [
+          {
+            "module": "tests/test_formed_bar_availability.py",
+            "test_count": 25,
+            "passed": 25,
+            "failed": 0,
+            "skipped": 0
+          },
+          {
+            "module": "tests/test_trade_outcome_reuse.py",
+            "test_count": 22,
+            "passed": 22,
+            "failed": 0,
+            "skipped": 0
+          },
+          {
+            "module": "tests/test_feature_link.py",
+            "test_count": 5,
+            "passed": 5,
+            "failed": 0,
+            "skipped": 0
+          },
+          {
+            "module": "tests/test_weight_link.py",
+            "test_count": 5,
+            "passed": 5,
+            "failed": 0,
+            "skipped": 0
+          },
+          {
+            "module": "tests/test_meta_allocation.py",
+            "test_count": 26,
+            "passed": 26,
+            "failed": 0,
+            "skipped": 0
+          },
+          {
+            "module": "tests/test_target_perturbations.py",
+            "test_count": 19,
+            "passed": 19,
+            "failed": 0,
+            "skipped": 0
+          }
+        ],
+        "passed_test_count": 102,
+        "failed_test_count": 0,
+        "skipped_test_count": 0,
+        "scope": "Entire mapped modules in the complete native suite. Counts establish execution membership, not assertion-level coverage of every criterion or independent empirical validity."
+      }
+    },
+    {
+      "candidate_id": "limen",
+      "criterion_id": "A04",
+      "criterion": "Temporal split geometry",
+      "baseline_status": "Partial",
+      "latest_status": "Partial",
+      "movement": "Dated-boundary admission strengthened; fold geometry semantics retained",
+      "evidence_type": [
+        "Inspected",
+        "Tested"
+      ],
+      "applicability": "native",
+      "capability": "implemented",
+      "scope": "Temporal geometry of training, validation, calibration, final evaluation, and online estimation windows, including horizon-dependent purge and embargo where applicable.",
+      "finding": "Declared dated windows are checked at raw, formed and retained stages. Native hosted-bar endpoints must align with the declared interval grid. Walk-forward continues to use explicit ordered fold geometry and copied preparation; protected fold workflows now retain and reconstruct membership rather than being categorically rejected.",
+      "limitation": "The ordinary ratio splitter still slices current row order. Native endpoint admission is scoped to the recognized hosted source, and generic fold gaps are still configured rather than automatically inferred from arbitrary label/event support. Selection among folds adds selection opportunity.",
+      "baseline_finding": "Walk-forward enforces ordered timestamps, fold geometry and configured purge/embargo. Gaps are not generally derived automatically from target horizons. Implemented explicit walk-forward geometry; stronger validation than default positional splitter.",
+      "source_refs": [
+        {
+          "path": "limen/experiment/_manifest_preparation.py",
+          "start_line": 21,
+          "end_line": 65,
+          "url": "https://github.com/Vaquum/Limen/blob/25e47866422d007da55cb19625344183599ba671/limen/experiment/_manifest_preparation.py#L21-L65"
+        },
+        {
+          "path": "limen/experiment/manifest_core.py",
+          "start_line": 1899,
+          "end_line": 1910,
+          "url": "https://github.com/Vaquum/Limen/blob/25e47866422d007da55cb19625344183599ba671/limen/experiment/manifest_core.py#L1899-L1910"
+        },
+        {
+          "path": "limen/experiment/_walk_forward_run.py",
+          "start_line": 147,
+          "end_line": 169,
+          "url": "https://github.com/Vaquum/Limen/blob/25e47866422d007da55cb19625344183599ba671/limen/experiment/_walk_forward_run.py#L147-L169"
+        },
+        {
+          "path": "limen/experiment/_holdout_folds.py",
+          "start_line": 132,
+          "end_line": 178,
+          "url": "https://github.com/Vaquum/Limen/blob/25e47866422d007da55cb19625344183599ba671/limen/experiment/_holdout_folds.py#L132-L178"
+        }
+      ],
+      "baseline_source_refs": [
+        {
+          "path": "limen/data/utils/split_walk_forward.py",
+          "start_line": 48,
+          "end_line": 67,
+          "url": "https://github.com/Vaquum/Limen/blob/29837e666604eee74a2ac94f328fb9803724342a/limen/data/utils/split_walk_forward.py#L48-L67"
+        },
+        {
+          "path": "limen/experiment/_walk_forward_split.py",
+          "start_line": 63,
+          "end_line": 88,
+          "url": "https://github.com/Vaquum/Limen/blob/29837e666604eee74a2ac94f328fb9803724342a/limen/experiment/_walk_forward_split.py#L63-L88"
+        },
+        {
+          "path": "limen/data/utils/splits.py",
+          "start_line": 22,
+          "end_line": 44,
+          "url": "https://github.com/Vaquum/Limen/blob/29837e666604eee74a2ac94f328fb9803724342a/limen/data/utils/splits.py#L22-L44"
+        },
+        {
+          "path": "tests/test_walk_forward_contracts.py",
+          "start_line": 39,
+          "end_line": 103,
+          "url": "https://github.com/Vaquum/Limen/blob/29837e666604eee74a2ac94f328fb9803724342a/tests/test_walk_forward_contracts.py#L39-L103"
+        }
+      ],
+      "native_test_modules": [
+        "tests/test_dated_split_admission.py",
+        "tests/test_splits.py",
+        "tests/test_walk_forward_uel.py",
+        "tests/test_holdout_workflows.py",
+        "tests/test_fold_promotion.py"
+      ],
+      "native_test_execution": "Executed in the admitted complete native Linux suite: 235 passed tests across 5 mapped modules; zero failed or skipped in these modules. Module totals overlap across criteria and are not independent-oracle counts.",
+      "native_test_evidence": {
+        "receipt": "native-suite-academic-evidence.json",
+        "profile_source_sha256": "b1e2db97814882c2ad728acefa2d3a66cd0e6147f4a8cba452766e3473c718de",
+        "modules": [
+          {
+            "module": "tests/test_dated_split_admission.py",
+            "test_count": 45,
+            "passed": 45,
+            "failed": 0,
+            "skipped": 0
+          },
+          {
+            "module": "tests/test_splits.py",
+            "test_count": 51,
+            "passed": 51,
+            "failed": 0,
+            "skipped": 0
+          },
+          {
+            "module": "tests/test_walk_forward_uel.py",
+            "test_count": 33,
+            "passed": 33,
+            "failed": 0,
+            "skipped": 0
+          },
+          {
+            "module": "tests/test_holdout_workflows.py",
+            "test_count": 66,
+            "passed": 66,
+            "failed": 0,
+            "skipped": 0
+          },
+          {
+            "module": "tests/test_fold_promotion.py",
+            "test_count": 40,
+            "passed": 40,
+            "failed": 0,
+            "skipped": 0
+          }
+        ],
+        "passed_test_count": 235,
+        "failed_test_count": 0,
+        "skipped_test_count": 0,
+        "scope": "Entire mapped modules in the complete native suite. Counts establish execution membership, not assertion-level coverage of every criterion or independent empirical validity."
+      }
+    },
+    {
+      "candidate_id": "limen",
+      "criterion_id": "A05",
+      "criterion": "Fold-local preprocessing and stacking",
+      "baseline_status": "Enforced",
+      "latest_status": "Enforced",
+      "movement": "Named fold-local preprocessing strengthened",
+      "evidence_type": [
+        "Inspected",
+        "Tested"
+      ],
+      "applicability": "native",
+      "capability": "implemented",
+      "scope": "Locality of learned preprocessing, feature selection, covariance estimation, dimensionality reduction, stacked models, and out-of-fold predictions within their intended training windows.",
+      "finding": "The existing scoped fold-local refit control now includes automatic fractional-difference shims. Inner preparation selects history available before the prediction cutoff, refits the automatic shim, then fits scaler/PCA on retained training rows and applies frozen state to prediction rows. Original row identities and surviving row order are checked. New feature/weight-linked classifiers construct chronological out-of-fold upstream probabilities under a narrower raw-return contract.",
+      "limitation": "Enforced is retained only for the named native refit/availability paths. Raw feature functions were already computed before this layer; it does not prove every feature or custom nested pipeline causal. Automatic unsupervised shim fitting uses available historical feature observations, which need not be identical to the label-eligible supervised fit subset.",
+      "baseline_finding": "Walk-forward refits copied manifests per fold. Conditional stacking uses earlier completed labels and refits its scaler/PCA inside inner folds. Implemented locally with explicit availability purge.",
+      "source_refs": [
+        {
+          "path": "limen/experiment/_fold_preparation.py",
+          "start_line": 35,
+          "end_line": 48,
+          "url": "https://github.com/Vaquum/Limen/blob/25e47866422d007da55cb19625344183599ba671/limen/experiment/_fold_preparation.py#L35-L48"
+        },
+        {
+          "path": "limen/experiment/_fold_preparation.py",
+          "start_line": 65,
+          "end_line": 127,
+          "url": "https://github.com/Vaquum/Limen/blob/25e47866422d007da55cb19625344183599ba671/limen/experiment/_fold_preparation.py#L65-L127"
+        },
+        {
+          "path": "limen/sfd/reference_architecture/_chronological_link.py",
+          "start_line": 42,
+          "end_line": 59,
+          "url": "https://github.com/Vaquum/Limen/blob/25e47866422d007da55cb19625344183599ba671/limen/sfd/reference_architecture/_chronological_link.py#L42-L59"
+        },
+        {
+          "path": "limen/experiment/manifest_core.py",
+          "start_line": 1029,
+          "end_line": 1043,
+          "url": "https://github.com/Vaquum/Limen/blob/25e47866422d007da55cb19625344183599ba671/limen/experiment/manifest_core.py#L1029-L1043"
+        }
+      ],
+      "baseline_source_refs": [
+        {
+          "path": "limen/experiment/_walk_forward_run.py",
+          "start_line": 152,
+          "end_line": 165,
+          "url": "https://github.com/Vaquum/Limen/blob/29837e666604eee74a2ac94f328fb9803724342a/limen/experiment/_walk_forward_run.py#L152-L165"
+        },
+        {
+          "path": "limen/sfd/reference_architecture/direction_sizing.py",
+          "start_line": 163,
+          "end_line": 188,
+          "url": "https://github.com/Vaquum/Limen/blob/29837e666604eee74a2ac94f328fb9803724342a/limen/sfd/reference_architecture/direction_sizing.py#L163-L188"
+        },
+        {
+          "path": "limen/experiment/_prepare_trade_context.py",
+          "start_line": 306,
+          "end_line": 325,
+          "url": "https://github.com/Vaquum/Limen/blob/29837e666604eee74a2ac94f328fb9803724342a/limen/experiment/_prepare_trade_context.py#L306-L325"
+        }
+      ],
+      "native_test_modules": [
+        "tests/test_conditional_shims.py",
+        "tests/test_direction_sizing.py",
+        "tests/test_pca_matrix_contract.py",
+        "tests/test_transform_binding_admission.py",
+        "tests/test_feature_link.py",
+        "tests/test_weight_link.py"
+      ],
+      "native_test_execution": "Executed in the admitted complete native Linux suite: 125 passed tests across 6 mapped modules; zero failed or skipped in these modules. Module totals overlap across criteria and are not independent-oracle counts.",
+      "native_test_evidence": {
+        "receipt": "native-suite-academic-evidence.json",
+        "profile_source_sha256": "b1e2db97814882c2ad728acefa2d3a66cd0e6147f4a8cba452766e3473c718de",
+        "modules": [
+          {
+            "module": "tests/test_conditional_shims.py",
+            "test_count": 16,
+            "passed": 16,
+            "failed": 0,
+            "skipped": 0
+          },
+          {
+            "module": "tests/test_direction_sizing.py",
+            "test_count": 12,
+            "passed": 12,
+            "failed": 0,
+            "skipped": 0
+          },
+          {
+            "module": "tests/test_pca_matrix_contract.py",
+            "test_count": 50,
+            "passed": 50,
+            "failed": 0,
+            "skipped": 0
+          },
+          {
+            "module": "tests/test_transform_binding_admission.py",
+            "test_count": 37,
+            "passed": 37,
+            "failed": 0,
+            "skipped": 0
+          },
+          {
+            "module": "tests/test_feature_link.py",
+            "test_count": 5,
+            "passed": 5,
+            "failed": 0,
+            "skipped": 0
+          },
+          {
+            "module": "tests/test_weight_link.py",
+            "test_count": 5,
+            "passed": 5,
+            "failed": 0,
+            "skipped": 0
+          }
+        ],
+        "passed_test_count": 125,
+        "failed_test_count": 0,
+        "skipped_test_count": 0,
+        "scope": "Entire mapped modules in the complete native suite. Counts establish execution membership, not assertion-level coverage of every criterion or independent empirical validity."
+      }
+    },
+    {
+      "candidate_id": "limen",
+      "criterion_id": "A06",
+      "criterion": "Calibration and threshold selection",
+      "baseline_status": "Partial",
+      "latest_status": "Partial",
+      "movement": "Validation objective evidence now bound to actual decisions",
+      "evidence_type": [
+        "Inspected",
+        "Tested"
+      ],
+      "applicability": "native",
+      "capability": "implemented",
+      "scope": "Fitting and selecting probability calibrators, decision thresholds, and other policies that translate model or strategy outputs into actions.",
+      "finding": "Validation receipts verify the original ordered calibration inputs/labels, actual fitted-calibrator probabilities and selected-threshold decisions. The threshold adapter recomputes the chosen objective and requires that the chosen decision vector was actually evaluated. Explicit or fitted validation predictions are bound to original rows/source/prediction mode; objective plumbing accepts supported prediction interfaces rather than relying only on two native class identities.",
+      "limitation": "Calibration and threshold selection can still use the same validation observations. The optimized validation score is selection evidence, not an independent generalization estimate. Stable repeated predictions and byte/row bindings do not establish probability calibration. Arbitrary probability-to-decision mappings remain caller code.",
+      "baseline_finding": "Native calibration and threshold selection use validation data. Using the same validation sample for both is selection, not an independent performance estimate. Validation-only selection implemented; independent calibration assessment remains external.",
+      "source_refs": [
+        {
+          "path": "limen/experiment/_validation_calibration.py",
+          "start_line": 59,
+          "end_line": 105,
+          "url": "https://github.com/Vaquum/Limen/blob/25e47866422d007da55cb19625344183599ba671/limen/experiment/_validation_calibration.py#L59-L105"
+        },
+        {
+          "path": "limen/experiment/_objective_optimizer.py",
+          "start_line": 40,
+          "end_line": 77,
+          "url": "https://github.com/Vaquum/Limen/blob/25e47866422d007da55cb19625344183599ba671/limen/experiment/_objective_optimizer.py#L40-L77"
+        },
+        {
+          "path": "limen/experiment/_validation_decisions.py",
+          "start_line": 38,
+          "end_line": 102,
+          "url": "https://github.com/Vaquum/Limen/blob/25e47866422d007da55cb19625344183599ba671/limen/experiment/_validation_decisions.py#L38-L102"
+        },
+        {
+          "path": "limen/experiment/_objective.py",
+          "start_line": 131,
+          "end_line": 186,
+          "url": "https://github.com/Vaquum/Limen/blob/25e47866422d007da55cb19625344183599ba671/limen/experiment/_objective.py#L131-L186"
+        }
+      ],
+      "baseline_source_refs": [
+        {
+          "path": "limen/calibration/probability.py",
+          "start_line": 17,
+          "end_line": 42,
+          "url": "https://github.com/Vaquum/Limen/blob/29837e666604eee74a2ac94f328fb9803724342a/limen/calibration/probability.py#L17-L42"
+        },
+        {
+          "path": "limen/calibration/pipeline.py",
+          "start_line": 61,
+          "end_line": 69,
+          "url": "https://github.com/Vaquum/Limen/blob/29837e666604eee74a2ac94f328fb9803724342a/limen/calibration/pipeline.py#L61-L69"
+        },
+        {
+          "path": "limen/calibration/_objective_threshold.py",
+          "start_line": 18,
+          "end_line": 30,
+          "url": "https://github.com/Vaquum/Limen/blob/29837e666604eee74a2ac94f328fb9803724342a/limen/calibration/_objective_threshold.py#L18-L30"
+        },
+        {
+          "path": "limen/experiment/_objective.py",
+          "start_line": 86,
+          "end_line": 130,
+          "url": "https://github.com/Vaquum/Limen/blob/29837e666604eee74a2ac94f328fb9803724342a/limen/experiment/_objective.py#L86-L130"
+        }
+      ],
+      "native_test_modules": [
+        "tests/test_objective_admission.py",
+        "tests/test_objective_optimizer.py",
+        "tests/test_experiment_objective.py",
+        "tests/test_objective_yaml.py",
+        "tests/test_boolean_controls.py"
+      ],
+      "native_test_execution": "Executed in the admitted complete native Linux suite: 278 passed tests across 5 mapped modules; zero failed or skipped in these modules. Module totals overlap across criteria and are not independent-oracle counts.",
+      "native_test_evidence": {
+        "receipt": "native-suite-academic-evidence.json",
+        "profile_source_sha256": "b1e2db97814882c2ad728acefa2d3a66cd0e6147f4a8cba452766e3473c718de",
+        "modules": [
+          {
+            "module": "tests/test_objective_admission.py",
+            "test_count": 65,
+            "passed": 65,
+            "failed": 0,
+            "skipped": 0
+          },
+          {
+            "module": "tests/test_objective_optimizer.py",
+            "test_count": 33,
+            "passed": 33,
+            "failed": 0,
+            "skipped": 0
+          },
+          {
+            "module": "tests/test_experiment_objective.py",
+            "test_count": 18,
+            "passed": 18,
+            "failed": 0,
+            "skipped": 0
+          },
+          {
+            "module": "tests/test_objective_yaml.py",
+            "test_count": 29,
+            "passed": 29,
+            "failed": 0,
+            "skipped": 0
+          },
+          {
+            "module": "tests/test_boolean_controls.py",
+            "test_count": 133,
+            "passed": 133,
+            "failed": 0,
+            "skipped": 0
+          }
+        ],
+        "passed_test_count": 278,
+        "failed_test_count": 0,
+        "skipped_test_count": 0,
+        "scope": "Entire mapped modules in the complete native suite. Counts establish execution membership, not assertion-level coverage of every criterion or independent empirical validity."
+      }
+    },
+    {
+      "candidate_id": "limen",
+      "criterion_id": "A07",
+      "criterion": "Metric definitions and aggregation",
+      "baseline_status": "Partial",
+      "latest_status": "Partial",
+      "movement": "Some applicability/output semantics tightened; aggregation limitation remains",
+      "evidence_type": [
+        "Inspected",
+        "Tested"
+      ],
+      "applicability": "native",
+      "capability": "implemented",
+      "scope": "Definitions, units, numerical edge cases, and aggregation of prediction, execution, portfolio, risk, and statistical summary metrics.",
+      "finding": "Results now distinguish inappropriate confusion/classification surfaces and protect framework bookkeeping from metric/parameter collisions. The new EntropyVaR model reports explicitly computed pinball loss and violation rate. Core walk-forward aggregation still takes the arithmetic mean of finite per-fold numeric results.",
+      "limitation": "Averaged fold returns are not pooled compounded returns; averaged counts are not a pooled confusion matrix. Finite-only averaging can omit unavailable folds. New risk/tail metrics are implementations of named quantities, not evidence that their nominal coverage is calibrated.",
+      "baseline_finding": "Explicit metric implementations exist, but finite fold results are averaged arithmetically. balanced_metric means precision times square root of positive prediction rate. Implemented with materially different conventions requiring normalization.",
+      "source_refs": [
+        {
+          "path": "limen/experiment/_walk_forward_run.py",
+          "start_line": 109,
+          "end_line": 123,
+          "url": "https://github.com/Vaquum/Limen/blob/25e47866422d007da55cb19625344183599ba671/limen/experiment/_walk_forward_run.py#L109-L123"
+        },
+        {
+          "path": "limen/experiment/_result_fields.py",
+          "start_line": 14,
+          "end_line": 49,
+          "url": "https://github.com/Vaquum/Limen/blob/25e47866422d007da55cb19625344183599ba671/limen/experiment/_result_fields.py#L14-L49"
+        },
+        {
+          "path": "limen/sfd/reference_architecture/entropy_var_regressor.py",
+          "start_line": 86,
+          "end_line": 97,
+          "url": "https://github.com/Vaquum/Limen/blob/25e47866422d007da55cb19625344183599ba671/limen/sfd/reference_architecture/entropy_var_regressor.py#L86-L97"
+        },
+        {
+          "path": "limen/log/_permutation_confusion_metrics.py",
+          "start_line": 137,
+          "end_line": 146,
+          "url": "https://github.com/Vaquum/Limen/blob/25e47866422d007da55cb19625344183599ba671/limen/log/_permutation_confusion_metrics.py#L137-L146"
+        }
+      ],
+      "baseline_source_refs": [
+        {
+          "path": "limen/metrics/binary_metrics.py",
+          "start_line": 53,
+          "end_line": 64,
+          "url": "https://github.com/Vaquum/Limen/blob/29837e666604eee74a2ac94f328fb9803724342a/limen/metrics/binary_metrics.py#L53-L64"
+        },
+        {
+          "path": "limen/experiment/_walk_forward_run.py",
+          "start_line": 107,
+          "end_line": 121,
+          "url": "https://github.com/Vaquum/Limen/blob/29837e666604eee74a2ac94f328fb9803724342a/limen/experiment/_walk_forward_run.py#L107-L121"
+        },
+        {
+          "path": "limen/experiment/_walk_forward_run.py",
+          "start_line": 58,
+          "end_line": 73,
+          "url": "https://github.com/Vaquum/Limen/blob/29837e666604eee74a2ac94f328fb9803724342a/limen/experiment/_walk_forward_run.py#L58-L73"
+        },
+        {
+          "path": "limen/metrics/balanced_metric.py",
+          "start_line": 39,
+          "end_line": 45,
+          "url": "https://github.com/Vaquum/Limen/blob/29837e666604eee74a2ac94f328fb9803724342a/limen/metrics/balanced_metric.py#L39-L45"
+        }
+      ],
+      "native_test_modules": [
+        "tests/test_confusion_applicability.py",
+        "tests/test_inline_metrics.py",
+        "tests/test_snapshot_prediction_kind.py",
+        "tests/test_entropy_var.py",
+        "tests/test_result_field_collisions.py"
+      ],
+      "native_test_execution": "Executed in the admitted complete native Linux suite: 65 passed tests across 5 mapped modules; zero failed or skipped in these modules. Module totals overlap across criteria and are not independent-oracle counts.",
+      "native_test_evidence": {
+        "receipt": "native-suite-academic-evidence.json",
+        "profile_source_sha256": "b1e2db97814882c2ad728acefa2d3a66cd0e6147f4a8cba452766e3473c718de",
+        "modules": [
+          {
+            "module": "tests/test_confusion_applicability.py",
+            "test_count": 9,
+            "passed": 9,
+            "failed": 0,
+            "skipped": 0
+          },
+          {
+            "module": "tests/test_inline_metrics.py",
+            "test_count": 4,
+            "passed": 4,
+            "failed": 0,
+            "skipped": 0
+          },
+          {
+            "module": "tests/test_snapshot_prediction_kind.py",
+            "test_count": 34,
+            "passed": 34,
+            "failed": 0,
+            "skipped": 0
+          },
+          {
+            "module": "tests/test_entropy_var.py",
+            "test_count": 6,
+            "passed": 6,
+            "failed": 0,
+            "skipped": 0
+          },
+          {
+            "module": "tests/test_result_field_collisions.py",
+            "test_count": 12,
+            "passed": 12,
+            "failed": 0,
+            "skipped": 0
+          }
+        ],
+        "passed_test_count": 65,
+        "failed_test_count": 0,
+        "skipped_test_count": 0,
+        "scope": "Entire mapped modules in the complete native suite. Counts establish execution membership, not assertion-level coverage of every criterion or independent empirical validity."
+      }
+    },
+    {
+      "candidate_id": "limen",
+      "criterion_id": "A08",
+      "criterion": "Numerical and mathematical verification",
+      "baseline_status": "Partial",
+      "latest_status": "Partial",
+      "movement": "Independent local regression closure plus expanded executable assertions",
+      "evidence_type": [
+        "Inspected",
+        "Tested"
+      ],
+      "applicability": "native",
+      "capability": "implemented",
+      "scope": "Independent evidence for numerical correctness, mathematical implementation, temporal invariants, statistical calibration, and execution-model accounting within the declared capability.",
+      "finding": "The independent two-revision quantile probe confirms prefix invariance and frozen-prefix semantic agreement on the recorded baseline fixture. The complete admitted native Linux suite at the latest exact pin executed 7,391 tests: 7,388 passed, none failed and three were skipped. Four-worker execution receipts reconcile. The mapped native modules cover regression assertions for causal shims, fold/source/binding identities, validation receipts and protected composition; these are native regression results, distinct from the independent quantile counterexample/oracle.",
+      "limitation": "Native passes establish the assertions exercised under this recorded environment, not universal numerical correctness, statistical calibration or external validity. Three optional tests were skipped (one CUDA XGBoost and two TabPFN cases). Formula/parity/regression tests do not by themselves calibrate DSR/PBO or prove live-market fill fidelity.",
+      "baseline_finding": "DSR/PBO formulas, edge checks and alternate in-repository formula assertions exist. Snapshot execution parity was independently measured. Numerical agreement does not establish inferential calibration or generalization. Implemented formulas and local oracle/property checks; statistical calibration unproven.",
+      "source_refs": [
+        {
+          "path": "tests/test_quantile_line_causality.py",
+          "start_line": 10,
+          "end_line": 55,
+          "url": "https://github.com/Vaquum/Limen/blob/25e47866422d007da55cb19625344183599ba671/tests/test_quantile_line_causality.py#L10-L55"
+        },
+        {
+          "path": "tests/test_conditional_shims.py",
+          "start_line": 172,
+          "end_line": 263,
+          "url": "https://github.com/Vaquum/Limen/blob/25e47866422d007da55cb19625344183599ba671/tests/test_conditional_shims.py#L172-L263"
+        },
+        {
+          "path": "tests/test_objective_admission.py",
+          "start_line": 151,
+          "end_line": 211,
+          "url": "https://github.com/Vaquum/Limen/blob/25e47866422d007da55cb19625344183599ba671/tests/test_objective_admission.py#L151-L211"
+        },
+        {
+          "path": "tests/test_holdout_workflows.py",
+          "start_line": 857,
+          "end_line": 997,
+          "url": "https://github.com/Vaquum/Limen/blob/25e47866422d007da55cb19625344183599ba671/tests/test_holdout_workflows.py#L857-L997"
+        }
+      ],
+      "baseline_source_refs": [
+        {
+          "path": "limen/metrics/deflated_sharpe_ratio.py",
+          "start_line": 24,
+          "end_line": 55,
+          "url": "https://github.com/Vaquum/Limen/blob/29837e666604eee74a2ac94f328fb9803724342a/limen/metrics/deflated_sharpe_ratio.py#L24-L55"
+        },
+        {
+          "path": "limen/metrics/probability_of_backtest_overfitting.py",
+          "start_line": 37,
+          "end_line": 58,
+          "url": "https://github.com/Vaquum/Limen/blob/29837e666604eee74a2ac94f328fb9803724342a/limen/metrics/probability_of_backtest_overfitting.py#L37-L58"
+        },
+        {
+          "path": "tests/test_acceptance_gates.py",
+          "start_line": 32,
+          "end_line": 114,
+          "url": "https://github.com/Vaquum/Limen/blob/29837e666604eee74a2ac94f328fb9803724342a/tests/test_acceptance_gates.py#L32-L114"
+        }
+      ],
+      "native_test_modules": [
+        "tests/test_acceptance_gates.py",
+        "tests/test_quantile_line_causality.py",
+        "tests/test_conditional_shims.py",
+        "tests/test_objective_admission.py",
+        "tests/test_holdout_workflows.py"
+      ],
+      "native_test_execution": "Executed in the admitted complete native Linux suite: 187 passed tests across 5 mapped modules; zero failed or skipped in these modules. Module totals overlap across criteria and are not independent-oracle counts.",
+      "native_test_evidence": {
+        "receipt": "native-suite-academic-evidence.json",
+        "profile_source_sha256": "b1e2db97814882c2ad728acefa2d3a66cd0e6147f4a8cba452766e3473c718de",
+        "modules": [
+          {
+            "module": "tests/test_acceptance_gates.py",
+            "test_count": 14,
+            "passed": 14,
+            "failed": 0,
+            "skipped": 0
+          },
+          {
+            "module": "tests/test_quantile_line_causality.py",
+            "test_count": 26,
+            "passed": 26,
+            "failed": 0,
+            "skipped": 0
+          },
+          {
+            "module": "tests/test_conditional_shims.py",
+            "test_count": 16,
+            "passed": 16,
+            "failed": 0,
+            "skipped": 0
+          },
+          {
+            "module": "tests/test_objective_admission.py",
+            "test_count": 65,
+            "passed": 65,
+            "failed": 0,
+            "skipped": 0
+          },
+          {
+            "module": "tests/test_holdout_workflows.py",
+            "test_count": 66,
+            "passed": 66,
+            "failed": 0,
+            "skipped": 0
+          }
+        ],
+        "passed_test_count": 187,
+        "failed_test_count": 0,
+        "skipped_test_count": 0,
+        "scope": "Entire mapped modules in the complete native suite. Counts establish execution membership, not assertion-level coverage of every criterion or independent empirical validity."
+      }
+    },
+    {
+      "candidate_id": "limen",
+      "criterion_id": "A09",
+      "criterion": "Convergence and fit stability",
+      "baseline_status": "Partial",
+      "latest_status": "Partial",
+      "movement": "No universal convergence gate added",
+      "evidence_type": [
+        "Inspected",
+        "Tested"
+      ],
+      "applicability": "native",
+      "capability": "implemented",
+      "scope": "Convergence, numerical fit stability, failure reporting, and fallback behavior for native iterative learners, calibration routines, and portfolio optimizers.",
+      "finding": "Convergence-warning metadata remains a diagnostic associated with successful/failed rounds. The model catalogue expands to SVM/HMM and fixed-epoch neural fits. Neural wrappers have explicit training budgets and locally seeded RNG construction, but do not introduce a shared convergence or selected-fit stability admission gate.",
+      "limitation": "A completed fit or absence of sklearn-style warnings is not proof of optimization convergence. HMM-specific stopping diagnostics and neural loss/stability require model-specific assessment; no comparative model-quality or repeated-seed study was executed here.",
+      "baseline_finding": "Convergence warnings and missing evidence are recorded. A warned model can remain successful/selected; diagnostic reporting is not an admission gate. Diagnostic warning frequency implemented; no automatic model exclusion.",
+      "source_refs": [
+        {
+          "path": "limen/experiment/convergence_report.py",
+          "start_line": 32,
+          "end_line": 89,
+          "url": "https://github.com/Vaquum/Limen/blob/25e47866422d007da55cb19625344183599ba671/limen/experiment/convergence_report.py#L32-L89"
+        },
+        {
+          "path": "limen/sfd/reference_architecture/_sequence_binary.py",
+          "start_line": 78,
+          "end_line": 122,
+          "url": "https://github.com/Vaquum/Limen/blob/25e47866422d007da55cb19625344183599ba671/limen/sfd/reference_architecture/_sequence_binary.py#L78-L122"
+        },
+        {
+          "path": "limen/sfd/reference_architecture/gaussian_hmm_binary.py",
+          "start_line": 60,
+          "end_line": 85,
+          "url": "https://github.com/Vaquum/Limen/blob/25e47866422d007da55cb19625344183599ba671/limen/sfd/reference_architecture/gaussian_hmm_binary.py#L60-L85"
+        },
+        {
+          "path": "limen/sfd/reference_architecture/rbf_svm_binary.py",
+          "start_line": 47,
+          "end_line": 58,
+          "url": "https://github.com/Vaquum/Limen/blob/25e47866422d007da55cb19625344183599ba671/limen/sfd/reference_architecture/rbf_svm_binary.py#L47-L58"
+        },
+        {
+          "path": "limen/experiment/experiment_core.py",
+          "start_line": 372,
+          "end_line": 386,
+          "url": "https://github.com/Vaquum/Limen/blob/25e47866422d007da55cb19625344183599ba671/limen/experiment/experiment_core.py#L372-L386"
+        }
+      ],
+      "baseline_source_refs": [
+        {
+          "path": "limen/experiment/convergence_report.py",
+          "start_line": 33,
+          "end_line": 52,
+          "url": "https://github.com/Vaquum/Limen/blob/29837e666604eee74a2ac94f328fb9803724342a/limen/experiment/convergence_report.py#L33-L52"
+        },
+        {
+          "path": "limen/experiment/convergence_report.py",
+          "start_line": 55,
+          "end_line": 91,
+          "url": "https://github.com/Vaquum/Limen/blob/29837e666604eee74a2ac94f328fb9803724342a/limen/experiment/convergence_report.py#L55-L91"
+        },
+        {
+          "path": "limen/experiment/experiment_core.py",
+          "start_line": 157,
+          "end_line": 164,
+          "url": "https://github.com/Vaquum/Limen/blob/29837e666604eee74a2ac94f328fb9803724342a/limen/experiment/experiment_core.py#L157-L164"
+        }
+      ],
+      "native_test_modules": [
+        "tests/test_convergence_report.py",
+        "tests/test_cnn1d.py",
+        "tests/test_lstm.py",
+        "tests/test_gaussian_hmm.py",
+        "tests/test_rbf_svm.py"
+      ],
+      "native_test_execution": "Executed in the admitted complete native Linux suite: 46 passed tests across 5 mapped modules; zero failed or skipped in these modules. Module totals overlap across criteria and are not independent-oracle counts.",
+      "native_test_evidence": {
+        "receipt": "native-suite-academic-evidence.json",
+        "profile_source_sha256": "b1e2db97814882c2ad728acefa2d3a66cd0e6147f4a8cba452766e3473c718de",
+        "modules": [
+          {
+            "module": "tests/test_convergence_report.py",
+            "test_count": 21,
+            "passed": 21,
+            "failed": 0,
+            "skipped": 0
+          },
+          {
+            "module": "tests/test_cnn1d.py",
+            "test_count": 5,
+            "passed": 5,
+            "failed": 0,
+            "skipped": 0
+          },
+          {
+            "module": "tests/test_lstm.py",
+            "test_count": 4,
+            "passed": 4,
+            "failed": 0,
+            "skipped": 0
+          },
+          {
+            "module": "tests/test_gaussian_hmm.py",
+            "test_count": 9,
+            "passed": 9,
+            "failed": 0,
+            "skipped": 0
+          },
+          {
+            "module": "tests/test_rbf_svm.py",
+            "test_count": 7,
+            "passed": 7,
+            "failed": 0,
+            "skipped": 0
+          }
+        ],
+        "passed_test_count": 46,
+        "failed_test_count": 0,
+        "skipped_test_count": 0,
+        "scope": "Entire mapped modules in the complete native suite. Counts establish execution membership, not assertion-level coverage of every criterion or independent empirical validity."
+      }
+    },
+    {
+      "candidate_id": "limen",
+      "criterion_id": "A10",
+      "criterion": "Search-family history completeness",
+      "baseline_status": "Partial",
+      "latest_status": "Partial",
+      "movement": "Local trial identity and failure accounting strengthened",
+      "evidence_type": [
+        "Inspected",
+        "Tested"
+      ],
+      "applicability": "native",
+      "capability": "implemented",
+      "scope": "Completeness and durability of the search history used to select a strategy, model, parameterization, data choice, or execution scenario.",
+      "finding": "Parameter-domain and context names cannot overwrite protected result bookkeeping or an objective column; successful result/parameter collisions are rejected. New serial MSQ record-on-error mode retains bounded failed occurrences and verifies the error policy/budget on resume. Type-aware execution identities and restore checks reduce ambiguity when parameter values or trial histories are reconstructed.",
+      "limitation": "Record-on-error is optional and restricted to ordinary unprotected serial MSQ, requires a successful first round and retains no valid return track for a failed model. It does not reconstruct hidden, externally attempted, deleted or uncommitted research choices; effective independent trial count remains unknown.",
+      "baseline_finding": "Recorded local successes/failures and family identity checks support accounting. Unlogged, deleted, external or pruned search history is not globally recoverable. Partial local inventory; no global complete search history.",
+      "source_refs": [
+        {
+          "path": "limen/experiment/_result_fields.py",
+          "start_line": 14,
+          "end_line": 71,
+          "url": "https://github.com/Vaquum/Limen/blob/25e47866422d007da55cb19625344183599ba671/limen/experiment/_result_fields.py#L14-L71"
+        },
+        {
+          "path": "limen/experiment/_round_errors.py",
+          "start_line": 31,
+          "end_line": 100,
+          "url": "https://github.com/Vaquum/Limen/blob/25e47866422d007da55cb19625344183599ba671/limen/experiment/_round_errors.py#L31-L100"
+        },
+        {
+          "path": "limen/_parameter_identity.py",
+          "start_line": 1,
+          "end_line": 42,
+          "url": "https://github.com/Vaquum/Limen/blob/25e47866422d007da55cb19625344183599ba671/limen/_parameter_identity.py#L1-L42"
+        },
+        {
+          "path": "limen/experiment/_serial_resume.py",
+          "start_line": 1,
+          "end_line": 60,
+          "url": "https://github.com/Vaquum/Limen/blob/25e47866422d007da55cb19625344183599ba671/limen/experiment/_serial_resume.py#L1-L60"
+        }
+      ],
+      "baseline_source_refs": [
+        {
+          "path": "limen/experiment/acceptance_report.py",
+          "start_line": 86,
+          "end_line": 100,
+          "url": "https://github.com/Vaquum/Limen/blob/29837e666604eee74a2ac94f328fb9803724342a/limen/experiment/acceptance_report.py#L86-L100"
+        },
+        {
+          "path": "limen/experiment/experiment_core.py",
+          "start_line": 365,
+          "end_line": 368,
+          "url": "https://github.com/Vaquum/Limen/blob/29837e666604eee74a2ac94f328fb9803724342a/limen/experiment/experiment_core.py#L365-L368"
+        },
+        {
+          "path": "limen/experiment/_family_evidence.py",
+          "start_line": 232,
+          "end_line": 267,
+          "url": "https://github.com/Vaquum/Limen/blob/29837e666604eee74a2ac94f328fb9803724342a/limen/experiment/_family_evidence.py#L232-L267"
+        }
+      ],
+      "native_test_modules": [
+        "tests/test_round_errors.py",
+        "tests/test_result_field_collisions.py",
+        "tests/test_result_field_provenance.py",
+        "tests/test_result_field_fold_failure.py",
+        "tests/test_parameter_identity_admission.py",
+        "tests/test_serial_resume_parameters.py"
+      ],
+      "native_test_execution": "Executed in the admitted complete native Linux suite: 65 passed tests across 6 mapped modules; zero failed or skipped in these modules. Module totals overlap across criteria and are not independent-oracle counts.",
+      "native_test_evidence": {
+        "receipt": "native-suite-academic-evidence.json",
+        "profile_source_sha256": "b1e2db97814882c2ad728acefa2d3a66cd0e6147f4a8cba452766e3473c718de",
+        "modules": [
+          {
+            "module": "tests/test_round_errors.py",
+            "test_count": 19,
+            "passed": 19,
+            "failed": 0,
+            "skipped": 0
+          },
+          {
+            "module": "tests/test_result_field_collisions.py",
+            "test_count": 12,
+            "passed": 12,
+            "failed": 0,
+            "skipped": 0
+          },
+          {
+            "module": "tests/test_result_field_provenance.py",
+            "test_count": 1,
+            "passed": 1,
+            "failed": 0,
+            "skipped": 0
+          },
+          {
+            "module": "tests/test_result_field_fold_failure.py",
+            "test_count": 3,
+            "passed": 3,
+            "failed": 0,
+            "skipped": 0
+          },
+          {
+            "module": "tests/test_parameter_identity_admission.py",
+            "test_count": 21,
+            "passed": 21,
+            "failed": 0,
+            "skipped": 0
+          },
+          {
+            "module": "tests/test_serial_resume_parameters.py",
+            "test_count": 9,
+            "passed": 9,
+            "failed": 0,
+            "skipped": 0
+          }
+        ],
+        "passed_test_count": 65,
+        "failed_test_count": 0,
+        "skipped_test_count": 0,
+        "scope": "Entire mapped modules in the complete native suite. Counts establish execution membership, not assertion-level coverage of every criterion or independent empirical validity."
+      }
+    },
+    {
+      "candidate_id": "limen",
+      "criterion_id": "A11",
+      "criterion": "Multiple-selection and dependence control",
+      "baseline_status": "Partial",
+      "latest_status": "Partial",
+      "movement": "PBO block-domain restriction removed; inference limits unchanged",
+      "evidence_type": [
+        "Inspected",
+        "Tested"
+      ],
+      "applicability": "native",
+      "capability": "implemented",
+      "scope": "Inferential control for repeated or adaptive selection and for dependence within the observations supporting a reported result.",
+      "finding": "PBO admission now accepts every literal even block count of at least two, checks equal block support and reports nominal partition geometry conservatively when integer rendering overflows. The prior restriction to block counts 2, 4, 6 and 8 is removed. The default remains two, and DSR/PBO remain diagnostics over the retained comparable local family.",
+      "limitation": "Increasing the block count does not create independent data, solve serial dependence, reveal undisclosed searches or turn a verdict into an automatic training/Sensor gate. The default of two blocks retains coarse PBO outcomes. Combinatorial work and sparse half-sample statistics remain configuration-dependent.",
+      "baseline_finding": "DSR/PBO diagnostics are conditional on retained comparable tracks. Default two-block PBO has only three possible values; no serial-covariance correction in DSR. Implemented conditional diagnostics, with important inferential limits.",
+      "source_refs": [
+        {
+          "path": "limen/experiment/_acceptance_settings.py",
+          "start_line": 8,
+          "end_line": 25,
+          "url": "https://github.com/Vaquum/Limen/blob/25e47866422d007da55cb19625344183599ba671/limen/experiment/_acceptance_settings.py#L8-L25"
+        },
+        {
+          "path": "limen/experiment/_acceptance_settings.py",
+          "start_line": 105,
+          "end_line": 121,
+          "url": "https://github.com/Vaquum/Limen/blob/25e47866422d007da55cb19625344183599ba671/limen/experiment/_acceptance_settings.py#L105-L121"
+        },
+        {
+          "path": "limen/experiment/acceptance_report.py",
+          "start_line": 118,
+          "end_line": 162,
+          "url": "https://github.com/Vaquum/Limen/blob/25e47866422d007da55cb19625344183599ba671/limen/experiment/acceptance_report.py#L118-L162"
+        },
+        {
+          "path": "limen/metrics/probability_of_backtest_overfitting.py",
+          "start_line": 14,
+          "end_line": 58,
+          "url": "https://github.com/Vaquum/Limen/blob/25e47866422d007da55cb19625344183599ba671/limen/metrics/probability_of_backtest_overfitting.py#L14-L58"
+        }
+      ],
+      "baseline_source_refs": [
+        {
+          "path": "limen/metrics/deflated_sharpe_ratio.py",
+          "start_line": 33,
+          "end_line": 55,
+          "url": "https://github.com/Vaquum/Limen/blob/29837e666604eee74a2ac94f328fb9803724342a/limen/metrics/deflated_sharpe_ratio.py#L33-L55"
+        },
+        {
+          "path": "limen/metrics/probability_of_backtest_overfitting.py",
+          "start_line": 47,
+          "end_line": 58,
+          "url": "https://github.com/Vaquum/Limen/blob/29837e666604eee74a2ac94f328fb9803724342a/limen/metrics/probability_of_backtest_overfitting.py#L47-L58"
+        },
+        {
+          "path": "limen/experiment/_acceptance_settings.py",
+          "start_line": 15,
+          "end_line": 19,
+          "url": "https://github.com/Vaquum/Limen/blob/29837e666604eee74a2ac94f328fb9803724342a/limen/experiment/_acceptance_settings.py#L15-L19"
+        },
+        {
+          "path": "limen/experiment/_acceptance_settings.py",
+          "start_line": 105,
+          "end_line": 115,
+          "url": "https://github.com/Vaquum/Limen/blob/29837e666604eee74a2ac94f328fb9803724342a/limen/experiment/_acceptance_settings.py#L105-L115"
+        },
+        {
+          "path": "limen/experiment/acceptance_report.py",
+          "start_line": 138,
+          "end_line": 159,
+          "url": "https://github.com/Vaquum/Limen/blob/29837e666604eee74a2ac94f328fb9803724342a/limen/experiment/acceptance_report.py#L138-L159"
+        },
+        {
+          "path": "limen/experiment/experiment_core.py",
+          "start_line": 157,
+          "end_line": 159,
+          "url": "https://github.com/Vaquum/Limen/blob/29837e666604eee74a2ac94f328fb9803724342a/limen/experiment/experiment_core.py#L157-L159"
+        }
+      ],
+      "native_test_modules": [
+        "tests/test_acceptance_block_domain.py",
+        "tests/test_acceptance_gates.py"
+      ],
+      "native_test_execution": "Executed in the admitted complete native Linux suite: 29 passed tests across 2 mapped modules; zero failed or skipped in these modules. Module totals overlap across criteria and are not independent-oracle counts.",
+      "native_test_evidence": {
+        "receipt": "native-suite-academic-evidence.json",
+        "profile_source_sha256": "b1e2db97814882c2ad728acefa2d3a66cd0e6147f4a8cba452766e3473c718de",
+        "modules": [
+          {
+            "module": "tests/test_acceptance_block_domain.py",
+            "test_count": 15,
+            "passed": 15,
+            "failed": 0,
+            "skipped": 0
+          },
+          {
+            "module": "tests/test_acceptance_gates.py",
+            "test_count": 14,
+            "passed": 14,
+            "failed": 0,
+            "skipped": 0
+          }
+        ],
+        "passed_test_count": 29,
+        "failed_test_count": 0,
+        "skipped_test_count": 0,
+        "scope": "Entire mapped modules in the complete native suite. Counts establish execution membership, not assertion-level coverage of every criterion or independent empirical validity."
+      }
+    },
+    {
+      "candidate_id": "limen",
+      "criterion_id": "A12",
+      "criterion": "Cross-run evaluation comparability",
+      "baseline_status": "Partial",
+      "latest_status": "Partial",
+      "movement": "Fold reconstruction and evidence identity materially stronger",
+      "evidence_type": [
+        "Inspected",
+        "Tested"
+      ],
+      "applicability": "native",
+      "capability": "implemented",
+      "scope": "Comparability and provenance of results across runs, candidates, execution paths, and research families.",
+      "finding": "Optional fold-promotion evidence now hashes typed source content and row membership, records raw and retained partitions, model output contract and fitting/selection cutoffs, and rejects incompatible reconstructed fold contexts. Protected checkpoints/Trainer paths verify source and completed occurrence history. This makes selected fold reconstruction more accountable.",
+      "limitation": "The new local content/membership witnesses do not prove all cross-run families share the same economic question or recover unrecorded selection. Existing snapshot joint-PBO execution-identity limits remain unless the specific family path supplies compatible source evidence. Promotion evidence must be explicitly recorded; unsupported witnesses are unavailable, not a pass.",
+      "baseline_finding": "Family diagnostics check aligned timestamps and execution identity and withhold unsupported conclusions. Snapshot joint PBO lacks full comparable source identity. Implemented conservative grouping; snapshot joint PBO withheld.",
+      "source_refs": [
+        {
+          "path": "limen/experiment/_fold_fingerprint.py",
+          "start_line": 52,
+          "end_line": 133,
+          "url": "https://github.com/Vaquum/Limen/blob/25e47866422d007da55cb19625344183599ba671/limen/experiment/_fold_fingerprint.py#L52-L133"
+        },
+        {
+          "path": "limen/experiment/_fold_evidence.py",
+          "start_line": 49,
+          "end_line": 83,
+          "url": "https://github.com/Vaquum/Limen/blob/25e47866422d007da55cb19625344183599ba671/limen/experiment/_fold_evidence.py#L49-L83"
+        },
+        {
+          "path": "limen/experiment/_fold_evidence.py",
+          "start_line": 170,
+          "end_line": 222,
+          "url": "https://github.com/Vaquum/Limen/blob/25e47866422d007da55cb19625344183599ba671/limen/experiment/_fold_evidence.py#L170-L222"
+        },
+        {
+          "path": "limen/experiment/_holdout_checkpoint.py",
+          "start_line": 104,
+          "end_line": 178,
+          "url": "https://github.com/Vaquum/Limen/blob/25e47866422d007da55cb19625344183599ba671/limen/experiment/_holdout_checkpoint.py#L104-L178"
+        },
+        {
+          "path": "limen/experiment/_family_evidence.py",
+          "start_line": 204,
+          "end_line": 224,
+          "url": "https://github.com/Vaquum/Limen/blob/25e47866422d007da55cb19625344183599ba671/limen/experiment/_family_evidence.py#L204-L224"
+        }
+      ],
+      "baseline_source_refs": [
+        {
+          "path": "limen/experiment/acceptance_report.py",
+          "start_line": 36,
+          "end_line": 83,
+          "url": "https://github.com/Vaquum/Limen/blob/29837e666604eee74a2ac94f328fb9803724342a/limen/experiment/acceptance_report.py#L36-L83"
+        },
+        {
+          "path": "limen/experiment/_family_evidence.py",
+          "start_line": 130,
+          "end_line": 171,
+          "url": "https://github.com/Vaquum/Limen/blob/29837e666604eee74a2ac94f328fb9803724342a/limen/experiment/_family_evidence.py#L130-L171"
+        },
+        {
+          "path": "limen/experiment/_family_evidence.py",
+          "start_line": 174,
+          "end_line": 229,
+          "url": "https://github.com/Vaquum/Limen/blob/29837e666604eee74a2ac94f328fb9803724342a/limen/experiment/_family_evidence.py#L174-L229"
+        },
+        {
+          "path": "limen/experiment/family_acceptance_report.py",
+          "start_line": 32,
+          "end_line": 56,
+          "url": "https://github.com/Vaquum/Limen/blob/29837e666604eee74a2ac94f328fb9803724342a/limen/experiment/family_acceptance_report.py#L32-L56"
+        },
+        {
+          "path": "limen/experiment/family_acceptance_report.py",
+          "start_line": 98,
+          "end_line": 105,
+          "url": "https://github.com/Vaquum/Limen/blob/29837e666604eee74a2ac94f328fb9803724342a/limen/experiment/family_acceptance_report.py#L98-L105"
+        }
+      ],
+      "native_test_modules": [
+        "tests/test_fold_promotion.py",
+        "tests/test_fold_sensor.py",
+        "tests/test_fold_cohort.py",
+        "tests/test_holdout_workflows.py",
+        "tests/test_record_execution.py"
+      ],
+      "native_test_execution": "Executed in the admitted complete native Linux suite: 230 passed tests across 5 mapped modules; zero failed or skipped in these modules. Module totals overlap across criteria and are not independent-oracle counts.",
+      "native_test_evidence": {
+        "receipt": "native-suite-academic-evidence.json",
+        "profile_source_sha256": "b1e2db97814882c2ad728acefa2d3a66cd0e6147f4a8cba452766e3473c718de",
+        "modules": [
+          {
+            "module": "tests/test_fold_promotion.py",
+            "test_count": 40,
+            "passed": 40,
+            "failed": 0,
+            "skipped": 0
+          },
+          {
+            "module": "tests/test_fold_sensor.py",
+            "test_count": 41,
+            "passed": 41,
+            "failed": 0,
+            "skipped": 0
+          },
+          {
+            "module": "tests/test_fold_cohort.py",
+            "test_count": 53,
+            "passed": 53,
+            "failed": 0,
+            "skipped": 0
+          },
+          {
+            "module": "tests/test_holdout_workflows.py",
+            "test_count": 66,
+            "passed": 66,
+            "failed": 0,
+            "skipped": 0
+          },
+          {
+            "module": "tests/test_record_execution.py",
+            "test_count": 30,
+            "passed": 30,
+            "failed": 0,
+            "skipped": 0
+          }
+        ],
+        "passed_test_count": 230,
+        "failed_test_count": 0,
+        "skipped_test_count": 0,
+        "scope": "Entire mapped modules in the complete native suite. Counts establish execution membership, not assertion-level coverage of every criterion or independent empirical validity."
+      }
+    },
+    {
+      "candidate_id": "limen",
+      "criterion_id": "A13",
+      "criterion": "Final holdout protocol and compatibility",
+      "baseline_status": "Partial",
+      "latest_status": "Partial",
+      "movement": "Research protection composes with more workflows; final assessment remains narrow",
+      "evidence_type": [
+        "Inspected",
+        "Tested"
+      ],
+      "applicability": "native",
+      "capability": "implemented",
+      "scope": "Protection and evidentiary accounting of final evaluation data after strategy or model selection, including supported execution paths and known access boundaries.",
+      "finding": "Protected research now has dedicated integration for fold preparation, factorized cache reuse, worker authority, sources/formed-bar support and checkpoint/Trainer history. Final holdout adds a contract-bearing single native binary Sensor while retaining freeze/digest checks and durable attempt allocation before data load.",
+      "limitation": "Research eligibility is not final-freeze eligibility. Final freeze still accepts exact LogRegBinary/LightGBMBinary wrappers with ordinary dated native inference, and rejects effective manifests carrying bar formation, split_walk_forward, alternate test sources, data extensions or nonunit decoder lookback. Final contract assessment rejects funding, external execution sources, dynamic barriers and contract-bearing Cohorts. Repeated access is labelled; external exposure remains unknown.",
+      "baseline_finding": "Reserved holdout freezes supported fitted state and records attempts before loading data. Research and final-assessment compatibility is substantially restricted. Strong restricted protocol; incompatible with several principal research modes.",
+      "source_refs": [
+        {
+          "path": "limen/experiment/_holdout_composition.py",
+          "start_line": 78,
+          "end_line": 118,
+          "url": "https://github.com/Vaquum/Limen/blob/25e47866422d007da55cb19625344183599ba671/limen/experiment/_holdout_composition.py#L78-L118"
+        },
+        {
+          "path": "limen/experiment/_holdout_folds.py",
+          "start_line": 132,
+          "end_line": 178,
+          "url": "https://github.com/Vaquum/Limen/blob/25e47866422d007da55cb19625344183599ba671/limen/experiment/_holdout_folds.py#L132-L178"
+        },
+        {
+          "path": "limen/experiment/_holdout_freeze.py",
+          "start_line": 163,
+          "end_line": 239,
+          "url": "https://github.com/Vaquum/Limen/blob/25e47866422d007da55cb19625344183599ba671/limen/experiment/_holdout_freeze.py#L163-L239"
+        },
+        {
+          "path": "limen/experiment/_holdout_events.py",
+          "start_line": 29,
+          "end_line": 53,
+          "url": "https://github.com/Vaquum/Limen/blob/25e47866422d007da55cb19625344183599ba671/limen/experiment/_holdout_events.py#L29-L53"
+        },
+        {
+          "path": "limen/experiment/_resolve_trade_policy.py",
+          "start_line": 151,
+          "end_line": 188,
+          "url": "https://github.com/Vaquum/Limen/blob/25e47866422d007da55cb19625344183599ba671/limen/experiment/_resolve_trade_policy.py#L151-L188"
+        },
+        {
+          "path": "limen/experiment/_holdout_assessment.py",
+          "start_line": 191,
+          "end_line": 235,
+          "url": "https://github.com/Vaquum/Limen/blob/25e47866422d007da55cb19625344183599ba671/limen/experiment/_holdout_assessment.py#L191-L235"
+        }
+      ],
+      "baseline_source_refs": [
+        {
+          "path": "limen/experiment/_holdout_research.py",
+          "start_line": 71,
+          "end_line": 100,
+          "url": "https://github.com/Vaquum/Limen/blob/29837e666604eee74a2ac94f328fb9803724342a/limen/experiment/_holdout_research.py#L71-L100"
+        },
+        {
+          "path": "limen/experiment/_holdout_research.py",
+          "start_line": 225,
+          "end_line": 240,
+          "url": "https://github.com/Vaquum/Limen/blob/29837e666604eee74a2ac94f328fb9803724342a/limen/experiment/_holdout_research.py#L225-L240"
+        },
+        {
+          "path": "limen/experiment/_holdout_freeze.py",
+          "start_line": 159,
+          "end_line": 225,
+          "url": "https://github.com/Vaquum/Limen/blob/29837e666604eee74a2ac94f328fb9803724342a/limen/experiment/_holdout_freeze.py#L159-L225"
+        },
+        {
+          "path": "limen/experiment/_holdout_freeze.py",
+          "start_line": 281,
+          "end_line": 342,
+          "url": "https://github.com/Vaquum/Limen/blob/29837e666604eee74a2ac94f328fb9803724342a/limen/experiment/_holdout_freeze.py#L281-L342"
+        },
+        {
+          "path": "limen/experiment/_holdout_assessment.py",
+          "start_line": 91,
+          "end_line": 113,
+          "url": "https://github.com/Vaquum/Limen/blob/29837e666604eee74a2ac94f328fb9803724342a/limen/experiment/_holdout_assessment.py#L91-L113"
+        },
+        {
+          "path": "limen/experiment/_holdout_assessment.py",
+          "start_line": 153,
+          "end_line": 174,
+          "url": "https://github.com/Vaquum/Limen/blob/29837e666604eee74a2ac94f328fb9803724342a/limen/experiment/_holdout_assessment.py#L153-L174"
+        },
+        {
+          "path": "limen/experiment/_holdout_report.py",
+          "start_line": 146,
+          "end_line": 162,
+          "url": "https://github.com/Vaquum/Limen/blob/29837e666604eee74a2ac94f328fb9803724342a/limen/experiment/_holdout_report.py#L146-L162"
+        }
+      ],
+      "native_test_modules": [
+        "tests/test_holdout_research.py",
+        "tests/test_holdout_assessment.py",
+        "tests/test_holdout_workflows.py",
+        "tests/test_holdout_event_assessment.py",
+        "tests/test_holdout_source_admission.py"
+      ],
+      "native_test_execution": "Executed in the admitted complete native Linux suite: 102 passed tests across 5 mapped modules; zero failed or skipped in these modules. Module totals overlap across criteria and are not independent-oracle counts.",
+      "native_test_evidence": {
+        "receipt": "native-suite-academic-evidence.json",
+        "profile_source_sha256": "b1e2db97814882c2ad728acefa2d3a66cd0e6147f4a8cba452766e3473c718de",
+        "modules": [
+          {
+            "module": "tests/test_holdout_research.py",
+            "test_count": 3,
+            "passed": 3,
+            "failed": 0,
+            "skipped": 0
+          },
+          {
+            "module": "tests/test_holdout_assessment.py",
+            "test_count": 13,
+            "passed": 13,
+            "failed": 0,
+            "skipped": 0
+          },
+          {
+            "module": "tests/test_holdout_workflows.py",
+            "test_count": 66,
+            "passed": 66,
+            "failed": 0,
+            "skipped": 0
+          },
+          {
+            "module": "tests/test_holdout_event_assessment.py",
+            "test_count": 12,
+            "passed": 12,
+            "failed": 0,
+            "skipped": 0
+          },
+          {
+            "module": "tests/test_holdout_source_admission.py",
+            "test_count": 8,
+            "passed": 8,
+            "failed": 0,
+            "skipped": 0
+          }
+        ],
+        "passed_test_count": 102,
+        "failed_test_count": 0,
+        "skipped_test_count": 0,
+        "scope": "Entire mapped modules in the complete native suite. Counts establish execution membership, not assertion-level coverage of every criterion or independent empirical validity."
+      }
+    },
+    {
+      "candidate_id": "limen",
+      "criterion_id": "A14",
+      "criterion": "Baseline quality and external validity",
+      "baseline_status": "Unknown",
+      "latest_status": "Unknown",
+      "movement": "More testable research/execution scenarios; external validity still unestablished",
+      "evidence_type": [
+        "Inspected",
+        "Tested"
+      ],
+      "applicability": "native",
+      "capability": "implemented",
+      "scope": "Quality of comparison baselines and evidence that predictive, portfolio, or execution conclusions extend beyond the specific tested fixture and model assumptions.",
+      "finding": "Additional fitted model families and a Beta-Bernoulli-weighted cohort broaden the experimental toolkit. New observed-cost code admits receipt-time-supported fills, computes reference-notional-weighted price costs and side/parent/day/account concentration, and applies a matched retrospective slippage scenario while preserving the candidate fee model. Candidate observations must match declared benchmark price phases and availability; unsupported or economically failed scenarios are recorded separately.",
+      "limitation": "No matched untouched multi-regime model-quality campaign or real execution-fidelity study has established improved edge/generalization in this assessment. Observed cost transfer explicitly has representative-support, historical-delivery and fee-transfer limits; three-day sensitivity has no interval-coverage guarantee. New model names, richer code and tests cannot replace these missing empirical results.",
+      "baseline_finding": "Executable strategy references exist. No external-comparator ranking, profitable generalization or cross-venue robustness was established in this review. Baseline code available; comparative profitable generalization unknown.",
+      "source_refs": [
+        {
+          "path": "limen/backtest/_cost_statistics.py",
+          "start_line": 24,
+          "end_line": 104,
+          "url": "https://github.com/Vaquum/Limen/blob/25e47866422d007da55cb19625344183599ba671/limen/backtest/_cost_statistics.py#L24-L104"
+        },
+        {
+          "path": "limen/backtest/_cost_statistics.py",
+          "start_line": 107,
+          "end_line": 195,
+          "url": "https://github.com/Vaquum/Limen/blob/25e47866422d007da55cb19625344183599ba671/limen/backtest/_cost_statistics.py#L107-L195"
+        },
+        {
+          "path": "limen/backtest/_cost_comparison.py",
+          "start_line": 116,
+          "end_line": 142,
+          "url": "https://github.com/Vaquum/Limen/blob/25e47866422d007da55cb19625344183599ba671/limen/backtest/_cost_comparison.py#L116-L142"
+        },
+        {
+          "path": "limen/backtest/_cost_comparison.py",
+          "start_line": 198,
+          "end_line": 242,
+          "url": "https://github.com/Vaquum/Limen/blob/25e47866422d007da55cb19625344183599ba671/limen/backtest/_cost_comparison.py#L198-L242"
+        },
+        {
+          "path": "limen/cohort/bayesian.py",
+          "start_line": 19,
+          "end_line": 81,
+          "url": "https://github.com/Vaquum/Limen/blob/25e47866422d007da55cb19625344183599ba671/limen/cohort/bayesian.py#L19-L81"
+        },
+        {
+          "path": "limen/backtest/observed_costs.py",
+          "start_line": 144,
+          "end_line": 197,
+          "url": "https://github.com/Vaquum/Limen/blob/25e47866422d007da55cb19625344183599ba671/limen/backtest/observed_costs.py#L144-L197"
+        }
+      ],
+      "baseline_source_refs": [
+        {
+          "path": "limen/sfd/rule_based/common_strategies.py",
+          "start_line": 17,
+          "end_line": 34,
+          "url": "https://github.com/Vaquum/Limen/blob/29837e666604eee74a2ac94f328fb9803724342a/limen/sfd/rule_based/common_strategies.py#L17-L34"
+        },
+        {
+          "path": "limen/sfd/rule_based/common_strategies.py",
+          "start_line": 72,
+          "end_line": 139,
+          "url": "https://github.com/Vaquum/Limen/blob/29837e666604eee74a2ac94f328fb9803724342a/limen/sfd/rule_based/common_strategies.py#L72-L139"
+        },
+        {
+          "path": "limen/sfd/reference_architecture/random_binary.py",
+          "start_line": 53,
+          "end_line": 56,
+          "url": "https://github.com/Vaquum/Limen/blob/29837e666604eee74a2ac94f328fb9803724342a/limen/sfd/reference_architecture/random_binary.py#L53-L56"
+        },
+        {
+          "path": "limen/sfd/foundational_sfd/common_strategies.py",
+          "start_line": 33,
+          "end_line": 47,
+          "url": "https://github.com/Vaquum/Limen/blob/29837e666604eee74a2ac94f328fb9803724342a/limen/sfd/foundational_sfd/common_strategies.py#L33-L47"
+        }
+      ],
+      "native_test_modules": [
+        "tests/test_observed_costs.py",
+        "tests/test_cost_comparison.py",
+        "tests/test_bayesian_cohort.py"
+      ],
+      "native_test_execution": "Executed in the admitted complete native Linux suite: 56 passed tests across 3 mapped modules; zero failed or skipped in these modules. Module totals overlap across criteria and are not independent-oracle counts.",
+      "native_test_evidence": {
+        "receipt": "native-suite-academic-evidence.json",
+        "profile_source_sha256": "b1e2db97814882c2ad728acefa2d3a66cd0e6147f4a8cba452766e3473c718de",
+        "modules": [
+          {
+            "module": "tests/test_observed_costs.py",
+            "test_count": 1,
+            "passed": 1,
+            "failed": 0,
+            "skipped": 0
+          },
+          {
+            "module": "tests/test_cost_comparison.py",
+            "test_count": 26,
+            "passed": 26,
+            "failed": 0,
+            "skipped": 0
+          },
+          {
+            "module": "tests/test_bayesian_cohort.py",
+            "test_count": 29,
+            "passed": 29,
+            "failed": 0,
+            "skipped": 0
+          }
+        ],
+        "passed_test_count": 56,
+        "failed_test_count": 0,
+        "skipped_test_count": 0,
+        "scope": "Entire mapped modules in the complete native suite. Counts establish execution membership, not assertion-level coverage of every criterion or independent empirical validity."
+      }
+    },
+    {
+      "candidate_id": "limen",
+      "criterion_id": "A15",
+      "criterion": "Sensitivity, ablation and reproducibility",
+      "baseline_status": "Partial",
+      "latest_status": "Partial",
+      "movement": "More explicit, identity-bound perturbation and parameter-analysis tools",
+      "evidence_type": [
+        "Inspected",
+        "Tested"
+      ],
+      "applicability": "native",
+      "capability": "implemented",
+      "scope": "Implemented and demonstrated sensitivity analysis, ablation, dependence-aware uncertainty, and reproduction of selected results within the declared capability.",
+      "finding": "Target horizon/barrier/threshold perturbations are seeded from permutation identity; label smoothing applies only to training labels, and incompatible factorized reuse is rejected. Parameter importance groups duplicate configurations into one split group, fits a held-out random-forest surrogate with train-only categorical encoding, and computes repeated permutation importance. The new regime classifier processes ordered per-series rows using trailing state and ranks against prior observations. Recorded regime-block selection and leave-one-day-out observed-cost sensitivity add controlled experiment mechanisms.",
+      "limitation": "These are optional analyses, not evidence that a selected strategy survives them. Surrogate parameter importance concerns the retained research log, not causal feature effect or strategy-return uncertainty; the chosen log itself may be selection-biased. Target perturbation changes the task and requires matched observed-outcome comparisons. Existing IID trial-row correlation bootstrap is not dependence-aware market-return uncertainty.",
+      "baseline_finding": "Seeded feature ablation and replay mechanisms exist. IID trial-row correlation bootstrap is not a dependence-aware market-return uncertainty estimate. Partial mechanisms implemented; robustness outcomes require measurement.",
+      "source_refs": [
+        {
+          "path": "limen/targets/_perturbation.py",
+          "start_line": 21,
+          "end_line": 70,
+          "url": "https://github.com/Vaquum/Limen/blob/25e47866422d007da55cb19625344183599ba671/limen/targets/_perturbation.py#L21-L70"
+        },
+        {
+          "path": "limen/experiment/_target_identity.py",
+          "start_line": 10,
+          "end_line": 25,
+          "url": "https://github.com/Vaquum/Limen/blob/25e47866422d007da55cb19625344183599ba671/limen/experiment/_target_identity.py#L10-L25"
+        },
+        {
+          "path": "limen/log/_experiment_parameter_importance.py",
+          "start_line": 72,
+          "end_line": 111,
+          "url": "https://github.com/Vaquum/Limen/blob/25e47866422d007da55cb19625344183599ba671/limen/log/_experiment_parameter_importance.py#L72-L111"
+        },
+        {
+          "path": "limen/experiment/reducer/_forest_analysis.py",
+          "start_line": 32,
+          "end_line": 60,
+          "url": "https://github.com/Vaquum/Limen/blob/25e47866422d007da55cb19625344183599ba671/limen/experiment/reducer/_forest_analysis.py#L32-L60"
+        },
+        {
+          "path": "limen/data/utils/sample_regime_blocks.py",
+          "start_line": 13,
+          "end_line": 46,
+          "url": "https://github.com/Vaquum/Limen/blob/25e47866422d007da55cb19625344183599ba671/limen/data/utils/sample_regime_blocks.py#L13-L46"
+        },
+        {
+          "path": "limen/features/classify_market_regime.py",
+          "start_line": 53,
+          "end_line": 118,
+          "url": "https://github.com/Vaquum/Limen/blob/25e47866422d007da55cb19625344183599ba671/limen/features/classify_market_regime.py#L53-L118"
+        },
+        {
+          "path": "limen/features/_regime_ranks.py",
+          "start_line": 16,
+          "end_line": 29,
+          "url": "https://github.com/Vaquum/Limen/blob/25e47866422d007da55cb19625344183599ba671/limen/features/_regime_ranks.py#L16-L29"
+        },
+        {
+          "path": "limen/backtest/_cost_statistics.py",
+          "start_line": 90,
+          "end_line": 104,
+          "url": "https://github.com/Vaquum/Limen/blob/25e47866422d007da55cb19625344183599ba671/limen/backtest/_cost_statistics.py#L90-L104"
+        }
+      ],
+      "baseline_source_refs": [
+        {
+          "path": "limen/experiment/manifest_core.py",
+          "start_line": 1551,
+          "end_line": 1605,
+          "url": "https://github.com/Vaquum/Limen/blob/29837e666604eee74a2ac94f328fb9803724342a/limen/experiment/manifest_core.py#L1551-L1605"
+        },
+        {
+          "path": "limen/log/_experiment_parameter_correlation.py",
+          "start_line": 123,
+          "end_line": 140,
+          "url": "https://github.com/Vaquum/Limen/blob/29837e666604eee74a2ac94f328fb9803724342a/limen/log/_experiment_parameter_correlation.py#L123-L140"
+        },
+        {
+          "path": "limen/experiment/_holdout_freeze.py",
+          "start_line": 317,
+          "end_line": 342,
+          "url": "https://github.com/Vaquum/Limen/blob/29837e666604eee74a2ac94f328fb9803724342a/limen/experiment/_holdout_freeze.py#L317-L342"
+        },
+        {
+          "path": "tests/test_walk_forward_uel.py",
+          "start_line": 366,
+          "end_line": 414,
+          "url": "https://github.com/Vaquum/Limen/blob/29837e666604eee74a2ac94f328fb9803724342a/tests/test_walk_forward_uel.py#L366-L414"
+        }
+      ],
+      "native_test_modules": [
+        "tests/test_target_perturbations.py",
+        "tests/test_temporal_perturbations.py",
+        "tests/test_parameter_importance.py",
+        "tests/test_forest_reducer.py",
+        "tests/test_regime_classifier.py",
+        "tests/test_cost_comparison.py"
+      ],
+      "native_test_execution": "Executed in the admitted complete native Linux suite: 98 passed tests across 6 mapped modules; zero failed or skipped in these modules. Module totals overlap across criteria and are not independent-oracle counts.",
+      "native_test_evidence": {
+        "receipt": "native-suite-academic-evidence.json",
+        "profile_source_sha256": "b1e2db97814882c2ad728acefa2d3a66cd0e6147f4a8cba452766e3473c718de",
+        "modules": [
+          {
+            "module": "tests/test_target_perturbations.py",
+            "test_count": 19,
+            "passed": 19,
+            "failed": 0,
+            "skipped": 0
+          },
+          {
+            "module": "tests/test_temporal_perturbations.py",
+            "test_count": 20,
+            "passed": 20,
+            "failed": 0,
+            "skipped": 0
+          },
+          {
+            "module": "tests/test_parameter_importance.py",
+            "test_count": 4,
+            "passed": 4,
+            "failed": 0,
+            "skipped": 0
+          },
+          {
+            "module": "tests/test_forest_reducer.py",
+            "test_count": 11,
+            "passed": 11,
+            "failed": 0,
+            "skipped": 0
+          },
+          {
+            "module": "tests/test_regime_classifier.py",
+            "test_count": 18,
+            "passed": 18,
+            "failed": 0,
+            "skipped": 0
+          },
+          {
+            "module": "tests/test_cost_comparison.py",
+            "test_count": 26,
+            "passed": 26,
+            "failed": 0,
+            "skipped": 0
+          }
+        ],
+        "passed_test_count": 98,
+        "failed_test_count": 0,
+        "skipped_test_count": 0,
+        "scope": "Entire mapped modules in the complete native suite. Counts establish execution membership, not assertion-level coverage of every criterion or independent empirical validity."
+      }
+    }
+  ],
+  "independent_probe": "causal-prefix-comparison.json",
+  "native_suite_status": "Completed admitted native Linux suite at exact latest SHA: 7,388 passed, 0 failed, 3 skipped; 7,391 collected/executed and four-worker receipts reconciled. Counts are native regression evidence, not an independent model-quality or live-market study.",
+  "status_interpretation": "Statuses preserve the original criterion and scope. They are assurance classes, not an ordinal quality score. An improved implementation can remain Partial; Unknown external validity is not evidence of failure.",
+  "date_comparison": "Pinned benchmark baseline of 2026-10-19 versus latest reviewed source committed 2026-10-28 and assessed 2026-10-29; not an exact fourteen-day baseline.",
+  "independent_probe_receipts": {
+    "causal-prefix-baseline.json": "cc600036f02de5f530df8f6b24ba8eb1c08fb679daf5c387d2378eea678a7db5",
+    "causal-prefix-latest.json": "35fb24173b8fbb32a682017a1c2561ced57fc2c3b61bc1959daab4d3d35bf222",
+    "causal-prefix-comparison.json": "cca0ded7968b6f7ff3820a9348bcf6fa38bca7178b0b9c0e7749eefb970c32e4",
+    "probe_causal_prefix.py": "f13fefd84a605b2a4efdfdbf0bf795b14863e96bf0b46f360bfa0a54c96fdac7",
+    "compare_causality_reports.py": "e39633cd312f95cd4c00c41b6f3a44104cafa1f3e7d2394ce7aef178f8f1d7cc",
+    "probe-execution-receipt.json": "c831e7c610d0cf24cd83d95cad25e3b7469c0d957cf26fdcc81cbdc27b667528",
+    "probe-setup-errors.json": "7fe1d8631b0eaed7f184680eb6435258da8faca77528fc035e8bf9e62b8b7a5a"
+  },
+  "native_suite_evidence": {
+    "receipt": "native-suite-academic-evidence.json",
+    "sha256": "f3ecf036a3bbc4d6235f7c5b2b3b6ecedfa3beffa4982645afd77cb14a0668ea",
+    "source_commit": "25e47866422d007da55cb19625344183599ba671",
+    "suite_counts": {
+      "collected": 7391,
+      "executed": 7391,
+      "passed": 7388,
+      "failed": 0,
+      "skipped": 3
+    },
+    "mapped_distinct_modules": 58,
+    "mapped_distinct_tests": 1523,
+    "duration_seconds": 160.391127,
+    "duration_scope": "Recorded full-suite runtime-profile duration; not benchmark performance."
+  }
+}

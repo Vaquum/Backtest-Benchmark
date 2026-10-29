@@ -4,6 +4,8 @@ A repeatable, **code-only** comparison of backtesting implementations against a 
 
 **Start with the [comparison overview](reports/overview.md), the [546-cell systematic grid](reports/comparison-grid.md), and the [measured execution results](reports/performance-results.md).** Every grid cell identifies its native/adapter scope, enforcement status, evidence type, limitation and exact executable-source revision. The [CSV](reports/assessment-grid.csv) and [JSON](reports/assessment-grid.json) preserve the complete grid for filtering and subsequent comparisons.
 
+**29 October 2026 — [Limen reassessment at `25e4786`](updates/2026-10-29-limen/README.md):** all 42 Limen criteria reviewed, five priority repairs independently checked, baseline/current timings repeated on the same host, and the full current native suite executed. The original cross-platform comparison remains frozen; the update includes its own evidence and repeat instructions.
+
 This repository contains an assessment and a runnable benchmark. It does not assign an overall quality score, substitute documentation for implementation, or rank a failed/unsupported/unmeasured case as zero. A complete grid is not a claim that every source path, market regime or deployment has been tested.
 
 ## What is included

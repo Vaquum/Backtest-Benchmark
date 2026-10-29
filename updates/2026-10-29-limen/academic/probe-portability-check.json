@@ -1,0 +1,27 @@
+{
+  "scope": "Preparation only; no engine, probe or native-test execution. Archived evidence is unchanged.",
+  "workspace_root": "/workspace/scratch/008a76ec4981",
+  "output": "/workspace/scratch/008a76ec4981/limen-rerun-output/reproduction-probe-setup-check",
+  "source_pins": {
+    "Limen-baseline": "29837e666604eee74a2ac94f328fb9803724342a",
+    "Limen": "25e47866422d007da55cb19625344183599ba671"
+  },
+  "fixture_sha256": "a634bbd4f3692fac7bc88512da588e7772f4bd1b749567606d5314e54d0adf72",
+  "permitted_changes": [
+    "Safety ROOT points to supplied workspace.",
+    "Safety SAFE is the copied script directory.",
+    "Safety interpreter EXPECTED_PROBE binds the copied probe hash."
+  ],
+  "academic_scripts": "Copied byte-for-byte.",
+  "original_safety_sha256": {
+    "boundary_probes.py": "bca9fdff1f306bacca48b4ed8d0bdf4344cf7741aecb0b6e2845e4e5f41aa9e6",
+    "interpret_boundary_probes.py": "e95a178ffadc0e0022a5bcffde2f19dc6586d87741359b214d4fa248ca8a1033"
+  },
+  "copied_sha256": {
+    "academic/probe_causal_prefix.py": "f13fefd84a605b2a4efdfdbf0bf795b14863e96bf0b46f360bfa0a54c96fdac7",
+    "academic/compare_causality_reports.py": "e39633cd312f95cd4c00c41b6f3a44104cafa1f3e7d2394ce7aef178f8f1d7cc",
+    "safety/boundary_probes.py": "f1bd97710e3b04a0b3d9bcbe18a8752ee2e32bade7241ecb80a8210ae9e8a52d",
+    "safety/interpret_boundary_probes.py": "42d761dcba0a2a32d81ee5dbca65c608b00b444c3a72e9fc347958a0308f8c47"
+  },
+  "helper_sha256": "baf2ad96b884434c2105325db088a6df02e020f57ed77fec64e9e7b7dd9cb7f5"
+}

@@ -1,0 +1,9 @@
+1/4 01-baseline-factorized
+01-baseline-factorized: verified; returncode=0
+2/4 02-latest-factorized
+02-latest-factorized: verified; returncode=0
+3/4 03-latest-snapshot
+03-latest-snapshot: verified; returncode=0
+4/4 04-baseline-snapshot
+04-baseline-snapshot: verified; returncode=0
+/workspace/scratch/008a76ec4981/Backtest-Benchmark/updates/2026-10-29-limen/performance/native-campaign/native_report.json

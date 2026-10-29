@@ -1,0 +1,28 @@
+{
+  "source": "Limen@25e47866422d007da55cb19625344183599ba671/requirements/ci/research-env.txt",
+  "purpose": "CPU-only native test execution; all retained dependencies preserve upstream pins and hashes",
+  "removed_cuda_and_torch_packages": [
+    "cuda-bindings",
+    "cuda-pathfinder",
+    "cuda-toolkit",
+    "nvidia-cublas",
+    "nvidia-cuda-cupti",
+    "nvidia-cuda-nvrtc",
+    "nvidia-cuda-runtime",
+    "nvidia-cudnn-cu13",
+    "nvidia-cufft",
+    "nvidia-cufile",
+    "nvidia-curand",
+    "nvidia-cusolver",
+    "nvidia-cusparse",
+    "nvidia-cusparselt-cu13",
+    "nvidia-nccl-cu13",
+    "nvidia-nvjitlink",
+    "nvidia-nvshmem-cu13",
+    "nvidia-nvtx",
+    "torch",
+    "triton"
+  ],
+  "torch_replacement": "torch==2.13.0+cpu from https://download.pytorch.org/whl/cpu",
+  "retained_nccl_reason": "The upstream xgboost wheel declares nvidia-nccl-cu12; retain that pin."
+}

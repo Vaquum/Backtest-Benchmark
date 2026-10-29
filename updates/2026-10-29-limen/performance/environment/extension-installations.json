@@ -1,0 +1,49 @@
+{
+  "lock_sha256": "e0497455b4be7f56b3ac7534f69bc03f3233915e4da2d99de256efeaa16afdfc",
+  "runs": [
+    {
+      "variant": "baseline",
+      "command": [
+        "uv",
+        "pip",
+        "install",
+        "--python",
+        "/workspace/scratch/008a76ec4981/Backtest-Benchmark/.work/envs-baseline/limen/bin/python",
+        "--offline",
+        "--no-deps",
+        "--require-hashes",
+        "--cache-dir",
+        "/workspace/scratch/008a76ec4981/Backtest-Benchmark/.work/uv-cache",
+        "-r",
+        "/workspace/scratch/008a76ec4981/Backtest-Benchmark/updates/2026-10-29-limen/performance/environment/lightgbm-extension.txt"
+      ],
+      "started_utc": "2026-10-29T11:17:04.173016+00:00",
+      "finished_utc": "2026-10-29T11:17:04.192396+00:00",
+      "exit_code": 0,
+      "log": "environment/baseline-lightgbm-install.log",
+      "log_sha256": "4e31172da5ed71b602264fc863ee5d0bc5468dc014d128cedc164729d085bdb3"
+    },
+    {
+      "variant": "latest",
+      "command": [
+        "uv",
+        "pip",
+        "install",
+        "--python",
+        "/workspace/scratch/008a76ec4981/Backtest-Benchmark/.work/envs-latest/limen/bin/python",
+        "--offline",
+        "--no-deps",
+        "--require-hashes",
+        "--cache-dir",
+        "/workspace/scratch/008a76ec4981/Backtest-Benchmark/.work/uv-cache",
+        "-r",
+        "/workspace/scratch/008a76ec4981/Backtest-Benchmark/updates/2026-10-29-limen/performance/environment/lightgbm-extension.txt"
+      ],
+      "started_utc": "2026-10-29T11:17:04.306526+00:00",
+      "finished_utc": "2026-10-29T11:17:04.325663+00:00",
+      "exit_code": 0,
+      "log": "environment/latest-lightgbm-install.log",
+      "log_sha256": "ed56880399ced137a3612445874b14cd91002fa8e04d13129628abb683a82458"
+    }
+  ]
+}

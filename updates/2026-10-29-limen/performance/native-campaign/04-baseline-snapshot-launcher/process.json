@@ -1,0 +1,27 @@
+{
+  "command": [
+    "/workspace/scratch/008a76ec4981/Backtest-Benchmark/.work/envs-baseline/limen/bin/python",
+    "-m",
+    "tests.benchmark_backtest_strategies",
+    "--output",
+    "/workspace/scratch/008a76ec4981/Backtest-Benchmark/updates/2026-10-29-limen/performance/native-campaign/04-baseline-snapshot",
+    "--inputs",
+    "/workspace/scratch/008a76ec4981/Limen-baseline/tests/fixtures/spot_1h_20240101_20241231.parquet",
+    "--strategies",
+    "buy_and_hold",
+    "sma_cross",
+    "--engines",
+    "limen",
+    "--repeats",
+    "7"
+  ],
+  "returncode": 0,
+  "timed_out": false,
+  "process_wall_ms": 2093.23473,
+  "launch_to_ready_ms": null,
+  "launch_to_first_valid_ms": null,
+  "parent_observed_events_ms": {},
+  "stdout_path": "/workspace/scratch/008a76ec4981/Backtest-Benchmark/updates/2026-10-29-limen/performance/native-campaign/04-baseline-snapshot-launcher/stdout.log",
+  "startup_scope": "Parent observed process launch to worker ready event, before scientific/engine imports; IPC scheduling is included",
+  "first_valid_scope": "Process launch through source verification, imports, input load, independent oracle, first engine call, extraction and successful parity"
+}

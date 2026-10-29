@@ -1,0 +1,70 @@
+{
+  "schema_version": 1,
+  "registered_utc": "2026-10-29T11:37:30.027057+00:00",
+  "status": "prepared_not_executed",
+  "benchmark_repository_commit": "c88b14c50ee8e8ded1745a7da0d0a43f709dd9a5",
+  "variants": {
+    "baseline": {
+      "source_commit": "29837e666604eee74a2ac94f328fb9803724342a",
+      "source_path": "/workspace/scratch/008a76ec4981/Limen-baseline",
+      "overlay": "/workspace/scratch/008a76ec4981/Backtest-Benchmark/updates/2026-10-29-limen/performance/portable-preparation-check/runner/baseline",
+      "python": "/workspace/scratch/008a76ec4981/Backtest-Benchmark/.work/envs-baseline/limen/bin/python",
+      "env_root": "/workspace/scratch/008a76ec4981/Backtest-Benchmark/.work/envs-baseline",
+      "catalog_sha256": "57a024b25c67a9a220771bc6f7bc8d0d8550bb4aba0faf17115ffb3ada928baf",
+      "setup_manifest_sha256": "879d1fcb9c52f976d3dc01e413f3e73dd4b479c8c5445287b1fb87222c2f9b4b",
+      "dependency_lock_sha256": "793e670f6af3df99ec7cbcd7752844a383758299b87c9aa17f5e372fd6c63b7f"
+    },
+    "latest": {
+      "source_commit": "25e47866422d007da55cb19625344183599ba671",
+      "source_path": "/workspace/scratch/008a76ec4981/Limen",
+      "overlay": "/workspace/scratch/008a76ec4981/Backtest-Benchmark/updates/2026-10-29-limen/performance/portable-preparation-check/runner/latest",
+      "python": "/workspace/scratch/008a76ec4981/Backtest-Benchmark/.work/envs-latest/limen/bin/python",
+      "env_root": "/workspace/scratch/008a76ec4981/Backtest-Benchmark/.work/envs-latest",
+      "catalog_sha256": "cc2f668d5d3cb90cfdd24a8ce7a0a22b8da976199a80d663f2085b1f0bee06c0",
+      "setup_manifest_sha256": "ebbbd0e00e123b00cc69897d17eee1b087c32fe1c032363c54e5f469808e2710",
+      "dependency_lock_sha256": "793e670f6af3df99ec7cbcd7752844a383758299b87c9aa17f5e372fd6c63b7f"
+    }
+  },
+  "benchmark_code_sha256": {
+    "bench/__init__.py": "5c0c4675c67347c7eb144f8514b34fc5e13c19676e0516b5e95f75c86bff21d7",
+    "bench/__main__.py": "8ffd81e7324729dee2d96a3d514e1f7562aaee96aa5fe7ab0d1ceaf76b5d20f1",
+    "bench/adapters/__init__.py": "bb60438ff84afccedc50aa1ebe4377a2347f5562d7a366de099e4e9a250c63c8",
+    "bench/adapters/backtesting_py.py": "98a35a425681ca1c8a4ae1d8b68deb6728d96565341b4bea91c7601cd409796b",
+    "bench/adapters/backtrader.py": "d2db7fbe23d2aaf03eb298f1b5e3598fab87fffc6b9a864377f384b3820c9ae4",
+    "bench/adapters/bt.py": "e616252a3683a2e15e37f4a28933bab118b10399d4fc695080db32d8b96de556",
+    "bench/adapters/limen.py": "fe0c698b8c20626e39f4e0ba45bfa93b388b88a16fe638000591b3b31ccefad0",
+    "bench/adapters/qlib.py": "ef84ae221b2f55caf0e780986b2540ae1077b2ffe2f5a4eed2b06da05058ec60",
+    "bench/adapters/qstrader.py": "63e97ab46b91d1ebeae0c2c0ceb6dec98a2d68580da776abe14fbee6204d7dba",
+    "bench/adapters/vectorbt.py": "5250c6ed778ce3002de0aaa885acf63f46708532f146d255a9b972ec66854c8f",
+    "bench/api.py": "3c400fca29a641ce6e83da8b2900f5351bf6f4f69b1948e51e61fbadf053a861",
+    "bench/cli.py": "d19367a17b22c7707d4e15c859af317f8e09c5c3e2eb3f8b04331c61483278fc",
+    "bench/contract.py": "b0b19b537c36c16097774ec14cf556c48fb44086a5f063aa3c53a5cda0c4d8d4",
+    "bench/data.py": "549cdfee46c31cfccb2f36eb56ba3b49626d9f260772e22a3ef5f7312379faf3",
+    "bench/provenance.py": "c2ee91ac497412eadb0f641ae0a781819066bb4a737d30b3251be95196e52f8a",
+    "bench/worker.py": "ff690808eec1484abac20818b7adaf9ea81658abc181be1cb97551e6f683c439"
+  },
+  "input": "/workspace/scratch/008a76ec4981/Limen-baseline/tests/fixtures/spot_1h_20240101_20241231.parquet",
+  "input_sha256": "a634bbd4f3692fac7bc88512da588e7772f4bd1b749567606d5314e54d0adf72",
+  "evaluation_rows": 8783,
+  "strategies": [
+    "buy_and_hold",
+    "sma_cross"
+  ],
+  "process_blocks": 5,
+  "first_calls_per_process": 1,
+  "warm_calls_per_process": 9,
+  "diagnostic_core": true,
+  "schedule": "For each of five blocks, alternate which strategy is visited first. Within each strategy pair, alternate baseline/latest order by block and mirror that order for SMA. Each unchanged CLI invocation has a separate preflight then one measurement process.",
+  "admission": "Unchanged source-install, code-hash, native-pool and independent full-path parity checks; aggregate only five completed admitted processes per revision/strategy.",
+  "comparison": "Same-machine paired old/new Limen only; no competitor reruns or ratios against October19 timings.",
+  "changes_to_benchmark_python": [],
+  "paired_driver_sha256": "3df3b1872afac01e7d45d3cc2f20ae4c53eaa917db89ff68057490bae2f09e25",
+  "environment_extension": {
+    "package": "lightgbm==4.6.0",
+    "lock_sha256": "e0497455b4be7f56b3ac7534f69bc03f3233915e4da2d99de256efeaa16afdfc",
+    "purpose": "Matched original native preparation workload"
+  },
+  "prepared_from_archived_template_sha256": "818e677a98ac254500b140676249548d94497c4b2a64c30f7785f02001204b0f",
+  "execution_environment": "Run in native Linux with observable /proc/cgroup provenance; unchanged thread and parity admission",
+  "preparation_script_sha256": "ee0263f9b94a9aad08dc2e2bd3af5c58652b0c812974109b913edc1875eeef30"
+}

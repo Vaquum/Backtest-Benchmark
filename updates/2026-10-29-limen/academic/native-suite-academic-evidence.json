@@ -1,0 +1,659 @@
+{
+  "schema_version": 1,
+  "source_commit": "25e47866422d007da55cb19625344183599ba671",
+  "admission": "completed_native_linux_full_suite",
+  "scope": "Native regression test execution and membership. Passing cases are not automatically independent oracles, empirical statistical calibration or evidence of strategy generalization.",
+  "source_artifacts": {
+    "run_manifest.json": {
+      "raw_path": "/workspace/scratch/008a76ec4981/limen-rerun-output/native-suite-native-linux/run_manifest.json",
+      "sha256": "718284d042e2f23704901e22f7f3b7e439b329b12181e8318d3f27724c0248e7",
+      "bytes": 1583
+    },
+    "test_runtime_profile.json": {
+      "raw_path": "/workspace/scratch/008a76ec4981/limen-rerun-output/native-suite-native-linux/test_runtime_profile.json",
+      "sha256": "b1e2db97814882c2ad728acefa2d3a66cd0e6147f4a8cba452766e3473c718de",
+      "bytes": 2913604
+    },
+    "junit.xml": {
+      "raw_path": "/workspace/scratch/008a76ec4981/limen-rerun-output/native-suite-native-linux/junit.xml",
+      "sha256": "fb027529168ecc9cf24c60ae27025e0a394491f7bdfd2ddd4e8791633c1da875",
+      "bytes": 1230740
+    },
+    "coverage.json": {
+      "raw_path": "/workspace/scratch/008a76ec4981/limen-rerun-output/native-suite-native-linux/coverage.json",
+      "sha256": "c80888f3b79200a9e486c365fd3509e5282188374d8e30f390ce48c9003f08bb",
+      "bytes": 1948796
+    }
+  },
+  "suite": {
+    "started_at": "2026-10-29T11:23:49.654Z",
+    "finished_at": "2026-10-29T11:26:30.045Z",
+    "duration_seconds": 160.391127,
+    "test_count": 7391,
+    "passed_count": 7388,
+    "failed_count": 0,
+    "skipped_count": 3
+  },
+  "parallel": {
+    "worker_count": 4,
+    "reconciled": true,
+    "collected_count": 7391,
+    "execution_count": 7391,
+    "collected_ids_sha256": "9bd24cc873608c039dc84528fb775cdd4b906b7967745243f8f52cf93ef218eb",
+    "workers": [
+      {
+        "id": "gw0",
+        "backend": "SysMonitor",
+        "test_count": 1539,
+        "data_sha256": "bca3a95c15676e97633b64d9223c534f64cdfb103930cb053f8a29e0599bb816",
+        "lines_sha256": "2eb3e28fdedb4bd4c29a94b7a57d5f37425f8903ba38c791878a07a87a8e7065",
+        "line_count": 29918,
+        "warning_filters_unchanged": true
+      },
+      {
+        "id": "gw1",
+        "backend": "SysMonitor",
+        "test_count": 1732,
+        "data_sha256": "d0a2ac10e3febd00136d574d3c715b993fdf72a9227e8ed9110c1c873d15ed9b",
+        "lines_sha256": "afb38071d0ae17a993e1763ed6734bb52a65bbdcf151beac246d470c7f3449b4",
+        "line_count": 31286,
+        "warning_filters_unchanged": true
+      },
+      {
+        "id": "gw2",
+        "backend": "SysMonitor",
+        "test_count": 2088,
+        "data_sha256": "4a4bdb40df27b882f9fd931d6af657c2410462b4e465ac3030b12c70a49abcf4",
+        "lines_sha256": "c87cfaa0c79e2abe5437a88312da9aaaa36305f39801bff968e380e7135f638b",
+        "line_count": 29049,
+        "warning_filters_unchanged": true
+      },
+      {
+        "id": "gw3",
+        "backend": "SysMonitor",
+        "test_count": 2032,
+        "data_sha256": "a3330226736c22ee84cf7c1fe61ec96f4bdbeccde571d995f3a47ef3f63d904e",
+        "lines_sha256": "9a0e5d3057ef97cb155e181a2983edec8a4cce5e6b9e010a345cf798511a7300",
+        "line_count": 27340,
+        "warning_filters_unchanged": true
+      }
+    ]
+  },
+  "launcher_wall_seconds": 161.1201631390013,
+  "junit_suite_time_seconds": [
+    158.62
+  ],
+  "time_scope": "Runtime profile duration, launcher wall time and JUnit time describe different suite wrappers; none is admitted comparative engine timing.",
+  "criterion_module_counts": {
+    "A01": {
+      "modules": 4,
+      "passed": 101,
+      "failed": 0,
+      "skipped": 0
+    },
+    "A02": {
+      "modules": 6,
+      "passed": 285,
+      "failed": 0,
+      "skipped": 0
+    },
+    "A03": {
+      "modules": 6,
+      "passed": 102,
+      "failed": 0,
+      "skipped": 0
+    },
+    "A04": {
+      "modules": 5,
+      "passed": 235,
+      "failed": 0,
+      "skipped": 0
+    },
+    "A05": {
+      "modules": 6,
+      "passed": 125,
+      "failed": 0,
+      "skipped": 0
+    },
+    "A06": {
+      "modules": 5,
+      "passed": 278,
+      "failed": 0,
+      "skipped": 0
+    },
+    "A07": {
+      "modules": 5,
+      "passed": 65,
+      "failed": 0,
+      "skipped": 0
+    },
+    "A08": {
+      "modules": 5,
+      "passed": 187,
+      "failed": 0,
+      "skipped": 0
+    },
+    "A09": {
+      "modules": 5,
+      "passed": 46,
+      "failed": 0,
+      "skipped": 0
+    },
+    "A10": {
+      "modules": 6,
+      "passed": 65,
+      "failed": 0,
+      "skipped": 0
+    },
+    "A11": {
+      "modules": 2,
+      "passed": 29,
+      "failed": 0,
+      "skipped": 0
+    },
+    "A12": {
+      "modules": 5,
+      "passed": 230,
+      "failed": 0,
+      "skipped": 0
+    },
+    "A13": {
+      "modules": 5,
+      "passed": 102,
+      "failed": 0,
+      "skipped": 0
+    },
+    "A14": {
+      "modules": 3,
+      "passed": 56,
+      "failed": 0,
+      "skipped": 0
+    },
+    "A15": {
+      "modules": 6,
+      "passed": 98,
+      "failed": 0,
+      "skipped": 0
+    }
+  },
+  "mapped_distinct_modules": 58,
+  "mapped_distinct_tests": 1523,
+  "counting_note": "Criterion module counts overlap. Distinct totals deduplicate exact runtime-profile test names. Whole-module membership does not assign every assertion to every mapped criterion.",
+  "module_evidence": {
+    "tests/test_quantile_line_causality.py": {
+      "profile_module": "tests.test_quantile_line_causality",
+      "test_count": 26,
+      "passed": 26,
+      "failed": 0,
+      "skipped": 0,
+      "ordered_test_names_sha256": "3df63d8e782148831dddbb035f4eae04674b9eae53507dfd17e9a60ad9113662"
+    },
+    "tests/test_feature_causality.py": {
+      "profile_module": "tests.test_feature_causality",
+      "test_count": 13,
+      "passed": 13,
+      "failed": 0,
+      "skipped": 0,
+      "ordered_test_names_sha256": "25f41857aa85eac257f6b73527c6aedf1f1d61797554186586b1b520391b9338"
+    },
+    "tests/test_feature_library_context.py": {
+      "profile_module": "tests.test_feature_library_context",
+      "test_count": 15,
+      "passed": 15,
+      "failed": 0,
+      "skipped": 0,
+      "ordered_test_names_sha256": "2ccd9fd9ab0645f73a993b2b8e3053c01d6c370491567ba6f58b39eb4988d4ca"
+    },
+    "tests/test_line_performance.py": {
+      "profile_module": "tests.test_line_performance",
+      "test_count": 47,
+      "passed": 47,
+      "failed": 0,
+      "skipped": 0,
+      "ordered_test_names_sha256": "f9ea3887dc4e32066863b801c80c6687f2aaefad727e25b139c27240d7634571"
+    },
+    "tests/test_manifest_prepare_data.py": {
+      "profile_module": "tests.test_manifest_prepare_data",
+      "test_count": 32,
+      "passed": 32,
+      "failed": 0,
+      "skipped": 0,
+      "ordered_test_names_sha256": "9fad979233171ea8498fa17f7e12b74724cf0229dd89f909a9ccc5af3c27ff72"
+    },
+    "tests/test_dated_split_admission.py": {
+      "profile_module": "tests.test_dated_split_admission",
+      "test_count": 45,
+      "passed": 45,
+      "failed": 0,
+      "skipped": 0,
+      "ordered_test_names_sha256": "18ab5cc09520d96e2760eed62481a8eb44d7f9d00ebabd34011f3f6eda11737b"
+    },
+    "tests/test_source_binding_admission.py": {
+      "profile_module": "tests.test_source_binding_admission",
+      "test_count": 108,
+      "passed": 108,
+      "failed": 0,
+      "skipped": 0,
+      "ordered_test_names_sha256": "c70f98e37d0d4d8a7ff7ad2553bf5c7512ec6b6796b8067e7b7a26dd5576dfe6"
+    },
+    "tests/test_fitted_binding_admission.py": {
+      "profile_module": "tests.test_fitted_binding_admission",
+      "test_count": 90,
+      "passed": 90,
+      "failed": 0,
+      "skipped": 0,
+      "ordered_test_names_sha256": "6ef92ddd2ca0f69adfe0dc3949e8cb442f3a8f236456422f4466973b511f3b20"
+    },
+    "tests/test_feature_link.py": {
+      "profile_module": "tests.test_feature_link",
+      "test_count": 5,
+      "passed": 5,
+      "failed": 0,
+      "skipped": 0,
+      "ordered_test_names_sha256": "5da8edd5fa9079f2094913a465c514c310c11be38981e81d693cedb04ee86af8"
+    },
+    "tests/test_weight_link.py": {
+      "profile_module": "tests.test_weight_link",
+      "test_count": 5,
+      "passed": 5,
+      "failed": 0,
+      "skipped": 0,
+      "ordered_test_names_sha256": "3bcbf9805d4118ae29a858290d50502c26460dcc35d06f9a725998325bd88f84"
+    },
+    "tests/test_formed_bar_availability.py": {
+      "profile_module": "tests.test_formed_bar_availability",
+      "test_count": 25,
+      "passed": 25,
+      "failed": 0,
+      "skipped": 0,
+      "ordered_test_names_sha256": "8f443442bfe10fb5c3df6caf360c2ac9cca9900d455d07b98f0912f5eafa7ba1"
+    },
+    "tests/test_trade_outcome_reuse.py": {
+      "profile_module": "tests.test_trade_outcome_reuse",
+      "test_count": 22,
+      "passed": 22,
+      "failed": 0,
+      "skipped": 0,
+      "ordered_test_names_sha256": "f3e973ea21c6a0c29aa90cb7f9329772b3f2bb3055d627357ceb0dd352fe4419"
+    },
+    "tests/test_meta_allocation.py": {
+      "profile_module": "tests.test_meta_allocation",
+      "test_count": 26,
+      "passed": 26,
+      "failed": 0,
+      "skipped": 0,
+      "ordered_test_names_sha256": "6762fadd9636913c0446833efc1bc295543b60182d7980852ba8f2facfd4803a"
+    },
+    "tests/test_target_perturbations.py": {
+      "profile_module": "tests.test_target_perturbations",
+      "test_count": 19,
+      "passed": 19,
+      "failed": 0,
+      "skipped": 0,
+      "ordered_test_names_sha256": "6d7d618bacebeb062f350a61e0ba79a98a1bd38ef04d3effcd434e6570d0d53e"
+    },
+    "tests/test_splits.py": {
+      "profile_module": "tests.test_splits",
+      "test_count": 51,
+      "passed": 51,
+      "failed": 0,
+      "skipped": 0,
+      "ordered_test_names_sha256": "a4ca1194613f731961d784afc3bc45a4397addb8914c1c7d5c89f4bd501e5333"
+    },
+    "tests/test_walk_forward_uel.py": {
+      "profile_module": "tests.test_walk_forward_uel",
+      "test_count": 33,
+      "passed": 33,
+      "failed": 0,
+      "skipped": 0,
+      "ordered_test_names_sha256": "86a7f055f7fd66ef130d0b4109b153eb648631667e7c55de5385fde1b5a96a9a"
+    },
+    "tests/test_holdout_workflows.py": {
+      "profile_module": "tests.test_holdout_workflows",
+      "test_count": 66,
+      "passed": 66,
+      "failed": 0,
+      "skipped": 0,
+      "ordered_test_names_sha256": "99809c9f1379fe4c69cb6cd1f910256d52e7b47fb360ae04d6afc51530950afc"
+    },
+    "tests/test_fold_promotion.py": {
+      "profile_module": "tests.test_fold_promotion",
+      "test_count": 40,
+      "passed": 40,
+      "failed": 0,
+      "skipped": 0,
+      "ordered_test_names_sha256": "e714df53a0f7cbdf7a8bafb996d57b7f3ff1f5138a63b6d89d84cdb28b7c5b71"
+    },
+    "tests/test_conditional_shims.py": {
+      "profile_module": "tests.test_conditional_shims",
+      "test_count": 16,
+      "passed": 16,
+      "failed": 0,
+      "skipped": 0,
+      "ordered_test_names_sha256": "b2d1a1de45dc348271f6f07c843cd290902f65bbab42404769cce22f331ec96c"
+    },
+    "tests/test_direction_sizing.py": {
+      "profile_module": "tests.test_direction_sizing",
+      "test_count": 12,
+      "passed": 12,
+      "failed": 0,
+      "skipped": 0,
+      "ordered_test_names_sha256": "8fac77f6606345d20fd6157de1ee7867fdd1cd851c638df3a03160fab08b9396"
+    },
+    "tests/test_pca_matrix_contract.py": {
+      "profile_module": "tests.test_pca_matrix_contract",
+      "test_count": 50,
+      "passed": 50,
+      "failed": 0,
+      "skipped": 0,
+      "ordered_test_names_sha256": "44958f2e91fa5ad12d2beb8ee469fedf979fa4f2f44093160f28f72e7127a415"
+    },
+    "tests/test_transform_binding_admission.py": {
+      "profile_module": "tests.test_transform_binding_admission",
+      "test_count": 37,
+      "passed": 37,
+      "failed": 0,
+      "skipped": 0,
+      "ordered_test_names_sha256": "63b49bcae3ef4b2b98ce7616b199cb1b7f5fa353ef2c92cf2a275055cc84bf6e"
+    },
+    "tests/test_objective_admission.py": {
+      "profile_module": "tests.test_objective_admission",
+      "test_count": 65,
+      "passed": 65,
+      "failed": 0,
+      "skipped": 0,
+      "ordered_test_names_sha256": "0050f61cdd18e040a6fc79c3f2c32f8e688319bf1342f79132365c2ba5ba3fa3"
+    },
+    "tests/test_objective_optimizer.py": {
+      "profile_module": "tests.test_objective_optimizer",
+      "test_count": 33,
+      "passed": 33,
+      "failed": 0,
+      "skipped": 0,
+      "ordered_test_names_sha256": "781b6ad1f808c031b098b2822438cfec5e26e1eb1eb738660a5ce4a3dad13eb6"
+    },
+    "tests/test_experiment_objective.py": {
+      "profile_module": "tests.test_experiment_objective",
+      "test_count": 18,
+      "passed": 18,
+      "failed": 0,
+      "skipped": 0,
+      "ordered_test_names_sha256": "ff1b149d15ac974b0cfc9a7583bbba63bad7ad922ef8488331ed0644fe45442a"
+    },
+    "tests/test_objective_yaml.py": {
+      "profile_module": "tests.test_objective_yaml",
+      "test_count": 29,
+      "passed": 29,
+      "failed": 0,
+      "skipped": 0,
+      "ordered_test_names_sha256": "ff4e3ed31b2e9b284d53b88ade61abd155380e938ba52acc8c994129db6c6c0a"
+    },
+    "tests/test_boolean_controls.py": {
+      "profile_module": "tests.test_boolean_controls",
+      "test_count": 133,
+      "passed": 133,
+      "failed": 0,
+      "skipped": 0,
+      "ordered_test_names_sha256": "fa05cb97b0fea40ac8636a90a26c55393a9229316f27be0cdd9186fdd5613d03"
+    },
+    "tests/test_confusion_applicability.py": {
+      "profile_module": "tests.test_confusion_applicability",
+      "test_count": 9,
+      "passed": 9,
+      "failed": 0,
+      "skipped": 0,
+      "ordered_test_names_sha256": "2018f7f6888cb223be7bdc0c25d038c9e928ce5c9a56c3351885a3d03a08dcd2"
+    },
+    "tests/test_inline_metrics.py": {
+      "profile_module": "tests.test_inline_metrics",
+      "test_count": 4,
+      "passed": 4,
+      "failed": 0,
+      "skipped": 0,
+      "ordered_test_names_sha256": "eec2c4b9f4e3d384ba50452bee9e3ba8596dc25921bc3120328dbd2e06e54088"
+    },
+    "tests/test_snapshot_prediction_kind.py": {
+      "profile_module": "tests.test_snapshot_prediction_kind",
+      "test_count": 34,
+      "passed": 34,
+      "failed": 0,
+      "skipped": 0,
+      "ordered_test_names_sha256": "ac3b32d9f6ee5eab5eef5e80cd9ca58008a5436ad8f5700fbe099f515cdf5377"
+    },
+    "tests/test_entropy_var.py": {
+      "profile_module": "tests.test_entropy_var",
+      "test_count": 6,
+      "passed": 6,
+      "failed": 0,
+      "skipped": 0,
+      "ordered_test_names_sha256": "d5a5ad8b1d8088a929347b4ae5741d89771f3df8ce0e1937b221defe59466917"
+    },
+    "tests/test_result_field_collisions.py": {
+      "profile_module": "tests.test_result_field_collisions",
+      "test_count": 12,
+      "passed": 12,
+      "failed": 0,
+      "skipped": 0,
+      "ordered_test_names_sha256": "c4da3d36e4fb8a9460c28e82431e2ceb264d517fb42de9b01f3ea1ea5e3765ca"
+    },
+    "tests/test_acceptance_gates.py": {
+      "profile_module": "tests.test_acceptance_gates",
+      "test_count": 14,
+      "passed": 14,
+      "failed": 0,
+      "skipped": 0,
+      "ordered_test_names_sha256": "b3637f01f50efb8a319e426c6bbbf79eac6734fb0e9befb99ceb4acec3f5f51e"
+    },
+    "tests/test_convergence_report.py": {
+      "profile_module": "tests.test_convergence_report",
+      "test_count": 21,
+      "passed": 21,
+      "failed": 0,
+      "skipped": 0,
+      "ordered_test_names_sha256": "2efa9ae3b402e6d7e1ecf7c5c26f74756adaf616d2bd29c89bb50f8a9ff98667"
+    },
+    "tests/test_cnn1d.py": {
+      "profile_module": "tests.test_cnn1d",
+      "test_count": 5,
+      "passed": 5,
+      "failed": 0,
+      "skipped": 0,
+      "ordered_test_names_sha256": "8c7f58fedf613ca1e37d87ea54f90721608852d0aabfe52e59d21a2e8dd39f7b"
+    },
+    "tests/test_lstm.py": {
+      "profile_module": "tests.test_lstm",
+      "test_count": 4,
+      "passed": 4,
+      "failed": 0,
+      "skipped": 0,
+      "ordered_test_names_sha256": "6ba664182efb3100f860523e8dfd541c2a5bbd41870a26cad470347fe69a6851"
+    },
+    "tests/test_gaussian_hmm.py": {
+      "profile_module": "tests.test_gaussian_hmm",
+      "test_count": 9,
+      "passed": 9,
+      "failed": 0,
+      "skipped": 0,
+      "ordered_test_names_sha256": "aa68c1b40eef7bb8e7f4172a6750d7f0452228e40187e6cb6d94af1626185e0a"
+    },
+    "tests/test_rbf_svm.py": {
+      "profile_module": "tests.test_rbf_svm",
+      "test_count": 7,
+      "passed": 7,
+      "failed": 0,
+      "skipped": 0,
+      "ordered_test_names_sha256": "de93e0e94dea949d11b1d254e4c5ee2ef8ef44d5c6faa9ce848c1e99f90eaac4"
+    },
+    "tests/test_round_errors.py": {
+      "profile_module": "tests.test_round_errors",
+      "test_count": 19,
+      "passed": 19,
+      "failed": 0,
+      "skipped": 0,
+      "ordered_test_names_sha256": "44bd391c4e2adff7efc15a11b6731c73f0231056061a4fe7b90fd93d10b8bade"
+    },
+    "tests/test_result_field_provenance.py": {
+      "profile_module": "tests.test_result_field_provenance",
+      "test_count": 1,
+      "passed": 1,
+      "failed": 0,
+      "skipped": 0,
+      "ordered_test_names_sha256": "7961a2b1827694ed9ab37c1469dc141883bb58de04ad0a701983949c5eea2c80"
+    },
+    "tests/test_result_field_fold_failure.py": {
+      "profile_module": "tests.test_result_field_fold_failure",
+      "test_count": 3,
+      "passed": 3,
+      "failed": 0,
+      "skipped": 0,
+      "ordered_test_names_sha256": "57d0bbe6e5ae336ae2840360949c1bb74570772e74e2f4112e05443f66187a2d"
+    },
+    "tests/test_parameter_identity_admission.py": {
+      "profile_module": "tests.test_parameter_identity_admission",
+      "test_count": 21,
+      "passed": 21,
+      "failed": 0,
+      "skipped": 0,
+      "ordered_test_names_sha256": "edc780366fff5f857aadb5eb8473478ce9bfcea198fd6a4352ded487b54caaaf"
+    },
+    "tests/test_serial_resume_parameters.py": {
+      "profile_module": "tests.test_serial_resume_parameters",
+      "test_count": 9,
+      "passed": 9,
+      "failed": 0,
+      "skipped": 0,
+      "ordered_test_names_sha256": "5f4b21db90617bff295864742e8705cb014349cebad9fa6090ad800c195626d1"
+    },
+    "tests/test_acceptance_block_domain.py": {
+      "profile_module": "tests.test_acceptance_block_domain",
+      "test_count": 15,
+      "passed": 15,
+      "failed": 0,
+      "skipped": 0,
+      "ordered_test_names_sha256": "887a721879736e74eb6e27f722b0e2a6d8cc08d9ea7d837921a1ffb16eb79761"
+    },
+    "tests/test_fold_sensor.py": {
+      "profile_module": "tests.test_fold_sensor",
+      "test_count": 41,
+      "passed": 41,
+      "failed": 0,
+      "skipped": 0,
+      "ordered_test_names_sha256": "e521a64d45a7a35ded44f23a57ace0fd3e65f99c82cb4fee6e3c3279bb75e6f3"
+    },
+    "tests/test_fold_cohort.py": {
+      "profile_module": "tests.test_fold_cohort",
+      "test_count": 53,
+      "passed": 53,
+      "failed": 0,
+      "skipped": 0,
+      "ordered_test_names_sha256": "dbaed1e651a70eb4950a49b935e481fa3f9548bf816899782c722dc93e610f6c"
+    },
+    "tests/test_record_execution.py": {
+      "profile_module": "tests.test_record_execution",
+      "test_count": 30,
+      "passed": 30,
+      "failed": 0,
+      "skipped": 0,
+      "ordered_test_names_sha256": "fee94b6a7446a747b3f541f6097e18fdf28212a6cd93610c252703691aeb2891"
+    },
+    "tests/test_holdout_research.py": {
+      "profile_module": "tests.test_holdout_research",
+      "test_count": 3,
+      "passed": 3,
+      "failed": 0,
+      "skipped": 0,
+      "ordered_test_names_sha256": "29a49ba7a0c2344df086d0a20f913266a89d11359aaa366648e65ae5b364dad4"
+    },
+    "tests/test_holdout_assessment.py": {
+      "profile_module": "tests.test_holdout_assessment",
+      "test_count": 13,
+      "passed": 13,
+      "failed": 0,
+      "skipped": 0,
+      "ordered_test_names_sha256": "cfada040c803056e7fd3a5351bb2a2768ed8bb1d71a43d7007e957d2b2aeab97"
+    },
+    "tests/test_holdout_event_assessment.py": {
+      "profile_module": "tests.test_holdout_event_assessment",
+      "test_count": 12,
+      "passed": 12,
+      "failed": 0,
+      "skipped": 0,
+      "ordered_test_names_sha256": "dd7fe8a1f04c9fde5d5ae42adc39f19f18a811c18c2bf2e56d6014efbc99976c"
+    },
+    "tests/test_holdout_source_admission.py": {
+      "profile_module": "tests.test_holdout_source_admission",
+      "test_count": 8,
+      "passed": 8,
+      "failed": 0,
+      "skipped": 0,
+      "ordered_test_names_sha256": "a02a3c0767f3f49357e72456354f58f81d0fd2eb37c10ff21f4514468b7d6e7f"
+    },
+    "tests/test_observed_costs.py": {
+      "profile_module": "tests.test_observed_costs",
+      "test_count": 1,
+      "passed": 1,
+      "failed": 0,
+      "skipped": 0,
+      "ordered_test_names_sha256": "97d23381e1f131fdece904995c0ebc604b2f58ee783e666dea6d88bd55f6ab48"
+    },
+    "tests/test_cost_comparison.py": {
+      "profile_module": "tests.test_cost_comparison",
+      "test_count": 26,
+      "passed": 26,
+      "failed": 0,
+      "skipped": 0,
+      "ordered_test_names_sha256": "16113ec0ffd8df2d2faf00062fb02785c9bfa02aef52f92c3b943cb1ec7db193"
+    },
+    "tests/test_bayesian_cohort.py": {
+      "profile_module": "tests.test_bayesian_cohort",
+      "test_count": 29,
+      "passed": 29,
+      "failed": 0,
+      "skipped": 0,
+      "ordered_test_names_sha256": "b1846f65a7563496c392ceaf73125e2cfebb41ca136141edfc936924daa2592b"
+    },
+    "tests/test_temporal_perturbations.py": {
+      "profile_module": "tests.test_temporal_perturbations",
+      "test_count": 20,
+      "passed": 20,
+      "failed": 0,
+      "skipped": 0,
+      "ordered_test_names_sha256": "3f939249419eac4456b262f857324d4486f85bdfcda1adc3908aabc8bb0e4618"
+    },
+    "tests/test_parameter_importance.py": {
+      "profile_module": "tests.test_parameter_importance",
+      "test_count": 4,
+      "passed": 4,
+      "failed": 0,
+      "skipped": 0,
+      "ordered_test_names_sha256": "910dfaa5311f6d3d89482b7a534e918b3cdd9bc8437952d7e2992dc5e0fefb4a"
+    },
+    "tests/test_forest_reducer.py": {
+      "profile_module": "tests.test_forest_reducer",
+      "test_count": 11,
+      "passed": 11,
+      "failed": 0,
+      "skipped": 0,
+      "ordered_test_names_sha256": "e22d10eadd500a2682972877fc33464d21034fe155a3d2ae080ddf53bcd9a0ef"
+    },
+    "tests/test_regime_classifier.py": {
+      "profile_module": "tests.test_regime_classifier",
+      "test_count": 18,
+      "passed": 18,
+      "failed": 0,
+      "skipped": 0,
+      "ordered_test_names_sha256": "e5573f1dd7683f0e7da4d7b67ec327cd11278f0c501212d651046da2a95fc157"
+    }
+  },
+  "skipped_tests": [
+    "tests/test_xgboost_research.py::test_cuda_backend_is_verified@tests/test_xgboost_research.py",
+    "tests/test_tabpfn.py::test_tabpfn@tests/test_tabpfn.py",
+    "tests/test_tabpfn.py::test_tabpfn_compiled_parameters@tests/test_tabpfn.py"
+  ],
+  "excluded_initial_attempt": {
+    "receipt": "../environment/native-suite-initial-attempt.json",
+    "sha256": "2efda0f6ba79b217be438aade460ba3d161cfd648dfed2390e5d40df08214870",
+    "admission": "not_admitted_incomplete_native_environment_attempt",
+    "scope": "Restricted attempt with public-network and /proc limitations; interrupted and unreconciled. Not pooled into the completed suite counts."
+  }
+}

@@ -1,0 +1,17 @@
+{
+  "scope": "Read-only substantive academic scope review of consolidated report; no source edits or engine runs.",
+  "critical_corrections": [
+    {
+      "path": "updates/2026-10-29-limen/README.md",
+      "line": 53,
+      "quoted_claim": "Raw features are prepared before splitting, making their own causality part of the contract.",
+      "reason": "Confuses outer raw-data splitting with inner-fold preprocessing. Native outer preparation splits raw data first, then computes features per split. Raw features precede inner-fold shim/scaler refits.",
+      "replacement": "Raw features are computed before inner-fold preparation, so their own causality remains part of the contract; outer raw-data splitting still precedes feature construction.",
+      "source_refs": [
+        "limen/experiment/manifest_core.py:1866-1883",
+        "limen/experiment/manifest_core.py:1012-1068",
+        "limen/experiment/_fold_preparation.py:92-124"
+      ]
+    }
+  ]
+}

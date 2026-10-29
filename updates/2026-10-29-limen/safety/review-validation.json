@@ -1,0 +1,21 @@
+{
+  "all_local_links_resolve": true,
+  "all_code_links_pinned_and_in_bounds": true,
+  "markdown_link_count": 45,
+  "python_sources_parse": true,
+  "raw_probe_hashes_unchanged": true,
+  "assessment_hash_matches_reference_receipt": true,
+  "files": {
+    "baseline-boundary-results.json": "6d08f4a69331c5351108166d287f2793bb9d6668b43edced8436ec025b66bae1",
+    "boundary_probes.py": "bca9fdff1f306bacca48b4ed8d0bdf4344cf7741aecb0b6e2845e4e5f41aa9e6",
+    "interpret_boundary_probes.py": "e95a178ffadc0e0022a5bcffde2f19dc6586d87741359b214d4fa248ca8a1033",
+    "latest-boundary-results.json": "2762111cb93d0225ecb903bedc4038ec56634ce32ffc9b188d2a5b9301271921",
+    "native-test-membership.json": "c57e1d399b9ff089941c0a650802b53ba62e9a5edae67fdee6f572b7f27bfbe7",
+    "probe-comparison.json": "2f20283484ac206e943961ce5478694666790227b01288f76ced16130dd1f627",
+    "safety-delta.json": "20795467f8b64097aa28803121866b23f75de72b6fa47c0939615cfe5f3185e7",
+    "safety-delta.md": "c386ddf7cb5e1d1adc75f1af9a7c8b3e2f4657e354b09b48506a5b144ef0fb29",
+    "source-reference-validation.json": "80684d2e2613f2faab79aeb4c793920da49b3040db0ae604f1634d5d665407e5",
+    "validate_review_evidence.py": "3ebdec3df336d39ebb4b6716d538a70e68ebdba4000a0ea50ccce7bc1f196b6a"
+  },
+  "scope": "Lightweight file/JSON/AST checks only; no test or engine rerun during exclusive timing."
+}

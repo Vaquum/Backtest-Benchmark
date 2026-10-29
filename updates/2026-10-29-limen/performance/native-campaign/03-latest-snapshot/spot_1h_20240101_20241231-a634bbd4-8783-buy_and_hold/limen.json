@@ -1,0 +1,152 @@
+{
+  "engine": "limen",
+  "status": "verified",
+  "python_executable": "/workspace/scratch/008a76ec4981/Backtest-Benchmark/.work/envs-latest/limen/bin/python",
+  "versions": {
+    "python": "3.12.14",
+    "vaquum-limen": "5.46.2",
+    "numpy": "2.2.6",
+    "pandas": "2.3.3",
+    "polars": "1.44.2",
+    "vectorbt": null,
+    "vectorbt-rust": null,
+    "numba": null,
+    "llvmlite": null,
+    "backtesting": null,
+    "backtrader": null
+  },
+  "evaluation_rows": 8783,
+  "processed_rows": 8783,
+  "portfolio_count": 1,
+  "threads": {
+    "OMP_NUM_THREADS": "1",
+    "OPENBLAS_NUM_THREADS": "1",
+    "MKL_NUM_THREADS": "1",
+    "VECLIB_MAXIMUM_THREADS": "1",
+    "BLIS_NUM_THREADS": "1",
+    "POLARS_MAX_THREADS": "1",
+    "NUMBA_NUM_THREADS": "1",
+    "RAYON_NUM_THREADS": "1",
+    "OMP_THREAD_LIMIT": "1"
+  },
+  "numba_cache_dir": "/workspace/scratch/008a76ec4981/Backtest-Benchmark/updates/2026-10-29-limen/performance/native-campaign/03-latest-snapshot/spot_1h_20240101_20241231-a634bbd4-8783-buy_and_hold/limen-numba-cache",
+  "rss_before_adapter_mib": 112.77734375,
+  "adapter_preparation_ms": 347.326905,
+  "scope": "return kernel; public snapshot measured separately",
+  "settings": {
+    "execution_lag_bars": 1
+  },
+  "cold": {
+    "engine_ms": 0.623401,
+    "normalization_ms": 0.349752,
+    "common_outputs_ms": 0.973153,
+    "cpu_ms": 0.972261
+  },
+  "metrics": {
+    "final_equity": 2201020.2181366165,
+    "total_return": 1.2010202181366165,
+    "max_drawdown": -0.3231069072207581,
+    "mean_bar_return": 0.00010561123563607608,
+    "held_fraction": 0.9998861436866674,
+    "entries": 1,
+    "exits": 1
+  },
+  "warm": {
+    "engine_ms": {
+      "median_ms": 0.365386,
+      "p95_ms": 0.4993725999999999,
+      "samples_ms": [
+        0.533206,
+        0.420428,
+        0.396743,
+        0.364604,
+        0.365386,
+        0.363533,
+        0.361229
+      ]
+    },
+    "normalization_ms": {
+      "median_ms": 0.247139,
+      "p95_ms": 0.28332989999999997,
+      "samples_ms": [
+        0.296703,
+        0.217615,
+        0.217785,
+        0.251876,
+        0.252126,
+        0.247139,
+        0.24094
+      ]
+    },
+    "common_outputs_ms": {
+      "median_ms": 0.61648,
+      "p95_ms": 0.7723491999999998,
+      "samples_ms": [
+        0.829909,
+        0.638043,
+        0.614528,
+        0.61648,
+        0.617512,
+        0.610672,
+        0.602169
+      ]
+    },
+    "cpu_ms": {
+      "median_ms": 0.617635,
+      "p95_ms": 0.7725430999999999,
+      "samples_ms": [
+        0.82976,
+        0.639037,
+        0.615792,
+        0.617635,
+        0.618326,
+        0.611607,
+        0.603104
+      ]
+    }
+  },
+  "peak_rss_mib": 112.77734375,
+  "max_abs_equity_error": 7.82310962677002e-08,
+  "max_relative_equity_error": 3.196302838629506e-14,
+  "native_snapshot": {
+    "first_call_ms": 5.476918,
+    "warm": {
+      "median_ms": 1.562063,
+      "p95_ms": 1.9127532999999999,
+      "samples_ms": [
+        1.796022,
+        1.541021,
+        1.550044,
+        1.491156,
+        1.717905,
+        1.562063,
+        1.962781
+      ]
+    },
+    "metrics": {
+      "edge_bps_p5": -82.13323253083492,
+      "edge_bps_p50": 0.893496286771267,
+      "edge_bps_p95": 82.78449877135016,
+      "pnl_bps_p5": -82.13323253083581,
+      "pnl_bps_p50": 0.893496286771267,
+      "pnl_bps_p95": 82.78449877135016,
+      "cost_bps_p5": -1.1102230246251565e-12,
+      "cost_bps_p50": 0.0,
+      "cost_bps_p95": 1.1102230246251565e-12,
+      "drawdown_bps_p5": -2159.4600784071763,
+      "drawdown_bps_p50": -1018.4329824325678,
+      "drawdown_bps_p95": -57.31818702002552,
+      "wins_per_bar": 0.5113287031765912,
+      "pnl_per_bar_bps": 1.056112356360733,
+      "avg_win_bps": 37.17229685024052,
+      "avg_loss_bps": -36.75173667331325,
+      "cvar_95_pnl_bps": -136.75946709417337,
+      "trades_per_bar": 0.00011385631333257428,
+      "inventory_per_bar": 0.9998861436866674,
+      "cost_per_bar_bps": -4.550612420187366e-15
+    },
+    "scope": "backtest_snapshot validation, execution and all native bar metrics"
+  },
+  "peak_rss_including_snapshot_mib": 112.77734375,
+  "limen_imported": true
+}

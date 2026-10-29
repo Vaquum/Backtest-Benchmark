@@ -1,0 +1,200 @@
+{
+  "schema_version": 1,
+  "status": "verified",
+  "started_utc": "2026-10-29T11:28:46.520086+00:00",
+  "preregistration_sha256": "b9cba3789d2173c41100d127b4745bcd4da28aeb6d60c2c5c506e7206afe422e",
+  "source_execution": "Each unchanged native harness runs from its separately pinned source checkout with the matched environment interpreter; this differs from external replay, which verifies the installed noneditable wheel.",
+  "runs": [
+    {
+      "variant": "baseline",
+      "harness": "factorized",
+      "process": {
+        "command": [
+          "/workspace/scratch/008a76ec4981/Backtest-Benchmark/.work/envs-baseline/limen/bin/python",
+          "-m",
+          "tests.benchmark_factorized_preparation",
+          "--output",
+          "/workspace/scratch/008a76ec4981/Backtest-Benchmark/updates/2026-10-29-limen/performance/native-campaign/01-baseline-factorized"
+        ],
+        "returncode": 0,
+        "timed_out": false,
+        "process_wall_ms": 30667.709536,
+        "launch_to_ready_ms": null,
+        "launch_to_first_valid_ms": null,
+        "parent_observed_events_ms": {},
+        "stdout_path": "/workspace/scratch/008a76ec4981/Backtest-Benchmark/updates/2026-10-29-limen/performance/native-campaign/01-baseline-factorized-launcher/stdout.log",
+        "startup_scope": "Parent observed process launch to worker ready event, before scientific/engine imports; IPC scheduling is included",
+        "first_valid_scope": "Process launch through source verification, imports, input load, independent oracle, first engine call, extraction and successful parity"
+      },
+      "observed_import": {
+        "limen_file": "/workspace/scratch/008a76ec4981/Limen-baseline/limen/__init__.py",
+        "version": "5.40.1",
+        "python": "/workspace/scratch/008a76ec4981/Backtest-Benchmark/.work/envs-baseline/limen/bin/python"
+      },
+      "thread_environment": {
+        "OMP_NUM_THREADS": "1",
+        "OPENBLAS_NUM_THREADS": "1",
+        "MKL_NUM_THREADS": "1",
+        "VECLIB_MAXIMUM_THREADS": "1",
+        "NUMEXPR_NUM_THREADS": "1",
+        "NUMBA_NUM_THREADS": "1",
+        "RAYON_NUM_THREADS": "1",
+        "BLIS_NUM_THREADS": "1",
+        "POLARS_MAX_THREADS": "1"
+      },
+      "result_path": "/workspace/scratch/008a76ec4981/Backtest-Benchmark/updates/2026-10-29-limen/performance/native-campaign/01-baseline-factorized/benchmark.json",
+      "result_sha256": "06dbbac502468cc9fe7add22c87699fe48147fcad0ed78dd67563abb5e0712a9",
+      "scientific_outputs_equal_at_12dp": true,
+      "tracked_source_clean_after": true,
+      "status": "verified"
+    },
+    {
+      "variant": "latest",
+      "harness": "factorized",
+      "process": {
+        "command": [
+          "/workspace/scratch/008a76ec4981/Backtest-Benchmark/.work/envs-latest/limen/bin/python",
+          "-m",
+          "tests.benchmark_factorized_preparation",
+          "--output",
+          "/workspace/scratch/008a76ec4981/Backtest-Benchmark/updates/2026-10-29-limen/performance/native-campaign/02-latest-factorized"
+        ],
+        "returncode": 0,
+        "timed_out": false,
+        "process_wall_ms": 31959.343849,
+        "launch_to_ready_ms": null,
+        "launch_to_first_valid_ms": null,
+        "parent_observed_events_ms": {},
+        "stdout_path": "/workspace/scratch/008a76ec4981/Backtest-Benchmark/updates/2026-10-29-limen/performance/native-campaign/02-latest-factorized-launcher/stdout.log",
+        "startup_scope": "Parent observed process launch to worker ready event, before scientific/engine imports; IPC scheduling is included",
+        "first_valid_scope": "Process launch through source verification, imports, input load, independent oracle, first engine call, extraction and successful parity"
+      },
+      "observed_import": {
+        "limen_file": "/workspace/scratch/008a76ec4981/Limen/limen/__init__.py",
+        "version": "5.46.2",
+        "python": "/workspace/scratch/008a76ec4981/Backtest-Benchmark/.work/envs-latest/limen/bin/python"
+      },
+      "thread_environment": {
+        "OMP_NUM_THREADS": "1",
+        "OPENBLAS_NUM_THREADS": "1",
+        "MKL_NUM_THREADS": "1",
+        "VECLIB_MAXIMUM_THREADS": "1",
+        "NUMEXPR_NUM_THREADS": "1",
+        "NUMBA_NUM_THREADS": "1",
+        "RAYON_NUM_THREADS": "1",
+        "BLIS_NUM_THREADS": "1",
+        "POLARS_MAX_THREADS": "1"
+      },
+      "result_path": "/workspace/scratch/008a76ec4981/Backtest-Benchmark/updates/2026-10-29-limen/performance/native-campaign/02-latest-factorized/benchmark.json",
+      "result_sha256": "6e6f4ab33e36e275d5bd1a0cc0386624553263b0d9c90a7e99fd735f9d510234",
+      "scientific_outputs_equal_at_12dp": true,
+      "tracked_source_clean_after": true,
+      "status": "verified"
+    },
+    {
+      "variant": "latest",
+      "harness": "snapshot",
+      "process": {
+        "command": [
+          "/workspace/scratch/008a76ec4981/Backtest-Benchmark/.work/envs-latest/limen/bin/python",
+          "-m",
+          "tests.benchmark_backtest_strategies",
+          "--output",
+          "/workspace/scratch/008a76ec4981/Backtest-Benchmark/updates/2026-10-29-limen/performance/native-campaign/03-latest-snapshot",
+          "--inputs",
+          "/workspace/scratch/008a76ec4981/Limen/tests/fixtures/spot_1h_20240101_20241231.parquet",
+          "--strategies",
+          "buy_and_hold",
+          "sma_cross",
+          "--engines",
+          "limen",
+          "--repeats",
+          "7"
+        ],
+        "returncode": 0,
+        "timed_out": false,
+        "process_wall_ms": 2231.822365,
+        "launch_to_ready_ms": null,
+        "launch_to_first_valid_ms": null,
+        "parent_observed_events_ms": {},
+        "stdout_path": "/workspace/scratch/008a76ec4981/Backtest-Benchmark/updates/2026-10-29-limen/performance/native-campaign/03-latest-snapshot-launcher/stdout.log",
+        "startup_scope": "Parent observed process launch to worker ready event, before scientific/engine imports; IPC scheduling is included",
+        "first_valid_scope": "Process launch through source verification, imports, input load, independent oracle, first engine call, extraction and successful parity"
+      },
+      "observed_import": {
+        "limen_file": "/workspace/scratch/008a76ec4981/Limen/limen/__init__.py",
+        "version": "5.46.2",
+        "python": "/workspace/scratch/008a76ec4981/Backtest-Benchmark/.work/envs-latest/limen/bin/python"
+      },
+      "thread_environment": {
+        "OMP_NUM_THREADS": "1",
+        "OPENBLAS_NUM_THREADS": "1",
+        "MKL_NUM_THREADS": "1",
+        "VECLIB_MAXIMUM_THREADS": "1",
+        "NUMEXPR_NUM_THREADS": "1",
+        "NUMBA_NUM_THREADS": "1",
+        "RAYON_NUM_THREADS": "1",
+        "BLIS_NUM_THREADS": "1",
+        "POLARS_MAX_THREADS": "1"
+      },
+      "result_path": "/workspace/scratch/008a76ec4981/Backtest-Benchmark/updates/2026-10-29-limen/performance/native-campaign/03-latest-snapshot/report.json",
+      "result_sha256": "83eefc736d6ad7005eb75b13bf837a9d6dd5fe54f29c22ab63f574daea286240",
+      "native_status": "completed",
+      "tracked_source_clean_after": true,
+      "status": "verified"
+    },
+    {
+      "variant": "baseline",
+      "harness": "snapshot",
+      "process": {
+        "command": [
+          "/workspace/scratch/008a76ec4981/Backtest-Benchmark/.work/envs-baseline/limen/bin/python",
+          "-m",
+          "tests.benchmark_backtest_strategies",
+          "--output",
+          "/workspace/scratch/008a76ec4981/Backtest-Benchmark/updates/2026-10-29-limen/performance/native-campaign/04-baseline-snapshot",
+          "--inputs",
+          "/workspace/scratch/008a76ec4981/Limen-baseline/tests/fixtures/spot_1h_20240101_20241231.parquet",
+          "--strategies",
+          "buy_and_hold",
+          "sma_cross",
+          "--engines",
+          "limen",
+          "--repeats",
+          "7"
+        ],
+        "returncode": 0,
+        "timed_out": false,
+        "process_wall_ms": 2093.23473,
+        "launch_to_ready_ms": null,
+        "launch_to_first_valid_ms": null,
+        "parent_observed_events_ms": {},
+        "stdout_path": "/workspace/scratch/008a76ec4981/Backtest-Benchmark/updates/2026-10-29-limen/performance/native-campaign/04-baseline-snapshot-launcher/stdout.log",
+        "startup_scope": "Parent observed process launch to worker ready event, before scientific/engine imports; IPC scheduling is included",
+        "first_valid_scope": "Process launch through source verification, imports, input load, independent oracle, first engine call, extraction and successful parity"
+      },
+      "observed_import": {
+        "limen_file": "/workspace/scratch/008a76ec4981/Limen-baseline/limen/__init__.py",
+        "version": "5.40.1",
+        "python": "/workspace/scratch/008a76ec4981/Backtest-Benchmark/.work/envs-baseline/limen/bin/python"
+      },
+      "thread_environment": {
+        "OMP_NUM_THREADS": "1",
+        "OPENBLAS_NUM_THREADS": "1",
+        "MKL_NUM_THREADS": "1",
+        "VECLIB_MAXIMUM_THREADS": "1",
+        "NUMEXPR_NUM_THREADS": "1",
+        "NUMBA_NUM_THREADS": "1",
+        "RAYON_NUM_THREADS": "1",
+        "BLIS_NUM_THREADS": "1",
+        "POLARS_MAX_THREADS": "1"
+      },
+      "result_path": "/workspace/scratch/008a76ec4981/Backtest-Benchmark/updates/2026-10-29-limen/performance/native-campaign/04-baseline-snapshot/report.json",
+      "result_sha256": "b920c69a2e0c363733ceee82180527858abb33b7a163f09cfbb40d35572c077a",
+      "native_status": "completed",
+      "tracked_source_clean_after": true,
+      "status": "verified"
+    }
+  ],
+  "finished_utc": "2026-10-29T11:29:53.716310+00:00"
+}

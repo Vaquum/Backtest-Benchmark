@@ -1,0 +1,163 @@
+bringing up nodes...
+bringing up nodes...
+
+........................................................................ [  0%]
+........................................................................ [  1%]
+........................................................................ [  2%]
+........................................................................ [  3%]
+........................................................................ [  4%]
+........................................................................ [  5%]
+........................................................................ [  6%]
+........................................................................ [  7%]
+........................................................................ [  8%]
+........................................................................ [  9%]
+........................................................................ [ 10%]
+........................................................................ [ 11%]
+........................................................................ [ 12%]
+........................................................................ [ 13%]
+........................................................................ [ 14%]
+........................................................................ [ 15%]
+........................................................................ [ 16%]
+........................................................................ [ 17%]
+........................................................................ [ 18%]
+........................................................................ [ 19%]
+........................................................................ [ 20%]
+........................................................................ [ 21%]
+........................................................................ [ 22%]
+........................................................................ [ 23%]
+........................................................................ [ 24%]
+........................................................................ [ 25%]
+........................................................................ [ 26%]
+........................................................................ [ 27%]
+........................................................................ [ 28%]
+........................................................................ [ 29%]
+........................................................................ [ 30%]
+........................................................................ [ 31%]
+........................................................................ [ 32%]
+........................................................................ [ 33%]
+........................................................................ [ 34%]
+........................................................................ [ 35%]
+........................................................................ [ 36%]
+........................................................................ [ 37%]
+........................................................................ [ 38%]
+........................................................................ [ 39%]
+........................................................................ [ 40%]
+........................................................................ [ 41%]
+........................................................................ [ 42%]
+........................................................................ [ 43%]
+........................................................................ [ 44%]
+........................................................................ [ 45%]
+........................................................................ [ 46%]
+........................................................................ [ 47%]
+........................................................................ [ 48%]
+........................................................................ [ 49%]
+........................................................................ [ 50%]
+........................................................................ [ 51%]
+........................................................................ [ 52%]
+........................................................................ [ 53%]
+........................................................................ [ 54%]
+........................................................................ [ 55%]
+................................................F....................... [ 56%]
+........................................................................ [ 57%]
+........................................................................ [ 58%]
+........................................................................ [ 59%]
+........................................................................ [ 60%]
+........................................................................ [ 61%]
+........................................................................ [ 62%]
+....F................................................................... [ 63%]
+........................................................................ [ 64%]
+........................................................................ [ 65%]
+........................................................................ [ 66%]
+........................................................................ [ 67%]
+........................................................................ [ 68%]
+........................................................................ [ 69%]
+........................................................................ [ 70%]
+........................................................................ [ 71%]
+........................................................................ [ 72%]
+........................................................................ [ 73%]
+........................................................................ [ 74%]
+........................................................................ [ 75%]
+........................................................................ [ 76%]
+...................F.................................................... [ 77%]
+........................................................................ [ 78%]
+........................................................................ [ 79%]
+...............................................................s........ [ 80%]
+.............................................F.......................... [ 81%]
+........................................................................ [ 82%]
+........................................................................ [ 83%]
+...................F.................................................... [ 84%]
+........................................................................ [ 85%]
+.......................................................F................ [ 85%]
+........................................................................ [ 86%]
+..............................................................F......... [ 87%]
+........................................................................ [ 88%]
+......................F................................................. [ 89%]
+...................................................F.................... [ 90%]
+....................................................................F... [ 91%]
+....................................................................F... [ 92%]
+........................................................................ [ 93%]
+........................................................................ [ 94%]
+.............................F.......................................... [ 95%]
+........................................................................ [ 96%]
+..............F......................................................... [ 97%]
+............................................F....F...................... [ 98%]
+.................................................ss............FFF..F... [ 99%]
+FFFFFmainloop: caught unexpected SystemExit!
+2026-10-29 13:22:30,822 - ERROR - Incomplete parallel proof: Missing worker receipt: gw3; Incomplete or duplicate phase events: gw3 tests/test_feature_perturbation.py::test_ablation_zero_drops_nothing@tests/test_feature_perturbation.py; Completed case multiplicity differs from native collection; Execution ledger contains unfinished cases
+2026-10-29 13:22:30,878 - INFO - Runtime profile written to /workspace/scratch/008a76ec4981/limen-rerun-output/native-suite/test_runtime_profile.json
+2026-10-29 13:22:30,879 - INFO - Test suite runtime: 8m 36.271s across 7277 tests (7250 passed, 24 failed, 3 skipped)
+2026-10-29 13:22:30,883 - INFO - Slowest tests:
+2026-10-29 13:22:30,883 - INFO -   tests/test_feature_perturbation.py::test_feature_group_absent_includes_all@tests/test_feature_perturbation.py [failed] 30.014s
+2026-10-29 13:22:30,883 - INFO -   tests/test_manifest_cco.py::test_uel_continues_after_strict_mode_error@tests/test_manifest_cco.py [failed] 30.008s
+2026-10-29 13:22:30,883 - INFO -   tests/test_manifest_prepare_data.py::test_price_data_for_backtest_datetime_alignment@tests/test_manifest_prepare_data.py [failed] 30.008s
+2026-10-29 13:22:30,883 - INFO -   tests/test_feature_perturbation.py::test_include_if_true@tests/test_feature_perturbation.py [failed] 30.007s
+2026-10-29 13:22:30,883 - INFO -   tests/test_manifest_prepare_data.py::test_price_data_for_backtest_has_ohlc_columns@tests/test_manifest_prepare_data.py [failed] 30.007s
+2026-10-29 13:22:30,883 - INFO -   tests/test_feature_perturbation.py::test_ungrouped_features_always_included@tests/test_feature_perturbation.py [failed] 30.007s
+2026-10-29 13:22:30,883 - INFO -   tests/test_scalers.py::test_scaler_factory_unknown_raises@tests/test_scalers.py [failed] 30.007s
+2026-10-29 13:22:30,883 - INFO -   tests/test_bars.py::test_volume_bars_basic@tests/test_bars.py [failed] 30.007s
+2026-10-29 13:22:30,883 - INFO -   tests/test_feature_perturbation.py::test_feature_group_filtering_includes_selected@tests/test_feature_perturbation.py [failed] 30.006s
+2026-10-29 13:22:30,883 - INFO -   tests/test_fractional_diff.py::test_fractional_diff_manifest_integration@tests/test_fractional_diff.py [failed] 30.006s
+/workspace/scratch/008a76ec4981/Backtest-Benchmark/.work/envs-research/limen/lib/python3.12/site-packages/coverage/control.py:961: CoverageWarning: No data was collected. (no-data-collected); see https://coverage.readthedocs.io/en/7.15.1/messages.html#warning-no-data-collected
+  self._warn("No data was collected.", slug="no-data-collected")
+INTERNALERROR> Traceback (most recent call last):
+INTERNALERROR>   File "/workspace/scratch/008a76ec4981/Backtest-Benchmark/.work/envs-research/limen/lib/python3.12/site-packages/_pytest/main.py", line 330, in wrap_session
+INTERNALERROR>     session.exitstatus = doit(config, session) or 0
+INTERNALERROR>                          ^^^^^^^^^^^^^^^^^^^^^
+INTERNALERROR>   File "/workspace/scratch/008a76ec4981/Backtest-Benchmark/.work/envs-research/limen/lib/python3.12/site-packages/_pytest/main.py", line 384, in _main
+INTERNALERROR>     config.hook.pytest_runtestloop(session=session)
+INTERNALERROR>   File "/workspace/scratch/008a76ec4981/Backtest-Benchmark/.work/envs-research/limen/lib/python3.12/site-packages/pluggy/_hooks.py", line 512, in __call__
+INTERNALERROR>     return self._hookexec(self.name, self._hookimpls.copy(), kwargs, firstresult)
+INTERNALERROR>            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+INTERNALERROR>   File "/workspace/scratch/008a76ec4981/Backtest-Benchmark/.work/envs-research/limen/lib/python3.12/site-packages/pluggy/_manager.py", line 120, in _hookexec
+INTERNALERROR>     return self._inner_hookexec(hook_name, methods, kwargs, firstresult)
+INTERNALERROR>            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+INTERNALERROR>   File "/workspace/scratch/008a76ec4981/Backtest-Benchmark/.work/envs-research/limen/lib/python3.12/site-packages/pluggy/_callers.py", line 167, in _multicall
+INTERNALERROR>     raise exception
+INTERNALERROR>   File "/workspace/scratch/008a76ec4981/Backtest-Benchmark/.work/envs-research/limen/lib/python3.12/site-packages/pluggy/_callers.py", line 139, in _multicall
+INTERNALERROR>     teardown.throw(exception)
+INTERNALERROR>   File "/workspace/scratch/008a76ec4981/Backtest-Benchmark/.work/envs-research/limen/lib/python3.12/site-packages/_pytest/logging.py", line 816, in pytest_runtestloop
+INTERNALERROR>     return (yield)  # Run all the tests.
+INTERNALERROR>             ^^^^^
+INTERNALERROR>   File "/workspace/scratch/008a76ec4981/Backtest-Benchmark/.work/envs-research/limen/lib/python3.12/site-packages/pluggy/_callers.py", line 139, in _multicall
+INTERNALERROR>     teardown.throw(exception)
+INTERNALERROR>   File "/workspace/scratch/008a76ec4981/Backtest-Benchmark/.work/envs-research/limen/lib/python3.12/site-packages/_pytest/terminal.py", line 708, in pytest_runtestloop
+INTERNALERROR>     result = yield
+INTERNALERROR>              ^^^^^
+INTERNALERROR>   File "/workspace/scratch/008a76ec4981/Backtest-Benchmark/.work/envs-research/limen/lib/python3.12/site-packages/pluggy/_callers.py", line 121, in _multicall
+INTERNALERROR>     res = hook_impl.function(*args)
+INTERNALERROR>           ^^^^^^^^^^^^^^^^^^^^^^^^^
+INTERNALERROR>   File "/workspace/scratch/008a76ec4981/Backtest-Benchmark/.work/envs-research/limen/lib/python3.12/site-packages/xdist/dsession.py", line 138, in pytest_runtestloop
+INTERNALERROR>     self.loop_once()
+INTERNALERROR>   File "/workspace/scratch/008a76ec4981/Backtest-Benchmark/.work/envs-research/limen/lib/python3.12/site-packages/xdist/dsession.py", line 154, in loop_once
+INTERNALERROR>     eventcall = self.queue.get(timeout=2.0)
+INTERNALERROR>                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+INTERNALERROR>   File "/opt/codex/runtimes/codex-primary-runtime/dependencies/python/lib/python3.12/queue.py", line 180, in get
+INTERNALERROR>     self.not_empty.wait(remaining)
+INTERNALERROR>   File "/opt/codex/runtimes/codex-primary-runtime/dependencies/python/lib/python3.12/threading.py", line 359, in wait
+INTERNALERROR>     gotit = waiter.acquire(True, timeout)
+INTERNALERROR>             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+INTERNALERROR>   File "/workspace/scratch/008a76ec4981/Limen/tests/utils/cleanup.py", line 40, in signal_handler
+INTERNALERROR>     sys.exit(1)
+INTERNALERROR> SystemExit: 1
+
+24 failed, 7250 passed, 3 skipped, 4 errors in 512.98s (0:08:32)

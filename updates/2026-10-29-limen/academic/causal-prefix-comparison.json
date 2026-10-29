@@ -1,0 +1,126 @@
+{
+  "baseline_commit": "29837e666604eee74a2ac94f328fb9803724342a",
+  "latest_commit": "25e47866422d007da55cb19625344183599ba671",
+  "fixture_sha256": "a634bbd4f3692fac7bc88512da588e7772f4bd1b749567606d5314e54d0adf72",
+  "receipt_sha256": {
+    "causal-prefix-baseline.json": "cc600036f02de5f530df8f6b24ba8eb1c08fb679daf5c387d2378eea678a7db5",
+    "causal-prefix-latest.json": "35fb24173b8fbb32a682017a1c2561ced57fc2c3b61bc1959daab4d3d35bf222"
+  },
+  "comparison_script_sha256": "e39633cd312f95cd4c00c41b6f3a44104cafa1f3e7d2394ce7aef178f8f1d7cc",
+  "original_case_changed_rows": {
+    "baseline": [
+      0,
+      173,
+      0
+    ],
+    "latest": [
+      0,
+      0,
+      0
+    ]
+  },
+  "expanded_cases": [
+    {
+      "params": {
+        "max_duration_hours": 48,
+        "min_height_pct": 0.002,
+        "include_research_only": false,
+        "quantile_threshold": 0.7
+      },
+      "prefix_rows": 192,
+      "extended_rows": 384,
+      "baseline_changed_rows": 173,
+      "latest_changed_rows": 0,
+      "research_only_span_changes_baseline": null,
+      "research_only_span_changes_latest": null
+    },
+    {
+      "params": {
+        "max_duration_hours": 48,
+        "min_height_pct": 0.002,
+        "include_research_only": true,
+        "quantile_threshold": 0.7
+      },
+      "prefix_rows": 192,
+      "extended_rows": 384,
+      "baseline_changed_rows": 173,
+      "latest_changed_rows": 0,
+      "research_only_span_changes_baseline": {
+        "changed_rows": 192,
+        "max_abs_difference": 770.0,
+        "first_change": {
+          "row": 0,
+          "datetime": "2024-01-01 00:00:00+00:00",
+          "prefix_value": 26.0,
+          "extended_value": 27.0
+        }
+      },
+      "research_only_span_changes_latest": {
+        "changed_rows": 192,
+        "max_abs_difference": 770.0,
+        "first_change": {
+          "row": 0,
+          "datetime": "2024-01-01 00:00:00+00:00",
+          "prefix_value": 26.0,
+          "extended_value": 27.0
+        }
+      }
+    },
+    {
+      "params": {
+        "max_duration_hours": 48,
+        "min_height_pct": 0.002,
+        "include_research_only": false,
+        "quantile_threshold": 0.8
+      },
+      "prefix_rows": 192,
+      "extended_rows": 384,
+      "baseline_changed_rows": 138,
+      "latest_changed_rows": 0,
+      "research_only_span_changes_baseline": null,
+      "research_only_span_changes_latest": null
+    },
+    {
+      "params": {
+        "max_duration_hours": 48,
+        "min_height_pct": 0.002,
+        "include_research_only": true,
+        "quantile_threshold": 0.8
+      },
+      "prefix_rows": 192,
+      "extended_rows": 384,
+      "baseline_changed_rows": 138,
+      "latest_changed_rows": 0,
+      "research_only_span_changes_baseline": {
+        "changed_rows": 150,
+        "max_abs_difference": 616.0,
+        "first_change": {
+          "row": 3,
+          "datetime": "2024-01-01 03:00:00+00:00",
+          "prefix_value": 102.0,
+          "extended_value": 103.0
+        }
+      },
+      "research_only_span_changes_latest": {
+        "changed_rows": 150,
+        "max_abs_difference": 616.0,
+        "first_change": {
+          "row": 3,
+          "datetime": "2024-01-01 03:00:00+00:00",
+          "prefix_value": 102.0,
+          "extended_value": 103.0
+        }
+      }
+    }
+  ],
+  "frozen_baseline_prefix_last_vs_latest_historical": {
+    "rows": 32,
+    "scalar_values": 160,
+    "mismatches": [],
+    "maximum_absolute_difference": 1.2789769243681803e-13,
+    "relative_tolerance": 1e-12,
+    "absolute_tolerance": 1e-12
+  },
+  "both_flag_modes_have_identical_five_columns": true,
+  "scope": "Bounded recorded-fixture causality and semantics regression; no general feature-causality or economic-validity claim."
+}

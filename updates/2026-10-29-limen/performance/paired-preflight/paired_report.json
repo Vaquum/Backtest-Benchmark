@@ -1,0 +1,120 @@
+{
+  "schema_version": 1,
+  "mode": "verify",
+  "started_utc": "2026-10-29T11:17:13.270057+00:00",
+  "preregistration_sha256": "bd4c724a952ecc9fa5967954ae3c540e495db2bf6298f9c63308085d9288a06d",
+  "status": "verified",
+  "commands": [
+    {
+      "block": 0,
+      "variant": "baseline",
+      "strategies": [
+        "buy_and_hold",
+        "sma_cross",
+        "flat"
+      ],
+      "process": {
+        "command": [
+          "/workspace/scratch/008a76ec4981/Backtest-Benchmark/.work/envs-baseline/limen/bin/python",
+          "-m",
+          "bench",
+          "verify",
+          "--input",
+          "/workspace/scratch/008a76ec4981/Limen-baseline/tests/fixtures/spot_1h_20240101_20241231.parquet",
+          "--expected-sha256",
+          "a634bbd4f3692fac7bc88512da588e7772f4bd1b749567606d5314e54d0adf72",
+          "--output",
+          "/workspace/scratch/008a76ec4981/Backtest-Benchmark/updates/2026-10-29-limen/performance/paired-preflight/001-block-00-baseline-buy_and_hold-sma_cross-flat",
+          "--engines",
+          "limen",
+          "--strategies",
+          "buy_and_hold",
+          "sma_cross",
+          "flat",
+          "--rows",
+          "8783",
+          "--env-root",
+          "/workspace/scratch/008a76ec4981/Backtest-Benchmark/.work/envs-baseline",
+          "--processes",
+          "1",
+          "--warm-repeats",
+          "9",
+          "--diagnostic-core"
+        ],
+        "returncode": 0,
+        "timed_out": false,
+        "process_wall_ms": 3904.634455,
+        "launch_to_ready_ms": null,
+        "launch_to_first_valid_ms": null,
+        "parent_observed_events_ms": {},
+        "stdout_path": "/workspace/scratch/008a76ec4981/Backtest-Benchmark/updates/2026-10-29-limen/performance/paired-preflight/001-block-00-baseline-buy_and_hold-sma_cross-flat-launcher/stdout.log",
+        "startup_scope": "Parent observed process launch to worker ready event, before scientific/engine imports; IPC scheduling is included",
+        "first_valid_scope": "Process launch through source verification, imports, input load, independent oracle, first engine call, extraction and successful parity"
+      },
+      "report_path": "/workspace/scratch/008a76ec4981/Backtest-Benchmark/updates/2026-10-29-limen/performance/paired-preflight/001-block-00-baseline-buy_and_hold-sma_cross-flat/report.json",
+      "report_sha256": "e1eb2aec33ecfc25d410dd19917800e43f796e16f5f6a8d4a1d66d117d33ec89",
+      "case_statuses": [
+        "verified",
+        "verified",
+        "verified"
+      ]
+    },
+    {
+      "block": 0,
+      "variant": "latest",
+      "strategies": [
+        "buy_and_hold",
+        "sma_cross",
+        "flat"
+      ],
+      "process": {
+        "command": [
+          "/workspace/scratch/008a76ec4981/Backtest-Benchmark/.work/envs-latest/limen/bin/python",
+          "-m",
+          "bench",
+          "verify",
+          "--input",
+          "/workspace/scratch/008a76ec4981/Limen-baseline/tests/fixtures/spot_1h_20240101_20241231.parquet",
+          "--expected-sha256",
+          "a634bbd4f3692fac7bc88512da588e7772f4bd1b749567606d5314e54d0adf72",
+          "--output",
+          "/workspace/scratch/008a76ec4981/Backtest-Benchmark/updates/2026-10-29-limen/performance/paired-preflight/002-block-00-latest-buy_and_hold-sma_cross-flat",
+          "--engines",
+          "limen",
+          "--strategies",
+          "buy_and_hold",
+          "sma_cross",
+          "flat",
+          "--rows",
+          "8783",
+          "--env-root",
+          "/workspace/scratch/008a76ec4981/Backtest-Benchmark/.work/envs-latest",
+          "--processes",
+          "1",
+          "--warm-repeats",
+          "9",
+          "--diagnostic-core"
+        ],
+        "returncode": 0,
+        "timed_out": false,
+        "process_wall_ms": 3779.411569,
+        "launch_to_ready_ms": null,
+        "launch_to_first_valid_ms": null,
+        "parent_observed_events_ms": {},
+        "stdout_path": "/workspace/scratch/008a76ec4981/Backtest-Benchmark/updates/2026-10-29-limen/performance/paired-preflight/002-block-00-latest-buy_and_hold-sma_cross-flat-launcher/stdout.log",
+        "startup_scope": "Parent observed process launch to worker ready event, before scientific/engine imports; IPC scheduling is included",
+        "first_valid_scope": "Process launch through source verification, imports, input load, independent oracle, first engine call, extraction and successful parity"
+      },
+      "report_path": "/workspace/scratch/008a76ec4981/Backtest-Benchmark/updates/2026-10-29-limen/performance/paired-preflight/002-block-00-latest-buy_and_hold-sma_cross-flat/report.json",
+      "report_sha256": "e03854ba377db433a15d754a4ae9d02dec07c042e0aa93cc803be859e643f0a5",
+      "case_statuses": [
+        "verified",
+        "verified",
+        "verified"
+      ]
+    }
+  ],
+  "summaries": [],
+  "comparisons": [],
+  "finished_utc": "2026-10-29T11:17:20.956847+00:00"
+}

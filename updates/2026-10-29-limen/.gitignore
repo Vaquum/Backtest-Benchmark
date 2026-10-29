@@ -1,0 +1,6 @@
+# Exact binary evidence is published in binary-evidence.tar.xz.
+# Extraction restores these paths without duplicate Git blobs.
+**/*.npz
+**/*.gz
+**/__pycache__/
+*.draft.json
